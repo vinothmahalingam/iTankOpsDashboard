@@ -1,0 +1,111 @@
+%shadow-hover {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 0 2px rgba(0,0,0,0.24);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 -1px 6px rgba(0,0,0,0.23);
+  }
+}
+
+%btn-default {
+  @include gradient-img($start: #f5f5f5,$stop: #f1f1f1);
+  color: #444;
+
+  &:hover {
+    box-shadow: none;
+    border: 1px solid #c6c6c6;
+    color: #333;
+  }
+
+  &:focus {
+    border-color: $primary-200 !important;
+  }
+}
+
+%custom-scroll {
+
+  &::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+  }
+
+ &::-webkit-scrollbar-thumb:vertical {
+    background-color: #666;
+  }
+
+  &::-webkit-scrollbar-thumb:vertical {
+  background-color: #666;
+  }
+
+}
+
+
+
+%set-settings {
+  color:$white;
+  background:$info-200 !important;
+
+  &:after {
+    background:$white !important;
+    color:$color-primary !important;
+  }
+  + .onoffswitch-title {
+    color:darken($settings-panel-bg, 60%);
+  }
+}
+
+
+%not-compatible {
+    position:relative;
+    
+    .onoffswitch-title {
+      color: $warning-700 !important;
+    }
+    &:after {
+      @extend %incompatible;
+    }
+}
+
+%ping-badge {
+  background-color: $nav-badge-bg-color;
+  color: $nav-badge-color;
+  @include box-shadow(0 0 0 1px $nav-background);
+  border: 1px solid $nav-background;
+}
+
+
+%header-btn {
+  @extend %btn-default;
+  color:$header-btn-color;
+
+  &.active {
+    @extend %header-btn-active;
+  }
+
+}
+
+%expanded-box {
+  border: 1px solid lighten($fusion-400, 50%);
+}
+
+%header-btn-active {
+  background: $header-btn-active-bg !important;
+  border-color: darken($header-btn-active-bg, 10%) !important;
+  color:$header-btn-active-color !important;
+}
+
+@include media-breakpoint-up($mobile-breakpoint) {
+  %selected-dot {
+    &:before {
+      background: $primary-500;
+    }
+  }
+}
+
+%spin-loader {
+  border: 2px solid $color-primary;
+}
+
+%incompatible {
+  background: $warning-50;
+  color:$fusion-900;
+}

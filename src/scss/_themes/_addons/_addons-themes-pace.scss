@@ -1,0 +1,26 @@
+
+body:not(.mod-pace-custom) {
+	.pace {
+	    .pace-progress {
+			background: $color-primary;
+		}
+	}
+
+}
+
+body.mod-pace-custom {
+
+	.pace {
+
+		.pace-progress {
+		    background-color:$color-primary;
+		}
+	}
+
+	#content {
+		&:before {
+		    background-color:$page-bg;
+		}
+	}
+
+}

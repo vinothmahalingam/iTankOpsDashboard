@@ -1,0 +1,400 @@
+$header-badge-min-width: 							20px !default;
+$header-badge-padding-x: 							3px !default;
+$header-badge-padding-y: 							2px !default;
+$header-badge-left: 								23px !default;
+$header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !default;
+
+#banner {
+	background-color: $header-bg;
+	border-bottom: 1px solid $header-border-bottom-color;
+	display: block;
+	height: rem($header-height);
+	position: relative;
+	z-index: $depth-header;
+
+	ul.list-table {
+		height: rem($header-height);
+
+		> li {
+
+			 > a {
+				color: $base-text-color;
+				height: rem($header-height);
+			    display: block;
+			    line-height: rem($header-height);
+			    padding: $list-table-padding-y rem($list-table-padding-x);
+			    text-decoration: none;
+
+				&:not(.btn) {
+					min-width: rem($header-non-btn-width);
+					text-align: center;
+					overflow: visible;
+
+					/*display: flex;
+					@include align-items(center);
+					@include justify-content(center);*/
+
+					>.fa:first-child,
+					>.#{$cust-icon-prefix}:first-child {
+						color:$header-link-color;
+				    	font-size: rem($header-icon-size);
+					    vertical-align: middle;
+			   		}
+			   		>.fa:first-child {
+			   			font-size: rem($header-icon-size - 2);
+			   		}
+			   		>.#{$cust-icon-prefix}:first-child {
+			   			font-size: rem($header-icon-size - 4);
+			   		}
+
+			   		>.badge {
+			   			@extend %ping-badge;
+			   			@include box-shadow(0 0 0 1px $header-bg);
+			   			cursor: default;
+						border-color: transparent;
+						left: ($header-badge-left);
+						top: ($header-badge-top);
+						font-size: rem(10px);
+						font-weight: 500;
+						height: ($header-badge-min-width); 
+						min-width: ($header-badge-min-width);
+						max-width: ($header-badge-min-width + 7);
+						padding: ($header-badge-padding-y) ($header-badge-padding-x);
+						line-height: ($header-badge-min-width - 7);
+						border-radius: $header-badge-min-width;
+
+						&:only-child {
+							position: relative;
+							left: auto;
+							right: auto;
+							font-size: 14px;
+							height: 26px;
+							width: 26px;
+							line-height: 21px;
+							top: 17px;
+						}
+			   		}
+
+			   		&:hover {
+
+			   			&>.fa:only-child,
+			   			&>.#{$cust-icon-prefix} {
+							color: $header-link-hover-color;
+			   			}
+			   		}
+
+			   		&.active {
+			   			@include text-contrast($header-btn-active-bg);
+			   			background:$header-btn-active-bg !important;
+
+			   			&>.fa:only-child,
+			   			&>.#{$cust-icon-prefix}:only-child {
+							@include text-contrast($header-btn-active-bg);
+			   			}
+			   		}
+
+					&[data-toggle="dropdown"] {
+
+						&[aria-expanded="true"] {
+							color: $header-link-hover-color;
+							// new lines for arrow visibility
+							position: relative;
+							z-index: $depth-header + 1;
+
+							&:before,
+							&:after {
+								content:" ";
+								border-color: transparent;
+								border-bottom-color: $white;
+								border-style: dashed dashed solid;
+								border-width: 0 rem(8.5px) rem(8.5px);
+								position: absolute;
+								right: rem($header-non-btn-width/3);
+								bottom: 0;
+								z-index: 1;
+								height: 0;
+								width: 0;
+							}
+							&:before {
+								border-bottom-color: darken($header-dropdown-menu-border-color, 8%);
+								bottom: 1px;
+							}
+
+							>.fa:first-child,
+							>.#{$cust-icon-prefix}:first-child {
+								color: $header-link-hover-color !important;
+							}
+
+						}
+
+						& + .dropdown-menu {
+
+							@extend %header-dropdown;
+							right: $grid-gutter-width-base/2;
+							top: $header-height - 1;
+							padding: 5px;
+
+							/*&.app-icons {
+								width: rem( ( ($header-applist-link-block-width + 2) * $header-applist-link-icons-per-row) + ( ($header-applist-box-padding-y + 5) * 2) + (6 * $header-applist-link-icons-per-row) );
+								height: rem( ( ($header-applist-link-block-height + 20) * $header-applist-rows-on-display ) + ( ($header-applist-box-padding-x + 6) * 2) );
+								max-height: none;
+							}*/
+
+							@extend %custom-scroll;
+
+							.app-list {
+								margin:0;
+								padding:0;
+								display: block;
+								width:100%;
+								font-size:0; //removes wierd spacing
+								padding: rem($header-applist-box-padding-x) rem($header-applist-box-padding-y);
+								text-align: center;
+								/*@extend %flexbox;
+								@include flex-direction(row);
+								@include flex-wrap(wrap)
+								@include justify-content(center);*/
+
+
+								> li {
+									display: inline-block;
+									text-align: center;
+									padding:0;
+
+									&:hover {
+										& > a {
+											border:1px solid lighten($gray-mid-light, 14%);
+										}
+									}
+
+									> a {
+										height:rem($header-applist-link-block-height);
+										width:rem($header-applist-link-block-width);
+										display: block;
+										text-decoration: none;
+										color:$base-text-color;
+										margin: rem(10px) rem(2px);
+										border:1px solid transparent;
+										outline: none;
+										@include rounded(2px);
+
+										&:hover {
+											border:1px solid lighten($gray-mid-light, 14%);
+										}
+
+										> span.n {
+											text-align: center;
+											display: block;
+											font-size: $base-font-size;
+											text-overflow: ellipsis;
+											display: inline-block;
+											white-space: nowrap;
+											overflow: hidden;
+											position: absolute;
+											bottom:0;
+											left:0;
+											right:0;
+										}
+
+										> .base {
+											    font-size: 42px;
+												color: $primary-300;
+												margin-top: 7px;
+										}
+
+										> .top {
+											font-size: 42px/2 + 1;
+											color: $white;
+											position: absolute;
+											left: 0;
+											right: 0;
+											top: 17px;
+
+											&.mask {
+												color: $primary-700;
+												font-size: 42px/2 + 5;
+												top: 12px;
+
+												&[class*=" base-"] {
+													top:14px;
+												}
+											}
+
+											&.larger-icon {
+												font-size: 31px;
+												top: 10px;
+											}
+
+											&.smaller-icon {
+												font-size: 16px;
+												top:18px;
+											}
+
+											&[class^="md-"], 
+											&[class*=" md-"]{
+												font-size: 30px;
+												top: 11px;
+												color: $primary-700;
+
+												&.mask {
+													color: $white;
+													font-size: 30px - 5px;
+													top: 13px;
+												}
+
+												&.larger-icon {
+													font-size: 43px;
+													top: 6px;
+												}
+
+												&.smaller-icon {
+													font-size: 25px;
+												}
+											}
+										}
+
+									}
+								}
+							}
+						}
+						
+					}
+
+					> img.profile-image {
+						display: inline-block;
+						margin-top: 15px;
+						margin-right: 5px;
+						width: 29px;
+						height:auto;
+						//border-radius: 50%;
+						float:left;
+						vertical-align: text-bottom;
+					}
+
+				}
+
+			    &:hover{
+			    	cursor:default;
+			    	color:$header-link-hover-color;
+			    	//border-bottom: rem($header-btn-border-bottom-width) solid $color-primary;
+			    }
+
+			    &.btn {
+					@extend %header-btn;
+
+					&[data-class='mobile-nav-on'] {
+						border-color: $danger-300;
+						@include gradient-img($start: $danger-200,$stop: $danger-300);
+						color:$white;
+						width: $header-btn-width + 10px;
+					}
+
+				}
+
+			}
+
+			&.dropdown-icon-menu {
+
+				> .btn {
+					z-index: 1;
+				}
+
+				> ul {
+					opacity: 0;
+					list-style: none;
+					margin: 0;
+					position: absolute;
+					background: $white;
+					height:rem($header-btn-height);
+					padding: rem($header-btn-height + 8) rem(4px) rem(5px);
+					width: rem($header-btn-width + 8);
+					margin-left:1px;
+					margin-top: -($header-btn-height + 4);
+					//z-index: -1; 
+					left: rem(-5px);
+					overflow: hidden;
+					box-shadow: 0 rem(3px) rem(3px) rgba(0,0,0,.12),0 0 rem(3px) rgba(0,0,0,.24);
+
+					@include rounded(rem($header-btn-border-radius));
+					@extend %common-animation-slow;
+
+					> li {
+						margin-bottom:rem(4px);
+						position: relative;
+						
+						.btn {
+							@extend %header-btn;
+						}
+
+
+						&:last-child {
+							margin-bottom:0;
+						}
+					}
+
+				}
+
+				&:hover {
+
+					> ul {
+						display: block;
+						opacity: 1;
+						/*
+						 * n = number of buttons minus 1 
+						 *     eg. $header-btn-height * 2n
+						 */
+						height: rem($header-btn-height + ($header-btn-height * 2) + 16); 		
+
+						&:hover {
+							overflow: visible;
+						}
+					}
+
+					.btn {
+						//background: darken($page-bg, 2%);
+
+						&:hover {
+							//background: $primary-500;
+							//@include text-contrast($primary-500);
+						}
+
+					}	
+					
+				}
+
+			}
+		}
+
+		/* header section left has search box */
+		&#hdr-l {
+
+			float:left;
+
+			> li {
+
+				&.dropdown-icon-menu {
+					z-index: 1;
+				}
+				
+			}
+
+		}
+
+		/* header section right with buttons */
+		&#hdr-r {
+
+			float:right;
+
+			> li {
+
+				&:last-child {
+					> a {
+						padding-right:0;
+					}
+				}
+
+			}
+		}
+	}
+	
+}

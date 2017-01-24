@@ -1,0 +1,59 @@
+@include media-breakpoint-up($mobile-breakpoint) {
+
+	.nav-function-minify:not(.nav-function-top) {
+
+		#left-panel {
+
+			#logo {
+
+				background:$nav-minify-logo-bg;
+
+			}
+
+			#primary-nav {
+
+				.nxtgn-nav {
+					margin:0;
+
+					> li {
+
+						> a {
+
+							text-align: center;
+
+							> .nxtgn-link-text {
+								background:$nav-minify-hover-bg;
+							}
+
+						}
+					}
+				}
+				
+
+				&:hover {
+					
+					.nxtgn-nav > li:hover {
+
+						> a {
+							background: $nav-minify-hover-bg;
+							color: $white;
+						}
+					} 
+					
+				}
+
+			}
+
+		}
+		
+		#banner {
+			[data-class="nav-function-minify"] {
+				background: $header-btn-active-bg !important;
+				border-color: darken($header-btn-active-bg, 10%) !important;
+				color:$header-btn-active-color !important;
+			}
+		}
+
+	}
+
+}

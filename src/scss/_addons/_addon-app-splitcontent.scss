@@ -1,0 +1,25 @@
+/**/
+$splitcontent-width:308px;
+
+#splitcontent {
+	display: none;
+	position: absolute;
+	top: $header-height;
+	right: 0;
+	width: $splitcontent-width;
+	border-left: 1px solid #c3c3c3;
+	bottom: $footer-height;
+	padding: $header-height 30px $footer-height;
+	background: #e2e2e2;
+}
+
+
+#content {
+	&[data-splitcontent="yes"] {
+		margin-right: $splitcontent-width;
+
+		& + #splitcontent {
+			display: block;
+		}
+	}
+}

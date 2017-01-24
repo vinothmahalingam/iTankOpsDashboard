@@ -1,0 +1,15 @@
+.breadcrumb {
+	padding:0;
+	background:transparent;
+	margin:0 ;
+
+	> li {
+		> a {
+			text-decoration: none !important;
+		}
+
+		&.breadcrumb-item {
+			font-size: rem($page-breadcrumb-font-size);
+		}
+	}
+}

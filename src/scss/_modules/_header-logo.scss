@@ -1,0 +1,33 @@
+#logo {
+	//padding:0 rem($header-height/4);
+	height:rem($header-height);
+	width: rem($nav-width);
+	background: lighten($nav-background, 5%);
+	border-bottom: 1px solid $header-logo-border-bottom;
+	overflow: hidden; 
+	text-align: center;
+
+	@extend %general-animation;
+
+/*	@extend %flexbox;
+	@include align-items(center);
+	@include justify-content(center);*/
+
+	img {
+		width: rem($header-logo-width);
+		height: rem($header-logo-height);
+		//margin-top: rem($header-logo-margin-top);
+		//margin-right: rem($header-logo-margin-right);
+	}
+	>.minify-logo {
+		display: none;
+	}
+
+}
+
+#index:not(.header-function-fixed) {
+	#logo {
+		@extend %general-animation;
+	}
+}
+

@@ -1,0 +1,89 @@
+.nav-function-fixed:not(.nav-function-top)  {
+	#left-panel{
+		position: fixed !important;
+		
+		#primary-nav {
+			overflow: auto;
+			overflow-x: hidden;
+			-webkit-overflow-scrolling: touch;
+			height: unquote("calc(100% - #{rem($header-height + $footer-height)})");
+		}
+
+		.slimScrollDiv {
+
+			height: unquote("calc(100% - #{rem($header-height + $footer-height)})") !important;
+
+			#primary-nav {
+				padding-bottom: 0;
+			}
+		}
+
+	}
+	
+	#banner {
+		[data-class="nav-function-fixed"] {
+			@extend %header-btn-active;
+		}
+	}
+
+}	
+
+@include media-breakpoint-up(lg) {
+
+	.nav-function-fixed {
+
+		/*
+		 * top navigation fixed for larger screens with nav on LEFT
+		 */
+		&:not(.nav-function-top){
+			&.mod-main-boxed {
+				#left-panel{
+					position: fixed !important;
+				}	
+			}
+		}
+
+		/*
+		 * top navigation fixed for larger screens with nav on TOP
+		 */
+		&:not(.mod-main-boxed) {
+			&.nav-function-top {
+				#left-panel {
+					position: fixed !important;
+				}
+			}
+		}
+
+		/*
+		 * center for left nav fixed with boxed layout 
+		 */
+		&.nav-function-top {
+			&.mod-main-boxed {
+				#left-panel {
+					position: fixed !important;
+					right: 0;
+					left: 0;
+					margin-right: auto;
+					margin-left: auto;
+					max-width: map-get($grid-breakpoints, xl) - 2;
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.nav-function-fixed {
+
+		/*
+		 * top navigation fixed for extra large screens with nav on LEFT
+		 */
+		&:not(.nav-function-top){
+			&.mod-main-boxed {
+				#left-panel{
+					position: absolute !important;
+				}	
+			}
+		}
+	}
+}

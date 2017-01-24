@@ -1,0 +1,23 @@
+input[type="text"] {
+	&+.search-criteria {
+		display: none;
+		position:absolute;
+		@include fadeIn( 0.5s );
+		padding:rem($header-search-padding-x) rem($header-search-padding-y);
+		background-color:$header-search-focus-bg;
+		width:rem($header-search-width + 20);
+		@include text-contrast($header-search-focus-bg);
+		margin-top:-1px;
+		-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	    border: 1px solid #ccc;
+	    border: 1px solid rgba(0,0,0,0.2);
+	}
+	&:focus {
+		&+.search-criteria {
+			display: block;
+
+		}	
+	}
+}

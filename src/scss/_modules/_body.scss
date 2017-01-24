@@ -1,0 +1,22 @@
+html,
+body {
+	height:100%;
+}
+
+html {
+	// width:100%; // needed for fullscreen in IE
+	//position:relative; //why do we need this?
+	body {
+		// width: 100%; // needed for fullscreen in IE
+		//position: relative; //is this needed?
+		
+		direction: ltr;
+		font-size: rem($base-font-size);
+		letter-spacing: rem(0.1px);
+		text-rendering: optimizeLegibility;
+		line-height: $baseLINE-Height;
+		background-color: $body-background-color;
+		overflow-x: hidden; //safari issue fixed for bottom spacing 
+		@extend %font-smoothing;
+	}
+}

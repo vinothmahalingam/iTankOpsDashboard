@@ -1,0 +1,36 @@
+$app-shortcut-btn-size: 49px;
+
+ul.app-shortcut {
+  list-style: none;
+  margin:0;
+  padding:0;
+  position:fixed;
+  right: $grid-gutter-width-base;
+  bottom: $app-shortcut-btn-size/4;
+  z-index: $footer-zindex + 1; 
+
+  & > .mother {
+    display: block;
+
+    & > .btn-circle {
+          text-align: center;
+          padding: 0;
+          opacity: .85;
+          clip-path: circle(18px at center);
+          -webkit-clip-path: circle(18px at center);
+
+        &:hover {
+          opacity:1;
+        }
+
+        & >:first-child {
+          font-size: $app-shortcut-btn-size;
+          background: #333;
+          //border-radius: 50%;
+          margin-top: 2px;
+          overflow:hidden;
+        }
+    }
+  }
+}
+

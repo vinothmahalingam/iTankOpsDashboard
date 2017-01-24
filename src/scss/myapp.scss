@@ -1,0 +1,65 @@
+/* #GLOBAL IMPORTS
+========================================================================== */
+@import './src/scss/_imports/_global-import';
+
+/* #FRAMEWORK - Structure and layout files. (**DO NOT** change order)
+                  You may disable a feature if you do not wish to use it
+========================================================================== */
+@import '_modules/_reset';
+@import '_modules/_body';
+@import '_modules/_header';
+@import '_modules/_header-logo';
+@import '_modules/_header-search-box';
+@import '_modules/_header-function-fixed';
+@import '_modules/_nav';
+@import '_modules/_nav-info-card';
+@import '_modules/_nav-function-top';
+@import '_modules/_nav-function-hidden';
+@import '_modules/_nav-function-fixed';
+@import '_modules/_nav-function-minify';
+@import '_modules/_nav-footer';
+@import '_modules/_page-wrapper';
+@import '_modules/_page-heading';
+@import '_modules/_page-breadcrumb';
+@import '_modules/_page-content';
+@import '_modules/_page-footer';
+@import '_modules/_misc';
+@import '_modules/_responsive';
+@import '_modules/_hack';
+
+/* #COMPONENTS (can be removed but may or may not impact other components)
+========================================================================== */ 
+/*@import '_modules/_form-switches';*/
+@import '_modules/_translate-3d';
+@import '_modules/_print';
+
+/* #DEMO ELEMS - elements mostly used for demo (can be removed)
+========================================================================== */ 
+@import '_modules/_settings-demo';
+@import '_modules/_settings-demo-theme-colors';
+@import '_modules/_settings-demo-incompatiblity-list';
+@import '_modules/_demo-only';
+
+/* #_addons - Plugins imported in random order (remove if not needed)
+========================================================================== */ 
+@import '_addons/_addon-*.scss';
+
+/* #ANIMATION - CSS animations and keyframes
+========================================================================== */ 
+@import '_modules/_keyframes';
+
+/* #MODS - Layout manipulation
+========================================================================== */ 
+@import '_modules/_mod-*.scss';
+
+/* #COLORS - we place this here so it can override other colors as needed
+========================================================================== */ 
+@import '_modules/_colors';
+
+/* #FONT ICONS - customized icons
+========================================================================== */ 
+@import '_modules/_font-icons';
+
+/* #OVERRIDE - You can override any of the variables through this file
+========================================================================== */ 
+@import '_modules/_overrides';

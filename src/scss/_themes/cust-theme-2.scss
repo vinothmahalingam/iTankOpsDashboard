@@ -1,0 +1,8 @@
+/* #THEME COLOR (variable overrides)
+========================================================================== */
+$color-primary:         							#00bbff;
+$color-fusion: 										darken(desaturate(adjust-hue($color-primary, 5), 70%), 10%); 
+
+/* #GLOBAL IMPORTS
+========================================================================== */
+@import './src/scss/_imports/_theme-modules-import';

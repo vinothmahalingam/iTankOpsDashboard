@@ -1,0 +1,105 @@
+$mod-bg-1: url("#{$baseURL}img/backgrounds/bg-1.png") !default;
+$mod-bg-1-prev: url("#{$baseURL}img/backgrounds/prev-bg-1.png") !default;
+
+$mod-bg-2: url("#{$baseURL}img/backgrounds/bg-2.png") !default;
+$mod-bg-2-prev: url("#{$baseURL}img/backgrounds/prev-bg-2.png") !default;
+
+$mod-bg-3: url("#{$baseURL}img/backgrounds/bg-3.png") !default;
+$mod-bg-3-prev: url("#{$baseURL}img/backgrounds/prev-bg-3.png") !default;
+
+$mod-bg-4: url("#{$baseURL}img/backgrounds/bg-4.png") !default;
+$mod-bg-4-prev: url("#{$baseURL}img/backgrounds/prev-bg-4.png") !default;
+
+@include media-breakpoint-up(xl) {
+	.mod-main-boxed {
+
+		&.display-settings{
+			
+			#settings-demo {
+				
+				.expanded {
+					display: block;
+
+					> ul {
+						padding: 0;
+						margin: 0;
+						text-align: center;
+						height: 50px;
+
+						> li {
+							display: inline-block;
+							margin:0;
+							padding:0;
+
+							[data-action="toggle"] {
+								width:50px;
+								height:50px;
+								padding:0;
+								border-radius: 50%;
+								margin-right:5px;
+								display: block;
+								cursor: pointer;
+								position: relative;
+
+								border: 1px solid lighten($fusion-400, 45%);
+
+								&[data-class="mod-bg-1"] {
+									background-image: $mod-bg-1-prev;
+								}
+								&[data-class="mod-bg-2"] {
+									background-image: $mod-bg-2-prev;
+								}
+								&[data-class="mod-bg-3"] {
+									background-image: $mod-bg-3-prev;
+								}
+								&[data-class="mod-bg-4"] {
+									background-image: $mod-bg-4-prev;
+								}
+							}
+
+							&:last-child {
+								[data-action="toggle"] {
+									margin-right:0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+
+
+		&.mod-bg-1 {
+			background-image: $mod-bg-1;
+
+			[data-class="mod-bg-1"] {
+				@extend %selected-dot;
+			}
+		}
+		&.mod-bg-2 {
+			background-image: $mod-bg-2;
+
+			[data-class="mod-bg-2"] {
+				@extend %selected-dot;
+			}
+		}
+		&.mod-bg-3 {
+			background-image: $mod-bg-3;
+
+			[data-class="mod-bg-3"] {
+				@extend %selected-dot;
+			}
+		}
+		&.mod-bg-4 {
+			background-image: $mod-bg-4;
+
+			[data-class="mod-bg-4"] {
+				@extend %selected-dot;
+			}
+		}
+		&.mod-fixed-bg {
+			background-attachment: fixed;
+		}
+	}
+}

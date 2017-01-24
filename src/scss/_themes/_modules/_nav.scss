@@ -1,0 +1,221 @@
+#left-panel {
+	background: $nav-background;
+
+	.nxtgn-nav-title {
+		color: $nav-title-color;
+		border-bottom: 1px solid rgba($nav-title-border-bottom-color, 0.2);
+	}
+
+	#primary-nav {
+
+		.nxtgn-nav {
+
+			li {
+
+				&.open {
+					> a {
+						@include text-contrast($nav-background);
+					}
+				}
+
+				&.active {
+
+					> a {
+						@include text-contrast($nav-background);
+						background-color: darken($nav-base-color, 5%);
+						@include box-shadow(inset 3px 0 0 $color-primary);
+
+						&:hover {
+
+							>.fa,
+							>.#{$cust-icon-prefix} {
+							    color:$nav-icon-hover-color;
+							}
+
+						}
+
+					}
+
+					> ul {
+						display: block;
+					}
+				}
+
+				a {
+					color: $nav-link-color;
+
+					>.fa,
+					>.#{$cust-icon-prefix} {
+					    color:$nav-icon-color;
+					} 
+
+					&:hover {
+						@include text-contrast(rgba(lighten($nav-base-color, 1%), (80/100)))
+
+						.badge {
+							color: $nav-badge-color;
+						}
+
+						>.fa,
+						>.#{$cust-icon-prefix} {
+							color:$nav-icon-hover-color;
+						}
+
+						> .badge {
+							box-shadow: 0 0 0 1px rgba(lighten($nav-base-color, 1%), (80/100));
+							border: 1px solid rgba(lighten($nav-base-color, 1%), (80/100));
+						}
+					
+					}
+
+					&:focus {
+						@include text-contrast( rgba(darken($nav-base-color, 5% ), (50/100)) );
+						background-color: rgba(darken($nav-base-color, 5% ), (50/100));
+						@include box-shadow(inset rem(3px) 0 0 rgba($color-primary, (40/100)));
+
+						.badge {
+							color: $nav-badge-color;
+						}
+					}
+
+				} 
+
+				// Sub nav level 1
+				.nxtgn-sub-one {
+					background-color: darken($nav-base-color, 11%);
+
+					li {
+
+						&.active {
+							a {
+								@include text-contrast(rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)))
+								background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100));
+								@include box-shadow(inset rem(3px) 0 0 rgba($color-primary, (50/100)) );
+
+								> .nxtgn-link-text {
+									>.fa,
+									>.#{$cust-icon-prefix} {
+									    @include text-contrast(rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)))
+									}
+								}	
+								&:hover {
+									> .nxtgn-link-text {
+										>.fa,
+										>.#{$cust-icon-prefix} {
+										    color:$nav-icon-hover-color;
+										}
+									}			
+								}
+							}
+						}
+
+						a {
+							color: lighten(darken($nav-base-color, 11%),55%);
+
+							>.fa,
+							>.#{$cust-icon-prefix} {
+								color: $nav-icon-color;
+							}
+
+							> .nxtgn-link-text {
+								>.fa,
+								>.#{$cust-icon-prefix} {
+									color:$nav-icon-color;
+								}
+							}
+
+							> .badge {
+								color: $nav-badge-color;
+								background-color: $nav-badge-bg-color;
+								border: 1px solid darken($color-fusion, 0%);
+
+							}
+							
+							&:hover,
+							&:focus {
+								@include text-contrast(rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)));
+								background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100));
+								
+								@include box-shadow(inset rem(3px) 0 0 rgba($color-primary, (50/100)) );
+
+								> .nxtgn-link-text {
+									>.fa,
+									>.#{$cust-icon-prefix} {
+									    color:$nav-icon-hover-color;
+									}
+								}
+							}
+
+						}
+
+						// Sub nav level 2
+						.nxtgn-sub-two {
+							background-color: darken($nav-base-color, 13%);
+
+							li {
+								border-top-color: 1px solid darken($color-fusion, 3%);
+
+								a {
+									color: lighten(darken($nav-base-color, 11%),55%);
+									padding-left: rem(65px);
+
+
+									&:hover,
+									&:focus {
+										
+										background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100));
+										@include text-contrast( rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)) )
+										@include box-shadow( inset rem(3px) 0 0 rgba($color-primary, (40/100)) );
+									}
+
+									> .badge {
+										color: $nav-badge-color;
+										background-color: $nav-badge-bg-color;
+										border: 1px solid darken($color-fusion, 0%);
+									}
+
+								}
+
+								&.active {
+									> a {
+										background-color: darken($nav-base-color, 13%);
+										@include box-shadow(inset rem(3px) 0 0 darken($nav-base-color, 13%));
+									}
+								}
+							}
+						}
+
+					}
+				} 
+
+			}
+
+		} 
+
+	}
+
+}
+
+#index:not(.nav-function-top) {
+
+	#primary-nav {
+
+		.nxtgn-nav {
+
+			a,
+			a:hover,
+			a:focus {
+
+				.badge-detached {
+					background-color: #fff;
+					border: 1px solid #33383e;
+					color: #33383E;
+				}
+
+			}
+
+		}
+
+	}
+
+}

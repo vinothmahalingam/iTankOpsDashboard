@@ -1,0 +1,238 @@
+/* List table */
+.list-table {
+	height: auto;
+	display:table;
+	margin: 0;
+	padding:0;
+	> li {
+		display: table-cell;
+		vertical-align: middle;
+		position: relative;
+		padding:0;
+
+		/*&.open, => this is now switched to show */
+		&.show, /* new */
+		&.search {
+			position: static;
+		}
+
+	}
+}
+ul.list-verticle {
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+/* flex */
+.flex-middle {
+	@extend %flexbox;
+	@include align-items(center);
+	@include justify-content(center);
+}
+.flex-1 {
+	flex:1 !important;
+}
+/* font weights */
+.fw-300 {
+	font-weight: 300;
+}
+.fw-400 {
+	font-weight: 400;
+}
+.fw-500 {
+	font-weight: 500;
+}
+.fw-n {
+	font-weight:normal !important;
+}
+/* margins */
+.mrg-auto {
+	margin: 0 auto;
+}
+
+.mrg-l-a {
+	margin-left: auto !important;
+}
+
+.mrg-r-a {
+	margin-right: auto !important;
+}
+
+.mrg-gutter {
+	margin: $grid-gutter-width-base;
+}
+
+.mrg-gutter-half {
+	margin: $grid-gutter-width-base/2;
+}
+
+.mrg-b-gutter {
+	margin-bottom: map-get($grid-gutter-widths, xl) !important;
+}
+/*floats*/
+.f-l {
+	float:left !important;
+}
+.f-r {
+	float:right !important;
+}
+/*.pos-a {
+
+	position:absolute !important;
+
+	&.pos-a-r-0 {
+		right:0;
+	}
+	
+	&.pos-a-l-0 {
+		left:0;
+	}
+	
+	&.pos-a-t-0 {
+		top:0;
+	}
+	
+	&.pos-a-b-0 {
+		bottom:0;
+	}
+}*/
+
+.pad-gutter {
+	padding:$grid-gutter-width-base;
+}
+
+.pad-gutter-half {
+	padding:$grid-gutter-width-base/2;
+}
+
+.btn-w-m {
+	min-width: 95px;
+}
+
+.btn-w-l {
+	min-width: 130px;
+}
+
+[data-elipsis="xs"] span,
+[data-elipsis="sm"] span,
+[data-elipsis="md"] span,
+[data-elipsis="default"] span,
+[data-elipsis="lg"] span {
+	text-overflow: ellipsis;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	vertical-align: text-bottom;
+}
+
+[data-elipsis="xs"] span { max-width: rem( map-get($grid-gutter-widths, xl) + 69px ) }
+[data-elipsis="sm"] span { max-width: rem(117px) }
+[data-elipsis="md"] span { max-width: rem(160px) }
+[data-elipsis="default"] span { max-width: rem(180px) }
+[data-elipsis="lg"] span { max-width: rem(200px) }
+[data-elipsis] {
+	> i {
+		vertical-align: text-bottom;
+		height: $header-height;
+		line-height: $header-height;
+	}
+}
+.shadow-hover {
+	@extend %shadow-hover;
+}
+.shadow-2 {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.shadow-3 {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.shadow-4 {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.shadow-5 {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+/* btn switch */
+.btn-switch {
+	background: $fusion-300;
+    padding: rem(2px) rem(8px) rem(1px) rem(22px);
+    font-size: rem(10px);
+    line-height: rem(11px);
+    border-radius: rem(20px);
+    text-transform: uppercase;
+    @include text-contrast($fusion-300);
+    font-weight: 500;
+    min-width:rem(52px);
+    height:rem(17px);
+    margin-top:5%;
+    position:relative;
+    overflow: hidden;
+    float: right;
+    
+    @extend %common-animation;
+
+    &:hover{
+    	@include scale(1.13);
+    }
+
+    &:before {
+    	content:"OFF";
+    	position:absolute;
+    	right:rem(7px);
+    }
+
+    &:after{
+		content: " ";
+		text-align: center;
+		@include text-contrast(#828282);
+		font-size: rem(14px);
+	    width: rem(13px);
+	    height: rem(13px);
+	    position: absolute;
+	    background: $white;
+	    padding:1px;
+	    left: 0;
+	    top: 0;
+	    line-height: normal;
+	    margin: 1px;
+		border-radius: 50%;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
+    }
+
+    &.active {
+    	color:$white;
+    	background:$color-primary;
+    	&:before {
+    		content:"ON";
+    		left:rem(7px);
+    		right:auto;
+    		@include text-contrast($color-primary);
+    	}
+
+    	&:after {
+    		content: " ";
+    		right:0;
+    		left:auto;
+    		background:$white;
+    		color:$color-primary;
+    	}
+
+    }
+
+    & + .onoffswitch-title {
+    	margin-top:rem(0.5px);
+    	font-size:rem(13px);
+    	display: block;
+
+    	& + .onoffswitch-title-desc {
+    		display: block;
+			width: 100%;
+			font-size: 11px;
+			line-height: 10px;
+			color: #989da5;
+			margin-bottom: 8px;
+			text-transform: lowercase;
+    	}
+    }
+
+}

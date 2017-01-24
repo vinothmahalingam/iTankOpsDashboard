@@ -1,0 +1,129 @@
+$widget-padding: 15px;
+$widget-header-font-size: 17px;
+$widget-header-height: 50px;
+$widget-btn-size: 16px;
+
+.widget-fullscreen {
+	overflow:hidden;
+	max-width: 100%;
+}
+
+
+.card {
+	&.widget {
+
+		margin-bottom: map-get($grid-gutter-widths, xs);
+		border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    	border-radius: 3px;
+		//box-shadow: 0 1px 2px rgba(0,0,0,.1);
+
+		&.widget-fullscreen {
+			position: fixed;
+			z-index: 9999;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			border-radius: 0;
+		}
+
+		.widget-header {
+			
+			padding: 0 $widget-padding;
+			font-size: $widget-header-font-size;
+			min-height: $widget-header-height;
+			font-weight: 300;
+
+			@extend %flexbox;
+			@include align-items(center);
+			@include flex-direction(row);
+
+			.description {
+				font-size: $widget-header-font-size - 2;
+				display: block;
+				margin-top: -3px;
+				font-weight: 300;
+				opacity: 0.8;
+			}
+
+			.widget-buttons {
+
+				/*position: absolute;
+				right: $widget-padding/2;
+				top: $widget-padding/3 + 6;*/
+
+				display: flex;
+				@include align-self(center);
+				@include justify-content(space-around);
+				margin-left:auto;
+				width: $widget-btn-size * 3.75;
+
+				.btn {
+					padding: 0;
+					text-align: center;
+					width: $widget-btn-size;
+					height: $widget-btn-size;
+					font-size: $base-font-size;
+					border-color: transparent;
+					box-sizing: border-box;
+					border-radius: 50%;
+					opacity: 0.8;
+					border: 1px solid rgba(0,0,0,0.2);
+
+					@extend %common-animation;
+
+					&:hover {
+						opacity: 1;
+						color: $white !important;
+					}
+
+				}	
+			}
+
+			&:hover {
+				.widget-buttons {
+					.btn {
+						opacity: 0.9;
+					}
+				}
+			}
+		}	
+
+		.widget-container {
+
+			padding: 0 $widget-padding ($widget-padding - 5);
+
+			&:only-child {
+				padding: $widget-padding;
+			}
+		}
+
+	}
+}	
+
+@media only screen and ( max-width: 420px ){
+
+	.card {
+		&.widget {
+			.widget-header {
+				padding: 0 10px;
+				font-size: $widget-header-font-size;
+				color: #060606;
+				min-height: $widget-header-height - 4;
+
+				.widget-buttons {
+
+					.btn {
+						width: 22px;
+						height: 20px;
+						border-radius: 3px;
+					}
+				}
+			}
+			.widget-container {
+				padding: 0 10px 10px;
+			}
+		}
+	}
+
+}

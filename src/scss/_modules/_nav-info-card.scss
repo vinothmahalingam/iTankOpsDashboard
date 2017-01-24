@@ -1,0 +1,78 @@
+#info-card {
+	position: relative;
+	display:block;
+	width:rem($nav-width);
+	height:rem($nav-infocard-height);
+	max-height: rem($nav-infocard-height);
+	padding: rem($header-height - 10) rem($nav-padding-left - 5) 0;
+	color:$white;
+	overflow: hidden;
+
+	@if $enable-animation != false {
+		@include transition(0.4s,ease-in-out); 
+	}
+
+	img.cover {
+		opacity: 0.5;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		@extend %bg-img-cover;
+		@extend %common-animation-opacity;
+	}
+
+	> .profile-image {
+		//@include rounded(50%);
+		width: rem($profile-image-width);
+		height: auto;
+		display: inline-block;
+		z-index: 1;
+		position: relative;
+
+		&+div {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: rem($nav-font-link-size + $nav-font-link-size/8);
+			font-weight: 400;
+			margin-left: rem($profile-image-width/5);
+			color: inherit;
+			letter-spacing: -0.01rem;
+			line-height: normal;
+			text-shadow: $black 0 1px;
+			z-index: 1;
+			position: relative;
+
+			> span {
+				font-size: rem($nav-font-link-size - 1px);
+				letter-spacing: rem(0.2px);
+				font-weight: 300;
+				display: block;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	#info-card {
+
+		@if $enable-animation != false {
+			&:hover {
+				padding-top: rem($header-height - 18);
+				@include transition(0.10s,ease-in-out); 
+				will-change: opacity;
+			}
+		}
+
+		&:hover {
+			img.cover {
+				opacity: 0.7;
+				@include backface-visibility;
+			}
+			
+		}
+
+	}
+}
+

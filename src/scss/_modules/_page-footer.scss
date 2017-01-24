@@ -1,0 +1,52 @@
+footer,
+.footer-push {
+    height: rem($footer-height);
+    display: block;
+    width: 100%;
+}
+
+footer {
+	position: absolute;
+	display: flex;
+	align-items:center;
+	bottom: 0;
+	background: $footer-bg;
+    z-index: $footer-zindex;
+    color:$footer-text-color;
+    font-size:$footer-font-size;
+    padding:0 $grid-gutter-width-base/2;
+
+	.footer-logo {
+	    background: $primary-500;
+	    padding: rem(2px);
+	    width: rem(22px);
+	    height: rem(22px);
+	    margin-right: rem(5px);
+	}
+
+	& + .footer-push {
+		position:static;
+		z-index: initial;
+		float:left;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+
+	footer {
+		width: calc(100% - #{$nav-width});
+	}
+
+	.nav-function-minify {
+		footer {
+			width: calc(100% - #{$nav-minify-width});
+		}	
+	}
+
+	.nav-function-hidden {
+		footer {
+			width: calc(100% - #{$nav-hidden-visiblity});
+		}
+	}
+
+}

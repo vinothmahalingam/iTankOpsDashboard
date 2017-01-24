@@ -1,0 +1,50 @@
+.mod-lean-page-header {
+	#page-wrapper {
+		#content {
+			.page-heading {
+				.page-header {
+
+					.icon,
+					.fa {
+						font-size: 108%;
+						margin-right: 0.125rem;
+						position: absolute;
+						top: 23px;
+						left: 16px;
+					}
+
+					margin: 0 0 15px;
+					padding-bottom: 15px;
+					padding: 17px 18px 19px 55px;
+					margin-left: -30px;
+					margin-right: -30px;
+					margin-top: -30px;
+					background: #fbfbfb;
+					border-bottom: 1px solid rgba(67, 74, 81, 0.15);
+					font-size: 25px;
+					font-weight: 300;
+					position: relative;
+
+					small {
+						font-size: 13px;
+					}
+				}
+
+				.breadcrumb {
+					line-height: 40px;
+					background: #f5f5f5;
+					padding: 0 18px;
+					margin: -30px;
+					margin-top: -15px;
+					border: 1px solid rgba(67, 74, 81, 0.15);
+					border-top: 0;
+					border-left: 0;
+					border-right: 0;
+					margin-bottom: 15px;
+					border-radius: 0
+				}
+			}
+		}
+		
+	}
+}

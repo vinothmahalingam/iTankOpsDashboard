@@ -1,0 +1,223 @@
+@include media-breakpoint-up($mobile-breakpoint) {
+
+	.nav-function-minify:not(.nav-function-top) {
+
+		#left-panel {
+			
+			width: rem($nav-minify-width);
+			z-index: $depth-header + 1;
+
+			will-change: left, right;
+			
+			transition: $nav-hide-animate;
+
+			#logo {
+
+				background:$nav-minify-logo-bg;
+				width:rem($nav-minify-width);
+							
+				>img {
+					display: none;
+				}
+
+				.minify-logo {
+					display:block;
+					width:auto;
+				}
+			}
+
+			#primary-nav {
+				overflow: hidden; 
+
+				#info-card {
+					height: rem($nav-width/3 + 5);
+					width:100%;
+					padding: rem($header-height/3.4) 0;
+					text-align:center;
+					overflow: hidden; 
+
+					.profile-image + div {
+						position: absolute;
+					    top: 0;
+					    width: rem($nav-width/1.2);
+					    text-align: left; 
+					    display: none;
+					}
+				}
+
+				.nxtgn-nav-title {
+					display: none;
+				}
+				.nxtgn-nav {
+					margin:0;
+
+					li {
+						a {
+							.nxtgn-link-text {
+								.dl-ref {
+									display:none !important;
+								}
+							}
+						}
+					}
+
+					> li {
+
+						> a {
+
+							text-align: center;
+
+							>.fa,
+							>.#{$cust-icon-prefix} {
+								font-size: rem($nav-font-icon-size * 1.1);
+								margin: 0;
+							}
+
+							> .badge {
+								left: $nav-minify-width / 2;
+							}
+
+							&:not(.livicon) > .badge:not(.clear-badge):first-child  {
+								margin-right: 0;
+							}
+
+							> .nxtgn-link-text {
+								display: none;	
+								position:absolute;
+								text-align: left;
+								background:$nav-minify-hover-bg;
+								padding-left: rem($nav-minify-sub-width / 10);
+								color: $white;
+								top: 0;
+							    left: rem($nav-minify-width);
+							    height: 100%;
+							    line-height: rem($nav-link-height);
+							    width: rem($nav-minify-sub-width);
+							    font-weight:400;
+
+							}
+
+							> b.collapse-sign {
+								display: none !important;
+							}
+
+							& + ul.nxtgn-sub-one {
+								position: absolute;
+								width: rem($nav-minify-sub-width);
+								left: rem($nav-minify-width);
+
+								> li {
+
+									> a {
+
+										padding-left: rem($nav-minify-sub-width / 10);
+
+
+										> b.collapse-sign > .fa,
+										> b.collapse-sign > .#{$cust-icon-prefix} {
+											display: inline-block !important;
+										}
+
+
+										& + ul.nxtgn-sub-two {
+											> li {
+												> a {
+													padding-left: rem($nav-minify-sub-width / 4.5);
+												}
+											}
+										}
+									}
+
+									.nxtgn-link-text {
+										> .fa,
+										> .#{$cust-icon-prefix} {
+											display:none;
+										}
+									}
+								}
+							}
+
+						}
+
+						& ul.nxtgn-sub-one {
+							display: none !important;
+						}
+					}
+				}
+				
+
+				&:hover {
+					overflow: visible;
+					
+					.nxtgn-nav > li:hover {
+
+						> a {
+							background: $nav-minify-hover-bg;
+							color: $white;
+							overflow: visible;
+
+							>.nxtgn-link-text {
+								display: block;
+							}
+
+							>.legitRipple-ripple {
+								display: none !important;
+							}
+
+						}
+
+						> ul.nxtgn-sub-one {
+							display: block !important;
+						}
+					} 
+					
+				}
+
+			}
+
+		}
+		
+		#page-wrapper {
+			padding-left: rem($nav-minify-width);
+		}
+
+		#banner {
+			[data-class="nav-function-minify"] {
+				background: $header-btn-active-bg !important;
+				border-color: darken($header-btn-active-bg, 10%) !important;
+				@include box-shadow(inset 0 0 3px 1px rgba(0,0,0,.37));
+				color:$header-btn-active-color !important;
+			}
+		}
+
+		&.nav-function-hidden {
+			#page-wrapper {
+				padding-left: rem($nav-hidden-visiblity);
+			}
+			#left-panel {
+				left: rem($nav-hidden-visiblity - $nav-minify-width);
+				overflow: visible;
+				&:hover {
+					left: 0;
+				}
+			}
+			#banner {
+				margin-left: 0;
+			}
+		}
+
+		&.header-function-fixed {
+			#banner {
+				margin-left: rem($nav-minify-width);
+			}
+		}
+
+		&.nav-function-hidden.header-function-fixed {
+			#banner {
+				margin-left: rem($nav-hidden-visiblity);
+			}
+		}
+
+	}
+
+}

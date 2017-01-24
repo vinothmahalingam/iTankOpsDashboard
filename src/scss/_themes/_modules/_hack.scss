@@ -1,0 +1,59 @@
+/* nav pills */
+.nav-pills {
+
+	&.nav-table-cell {
+
+		> .nav-item {
+
+			> .nav-link {
+				@extend %btn-default;
+				color: $fusion-500;
+
+				&.active {
+					box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+					border-color: #CACACA;
+				}
+				&:focus {
+					border-color: #CACACA !important;
+				}
+
+			}
+
+			&:first-child {
+				> .nav-link {
+					@include rounded (4px 0 0 4px);
+				}
+			}
+
+			&:last-child {
+				> .nav-link {
+					@include rounded (0 4px 4px 0);
+				}
+			}
+		}
+	}
+}
+/* buttons */
+.btn-default {
+	@extend %btn-default;
+}
+.btn-outline-default {
+    @include button-outline-variant(#333);
+}
+.btn-pills {
+	@include rounded(15px);
+}
+/* change the white to any color ;) */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    -webkit-text-fill-color: inherit !important;
+}
+/* select background */
+::selection {
+  background: $color-fusion;
+  color: $white;
+}
+::-moz-selection {
+  background: $color-fusion;
+  color: $white;
+}

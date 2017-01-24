@@ -1,0 +1,62 @@
+
+@media print {
+    @page {
+        size: $print-page-size $print-page-type;
+        margin: $print-page-margin;
+		padding: 0;
+		border: none;
+		border-collapse: collapse;
+    }
+
+    * {
+    	color:#333 !important;
+    	background: transparent !important;
+    	font-family: Arial, Helvetica, sans-serif !important;
+    	letter-spacing: normal !important;
+    	font-size: 10pt !important;
+    	line-height: 1.7 !important;
+    	text-transform: none;
+    	transition: none;
+    }
+
+	a:link { 
+		font-weight: bold; 
+		text-decoration: underline; 
+		color: #06c; 
+	}
+	h1, h2, h3, h4, h5, h6, strong {
+		font-weight: bold !important;
+		font-size: 14pt !important 
+	}
+
+	#left-panel,
+	#settings-demo,
+	.btn,
+	#banner,
+	footer {
+		display: none !important;
+	}
+
+	#page-wrapper,
+	#content,
+	.container.card {
+	   	padding: 0;
+	   	display: block;
+	   	margin:0;
+	   	border:0 !important;
+	   	width:auto;
+	   	float: none;
+	}
+	.widget-header > * {
+		font-weight: bold !important;
+	}
+	.card.widget {
+		border-color: #333 !important;
+	}
+
+	.clearfix:after {
+	    content: '';
+	    clear: both;
+	    display: table;
+	}
+}

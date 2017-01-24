@@ -1,0 +1,59 @@
+.mod-high-contrast {
+
+	.nxtgn-nav li a,
+	.nxtgn-nav-title,
+	.nxtgn-nav li a .fa, 
+	.nxtgn-nav li a .icon,
+	.dl-ref,
+	.btn {
+		text-shadow:
+			   -1px -1px 0 $black,  
+			    1px -1px 0 $black,
+			    -1px 1px 0 $black,
+			     1px 1px 0 $black;
+		color: $white !important;
+		font-weight:500 !important;
+	}
+
+	.page-header,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	.settings-panel-title a,
+	.widget-header,
+	.badge-detached,
+	.btn-secondary,
+	.btn-default,
+	#banner .btn,
+	[class*="btn-outline-"] {
+		text-shadow:
+			   -1px -1px 0 $white,  
+			    1px -1px 0 $white,
+			    -1px 1px 0 $white,
+			     1px 1px 0 $white;
+		color: $black !important;
+		font-weight:500;
+	}
+
+
+	.page-header small,
+	.breadcrumb > li > a,
+	h1 small,
+	h2 small,
+	h3 small,
+	h4 small,
+	h5,
+	h6,
+	p,
+	.btn-switch + .onoffswitch-title,
+	.onoffswitch-title + .onoffswitch-title-desc,
+	.widget-container,
+	.widget-header .btn {
+		text-shadow: none;
+		color: $black !important;
+		font-weight: normal !important;
+	}
+
+}

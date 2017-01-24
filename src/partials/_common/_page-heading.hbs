@@ -1,0 +1,18 @@
+{{#if heading}}
+<div class="page-heading">
+	<h1 class="page-header">
+		{{heading}}
+		<small>
+		{{#if pagedescription}}
+			{{pagedescription}}
+		{{else}}	
+			Welcome to NextGen WebApp Smart Template
+		{{/if}}
+		</small>
+	</h1>
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="#">NextGen</a></li>
+		<li class="breadcrumb-item active">{{heading}}</li>
+	</ol>
+</div>
+{{/if}}

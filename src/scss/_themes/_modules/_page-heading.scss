@@ -1,0 +1,15 @@
+.page-heading {
+
+	.page-header {
+		color: $fusion-500;
+
+	    small {
+	    	color: $fusion-100;
+	    }
+
+	    >.fa,
+	    >.#{$cust-icon-prefix} {
+	    	color: lighten($gray-light, 15%);
+	    }
+	}
+}

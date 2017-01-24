@@ -1,0 +1,39 @@
+/*.icon-stacked {
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    > i:not(.base) {
+    	position: absolute;
+    	&.top {
+    		margin-top:-5%;
+    	}
+    }
+
+	> .base {
+		font-size: 42px;
+	}
+	> .mask {
+		font-size: 25px;
+
+		&.larger-icon {
+			font-size:31px;
+		}
+	}
+	>:nth-child(3) {
+		font-size:22px;
+
+		&.smaller-icon {
+			font-size: 16px;
+		}
+
+		&.bigger-icon {
+			font-size: 30px;
+		}
+	}
+
+    &.icon-stacked-xs {
+
+    }
+}*/

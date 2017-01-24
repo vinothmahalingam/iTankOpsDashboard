@@ -1,0 +1,49 @@
+.mod-color-blind {
+	#left-panel {
+		#logo {
+
+		}
+	}
+	#content {
+
+	}
+
+	#left-panel #primary-nav .nxtgn-nav > li.active > a,
+	[class*="bg-danger-"],
+	.btn-danger,
+	.btn-outline-danger {
+		@extend %pattern-0;
+	}
+
+	#left-panel #primary-nav .nxtgn-nav > li.active > a + .nxtgn-sub-one > li.active > a{
+		@extend %pattern-1;
+	}
+
+	[class*="bg-primary-"],
+	.btn-primary,
+	.btn-outline-primary {
+		@extend %pattern-2;
+	}
+
+	[class*="bg-success-"],
+	.btn-success,
+	.btn-outline-success {
+		@extend %pattern-3;
+	}
+
+	[class*="bg-info-"],
+	.btn-info,
+	.btn-outline-info {
+		@extend %pattern-4;
+	}
+
+	[class*="bg-warning-"],
+	.btn-warning,
+	.btn-outline-warning {
+		@extend %pattern-5;
+	}
+
+	[class*="btn-"].active {
+		background-image: none !important;
+	}
+}

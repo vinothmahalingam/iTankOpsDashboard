@@ -1,0 +1,16 @@
+@include media-breakpoint-up($mobile-breakpoint) {
+
+	.nav-function-hidden:not(.nav-function-top) {
+
+		#banner {
+			margin-left: 0;
+
+			/* active button state for "nav-function-hidden" */
+			[data-class="nav-function-hidden"] {
+				background: $header-btn-active-bg !important;
+				color:$header-btn-active-color !important;
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,97 @@
+.header-function-fixed {
+
+	&:not(.nav-function-top) {
+
+		#banner {
+			left:0;
+			position:fixed !important;
+			right:0;
+			top:0;
+
+			@extend %fixed-header-shadow;		
+			@extend %general-animation;
+		}
+
+		#content {
+			margin-top: rem($header-height);
+		}
+
+
+		/*&.nav-function-fixed {
+			#logo {
+				border-bottom-width: 0;
+			}
+		}*/
+
+		&:not(.nav-function-fixed) {
+
+			#logo {
+				width:rem($nav-width);
+				position:fixed;
+				top:0;
+				z-index: $cloud;
+				//border-bottom-width: 0;
+
+				@extend %fixed-header-shadow;
+			}
+
+			#left-panel {
+				#primary-nav {
+					margin-top:rem($header-height);
+				}
+			}
+
+			/* bug fix for nav hidden other than chrome...*/
+			&.desktop.nav-function-hidden {
+				#logo {
+					position: absolute;
+					transition: none !important;
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up($mobile-breakpoint) {
+
+	.header-function-fixed {
+
+		&:not(.nav-function-top) {
+
+			#banner {
+				margin-left: rem($nav-width);
+			}
+
+			&.nav-function-minify {
+				#left-panel {
+					#logo {
+						width:rem($nav-minify-width);
+					}
+				}
+			}
+		}
+
+		&.nav-function-top {
+			&.nav-function-fixed {
+				#banner {
+					position: fixed !important;
+					top: $nav-top-height;
+					right: 0;
+					left: 0;
+				}
+				#page-wrapper {
+					padding-top: rem($header-height + $nav-top-height);
+				}
+
+				&.nav-function-minify {
+					#banner {
+						top: $nav-top-minify-height;
+					}
+					#page-wrapper {
+						padding-top: rem($header-height + $nav-top-minify-height);
+					}
+				}
+			}
+		}
+	}
+}

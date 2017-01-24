@@ -1,0 +1,81 @@
+<header id="banner">
+		
+	<ul id="hdr-l" class="list-table">
+		<!-- DOC: dropdown / shortcuts -->
+		<li class="hidden-md-down dropdown-icon-menu">
+			<a href="#" class="btn no-ripple" data-action="toggle" data-class="nav-function-hidden" data-toggle="tooltip" data-placement="right" title="HIDDEN">
+				<i class="icon icon-menu"></i>
+			</a>
+			<ul>
+				<li>
+					<a href="#" class="btn no-ripple" data-action="toggle" data-class="nav-function-minify" data-toggle="tooltip" data-placement="right" title="MINIFY">
+						<i class="icon icon-minify-nav"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="btn no-ripple" data-action="toggle" data-class="nav-function-fixed" data-toggle="tooltip" data-placement="right" title="LOCK">
+						<i class="icon icon-lock-nav"></i>
+					</a>
+				</li>
+			</ul>
+		</li>
+		<!-- DOC: mobile button appears during mobile width -->
+		<li class="hidden-lg-up">
+			<a href="#" class="btn" data-action="toggle" data-class="mobile-nav-on">
+				<i class="icon icon-menu"></i>
+			</a>
+		</li>
+		<!-- app search field -->
+		<li class="search">
+			<form class="my-app-forms hidden-xs-down" role="search" action="search-results.html" autocomplete="off">
+				<input type="text" id="search-field" placeholder="Search for anything" class="form-control" tabindex="1">
+			</form>
+		</li>
+	</ul>
+	
+	<ul id="hdr-r" class="list-table">
+		<!-- app settings -->
+		<li class="hidden-md-down">
+			<a href="#" data-action="toggle" data-class="display-settings" data-toggle="tooltip" data-placement="left" title="SETTINGS">
+				<i class="icon icon-settings"></i>
+			</a>
+		</li>
+		<!-- app settings for mobile view -->
+		<li class="hidden-sm-up">
+			<a href="#" data-action="toggle" data-class="show-search-field" title="Display Settings">
+				<i class="icon icon-magnifier"></i>
+			</a>
+		</li>
+		<!-- app shortcuts -->
+		<li>
+			<a href="#" data-toggle="dropdown" title="My Apps" class="no-ripple">
+				<i class="icon icon-my-apps"></i>
+			</a>
+			<div class="dropdown-menu custom-scroll">
+				{{> _common/_dropdown-app}}
+			</div>
+		</li>
+		<!-- app notification -->
+		<li>
+			<a href="#" data-toggle="dropdown" title="You got 11 notifications" class="no-ripple">
+				<i class="icon icon-bell"></i>
+				<span class="badge">11</span>
+			</a>
+			<div class="dropdown-menu dropdown-xl p-3">
+				{{> _common/_dropdown-notification}}
+			</div>
+		</li>
+		<!-- app user menu -->
+		<li>
+			<a href="#" data-elipsis="xs" data-toggle="dropdown" title="dr.sunny.lantern@nextgenadmin.com" class="no-ripple">
+				<img src="img/avatar-sunny.png" class="profile-image rounded-circle" alt="Sunny Profile"> 
+				<span>Dr. Sunny Lantern</span>
+				<i class="icon icon-chevron-down"></i> 
+			</a>
+			<div class="dropdown-menu dropdown-sm p-0">
+				{{> _common/_dropdown-menu}}
+			</div>
+		</li>
+	</ul>
+
+</header>
