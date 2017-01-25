@@ -205,11 +205,11 @@ $nav-icon-width:									28px !default;
 						li {
 							a {
 							    padding-left: rem($nav-padding-left + $nav-icon-width + 12.5px);
-							    padding-top: rem(5px);
-							    padding-bottom: rem(5px);
+							    padding-top: rem(6px);
+							    padding-bottom: rem(6px);
 							    font-size: rem($base-font-size);
-							    min-height: $nav-sub-link-height;
-							    max-height: none;
+							    //min-height: $nav-sub-link-height;
+							    //max-height: none;
 
 							    >.fa,
 							    >.#{$cust-icon-prefix} {
@@ -331,8 +331,11 @@ $nav-icon-width:									28px !default;
 
 								a {
 									color: lighten(darken($nav-base-color, 11%),55%);
-									padding-left: rem(70px);
-									max-height: inherit;
+									padding-left: rem(65px);
+									padding-top: rem(5px);
+									padding-bottom: rem(5px);
+									font-size:rem(12.8px);
+									//max-height: inherit;
 
 									.dl-ref {
 										margin-left: 0;

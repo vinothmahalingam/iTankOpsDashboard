@@ -24,9 +24,7 @@
 
 			<!-- BEGIN CONTENT -->
 			<main id="content" data-splitcontent={{#if splitcontent}}{{splitcontent}}{{else}}"no"{{/if}}>
-				{{#is pagename "!==" "error"}}
 				{{> _common/_page-heading }}
-				{{/is}}
 				{{#> content-block}}{{/content-block}}
 			</main>
 			<!-- END CONTENT -->
