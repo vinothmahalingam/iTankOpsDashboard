@@ -3,6 +3,9 @@
 
 body {
 	font-family: $heading-font-family;
+	font-size: rem($base-font-size);
+	line-height: $baseLINE-Height;
+	letter-spacing: rem(0.1px);
 }
 
 #content {
@@ -35,29 +38,28 @@ h6 small,
     font-weight: 300;
     display: block;
 	font-size: 15px;
-	margin-top: 0;
-    line-height: 1.4;
-    margin-bottom: 15px;
+    line-height: 1.7;
     letter-spacing: rem(-0.2px);
+    margin:2px 0 ($grid-gutter-width-base / 2);
 }
 
 h2 small, 
 h3 small, 
 .h2 small, 
 .h3 small, {
-	font-size: 14px;
+	font-size: 15px;
 }
 
 h4 small, 
 .h4 small {
-	font-size: 13px;
+	font-size: 14px;
 }
 
 h5 small, 
 h6 small, 
 .h5 small, 
 .h6 small {
-	font-size: 12px;	
+	font-size: 13px;	
 }
 
 
@@ -72,4 +74,14 @@ h6 small,
 }
 .fw-700 {
 	font-weight:700 !important;
+}
+
+.font-lg {
+    color: $gray-light;
+	font-size: 15px;
+}
+
+.font-xl {
+    color: $gray-light;
+	font-size: 17px;
 }

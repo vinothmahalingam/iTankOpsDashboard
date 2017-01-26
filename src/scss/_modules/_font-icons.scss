@@ -39,8 +39,13 @@
 #content {
 	.icon:before,
 	[data-icon]:before {
-		vertical-align: -10%;
-		//margin-right: 5px;
+		vertical-align: -8%;
+	}
+}
+.navbar-toggler {
+	.icon:before,
+	[data-icon]:before {
+		vertical-align: inherit !important;
 	}
 }
 

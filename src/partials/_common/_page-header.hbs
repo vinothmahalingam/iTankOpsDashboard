@@ -48,31 +48,31 @@
 		</li>
 		<!-- app shortcuts -->
 		<li>
-			<a href="#" data-toggle="dropdown" title="My Apps" class="no-ripple">
+			<a href="#" data-toggle="dropdown" id="dropdown-app" title="My Apps" class="no-ripple">
 				<i class="icon icon-my-apps"></i>
 			</a>
-			<div class="dropdown-menu custom-scroll">
+			<div class="dropdown-menu custom-scroll" aria-labelledby="dropdown-app">
 				{{> _common/_dropdown-app}}
 			</div>
 		</li>
 		<!-- app notification -->
 		<li>
-			<a href="#" data-toggle="dropdown" title="You got 11 notifications" class="no-ripple">
+			<a href="#" data-toggle="dropdown" id="dropdown-notification" title="You got 11 notifications" class="no-ripple">
 				<i class="icon icon-bell"></i>
 				<span class="badge">11</span>
 			</a>
-			<div class="dropdown-menu dropdown-xl p-3">
+			<div class="dropdown-menu dropdown-xl p-3" aria-labelledby="dropdown-notification">
 				{{> _common/_dropdown-notification}}
 			</div>
 		</li>
 		<!-- app user menu -->
 		<li>
-			<a href="#" data-elipsis="xs" data-toggle="dropdown" title="dr.sunny.lantern@nextgenadmin.com" class="no-ripple">
+			<a href="#" data-elipsis="xs" data-toggle="dropdown" id="dropdown-menu" title="dr.sunny.lantern@nextgenadmin.com" class="no-ripple">
 				<img src="img/avatar-sunny.png" class="profile-image rounded-circle" alt="Sunny Profile"> 
 				<span>Dr. Sunny Lantern</span>
 				<i class="icon icon-chevron-down"></i> 
 			</a>
-			<div class="dropdown-menu dropdown-sm p-0">
+			<div class="dropdown-menu dropdown-sm p-0" aria-labelledby="dropdown-menu">
 				{{> _common/_dropdown-menu}}
 			</div>
 		</li>
