@@ -113,6 +113,13 @@ ul.list-verticle {
 	min-width: 130px;
 }
 
+
+.list-spaced {
+	> li {
+		padding: 0 0 $spacer * 0.2;
+	}
+}
+
 [data-elipsis="xs"] span,
 [data-elipsis="sm"] span,
 [data-elipsis="md"] span,
