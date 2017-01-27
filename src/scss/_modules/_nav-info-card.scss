@@ -4,7 +4,7 @@
 	width:rem($nav-width);
 	height:rem($nav-infocard-height);
 	max-height: rem($nav-infocard-height);
-	padding: rem($header-height - 10) rem($nav-padding-left - 5) 0;
+	padding: rem($header-height - 10) rem( $nav-width/10.5 ) 0;
 	color:$white;
 	overflow: hidden;
 

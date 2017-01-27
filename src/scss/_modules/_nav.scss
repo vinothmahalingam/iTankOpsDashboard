@@ -208,8 +208,8 @@ $nav-icon-width:									28px !default;
 							    padding-top: rem(6px);
 							    padding-bottom: rem(6px);
 							    font-size: rem($base-font-size);
-							    //min-height: $nav-sub-link-height;
-							    //max-height: none;
+							    min-height: $nav-sub-link-height;
+							    max-height: none;
 
 							    >.fa,
 							    >.#{$cust-icon-prefix} {
@@ -226,12 +226,13 @@ $nav-icon-width:									28px !default;
 							    }
 			
 							}
-							li {
+							//is this second child???
+							/*li {
 								a {
 									 padding-left: rem( ($nav-padding-left + $nav-icon-width + 1.5px)/3 * 4);
 									 height:auto;
 								}
-							}
+							}*/
 
 							&:last-child {
 								.nxtgn-sub-two {
@@ -256,12 +257,14 @@ $nav-icon-width:									28px !default;
 								background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100));
 								@include box-shadow(inset rem(3px) 0 0 rgba($color-primary, (50/100)) );
 								font-weight: 500;
+
 								> .nxtgn-link-text {
 									>.fa,
 									>.#{$cust-icon-prefix} {
 									    @include text-contrast(rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)))
 									}
 								}	
+
 								&:hover {
 									> .nxtgn-link-text {
 										>.fa,
@@ -331,7 +334,7 @@ $nav-icon-width:									28px !default;
 
 								a {
 									color: lighten(darken($nav-base-color, 11%),55%);
-									padding-left: rem(65px);
+									padding-left: rem($nav-padding-left + $nav-icon-width + 12.5px);
 									padding-top: rem(5px);
 									padding-bottom: rem(5px);
 									font-size:rem(12.8px);
@@ -435,7 +438,6 @@ $nav-icon-width:									28px !default;
 
 @if $enable-animation != false {
 	.nxtgn-nav a,
-	.nxtgn-nav a svg path,
 	.nxtgn-nav a > .fa,
 	.nxtgn-nav a > .#{$cust-icon-prefix} {
 		@include transition(0.3s,ease-out);

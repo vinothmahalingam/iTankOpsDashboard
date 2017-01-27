@@ -335,23 +335,23 @@ aside#left-panel ($nav-width, $nav-background)
 /* main navigation */
 $nav-background:									darken($color-fusion, 7%) !default;
 $nav-base-color:									lighten($nav-background, 7%) !default;
-$nav-width:											250px !default;
+$nav-width:											240px !default;
 
 /* nav parent level-0 */
 $nav-link-color: 									lighten($nav-base-color, 50%) !default;
 $nav-font-link-size: 								$base-font-size !default;
 $nav-padding-top:									9.2px !default;
-$nav-padding-left:									$nav-width/10.5 !default;
-$nav-padding-right:									$nav-width/10.5 !default;
+$nav-padding-left:									20px !default;
+$nav-padding-right:									25px !default;
 $nav-padding-bottom:								10px !default;
 
 /* nav icon sizes */
-$nav-font-icon-size:								20px !default; //23px for FA
+$nav-font-icon-size:								20px !default; //23px for Fontawesome & 20px for NextGen icons
 $nav-font-icon-size-sub:							19px !default;
 
 /* nav link heights */
 $nav-link-height:									45px !default;
-$nav-sub-link-height:								34px !default;
+$nav-sub-link-height:								36px !default;
 
 /* badge default */
 $nav-badge-color: 									#fff !default;
@@ -369,14 +369,16 @@ $nav-title-font-size: 								$base-font-size - 2.8;
 /* nav Minify */
 $nav-minify-hover-bg:								darken($nav-base-color, 3%) !default;
 $nav-minify-hover-text:								#fff !default;
-$nav-minify-width:									75.75px !default;
-$nav-minify-sub-width:								$nav-width - $nav-minify-width !default; 				/* when the menu pops on hover */
+$nav-minify-width:									75px !default;
+/* when the menu pops on hover */
+$nav-minify-sub-width:								$nav-width - ($nav-minify-width - 25px) !default; 				
 $nav-minify-logo-bg:								$nav-background !default;
 
 $nav-top-minify-height:								54px !default;
 
 /* navigation Width */
-$nav-hidden-visiblity:								10px !default; 											/* partial visibility of the menu */
+/* partial visibility of the menu */
+$nav-hidden-visiblity:								10px !default; 											
 
 /* navigation on top */
 $nav-top-height:									63px !default;

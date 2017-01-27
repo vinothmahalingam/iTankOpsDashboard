@@ -66,6 +66,7 @@
 						> a {
 
 							text-align: center;
+							padding-right: $nav-padding-left;
 
 							>.fa,
 							>.#{$cust-icon-prefix} {
