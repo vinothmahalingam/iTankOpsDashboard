@@ -494,39 +494,39 @@ var initApp = (function(app) {
 					break;
 
 					/**
-					 * widget 'collapse' trigger
+					 * wgt 'collapse' trigger
 					 **/
-					case ( actiontype === 'widget-collapse' ):
+					case ( actiontype === 'wgt-collapse' ):
 
-						$(this).closest('.widget').toggleClass("widget-collapse");
+						$(this).closest('.wgt').toggleClass("wgt-collapse");
 						
 						if (myapp_config.debugState)
-								console.log( "widget collapse toggle" );
+								console.log( "wgt collapse toggle" );
 
 					break;
 
 					/**
 					 * widget 'fullscreen' trigger
 					 **/
-					case ( actiontype === 'widget-fullscreen' ):
+					case ( actiontype === 'wgt-fullscreen' ):
 
-						$(this).closest('.widget').toggleClass("widget-fullscreen");
-						$.root_.toggleClass("widget-fullscreen");
+						$(this).closest('.wgt').toggleClass("wgt-fullscreen");
+						$.root_.toggleClass("wgt-fullscreen");
 
 						if (myapp_config.debugState)
-								console.log( "widget fullscreen toggle" );
+								console.log( "wgt fullscreen toggle" );
 
 					break;
 
 					/**
 					 * widget 'close' trigger
 					 **/
-					case ( actiontype === 'widget-close' ):
+					case ( actiontype === 'wgt-close' ):
 
-						$(this).closest('.widget').fadeOut(500,function(){$(this).remove()});
+						$(this).closest('.wgt').fadeOut(500,function(){$(this).remove()});
 						
 						if (myapp_config.debugState)
-								console.log( "widget collapse toggle" );
+								console.log( "wgt collapse toggle" );
 
 					break;
 

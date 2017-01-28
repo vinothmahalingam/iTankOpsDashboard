@@ -121,6 +121,12 @@ RESULT:
     }
 }
 
+%common-animation-easeout {
+    @if $enable-animation != false {
+        @include transition(0.2s,ease-out);
+    }
+}
+
 %common-animation-opacity {
     @if $enable-animation != false {
       transition: opacity 0.5s ease-in-out;
