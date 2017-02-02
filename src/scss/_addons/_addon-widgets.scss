@@ -1,16 +1,14 @@
-$wgt-padding: 15px;
-$wgt-hdr-font-size: 17px;
-$wgt-hdr-height: 50px;
-$wgt-btn-size: 16px;
+$widget-padding: 15px;
+$widget-hdr-font-size: 17px;
+$widget-hdr-height: 50px;
+$widget-btn-size: 16px;
 
-.wgt-fullscreen {
+.widget-fullscreen {
 	overflow:hidden;
 	max-width: 100%;
 }
 
-
-
-.wgt {
+.widget {
 
 	position: relative;
 	display: flex;
@@ -22,26 +20,26 @@ $wgt-btn-size: 16px;
 	border-color: #e5e6e9 #dfe0e4 #d0d1d5;
 	border-radius: $default-border-radius;
 
-	.wgt-hdr {
+	.widget-hdr {
 		
-		padding: 0 $wgt-padding;
-		font-size: $wgt-hdr-font-size;
-		min-height: $wgt-hdr-height;
+		padding: 0 $widget-padding;
+		font-size: $widget-hdr-font-size;
+		min-height: $widget-hdr-height;
 		font-weight: 300;
 
 		display:flex;
 		align-items:center;
 		flex-direction:row;
 
-		.wgt-subtitle {
-			font-size: $wgt-hdr-font-size - 3;
+		.widget-subtitle {
+			font-size: $widget-hdr-font-size - 3;
 			display: block;
 			font-weight: 300;
 			opacity: 0.8;
 			margin-left: $spacer * 0.5;
 		}
 
-		.wgt-toolbar {
+		.widget-toolbar {
 
 			display: flex;
 			align-items: center;
@@ -50,10 +48,10 @@ $wgt-btn-size: 16px;
 			.btn {
 				margin-left:5px;
 
-				&.btn-wgt {
+				&.btn-widget {
 					padding: 0;
-					width: $wgt-btn-size;
-					height: $wgt-btn-size;
+					width: $widget-btn-size;
+					height: $widget-btn-size;
 					font-size: $base-font-size;
 					border-color: transparent;
 					box-sizing: border-box;
@@ -74,7 +72,7 @@ $wgt-btn-size: 16px;
 		}
 
 		&:hover {
-			.wgt-buttons {
+			.widget-buttons {
 				.btn {
 					opacity: 0.9;
 				}
@@ -82,18 +80,18 @@ $wgt-btn-size: 16px;
 		}
 	}	
 
-	.wgt-container {
+	.widget-container {
 
-		padding: 0 $wgt-padding ($wgt-padding - 5);
+		padding: 0 $widget-padding ($widget-padding - 5);
 		@extend %common-animation-easeout;
 
 		&:only-child {
-			padding: $wgt-padding;
+			padding: $widget-padding;
 		}
 	}
 
 	/* widget fullscreen */
-	&.wgt-fullscreen {
+	&.widget-fullscreen {
 		position: fixed;
 		z-index: 9999;
 		top: 0;
@@ -102,32 +100,32 @@ $wgt-btn-size: 16px;
 		height: 100%;
 		border-radius: 0;
 
-		[data-action="wgt-collapse"],
-		[data-action="wgt-close"]  {
+		[data-action="widget-collapse"],
+		[data-action="widget-close"]  {
 			display: none;
 		}
 
-		.wgt-hdr {
+		.widget-hdr {
 			height:$header-height;
 			background: #fafafa;
 			box-shadow: 0 0.125rem 0.125rem -0.0625rem rgba(0, 0, 0, 0.1);
 		}
 
-		.btn-wgt[data-action="wgt-fullscreen"] {
-			width:$wgt-hdr-height/2 !important;
-			height:$wgt-hdr-height/2 !important;
+		.btn-widget[data-action="widget-fullscreen"] {
+			width:$widget-hdr-height/2 !important;
+			height:$widget-hdr-height/2 !important;
 		}
 
-		.wgt-container {
+		.widget-container {
 			flex: 1;
 			overflow-x: auto;
 		}
 	}
 
 	/* widget collapse */
-	&.wgt-collapse:not(.wgt-fullscreen) {
+	&.widget-collapse:not(.widget-fullscreen) {
 
-		.wgt-container {
+		.widget-container {
 			height: 0;
 			padding-top: 0;
 			padding-bottom: 0;
@@ -137,12 +135,12 @@ $wgt-btn-size: 16px;
 	}
 
 	/* widget boxed */
-	&.wgt-hdr-boxed {
-		.wgt-hdr {
+	&.widget-hdr-boxed {
+		.widget-hdr {
 			border-bottom: 1px solid #e6e6e6;	
 		}
-		.wgt-container {
-			padding: $wgt-padding $wgt-padding ($wgt-padding - 5);
+		.widget-container {
+			padding: $widget-padding $widget-padding ($widget-padding - 5);
 		}
 	}
 
@@ -152,14 +150,14 @@ $wgt-btn-size: 16px;
 @media only screen and ( max-width: 420px ){
 
 	.card {
-		&.wgt {
-			.wgt-hdr {
+		&.widget {
+			.widget-hdr {
 				padding: 0 10px;
-				font-size: $wgt-hdr-font-size;
+				font-size: $widget-hdr-font-size;
 				color: #060606;
-				min-height: $wgt-hdr-height - 4;
+				min-height: $widget-hdr-height - 4;
 			}
-			.wgt-container {
+			.widget-container {
 				padding: 0 10px 10px;
 			}
 		}

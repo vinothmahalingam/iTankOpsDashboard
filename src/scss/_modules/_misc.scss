@@ -32,21 +32,9 @@ ul.list-verticle {
 .flex-1 {
 	flex:1 !important;
 }
-/* font weights */
-.fw-300 {
-	font-weight: 300;
-}
-.fw-400 {
-	font-weight: 400;
-}
-.fw-500 {
-	font-weight: 500;
-}
-.fw-n {
-	font-weight:normal !important;
-}
 /* margins */
-.mrg-auto {
+.mrg-auto,
+.m-auto {
 	margin: 0 auto;
 }
 
@@ -58,24 +46,28 @@ ul.list-verticle {
 	margin-right: auto !important;
 }
 
-.mrg-gutter {
+.mrg-gutter,
+.m-g {
 	margin: $grid-gutter-width-base;
 }
 
-.mrg-gutter-half {
+.mrg-gutter-half,
+.m-g-h {
 	margin: $grid-gutter-width-base/2;
 }
 
-.mrg-b-gutter {
+.mrg-b-gutter,
+.mb-g {
 	margin-bottom: map-get($grid-gutter-widths, xl) !important;
 }
-/*floats*/
+/*floats
+float-right & float-left from Bootstrap.css
 .f-l {
 	float:left !important;
 }
 .f-r {
 	float:right !important;
-}
+}*/
 /*.pos-a {
 
 	position:absolute !important;
@@ -97,11 +89,13 @@ ul.list-verticle {
 	}
 }*/
 
-.pad-gutter {
+.pad-gutter,
+.p-g {
 	padding:$grid-gutter-width-base;
 }
 
-.pad-gutter-half {
+.pad-gutter-half,
+.p-g-h {
 	padding:$grid-gutter-width-base/2;
 }
 
@@ -118,6 +112,15 @@ ul.list-verticle {
 	> li {
 		padding: 0 0 $spacer * 0.2;
 	}
+}
+
+.notes {
+	padding: 5px;
+	background: #f9f4b5;
+}
+
+.border-radius-0 {
+	border-radius:0px !important;
 }
 
 [data-elipsis="xs"] span,

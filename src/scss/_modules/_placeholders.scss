@@ -123,7 +123,7 @@ RESULT:
 
 %common-animation-easeout {
     @if $enable-animation != false {
-        @include transition(0.2s,ease-out);
+        @include transition(0.4s,ease-out);
     }
 }
 

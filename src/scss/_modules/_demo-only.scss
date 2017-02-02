@@ -70,3 +70,30 @@
 		display: block !important;
 	}
 }
+
+.container-demo {
+	max-width:100%;
+	width:100%;
+}
+
+.bd-example {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.bd-example-row-flex-cols .row {
+    min-height: 10rem;
+    background-color: rgba(255,0,0,.1);
+}
+.bd-example-row .row>.col, 
+.bd-example-row .row>[class^=col-] {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid rgba(86,61,124,.2);
+}
+
+.bd-example-row .row+.row {
+    margin-top: 1rem;
+}
+

@@ -308,7 +308,6 @@ var initApp = (function(app) {
 	/**
 	 * Mobile Check Activate
 	 * DOC: Check on window resize if screen width is less than [value]
-	 * NOTE: we may not need this function anymore...DELETE IT!
 	 */
 	app.mobileCheckActivation = function(){
 		
@@ -494,39 +493,42 @@ var initApp = (function(app) {
 					break;
 
 					/**
-					 * wgt 'collapse' trigger
+					 * widget 'collapse' trigger
 					 **/
-					case ( actiontype === 'wgt-collapse' ):
+					case ( actiontype === 'widget-collapse' ):
 
-						$(this).closest('.wgt').toggleClass("wgt-collapse");
+						$(this).closest('.widget').toggleClass("widget-collapse");
 						
 						if (myapp_config.debugState)
-								console.log( "wgt collapse toggle" );
+								console.log( "widget collapse toggle" );
 
 					break;
 
 					/**
 					 * widget 'fullscreen' trigger
 					 **/
-					case ( actiontype === 'wgt-fullscreen' ):
+					case ( actiontype === 'widget-fullscreen' ):
 
-						$(this).closest('.wgt').toggleClass("wgt-fullscreen");
-						$.root_.toggleClass("wgt-fullscreen");
+						$(this).closest('.widget').toggleClass("widget-fullscreen");
+						$.root_.toggleClass("widget-fullscreen");
 
 						if (myapp_config.debugState)
-								console.log( "wgt fullscreen toggle" );
+								console.log( "widget fullscreen toggle" );
 
 					break;
 
 					/**
 					 * widget 'close' trigger
 					 **/
-					case ( actiontype === 'wgt-close' ):
+					case ( actiontype === 'widget-close' ):
 
-						$(this).closest('.wgt').fadeOut(500,function(){$(this).remove()});
+						$(this).closest('.widget').fadeOut(500,function(){
+							$(this).remove();
+							//console.log("widget removed")
+						});
 						
 						if (myapp_config.debugState)
-								console.log( "wgt collapse toggle" );
+								console.log( "widget collapse removed" );
 
 					break;
 
