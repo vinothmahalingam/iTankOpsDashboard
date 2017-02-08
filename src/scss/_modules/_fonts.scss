@@ -77,16 +77,8 @@ h6 small,
 }
 
 /* font sizes */
-.font-xs,
-.font-sm,
-.font-md,
-.font-lg,
-.font-xl {
-    color: $gray-light;	
-}
-
 .font-xs {
-	font-size: $base-font-size - 1;
+	font-size: $base-font-size - 0.5;
 }
 
 .font-sm {

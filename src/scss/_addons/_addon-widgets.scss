@@ -2,6 +2,7 @@ $widget-padding: 15px;
 $widget-hdr-font-size: 17px;
 $widget-hdr-height: 50px;
 $widget-btn-size: 16px;
+$widget-hdr-background: #fff;
 
 .widget-fullscreen {
 	overflow:hidden;
@@ -108,6 +109,7 @@ $widget-btn-size: 16px;
 		.widget-hdr {
 			height:$header-height;
 			background: #fafafa;
+			border-radius: 0 !important;
 			box-shadow: 0 0.125rem 0.125rem -0.0625rem rgba(0, 0, 0, 0.1);
 		}
 
@@ -138,6 +140,8 @@ $widget-btn-size: 16px;
 	&.widget-hdr-boxed {
 		.widget-hdr {
 			border-bottom: 1px solid #e6e6e6;	
+			background: $widget-hdr-background;
+			border-radius: $default-border-radius $default-border-radius 0 0;
 		}
 		.widget-container {
 			padding: $widget-padding $widget-padding ($widget-padding - 5);

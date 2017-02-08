@@ -23,6 +23,47 @@ ul.list-verticle {
 	padding:0;
 	list-style: none;
 }
+
+/* dropdown-item hover menu*/
+.dropdown-item {
+	position:relative;
+
+	.dropdown-item-menu {
+		margin:0;
+		padding:0;
+		list-style: none;
+		display: none;
+		position: absolute;
+		top: -1px;
+		left: 95%;
+		//min-width: 150px;
+		background:$white;
+		border: 1px solid $dropdown-border-color;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+		.dropdown-item {
+			padding-top: $spacer * 0.2 !important;
+			padding-bottom: $spacer * 0.2 !important;
+		}
+
+		&.pull-left {
+			right: 95%;
+			left: auto;
+		}
+	}
+
+	&:hover {
+		.dropdown-item-menu {
+			display: block;
+		}
+	}
+}
+
+/* custom scroll */
+.custom-scroll {
+	@extend %custom-scroll;
+}
+
 /* flex */
 .flex-middle {
 	@extend %flexbox;
@@ -38,11 +79,13 @@ ul.list-verticle {
 	margin: 0 auto;
 }
 
-.mrg-l-a {
+.mrg-l-a,
+.ml-auto {
 	margin-left: auto !important;
 }
 
-.mrg-r-a {
+.mrg-r-a,
+.mr-auto {
 	margin-right: auto !important;
 }
 
@@ -60,34 +103,6 @@ ul.list-verticle {
 .mb-g {
 	margin-bottom: map-get($grid-gutter-widths, xl) !important;
 }
-/*floats
-float-right & float-left from Bootstrap.css
-.f-l {
-	float:left !important;
-}
-.f-r {
-	float:right !important;
-}*/
-/*.pos-a {
-
-	position:absolute !important;
-
-	&.pos-a-r-0 {
-		right:0;
-	}
-	
-	&.pos-a-l-0 {
-		left:0;
-	}
-	
-	&.pos-a-t-0 {
-		top:0;
-	}
-	
-	&.pos-a-b-0 {
-		bottom:0;
-	}
-}*/
 
 .pad-gutter,
 .p-g {
@@ -121,6 +136,13 @@ float-right & float-left from Bootstrap.css
 
 .border-radius-0 {
 	border-radius:0px !important;
+}
+
+.bg-transparent {
+	background: transparent !important;
+}
+.bg-white {
+	background: $white !important;
 }
 
 [data-elipsis="xs"] span,
@@ -162,6 +184,7 @@ float-right & float-left from Bootstrap.css
 .shadow-5 {
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
+
 /* btn switch */
 .btn-switch {
 	background: $fusion-300;
@@ -177,7 +200,6 @@ float-right & float-left from Bootstrap.css
     margin-top:5%;
     position:relative;
     overflow: hidden;
-    float: right;
     
     @extend %common-animation;
 

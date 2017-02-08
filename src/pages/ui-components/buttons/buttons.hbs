@@ -1,4 +1,5 @@
 {{#> layouts/main title="Buttons" pagename="buttons" heading="Buttons" pagedescription="Use NextGen’s custom button styles for actions in forms, dialogs, and more. Includes support for a handful of contextual variations, sizes, states, and more."}}
+
 {{#*inline "content-block"}}
 
 <!--
@@ -285,14 +286,13 @@
 						<div class="card p-3 mrg-b-gutter d-block">
 
 								<h3>
-									Button colors
+									Button <span class="fw-300">Colors</span> 
 									<small>
 										NextGen includes seven predefined button styles, each serving its own semantic purpose.
 									</small>
 								</h3>
-								<h4>
-									Default
-									<small>default button styles with predefined colors</small>
+								<h4 class="fw-300">
+									<small>Default button styles with predefined colors</small>
 								</h4>
 
 								<div>
@@ -306,9 +306,8 @@
 									<button type="button" class="btn btn-danger btn-w-m mb-1">Danger</button>
 			
 									<hr>
-									<h4>
-										Pills
-										<small>rounded edge with <code>.btn-pills</code> class</small>
+									<h4 class="fw-300">
+										<small>Rounded edge with <code>.btn-pills</code> class</small>
 									</h4>
 									<button type="button" class="btn btn-primary btn-pills btn-w-m mb-1">Primary</button>
 									<button type="button" class="btn btn-secondary btn-pills btn-w-m mb-1">Secondary</button>
@@ -325,7 +324,7 @@
 						<div class="card p-3 mrg-b-gutter d-block">
 
 							<h3>
-								Sizes
+								Option <span class="fw-300">Sizes</span> 
 								<small>
 									Fancy larger or smaller buttons? Add <code>.btn-lg</code> or <code>.btn-sm</code> for additional sizes.
 								</small>
@@ -353,16 +352,15 @@
 						<div class="card p-3 mrg-b-gutter d-block">
 
 							<h3>
-								Outline buttons
+								Buttons <span class="fw-300">Outline</span>
 								<small>
 									Replace the default modifier classes with the <code>.btn-outline-*</code> ones to remove all background images and colors.
 								</small>
 							</h3>
 
 							<h4>
-								Default
 								<small>
-									default outline style
+									Default outline style
 								</small>
 							</h4>
 
@@ -376,9 +374,8 @@
 							<hr>
 
 							<h4>
-								Pills
 								<small>
-									rounded outline edge with <code>.btn-pills</code> class
+									Rounded outline edge with <code>.btn-pills</code> class
 								</small>
 							</h4>
 
@@ -395,7 +392,7 @@
 						<div class="card p-3 mrg-b-gutter d-block">
 
 							<h3>
-								Block
+								Buttons <span class="fw-300">Block</span>
 								<small>
 									Create block level buttons—those that span the full width of a parent—by adding <code>.btn-block</code>.
 								</small>
@@ -438,7 +435,7 @@
 								Checkbox and radio buttons
 								<small>
 									NextGen <code>.btn</code> styles can be applied to other elements, such as <code>&lt;label></code>s, to provide checkbox or radio style button toggling. Add <code>data-toggle="buttons"</code> to a <code>.btn-group</code> containing those modified buttons to enable toggling in their respective styles.
-									<br>
+									
 									The checked state for these buttons is <strong>only updated via</strong> click <strong>event</strong> on the button. If you use another method to update the input—e.g., with <code>&lt;input type="reset"></code> or by manually applying the input’s checked property—you’ll need to toggle <code>.active</code> on the <code>&lt;label></code> manually.
 								</small>
 							</h3>
@@ -446,7 +443,7 @@
 							<div class="row">
 
 								<div class="col-md-6 col-xl-6">
-									<h4>Checkbox</h4>
+									<h4><small>Checkbox</small></h4>
 									<div class="btn-group mb-2" data-toggle="buttons">
 										<label class="btn btn-success active">
 											<input type="checkbox" checked> Options 1
@@ -481,7 +478,7 @@
 
 								</div>
 								<div class="col-md-6 col-xl-6">
-									<h4>Radio</h4>
+									<h4><small>Radio</small></h4>
 									<div class="btn-group mb-2" data-toggle="buttons">
 										<label class="btn btn-secondary active">
 											<input type="radio" name="options" id="option1" checked> Option 1
@@ -527,7 +524,7 @@
 						<div class="card p-3 mrg-b-gutter d-block">
 
 							<h3>
-								Button States
+								Button <span class="fw-300">States</span>
 								<small>
 									Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. <strong>There’s no need to add a class to <code>&lt;button&gt;</code>s as they use a pseudo-class</strong>. However, you can still force the same active appearance with <code>.active</code> (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically. To make  buttons look inactive add the disabled boolean attribute to any <code>&lt;button></code> element.
 								</small>
@@ -535,13 +532,13 @@
 
 							<div class="row">
 								<div class="col-md-12 col-xl-6">
-									<h4>Active</h4>
+									<h4><small>Active</small></h4>
 									<a href="#" class="btn btn-primary active btn-w-l" role="button" aria-pressed="true">Link</a>
 									<button class="btn btn-secondary active btn-w-l" type="button" aria-pressed="true">Button</button>
 								</div>
 
 								<div class="col-md-12 col-xl-6">
-									<h4>Disabled</h4>
+									<h4><small>Disabled</small></h4>
 									<a href="#" class="btn btn-primary disabled btn-w-l" role="button" aria-disabled="true">Link</a>
 									<button class="btn btn-secondary btn-w-l" type="button" disabled>Button</button>
 								</div>
@@ -554,4 +551,5 @@
 				</div>
 
 {{/inline}}
+
 {{/layouts/main}}

@@ -30,10 +30,6 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 					text-align: center;
 					overflow: visible;
 
-					/*display: flex;
-					@include align-items(center);
-					@include justify-content(center);*/
-
 					>.fa:first-child,
 					>.#{$cust-icon-prefix}:first-child {
 						color:$header-link-color;
@@ -127,6 +123,8 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 
 						}
 
+						/* header dropdowns */
+
 						& + .dropdown-menu {
 
 							@extend %header-dropdown;
@@ -140,7 +138,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 								max-height: none;
 							}*/
 
-							@extend %custom-scroll;
+							//@extend %custom-scroll;
 
 							.app-list {
 								margin:0;
@@ -150,11 +148,6 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 								font-size:0; //removes wierd spacing
 								padding: rem($header-applist-box-padding-x) rem($header-applist-box-padding-y);
 								text-align: center;
-								/*@extend %flexbox;
-								@include flex-direction(row);
-								@include flex-wrap(wrap)
-								@include justify-content(center);*/
-
 
 								> li {
 									display: inline-block;
@@ -257,6 +250,8 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 								}
 							}
 						}
+
+						/* end header dropdowns */
 						
 					}
 
@@ -266,7 +261,6 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 						margin-right: 5px;
 						width: 29px;
 						height:auto;
-						//border-radius: 50%;
 						float:left;
 						vertical-align: text-bottom;
 					}
@@ -276,7 +270,6 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 			    &:hover{
 			    	cursor:default;
 			    	color:$header-link-hover-color;
-			    	//border-bottom: rem($header-btn-border-bottom-width) solid $color-primary;
 			    }
 
 			    &.btn {
@@ -310,7 +303,6 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 					width: rem($header-btn-width + 8);
 					margin-left:1px;
 					margin-top: -($header-btn-height + 4);
-					//z-index: -1; 
 					left: rem(-5px);
 					overflow: hidden;
 					box-shadow: 0 rem(3px) rem(3px) rgba(0,0,0,.12),0 0 rem(3px) rgba(0,0,0,.24);
@@ -349,20 +341,9 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 							overflow: visible;
 						}
 					}
-
-					.btn {
-						//background: darken($page-bg, 2%);
-
-						&:hover {
-							//background: $primary-500;
-							//@include text-contrast($primary-500);
-						}
-
-					}	
-					
 				}
-
 			}
+			
 		}
 
 		/* header section left has search box */

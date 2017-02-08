@@ -121,6 +121,10 @@ $brand-danger:              						$danger-800;
 $nav-link-padding:                          		0.25rem 0.95rem;
 $link-color:            							$primary-800;
 
+/* bootstrap tables */
+$table-inverse-bg:									$fusion-400;
+$table-bg-hover:									rgba($fusion-300,.035);
+$table-border-color:								darken($gray-lighter, 5%);
 
 /* reference guide
 8px = 0.5rem
