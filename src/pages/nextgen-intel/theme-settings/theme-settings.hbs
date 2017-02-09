@@ -1,8 +1,97 @@
 {{#> layouts/main title="Theme Settings" pagename="theme-settings" heading="Theme Settings"}}
 
+{{#*inline "head-block"}}
+test
+{{/inline}}
+
 {{#*inline "content-block"}}
 
-<h3>
+<div class="row">
+	<div class="col-lg-6 col-xl-4">
+
+		<div class="card p-1">
+			
+			<div class="d-flex" style="height:300px">
+				<div class="ng-nav-demo bg-fusion-400  p-1 pl-3 pr-3">
+					<img src="img/logo-white.png" alt="NextGen Logo" class="img-fluid">
+				</div>
+				<div class="d-flex flex-column flex-1">
+					<div class="bg-success-50 font-xl">
+						&nbsp;
+					</div>
+					<div class="bg-faded flex-1 p-2">
+						<h6>
+							Fixed Header
+							<small class="mt-0">
+								Header is in a fixed position at all times
+							</small>
+						</h6>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="col-lg-6 col-xl-4">
+
+		<div class="card p-1">
+			
+			<div class="d-flex" style="height:300px">
+				<div class="ng-nav bg-success-50  p-1 pl-3 pr-3 w-25">
+					<img src="img/logo.png" alt="NextGen Logo" class="img-fluid">
+				</div>
+				<div class="d-flex flex-column flex-1">
+					<div class="bg-fusion-50 font-xl">
+						&nbsp;
+					</div>
+					<div class="bg-faded flex-1 p-2">
+						<h6>
+							Fixed Navigation
+							<small class="mt-0">
+								Left panel position becomes fixed
+							</small>
+						</h6>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="col-lg-6 col-xl-4">
+
+		<div class="card p-1">
+			
+			<div class="d-flex" style="height:300px">
+				<div class="ng-nav bg-success-50  p-1 pl-3 pr-3 w-25">
+					<img src="img/logo.png" alt="NextGen Logo" class="img-fluid">
+				</div>
+				<div class="d-flex flex-column flex-1">
+					<div class="bg-fusion-50 font-xl">
+						&nbsp;
+					</div>
+					<div class="bg-faded flex-1 p-2">
+						<h6>
+							Fixed Navigation
+							<small class="mt-0">
+								Left panel position becomes fixed
+							</small>
+						</h6>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+<h3 class="mt-4">
 	Theme Layout
 	<small>
 		These changes effect the overall theme structure but does not cascade or break the mobile navigation
@@ -39,9 +128,11 @@
 	                <strong>Fixed Header</strong>
 	            </td>
 	            <td class="font-xs">
-	            	Header is in a fixed position at all times. This settings effects mobile view. The function adds the following class to the body <code>.header-function-fixed</code>
+	            	Header is in a fixed position at all times. This settings effects mobile view. The function adds the following class to the body
 	            	<span class="text-muted d-block">
-	            		<i><strong>Note:</strong> when <code>.nav-function-top</code> you must first enable <code>.nav-function-fixed</code> for Fixed Header</i>
+	            		<code>&lt;body class="header-function-fixed"> </code>
+	            		<br>
+	            		<i><strong>Note:</strong> when <code>.nav-function-top</code> you must first enable <code>.nav-function-fixed</code></i>
 	            	</span>
 	            </td>
 	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
@@ -56,7 +147,11 @@
 	            <td>
 	                <strong>Fixed Navigation</strong>
 	            </td>
-	            <td class="font-xs">Left panel position becomes fixed. We activate the <a href="slimscroll.html" class="fw-500">slimScroll</a> plugin to keep it neat and tidy</td>
+	            <td class="font-xs">Left panel position becomes fixed. We activate the <a href="slimscroll.html" class="fw-500">slimScroll</a> plugin to keep it neat and tidy
+					<span class="text-muted d-block">
+	            		<code>&lt;body class="nav-function-fixed"> </code>
+	            	</span>
+	            </td>
 	            <td><span class="badge badge-warning fw-500">DESKTOP</span> <span class="badge bg-warning-800 fw-500">TABLETS</span>
 	            </td>
 	            <td><code>none</code>
@@ -69,7 +164,11 @@
 	            <td>
 	                <strong>Minify Navigation</strong>
 	            </td>
-	            <td class="font-xs">Navigation items are hidden and collapsed. Only visible portion are the icons. Hovering over icon will reveal child elements.</td>
+	            <td class="font-xs">Navigation items are hidden and collapsed. Only visible portion are the icons. Hovering over icon will reveal child elements.
+					<span class="text-muted d-block">
+	            		<code>&lt;body class="nav-function-minify"> </code>
+	            	</span>
+	            </td>
 	            <td><span class="badge badge-warning fw-500">DESKTOP</span> <span class="badge bg-warning-800 fw-500">TABLETS</span>
 	            </td>
 	            <td><code>none</code>
@@ -83,6 +182,9 @@
 	                <strong>Hide Navigation</strong>
 	            </td>
 	            <td class="font-xs">Entire navigation pane shifts to off screen. This is useful for large map applications. Navigation is revealed when mouse touches the left portion of the screen
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="nav-function-hidden"> </code>
+	            	</span>
 	            </td>
 	            <td><span class="badge badge-warning fw-500">DESKTOP</span> <span class="badge bg-warning-800 fw-500">TABLETS</span>
 	            </td>
@@ -97,6 +199,9 @@
 	                <strong>Top Navigation</strong>
 	            </td>
 	            <td class="font-xs">Otherwise known as horizontal navigation. The entire navigation pane shifts to the top. You will need to hover over icons to navigate to other menu items
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="nav-function-top"> </code>
+	            	</span>
 	            </td>
 	            <td><span class="badge badge-warning fw-500">DESKTOP</span> <span class="badge bg-warning-800 fw-500">TABLETS</span>
 	            </td>
@@ -111,6 +216,9 @@
 	                <strong>Boxed Layout</strong>
 	            </td>
 	            <td class="font-xs">Minimize layout by inserting into a container. Some classes are not compatible with this change, however it does provide lots of whitespace
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-main-boxed"> </code>
+	            	</span>
 	            </td>
 	            <td><span class="badge badge-warning fw-500">DESKTOP</span>
 	            </td>
@@ -124,7 +232,10 @@
 	            <td>
 	                <strong>Push Content</strong>
 	            </td>
-	            <td class="font-xs">Content pushed on menu reveal
+	            <td class="font-xs">Content pushed on menu reveal. Menu will be treated as a 'physical object' that will push the content aside.
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="nav-mobile-push"> </code>
+	            	</span>
 	            </td>
 	            <td><span class="badge badge-success fw-500">MOBILE</span> 
 	            </td>
@@ -139,6 +250,9 @@
 	                <strong>No Overlay</strong>
 	            </td>
 	            <td class="font-xs">Removes mesh on menu reveal
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="nav-mobile-no-overlay"> </code>
+	            	</span>
 	            </td>
 	            <td><span class="badge badge-success fw-500">MOBILE</span> 
 	            </td>
@@ -153,6 +267,9 @@
 	                <strong>Off-Canvas <sup>beta</sup></strong>
 	            </td>
 	            <td class="font-xs">content overlaps menu
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="nav-mobile-slide-out"> </code>
+	            	</span>
 	            </td>
 	            <td><span class="badge badge-success fw-500">MOBILE</span> 
 	            </td>
@@ -166,7 +283,11 @@
 	            <td>
 	                <strong>Bigger Font</strong>
 	            </td>
-	            <td class="font-xs">fonts are bigger for readability</td>
+	            <td class="font-xs">fonts are bigger for readability
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-bigger-font"> </code>
+	            	</span>
+	            </td>
 	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
 	            </td>
 	            <td><code>none</code>
@@ -179,7 +300,11 @@
 	            <td>
 	                <strong>High Contrast Text</strong>
 	            </td>
-	            <td class="font-xs">Grey fonts are reduced</td>
+	            <td class="font-xs">Grey fonts are reduced
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-high-contrast"> </code>
+	            	</span>
+	            </td>
 	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
 	            </td>
 	            <td><code>none</code>
@@ -192,7 +317,11 @@
 	            <td>
 	                <strong>Daltonism <sup>beta</sup></strong>
 	            </td>
-	            <td class="font-xs">Color vision deficiency</td>
+	            <td class="font-xs">Color vision deficiency
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-color-blind"> </code>
+	            	</span>
+	            </td>
 	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
 	            </td>
 	            <td><code>none</code>
@@ -205,7 +334,11 @@
 	            <td>
 	                <strong>Preloader Inside</strong>
 	            </td>
-	            <td class="font-xs">Preloader will be inside content</td>
+	            <td class="font-xs">Preloader will be inside content
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-pace-custom"> </code>
+	            	</span>
+	            </td>
 	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
 	            </td>
 	            <td><code>none</code>
@@ -218,7 +351,11 @@
 	            <td>
 	                <strong>Clean Page Background</strong>
 	            </td>
-	            <td class="font-xs">Preloader will be inside content</td>
+	            <td class="font-xs">Preloader will be inside content
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-clean-page-bg"> </code>
+	            	</span>
+	            </td>
 	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
 	            </td>
 	            <td><code>none</code>
@@ -231,7 +368,11 @@
 	            <td>
 	                <strong>Hide Navigation Icons</strong>
 	            </td>
-	            <td class="font-xs">invisible navigation icons</td>
+	            <td class="font-xs">invisible navigation icons
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-hide-nav-icons"> </code>
+	            	</span>
+	            </td>
 	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
 	            </td>
 	            <td><code>none</code>
@@ -244,7 +385,11 @@
 	            <td>
 	                <strong>Disable CSS Animation</strong>
 	            </td>
-	            <td class="font-xs">invisible navigation icons</td>
+	            <td class="font-xs">invisible navigation icons
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-disable-animation"> </code>
+	            	</span>
+	            </td>
 	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
 	            </td>
 	            <td><code>none</code>
@@ -257,7 +402,11 @@
 	            <td>
 	                <strong>Hide Info Card</strong>
 	            </td>
-	            <td class="font-xs">invisible navigation icons</td>
+	            <td class="font-xs">invisible navigation icons
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-disable-animation"> </code>
+	            	</span>
+	            </td>
 	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
 	            </td>
 	            <td><code>none</code>
@@ -270,7 +419,11 @@
 	            <td>
 	                <strong>Lean Page Header</strong>
 	            </td>
-	            <td class="font-xs">invisible navigation icons</td>
+	            <td class="font-xs">invisible navigation icons
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-lean-page-header"> </code>
+	            	</span>
+	            </td>
 	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
 	            </td>
 	            <td><code>none</code>
@@ -290,5 +443,7 @@
 
 
 {{/inline}}
+
+{{#*inline "scripts-block"}}{{/inline}}
 
 {{/layouts/main}}
