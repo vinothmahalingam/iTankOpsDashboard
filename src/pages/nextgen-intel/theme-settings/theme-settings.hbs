@@ -1,25 +1,33 @@
 {{#> layouts/main title="Theme Settings" pagename="theme-settings" heading="Theme Settings"}}
 
 {{#*inline "head-block"}}
-test
+<link rel="stylesheet" media="screen, print" href="css/theme-demo.min.css">
 {{/inline}}
 
 {{#*inline "content-block"}}
 
-<div class="row">
-	<div class="col-lg-6 col-xl-4">
+<div class="alert alert-info p-3">
+	<h4>test
+	<small>test2</small>
+	</h4>
+	aa
+</div>
 
-		<div class="card p-1">
-			
-			<div class="d-flex" style="height:300px">
-				<div class="ng-nav-demo bg-fusion-400  p-1 pl-3 pr-3">
-					<img src="img/logo-white.png" alt="NextGen Logo" class="img-fluid">
+<div class="row">
+	<div class="col-sm-6 col-lg-6 col-xl-4">
+
+		<div class="card p-1 mb-g">
+			<div class="d-flex ng-body-demo">
+				<div class="ng-nav-demo bg-fusion-400">
+					<div class="p-1 pt-0 bg-primary-300 pattern-0 ng-header-demo">
+						<img src="img/logo-all-white.png" alt="NextGen Logo" class="img-fluid">
+					</div>
 				</div>
 				<div class="d-flex flex-column flex-1">
-					<div class="bg-success-50 font-xl">
+					<div class="bg-primary-300 pattern-0 ng-header-demo  font-xl">
 						&nbsp;
 					</div>
-					<div class="bg-faded flex-1 p-2">
+					<div class="bg-faded flex-1 p-2 flex-middle flex-column text-center">
 						<h6>
 							Fixed Header
 							<small class="mt-0">
@@ -29,61 +37,129 @@ test
 					</div>
 				</div>
 			</div>
-
 		</div>
 
 	</div>
 
-	<div class="col-lg-6 col-xl-4">
+	<div class="col-sm-6 col-lg-6 col-xl-4">
 
-		<div class="card p-1">
-			
-			<div class="d-flex" style="height:300px">
-				<div class="ng-nav bg-success-50  p-1 pl-3 pr-3 w-25">
-					<img src="img/logo.png" alt="NextGen Logo" class="img-fluid">
+		<div class="card p-1 mb-g">
+			<div class="d-flex ng-body-demo">
+				<div class="ng-nav-demo bg-primary-300 pattern-0 p-1 pt-0">
+					<img src="img/logo-all-white.png" alt="NextGen Logo" class="img-fluid">
 				</div>
 				<div class="d-flex flex-column flex-1">
-					<div class="bg-fusion-50 font-xl">
+					<div class="bg-fusion-400 ng-header-demo font-xl">
 						&nbsp;
 					</div>
-					<div class="bg-faded flex-1 p-2">
+					<div class="bg-faded flex-1 p-2 flex-middle flex-column text-center">
 						<h6>
 							Fixed Navigation
 							<small class="mt-0">
-								Left panel position becomes fixed
+								Header is in a fixed position at all times
 							</small>
 						</h6>
 					</div>
 				</div>
 			</div>
-
 		</div>
 
 	</div>
 
-	<div class="col-lg-6 col-xl-4">
+	<div class="col-sm-6 col-lg-6 col-xl-4">
 
-		<div class="card p-1">
-			
-			<div class="d-flex" style="height:300px">
-				<div class="ng-nav bg-success-50  p-1 pl-3 pr-3 w-25">
-					<img src="img/logo.png" alt="NextGen Logo" class="img-fluid">
+		<div class="card p-1 mb-g">
+			<div class="d-flex ng-body-demo">
+				<div class="ng-nav-demo-minify bg-primary-300 pattern-0">
+					<img src="img/logo-minify.png" alt="NextGen Logo" class="img-fluid logo">
 				</div>
 				<div class="d-flex flex-column flex-1">
-					<div class="bg-fusion-50 font-xl">
+					<div class="bg-fusion-400 ng-header-demo font-xl">
 						&nbsp;
 					</div>
-					<div class="bg-faded flex-1 p-2">
+					<div class="bg-faded flex-1 p-2 flex-middle flex-column text-center">
 						<h6>
-							Fixed Navigation
+							Minify Navigation
 							<small class="mt-0">
-								Left panel position becomes fixed
+								Header is in a fixed position at all times
 							</small>
 						</h6>
 					</div>
 				</div>
 			</div>
+		</div>
 
+	</div>
+
+	<div class="col-sm-6 col-lg-6 col-xl-4">
+
+		<div class="card p-1 mb-g">
+			<div class="d-flex ng-body-demo">
+				<div class="ng-nav-demo-hidden bg-primary-300 pattern-0">&nbsp;</div>
+				<div class="d-flex flex-column flex-1">
+					<div class="bg-fusion-400 ng-header-demo font-xl">
+						&nbsp;
+					</div>
+					<div class="bg-faded flex-1 p-2 flex-middle text-center">
+						<h6>
+							Hide Navigation
+							<small class="mt-0">
+								Header is in a fixed position at all times
+							</small>
+						</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="col-sm-6 col-lg-6 col-xl-4">
+
+		<div class="card p-1 mb-g">
+			<div class="d-flex ng-body-demo">
+				<div class="d-flex flex-column flex-1">
+					<div class="ng-nav-demo-top bg-primary-300 pattern-0 p-1">
+						<img src="img/logo-minify.png" alt="NextGen Logo" class="img-fluid">
+					</div>
+					<div class="bg-fusion-400 ng-header-demo font-xl">
+						&nbsp;
+					</div>
+					<div class="bg-faded flex-1 p-2 flex-middle text-center">
+						<h6>
+							Top Navigation
+							<small class="mt-0">
+								Header is in a fixed position at all times
+							</small>
+						</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="col-sm-6 col-lg-6 col-xl-4">
+
+		<div class="card p-1 mb-g bg-fusion-900 pattern-0">
+			<div class="d-flex ng-body-demo ml-5 mr-5">
+				<div class="ng-nav-demo bg-fusion-400 p-1 pt-0">
+					<img src="img/logo-white.png" alt="NextGen Logo" class="img-fluid">
+				</div>
+				<div class="d-flex flex-column flex-1">
+					<div class="bg-fusion-50 ng-header-demo font-xl">
+						&nbsp;
+					</div>
+					<div class="bg-faded flex-1 p-2 flex-middle text-center">
+						<h6>
+							Boxed Layout
+							<small class="mt-0">
+								Header is in a fixed position at all times
+							</small>
+						</h6>
+					</div>
+				</div>
+			</div>
 		</div>
 
 	</div>
@@ -99,7 +175,7 @@ test
 </h3>
 <div class="card border-radius-0">
 	
-	<table class="table table-hover table-sam m-0">
+	<table class="table table-hover table-sm m-0">
 	    <thead>
 	        <tr class="bg-fusion-300">
 				<th class="pt-2 pb-2 pl-2">

@@ -1,0 +1,28 @@
+.ng-body-demo {
+	height:350px;
+
+	.ng-nav-demo:not(.ng-nav-demo-minify) {
+		width:20%;
+	}
+
+	.ng-nav-demo-minify {
+		width: 7%;
+		padding:3px;
+
+		.logo {
+			width:auto;
+		}
+	}
+
+	.ng-nav-demo-hidden {
+		width:10px;
+	}
+
+	.ng-header-demo {
+		height:30px;
+	}
+
+	.ng-nav-demo-top {
+		height:35px;
+	}
+}
