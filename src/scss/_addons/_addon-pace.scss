@@ -83,27 +83,29 @@ body.mod-pace-custom {
 	  display: none;  
 	}
 
-	#content {
-		&:before {
-			content: '';
-		    position: fixed;
-		    top: 0;
-		    bottom: 0;
-		    left: 0;
-		    right: 0;
-		    background-color:$page-bg;
-		    z-index: 1;
+	&.pace-running {
+		#content {
+			&:before {
+				content: '';
+			    position: fixed;
+			    top: 0;
+			    bottom: 0;
+			    left: 0;
+			    right: 0;
+			    background-color:$page-bg;
+			    z-index: 1;
+			}
 		}
 	}
 	
-	&.pace-done {
+	/*&.pace-done {
 		#content{
 			&:before{
 				z-index:-2;
 				display: none;
 			}
 		}
-	}
+	}*/
 }
 
 

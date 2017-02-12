@@ -1,5 +1,17 @@
 .ng-body-demo {
 	height:350px;
+	//max-width: 450px;
+	margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+
+    margin-bottom:30px;
+
+	opacity: 0.9;
+
+	&:hover {
+		opacity: 1;
+	}
 
 	.ng-nav-demo:not(.ng-nav-demo-minify) {
 		width:20%;
@@ -25,4 +37,40 @@
 	.ng-nav-demo-top {
 		height:35px;
 	}
+
+	.ng-container-demo {
+		background-color: #fff;
+	}
+}
+
+#ng-eventlog {
+	width:100%;
+	height:220px;
+	overflow: auto;
+
+	> div:first-child {
+		background:#f9f4b5;
+	}
+
+	> div:nth-child(2) {
+		background:#fffde1;
+	}
+
+	&:empty {
+	   background:#eee;
+
+
+	   &:before {
+			text-align: center;
+			content: "User Generated Event logs";
+			display: block;
+			width: 100%;
+			padding-top: 80px;
+			font-size: 25px;
+			font-weight: 300;
+			color: #c7c7c7;
+	   }
+	}
+
+
 }

@@ -10,14 +10,14 @@ $(window).on("blur focus", function(e) {
     if (prevType != e.type) {   
         switch (e.type) {
             case "blur":
-                $.root_.toggleClass("blur")
+                myapp_config.root_.toggleClass("blur") 
 
                 if (myapp_config.debugState)
                 console.log("blur");
             
                 break;
             case "focus":
-                $.root_.toggleClass("blur")
+                myapp_config.root_.toggleClass("blur")
                 if (myapp_config.debugState)
 
                 console.log("focused");

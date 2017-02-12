@@ -27,4 +27,4 @@ gulp.task('watch', function() {
 
 // task registery
 gulp.task('default', ['compile-sass', 'cssnano', 'compile-app-core', 'connect', 'watch']);
-gulp.task('build', ['compile-sass', 'cssnano', 'compile-app-core', 'connect', 'compile-html', 'img-min', 'copy-cust-fonts', 'copy-cust-plugins', 'copy-bower-files', 'copy-favicon', 'copy-video', 'watch']);
+gulp.task('build', ['compile-sass', 'cssnano', 'compile-app-core', 'compile-app-core-plugins', 'connect', 'compile-html', 'img-min', 'copy-cust-fonts', 'copy-cust-plugins', 'copy-bower-files', 'copy-favicon', 'copy-video', 'watch']);

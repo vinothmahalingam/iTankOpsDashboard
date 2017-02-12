@@ -7,26 +7,19 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     config = require('../config');
 
-gulp.task('compile-app-core', function(){
+gulp.task('compile-app-core-plugins', function(){
     return gulp.src([
-      /* app core modules */
-      config.paths.js_path_src_config + 'app.config.js',
-      config.paths.js_path_src_module + 'app.ngmenu.js',
-      config.paths.js_path_src_module + 'app.init.js', 
-      config.paths.js_path_src_module + 'app.resize.trigger.js', 
-      config.paths.js_path_src_module + 'app.scroll.trigger.js',
-      config.paths.js_path_src_module + 'app.domReady.js',
-      config.paths.js_path_src_module + 'app.orientationchange.js',
-      config.paths.js_path_src_module + 'app.window.load.js'
+      config.paths.path_bower + 'legitripple/js/ripple.js ',
+      config.paths.path_bower + 'jquery-throttle-debounce/jquery.ba-throttle-debounce.js '
     ])
     /* compile source maps */
     .pipe(sourcemaps.init())
     /* concatinate all crequired vendor and app core files */
-    .pipe(concat('app.core.js'))
+    .pipe(concat('app.core-plugins.js'))
     /* write to dist */
     .pipe(gulp.dest(config.paths.js_path_build))
     /* copy and rename file */
-    .pipe(rename('app.core.min.js'))
+    .pipe(rename('app.core-plugins.min.js'))
     /* minify concatinated file reducing filesize */
     .pipe(uglify())
     /* comple source maps */

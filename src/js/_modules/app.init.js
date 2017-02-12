@@ -17,12 +17,12 @@ var initApp = (function(app) {
 		 **/		
 		if (typeof saveSettings !== 'undefined' && $.isFunction(saveSettings) && myapp_config.storeLocally) {
 
-			$.root_.addClass("saved").delay(600).queue(function(){
+			myapp_config.root_.addClass("saved").delay(600).queue(function(){
 				$(this).removeClass("saved").dequeue();
 			});
 
 			/**
-			 * call saveSettings function from root_ (HTML)	
+			 * call saveSettings function from myapp_config.root_ (HTML)	
 			 **/
 			saveSettings();
 
@@ -44,7 +44,7 @@ var initApp = (function(app) {
 		/* clear localstorage variable 'themeSettings' */
 		localStorage.setItem("themeSettings", "");
 		/* replace classes from <body> with fetched DB string */
-		$.root_.removeClass().addClass(DB_string);
+		myapp_config.root_.removeClass().addClass(DB_string);
 
 		/* save settings if "storeLocally == true" */
 		initApp.saveSettings();
@@ -58,7 +58,7 @@ var initApp = (function(app) {
 	 * we will use this "getSettings" when storing settings to a database
 	 */
 	app.getSettings = function () {
-		return $.root_.attr('class').split(/[^\w-]+/).filter(function(item) {
+		return myapp_config.root_.attr('class').split(/[^\w-]+/).filter(function(item) {
 			return /^(nav|header|mod|display)-/i.test(item);
 		}).join(' ');
 	}
@@ -88,11 +88,11 @@ var initApp = (function(app) {
 
 		if(myapp_config.isChrome){
 
-			$.root_.addClass("chrome webkit");
+			myapp_config.root_.addClass("chrome webkit");
 
 		} else if (myapp_config.isWebkit) {
 
-			$.root_.addClass("webkit");
+			myapp_config.root_.addClass("webkit");
 
 		}
 
@@ -109,7 +109,7 @@ var initApp = (function(app) {
 			/**
 			 * desktop
 			 **/	
-			$.root_.addClass('desktop');
+			myapp_config.root_.addClass('desktop');
 			myapp_config.thisDevice = 'desktop';
 
 		} else {
@@ -117,7 +117,7 @@ var initApp = (function(app) {
 			/**
 			 * mobile
 			 **/
-			$.root_.addClass('mobile');
+			myapp_config.root_.addClass('mobile');
 			myapp_config.thisDevice = 'mobile';
 			
 			if (myapp_config.fastClick) {
@@ -126,7 +126,7 @@ var initApp = (function(app) {
 				 * removes the tap delay in idevices
 				 * dependency: js/plugin/fastclick/fastclick.js
 				 **/
-				$.root_.addClass('needsclick');
+				myapp_config.root_.addClass('needsclick');
 				FastClick.attach(document.body); 
 			}
 			
@@ -142,7 +142,7 @@ var initApp = (function(app) {
 
 		app.calculateAppHeight = function (){
 
-			var primaryNavHeight = $('#primary-nav').height() + navHeightGap,
+			var primaryNavHeight = $('#primary-nav').height() + myapp_config.navHeightGap,
 				/**
 				 * DOC: sort next new height, get max value
 				 **/
@@ -155,7 +155,7 @@ var initApp = (function(app) {
 					/**
 					* nav is higher than wrapper
 					**/
-					$.root_.css("min-height",  newHeight + "px");
+					myapp_config.root_.css("min-height",  newHeight + "px");
 
 					if (myapp_config.debugState)
 						console.log("nav height : " +  newHeight + " | app.fixAppHeight()");
@@ -167,19 +167,19 @@ var initApp = (function(app) {
 					/**
 					* wrapper is higher than nav
 					**/
-					$.root_.css("min-height",  newHeight + "px");
+					myapp_config.root_.css("min-height",  newHeight + "px");
 
 					if (myapp_config.debugState)
 						console.log("body height : " +  newHeight + " | app.fixAppHeight()");
 
 					break;
 
-				case ( $.root_.hasClass('nav-function-fixed') ):
+				case ( myapp_config.root_.hasClass('nav-function-fixed') ):
 
 					/**
 					 * if navigation is fixed
 					 **/
-					$.root_.css("min-height",  primaryNavHeight + "px");
+					myapp_config.root_.css("min-height",  primaryNavHeight + "px");
 
 					if (myapp_config.debugState)
 						console.log("nav-function-fixed new height : " +  primaryNavHeight + " | app.fixAppHeight()");
@@ -190,8 +190,8 @@ var initApp = (function(app) {
 		}
 
 		/* HINT! alternative way to save ROM for mobile: */
-		/* if ( myapp_config.thisDevice === 'desktop' && !$.root_.is('.nav-function-top, .nav-function-fixed') ) { */
-		if ( !$.root_.is('.nav-function-top, .nav-function-fixed') ) {
+		/* if ( myapp_config.thisDevice === 'desktop' && !myapp_config.root_.is('.nav-function-top, .nav-function-fixed') ) { */
+		if ( !myapp_config.root_.is('.nav-function-top, .nav-function-fixed') ) {
 
 			initApp.calculateAppHeight();
 				
@@ -205,11 +205,11 @@ var initApp = (function(app) {
 	 *      Will not fire for webkit devices or Chrome as its not needed
 	 **/
 	 app.windowScrollEvents = function () {
-		if ( $.root_.is(".nav-function-hidden.header-function-fixed:not(.nav-function-top)") &&  myapp_config.thisDevice === 'desktop') {
+		if ( myapp_config.root_.is(".nav-function-hidden.header-function-fixed:not(.nav-function-top)") &&  myapp_config.thisDevice === 'desktop') {
 			$('#logo').css({
 				'top': $(window).scrollTop()
 			})
-		} else if ( $.root_.is(".header-function-fixed:not(.nav-function-top):not(.nav-function-hidden)") &&  myapp_config.thisDevice === 'desktop') {
+		} else if ( myapp_config.root_.is(".header-function-fixed:not(.nav-function-top):not(.nav-function-hidden)") &&  myapp_config.thisDevice === 'desktop') {
 			$('#logo').attr("style", "");
 		}
 	 }
@@ -228,7 +228,7 @@ var initApp = (function(app) {
 		 **/
 		switch ( true ) {
 
-			case ( $.root_.hasClass('nav-function-fixed') && !$.root_.is('.nav-function-top, .nav-function-minify, .mod-main-boxed') && myapp_config.thisDevice === 'desktop' ):
+			case ( myapp_config.root_.hasClass('nav-function-fixed') && !myapp_config.root_.is('.nav-function-top, .nav-function-minify, .mod-main-boxed') && myapp_config.thisDevice === 'desktop' ):
 
 				/**
 				 * start slimscroll on nav
@@ -313,12 +313,12 @@ var initApp = (function(app) {
 		
 		if ( $(window).width() < 993 ) {
 
-			$.root_.addClass('mobile-view-activated');
+			myapp_config.root_.addClass('mobile-view-activated');
 			myapp_config.mobileMenuTrigger = true;
 
-		} else if ( $.root_.hasClass('mobile-view-activated') ) {
+		} else if ( myapp_config.root_.hasClass('mobile-view-activated') ) {
 
-			$.root_.removeClass('mobile-view-activated');
+			myapp_config.root_.removeClass('mobile-view-activated');
 			myapp_config.mobileMenuTrigger = false;
 
 		}
@@ -434,7 +434,7 @@ var initApp = (function(app) {
 		/**
 		 * Action buttons
 		 **/		
-		$.root_
+		myapp_config.root_
 			.on('mousedown', '[data-action]', function(e) {
 
 				console.log("data-action clicked");
@@ -451,7 +451,7 @@ var initApp = (function(app) {
 
 					case ( actiontype === 'toggle' ):
 
-						var target = $(this).attr('data-target') || $.root_,
+						var target = $(this).attr('data-target') || myapp_config.root_,
 							dataClass = $(this).attr('data-class');
 
 						/**
@@ -484,7 +484,7 @@ var initApp = (function(app) {
 						 * fix app height when switching nav from top, side, minify and takes care of some ipad bugs 
 						 **/
 						if ( dataClass === 'nav-function-top' || 
-							 dataClass === 'nav-function-minify' && $.root_.hasClass('mod-main-boxed') || 
+							 dataClass === 'nav-function-minify' && myapp_config.root_.hasClass('mod-main-boxed') || 
 							 dataClass === 'nav-function-fixed' ) {
 
 							initApp.calculateAppHeight();
@@ -510,7 +510,7 @@ var initApp = (function(app) {
 					case ( actiontype === 'widget-fullscreen' ):
 
 						$(this).closest('.widget').toggleClass("widget-fullscreen");
-						$.root_.toggleClass("widget-fullscreen");
+						myapp_config.root_.toggleClass("widget-fullscreen");
 
 						if (myapp_config.debugState)
 								console.log( "widget fullscreen toggle" );
@@ -614,7 +614,7 @@ var initApp = (function(app) {
 		 **/
 		$(document)
 			.on('touchend mousedown', '.mobile-nav-on #content', function(e) {
-				$.root_.removeClass("mobile-nav-on");
+				myapp_config.root_.removeClass("mobile-nav-on");
 
 				if (myapp_config.debugState)
 					console.log(this + " : was clicked to close mobile menu");
@@ -629,7 +629,7 @@ var initApp = (function(app) {
 		 *
 		$(document).on( "swiperight", ':not(.mobile-nav-on) body', function( e ) {
 		    if ( e.swipestart.coords[0] <50) {
-		    	$.root_.addClass("mobile-nav-on");
+		    	myapp_config.root_.addClass("mobile-nav-on");
 		    }
 		});
 		*/

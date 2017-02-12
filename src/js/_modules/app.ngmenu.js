@@ -98,7 +98,7 @@ $.fn.extend({
 						$(this).parent("li").addClass("open").find("b:first").delay(opts.speed).html(opts.openedSign);
 
 						/*bug fixed: addresses the .mod-main-boxed class bug, when nav exceeds content height*/
-						if ($.root_.hasClass("mod-main-boxed") ) {
+						if (myapp_config.root_.hasClass("mod-main-boxed") ) { 
 							initApp.fixAppHeight(); 
 						}
 					});

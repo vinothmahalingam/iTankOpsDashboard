@@ -3,7 +3,7 @@
  * NOTE: Please do not change the order displayed (e.g. 1a, 1b, 2a, 2b...etc)
  **/
 
- $(window).scroll(
+$(window).scroll(
 
  	$.throttle( myapp_config.throttleDelay, function (e) {
 
@@ -19,6 +19,6 @@
 
 	})
 
- );
+);
 
 $(window).on('scroll', initApp.windowScrollEvents);

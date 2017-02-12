@@ -33,7 +33,7 @@
 
 		</ul>	
 	</li>
-	<li {{#is pagename "in" "version-variation,downloaded-package,documentation-and-faq,theme-and-plugin-licensing"}}class="active"{{/is}}>
+	<li {{#is pagename "in" "version-variation,downloaded-package,documentation-and-faq,app-and-plugin-licensing"}}class="active"{{/is}}>
 		<a href="#" title="Package Info"> 
 			<i class="icon icon-tag"></i>
 			<span class="nxtgn-link-text">Package Info</span> 
@@ -49,9 +49,9 @@
 					<span class="nxtgn-link-text"> Downloaded Package</span> 
 				</a>
 			</li>
-			<li {{#is pagename "===" "theme-and-plugin-licensing"}}class="active"{{/is}}>
-				<a href="theme-and-plugin-licensing.html"> 
-					<span class="nxtgn-link-text"> Theme & Plugin Licensing</span> 
+			<li {{#is pagename "===" "app-and-plugin-licensing"}}class="active"{{/is}}>
+				<a href="app-and-plugin-licensing.html"> 
+					<span class="nxtgn-link-text"> App & Plugin Licensing</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "version-variation"}}class="active"{{/is}}>
@@ -212,13 +212,13 @@
 	<li {{#is pagename "in" "widgets,pacejs,slimscroll,ripplejs"}}class="active"{{/is}}>
 		<a href="#" title="Addons"> 
 			<i class="icon icon-my-apps"></i>
-			<span class="nxtgn-link-text">Addons</span> 
+			<span class="nxtgn-link-text">Core Addons</span> 
 		</a>
 		<!-- Dropdown level one -->
 		<ul class="nxtgn-sub-one">
 			<li {{#is pagename "===" "widgets"}}class="active"{{/is}}>
 				<a href="widgets.html"> 
-					<span>Widgets</span>
+					<span>NextGen Widgets</span>
 				</a>
 			</li>
 			<li {{#is pagename "===" "pacejs"}}class="active"{{/is}}>
@@ -234,6 +234,11 @@
 			<li {{#is pagename "===" "ripplejs"}}class="active"{{/is}}>
 				<a href="ripplejs.html"> 
 					<span>RippleJS</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "throttle"}}class="active"{{/is}}>
+				<a href="throttle.html"> 
+					<span>Throttle</span>
 				</a>
 			</li>								
 		</ul>	
