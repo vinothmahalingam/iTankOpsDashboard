@@ -19,7 +19,7 @@ $widget-hdr-background: #fff;
 
 	margin-bottom: map-get($grid-gutter-widths, xs);
 	border-color: #e5e6e9 #dfe0e4 #d0d1d5;
-	border-radius: $default-border-radius;
+	border-radius: $border-radius;
 
 	.widget-hdr {
 		
@@ -141,7 +141,7 @@ $widget-hdr-background: #fff;
 		.widget-hdr {
 			border-bottom: 1px solid #e6e6e6;	
 			background: $widget-hdr-background;
-			border-radius: $default-border-radius $default-border-radius 0 0;
+			border-radius: $border-radius $border-radius 0 0;
 		}
 		.widget-container {
 			padding: $widget-padding $widget-padding ($widget-padding - 5);

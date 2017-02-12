@@ -121,6 +121,10 @@ $brand-danger:              						$danger-800;
 $nav-link-padding:                          		0.25rem 0.95rem;
 $link-color:            							$primary-800;
 
+/*border radius*/
+$border-radius:										3px;
+$border-radius-sm:									$border-radius;
+
 /* bootstrap tables */
 $table-inverse-bg:									$fusion-400;
 $table-bg-hover:									rgba($fusion-300,.035);
@@ -166,6 +170,36 @@ $navbar-toggler-font-size:							21px;
 $navbar-toggler-padding-y:							7.5px; 
 $navbar-toggler-padding-x:							18px;
 
+/*  MOBILE BREAKPOINT & GUTTERS (bootstrap variable overrides)
+========================================================================== */
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+);
+
+$mobile-breakpoint:									lg !default; 											/* define when mobile menu activates, here we are declearing (lg) so it targets the one after it */
+$mobile-breakpoint-size:							map-get($grid-breakpoints, lg) !default;				/* bootstrap reference xs: 0,  sm: 544px, md: 768px, lg: 992px, xl: 1200px*/
+$grid-gutter-width-base:     						30px;
+
+$grid-gutter-widths: (
+  xs: $grid-gutter-width-base / 2,
+  sm: $grid-gutter-width-base / 2,
+  md: $grid-gutter-width-base / 2,
+  lg: $grid-gutter-width-base / 1.5,
+  xl: $grid-gutter-width-base / 1.5
+);
+
+/* global var used for spacing*/
+$spacer:   											1rem;
+
 /*  BASE VARS
 ========================================================================== */
 // usage: background-image: url("#{$baseURL}img/bg.png"); 
@@ -186,35 +220,6 @@ $mobile-page-font:									'HelveticaNeue-Light','Helvetica Neue Light','Helveti
 ========================================================================== */
 $enable-animation:									true !default;											/* You can turn animation on or off here by changing the values to "false" or "true" */
 $nav-hide-animate: 									450ms cubic-bezier(0.90, 0.01, 0.09, 1) !default;		/* this addresses all animation related to nav hide to nav minify */
-
-/*  MOBILE BREAKPOINT & GUTTERS (bootstrap variable overrides)
-========================================================================== */
-$grid-breakpoints: (
-  // Extra small screen / phone
-  xs: 0,
-  // Small screen / phone
-  sm: 576px,
-  // Medium screen / tablet
-  md: 768px,
-  // Large screen / desktop
-  lg: 992px,
-  // Extra large screen / wide desktop
-  xl: 1200px
-);
-
-$spacer:   											1rem;
-
-$mobile-breakpoint:									lg !default; 											/* define when mobile menu activates, here we are declearing (lg) so it targets the one after it */
-$mobile-breakpoint-size:							map-get($grid-breakpoints, lg) !default;				/* bootstrap reference xs: 0,  sm: 544px, md: 768px, lg: 992px, xl: 1200px*/
-$grid-gutter-width-base:     						30px;
-
-$grid-gutter-widths: (
-  xs: $grid-gutter-width-base / 2,
-  sm: $grid-gutter-width-base / 2,
-  md: $grid-gutter-width-base / 2,
-  lg: $grid-gutter-width-base / 1.5,
-  xl: $grid-gutter-width-base / 1.5
-);
 
 /*  Z-INDEX declearation
 ========================================================================== */
@@ -262,7 +267,7 @@ $header-logo-border-bottom:							rgba($black, .4) !default;
 $header-logo-width:									170px !default; 										/* try not to go beywond the width of $main_nav_width value */
 $header-logo-height:								27px !default 											/* you may need to change this depending on your logo design */
 //$header-logo-margin-top:							$header-height/2 - $header-logo-height/2 - 2 !default;  /* adjust this as you see fit */
-//$header-logo-margin-right:							0px !default; 											/* adjust this as you see fit */
+//$header-logo-margin-right:						0px !default; 											/* adjust this as you see fit */
 $header-logo-text-align:							center; 												/* adjust this as you see fit : left, right, center */
 
 /* icon font size (not button) */
@@ -286,7 +291,7 @@ $header-btn-active-color:							#fff !default;
 $header-btn-height: 								$header-height/2 + 6 !default;
 $header-btn-width: 									52px !default;
 $header-btn-font-size:								21px !default; //works only for font icons
-$header-btn-border-radius:							3px !default;
+$header-btn-border-radius:							$border-radius !default;
 $header-non-btn-width:								48px;
 
 /* dropdowns */
@@ -402,7 +407,7 @@ $nav-badge-left-px:									$nav-padding-left + 15.5px !default;
 $nav-dl-font-size:									10px !default;
 $nav-dl-width:										20px !default;
 $nav-dl-height:										16px !default;
-$nav-dl-border-radius:								3px !default;
+$nav-dl-border-radius:								$border-radius !default;
 $nav-dl-margin-left:								$nav-dl-width + 15px !default; 							/* will be pulled to left as a negative value */
 $nav-dl-margin-right:								12px !default;
 
@@ -435,4 +440,3 @@ $footer-zindex:										$cloud - 20 !default;
 
 /*   GLOBALS
 ========================================================================== */
-$default-border-radius:								3px !default;

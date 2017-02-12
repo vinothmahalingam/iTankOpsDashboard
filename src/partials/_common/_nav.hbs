@@ -1,5 +1,5 @@
 <ul class="nxtgn-nav">
-	<li {{#is pagename "in" "introduction,color-pallet,responsive-grid,theme-settings,build-notes"}}class="active"{{/is}}>
+	<li {{#is pagename "in" "introduction,color-pallet,responsive-grid,build-notes,how-it-works,layout-options,saving-to-database"}}class="active"{{/is}}>
 		<a href="#" title="NextGen Intel"> 
 			<i class="icon icon-globe"></i>
 			<span class="nxtgn-link-text">NextGen Intel</span> 
@@ -25,12 +25,43 @@
 					<span class="nxtgn-link-text"> Responsive Grid</span> 
 				</a>
 			</li>
-			<li {{#is pagename "===" "theme-settings"}}class="active"{{/is}}>
-				<a href="theme-settings.html"> 
-					<span class="nxtgn-link-text"> Theme Settings</span> 
+			<li {{#is pagename "in" "how-it-works,layout-options,saving-to-database"}}class="active"{{/is}}>
+				<a href="#"> 
+					<span class="nxtgn-link-text">
+						Theme Settings
+					</span> 
 				</a>
+				<ul class="nxtgn-sub-two">
+					<li {{#is pagename "===" "how-it-works"}}class="active"{{/is}}>
+						<a href="how-it-works.html"> 
+							<span class="nxtgn-link-text">
+								How it works
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "layout-options"}}class="active"{{/is}}>
+						<a href="layout-options.html"> 
+							<span class="nxtgn-link-text">
+								Layout Options
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "skin-options"}}class="active"{{/is}}>
+						<a href="skin-options.html"> 
+							<span class="nxtgn-link-text">
+								Skin Options
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "saving-to-database"}}class="active"{{/is}}>
+						<a href="saving-to-database.html"> 
+							<span class="nxtgn-link-text">
+								Saving to Database
+							</span>
+						</a>
+					</li>
+				</ul>		
 			</li>
-
 		</ul>	
 	</li>
 	<li {{#is pagename "in" "version-variation,downloaded-package,documentation-and-faq,app-and-plugin-licensing"}}class="active"{{/is}}>
@@ -59,6 +90,7 @@
 					<span class="nxtgn-link-text"> Version Variation</span> 
 				</a>
 			</li>
+
 		</ul>
 	</li>
 </ul>
