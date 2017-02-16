@@ -26,7 +26,7 @@ $grid-breakpoints: (
 	#content {
 		padding: map-get($grid-gutter-widths, xl) map-get($grid-gutter-widths, lg);
 
-		.card.widget {
+		.card.panel {
 			margin-bottom: map-get($grid-gutter-widths, lg);
 		}
 	}
@@ -39,7 +39,7 @@ $grid-breakpoints: (
 	#content {
 		padding: (map-get($grid-gutter-widths, xl) + 5) map-get($grid-gutter-widths, xl);
 
-		.card.widget {
+		.card.panel {
 			margin-bottom: map-get($grid-gutter-widths, xl);
 		}
 	}
@@ -103,7 +103,7 @@ $grid-breakpoints: (
 					}
 				}*/
 
-				.nxtgn-nav {
+				.ngmenu {
 					> li {
 						a {
 							font-size: $base-font-size + 1;
@@ -457,7 +457,7 @@ $grid-breakpoints: (
 		padding-right: $grid-gutter-width-base/3 !important;
 	}
 
-	#primary-nav .nxtgn-nav li a > .badge {
+	#primary-nav .ngmenu li a > .badge {
 		font-size: 10px !important;
 	}
 }

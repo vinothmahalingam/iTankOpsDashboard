@@ -1,15 +1,15 @@
-$widget-padding: 15px;
-$widget-hdr-font-size: 17px;
-$widget-hdr-height: 50px;
-$widget-btn-size: 16px;
-$widget-hdr-background: #fff;
+$panel-padding: 15px;
+$panel-hdr-font-size: 17px;
+$panel-hdr-height: 50px;
+$panel-btn-size: 16px;
+$panel-hdr-background: #fff;
 
-.widget-fullscreen {
+.panel-fullscreen {
 	overflow:hidden;
 	max-width: 100%;
 }
 
-.widget {
+.panel {
 
 	position: relative;
 	display: flex;
@@ -21,26 +21,26 @@ $widget-hdr-background: #fff;
 	border-color: #e5e6e9 #dfe0e4 #d0d1d5;
 	border-radius: $border-radius;
 
-	.widget-hdr {
+	.panel-hdr {
 		
-		padding: 0 $widget-padding;
-		font-size: $widget-hdr-font-size;
-		min-height: $widget-hdr-height;
+		padding: 0 $panel-padding;
+		font-size: $panel-hdr-font-size;
+		min-height: $panel-hdr-height;
 		font-weight: 300;
 
 		display:flex;
 		align-items:center;
 		flex-direction:row;
 
-		.widget-subtitle {
-			font-size: $widget-hdr-font-size - 3;
+		.panel-subtitle {
+			font-size: $panel-hdr-font-size - 3;
 			display: block;
 			font-weight: 300;
 			opacity: 0.8;
 			margin-left: $spacer * 0.5;
 		}
 
-		.widget-toolbar {
+		.panel-toolbar {
 
 			display: flex;
 			align-items: center;
@@ -49,10 +49,10 @@ $widget-hdr-background: #fff;
 			.btn {
 				margin-left:5px;
 
-				&.btn-widget {
+				&.btn-panel {
 					padding: 0;
-					width: $widget-btn-size;
-					height: $widget-btn-size;
+					width: $panel-btn-size;
+					height: $panel-btn-size;
 					font-size: $base-font-size;
 					border-color: transparent;
 					box-sizing: border-box;
@@ -73,7 +73,7 @@ $widget-hdr-background: #fff;
 		}
 
 		&:hover {
-			.widget-buttons {
+			.panel-buttons {
 				.btn {
 					opacity: 0.9;
 				}
@@ -81,18 +81,18 @@ $widget-hdr-background: #fff;
 		}
 	}	
 
-	.widget-container {
+	.panel-container {
 
-		padding: 0 $widget-padding ($widget-padding - 5);
+		padding: 0 $panel-padding ($panel-padding - 5);
 		@extend %common-animation-easeout;
 
 		&:only-child {
-			padding: $widget-padding;
+			padding: $panel-padding;
 		}
 	}
 
-	/* widget fullscreen */
-	&.widget-fullscreen {
+	/* panel fullscreen */
+	&.panel-fullscreen {
 		position: fixed;
 		z-index: 9999;
 		top: 0;
@@ -101,33 +101,33 @@ $widget-hdr-background: #fff;
 		height: 100%;
 		border-radius: 0;
 
-		[data-action="widget-collapse"],
-		[data-action="widget-close"]  {
+		[data-action="panel-collapse"],
+		[data-action="panel-close"]  {
 			display: none;
 		}
 
-		.widget-hdr {
+		.panel-hdr {
 			height:$header-height;
 			background: #fafafa;
 			border-radius: 0 !important;
 			box-shadow: 0 0.125rem 0.125rem -0.0625rem rgba(0, 0, 0, 0.1);
 		}
 
-		.btn-widget[data-action="widget-fullscreen"] {
-			width:$widget-hdr-height/2 !important;
-			height:$widget-hdr-height/2 !important;
+		.btn-panel[data-action="panel-fullscreen"] {
+			width:$panel-hdr-height/2 !important;
+			height:$panel-hdr-height/2 !important;
 		}
 
-		.widget-container {
+		.panel-container {
 			flex: 1;
 			overflow-x: auto;
 		}
 	}
 
-	/* widget collapse */
-	&.widget-collapse:not(.widget-fullscreen) {
+	/* panel collapse */
+	&.panel-collapse:not(.panel-fullscreen) {
 
-		.widget-container {
+		.panel-container {
 			height: 0;
 			padding-top: 0;
 			padding-bottom: 0;
@@ -136,15 +136,15 @@ $widget-hdr-background: #fff;
 
 	}
 
-	/* widget boxed */
-	&.widget-hdr-boxed {
-		.widget-hdr {
+	/* panel boxed */
+	&.panel-hdr-boxed {
+		.panel-hdr {
 			border-bottom: 1px solid #e6e6e6;	
-			background: $widget-hdr-background;
+			background: $panel-hdr-background;
 			border-radius: $border-radius $border-radius 0 0;
 		}
-		.widget-container {
-			padding: $widget-padding $widget-padding ($widget-padding - 5);
+		.panel-container {
+			padding: $panel-padding $panel-padding ($panel-padding - 5);
 		}
 	}
 
@@ -154,14 +154,14 @@ $widget-hdr-background: #fff;
 @media only screen and ( max-width: 420px ){
 
 	.card {
-		&.widget {
-			.widget-hdr {
+		&.panel {
+			.panel-hdr {
 				padding: 0 10px;
-				font-size: $widget-hdr-font-size;
+				font-size: $panel-hdr-font-size;
 				color: #060606;
-				min-height: $widget-hdr-height - 4;
+				min-height: $panel-hdr-height - 4;
 			}
-			.widget-container {
+			.panel-container {
 				padding: 0 10px 10px;
 			}
 		}

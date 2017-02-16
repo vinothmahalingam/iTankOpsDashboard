@@ -34,14 +34,14 @@ $nav-function-top-menu-item-bg: darken($nav-base-color, 15%);
 
 			#primary-nav {
 
-				.nxtgn-nav {
+				.ngmenu {
 
 
 					> li {
 						&:hover {
 							> a {
 								background: $nav-function-top-menu-item-bg;
-								&+ul.nxtgn-sub-one {
+								&+ul.ngmenu-sub-one {
 									background:$nav-function-top-menu-item-bg;
 
 									li {

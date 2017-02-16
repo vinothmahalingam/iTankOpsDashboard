@@ -1,9 +1,9 @@
 .mod-high-contrast {
 
-	.nxtgn-nav li a,
-	.nxtgn-nav-title,
-	.nxtgn-nav li a .fa, 
-	.nxtgn-nav li a .icon,
+	.ngmenu li a,
+	.ngmenu-title,
+	.ngmenu li a .fa, 
+	.ngmenu li a .icon,
 	.dl-ref,
 	.btn {
 		text-shadow:
@@ -22,7 +22,7 @@
 	h4,
 	h5,
 	.settings-panel-title a,
-	.widget-header,
+	.panel-header,
 	.badge-detached,
 	.btn-secondary,
 	.btn-default,
@@ -49,8 +49,8 @@
 	p,
 	.btn-switch + .onoffswitch-title,
 	.onoffswitch-title + .onoffswitch-title-desc,
-	.widget-container,
-	.widget-header .btn {
+	.panel-container,
+	.panel-header .btn {
 		text-shadow: none;
 		color: $black !important;
 		font-weight: normal !important;

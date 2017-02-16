@@ -1,14 +1,14 @@
 #left-panel {
 	background: $nav-background;
 
-	.nxtgn-nav-title {
+	.ngmenu-title {
 		color: $nav-title-color;
 		border-bottom: 1px solid rgba($nav-title-border-bottom-color, 0.2);
 	}
 
 	#primary-nav {
 
-		.nxtgn-nav {
+		.ngmenu {
 
 			li {
 
@@ -81,7 +81,7 @@
 				} 
 
 				// Sub nav level 1
-				.nxtgn-sub-one {
+				.ngmenu-sub-one {
 					background-color: darken($nav-base-color, 11%);
 
 					li {
@@ -92,14 +92,14 @@
 								background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100));
 								@include box-shadow(inset rem(3px) 0 0 rgba($color-primary, (50/100)) );
 
-								> .nxtgn-link-text {
+								> .ngmenu-link-text {
 									>.fa,
 									>.#{$cust-icon-prefix} {
 									    @include text-contrast(rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)))
 									}
 								}	
 								&:hover {
-									> .nxtgn-link-text {
+									> .ngmenu-link-text {
 										>.fa,
 										>.#{$cust-icon-prefix} {
 										    color:$nav-icon-hover-color;
@@ -117,7 +117,7 @@
 								color: $nav-icon-color;
 							}
 
-							> .nxtgn-link-text {
+							> .ngmenu-link-text {
 								>.fa,
 								>.#{$cust-icon-prefix} {
 									color:$nav-icon-color;
@@ -138,7 +138,7 @@
 								
 								@include box-shadow(inset rem(3px) 0 0 rgba($color-primary, (50/100)) );
 
-								> .nxtgn-link-text {
+								> .ngmenu-link-text {
 									>.fa,
 									>.#{$cust-icon-prefix} {
 									    color:$nav-icon-hover-color;
@@ -149,7 +149,7 @@
 						}
 
 						// Sub nav level 2
-						.nxtgn-sub-two {
+						.ngmenu-sub-two {
 							background-color: darken($nav-base-color, 13%);
 
 							li {
@@ -200,7 +200,7 @@
 
 	#primary-nav {
 
-		.nxtgn-nav {
+		.ngmenu {
 
 			a,
 			a:hover,

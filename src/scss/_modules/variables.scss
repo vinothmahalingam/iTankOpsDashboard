@@ -318,25 +318,25 @@ aside#left-panel ($nav-width, $nav-background)
 	#logo
 	#primary-nav
 		#info-card
-		ul.nxtgn-nav
+		ul.ngmenu
 			li
 				a (parent level-0..., $nav-link-color, $nav-link-hover-color, $nav-link-hover-bg-color, $nav-link-hover-left-border-color)
 					icon 
 					span
 					collapse-sign 
 					
-				ul.nxtgn-sub-one  
+				ul.ngmenu-sub-one  
 					li
 						a ($nav-level-1... $nav-sub-link-height)
 							span
 							collapse-sign
 
-						ul.nxtgn-sub-two
+						ul.ngmenu-sub-two
 							li
 								a ($nav-level-2... $nav-sub-link-height)
 									span
 
-		p.nxtgn-nav-title ($nav-title-*...)
+		p.ngmenu-title ($nav-title-*...)
 
 
 ========================================================================== */

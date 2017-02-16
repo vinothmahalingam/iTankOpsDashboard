@@ -45,15 +45,15 @@
 					}
 				}
 
-				.nxtgn-nav-title {
+				.ngmenu-title {
 					display: none;
 				}
-				.nxtgn-nav {
+				.ngmenu {
 					margin:0;
 
 					li {
 						a {
-							.nxtgn-link-text {
+							.ngmenu-link-text {
 								.dl-ref {
 									display:none !important;
 								}
@@ -82,7 +82,7 @@
 								margin-right: 0;
 							}
 
-							> .nxtgn-link-text {
+							> .ngmenu-link-text {
 								display: none;	
 								position:absolute;
 								text-align: left;
@@ -102,7 +102,7 @@
 								display: none !important;
 							}
 
-							& + ul.nxtgn-sub-one {
+							& + ul.ngmenu-sub-one {
 								position: absolute;
 								width: rem($nav-minify-sub-width);
 								left: rem($nav-minify-width);
@@ -120,7 +120,7 @@
 										}
 
 
-										& + ul.nxtgn-sub-two {
+										& + ul.ngmenu-sub-two {
 											> li {
 												> a {
 													padding-left: rem($nav-minify-sub-width / 4.5);
@@ -129,7 +129,7 @@
 										}
 									}
 
-									.nxtgn-link-text {
+									.ngmenu-link-text {
 										> .fa,
 										> .#{$cust-icon-prefix} {
 											display:none;
@@ -140,7 +140,7 @@
 
 						}
 
-						& ul.nxtgn-sub-one {
+						& ul.ngmenu-sub-one {
 							display: none !important;
 						}
 					}
@@ -150,14 +150,14 @@
 				&:hover {
 					overflow: visible;
 					
-					.nxtgn-nav > li:hover {
+					.ngmenu > li:hover {
 
 						> a {
 							background: $nav-minify-hover-bg;
 							color: $white;
 							overflow: visible;
 
-							>.nxtgn-link-text {
+							>.ngmenu-link-text {
 								display: block;
 							}
 
@@ -167,7 +167,7 @@
 
 						}
 
-						> ul.nxtgn-sub-one {
+						> ul.ngmenu-sub-one {
 							display: block !important;
 						}
 					} 

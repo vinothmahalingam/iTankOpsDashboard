@@ -493,42 +493,42 @@ var initApp = (function(app) {
 					break;
 
 					/**
-					 * widget 'collapse' trigger
+					 * panel 'collapse' trigger
 					 **/
-					case ( actiontype === 'widget-collapse' ):
+					case ( actiontype === 'panel-collapse' ):
 
-						$(this).closest('.widget').toggleClass("widget-collapse");
+						$(this).closest('.panel').toggleClass("panel-collapse");
 						
 						if (myapp_config.debugState)
-								console.log( "widget collapse toggle" );
+								console.log( "panel collapse toggle" );
 
 					break;
 
 					/**
-					 * widget 'fullscreen' trigger
+					 * panel 'fullscreen' trigger
 					 **/
-					case ( actiontype === 'widget-fullscreen' ):
+					case ( actiontype === 'panel-fullscreen' ):
 
-						$(this).closest('.widget').toggleClass("widget-fullscreen");
-						myapp_config.root_.toggleClass("widget-fullscreen");
+						$(this).closest('.panel').toggleClass("panel-fullscreen");
+						myapp_config.root_.toggleClass("panel-fullscreen");
 
 						if (myapp_config.debugState)
-								console.log( "widget fullscreen toggle" );
+								console.log( "panel fullscreen toggle" );
 
 					break;
 
 					/**
-					 * widget 'close' trigger
+					 * panel 'close' trigger
 					 **/
-					case ( actiontype === 'widget-close' ):
+					case ( actiontype === 'panel-close' ):
 
-						$(this).closest('.widget').fadeOut(500,function(){
+						$(this).closest('.panel').fadeOut(500,function(){
 							$(this).remove();
-							//console.log("widget removed")
+							//console.log("panel removed")
 						});
 						
 						if (myapp_config.debugState)
-								console.log( "widget collapse removed" );
+								console.log( "panel collapse removed" );
 
 					break;
 
