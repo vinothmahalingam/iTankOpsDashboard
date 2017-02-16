@@ -3,119 +3,139 @@
  **/
 $.fn.extend({
 
-	/**
-	 * pass the options variable to the function
-	 **/
-	ngmenu : function(options) {
+    /**
+     * pass the options variable to the function
+     **/
+    ngmenu: function(options) {
 
-		var defaults = {
-			accordion : 'true',
-			animate : 'easeOutExpo',
-			speed : 200,
-			closedSign : '[+]',
-			openedSign : '[-]'
-		},
+        var defaults = {
+                accordion: 'true',
+                animate: 'easeOutExpo',
+                speed: 200,
+                closedSign: '[+]',
+                openedSign: '[-]'
+            },
 
-		/**
-		 * Extend our default options with those provided.
-		 **/
-		opts = $.extend(defaults, options),
+            /**
+             * Extend our default options with those provided.
+             **/
+            opts = $.extend(defaults, options),
 
-		/**
-		 * Assign current element to variable, in this case is UL element
-		 **/
-		$this = $(this);
+            /**
+             * Assign current element to variable, in this case is UL element
+             **/
+            $this = $(this);
 
-		/**
-		 * add a mark [+] to a multilevel menu
-		 **/
-		$this.find("li").each(function() {
-			if ( $(this).find("ul").length !== 0 ) {
+        /**
+         * add a mark [+] to a multilevel menu
+         **/
+        $this.find("li").each(function() {
+            if ($(this).find("ul").length !== 0) {
 
-				/**
-				 * add the multilevel sign next to the link
-				 **/				
-				$(this).find("a:first").append("<b class='collapse-sign'>" + opts.closedSign + "</b>");
+                /**
+                 * add the multilevel sign next to the link
+                 **/
+                $(this).find("a:first").append("<b class='collapse-sign'>" + opts.closedSign + "</b>");
 
-				/**
-				 * avoid jumping to the top of the page when the href is an #
-				 **/
-				if ($(this).find("a:first").attr('href') == "#") {
-					$(this).find("a:first").click(function() {
-						return false;
-					});
-				}
-			}
-		});
+                /**
+                 * avoid jumping to the top of the page when the href is an #
+                 **/
+                if ($(this).find("a:first").attr('href') == "#") {
+                    $(this).find("a:first").click(function() {
+                        return false;
+                    });
+                }
+            }
+        });
 
-		$this.find("li a").on('mousedown', function(e) {
+        //add open sign to all active lists
+        $this.find("li.active").each(function() {
+            $(this).parents("ul")
+            	.parent("li")
+            	.find("a:first")
+            	.attr('aria-expanded', true)
+            	.find("b:first")
+            	.html(opts.openedSign);
+        });
 
-			if ($(this).parent().find("ul").length !== 0) {
+        $this.find("li a").on('mousedown', function(e) {
 
-				if (opts.accordion) {
+            if ($(this).parent().find("ul").length !== 0) {
 
-					/**
-					 * Do nothing when the list is open
-					 **/
-					if ( !$(this).parent().find("ul").is(':visible') ) {
+                if (opts.accordion) {
 
-						parents = $(this).parent().parents("ul");
-						visible = $this.find("ul:visible");
-						visible.each(function(visibleIndex) {
-							var close = true;
-							parents.each(function(parentIndex) {
+                    /**
+                     * Do nothing when the list is open
+                     **/
+                    if (!$(this).parent().find("ul").is(':visible')) {
 
-								if (parents[parentIndex] == visible[visibleIndex]) {
+                        parents = $(this).parent().parents("ul");
+                        visible = $this.find("ul:visible");
+                        visible.each(function(visibleIndex) {
+                            var close = true;
+                            parents.each(function(parentIndex) {
 
-									close = false;
-									return false;
-								}
-							});
-							if ( close ) {
+                                if (parents[parentIndex] == visible[visibleIndex]) {
 
-								if ( $(this).parent().find("ul") != visible[visibleIndex] ) {
+                                    close = false;
+                                    return false;
+                                }
+                            });
+                            if (close) {
 
-									$(visible[visibleIndex]).slideUp(opts.speed+300,opts.animate, function() {
-										$(this).parent("li").removeClass("open").find("b:first").html(opts.closedSign);
-									});
-								}
-							}
-						});
-					}
-				}
-				
-				/**
-				 * Add active class to open element
-				 **/
-				if ( $(this).parent().find("ul:first").is(":visible") && !$(this).parent().find("ul:first").hasClass("active") ) {
+                                if ($(this).parent().find("ul") != visible[visibleIndex]) {
 
-					$(this).parent().find("ul:first").slideUp(opts.speed+100, opts.animate, function() {
-						$(this).parent("li").removeClass("open").find("b:first").delay(opts.speed).html(opts.closedSign);
-					});
-				} else {
-					$(this).parent().find("ul:first").slideDown(opts.speed, opts.animate, function() {
+                                    $(visible[visibleIndex]).slideUp(opts.speed + 300, opts.animate, function() {
+                                        $(this).parent("li")
+                                        	.removeClass("open")
+                                        	.find("a:first")
+                                        	.attr('aria-expanded', false)
+                                        	.find("b:first")
+                                        	.html(opts.closedSign);
+                                    });
+                                }
+                            }
+                        });
+                    }
+                }
 
-						$(this).parent("li").addClass("open").find("b:first").delay(opts.speed).html(opts.openedSign);
+                /**
+                 * Add active class to open element
+                 **/
+                if ($(this).parent().find("ul:first").is(":visible") && !$(this).parent().find("ul:first").hasClass("active")) {
 
-						/*bug fixed: addresses the .mod-main-boxed class bug, when nav exceeds content height*/
-						if (myapp_config.root_.hasClass("mod-main-boxed") ) { 
-							initApp.fixAppHeight(); 
-						}
-					});
-				} 
-			} 
-		});
-	},
+                    $(this).parent().find("ul:first").slideUp(opts.speed + 100, opts.animate, function() {
+                        $(this).parent("li")
+                        	.removeClass("open")
+                        	.find("a:first")
+                        	.attr('aria-expanded', false)
+                        	.find("b:first").delay(opts.speed)
+                        	.html(opts.closedSign);
+                    });
+                } else {
+                    $(this).parent().find("ul:first").slideDown(opts.speed, opts.animate, function() {
 
-	destroy: function() {
-		$this = $(this);
-		console.log("destroy ngmenu");
-	    $this._destroy(); //or this.delete; depends on jQuery version
-	   
+                        $(this).parent("li")
+                        	.addClass("open")
+                        	.find("a:first")
+                        	.attr('aria-expanded', true)
+                        	.find("b:first").delay(opts.speed)
+                        	.html(opts.openedSign);
 
-	    /*$this.element.unbind( this.eventNamespace );
-	    $this.bindings.unbind( this.eventNamespace );
-	    $this.hoverable.removeClass( "hover state" );
-	    $this.focusable.removeClass( "focus state" );*/
-	} 
+                        /*bug fixed: addresses the .mod-main-boxed class bug, when nav exceeds content height*/
+                        if (myapp_config.root_.hasClass("mod-main-boxed")) {
+                            initApp.fixAppHeight();
+                        }
+                    });
+                }
+            }
+        });
+    },
+
+    destroy: function() {
+        $this = $(this);
+        console.log("destroy ngmenu");
+        $this._destroy(); //or this.delete; depends on jQuery version
+
+    }
 });
