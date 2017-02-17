@@ -1,5 +1,5 @@
 $panel-padding: 15px;
-$panel-hdr-font-size: 17px;
+$panel-hdr-font-size: 16px;
 $panel-hdr-height: 50px;
 $panel-btn-size: 16px;
 $panel-hdr-background: #fff;
@@ -17,7 +17,7 @@ $panel-hdr-background: #fff;
 	background-color: $white;
 	border: 1px solid rgba(0,0,0,.125);
 
-	margin-bottom: map-get($grid-gutter-widths, xs);
+	margin-bottom: map-get($grid-gutter-widths, lg);
 	border-color: #e5e6e9 #dfe0e4 #d0d1d5;
 	border-radius: $border-radius;
 
@@ -26,7 +26,7 @@ $panel-hdr-background: #fff;
 		padding: 0 $panel-padding;
 		font-size: $panel-hdr-font-size;
 		min-height: $panel-hdr-height;
-		font-weight: 300;
+		//font-weight: 300;
 
 		display:flex;
 		align-items:center;

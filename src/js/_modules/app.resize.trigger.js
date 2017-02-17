@@ -2,7 +2,6 @@
  * Bind the throttled handler to the resize event.
  * NOTE: Please do not change the order displayed (e.g. 1a, 1b, 2a, 2b...etc)
  **/
-
 $(window).resize(
 
  	$.throttle( myapp_config.throttleDelay, function (e) {
@@ -32,4 +31,3 @@ $(window).resize(
 	 
 	})
 ); 
-

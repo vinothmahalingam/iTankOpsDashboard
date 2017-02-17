@@ -1,4 +1,3 @@
-
 /**
  * App Initialize
  * DOC: Initializes the app with intApp();

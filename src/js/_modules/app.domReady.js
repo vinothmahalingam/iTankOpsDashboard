@@ -1,6 +1,7 @@
 /**
  * DOCUMENT LOADED EVENT
- * Description: Fire when DOM is ready
+ * DOC: Fire when DOM is ready
+ * Do not change order a, b, c, d...
  **/
 jQuery(document).ready(function() {
 

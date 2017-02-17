@@ -32,14 +32,15 @@ ul.list-verticle {
 		margin:0;
 		padding:0;
 		list-style: none;
-		display: none;
+		//display: none;
 		position: absolute;
 		top: -1px;
 		left: 95%;
-		//min-width: 150px;
 		background:$white;
 		border: 1px solid $dropdown-border-color;
 		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+		visibility: hidden;
 
 		.dropdown-item {
 			padding-top: $spacer * 0.2 !important;
@@ -54,7 +55,9 @@ ul.list-verticle {
 
 	&:hover {
 		.dropdown-item-menu {
-			display: block;
+			//display: block;
+			animation: .3s delayed;
+			animation-fill-mode: forwards;
 		}
 	}
 }

@@ -1,8 +1,6 @@
 /**
- * Bind the throttled handler to the scroll event.
- * NOTE: Please do not change the order displayed (e.g. 1a, 1b, 2a, 2b...etc)
+ * Bind the throttled handler to the scroll event
  **/
-
 $(window).scroll(
 
  	$.throttle( myapp_config.throttleDelay, function (e) {
@@ -21,4 +19,7 @@ $(window).scroll(
 
 );
 
+/**
+ * Initiate scroll events
+ **/
 $(window).on('scroll', initApp.windowScrollEvents);

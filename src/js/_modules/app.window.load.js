@@ -1,7 +1,7 @@
 /**
- * window load function
+ * Window load function
+ * DOC: window focus blur detection
  **/
- 
 $(window).on("blur focus", function(e) {
     var prevType = $(this).data("prevType");
     /**

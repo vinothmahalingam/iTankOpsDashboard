@@ -1,5 +1,5 @@
 // fade
-@-webkit-keyframes seconds {
+@keyframes seconds {
   0% {
     opacity: 1;
   }
@@ -7,12 +7,14 @@
     opacity: 0;
   }
 }
-@keyframes seconds {
-  0% {
-    opacity: 1;
+
+//delayed entry
+@keyframes delayed {
+  99% {
+    visibility: hidden;
   }
   100% {
-    opacity: 0;
+    visibility: visible;
   }
 }
 

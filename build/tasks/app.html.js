@@ -4,7 +4,8 @@ var gulp = require('gulp'),
     hb = require('gulp-hb'),
     rename = require('gulp-rename'),
     connect = require('gulp-connect'),
-    prettify = require('gulp-html-prettify'),
+    //prettify = require('gulp-html-prettify'),
+    htmlcomb = require('gulp-htmlcomb'),
     config = require('../config');
 
 gulp.task('compile-html', function () {
@@ -24,6 +25,7 @@ gulp.task('compile-html', function () {
     .pipe(rename({dirname: ''}))
     /* write html files */
     //.pipe(prettify())
+    .pipe(htmlcomb())
     .pipe(gulp.dest(config.paths.path_dist))
     /* refresh server once complete */
     .pipe(connect.reload());

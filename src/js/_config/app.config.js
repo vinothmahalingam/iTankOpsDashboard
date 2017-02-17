@@ -82,6 +82,3 @@ var myapp_config = {
      */
     storeLocally: true
 };
-/*
-   END APP.CONFIG
-*/
