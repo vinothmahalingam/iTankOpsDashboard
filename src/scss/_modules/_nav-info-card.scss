@@ -8,9 +8,7 @@
 	color:$white;
 	overflow: hidden;
 
-	@if $enable-animation != false {
-		@include transition(0.4s,ease-in-out); 
-	}
+	@include transition(0.4s,ease-in-out); 
 
 	img.cover {
 		opacity: 0.5;
@@ -57,12 +55,10 @@
 @include media-breakpoint-up(xl) {
 	#info-card {
 
-		@if $enable-animation != false {
-			&:hover {
-				padding-top: rem($header-height - 18);
-				@include transition(0.10s,ease-in-out); 
-				will-change: opacity;
-			}
+		&:hover {
+			padding-top: rem($header-height - 18);
+			@include transition(0.10s,ease-in-out); 
+			will-change: opacity;
 		}
 
 		&:hover {
@@ -70,9 +66,7 @@
 				opacity: 0.7;
 				@include backface-visibility;
 			}
-			
 		}
-
 	}
 }
 

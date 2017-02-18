@@ -7,20 +7,28 @@
 	overflow: hidden; 
 	text-align: center;
 
-	@extend %general-animation;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-/*	@extend %flexbox;
-	@include align-items(center);
-	@include justify-content(center);*/
+	@extend %general-animation;
 
 	img {
 		width: rem($header-logo-width);
 		height: rem($header-logo-height);
 		//margin-top: rem($header-logo-margin-top);
 		//margin-right: rem($header-logo-margin-right);
+		transition: all 0.2s ease;
 	}
+
 	>.minify-logo {
 		display: none;
+	}
+
+	&:active {
+		img {
+			@include scale(0.95);
+		}
 	}
 
 }

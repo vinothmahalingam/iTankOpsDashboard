@@ -1,21 +1,36 @@
 <div class="btn-group pt-3 pr-3 pb-3 pl-3 d-flex flex-row" data-toggle="buttons">
-	<label class="btn btn-default active mb-0 flex-1 fw-500">
+	<!--<label class="btn btn-default active mb-0 flex-1 fw-500">
 		<input type="radio" name="options" id="online" checked=""> Online
 	</label>
 	<label class="btn btn-default mb-0 flex-1 fw-500">
 		<input type="radio" name="options" id="invisible"> Invisible
-	</label>
+	</label>-->
+	<div class="d-flex flex-row align-items-center">
+		<img src="img/avatar-sunny.png" class="rounded-circle mr-3" alt="Sunny Lantern">
+		<div class="d-inline">
+			<div class="mb-0 mt-2 fw-400 font-md">
+				Dr. Sunny Lantern
+			</div>
+			<a href="#" class="font-xs">View profile</a>
+		</div>
+	</div>
+	
+
 </div>
-<div class="dropdown-divider m-0"></div>
+<div class="dropdown-menu-title m-0">Account</div>
+<a href="layout-options.html" class="dropdown-item">Theme & Layout Settings</a>
 <div class="dropdown-item">
-	Change language
+	Change Language
 	<ul class="dropdown-item-menu pull-left">
-		<li><a href="#" class="dropdown-item fw-n">Français</a></li>
+		<li><a href="#" class="dropdown-item">Français</a></li>
 		<li><a href="#" class="dropdown-item active">English (US)</a></li>
-		<li><a href="#" class="dropdown-item fw-n">Español</a></li>
-		<li><a href="#" class="dropdown-item fw-n">Русский язык</a></li>
-		<li><a href="#" class="dropdown-item fw-n">日本語</a></li>
+		<li><a href="#" class="dropdown-item">Español</a></li>
+		<li><a href="#" class="dropdown-item">Русский язык</a></li>
+		<li><a href="#" class="dropdown-item">日本語</a></li>
 	</ul>
 </div>
-<a class="dropdown-item" href="#" data-action="app-fullscreen">App Fullscreen</a>
-<a class="dropdown-item" href="login.html">Logout <span class="float-right fw-n">@sunnylantern</span></a>
+<div class="dropdown-menu-title m-0">Shortcuts</div>
+<a href="#" class="dropdown-item" data-action="app-fullscreen">App Fullscreen</a>
+<a href="#" class="dropdown-item" data-action="app-reset">Reset Layout</a>
+<div class="dropdown-divider m-0"></div>
+<a class="dropdown-item fw-500" href="login.html">Logout <span class="float-right fw-n">@sunnylantern</span></a>

@@ -104,39 +104,28 @@ RESULT:
 }
 
 %general-animation {
-     @if $enable-animation != false {
-       transition: $nav-hide-animate;
-    }        
+  transition: $nav-hide-animate;      
 }
 
 %common-animation-slow {
-    @if $enable-animation != false {
-        @include transition(0.3s,ease-in-out);
-    }
+  @include transition(0.3s,ease-in-out);
+
 }
 
 %common-animation {
-    @if $enable-animation != false {
-        @include transition(0.2s,ease-in-out);
-    }
+  @include transition(0.2s,ease-in-out);
 }
 
 %common-animation-easeout {
-    @if $enable-animation != false {
-        @include transition(0.4s,ease-out);
-    }
+  @include transition(0.4s,ease-out);
 }
 
 %common-animation-opacity {
-    @if $enable-animation != false {
-      transition: opacity 0.5s ease-in-out;
-    }
+  transition: opacity 0.5s ease-in-out;
 }
 
 %common-animation-opacity-faster {
-    @if $enable-animation != false {
-      transition: opacity 0.1s ease-in-out;
-    }
+  transition: opacity 0.1s ease-in-out;
 }
 
 %stop-animation {

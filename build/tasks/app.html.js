@@ -25,7 +25,7 @@ gulp.task('compile-html', function () {
     .pipe(rename({dirname: ''}))
     /* write html files */
     //.pipe(prettify())
-    .pipe(htmlcomb())
+    //.pipe(htmlcomb()) //careful, this removed the theme colors last time for some reason from theme settings panel.
     .pipe(gulp.dest(config.paths.path_dist))
     /* refresh server once complete */
     .pipe(connect.reload());

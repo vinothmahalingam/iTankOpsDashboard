@@ -164,11 +164,8 @@ $grid-breakpoints: (
 			position: fixed;
 			right: 0;
 			top: 0;
-
-		    @if $enable-animation != false {
-		        transition: $nav-hide-animate;
-		    }	    
-
+		    
+		    transition: $nav-hide-animate;
 		}
 
 		#banner,

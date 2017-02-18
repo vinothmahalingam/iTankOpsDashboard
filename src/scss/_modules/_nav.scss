@@ -442,13 +442,12 @@ $nav-icon-margin-right:								9px !default;
 
 }
 
-@if $enable-animation != false {
-	.ngmenu a,
-	.ngmenu a > .fa,
-	.ngmenu a > .#{$cust-icon-prefix} {
-		@include transition(0.3s,ease-out);
-	}
+.ngmenu a,
+.ngmenu a > .fa,
+.ngmenu a > .#{$cust-icon-prefix} {
+	@include transition(0.3s,ease-out);
 }
+
 
 @include media-breakpoint-up(xl) {
 	
