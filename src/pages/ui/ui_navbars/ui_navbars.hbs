@@ -1,0 +1,176 @@
+{{#> layouts/main title="Navbars" pagename="ui_navbars" heading="Navbars" pagedescription="The navbar is a wrapper that positions branding, navigation, and other elements in a concise header. It’s easily extensible and, thanks to our Collapse plugin, can easily integrate responsive behaviors."}}
+
+{{#*inline "head-block"}}{{/inline}}
+
+{{#*inline "content-block"}}
+
+<div class="row">	
+	
+	<div class="col-12">
+		
+		<div class="card p-3 mrg-b-gutter d-block">
+
+			<nav class="navbar navbar-toggleable-md navbar-light bg-faded mb-3">
+
+			  <button class="navbar-toggler navbar-toggler-right bg-faded" type="button" 
+			  	data-toggle="collapse" 
+			  	data-target="#navbarSupportedContent" 
+			  	aria-controls="navbarSupportedContent" 
+			  	aria-expanded="false" 
+			  	aria-label="Toggle navigation">
+
+			    <i class="icon icon-menu"></i>
+
+			  </button>
+
+			  <a class="navbar-brand" href="#"><i class="icon icon-globe"></i> Brand</a>
+
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-auto font-lg">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="#">Active <span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+			          Dropdown
+			        </a>
+			        <div class="dropdown-menu font-lg" aria-labelledby="navbarDropdownMenuLink">
+			          <a class="dropdown-item" href="#">Action</a>
+			          <a class="dropdown-item" href="#">Another action</a>
+			          <a class="dropdown-item" href="#">Something else here</a>
+			        </div>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link disabled" href="#">Disabled</a>
+			      </li>
+			    </ul>
+			    <form class="form-inline my-lg-0">
+			      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+			      <button class="btn btn-default my-sm-0" type="submit">Search</button>
+			    </form>
+			  </div>
+			</nav>
+
+			<div class="row">
+
+				<div class="col-12">
+					<h3 class="mt-2">
+						How it works
+						<small>
+							Here’s what you need to know before getting started with the navbar:
+						</small>
+					</h3>
+					<ul class="list-spaced">
+					  <li>Navbars require a wrapping <code>.navbar</code> with <code>.navbar-toggleable-*</code> for responsive collapsing and <a href="#color-schemes">color scheme</a> classes.</li>
+					  <li>Navbars and their contents are fluid by default. Use <a href="#containers">optional containers</a> to limit their horizontal width.</li>
+					  <li>Navbars and their contents are built with flexbox, providing easy alignment options via utility classes.</li>
+					  <li>Navbars are responsive by default, but you can easily modify them to change that. Responsive behavior depends on our Collapse JavaScript plugin.</li>
+					  <li>Ensure accessibility by using a <code>&lt;nav&gt;</code> element or, if using a more generic element such as a <code class="highlighter-rouge">&lt;div&gt;</code>, add a <code>role="navigation"</code> to every navbar to explicitly identify it as a landmark region for users of assistive technologies.</li>
+					</ul>
+
+					<h3 class="mb-3 mt-1">
+						Supported content
+						<small>
+							Navbars come with built-in support for a handful of sub-components. Choose from the following as needed:
+						</small>
+					</h3>
+					<ul class="list-spaced mb-0">
+					  <li><code>.navbar-brand</code> for your company, product, or project name.</li>
+					  <li><code>.navbar-nav</code> for a full-height and lightweight navigation (including support for dropdowns).</li>
+					  <li><code>.navbar-toggler</code> for use with our collapse plugin and other <a href="#responsive-behaviors">navigation toggling</a> behaviors.</li>
+					  <li><cod>.form-inline</code> for any form controls and actions.</li>
+					  <li><code>.navbar-text</code> for adding vertically centered strings of text.</li>
+					  <li><code>.collapse.navbar-collapse</code> for grouping and hiding navbar contents by a parent breakpoint.</li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="card p-3 mrg-b-gutter d-block">
+
+			<div class="card h-100">
+
+				<div class="pos-f-t">
+				  <div class="collapse" id="navbarToggleExternalContent">
+				    <div class="bg-faded p-4">
+				      <h4>Collapsed content</h4>
+				      <span class="text-muted">Toggleable via the navbar brand.</span>
+				    </div>
+				  </div>
+				  <nav class="navbar navbar-light bg-faded">
+				    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+				      <i class="icon icon-menu"></i>
+				    </button>
+				  </nav>
+				</div>
+
+				<div class="p-3 flex-1">
+					<h3>
+						External content (w/ fixed position top)
+						<small>Sometimes you want to use the collapse plugin to trigger hidden content elsewhere on the page. Plugin works on the id and data-target matching, that’s easily done!</small>
+					</h3>
+				</div>
+
+				<nav class="navbar pos-f-b navbar-light bg-faded">
+				 <h3 class="navbar-brand mb-0">Fixed bottom</h3>
+				</nav>
+				
+			</div>
+			
+		</div>
+
+		<div class="card p-3 mrg-b-gutter d-block">
+
+			<h3>
+				Brand
+				<small>
+					The <code>.navbar-brand</code> can be applied to most elements, but an anchor works best as some elements might require utility classes or custom styles.
+				</small>
+			</h3>
+
+			<div class="row">
+				<div class="col col-xl-6">
+					<!-- As a link -->
+					<nav class="navbar navbar-light bg-primary-50 mt-2">
+					  <a class="navbar-brand" href="#">Link</a>
+					</nav>
+					
+					<!-- As a heading -->
+					<nav class="navbar navbar-light bg-primary-50 mt-3">
+					  <h3 class="navbar-brand mb-0">Heading</h3>
+					</nav>
+				</div>
+				<div class="col col-xl-6">
+					<!-- Just an image -->
+					<nav class="navbar navbar-light bg-success-50 mt-2">
+					  <a class="navbar-brand" href="#">
+					   <img src="img/logo-minify.png" alt="NextGen Logo" class="footer-logo rounded-circle bg-warning" width="35"  height="33" alt="logo-brand"> 
+					  </a>
+					  <form class="form-inline">
+					    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+					    <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+					  </form>
+					</nav>
+					<!-- Image and text -->
+					<nav class="navbar navbar-inverse bg-fusion-200 mt-3">
+					  <h3 class="navbar-brand mb-0">
+					    <img src="img/logo-minify.png" alt="NextGen Logo" class="footer-logo rounded-circle bg-primary" width="35"  height="33" alt="logo-brand-2">  
+					    NextGen
+					  </h3>
+					</nav>
+				</div>
+			</div>
+
+		</div>
+
+	</div>	
+
+</div>
+
+{{/inline}}
+
+{{#*inline "scripts-block"}}{{/inline}}
+
+{{/layouts/main}}

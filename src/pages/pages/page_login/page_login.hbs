@@ -1,0 +1,65 @@
+{{#> layouts/auth title="Login" pagename="page_login"}}
+
+{{#*inline "head-block"}}
+<link rel="stylesheet" media="screen, print" href="css/page_login.css">
+{{/inline}}
+
+{{#*inline "content-block"}}
+		<div class="blankpage-form-field">
+
+			<div class="text-center">
+				<img src="img/logo.png" class="blankpage-logo" alt="NextGen Logo">
+			</div>
+
+			<div class="card container">
+			
+				<form action="introduction.html">
+
+					<div class="form-group my-app-forms">
+						<label for="username">Username</label>
+						<input id="username" type="email" class="form-control" value="drsunny@nextgen.com">
+					</div>
+
+					<span class="help-block">Your unique username to app</span>
+
+					<div class="form-group my-app-forms">
+						<label for="password">Password</label>
+						<input id="password" type="password" class="form-control" value="password123">
+					</div>
+
+					<span class="help-block">Your strong password</span>
+
+					<div class="form-group text-left">
+						<div class="v-checkbox">
+				        	<input type="checkbox" id="anId2">
+				       		<label for="anId2"><span class="chk-span"></span> Remember me for the next 30 days</label>
+				    	</div>
+					</div>
+				
+					<button type="submit" class="btn btn-block btn-primary blankpage-btn">Cloud Login</button>
+					
+				</form>
+			</div>
+
+			<div class="blankpage-footer text-center">
+				<a href="#"><strong>Recover Password</strong></a> | <a href="#"><strong>Register Account</strong></a>
+			</div>
+
+		</div>
+
+		<div class="login-footer p-2">
+			<div class="row">
+				<div class="col col-sm-12 text-center">
+					
+					<i><strong>System Message:</strong> You were logged out from 198.164.246.1 on Saturday, March, 2017 at 10.56AM</i> 
+				</div>
+			</div>
+		</div>
+
+		<video poster="img/backgrounds/clouds.png" id="bgvid" playsinline autoplay muted loop>
+			<source src="video/cc.webm" type="video/webm">
+			<source src="video/cc.mp4" type="video/mp4">
+		</video>
+{{/inline}}
+
+{{/layouts/auth}}
