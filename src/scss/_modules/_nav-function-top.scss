@@ -156,11 +156,15 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 								display: block !important;
 								margin: 0 auto 4px !important;
 
-								/* yes we do need the !importants here :( */;
+								// yes we do need the '!importants' here :(
 							}
 
-							& + .ngmenu-sub-one {
+							& + ul {
 								padding:0;
+
+								ul {
+									padding:0;
+								}
 							}
 
 						}
@@ -175,19 +179,10 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 	    					box-shadow:none;
 						}
 
-						b.collapse-sign {
-						    float: none;
-						    display: inline-block;
-						    margin-left: 0;
-						    margin-right: 10px;
-						}
-
 						ul {
 							display: none !important;
 							width: rem($nav-width - 35); 
 							position: absolute;
-							-moz-box-shadow: 0 2px 3px rgba(0,0,0,0.15);
-							-webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.15);
 							box-shadow: 0 2px 3px rgba(0,0,0,0.15);
 
 							li {
@@ -196,12 +191,12 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 								a {
 									padding: 6px 10px !important;
 									width: 100%;
-									//font-size: 12px;
 									max-height: none;
 									box-shadow: none;
 
 									.ngmenu-link-text {
 										display: block;
+
 										> .dl-ref {
 											margin-left:0;
 											margin-right:5px;
@@ -227,9 +222,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 											left:auto;
 										}
 									}
-
 								}
-
 							}
 						}
 					}
@@ -238,20 +231,22 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 						&:hover {
 							> a {
 								background: $nav-function-top-menu-item-bg;
-								&+ul.ngmenu-sub-one {
+								& + ul {
 									display:block !important;
-									background:$nav-function-top-menu-item-bg;
+									background: $nav-function-top-menu-item-bg;
+
+									box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 
 									a {
 										.collapse-sign {
-											position: absolute;
-											top: 20%;
-											right: 5px;
+											//position: absolute;
+											//top: 20%;
+											//right: 5px;
 											@include transform(rotate(-90deg))
 
-											em {
-												font-size: 120%;
-											}
+											//em {
+												//font-size: 120%;
+											//}
 										}
 									}
 
@@ -280,6 +275,8 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 							height: $nav-top-height;
 							max-height: $nav-top-height;
 
+							display: block; /*override flex*/
+
 							>.#{$cust-icon-prefix},
 							>.fa {
 								font-size: 20px;
@@ -300,6 +297,8 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 								line-height: normal;
 								font-size: rem(11px);
 								vertical-align: text-top;
+
+								display: inline-block; /*override inline-flex*/
 							}
 
 							>.badge,
@@ -312,15 +311,10 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 							}
 						}
 
-						> ul.ngmenu-sub-one {
+						> ul {
 
 							padding:10px 0;
 							height: auto !important; //counters the click issue
-
-							>.#{$cust-icon-prefix},
-							>.fa {
-
-							}
 
 						}
 
@@ -376,7 +370,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 				#primary-nav {
 					 
-					ul.ngmenu {
+					.ngmenu {
 
 						> li{
 
@@ -420,7 +414,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 						> li:nth-last-child(3) {
 							&:hover {
 								>a {
-									&+ul.ngmenu-sub-one {
+									& + ul {
 
 										right:0;
 

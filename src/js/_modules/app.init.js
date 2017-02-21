@@ -611,6 +611,9 @@ var initApp = (function(app) {
 		/**
 		 * Mobile menu action for screen tap or click to close menu (-)
 		 **/
+
+		//$("<div id='mobile-backdrop' class='modal-backdrop fade'></div>").appendTo(document.body);
+
 		$(document)
 			.on('touchend mousedown', '.mobile-nav-on #content', function(e) {
 				myapp_config.root_.removeClass("mobile-nav-on");

@@ -8,7 +8,7 @@
 		@extend %pattern-0;
 	}
 
-	.mod-color-blind #left-panel #primary-nav .ngmenu > li.active > a + .ngmenu-sub-one > li.active > a,
+	.mod-color-blind #left-panel #primary-nav .ngmenu > li.active > a + ul > li.active > a,
 	.pattern-1 {
 		@extend %pattern-1;
 	}

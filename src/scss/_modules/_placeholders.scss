@@ -197,7 +197,7 @@ RESULT:
   text-align: center;
   font-size: rem(8px);
   cursor: pointer;
-  top: rem($nav-padding-top - 3.2);
+  //top: rem($nav-padding-top - 3.2);
   right: auto;
   left: $nav-badge-left-px;
   @include box-shadow(0 0 0 1px $nav-background);

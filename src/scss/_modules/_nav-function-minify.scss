@@ -52,11 +52,9 @@
 					margin:0;
 
 					li {
-						a {
-							.ngmenu-link-text {
-								.dl-ref {
-									display:none !important;
-								}
+						ul {
+							.dl-ref {
+								display:none !important;
 							}
 						}
 					}
@@ -66,7 +64,12 @@
 						> a {
 
 							text-align: center;
-							padding-right: $nav-padding-left;
+							//padding-right: $nav-padding-left;
+
+							padding: 0;
+
+							justify-content: center;
+							align-items: center;
 
 							>.fa,
 							>.#{$cust-icon-prefix} {
@@ -102,7 +105,8 @@
 								display: none !important;
 							}
 
-							& + ul.ngmenu-sub-one {
+							// sub 1
+							& + ul {
 								position: absolute;
 								width: rem($nav-minify-sub-width);
 								left: rem($nav-minify-width);
@@ -119,11 +123,11 @@
 											display: inline-block !important;
 										}
 
-
-										& + ul.ngmenu-sub-two {
+										//sub 2
+										& + ul {
 											> li {
 												> a {
-													padding-left: rem($nav-minify-sub-width / 4.5);
+													padding-left: rem($nav-minify-sub-width / 8);
 												}
 											}
 										}
@@ -140,7 +144,7 @@
 
 						}
 
-						& ul.ngmenu-sub-one {
+						& > ul {
 							display: none !important;
 						}
 					}
@@ -167,7 +171,7 @@
 
 						}
 
-						> ul.ngmenu-sub-one {
+						> ul {
 							display: block !important;
 						}
 					} 

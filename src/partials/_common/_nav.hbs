@@ -4,7 +4,7 @@
 			<i class="icon icon-globe"></i>
 			<span class="ngmenu-link-text">NextGen Intel</span> 
 		</a>
-		<ul class="ngmenu-sub-one">
+		<ul>
 			<li {{#is pagename "===" "intel_introduction"}}class="active"{{/is}}>
 				<a href="intel_introduction.html"> 
 					<span class="ngmenu-link-text"> Introduction</span> 
@@ -12,7 +12,7 @@
 			</li>
 			<li {{#is pagename "===" "intel_build_notes"}}class="active"{{/is}}>
 				<a href="intel_build_notes.html"> 
-					<span class="ngmenu-link-text"> Build Notes <i>v{{> _data/version-number}}</i></span> 
+					<span class="ngmenu-link-text"> Build Notes &nbsp; <i>v{{> _data/version-number}}</i></span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "intel_colors"}}class="active"{{/is}}>
@@ -31,7 +31,7 @@
 						Theme Settings
 					</span> 
 				</a>
-				<ul class="ngmenu-sub-two">
+				<ul>
 					<li {{#is pagename "===" "intel_how_it_works"}}class="active"{{/is}}>
 						<a href="intel_how_it_works.html"> 
 							<span class="ngmenu-link-text">
@@ -67,27 +67,37 @@
 	<li {{#is pagename "in" "info_app_flavors,info_app_licensing,info_app_package,info_docs"}}class="active"{{/is}}>
 		<a href="#" title="Package Info"> 
 			<i class="icon icon-tag"></i>
-			<span class="ngmenu-link-text">Package Info</span> 
+			<span class="ngmenu-link-text">
+				Package Info
+			</span> 
 		</a>						
-		<ul class="ngmenu-sub-one">
+		<ul>
 			<li {{#is pagename "===" "info_docs"}}class="active"{{/is}}>
 				<a href="documentation-and-faq.html"> 
-					<span class="ngmenu-link-text"> Documentation & FAQ</span> 
+					<span class="ngmenu-link-text">
+						Documentation
+					</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "info_app_package"}}class="active"{{/is}}>
 				<a href="info_package.html"> 
-					<span class="ngmenu-link-text"> Downloaded Package</span> 
+					<span class="ngmenu-link-text">
+						Package Files
+					</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "info_app_licensing"}}class="active"{{/is}}>
 				<a href="info_app_licensing.html"> 
-					<span class="ngmenu-link-text"> App & Plugin Licensing</span> 
+					<span class="ngmenu-link-text">
+						Product Licensing
+					</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "info_app_flavors"}}class="active"{{/is}}>
 				<a href="info_app_flavors.html"> 
-					<span class="ngmenu-link-text"> Application Flavors</span> 
+					<span class="ngmenu-link-text">
+						Different Flavors
+					</span> 
 				</a>
 			</li>
 
@@ -103,15 +113,16 @@
 			<i class="icon icon-fire"></i>
 			<span class="ngmenu-link-text">UI Components</span> 
 		</a>
-		<!-- Dropdown level one -->
-		<ul class="ngmenu-sub-one">
+		<ul>
 			<li {{#is pagename "===" "ui_breadcrumbs"}}class="active"{{/is}}>
 				<a href="ui_breadcrumbs.html"> 
+					<i class="icon icon-fire"></i>
 					<span class="ngmenu-link-text">Breadcrumbs</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "ui_buttons"}}class="active"{{/is}}>
 				<a href="ui_buttons.html"> 
+					<span class="dl-ref bg-warning-800"><i class="icon icon-fire"></i></span>
 					<span class="ngmenu-link-text">Buttons</span> 
 				</a>
 			</li>
@@ -162,24 +173,26 @@
 			</li>
 			<li {{#is pagename "in" "ui_icons_fontawesome,ui_icons_ng"}}class="active"{{/is}}>
 				<a href="#"> 
+					<span class="dl-ref bg-warning-800">
+						<i class="icon icon-fire"></i>
+					</span>
 					<span class="ngmenu-link-text">
-						<span class="dl-ref bg-warning-800"><i class="icon icon-fire"></i></span>	
 						Icons
 					</span> 
 				</a>
-				<ul class="ngmenu-sub-two">
+				<ul>
 					<li {{#is pagename "===" "ui_icons_fontawesome"}}class="active"{{/is}}>
 						<a href="ui_icons_fontawesome.html"> 
+							<span class="dl-ref bg-info-200">&nbsp;70kb&nbsp;</span>
 							<span class="ngmenu-link-text">
-								<span class="dl-ref bg-info-200">&nbsp;70kb&nbsp;</span> 
 								Fontawesome Pro
 							</span>
 						</a>
 					</li>
 					<li {{#is pagename "===" "ui_icons_ng"}}class="active"{{/is}}>
 						<a href="ui_icons_ng.html"> 
+							<span class="dl-ref bg-info-200">&nbsp;20kb&nbsp;</span> 
 							<span class="ngmenu-link-text">
-								<span class="dl-ref bg-info-200">&nbsp;20kb&nbsp;</span> 
 								NextGen
 							</span>
 						</a>
@@ -194,27 +207,25 @@
 						Menu child
 					</span> 
 				</a>
-				<!-- Dropdown level two -->
-				<ul class="ngmenu-sub-two">
+				<ul>
 					<li>
 						<a href="#"> 
+							<span class="dl-ref bg-warning-200">L2</span> 
 							<span class="ngmenu-link-text">
-								<span class="dl-ref bg-warning-200">L2</span> 
 								Sublevel
 							</span> 
 						</a>
 					</li>
 					<li>
 						<a href="#"> 
+							<i class="icon icon-note"></i>
 							<span class="ngmenu-link-text">
-								<i class="icon icon-note"></i>
 								Sublevel with icon
 							</span> 
 						</a>
 					</li>
 				</ul>
 			</li>
-
 		</ul>
 	</li>
 	<li {{#is pagename "in" "form_bs_example,form_material,form_material_example"}}class="active"{{/is}}>
@@ -222,8 +233,7 @@
 			<i class="icon icon-note"></i>
 			<span class="ngmenu-link-text">Form Stuff</span>
 		</a>
-		<!-- Dropdown level one -->
-		<ul class="ngmenu-sub-one">
+		<ul>
 			<li {{#is pagename "===" "form_material"}}class="active"{{/is}}>
 				<a href="form_material.html"> 
 					<span class="ngmenu-link-text">Material</span> 
@@ -251,8 +261,7 @@
 			<i class="icon icon-my-apps"></i>
 			<span class="ngmenu-link-text">Core Plugins</span> 
 		</a>
-		<!-- Dropdown level one -->
-		<ul class="ngmenu-sub-one">
+		<ul>
 			<li {{#is pagename "===" "plugin_panels"}}class="active"{{/is}}>
 				<a href="plugin_panels.html"> 
 					<span class="ngmenu-link-text">
@@ -308,8 +317,7 @@
 			<i class="icon icon-plus"></i>
 			<span class="ngmenu-link-text">More Pages</span> 
 		</a>
-		<!-- Dropdown level one -->
-		<ul class="ngmenu-sub-one">
+		<ul>
 			<li {{#is pagename "===" "blank"}}class="active"{{/is}}>
 				<a href="blank.html"> 
 					<span class="ngmenu-link-text">Blank</span>
@@ -319,7 +327,7 @@
 				<a href="#" title="Authentication Pages"> 
 					<span class="ngmenu-link-text">Auth. Pages</span>
 				</a>
-				<ul class="ngmenu-sub-two">
+				<ul>
 					<li {{#is pagename "===" "forget"}}class="active"{{/is}}>
 						<a href="page_forget.html"> 
 							<span class="ngmenu-link-text">Forget Password</span>
@@ -346,7 +354,7 @@
 				<a href="#" title="Error Pages"> 
 					<span class="ngmenu-link-text">Error Pages</span>
 				</a>
-				<ul class="ngmenu-sub-two">
+				<ul>
 					<li {{#is pagename "===" "page_error_announced"}}class="active"{{/is}}>
 						<a href="page_error_announced.html"> 
 							<span class="ngmenu-link-text">Announced Error</span>

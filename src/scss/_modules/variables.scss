@@ -348,19 +348,19 @@ $nav-width:											240px !default;
 
 /* nav parent level-0 */
 $nav-link-color: 									lighten($nav-base-color, 50%) !default;
-$nav-font-link-size: 								$base-font-size !default;
-$nav-padding-top:									9.2px !default;
+$nav-font-link-size: 								$base-font-size + 1 !default;
+$nav-collapse-sign-font-size:						$nav-font-link-size + 3 !default;	
 $nav-padding-left:									20px !default;
-$nav-padding-right:									25px !default;
-$nav-padding-bottom:								10px !default;
+$nav-padding-right:									20px !default;
 
 /* nav icon sizes */
 $nav-font-icon-size:								20px !default; //23px for Fontawesome & 20px for NextGen icons
 $nav-font-icon-size-sub:							19px !default;
 
 /* nav link heights */
-$nav-link-height:									45px !default;
-$nav-sub-link-height:								36px !default;
+$nav-link-height:									44px !default;
+$nav-sub-link-height:								34px !default;
+//$nav-sublink-padding-x:								5px !default; //controls height of sublinks
 
 /* badge default */
 $nav-badge-color: 									#fff !default;
@@ -407,9 +407,8 @@ $nav-badge-left-px:									$nav-padding-left + 15.5px !default;
 $nav-dl-font-size:									10px !default;
 $nav-dl-width:										20px !default;
 $nav-dl-height:										16px !default;
-$nav-dl-border-radius:								$border-radius !default;
-$nav-dl-margin-left:								$nav-dl-width + 15px !default; 							/* will be pulled to left as a negative value */
-$nav-dl-margin-right:								12px !default;
+$nav-dl-margin-right:								15px !default;
+$nav-dl-margin-left:								$nav-dl-width + $nav-dl-margin-right !default; 							/* will be pulled to left as a negative value */
 
 /*   MISC Settings
 ========================================================================== */

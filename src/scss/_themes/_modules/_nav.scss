@@ -80,8 +80,8 @@
 
 				} 
 
-				// Sub nav level 1
-				.ngmenu-sub-one {
+				// SUB NAV LEVEL - 1
+				> ul {
 					background-color: darken($nav-base-color, 11%);
 
 					li {
@@ -148,8 +148,9 @@
 
 						}
 
-						// Sub nav level 2
-						.ngmenu-sub-two {
+						// SUB NAV LEVEL - 2
+
+						> ul {
 							background-color: darken($nav-base-color, 13%);
 
 							li {
@@ -157,7 +158,6 @@
 
 								a {
 									color: lighten(darken($nav-base-color, 11%),55%);
-									padding-left: rem(65px);
 
 
 									&:hover,
@@ -185,9 +185,11 @@
 							}
 						}
 
+						// END: SUB NAV LEVEL - 2
+
 					}
 				} 
-
+				// END: SUB NAV LEVEL - 1
 			}
 
 		} 
