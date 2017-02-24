@@ -21,35 +21,27 @@
 		@extend %common-animation-opacity;
 	}
 
-	> .profile-image {
-		//@include rounded(50%);
+	.profile-image {
 		width: rem($profile-image-width);
 		height: auto;
 		display: inline-block;
 		z-index: 1;
 		position: relative;
+	}	
 
-		&+div {
-			display: inline-block;
-			vertical-align: middle;
-			font-size: rem($nav-font-link-size + $nav-font-link-size/8);
-			font-weight: 400;
-			margin-left: rem($profile-image-width/5);
-			color: inherit;
-			letter-spacing: -0.01rem;
-			line-height: normal;
-			text-shadow: $black 0 1px;
-			z-index: 1;
-			position: relative;
+	.info-card-text {
+		margin-left: rem($profile-image-width/5);
+		color: inherit;
+		text-shadow: $black 0 1px;
+		z-index: 1;
+		position: relative;
+		line-height: normal;
 
-			> span {
-				font-size: rem($nav-font-link-size - 1px);
-				letter-spacing: rem(0.2px);
-				font-weight: 300;
-				display: block;
-			}
+		> span {
+			font-weight: 300;
 		}
 	}
+	
 }
 
 @include media-breakpoint-up(xl) {
@@ -70,3 +62,17 @@
 	}
 }
 
+.info-card-text {
+	font-size: rem($nav-font-link-size + $nav-font-link-size/8);
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: 400;
+	letter-spacing: -0.01rem;
+	line-height: 1.35;
+
+	> span {
+		font-size: rem($nav-font-link-size - 1px);
+		letter-spacing: rem(0.2px);
+		display: block;
+	}
+}

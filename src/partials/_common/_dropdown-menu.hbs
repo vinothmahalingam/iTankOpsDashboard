@@ -6,31 +6,30 @@
 		<input type="radio" name="options" id="invisible"> Invisible
 	</label>-->
 	<div class="d-flex flex-row align-items-center">
-		<img src="img/avatar-sunny.png" class="rounded-circle mr-3" alt="Sunny Lantern">
-		<div class="d-inline">
-			<div class="mb-0 mt-2 fw-400 font-md">
-				Dr. Sunny Lantern
-			</div>
-			<a href="#" class="font-xs">View profile</a>
+		<span class="status status-online mr-3">
+			<img src="img/avatar-sunny.png" class="rounded-circle" alt="Sunny Lantern">
+		</span>
+		<div class="info-card-text">
+			<div data-elipsis="xs">Dr. Sunny Lantern</div>
+			<span><a href="#">View profile</a></span>
 		</div>
 	</div>
-	
-
 </div>
 <div class="dropdown-menu-title m-0">Account</div>
-<a href="layout-options.html" class="dropdown-item">Theme & Layout Settings</a>
-<div class="dropdown-item">
-	Change Language
+<div class="dropdown-divider m-0"></div>
+<div class="dropdown-item d-flex align-items-center">
+	Change Language <i class="text-muted font-xs">&nbsp;(demo only) </i> <i class="icon icon-chevron-right ml-auto"></i>
 	<ul class="dropdown-item-menu pull-left">
-		<li><a href="#" class="dropdown-item">Français</a></li>
-		<li><a href="#" class="dropdown-item active">English (US)</a></li>
-		<li><a href="#" class="dropdown-item">Español</a></li>
-		<li><a href="#" class="dropdown-item">Русский язык</a></li>
-		<li><a href="#" class="dropdown-item">日本語</a></li>
+		<li><a href="#?lang=fr" class="dropdown-item">Français</a></li>
+		<li><a href="#?lang=en" class="dropdown-item active">English (US)</a></li>
+		<li><a href="#?lang=es" class="dropdown-item">Español</a></li>
+		<li><a href="#?lang=ru" class="dropdown-item">Русский язык</a></li>
+		<li><a href="#?lang=ch" class="dropdown-item">日本語</a></li>
 	</ul>
 </div>
 <div class="dropdown-menu-title m-0">Shortcuts</div>
+<div class="dropdown-divider m-0"></div>
 <a href="#" class="dropdown-item" data-action="app-fullscreen">App Fullscreen</a>
 <a href="#" class="dropdown-item" data-action="app-reset">Reset Layout</a>
 <div class="dropdown-divider m-0"></div>
-<a class="dropdown-item fw-500" href="login.html">Logout <span class="float-right fw-n">@sunnylantern</span></a>
+<a class="dropdown-item pt-3 pb-3 fw-500" href="page_login.html">Logout <span class="float-right fw-n">@sunnylantern</span></a>

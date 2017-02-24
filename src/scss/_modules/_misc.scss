@@ -32,7 +32,7 @@ ul.list-verticle {
 	//border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 	background: #f3f6f8;
 	padding: 0.2rem $spacer * 0.8;
-	font-size: 10.5px;
+	font-size: rem($nav-title-font-size);
 	letter-spacing: 1px;
 	font-weight: 500;
 }
@@ -283,4 +283,30 @@ ul.list-verticle {
     	}
     }
 
+}
+
+/* online status */
+.status {
+	position: relative;
+
+	&:before {
+		content: " ";
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		display: block;
+		top: -2px;
+		right: -2px;
+		background: $warning-500;
+		border-radius: 50%;
+		border: 2px solid #fff;
+	}
+
+	&.status-online:before {
+		background: $success-500;
+	}
+
+	&.status-offline:before {
+		background: $danger-500;
+	}
 }

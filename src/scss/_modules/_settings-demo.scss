@@ -314,10 +314,15 @@
 }
 
 // localstorage success fade animation
-.saved {
+.saving {
 	#saving {
 		@extend %spin-loader;
 		display: block !important;
+	}
+
+	[data-action="app-reset"] {
+		opacity: 0.5;
+		cursor: not-allowed !important;
 	}
 }
 

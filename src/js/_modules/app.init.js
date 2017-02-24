@@ -6,8 +6,6 @@ var initApp = (function(app) {
 
 	/**
 	 * Javascript Animation for save settings 
-	 * DOC: Spinning icon that appears whenever you
-	 * access localstorage or change settings
 	 **/
 	app.saveSettings = function () {
 
@@ -16,9 +14,10 @@ var initApp = (function(app) {
 		 **/		
 		if (typeof saveSettings !== 'undefined' && $.isFunction(saveSettings) && myapp_config.storeLocally) {
 
-			myapp_config.root_.addClass("saved").delay(600).queue(function(){
-				$(this).removeClass("saved").dequeue();
-			});
+			/**
+			 * call accessIndicator animation	
+			 **/
+			initApp.accessIndicator();
 
 			/**
 			 * call saveSettings function from myapp_config.root_ (HTML)	
@@ -33,6 +32,34 @@ var initApp = (function(app) {
 		}
 	}
 
+	/**
+	 * Reset settings 
+	 * DOC: removes all classes from root_ then saves
+	 **/
+	app.resetSettings = function () {
+
+		/* remove all classes */
+		myapp_config.root_.removeClass();
+
+		/* save settings if "storeLocally == true" */
+		initApp.saveSettings();
+		
+	}
+
+	/**
+	 * Access Indicator
+	 * DOC: Spinning icon that appears whenever you
+	 * access localstorage or change settings
+	 **/
+	app.accessIndicator = function () {
+
+		myapp_config.root_.addClass("saving").delay(600).queue(function(){
+			$(this).removeClass("saving").dequeue();
+			return true;
+		});
+
+	}
+
 	/*
 	 * usage: initApp.pushSettings("className1 className2")
 	 * DOC: pushSettings will also auto save to localStorage if "storeLocally == true" 
@@ -42,6 +69,7 @@ var initApp = (function(app) {
 
 		/* clear localstorage variable 'themeSettings' */
 		localStorage.setItem("themeSettings", "");
+
 		/* replace classes from <body> with fetched DB string */
 		myapp_config.root_.removeClass().addClass(DB_string);
 
@@ -260,13 +288,6 @@ var initApp = (function(app) {
 				 **/
 	    		$(myapp_config.navAnchor).slimScroll({ destroy: true });
 	    		$(myapp_config.navAnchor).attr('style', '');
-
-	 			/**
-				 * remove DOM object
-				 * dev note: guessing they fixed this now?
-				 **/   		
-	    		//$(myapp_config.navAnchor).find( $(".slimScrollBar") ).remove();
-	    		//$(myapp_config.navAnchor).find( $(".slimScrollRail") ).remove();
 
 				/**
 				 * clear event listners (IE bug)
@@ -528,6 +549,15 @@ var initApp = (function(app) {
 						
 						if (myapp_config.debugState)
 								console.log( "panel collapse removed" );
+
+					break;
+
+					case ( actiontype === "app-reset" ):
+
+						initApp.resetSettings();
+
+						if (myapp_config.debugState)
+								console.log( "settings was reset" );
 
 					break;
 
