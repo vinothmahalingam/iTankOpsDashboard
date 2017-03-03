@@ -1,0 +1,48 @@
+$animateFadeInDown_distance: 5px;
+
+// animateFadeInDown
+@-webkit-keyframes animateFadeInDown {
+  from {
+    -webkit-transform: translate3d(0, $animateFadeInDown_distance, 0);
+    opacity:0;
+  }
+
+  to {
+    -webkit-transform: none;
+    opacity:1;
+  }
+}
+
+@keyframes animateFadeInDown {
+  from {
+    -webkit-transform: translate3d(0, $animateFadeInDown_distance, 0);
+    opacity:0;
+  }
+
+  to {
+    -webkit-transform: none;
+    opacity:1;
+  }
+}
+
+
+// page transitions
+#content {
+
+/*  .page-heading:not(:only-child) {
+    animation: animateFadeInDown 0.3s;
+    -webkit-animation: animateFadeInDown 0.3s;
+  }*/
+
+  > .alert {
+      animation: animateFadeInDown 0.2s;
+      -webkit-animation: animateFadeInDown 0.2s;
+  }
+
+  > .card,
+  > .row {
+    animation: animateFadeInDown 0.7s;
+    -webkit-animation: animateFadeInDown 0.7s;
+  }
+
+}

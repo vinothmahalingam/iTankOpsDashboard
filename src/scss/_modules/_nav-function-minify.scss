@@ -66,15 +66,21 @@
 							text-align: center;
 							//padding-right: $nav-padding-left;
 
-							padding: 0;
+							//padding: 0;
 
 							justify-content: center;
 							align-items: center;
 
 							>.fa,
-							>.#{$cust-icon-prefix} {
+							>.#{$cust-icon-prefix},
+							> img {	
 								font-size: rem($nav-font-icon-size * 1.1);
 								margin: 0;
+							}
+
+							> img {
+								width: $nav-icon-width;
+								height: $nav-icon-width;
 							}
 
 							> .badge {
@@ -95,7 +101,7 @@
 								top: 0;
 							    left: rem($nav-minify-width);
 							    height: 100%;
-							    line-height: rem($nav-link-height);
+							    //line-height: rem($nav-link-height);
 							    width: rem($nav-minify-sub-width);
 							    font-weight:400;
 
@@ -162,7 +168,7 @@
 							overflow: visible;
 
 							>.ngmenu-link-text {
-								display: block;
+								display: flex;
 							}
 
 							>.legitRipple-ripple {

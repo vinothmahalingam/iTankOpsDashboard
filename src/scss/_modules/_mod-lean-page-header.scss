@@ -4,11 +4,15 @@
 
 		.page-header {
 
-			margin-top: 23px;
+			margin-top: 0;
 			font-size:16px;
 			display: inline-block;
 			font-weight: 400;
 			text-transform: capitalize;
+
+			&:not(:only-child) {
+				margin-top: 23px;
+			}
 
 			small {
 

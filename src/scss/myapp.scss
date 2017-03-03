@@ -17,6 +17,7 @@
 @import '_modules/_nav-function-hidden';
 @import '_modules/_nav-function-fixed';
 @import '_modules/_nav-function-minify';
+@import '_modules/_nav-function-hover';
 @import '_modules/_nav-footer';
 @import '_modules/_page-wrapper';
 @import '_modules/_page-heading';
@@ -31,7 +32,6 @@
 ========================================================================== */ 
 /*@import '_modules/_form-switches';*/
 @import '_modules/_translate-3d';
-@import '_modules/_print';
 
 /* #DEMO ELEMS - elements mostly used for demo (can be removed)
 ========================================================================== */ 
@@ -46,7 +46,7 @@
 
 /* #ANIMATION - CSS animations and keyframes
 ========================================================================== */ 
-@import '_modules/_keyframes';
+@import '_modules/_keyframes-*';
 
 /* #MODS - Layout manipulation
 ========================================================================== */ 
@@ -59,6 +59,10 @@
 /* #FONT ICONS - customized icons
 ========================================================================== */ 
 @import '_modules/_font-icons';
+
+/* #PRINT - print related styles
+========================================================================== */ 
+@import '_modules/_print';
 
 /* #OVERRIDE - You can override any of the variables through this file
 ========================================================================== */ 

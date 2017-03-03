@@ -15,8 +15,8 @@
     	letter-spacing: normal !important;
     	font-size: 10pt !important;
     	line-height: 1.7 !important;
-    	text-transform: none;
-    	transition: none;
+    	text-transform: none !important;
+    	transition: none !important;
     }
 
 	a:link { 
@@ -24,9 +24,17 @@
 		text-decoration: underline; 
 		color: #06c; 
 	}
-	h1, h2, h3, h4, h5, h6, strong {
+
+	.page-header {
+		font-size: 14pt !important;
+
+		small {
+			font-size: 12pt !important;
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
 		font-weight: bold !important;
-		font-size: 14pt !important 
 	}
 
 	#left-panel,

@@ -579,6 +579,16 @@ var initApp = (function(app) {
 					break;
 
 					/**
+					 * app print
+					 * starts print priview for browser
+					 **/
+					case ( actiontype === 'app-print' ):
+
+						window.print();
+
+					break;
+
+					/**
 					 * app 'fullscreen' trigger
 					 **/
 					case ( actiontype === 'app-fullscreen' ):
