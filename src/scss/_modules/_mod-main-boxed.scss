@@ -8,8 +8,8 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 		margin: 0 auto;
 		box-shadow: 5px 0 20px 0px rgba(0, 0, 0, 0.1), -5px 0 20px 0px rgba(0, 0, 0, 0.1);
 
-		&.display-settings {
-			[data-class="display-settings"] {
+		&.display-right-panel {
+			[data-class="display-right-panel"] {
 				position: relative;
 				right: 0;
 				top:0;
@@ -17,12 +17,12 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 			}
 		}	
 
-		#settings-demo {
+		#right-panel {
 			position:absolute;
 		}
 
 		&:not(.nav-function-top) {
-			#settings-demo {
+			#right-panel {
 				position:absolute;
 				.list {
 					&#nff {
@@ -65,12 +65,12 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 					width: $mod-main-boxed-width - 2;
 					margin:0 auto;
 
-					[data-class="display-settings"] {
+					[data-class="display-right-panel"] {
 						position:relative;
 						right:0;
 					}
 				}
-				#settings-demo {
+				#right-panel {
 					position: absolute !important;
 				}
 							
@@ -115,8 +115,8 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 			}
 
 			&.header-function-fixed {
-				&.display-settings {
-					[data-class=display-settings] {
+				&.display-right-panel {
+					[data-class=display-right-panel] {
 						top:0;
 					}
 				}

@@ -3,7 +3,7 @@
 
 @include media-breakpoint-up(xl) {
 	#left-panel,
-	#settings-demo  {
+	#right-panel  {
 		@include translate3d(0,0,0);
 	}
 

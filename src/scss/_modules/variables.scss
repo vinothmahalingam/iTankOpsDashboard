@@ -360,14 +360,12 @@ $nav-font-link-size: 								$base-font-size + 1 !default;
 $nav-collapse-sign-font-size:						$nav-font-link-size + 3 !default;	
 $nav-padding-left:									20px !default;
 $nav-padding-right:									20px !default;
+$nav-padding-x:										20px !default;
+$nav-padding-y:										0px !default;
 
 /* nav icon sizes */
 $nav-font-icon-size:								20px !default; //23px for Fontawesome & 20px for NextGen icons
 $nav-font-icon-size-sub:							19px !default;
-
-/* nav link heights */
-//$nav-link-height:									44px !default;
-//$nav-sub-link-height:								34px !default;
 
 /* badge default */
 $nav-badge-color: 									#fff !default;

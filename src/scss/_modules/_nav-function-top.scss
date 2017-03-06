@@ -9,13 +9,13 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 	.nav-function-top {
 
-		&.display-settings {
-			[data-class=display-settings] {
+		&.display-right-panel {
+			[data-class=display-right-panel] {
 				top:rem($nav-top-height);
 				transition: $nav-hide-animate;
 			}
 			&.nav-function-minify {
-				[data-class=display-settings] {
+				[data-class=display-right-panel] {
 					top:rem($nav-top-minify-height);
 				}
 			}
@@ -23,7 +23,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 		&:not(.nav-function-fixed) {
 
-			#settings-demo {
+			#right-panel {
 				position:absolute;
 				
 				.list {
@@ -343,8 +343,8 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 		&.nav-function-minify {
 
-			&.display-settings:not(.mod-main-boxed) {
-				[data-class=display-settings] {
+			&.display-right-panel:not(.mod-main-boxed) {
+				[data-class=display-right-panel] {
 					top:rem($nav-top-minify-height);
 				}
 			}

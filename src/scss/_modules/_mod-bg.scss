@@ -13,9 +13,9 @@ $mod-bg-4-prev: url("#{$baseURL}img/backgrounds/prev-bg-4.png") !default;
 @include media-breakpoint-up(xl) {
 	.mod-main-boxed {
 
-		&.display-settings{
+		&.display-right-panel{
 			
-			#settings-demo {
+			#right-panel {
 				
 				.expanded {
 					display: block;
