@@ -1,0 +1,229 @@
+#settings-wrap {
+
+	height: unquote("calc(100% - 34px)");
+	overflow-x: auto;
+
+	.settings-panel {
+
+		&:first-child {
+			h5 {
+				margin-top:0;
+				padding-top:5px;
+			}
+		}
+
+		h5 {
+			margin:0;
+			font-weight:500;
+			font-size: rem($base-font-size + 1);
+			padding: 15px 15px 5px;
+			box-sizing: content-box;
+			display: block;
+			overflow:hidden;
+			text-decoration: none;
+			margin-top: 5px;
+			color: $fusion-500;
+			text-align: left;
+
+			small {
+				display: inline;
+			}
+		}
+
+		.list {
+			width:100%;
+			font-weight:400;
+			min-height:rem(35px);
+			padding: rem(3px) rem(15px) rem(2px) rem(20px);
+			color:darken($settings-panel-bg, 60%);
+
+			@extend %common-animation;
+
+			&:hover{
+				color:darken($settings-panel-bg, 80%);
+				background:rgba( $white, .7 );
+
+				.onoffswitch {
+					@include scale(1.13);
+				}
+			}
+
+			.onoffswitch,
+			&:hover .onoffswitch {
+				@extend %common-animation;
+			}
+
+			.btn-switch {
+				background: $fusion-300;
+			    padding: rem(2px) rem(8px) rem(1px) rem(22px);
+			    font-size: rem(10px);
+			    line-height: rem(11px);
+			    border-radius: rem(20px);
+			    text-transform: uppercase;
+			    @include text-contrast($fusion-300);
+			    font-weight: 500;
+			    min-width:rem(52px);
+			    height:rem(17px);
+			    margin-top:5%;
+			    position:relative;
+			    overflow: hidden;
+			    float: right;
+			    
+			    @extend %common-animation;
+
+			    &:hover{
+			    	@include scale(1.13);
+			    }
+
+			    &:before {
+			    	content:"OFF";
+			    	position:absolute;
+			    	right:rem(7px);
+			    }
+
+			    &:after{
+					content: " ";
+					text-align: center;
+					@include text-contrast(#828282);
+					font-size: rem(14px);
+				    width: rem(13px);
+				    height: rem(13px);
+				    position: absolute;
+				    background: $white;
+				    padding:1px;
+				    left: 0;
+				    top: 0;
+				    line-height: normal;
+				    margin: 1px;
+					border-radius: 50%;
+					box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
+			    }
+
+			    &.active {
+			    	color:$white;
+			    	background:$color-primary;
+			    	&:before {
+			    		content:"ON";
+			    		left:rem(7px);
+			    		right:auto;
+			    		@include text-contrast($color-primary);
+			    	}
+
+			    	&:after {
+			    		content: " ";
+			    		right:0;
+			    		left:auto;
+			    		background:$white;
+			    		color:$color-primary;
+			    	}
+
+			    }
+
+			    & + .onoffswitch-title {
+			    	margin-top:rem(0.5px);
+			    	font-size:rem(13px);
+			    	display: block;
+
+			    	& + .onoffswitch-title-desc {
+			    		display: block;
+						width: 100%;
+						font-size: 11px;
+						line-height: 10px;
+						color: #989da5;
+						margin-bottom: 8px;
+						text-transform: lowercase;
+			    	}
+			    }
+
+			}
+
+			& + .expanded {
+				@extend %expanded-box;
+				position: relative;
+				padding: 9px 15px 6px;
+				display: none;
+
+				&:before,
+				&:after {
+					content:" ";
+					border-color: transparent;
+					border-bottom-color: $white;
+					border-style: dashed dashed solid;
+					border-width: 0 rem(8.5px) rem(8.5px);
+					position: absolute;
+					right: rem($header-non-btn-width/3);
+					top: -8px;
+					right: 12%;
+					height: 0;
+					width: 0;
+				}
+				&:before {
+					border-bottom-color: $fusion-400;
+					bottom: 1px;
+				}
+
+				> ul {
+					padding: 0;
+					margin: 0;
+					text-align: center;
+					
+					> li {
+						display: inline-block;
+						margin:0;
+						padding:0;
+
+						&:last-child {
+							[data-action="toggle"] {
+								margin-right:0;
+							}
+						}
+					}
+				}
+
+				.list {
+					padding: 0 0 0 7px;
+					min-height: auto;
+					margin-top: 8px;
+
+					.btn-switch {
+						margin-top:3px;
+						@include scale(0.9);
+
+						& + .onoffswitch-title {
+							font-size:12px;
+						}
+					}
+
+					&:hover {
+						background:transparent;
+					}
+				} 
+			}
+
+		}
+	}
+}
+
+
+@include set-settings(display-right-panel);
+@include set-settings(header-function-fixed);
+@include set-settings(nav-function-fixed);
+@include set-settings(nav-function-minify);
+@include set-settings(nav-function-hidden);
+@include set-settings(nav-function-top);
+@include set-settings(nav-function-hover);
+@include set-settings(nav-mobile-push);
+@include set-settings(nav-mobile-no-overlay);
+@include set-settings(nav-mobile-slide-out);
+@include set-settings(mod-main-boxed);
+@include set-settings(mod-fixed-bg);
+@include set-settings(mod-clean-page-bg);
+@include set-settings(mod-pace-custom);
+@include set-settings(mod-bigger-font);
+@include set-settings(mod-high-contrast);
+@include set-settings(mod-color-blind);
+@include set-settings(mod-hide-nav-icons);
+@include set-settings(mod-hide-info-card);
+@include set-settings(mod-lean-page-header);
+@include set-settings(mod-disable-animation);
+@include set-settings(mod-app-rtl);
