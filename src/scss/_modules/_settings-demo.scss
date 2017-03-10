@@ -34,8 +34,13 @@
 			width:100%;
 			font-weight:400;
 			min-height:rem(35px);
-			padding: rem(3px) rem(15px) rem(2px) rem(20px);
+			padding: rem(7px) rem(15px) rem(7px) rem(15px);
 			color:darken($settings-panel-bg, 60%);
+			position: relative;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 
 			@extend %common-animation;
 
@@ -54,86 +59,9 @@
 			}
 
 			.btn-switch {
-				background: $fusion-300;
-			    padding: rem(2px) rem(8px) rem(1px) rem(22px);
-			    font-size: rem(10px);
-			    line-height: rem(11px);
-			    border-radius: rem(20px);
-			    text-transform: uppercase;
-			    @include text-contrast($fusion-300);
-			    font-weight: 500;
-			    min-width:rem(52px);
-			    height:rem(17px);
-			    margin-top:5%;
-			    position:relative;
-			    overflow: hidden;
-			    float: right;
-			    
-			    @extend %common-animation;
-
-			    &:hover{
-			    	@include scale(1.13);
-			    }
-
-			    &:before {
-			    	content:"OFF";
-			    	position:absolute;
-			    	right:rem(7px);
-			    }
-
-			    &:after{
-					content: " ";
-					text-align: center;
-					@include text-contrast(#828282);
-					font-size: rem(14px);
-				    width: rem(13px);
-				    height: rem(13px);
-				    position: absolute;
-				    background: $white;
-				    padding:1px;
-				    left: 0;
-				    top: 0;
-				    line-height: normal;
-				    margin: 1px;
-					border-radius: 50%;
-					box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
-			    }
-
-			    &.active {
-			    	color:$white;
-			    	background:$color-primary;
-			    	&:before {
-			    		content:"ON";
-			    		left:rem(7px);
-			    		right:auto;
-			    		@include text-contrast($color-primary);
-			    	}
-
-			    	&:after {
-			    		content: " ";
-			    		right:0;
-			    		left:auto;
-			    		background:$white;
-			    		color:$color-primary;
-			    	}
-
-			    }
-
-			    & + .onoffswitch-title {
-			    	margin-top:rem(0.5px);
-			    	font-size:rem(13px);
-			    	display: block;
-
-			    	& + .onoffswitch-title-desc {
-			    		display: block;
-						width: 100%;
-						font-size: 11px;
-						line-height: 10px;
-						color: #989da5;
-						margin-bottom: 8px;
-						text-transform: lowercase;
-			    	}
-			    }
+				position: absolute;
+				right: 15px;
+				margin: 0;
 
 			}
 

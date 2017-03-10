@@ -59,7 +59,9 @@
 
 	#opener {
 		position: absolute;
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		width: 40px;
 		height: 40px;
 		background: #2a2e33;
@@ -67,8 +69,6 @@
 		top: 105px;
 		left: -40px;
 		font-size: 18px;
-		padding: 5px;
-		text-align: center;
 	}
 
 }

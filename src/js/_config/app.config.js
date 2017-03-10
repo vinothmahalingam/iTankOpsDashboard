@@ -14,7 +14,7 @@ var myapp_config = {
        window height is only updated during window resize
      */
     windowHeight: $(window).height(),
-    navHeightGap: ($('#nav-footer').height() || 0) + $('header').height() + 1,
+    navHeightGap: ( $('#nav-footer').height() || 0 ) + $('header').height() + 1,
     /*
        DELAY VAR FOR FIRING REPEATED EVENTS (eg., scroll & resize events)
        Lowering the variable makes faster response time but taxing on the CPU
@@ -51,6 +51,11 @@ var myapp_config = {
        Dependency: 
      */
     disableRippleEffect: false, // material design effect that appears on all buttons
+    /*
+       Primary theme anchor point #mytheme
+       This anchor is created dynamically
+    */
+    mythemeAnchor: '#mytheme',
     /*
        Primary menu anchor point #primary-nav
        This is the root anchor point where the menu script will begin its build

@@ -1,6 +1,6 @@
 /**
  * App Initialize
- * DOC: Initializes the app with intApp();
+ * DOC: initializes the app with intApp();
  **/	
 var initApp = (function(app) {
 
@@ -9,19 +9,13 @@ var initApp = (function(app) {
 	 **/
 	app.saveSettings = function () {
 
-		/**
-		 * if saveSettings function exists
-		 **/		
+		/* if saveSettings function exists */		
 		if (typeof saveSettings !== 'undefined' && $.isFunction(saveSettings) && myapp_config.storeLocally) {
 
-			/**
-			 * call accessIndicator animation	
-			 **/
+			/* call accessIndicator animation */
 			initApp.accessIndicator();
 
-			/**
-			 * call saveSettings function from myapp_config.root_ (HTML)	
-			 **/
+			/* call saveSettings function from myapp_config.root_ (HTML) */
 			saveSettings();
 
 			if (myapp_config.debugState)
@@ -41,6 +35,9 @@ var initApp = (function(app) {
 		/* remove all classes */
 		myapp_config.root_.removeClass();
 
+		/* remove custom css skin */
+		$(myapp_config.mythemeAnchor).attr('href', "");
+
 		/* save settings if "storeLocally == true" */
 		initApp.saveSettings();
 		
@@ -48,7 +45,7 @@ var initApp = (function(app) {
 
 	/**
 	 * Access Indicator
-	 * DOC: Spinning icon that appears whenever you
+	 * DOC: spinning icon that appears whenever you
 	 * access localstorage or change settings
 	 **/
 	app.accessIndicator = function () {
@@ -85,6 +82,7 @@ var initApp = (function(app) {
 	 * we will use this "getSettings" when storing settings to a database
 	 */
 	app.getSettings = function () {
+
 		return myapp_config.root_.attr('class').split(/[^\w-]+/).filter(function(item) {
 			return /^(nav|header|mod|display)-/i.test(item);
 		}).join(' ');
@@ -92,8 +90,7 @@ var initApp = (function(app) {
 
 	/**
 	 * Assign new height to 'var'
-	 * DOC: This will be used later for other calculations
-	 * we only call this funtion during screen resize 
+	 * DOC: this will be used later for other calculations, we only call this funtion during screen resize 
 	 **/
 	app.getNewWindowHeight = function () {
 
@@ -105,14 +102,11 @@ var initApp = (function(app) {
 
 	/**
 	 * Add browser type
-	 * DOC: Detect if browser supports webkit CSS
+	 * DOC: detect if browser supports webkit CSS
 	 **/	
 	app.detectBrowserType = function () {
 
-		/**
-		 * start script based on safari or chrome detect	
-		 **/	
-
+		/* safari or chrome detect */	
 		if(myapp_config.isChrome){
 
 			myapp_config.root_.addClass("chrome webkit");
@@ -120,7 +114,6 @@ var initApp = (function(app) {
 		} else if (myapp_config.isWebkit) {
 
 			myapp_config.root_.addClass("webkit");
-
 		}
 
 	};
@@ -133,17 +126,13 @@ var initApp = (function(app) {
 		
 		if (!myapp_config.isMobile) {
 
-			/**
-			 * desktop
-			 **/	
+			/* desktop */	
 			myapp_config.root_.addClass('desktop');
 			myapp_config.thisDevice = 'desktop';
 
 		} else {
 
-			/**
-			 * mobile
-			 **/
+			/* mobile */
 			myapp_config.root_.addClass('mobile');
 			myapp_config.thisDevice = 'mobile';
 			
@@ -169,19 +158,16 @@ var initApp = (function(app) {
 
 		app.calculateAppHeight = function (){
 
-			var primaryNavHeight = $('#primary-nav').height() + myapp_config.navHeightGap,
-				/**
-				 * DOC: sort next new height, get max value
-				 **/
+			var primaryNavHeight = $(myapp_config.navAnchor).height() + myapp_config.navHeightGap,
+
+				/* sort next new height, get max value */
 				newHeight =  Math.max(primaryNavHeight, myapp_config.windowHeight); 
 
 			switch ( true ) {
 
 				case ( primaryNavHeight < myapp_config.windowHeight ):
 
-					/**
-					* nav is higher than wrapper
-					**/
+					/* nav is higher than wrapper */
 					myapp_config.root_.css("min-height",  newHeight + "px");
 
 					if (myapp_config.debugState)
@@ -191,9 +177,7 @@ var initApp = (function(app) {
 
 				case ( primaryNavHeight > myapp_config.windowHeight ):
 
-					/**
-					* wrapper is higher than nav
-					**/
+					/* wrapper is higher than nav */
 					myapp_config.root_.css("min-height",  newHeight + "px");
 
 					if (myapp_config.debugState)
@@ -203,9 +187,7 @@ var initApp = (function(app) {
 
 				case ( myapp_config.root_.hasClass('nav-function-fixed') ):
 
-					/**
-					 * if navigation is fixed
-					 **/
+					/* if navigation is fixed */
 					myapp_config.root_.css("min-height",  primaryNavHeight + "px");
 
 					if (myapp_config.debugState)
@@ -216,8 +198,8 @@ var initApp = (function(app) {
 			}	
 		}
 
-		/* HINT! alternative way to save ROM for mobile: */
-		/* if ( myapp_config.thisDevice === 'desktop' && !myapp_config.root_.is('.nav-function-top, .nav-function-fixed') ) { */
+		/* HINT! alternative way to save ROM for mobile:
+		   if ( myapp_config.thisDevice === 'desktop' && !myapp_config.root_.is('.nav-function-top, .nav-function-fixed') ) { */
 		if ( !myapp_config.root_.is('.nav-function-top, .nav-function-fixed') ) {
 
 			initApp.calculateAppHeight();
@@ -243,8 +225,8 @@ var initApp = (function(app) {
 
 	/**
 	 * Check setting conditions
-	 * DOC: Sometimes settings can trigger certain plugins; so we check this condition and activate accordingly
-	 * E.g: The fixed navigation activates slimScroll plugin for the navigation, but this only happens when
+	 * DOC: sometimes settings can trigger certain plugins; so we check this condition and activate accordingly
+	 * E.g: the fixed navigation activates slimScroll plugin for the navigation, but this only happens when
 	 *		it detects desktop browser and destroys the plugin when navigation is on top or if its not fixed.
 	 **/
 	 app.checkSettingConditions = function() {
@@ -257,9 +239,7 @@ var initApp = (function(app) {
 
 			case ( myapp_config.root_.hasClass('nav-function-fixed') && !myapp_config.root_.is('.nav-function-top, .nav-function-minify, .mod-main-boxed') && myapp_config.thisDevice === 'desktop' ):
 
-				/**
-				 * start slimscroll on nav
-				 **/
+				/* start slimscroll on nav */
 				if ( typeof $.fn.slimScroll !== 'undefined' ) {
 					$(myapp_config.navAnchor).slimScroll({
 						height: '100%',
@@ -274,24 +254,18 @@ var initApp = (function(app) {
 					console.log("$.fn.slimScroll...NOT FOUND");
 				}
 
-				/**
-				 * fix app height (only needs to be called once)
-				 **/
+				/* fix app height (only needs to be called once) */
 				initApp.calculateAppHeight();
 
 				break;
 
 			case ( $(myapp_config.navAnchor).parent().hasClass('slimScrollDiv') && myapp_config.thisDevice === 'desktop' && typeof $.fn.slimScroll !== 'undefined' ):
 
-				/**
-				 * destroy the plugin if it is in violation of the above rules
-				 **/
+				/* destroy the plugin if it is in violation of rules above */
 	    		$(myapp_config.navAnchor).slimScroll({ destroy: true });
 	    		$(myapp_config.navAnchor).attr('style', '');
 
-				/**
-				 * clear event listners (IE bug)
-				 **/
+				/* clear event listners (IE bug) */
 				events = jQuery._data( $(myapp_config.navAnchor)[0], "events" );
 
 				if (events) 
@@ -327,7 +301,7 @@ var initApp = (function(app) {
 	
 	/**
 	 * Mobile Check Activate
-	 * DOC: Check on window resize if screen width is less than [value]
+	 * DOC: check on window resize if screen width is less than [value]
 	 */
 	app.mobileCheckActivation = function(){
 		
@@ -350,7 +324,7 @@ var initApp = (function(app) {
 
 	/**
 	 *  Toggle visibility
-	 * 	DOC: Show and hide content with a button action
+	 * 	DOC: show and hide content with a button action
 	 *  Usage: onclick="initApp.toggleVisibility('foo');"
 	 **/
 	app.toggleVisibility = function (id) {
@@ -367,14 +341,10 @@ var initApp = (function(app) {
 	 **/
 	app.domReadyMisc = function() {
 	
-		/**
-		 * Check conflicting classes to build/destroy slimscroll
-		 **/
+		/* Check conflicting classes to build/destroy slimscroll */
 		initApp.checkSettingConditions();
 
-		/**
-		 * Activate the last tab clicked using localStorage
-		 **/
+		/* Activate the last tab clicked using localStorage */
 		var lastTab = localStorage.getItem('lastTab');
 		 
 		$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
@@ -385,7 +355,6 @@ var initApp = (function(app) {
 		} 
 
 		/**
-		 * NOTE! fix this to look proper and target properly
 		 * Other options:
 		 * --------------
 			width: '300px',
@@ -422,7 +391,7 @@ var initApp = (function(app) {
 
 		/**
 		 * Dropdowns will not close on click
-		 * doc: only close dropdowns on click outside
+		 * doc: only close dropdowns on click outside hit area
 		 **/
 		$(document).on('click', '.dropdown-menu', function (e) {
 			e.stopPropagation();
@@ -468,41 +437,30 @@ var initApp = (function(app) {
 					 * Usage 1 (body): <a href="#" data-action="toggle" data-class="add-this-class-to-body">...</a>
 					 * Usage 2 (target): <a href="#" data-action="toggle" data-class="add-this-class-to-target" data-target="target">...</a>
 					 **/
-
 					case ( actiontype === 'toggle' ):
 
 						var target = $(this).attr('data-target') || myapp_config.root_,
 							dataClass = $(this).attr('data-class');
 
-						/**
-						 * remove previous background image if alternate is selected
-						 **/
+						/* remove previous background image if alternate is selected */
 						if ( dataClass.indexOf('mod-bg-') !== -1 ) {
 							$(target).removeClass (function (index, css) {
 								return (css.match (/(^|\s)mod-bg-\S+/g) || []).join(' ');
 							});
 						}
 
-						/**
-						 * trigger class change
-						 **/
+						/* trigger class change */
 						$(target).toggleClass( dataClass );
 
-						/**
-						 * save settings
-						 **/
+						/* save settings */
 						if ( typeof classHolder != 'undefined' || classHolder != null ) {
 
-							/**
-						 	 * NOTE: saveSettings function is located in the *.html page right after <body> tag 
-						 	 **/
+							/* NOTE: saveSettings function is located right after <body> tag */
 							initApp.checkSettingConditions();
 							initApp.saveSettings();
 						}
 
-						/**
-						 * fix app height when switching nav from top, side, minify and takes care of some ipad bugs 
-						 **/
+						/* fix app height when switching nav from top, side, minify and takes care of some ipad bugs */
 						if ( dataClass === 'nav-function-top' || 
 							 dataClass === 'nav-function-minify' && myapp_config.root_.hasClass('mod-main-boxed') || 
 							 dataClass === 'nav-function-fixed' ) {
@@ -544,20 +502,10 @@ var initApp = (function(app) {
 
 						$(this).closest('.panel').fadeOut(500,function(){
 							$(this).remove();
-							//console.log("panel removed")
 						});
 						
 						if (myapp_config.debugState)
 								console.log( "panel collapse removed" );
-
-					break;
-
-					case ( actiontype === "app-reset" ):
-
-						initApp.resetSettings();
-
-						if (myapp_config.debugState)
-								console.log( "settings was reset" );
 
 					break;
 
@@ -568,13 +516,26 @@ var initApp = (function(app) {
 					 **/
 					case ( actiontype === 'theme-update' ):
 
-						if ( $('#mytheme').length) {
-							$('#mytheme').attr('href', $(this).attr('data-theme') );
+						if ( $(myapp_config.mythemeAnchor).length) {
+							$(myapp_config.mythemeAnchor).attr('href', $(this).attr('data-theme') );
 						} else {
-							$("head").append('<link rel="stylesheet" id="mytheme" href="' + $(this).attr('data-theme') + '">');
+							var mytheme = $("<link>", {id: myapp_config.mythemeAnchor.replace('#', ''), "rel": "stylesheet", "href" : $(this).attr('data-theme') });
+							$("head").append(mytheme);
 						}
 
 						initApp.saveSettings();
+
+					break;
+
+					/**
+					 * theme 'app-reset' trigger
+					 **/
+					case ( actiontype === "app-reset" ):
+
+						initApp.resetSettings();
+
+						if (myapp_config.debugState)
+								console.log( "settings was reset" );
 
 					break;
 
@@ -593,10 +554,9 @@ var initApp = (function(app) {
 					 **/
 					case ( actiontype === 'app-fullscreen' ):
 
-						/**
-					 	 * NOTE: this may not work for all browsers if the browser security does not permit it 
-					 	 * IE issues: http://stackoverflow.com/questions/33732805/fullscreen-not-working-in-ie
-					 	 **/
+						/* NOTE: this may not work for all browsers if the browser security does not permit it 
+					 	   IE issues: http://stackoverflow.com/questions/33732805/fullscreen-not-working-in-ie */
+
 						if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {
 
 							if (document.documentElement.requestFullscreen) {
@@ -635,14 +595,10 @@ var initApp = (function(app) {
 					break; 
 				}
 
-				/**
-				 * hide tooltip if any present
-				 **/
+				/* hide tooltip if any present */
 				$(this).tooltip('hide');
 
-				/**
-				 * stop default link action
-				 **/				
+				/* stop default link action */				
 				e.stopPropagation(); 
 				e.preventDefault();		
 		}); 
@@ -652,8 +608,6 @@ var initApp = (function(app) {
 		 * Mobile menu action for screen tap or click to close menu (-)
 		 **/
 
-		//$("<div id='mobile-backdrop' class='modal-backdrop fade'></div>").appendTo(document.body);
-
 		$(document)
 			.on('touchend mousedown', '.mobile-nav-on #content', function(e) {
 				myapp_config.root_.removeClass("mobile-nav-on");
@@ -661,23 +615,12 @@ var initApp = (function(app) {
 				if (myapp_config.debugState)
 					console.log(this + " : was clicked to close mobile menu");
 
-				//e.stopPropagation();
+				/* stops default action */
 				e.preventDefault();
 		});
 
-
 		/**
-		 * Mobile menu action for screen swipe to open menu (+)
-		 *
-		$(document).on( "swiperight", ':not(.mobile-nav-on) body', function( e ) {
-		    if ( e.swipestart.coords[0] <50) {
-		    	myapp_config.root_.addClass("mobile-nav-on");
-		    }
-		});
-		*/
-
-		/**
-		 * windows mobile 8 fix ~
+		 * Windows mobile 8 fix ~
 		 * doc: bootstrap related
 		 **/
 		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {

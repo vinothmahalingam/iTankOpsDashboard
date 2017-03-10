@@ -91,7 +91,7 @@ $nav-icon-margin-right:								12px !default;
 					display: flex; /*new*/
 					align-items:center; /*new*/
 					outline: 0;
-					padding: 11.5px rem($nav-padding-right) 11.5px rem($nav-padding-left);
+					padding: 12.5px rem($nav-padding-right) 12.5px rem($nav-padding-left);
 					font-size: rem($nav-font-link-size);
 					color: $nav-link-color;
 					//min-height: rem($nav-link-height);
@@ -103,7 +103,7 @@ $nav-icon-margin-right:								12px !default;
 						font-size: rem($nav-dl-font-size);
 						text-align: center;
 						min-width: rem($nav-dl-width);
-						height: rem($nav-dl-height);
+						//height: rem($nav-dl-height);
 						display: inline-block;
 						border-radius: rem($border-radius);
 						letter-spacing: rem(0.5px);
@@ -146,8 +146,8 @@ $nav-icon-margin-right:								12px !default;
 					> img {
 						background: #2196F3;
 						padding: 0.125rem;
-						width: 1.375rem;
-						height: 1.375rem;
+						width: rem(20px);
+						height: rem(20px);
 						margin-left: 5px;
 						margin-right: 14px;
 					}

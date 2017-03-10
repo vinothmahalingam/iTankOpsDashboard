@@ -21,7 +21,7 @@
 ul.list-verticle {
 	margin:0;
 	padding:0;
-	list-style: none;
+	list-style: none; 
 }
 
 /* dropdown-item hover menu*/
@@ -274,11 +274,11 @@ ul.list-verticle {
 
     	& + .onoffswitch-title-desc {
     		display: block;
-			width: 100%;
+			//width: 100%;
 			font-size: 11px;
-			line-height: 10px;
+			//line-height: 10px;
 			color: #989da5;
-			margin-bottom: 8px;
+			//margin-bottom: 8px;
 			text-transform: lowercase;
     	}
     }
