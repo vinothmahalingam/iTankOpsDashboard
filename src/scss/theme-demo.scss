@@ -1,17 +1,9 @@
 .ng-body-demo {
 	height:350px;
-	//max-width: 450px;
+	max-width: 550px;
 	margin: 0 auto;
     background-color: #fff;
     border: 1px solid rgba(0,0,0,.125);
-
-    margin-bottom:30px;
-
-	/*opacity: 0.9;
-
-	&:hover {
-		opacity: 1;
-	}*/
 
 	.ng-nav-demo:not(.ng-nav-demo-minify) {
 		width:20%;
@@ -71,6 +63,5 @@
 			color: #c7c7c7;
 	   }
 	}
-
 
 }

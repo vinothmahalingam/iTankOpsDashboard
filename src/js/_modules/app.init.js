@@ -478,7 +478,7 @@ var initApp = (function(app) {
 						$(this).closest('.panel').toggleClass("panel-collapse");
 						
 						if (myapp_config.debugState)
-								console.log( "panel collapse toggle" );
+								console.log( "panel collapse" );
 
 					break;
 
@@ -500,12 +500,20 @@ var initApp = (function(app) {
 					 **/
 					case ( actiontype === 'panel-close' ):
 
-						$(this).closest('.panel').fadeOut(500,function(){
-							$(this).remove();
-						});
+						var selectedPanel = $(this).closest('.panel');
+
+						selectedPanel.fadeOut(500,function(){
 						
-						if (myapp_config.debugState)
-								console.log( "panel collapse removed" );
+							/* remove panel */
+							$(this).remove();
+
+							if (myapp_config.debugState)
+							console.log( "panel id:" + selectedPanel.attr('id') + " removed" );
+
+							/* return ID of panel */
+							return selectedPanel.attr('id');
+
+						});
 
 					break;
 

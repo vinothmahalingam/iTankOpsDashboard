@@ -18,6 +18,23 @@
 
 	}
 }
+
+/* mostly used for nav items */
+.disable,
+.disable > * {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	opacity: 0.45 !important;
+	color: $white !important;
+	cursor: not-allowed;
+	text-decoration: line-through !important;
+
+	ul,
+	.collapse-sign {
+		display: none !important;
+	}
+}
+
 ul.list-verticle {
 	margin:0;
 	padding:0;
