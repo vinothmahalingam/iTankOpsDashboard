@@ -475,10 +475,15 @@ var initApp = (function(app) {
 					 **/
 					case ( actiontype === 'panel-collapse' ):
 
+						var selectedPanel = $(this).closest('.panel');
+
 						$(this).closest('.panel').toggleClass("panel-collapse");
 						
 						if (myapp_config.debugState)
-								console.log( "panel collapse" );
+						console.log( "panel id:" + selectedPanel.attr('id') + " | action: collapse" );
+
+						/* return ID of panel */
+						return selectedPanel.attr('id');
 
 					break;
 
@@ -487,11 +492,16 @@ var initApp = (function(app) {
 					 **/
 					case ( actiontype === 'panel-fullscreen' ):
 
+						var selectedPanel = $(this).closest('.panel');
+
 						$(this).closest('.panel').toggleClass("panel-fullscreen");
 						myapp_config.root_.toggleClass("panel-fullscreen");
 
 						if (myapp_config.debugState)
-								console.log( "panel fullscreen toggle" );
+						console.log( "panel id:" + selectedPanel.attr('id') + " | action: fullscreen" );
+
+						/* return ID of panel */
+						return selectedPanel.attr('id');
 
 					break;
 
@@ -508,7 +518,7 @@ var initApp = (function(app) {
 							$(this).remove();
 
 							if (myapp_config.debugState)
-							console.log( "panel id:" + selectedPanel.attr('id') + " removed" );
+							console.log( "panel id:" + selectedPanel.attr('id') + " | action: removed" );
 
 							/* return ID of panel */
 							return selectedPanel.attr('id');

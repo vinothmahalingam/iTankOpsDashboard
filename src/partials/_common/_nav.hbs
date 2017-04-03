@@ -108,27 +108,35 @@
 	Ingredients
 </p>
 <ul class="ngmenu">
-	<li {{#is pagename "in" "ui_breadcrumbs,ui_buttons,ui_cards_wells,ui_helpers,ui_icons_fontawesome,ui_icons_ng,ui_labels_badges,ui_navbars,ui_pagination,ui_tabs_accordions,ui_progress_bars,ui_tooltips_popovers,ui_typography"}}class="active"{{/is}}>
+	<li {{#is pagename "in" "ui_alerts,ui_breadcrumbs,ui_buttons,ui_cards_wells,ui_carousel,ui_helpers,ui_icons_fontawesome,ui_icons_ng,ui_labels_badges,ui_navbars,ui_pagination,ui_tabs_accordions,ui_progress_bars,ui_scrollspy,ui_tooltips_popovers,ui_typography"}}class="active"{{/is}}>
 		<a href="#" title="UI Components"> 
 			<i class="icon icon-fire"></i>
 			<span class="ngmenu-link-text">UI Components</span> 
 		</a>
 		<ul>
+			<li {{#is pagename "===" "ui_alerts"}}class="active"{{/is}}>
+				<a href="ui_alerts.html"> 
+					<span class="ngmenu-link-text">Alerts</span> 
+				</a>
+			</li>
 			<li {{#is pagename "===" "ui_breadcrumbs"}}class="active"{{/is}}>
 				<a href="ui_breadcrumbs.html"> 
-					<i class="icon icon-fire"></i>
 					<span class="ngmenu-link-text">Breadcrumbs</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "ui_buttons"}}class="active"{{/is}}>
 				<a href="ui_buttons.html"> 
-					<span class="dl-ref bg-warning-800"><i class="icon icon-fire"></i></span>
 					<span class="ngmenu-link-text">Buttons</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "ui_cards_wells"}}class="active"{{/is}}>
 				<a href="ui_cards_wells.html"> 
 					<span class="ngmenu-link-text">Cards & Wells</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "ui_carousel"}}class="active"{{/is}}>
+				<a href="ui_carousel.html"> 
+					<span class="ngmenu-link-text">Carousel</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "ui_helpers"}}class="active"{{/is}}>
@@ -156,6 +164,11 @@
 					<span class="ngmenu-link-text">Progress Bars</span> 
 				</a>
 			</li>
+			<li {{#is pagename "===" "ui_scrollspy"}}class="active"{{/is}}>
+				<a href="ui_scrollspy.html"> 
+					<span class="ngmenu-link-text">ScrollSpy</span> 
+				</a>
+			</li>
 			<li {{#is pagename "===" "ui_tabs_accordions"}}class="active"{{/is}}>
 				<a href="ui_tabs_accordions.html"> 
 					<span class="ngmenu-link-text">Tabs & Accordions</span> 
@@ -166,11 +179,112 @@
 					<span class="ngmenu-link-text">Tooltips & Popovers</span> 
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_typography"}}class="active"{{/is}}>
-				<a href="ui_typography.html"> 
-					<span class="ngmenu-link-text">Typography</span> 
+			<li {{#is pagename "in" "a,b,ui_typography"}}class="active"{{/is}}>
+				<a href="#"> 
+					<i class="icon icon-fire"></i>
+					<span class="ngmenu-link-text">
+						Utilities
+					</span> 
 				</a>
-			</li>
+				<ul>
+					<li {{#is pagename "===" "ui_icons_fontawesome"}}class="active"{{/is}}>
+						<a href="ui_icons_fontawesome.html"> 
+							<span class="ngmenu-link-text">
+								Borders
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "ui_icons_fontawesome"}}class="active"{{/is}}>
+						<a href="ui_icons_fontawesome.html"> 
+							<span class="ngmenu-link-text">
+								Clearfix
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "ui_icons_fontawesome"}}class="active"{{/is}}>
+						<a href="ui_icons_fontawesome.html"> 
+							<span class="ngmenu-link-text">
+								Close icon
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "ui_icons_fontawesome"}}class="active"{{/is}}>
+						<a href="ui_icons_fontawesome.html"> 
+							<span class="ngmenu-link-text">
+								Colors
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "ui_icons_fontawesome"}}class="active"{{/is}}>
+						<a href="ui_icons_fontawesome.html"> 
+							<span class="ngmenu-link-text">
+								Flexbox
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "ui_icons_fontawesome"}}class="active"{{/is}}>
+						<a href="ui_icons_fontawesome.html"> 
+							<span class="ngmenu-link-text">
+								Display property
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "ui_icons_fontawesome"}}class="active"{{/is}}>
+						<a href="ui_icons_fontawesome.html"> 
+							<span class="ngmenu-link-text">
+								Image Replacement
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "ui_icons_fontawesome"}}class="active"{{/is}}>
+						<a href="ui_icons_fontawesome.html"> 
+							<span class="ngmenu-link-text">
+								Invisible content
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "ui_icons_fontawesome"}}class="active"{{/is}}>
+						<a href="ui_icons_fontawesome.html"> 
+							<span class="ngmenu-link-text">
+								Position
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "ui_icons_fontawesome"}}class="active"{{/is}}>
+						<a href="ui_icons_fontawesome.html"> 
+							<span class="ngmenu-link-text">
+								Responsive helpers
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "ui_icons_fontawesome"}}class="active"{{/is}}>
+						<a href="ui_icons_fontawesome.html"> 
+							<span class="ngmenu-link-text">
+								Sizing
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "ui_icons_fontawesome"}}class="active"{{/is}}>
+						<a href="ui_icons_fontawesome.html"> 
+							<span class="ngmenu-link-text">
+								Spacing
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "ui_typography"}}class="active"{{/is}}>
+						<a href="ui_typography.html"> 
+							<span class="ngmenu-link-text">Typography</span> 
+						</a>
+					</li>
+					<li {{#is pagename "===" "ui_icons_fontawesome"}}class="active"{{/is}}>
+						<a href="ui_icons_fontawesome.html"> 
+							<span class="ngmenu-link-text">
+								Alignments
+							</span>
+						</a>
+					</li>
+				</ul>
+			</li>	
 			<li {{#is pagename "in" "ui_icons_fontawesome,ui_icons_ng"}}class="active"{{/is}}>
 				<a href="#"> 
 					<span class="dl-ref bg-warning-800">
@@ -200,14 +314,6 @@
 				</ul>		
 
 			</li>
-			<li class="disable">
-				<a href="#"> 
-					<span class="dl-ref bg-success-500">L1</span>
-					<span class="ngmenu-link-text">
-						Menu disabled
-					</span> 
-				</a>
-			</li>
 			<li>
 				<a href="#"> 
 					<span class="dl-ref bg-success-500">L1</span>
@@ -234,10 +340,36 @@
 					</li>
 				</ul>
 			</li>
+			<li class="disable">
+				<a href="#"> 
+					<span class="dl-ref bg-success-500">L1</span>
+					<span class="ngmenu-link-text">
+						Disabled item
+					</span> 
+				</a>
+			</li>
 		</ul>
-	</li>	
+	</li>
+	<li {{#is pagename "in" "datagrid_basic_tables,datagrid_responsive_tables"}}class="active"{{/is}}>
+		<a href="#" title="Datagrid"> 
+			<i class="icon icon-layers"></i>
+			<span class="ngmenu-link-text">Datagrid</span>
+		</a>
+		<ul>
+			<li {{#is pagename "===" "datagrid_basic_tables"}}class="active"{{/is}}>
+				<a href="datagrid_basic_tables.html"> 
+					<span class="ngmenu-link-text">Basic tables</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "datagrid_responsive_tables"}}class="active"{{/is}}>
+				<a href="datagrid_responsive_tables.html"> 
+					<span class="ngmenu-link-text">Responsive tables</span> 
+				</a>
+			</li>
+		</ul>
+	</li>			
 	<li {{#is pagename "in" "form_bs_example,form_material,form_material_example"}}class="active"{{/is}}>
-		<a href="#" title="Forms & Plugins"> 
+		<a href="#" title="Form Stuff"> 
 			<i class="icon icon-note"></i>
 			<span class="ngmenu-link-text">Form Stuff</span>
 		</a>
@@ -321,9 +453,9 @@
 		</ul>	
 	</li>
 	<li {{#is pagename "in" "page_blank,page_search,page_error,page_error_404"}}class="active"{{/is}}>
-		<a href="#" title="More Pages"> 
+		<a href="#" title="Pages"> 
 			<i class="icon icon-plus"></i>
-			<span class="ngmenu-link-text">More Pages</span> 
+			<span class="ngmenu-link-text">Page Layouts</span> 
 		</a>
 		<ul>
 			<li {{#is pagename "===" "blank"}}class="active"{{/is}}>

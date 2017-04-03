@@ -1,6 +1,6 @@
 #settings-wrap {
 
-	height: unquote("calc(100% - 34px)");
+	height: unquote("calc(100% - 29.5px)");
 	overflow-x: auto;
 
 	.settings-panel {
@@ -34,7 +34,7 @@
 			width:100%;
 			font-weight:400;
 			min-height:rem(35px);
-			padding: rem(7px) rem(15px) rem(7px) rem(15px);
+			padding: rem(4.75px) rem(15px) rem(4.75px) rem(15px);
 			color:darken($settings-panel-bg, 60%);
 			position: relative;
 
