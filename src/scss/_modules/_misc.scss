@@ -96,6 +96,14 @@ ul.list-verticle {
 	@extend %custom-scroll;
 }
 
+/* table no border */
+.table-border-0 {
+	th,
+	td {
+		border:0 !important;
+	}
+}
+
 /* flex */
 .flex-middle {
 	@extend %flexbox;

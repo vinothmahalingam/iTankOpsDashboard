@@ -3,11 +3,12 @@
 	position: relative;
 
 	.page-header {
-		font-weight: 300;
+		font-weight: 400;
 		color: $fusion-500;
 		margin: 0 0 $grid-gutter-width-base/3 + 2;
 
 	    small {
+	    	font-weight: 400;
 	    	font-size: 65%;
 	    	color: $fusion-100;
 	    	margin-bottom: ($grid-gutter-width-base / 2);

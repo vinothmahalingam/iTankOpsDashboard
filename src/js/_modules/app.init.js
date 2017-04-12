@@ -483,7 +483,7 @@ var initApp = (function(app) {
 						console.log( "panel id:" + selectedPanel.attr('id') + " | action: collapse" );
 
 						/* return ID of panel */
-						return selectedPanel.attr('id');
+						//return selectedPanel.attr('id');
 
 					break;
 
@@ -501,7 +501,7 @@ var initApp = (function(app) {
 						console.log( "panel id:" + selectedPanel.attr('id') + " | action: fullscreen" );
 
 						/* return ID of panel */
-						return selectedPanel.attr('id');
+						//return selectedPanel.attr('id');
 
 					break;
 
@@ -521,7 +521,7 @@ var initApp = (function(app) {
 							console.log( "panel id:" + selectedPanel.attr('id') + " | action: removed" );
 
 							/* return ID of panel */
-							return selectedPanel.attr('id');
+							//return selectedPanel.attr('id');
 
 						});
 

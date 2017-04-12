@@ -1,5 +1,5 @@
 $panel-padding: 15px;
-$panel-hdr-font-size: 16px;
+$panel-hdr-font-size: 15px;
 $panel-hdr-height: 50px;
 $panel-btn-size: 16px;
 $panel-hdr-background: #fff;
@@ -26,16 +26,16 @@ $panel-hdr-background: #fff;
 		padding: 0 $panel-padding;
 		font-size: $panel-hdr-font-size;
 		min-height: $panel-hdr-height;
-		//font-weight: 300;
+		font-weight: 500;
 
 		display:flex;
 		align-items:center;
 		flex-direction:row;
 
 		.panel-subtitle {
-			font-size: $panel-hdr-font-size - 3;
+			font-size: $panel-hdr-font-size - 1;
 			display: block;
-			font-weight: 300;
+			font-weight: 400;
 			opacity: 0.8;
 			margin-left: $spacer * 0.5;
 		}
@@ -108,6 +108,8 @@ $panel-hdr-background: #fff;
 
 		.panel-hdr {
 			height:$header-height;
+			font-size: $panel-btn-size + 3;
+			font-weight:400;
 			background: #fafafa;
 			border-radius: 0 !important;
 			box-shadow: 0 0.125rem 0.125rem -0.0625rem rgba(0, 0, 0, 0.1);
