@@ -104,6 +104,31 @@ ul.list-verticle {
 	}
 }
 
+/* line-heights */
+.l-h-n {
+	line-height:normal;
+}
+
+/* list spaced */
+.list-spaced {
+	li {
+		margin-top: rem(7px);
+		margin-bottom: rem(7px);
+
+		&:first-child {
+			margin-top:0;
+		}
+		&:lst-child {
+			margin-bottom:0;
+		}
+	}
+}
+
+/* font-color contrast */
+.text-contrast {
+	color:$black !important;
+}
+
 /* flex */
 .flex-middle {
 	@extend %flexbox;
@@ -223,6 +248,17 @@ ul.list-verticle {
 }
 .shadow-5 {
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+/* disclaimer class */
+
+.disclaimer {
+    padding-left: 10px;
+    font-size: 8px;
+    color: #a2a2a2;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-style: italic;
 }
 
 /* btn switch */

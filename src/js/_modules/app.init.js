@@ -658,7 +658,7 @@ var initApp = (function(app) {
 	 **/
 	app.materialFormEffects = function() {
 
-		var parentClass 	= '.my-app-forms',
+		var parentClass 	= '.ng-forms',
 			focusClass 		= 'has-length',
 			disabledClass	= 'has-disabled';
 

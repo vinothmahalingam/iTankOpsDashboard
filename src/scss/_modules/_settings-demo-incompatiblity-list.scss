@@ -5,6 +5,15 @@
 	}
 }
 
+.nav-function-top,
+.nav-function-minify,
+.nav-function-hover,
+.mod-hide-nav-icons {
+	#mnl {
+		@extend %not-compatible;
+	}
+}
+
 @include media-breakpoint-up($mobile-breakpoint-size) {
 	.nav-function-top {
 		#nfh {

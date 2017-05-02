@@ -1,0 +1,63 @@
+.mod-nav-link:not(.nav-function-top):not(.nav-function-minify):not(.nav-function-hover):not(.mod-hide-nav-icons) {
+
+	nav {
+
+		ul {
+
+			li {
+
+				a {
+					.dl-ref {
+						margin-left:0 !important;
+					}
+				}
+
+				ul {
+					&:before {
+						content: "";
+						display: block;
+						position: absolute;
+						z-index: 1;
+						left: 34px;
+						top: 45px;
+						bottom: 0;
+						border-left: 1px solid #7A7A7A;
+					}
+
+					/* addressing all second, third children */
+					> li {
+
+						&:before {
+							content: "";
+							display: block;
+							position: absolute;
+							width: 8px;
+							left: 34px;
+							top: 16px;
+							border-top: 1px solid #7A7A7A;
+							z-index: 1;
+						}
+
+						li {
+							&:before{
+								content: "";
+								display: none;
+							}
+						}
+					}
+
+					li {
+						a {
+							i {
+								margin-left: 0 !important;
+							}
+						}
+					}
+				}
+
+			}
+		}
+
+	}
+
+}
