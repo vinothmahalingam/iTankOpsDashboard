@@ -10,6 +10,7 @@
 @import '_modules/_header';
 @import '_modules/_header-logo';
 @import '_modules/_header-search-box';
+@import '_modules/_header-tab-notification';
 @import '_modules/_header-function-fixed';
 @import '_modules/_nav';
 @import '_modules/_nav-info-card';
@@ -37,9 +38,7 @@
 /* #DEMO ELEMS - elements mostly used for demo (can be removed)
 ========================================================================== */ 
 @import '_modules/_right-panel';
-@import '_modules/_settings-demo';
-@import '_modules/_settings-demo-theme-colors';
-@import '_modules/_settings-demo-incompatiblity-list';
+@import '_modules/_settings-*';
 @import '_modules/_demo-only';
 
 /* #_addons - Plugins imported in random order (remove if not needed)

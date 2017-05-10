@@ -270,13 +270,13 @@ RESULT:
   position:absolute;
 
   &.dropdown-sm {
-    width: ($header-dropdown-menu-normal-width - 60) !important;
-    height: auto !important;
+    width: ($header-dropdown-menu-normal-width - 60);
+    height: auto;
   }
 
   &.dropdown-xl {
     width: rem($header-dropdown-menu-large-width);
-    height: $header-dropdown-menu-long-height !important;
+    height: $header-dropdown-menu-long-height;
   }
 
   right: 0;

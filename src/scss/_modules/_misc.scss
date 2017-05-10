@@ -129,6 +129,11 @@ ul.list-verticle {
 	color:$black !important;
 }
 
+/* height */
+.h-auto {
+	height: auto !important;
+}
+
 /* flex */
 .flex-middle {
 	@extend %flexbox;
