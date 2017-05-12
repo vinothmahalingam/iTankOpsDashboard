@@ -390,6 +390,29 @@ var initApp = (function(app) {
 		}
 
 		/**
+		 * Lazyload images
+		 * doc: lazy load images to optimize performance
+		 **/
+		if ( typeof $.fn.lazy !== 'undefined') {
+			$('.custom-scroll img').lazy({
+				effect: "fadeIn",
+				effectTime: 200,
+				threshold: 10,
+				enableThrottle: true,
+				throttle: 500,
+				visibleOnly: true,
+				combined: true,
+				appendScroll: $('.slimScrollDiv > :first-child')
+			});
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function () {
+				$('.slimScrollDiv > :first-child').trigger('scroll');
+			})
+			$('#index').on('show.bs.dropdown', function () {
+				$('.slimScrollDiv > :first-child').trigger('scroll');
+			})
+		}
+
+		/**
 		 * Dropdowns will not close on click
 		 * doc: only close dropdowns on click outside hit area
 		 **/

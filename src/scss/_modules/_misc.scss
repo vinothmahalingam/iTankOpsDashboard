@@ -351,6 +351,35 @@ ul.list-verticle {
 
 }
 
+/* absolute position */
+.a-tr,
+.a-tl,
+.a-br,
+.a-bl {
+	position:absolute;
+}
+
+.a-tr {
+	top:0;
+	right:0;
+}
+
+.a-tl {
+	top:0;
+	left:0;	
+}
+
+.a-br {
+	bottom:0;
+	right:0;	
+}
+
+.a-bl {
+	bottom:0;
+	left:0;	
+}
+
+
 /* online status */
 .status {
 	position: relative;
