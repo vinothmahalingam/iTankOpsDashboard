@@ -17,7 +17,7 @@
 
 		&.unread {
 			
-			background: rgba($warning-500, .05);
+			background: rgba($warning-500, .09);
 			
 		}
 
@@ -28,7 +28,14 @@
 			img.profile-image {
 				width: 45px;
 				height: auto;
-				margin-right: $p-3;
+				margin-right: $p-2 + $p-1;
+			}
+
+			img.profile-image-sm {
+				padding: 2px;
+				width: 15px;
+				height: 15px;
+				margin-right: $p-1;
 			}
 
 			&:hover {
