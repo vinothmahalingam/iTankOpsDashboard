@@ -10,10 +10,10 @@
 	</li>
 </ul>
 <div class="tab-content tab-notification">
-	<div class="tab-pane active p-4 text-center bg-faded">
-		<h5 class="text-muted mt-5 pt-5">Click a button above to activate tab
-			<small>
-				This blank page message helps protect your privacy, or you can show the first message here automatically through settings page
+	<div class="tab-pane active p-4 text-center">
+		<h5 class="mt-5 pt-5 fw-500">Select a tab above to activate
+			<small class="mt-3 font-base fw-400 text-muted">
+				This blank page message helps protect your privacy, or you can show the first message here automatically through <a href="#">settings page</a>
 			</small>
 		</h5>
 	</div>
@@ -96,10 +96,21 @@
 	<div class="tab-pane custom-scroll" id="feeds" role="tabpanel">
 		<ul class="notification">
 			<li class="unread">
+				<div class="d-flex align-items-center">
+					<span class="d-flex flex-column flex-1">
+						<span class="name d-flex align-items-center">Administrator <span class="badge badge-success fw-n ml-1">UPDATE</span></span>
+						<span class="msg-a font-sm">System updated to version <strong>{{> _data/version-number}}</strong>
+							(<a href="intel_build_notes.html">patch notes</a>)
+						</span>	
+						<span class="font-nano text-muted">5 mins ago</span>
+					</span>
+				</div>
+			</li>
+			<li class="unread">
 				<a href="#" class="d-flex align-items-center">
 					<span class="d-flex flex-column flex-1">
-						<span class="msg-a font-sm"><strong>Adison Lee</strong> replied to your video on <strong>Hadron Collider (LHC)</strong></span>
-						<span class="font-nano text-muted">2 minutes ago</span>
+						<span class="name"><strong>Adison Lee</strong> <span class="fw-300 d-inline">replied to your video on </span> <strong>Hadron Collider (LHC)</strong></span>
+						<span class="font-nano text-muted">10 minutes ago</span>
 					</span>
 					<span>
 						<img src="" data-src="img/thumbs/pic-2.png" alt="video-1" class="ml-3">
@@ -107,48 +118,47 @@
 				</a>
 			</li>
 			<li>
-				<a href="#" class="d-flex align-items-center">
+				<div class="d-flex align-items-center">
+					<!--<img src="img/avatar-m.png" data-src="img/avatars/avatar-k.png" class="profile-image rounded-circle" alt="k" />-->
 					<span class="d-flex flex-column flex-1">
-						<span class="msg-a font-sm">Msed quia non numquam eius</span>
-						<span class="font-nano text-muted">2 minutes ago</span>
-					</span>
-				</a>
-			</li>
-				<li>
-					<div class="d-flex align-items-center">
-						<span class="d-flex flex-column flex-1">
-							<span class="name d-flex align-items-center"><img src="img/logo-minify.png" alt="NextGen Logo" class="bg-primary-500 profile-image-sm rounded-circle"> Administrator <span class="badge badge-success fw-n a-tr">SYSTEM UPDATE</span></span>
-							<span class="msg-a font-sm">Your system security was updated!</span>
-							<span class="font-nano text-muted">a week ago</span>
+						<span class="name">Troy Norman'<span class="fw-300">s new connections</span></span>
+						<span class="font-sm d-flex align-items-center mt-1">
+							<img src="img/avatar-m.png" data-src="img/avatars/avatar-a.png" class="profile-image-md mr-1 rounded-circle" alt="a" />
+							<img src="img/avatar-m.png" data-src="img/avatars/avatar-b.png" class="profile-image-md mr-1 rounded-circle" alt="a" />
+							<img src="img/avatar-m.png" data-src="img/avatars/avatar-c.png" class="profile-image-md mr-1 rounded-circle" alt="a" />
+							<img src="img/avatar-m.png" data-src="img/avatars/avatar-e.png" class="profile-image-md mr-1 rounded-circle" alt="a" />
+							<img src="img/avatar-m.png" data-src="img/avatars/avatar-h.png" class="profile-image-md mr-1 rounded-circle" alt="a" />
+							<a href="#">+3</a>
 						</span>
-					</div>
-				</li>
-			<li>
-				<a href="#" class="d-flex align-items-center">
-					<span class="d-flex flex-column flex-1">
-						<span class="msg-a font-xs">Msed quia non numquam eius</span>
-						<span class="msg-b font-micro">Hello again and thanks for being a part of the...</span>
-						<span class="font-nano text-muted">2 minutes ago</span>
+						<span class="font-nano text-muted a-br">Aug</span>
 					</span>
-				</a>
+				</div>
 			</li>
 			<li>
-				<a href="#" class="d-flex align-items-center">
+				<div class="d-flex align-items-center">
+					<!--<img src="img/avatar-m.png" data-src="img/avatars/avatar-e.png" class="profile-image-sm rounded-circle align-self-start mt-1" alt="k" />-->
 					<span class="d-flex flex-column flex-1">
-						<span class="msg-a font-xs">Msed quia non numquam eius</span>
-						<span class="msg-b font-micro">Hello again and thanks for being a part of the...</span>
-						<span class="font-nano text-muted">2 minutes ago</span>
+						<span class="name">Dr John Cook <span class="fw-300">sent a <span class="text-danger">new signal</span></span></span>
+						<span class="msg-a font-sm mb-1">The xray is looking negative, nothing to worry...</span>
+						<span class="msg-a font-xs"><a href="#" class="text-muted">3 comments</a></span>
+						<span class="font-nano text-muted a-br">Aug</span>
 					</span>
-				</a>
+				</div>
 			</li>
 			<li>
-				<a href="#" class="d-flex align-items-center">
+				<div class="d-flex align-items-center">
+					<!--<img src="img/avatar-m.png" data-src="img/avatars/avatar-h.png" class="profile-image rounded-circle align-self-start mt-1" alt="k" />-->
 					<span class="d-flex flex-column flex-1">
-						<span class="msg-a font-xs">Msed quia non numquam eius</span>
-						<span class="msg-b font-micro">Hello again and thanks for being a part of the...</span>
-						<span class="font-nano text-muted">2 minutes ago</span>
+						<span class="name">Sarah McBrook'<span class="fw-300">s added new images</span></span>
+						<span class="font-sm d-flex align-items-center mt-1">
+							<a href="#"><img src="" data-src="img/thumbs/pic-4.png" class="img-share mr-1 mt-1" alt="a" /></a>
+							<a href="#"><img src="" data-src="img/thumbs/pic-5.png" class="img-share mr-1 mt-1" alt="a" /></a>
+							<a href="#"><img src="" data-src="img/thumbs/pic-6.png" class="img-share mr-1 mt-1" alt="a" /></a>
+							<a href="#">+1</a>
+						</span>
+						<span class="font-nano text-muted a-br">July</span>
 					</span>
-				</a>
+				</div>
 			</li>
 			<li>
 				<a href="#" class="d-flex align-items-center">

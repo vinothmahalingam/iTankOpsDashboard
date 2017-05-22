@@ -18,30 +18,33 @@
 						display: block;
 						position: absolute;
 						z-index: 1;
-						left: 34px;
+						left: 28px;
 						top: 45px;
 						bottom: 0;
-						border-left: 1px solid #7A7A7A;
+						border-left: 1px solid darken($nav-icon-color, 15%);
 					}
 
 					/* addressing all second, third children */
 					> li {
-
-						&:before {
-							content: "";
-							display: block;
-							position: absolute;
-							width: 8px;
-							left: 34px;
-							top: 16px;
-							border-top: 1px solid #7A7A7A;
-							z-index: 1;
+						a {
+							&:after {
+								content: "";
+								display: block;
+								position: absolute;
+								width: 10px;
+								left: 28px;
+								top: unquote("calc(50% - 1px)");
+								border-top: 1px solid darken($nav-icon-color, 15%);
+								z-index: 1;
+							}
 						}
 
 						li {
-							&:before{
-								content: "";
-								display: none;
+							> a {
+								&:after{
+									content: "";
+									display: none;
+								}
 							}
 						}
 					}
@@ -52,6 +55,19 @@
 								margin-left: 0 !important;
 							}
 						}
+					}
+
+					&:hover {
+						&:before {
+							border-color: darken($nav-icon-color, 5%);
+						}
+						> li {
+							a {
+								&:after {
+									border-color: darken($nav-icon-color, 5%);
+								}
+							}
+						}							
 					}
 				}
 

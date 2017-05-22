@@ -379,6 +379,7 @@ var initApp = (function(app) {
 			})
 		} else {
 			console.log("warning: $.fn.slimScroll not or user is on desktop");
+			myapp_config.root_.addClass("no-slimscroll");
 		}
 
 		/**
@@ -392,8 +393,10 @@ var initApp = (function(app) {
 		/**
 		 * Lazyload images
 		 * doc: lazy load images to optimize performance
-		 **/
-		if ( typeof $.fn.lazy !== 'undefined') {
+		 * DEV NOTES: way too long; Please shorten it!!!
+		 */
+
+		if ( typeof $.fn.lazy !== 'undefined' && typeof $.fn.slimScroll !== 'undefined') {
 			$('.custom-scroll img').lazy({
 				effect: "fadeIn",
 				effectTime: 200,
@@ -410,7 +413,50 @@ var initApp = (function(app) {
 			$('#index').on('show.bs.dropdown', function () {
 				$('.slimScrollDiv > :first-child').trigger('scroll');
 			})
+		} else {
+			$('.custom-scroll img').lazy({
+				effect: "fadeIn",
+				effectTime: 200,
+				threshold: 10,
+				visibleOnly: true,
+				combined: true,
+				appendScroll: $('.custom-scroll')
+			});
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function () {
+				$('.custom-scroll').trigger('scroll');
+			})
+			$('#index').on('show.bs.dropdown', function () {
+				$('.custom-scroll').trigger('scroll');
+			})
 		}
+
+
+		/*app.buildCustomScroll = function (slim_target) {
+
+			$('.custom-scroll img').lazy({
+				effect: "fadeIn",
+				effectTime: 200,
+				threshold: 10,
+				enableThrottle: true,
+				throttle: 500,
+				visibleOnly: true,
+				combined: true,
+				appendScroll: slim_target
+			});
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function () {
+				slim_target.trigger('scroll');
+			})
+			$('#index').on('show.bs.dropdown', function () {
+				slim_target.trigger('scroll');
+			})
+		}
+
+		if ( typeof $.fn.lazy !== 'undefined' && typeof $.fn.slimScroll !== 'undefined') {
+			initApp.buildCustomScroll( $('.slimScrollDiv > :first-child') );
+
+		} else {
+			initApp.buildCustomScroll( $('.custom_scroll') );
+		}*/
 
 		/**
 		 * Dropdowns will not close on click

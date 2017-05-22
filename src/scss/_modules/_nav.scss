@@ -85,6 +85,21 @@ $nav-icon-margin-right:								12px !default;
 						display: block;
 						padding-bottom: rem(10px);
 					}
+
+					/* arrow that appears next to active/selected items */
+					&:not(.open) > a:before {
+						content: "\f0d9";
+						font-family: FontAwesome;
+						display: block;
+						height: 20px;
+						line-height: normal;
+						width: auto;
+						position: absolute;
+						right: -1px;
+						font-size: 20px;
+						color: #f1f1f1;
+						top: calc(50% - 10px);
+					}
 				}
 
 				a {
@@ -149,7 +164,7 @@ $nav-icon-margin-right:								12px !default;
 						width: rem(20px);
 						height: rem(20px);
 						margin-left: 5px;
-						margin-right: 14px;
+						margin-right: 15px;
 					}
 
 					> .ngmenu-link-text {
@@ -217,7 +232,7 @@ $nav-icon-margin-right:								12px !default;
 						a {
 							color: lighten(darken($nav-base-color, 11%),55%);
 
-							padding: 9px $nav-padding-right 9px rem($nav-padding-left + $nav-icon-width + 12.5px);
+							padding: 11px $nav-padding-right 11px rem($nav-padding-left + $nav-icon-width + 12.5px);
 							font-size: rem($nav-font-link-size);
 							//min-height: $nav-sub-link-height;
 

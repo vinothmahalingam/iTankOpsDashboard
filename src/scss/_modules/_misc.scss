@@ -143,6 +143,34 @@ ul.list-verticle {
 .flex-1 {
 	flex:1 !important;
 }
+
+/* profile images */
+
+.profile-image {
+	width: 45px;
+	height: auto;
+}
+
+.profile-image-md {
+	width: 25px;
+	height: 25px;
+}
+
+.profile-image-sm {
+	width: 15px;
+	height: 15px;
+}
+
+/* image share */
+
+.img-share {
+	width: auto;
+    height: 35px;
+    border: 1px solid #e4e4e4;
+    padding: 2px;
+    background: $white;
+}
+
 /* margins */
 .mrg-auto,
 .m-auto {
@@ -256,7 +284,6 @@ ul.list-verticle {
 }
 
 /* disclaimer class */
-
 .disclaimer {
     padding-left: 10px;
     font-size: 8px;

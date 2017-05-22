@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500);
-
+//@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500);
+@import url($font-import);
 
 body {
 	font-family: $heading-font-family;

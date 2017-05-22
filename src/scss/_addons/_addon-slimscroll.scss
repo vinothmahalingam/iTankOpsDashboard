@@ -2,10 +2,16 @@
 	border-radius: 3px !important;
 }
 
-.custom-scroll {
-	.slimScrollBar {
-		width: 7px !important;
-		background: #b3b3b3 !important;
-		//opacity: 0.5 !important;
+#index:not(.no-slimscroll) {
+
+	.custom-scroll {
+		overflow: hidden;
+
+		.slimScrollBar {
+			width: 7px !important;
+			background: #b3b3b3 !important;
+		}
 	}
+
 }
+

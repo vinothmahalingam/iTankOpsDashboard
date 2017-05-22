@@ -17,7 +17,11 @@
 
 		&.unread {
 			
-			background: rgba($warning-500, .09);
+			background: rgba($warning-500, .07);
+
+			.name {
+				font-weight:500;
+			}
 			
 		}
 
@@ -25,18 +29,12 @@
 			padding: 10px $p-3;
 			border-bottom: 1px solid #dddfe2;
 
-			img.profile-image {
-				width: 45px;
-				height: auto;
-				margin-right: $p-2 + $p-1;
-			}
+			img {
 
-			img.profile-image-sm {
-				padding: 2px;
-				width: 15px;
-				height: 15px;
-				margin-right: $p-1;
-			}
+				&.profile-image {
+					margin-right: $p-2 + $p-1;
+				}
+			}		
 
 			&:hover {
 				text-decoration: none;
@@ -68,7 +66,7 @@
 
 	.name {
 		color: $gray-darker;
-		font-weight: 500;
+		font-weight: 400;
 	}
 
 	.msg-a {

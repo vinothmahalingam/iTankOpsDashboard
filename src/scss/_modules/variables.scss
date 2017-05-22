@@ -222,7 +222,8 @@ $base-text-color:									darken($white,60%) !default;
 
 /*  Font Family
 ========================================================================== */
-$page-font:											"Roboto", 'Helvetica Neue', Helvetica, Arial !default; 	/* $page-font is not being defined but is here as a reference */
+$font-import:										"https://fonts.googleapis.com/css?family=Roboto:300,400,500" !default;
+$page-font:											"Roboto", 'Helvetica Neue', Helvetica, Arial !default;
 $nav-font:											$page-font !default;
 $heading-font-family:								$page-font !default; 
 $mobile-page-font:									'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -361,10 +362,8 @@ $nav-width:											240px !default;
 $nav-link-color: 									lighten($nav-base-color, 50%) !default;
 $nav-font-link-size: 								$base-font-size + 1 !default;
 $nav-collapse-sign-font-size:						$nav-font-link-size + 3 !default;	
-$nav-padding-left:									20px !default;
-$nav-padding-right:									20px !default;
-//$nav-padding-x:										20px !default;
-//$nav-padding-y:										0px !default;
+$nav-padding-left:									14px !default;
+$nav-padding-right:									14px !default;
 
 /* nav icon sizes */
 $nav-font-icon-size:								20px !default; //23px for Fontawesome & 20px for NextGen icons
@@ -399,7 +398,7 @@ $nav-hidden-visiblity:								10px !default;
 
 /* navigation on top */
 $nav-top-height:									63px !default;
-$nav-top-menu-count:								13 !default;											/* number of parent items on the main menu (adjust this if you have more or less items) */
+$nav-top-menu-count:								13 !default;	/* number of parent items on the main menu (adjust this if you have more or less items) */
 $nav-top-minify-height:								$nav-top-height/2 !default;
 
 /* nav Info Card (appears below the logo) */
@@ -416,7 +415,7 @@ $nav-dl-font-size:									10px !default;
 $nav-dl-width:										20px !default;
 $nav-dl-height:										16px !default;
 $nav-dl-margin-right:								15px !default;
-$nav-dl-margin-left:								$nav-dl-width + $nav-dl-margin-right !default; 							/* will be pulled to left as a negative value */
+$nav-dl-margin-left:								$nav-dl-width + $nav-dl-margin-right !default; 	/* will be pulled to left as a negative value */
 
 /*   MISC Settings
 ========================================================================== */
