@@ -26,6 +26,7 @@
     "gulp-html-prettify": "0.0.1",
     "gulp-htmlcomb": "^0.1.0",
     "gulp-imagemin": "^3.1.1",
+    "gulp-prompt": "^0.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.1",
     "gulp-sass-glob": "^1.0.8",

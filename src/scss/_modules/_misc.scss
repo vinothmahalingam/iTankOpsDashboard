@@ -152,20 +152,20 @@ ul.list-verticle {
 }
 
 .profile-image-md {
-	width: 25px;
-	height: 25px;
+	width: 30px;
+	height: auto;
 }
 
 .profile-image-sm {
-	width: 15px;
-	height: 15px;
+	width: 20px;
+	height: auto;
 }
 
 /* image share */
 
 .img-share {
 	width: auto;
-    height: 35px;
+    height: 45px;
     border: 1px solid #e4e4e4;
     padding: 2px;
     background: $white;
