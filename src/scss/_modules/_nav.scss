@@ -230,7 +230,7 @@
 							color: lighten(darken($nav-base-color, 11%),55%);
 
 							padding: 10px $nav-padding-right 10px rem($nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.5px);
-							font-size: rem($nav-font-link-size - 1);
+							font-size: rem($nav-font-link-size);
 							//min-height: $nav-sub-link-height;
 
 							b.collapse-sign {
@@ -326,8 +326,8 @@
 
 								a {
 									color: lighten(darken($nav-base-color, 11%),55%);
-									padding: 9px $nav-padding-right 9px rem($nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 10.5);
-									font-size:rem($nav-font-link-size - 1.5);
+									padding: 9px $nav-padding-right 9px rem($nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.5);
+									font-size:rem($nav-font-link-size - 1);
 
 									.dl-ref {
 										margin-left: 0;

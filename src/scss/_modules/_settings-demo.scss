@@ -16,7 +16,7 @@
 			margin:0;
 			font-weight:500;
 			font-size: rem($base-font-size + 1);
-			padding: 15px 15px 5px;
+			padding: $p-3 $p-3 5px;
 			box-sizing: content-box;
 			display: block;
 			overflow:hidden;
@@ -34,7 +34,7 @@
 			width:100%;
 			font-weight:400;
 			min-height:rem(35px);
-			padding: rem(4.75px) rem(15px) rem(4.75px) rem(15px);
+			padding: rem(4.75px) $p-3 rem(4.75px) $p-3;
 			color:darken($settings-panel-bg, 60%);
 			position: relative;
 
@@ -116,6 +116,7 @@
 					.btn-switch {
 						margin-top:3px;
 						@include scale(0.9);
+						top: -2px;
 
 						& + .onoffswitch-title {
 							font-size:12px;

@@ -30,7 +30,7 @@
 	}	
 
 	.info-card-text {
-		margin-left: rem($profile-image-width/5);
+		margin-left: $p-2/2 + $p-1;
 		color: inherit;
 		text-shadow: $black 0 1px;
 		z-index: 1;
@@ -63,16 +63,17 @@
 }
 
 .info-card-text {
-	font-size: rem($nav-font-link-size + $nav-font-link-size/8);
+	font-size: $base-font-size + 1;
 	display: inline-block;
 	vertical-align: middle;
-	font-weight: 400;
-	letter-spacing: -0.01rem;
+	font-weight: 500;
+	//letter-spacing: -0.01rem;
 	line-height: 1.35;
 
 	> span {
-		font-size: rem($nav-font-link-size - 1px);
-		letter-spacing: rem(0.2px);
+		font-size: $base-font-size - 1;
+		//letter-spacing: rem(0.2px);
 		display: block;
+		font-weight: 400;
 	}
 }

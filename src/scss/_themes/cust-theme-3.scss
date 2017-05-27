@@ -11,8 +11,11 @@ $color-danger:          							darken(saturate(adjust-hue($color-primary, 80), 5
 @import './src/scss/_imports/_theme-modules-import';
 
 
-/* #MARK SELECTED
+/* #Reset userselect
 ========================================================================== */
+#myapp-1 {
+	box-shadow: none !important;
+}
 #myapp-4 {
-	border:1px solid #ed2c24;
+	box-shadow: 0 0 0 3px #2ba1ff;
 }

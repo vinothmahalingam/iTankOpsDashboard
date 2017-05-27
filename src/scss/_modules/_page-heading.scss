@@ -1,17 +1,19 @@
 .page-heading {
-	margin-bottom: $grid-gutter-width-base + $grid-gutter-width-base/2;
+	margin-bottom: $grid-gutter-width-base + 5;
 	position: relative;
 
 	.page-header {
-		font-weight: 400;
+		font-size: 28px;
+		font-weight: 300;
 		color: $fusion-500;
 		margin: 0 0 $grid-gutter-width-base/3 + 2;
 
 	    small {
 	    	font-weight: 400;
-	    	font-size: 65%;
+	    	font-size: 15px;
 	    	color: $fusion-100;
 	    	margin-bottom: ($grid-gutter-width-base / 2);
+	    	margin-top: -2px;
 	    }
 
 	    >.fa,
