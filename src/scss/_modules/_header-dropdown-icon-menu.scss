@@ -1,0 +1,57 @@
+.dropdown-icon-menu {
+
+	> .btn {
+		z-index: 1;
+	}
+
+	> ul {
+		opacity: 0;
+		list-style: none;
+		margin: 0;
+		position: absolute;
+		background: $white;
+		height:rem($header-btn-height);
+		padding: rem($header-btn-height + 8) rem(4px) rem(5px);
+		width: rem($header-btn-width + 8);
+		margin-left:1px;
+		margin-top: -($header-btn-height + 4);
+		left: rem(-5px);
+		overflow: hidden;
+		box-shadow: 0 rem(3px) rem(3px) rgba(0,0,0,.12),0 0 rem(3px) rgba(0,0,0,.24);
+
+		@include rounded(rem($header-btn-border-radius));
+		@extend %common-animation-slow;
+
+		> li {
+			margin-bottom:rem(4px);
+			position: relative;
+			
+			.btn {
+				@extend %header-btn;
+			}
+
+
+			&:last-child {
+				margin-bottom:0;
+			}
+		}
+
+	}
+
+	&:hover {
+
+		> ul {
+			display: block;
+			opacity: 1;
+			/*
+			 * n = number of buttons minus 1 
+			 *     eg. $header-btn-height * 2n
+			 */
+			height: rem($header-btn-height + ($header-btn-height * 2) + 16); 		
+
+			&:hover {
+				overflow: visible;
+			}
+		}
+	}
+}

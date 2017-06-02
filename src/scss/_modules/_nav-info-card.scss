@@ -4,11 +4,33 @@
 	width:rem($nav-width);
 	height:rem($nav-infocard-height);
 	max-height: rem($nav-infocard-height);
-	padding: rem($header-height - 10) rem( $nav-width/10.5 ) 0;
 	color:$white;
 	overflow: hidden;
 
+	padding-top:25px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
 	@include transition(0.4s,ease-in-out); 
+
+	.info-card-date {
+		position: absolute;
+		top: 0;
+		color: rgba(255, 255, 255, 0.8);
+		z-index: 2;
+		background: rgba(0,0,0,0.1);
+		display: block;
+		width: 100%;
+		text-align: center;
+		padding: 6px 15px;
+		text-shadow: $black 0 1px;
+		border-bottom: 1px solid rgba(0,0,0,0.22);
+		font-size: 12px;
+		font-family: Arial;
+	}
 
 	img.cover {
 		opacity: 0.5;
@@ -48,7 +70,7 @@
 	#info-card {
 
 		&:hover {
-			padding-top: rem($header-height - 18);
+			//padding-top: rem($header-height - 18);
 			@include transition(0.10s,ease-in-out); 
 			will-change: opacity;
 		}

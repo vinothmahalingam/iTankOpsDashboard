@@ -1,8 +1,126 @@
-{{#> layouts/main title="Responsive Grid" pagename="intel_responsive_grid" heading="Responsive Grid" pagedescription="Bootstrap includes a powerful mobile-first flexbox grid system for building layouts of all shapes and sizes. It’s based on a 12 column layout and has multiple tiers, one for each media query range. "}}
+{{#> layouts/main title="Responsive Grid" pagename="intel_responsive_grid" heading="Responsive Grid" pagedescription="Bootstrap includes a powerful mobile-first flexbox grid system for building layouts of all shapes and sizes. "}}
 
 {{#*inline "head-block"}}{{/inline}}
 
 {{#*inline "content-block"}}
+
+<section class="card p-3 d-block mrg-b-gutter">
+	
+	<div class="well">
+		
+		<table class="table table-bordered table-striped m-0">
+			<thead>
+				<tr>
+					<th class="border-top-0"></th>
+					<th>
+						Extra small devices 
+						<small class="d-block font-sm text-muted">
+							Phones (&lt;0px)
+						</small>
+					</th>
+					<th> 
+						Small devices 
+						<small class="d-block font-sm text-muted">
+							Tablets (≥576px)
+						</small>
+					</th>
+					<th>
+						Medium devices 
+						<small class="d-block font-sm text-muted">
+							Desktops (≥768px)
+						</small>
+					</th>
+					<th>
+						Large devices 
+						<small class="d-block font-sm text-muted">
+							Desktops (≥992px)
+						</small>
+					</th>
+					<th> 
+						Extra Large devices 
+						<small class="d-block font-sm text-muted">
+							Desktops (≥1200px)
+						</small>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Grid behavior</th>
+					<td>Horizontal at all times</td>
+					<td colspan="4">Collapsed to start, horizontal above breakpoints</td>
+				</tr>
+				<tr>
+					<th>Max container</th>
+					<td>None (auto)</td>
+					<td>576px</td>
+					<td>768px</td>
+					<td>992px</td>
+					<td>1200px</td>
+				</tr>
+				<tr>
+					<th>Class prefix</th>
+					<td>
+					<code>
+						.col-xs-
+					</code></td>
+					<td>
+					<code>
+						.col-sm-
+					</code></td>
+					<td>
+					<code>
+						.col-md-
+					</code></td>
+					<td>
+					<code>
+						.col-lg-
+					</code></td>
+					<td>
+					<code>
+						.col-xl-
+					</code></td>
+				</tr>
+				<tr>
+					<th>Number of columns</th>
+					<td colspan="5">12</td>
+				</tr>
+				<tr>
+					<th>Max column width</th>
+					<td class="text-muted">Auto</td>
+					<td>60px</td>
+					<td>78px</td>
+					<td>95px</td>
+					<td>95px</td>
+				</tr>
+				<tr>
+					<th>Gutter width</th>
+					<td colspan="5">30px (15px on each side of a column)</td>
+				</tr>
+				<tr>
+					<th>Nestable</th>
+					<td colspan="5">Yes</td>
+				</tr>
+				<tr>
+					<th>Offsets</th>
+					<td class="text-muted">N/A</td>
+					<td class="text-muted">N/A</td>
+					<td colspan="3">Yes</td>
+				</tr>
+				<tr>
+					<th>Column ordering</th>
+					<td class="text-muted">N/A</td>
+					<td class="text-muted">N/A</td>
+					<td colspan="3">Yes</td>
+				</tr>
+			</tbody>
+		</table>
+			
+	</div>
+
+</section>
+
+<!-- example start -->
 
 <section class="card p-3 d-block">
 		

@@ -1,0 +1,110 @@
+ul.app-list {
+	margin:0 auto;
+	padding:0;
+	display: block;
+	width: rem($header-applist-rows-width) !important;
+	height: rem($header-applist-rows-height) !important;
+	font-size:0; //removes wierd spacing
+	padding: $header-applist-box-padding-x $header-applist-box-padding-y;
+	text-align: center;
+
+	> li {
+		display: inline-block;
+		text-align: center;
+		padding:0;
+
+		&:hover {
+			& > a {
+				border:1px solid lighten($gray-mid-light, 14%);
+			}
+		}
+
+		> a {
+			height:rem($header-applist-link-block-height);
+			width:rem($header-applist-link-block-width);
+			display: block;
+			text-decoration: none;
+			color:$base-text-color;
+			margin: rem(10px) rem(2px);
+			border:1px solid transparent;
+			outline: none;
+			@include rounded(2px);
+
+			&:hover {
+				border:1px solid lighten($gray-mid-light, 14%);
+			}
+
+			> span.n {
+				text-align: center;
+				display: block;
+				font-size: $base-font-size;
+				text-overflow: ellipsis;
+				display: inline-block;
+				white-space: nowrap;
+				overflow: hidden;
+				position: absolute;
+				bottom:0;
+				left:0;
+				right:0;
+			}
+
+			> .base {
+				    font-size: 42px;
+					color: $primary-300;
+					margin-top: 7px;
+			}
+
+			> .top {
+				font-size: 42px/2 + 1;
+				color: $white;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 17px;
+
+				&.mask {
+					color: $primary-700;
+					font-size: 42px/2 + 5;
+					top: 12px;
+
+					&[class*=" base-"] {
+						top:14px;
+					}
+				}
+
+				&.larger-icon {
+					font-size: 31px;
+					top: 10px;
+				}
+
+				&.smaller-icon {
+					font-size: 16px;
+					top:18px;
+				}
+
+				&[class^="md-"], 
+				&[class*=" md-"]{
+					font-size: 30px;
+					top: 11px;
+					color: $primary-700;
+
+					&.mask {
+						color: $white;
+						font-size: 30px - 5px;
+						top: 13px;
+					}
+
+					&.larger-icon {
+						font-size: 43px;
+						top: 6px;
+					}
+
+					&.smaller-icon {
+						font-size: 25px;
+					}
+				}
+			}
+
+		}
+	}
+}

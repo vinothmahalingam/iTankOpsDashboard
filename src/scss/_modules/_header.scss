@@ -2,7 +2,7 @@ $header-badge-min-width: 							20px !default;
 $header-badge-padding-x: 							3px !default;
 $header-badge-padding-y: 							2px !default;
 $header-badge-left: 								23px !default;
-$header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !default;
+$header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !default; 
 
 #banner {
 	background-color: $header-bg;
@@ -130,125 +130,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 							@extend %header-dropdown;
 							right: $grid-gutter-width-base/2;
 							top: $header-height - 1;
-							padding: 5px;
-
-							/*&.app-icons {
-								width: rem( ( ($header-applist-link-block-width + 2) * $header-applist-link-icons-per-row) + ( ($header-applist-box-padding-y + 5) * 2) + (6 * $header-applist-link-icons-per-row) );
-								height: rem( ( ($header-applist-link-block-height + 20) * $header-applist-rows-on-display ) + ( ($header-applist-box-padding-x + 6) * 2) );
-								max-height: none;
-							}*/
-
-							//@extend %custom-scroll;
-
-							.app-list {
-								margin:0;
-								padding:0;
-								display: block;
-								width:100%;
-								font-size:0; //removes wierd spacing
-								padding: rem($header-applist-box-padding-x) rem($header-applist-box-padding-y);
-								text-align: center;
-
-								> li {
-									display: inline-block;
-									text-align: center;
-									padding:0;
-
-									&:hover {
-										& > a {
-											border:1px solid lighten($gray-mid-light, 14%);
-										}
-									}
-
-									> a {
-										height:rem($header-applist-link-block-height);
-										width:rem($header-applist-link-block-width);
-										display: block;
-										text-decoration: none;
-										color:$base-text-color;
-										margin: rem(10px) rem(2px);
-										border:1px solid transparent;
-										outline: none;
-										@include rounded(2px);
-
-										&:hover {
-											border:1px solid lighten($gray-mid-light, 14%);
-										}
-
-										> span.n {
-											text-align: center;
-											display: block;
-											font-size: $base-font-size;
-											text-overflow: ellipsis;
-											display: inline-block;
-											white-space: nowrap;
-											overflow: hidden;
-											position: absolute;
-											bottom:0;
-											left:0;
-											right:0;
-										}
-
-										> .base {
-											    font-size: 42px;
-												color: $primary-300;
-												margin-top: 7px;
-										}
-
-										> .top {
-											font-size: 42px/2 + 1;
-											color: $white;
-											position: absolute;
-											left: 0;
-											right: 0;
-											top: 17px;
-
-											&.mask {
-												color: $primary-700;
-												font-size: 42px/2 + 5;
-												top: 12px;
-
-												&[class*=" base-"] {
-													top:14px;
-												}
-											}
-
-											&.larger-icon {
-												font-size: 31px;
-												top: 10px;
-											}
-
-											&.smaller-icon {
-												font-size: 16px;
-												top:18px;
-											}
-
-											&[class^="md-"], 
-											&[class*=" md-"]{
-												font-size: 30px;
-												top: 11px;
-												color: $primary-700;
-
-												&.mask {
-													color: $white;
-													font-size: 30px - 5px;
-													top: 13px;
-												}
-
-												&.larger-icon {
-													font-size: 43px;
-													top: 6px;
-												}
-
-												&.smaller-icon {
-													font-size: 25px;
-												}
-											}
-										}
-
-									}
-								}
-							}
+							padding: 0;
 						}
 
 						/* end header dropdowns */
@@ -257,7 +139,6 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 
 					> img.profile-image {
 						display: inline-block;
-						//margin-top: 15px;
 						margin-right: 5px;
 						width: 29px;
 						height:auto;
@@ -284,66 +165,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 
 				}
 
-			}
-
-			&.dropdown-icon-menu {
-
-				> .btn {
-					z-index: 1;
-				}
-
-				> ul {
-					opacity: 0;
-					list-style: none;
-					margin: 0;
-					position: absolute;
-					background: $white;
-					height:rem($header-btn-height);
-					padding: rem($header-btn-height + 8) rem(4px) rem(5px);
-					width: rem($header-btn-width + 8);
-					margin-left:1px;
-					margin-top: -($header-btn-height + 4);
-					left: rem(-5px);
-					overflow: hidden;
-					box-shadow: 0 rem(3px) rem(3px) rgba(0,0,0,.12),0 0 rem(3px) rgba(0,0,0,.24);
-
-					@include rounded(rem($header-btn-border-radius));
-					@extend %common-animation-slow;
-
-					> li {
-						margin-bottom:rem(4px);
-						position: relative;
-						
-						.btn {
-							@extend %header-btn;
-						}
-
-
-						&:last-child {
-							margin-bottom:0;
-						}
-					}
-
-				}
-
-				&:hover {
-
-					> ul {
-						display: block;
-						opacity: 1;
-						/*
-						 * n = number of buttons minus 1 
-						 *     eg. $header-btn-height * 2n
-						 */
-						height: rem($header-btn-height + ($header-btn-height * 2) + 16); 		
-
-						&:hover {
-							overflow: visible;
-						}
-					}
-				}
-			}
-			
+			}			
 		}
 
 		/* header section left has search box */

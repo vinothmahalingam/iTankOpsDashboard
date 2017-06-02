@@ -1,9 +1,26 @@
-{{#> layouts/main title="breadcrumbs" pagename="ui_breadcrumbs" heading="breadcrumbs" pagedescription="breadcrumbs description"}}
+{{#> layouts/main title="Breadcrumbs" pagename="ui_breadcrumbs" heading="Breadcrumbs" pagedescription="Breadcrumbs description"}}
 
 {{#*inline "head-block"}}{{/inline}}
 
 {{#*inline "content-block"}}
-breadcrumbs
+
+<h2>
+	Indicate the current page’s location within a navigational hierarchy. Separators are automatically added in CSS through ::before and content.
+</h2>
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item active">Home</li>
+</ol>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">Home</a></li>
+  <li class="breadcrumb-item active">Library</li>
+</ol>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">Home</a></li>
+  <li class="breadcrumb-item"><a href="#">Library</a></li>
+  <li class="breadcrumb-item active">Data</li>
+</ol>
+
 {{/inline}}
 
 {{#*inline "scripts-block"}}{{/inline}}

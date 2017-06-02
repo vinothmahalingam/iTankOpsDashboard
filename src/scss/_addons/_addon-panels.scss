@@ -1,8 +1,10 @@
 $panel-padding: 15px;
+$panel-hdr-padding: $panel-padding - 3;
 $panel-hdr-font-size: 14px;
-$panel-hdr-height: 50px;
+$panel-hdr-height: 42px;
 $panel-btn-size: 16px;
-$panel-hdr-background: #fff;
+$panel-hdr-background: #fafafa;
+$panel-edge-radius: $border-radius;
 
 .panel-fullscreen {
 	overflow:hidden;
@@ -15,15 +17,16 @@ $panel-hdr-background: #fff;
 	display: flex;
 	flex-direction: column;
 	background-color: $white;
-	border: 1px solid rgba(0,0,0,.125);
+	//border: 1px solid rgba(0,0,0,.125);
 
 	margin-bottom: map-get($grid-gutter-widths, lg);
-	border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+	//border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.17) rgba(0, 0, 0, 0.20);
+	box-shadow: 0 1px 1px rgba(0,0,0,.05);
 	border-radius: $border-radius;
 
 	.panel-hdr {
 		
-		padding: 0 $panel-padding;
+		padding: 0 $panel-hdr-padding;
 		font-size: $panel-hdr-font-size;
 		min-height: $panel-hdr-height;
 		font-weight: 500;
@@ -31,6 +34,14 @@ $panel-hdr-background: #fff;
 		display:flex;
 		align-items:center;
 		flex-direction:row;
+
+		@include box-sizing(border-box); 
+
+		border: 1px solid;
+    	border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.17);
+
+		background: $panel-hdr-background;
+		border-radius: $panel-edge-radius $panel-edge-radius 0 0;
 
 		.panel-subtitle {
 			font-size: $panel-hdr-font-size - 1;
@@ -55,7 +66,9 @@ $panel-hdr-background: #fff;
 					height: $panel-btn-size;
 					font-size: $base-font-size;
 					border-color: transparent;
-					box-sizing: border-box;
+
+					@include box-sizing(border-box);
+
 					border-radius: 50%;
 					opacity: 0.8;
 					border: 1px solid rgba(0,0,0,0.2);
@@ -83,8 +96,14 @@ $panel-hdr-background: #fff;
 
 	.panel-container {
 
-		padding: 0 $panel-padding ($panel-padding - 5);
+		padding: $p-3;
 		@extend %common-animation-easeout;
+
+		border: 1px solid transparent;
+    	border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.17) rgba(0, 0, 0, 0.2);
+    	border-top-width: 0px;
+
+    	border-radius: 0 0 $panel-edge-radius $panel-edge-radius;
 
 		&:only-child {
 			padding: $panel-padding;
@@ -138,17 +157,17 @@ $panel-hdr-background: #fff;
 
 	}
 
-	/* panel boxed */
+	/* panel boxed 
 	&.panel-hdr-boxed {
 		.panel-hdr {
-			border-bottom: 1px solid #e6e6e6;	
+			//border-bottom: 1px solid rgba(0, 0, 0, 0.10);	
 			background: $panel-hdr-background;
 			border-radius: $border-radius $border-radius 0 0;
 		}
 		.panel-container {
 			padding: $panel-padding $panel-padding ($panel-padding - 5);
 		}
-	}
+	}*/
 
 }
 	

@@ -134,6 +134,10 @@ ul.list-verticle {
 	height: auto !important;
 }
 
+.w-auto {
+	width: auto !important;
+}
+
 /* flex */
 .flex-middle {
 	@extend %flexbox;

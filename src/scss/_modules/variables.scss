@@ -111,7 +111,7 @@ $fusion-800:										darken($fusion-500, 15%) !default;
 $fusion-900:										darken($fusion-500, 20%) !default;
 
 /*   BOOTSTRAP OVERRIDES (bootstrap variables)
-========================================================================== */
+========================================================================== */ 
 $brand-primary:             						$primary-500;
 $brand-success:             						$success-500;
 $brand-info:                						$info-500;
@@ -132,6 +132,7 @@ $border-radius-sm:									$border-radius;
 $table-inverse-bg:									$fusion-400;
 $table-bg-hover:									rgba($fusion-300,.035);
 $table-border-color:								darken($gray-lighter, 5%);
+$table-bg-accent:               					rgba($black,.02);
 
 /* reference guide
 8px = 0.5rem
@@ -194,11 +195,11 @@ $mobile-breakpoint-size:							map-get($grid-breakpoints, lg) !default;				/* bo
 $grid-gutter-width-base:     						30px;
 
 $grid-gutter-widths: (
-  xs: $grid-gutter-width-base / 2,
-  sm: $grid-gutter-width-base / 2,
-  md: $grid-gutter-width-base / 2,
-  lg: $grid-gutter-width-base / 1.5,
-  xl: $grid-gutter-width-base / 1.5
+  xs: $grid-gutter-width-base / 2,					//15
+  sm: $grid-gutter-width-base / 2,					//
+  md: $grid-gutter-width-base / 2,					//
+  lg: $grid-gutter-width-base / 1.5,				//20
+  xl: $grid-gutter-width-base / 1.5 				//
 );
 
 /* global var used for spacing*/
@@ -276,10 +277,8 @@ $header-height:										60px !default;
 
 /* logo */
 $header-logo-border-bottom:							rgba($black, .4) !default;
-$header-logo-width:									170px !default; 										/* try not to go beywond the width of $main_nav_width value */
-$header-logo-height:								27px !default 											/* you may need to change this depending on your logo design */
-//$header-logo-margin-top:							$header-height/2 - $header-logo-height/2 - 2 !default;  /* adjust this as you see fit */
-//$header-logo-margin-right:						0px !default; 											/* adjust this as you see fit */
+$header-logo-width:									154px !default; 										/* try not to go beywond the width of $main_nav_width value */
+$header-logo-height:								24.45px !default 											/* you may need to change this depending on your logo design */
 $header-logo-text-align:							center; 												/* adjust this as you see fit : left, right, center */
 
 /* icon font size (not button) */
@@ -314,12 +313,12 @@ $header-dropdown-menu-normal-height:				300px !default
 $header-dropdown-menu-border-color:					#ccc !default;
 
 /* dropdown: app list */
-$header-applist-link-block-height:					84px;
-$header-applist-link-block-width:					76px;
-$header-applist-link-icons-per-row:					3; 
-$header-applist-rows-on-display:					4; 
-$header-applist-box-padding-x:						0px;
-$header-applist-box-padding-y:						20px;
+$header-applist-link-block-height:					75px;
+$header-applist-link-block-width:					72px;
+$header-applist-rows-width:							340px;
+$header-applist-rows-height:						305px; 
+$header-applist-box-padding-x:						$p-2;
+$header-applist-box-padding-y:						$p-3;
 
 
 /*  NAVIGATION STUFF
@@ -405,8 +404,8 @@ $nav-top-menu-count:								13 !default;	/* number of parent items on the main m
 $nav-top-minify-height:								$nav-top-height/2 !default;
 
 /* nav Info Card (appears below the logo) */
-$nav-infocard-height:								130px !default;
-$profile-image-width:								50px !default; 
+$nav-infocard-height:								130px + 15px !default;
+$profile-image-width:								45px !default; 
 
 /*nav Badge Size */
 $nav-badge-height:									16px !default;
