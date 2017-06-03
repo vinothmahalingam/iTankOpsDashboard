@@ -19,17 +19,16 @@
 	.info-card-date {
 		position: absolute;
 		top: 0;
+		left:0;
 		color: rgba(255, 255, 255, 0.8);
 		z-index: 2;
 		background: rgba(0,0,0,0.1);
 		display: block;
 		width: 100%;
 		text-align: center;
-		padding: 6px 15px;
+		padding: $page-breadcrumb-padding;
 		text-shadow: $black 0 1px;
 		border-bottom: 1px solid rgba(0,0,0,0.22);
-		font-size: 12px;
-		font-family: Arial;
 	}
 
 	img.cover {
@@ -47,7 +46,7 @@
 		width: rem($profile-image-width);
 		height: auto;
 		display: inline-block;
-		z-index: 1;
+		z-index: 2;
 		position: relative;
 	}	
 

@@ -58,7 +58,7 @@ $grid-breakpoints: (
 			padding:0 $grid-gutter-width-base/2;
 			width:100%;
 
-			ul.list-table {
+			/*ul.list-table {
 				> li {
 					> a:not(.btn)[data-toggle="dropdown"] {
 						& + .dropdown-menu {
@@ -70,7 +70,7 @@ $grid-breakpoints: (
 						}
 					}
 				}
-			}
+			}*/
 
 			#hdr-l {
 				> .search {

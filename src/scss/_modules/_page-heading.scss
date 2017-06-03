@@ -3,8 +3,8 @@
 	//margin-bottom: $grid-gutter-width-base - 15;
 	position: relative;
 
-	display: flex;
-	flex-direction: column;
+	//display: flex;
+	//flex-direction: column;
 	//align-items: center; //
 
 	.page-header {
@@ -38,7 +38,7 @@
 	}
 
 	.breadcrumb {
-		order: -1; //
+/*		order: -1; //
 		margin-bottom: 15px; //
 
 		order: -1;
@@ -50,6 +50,6 @@
 		background: rgba(0,0,0,0.010);
 		padding: 6px 15px;
 		border-bottom: 1px solid rgba(0,0,0,0.072);
-		text-shadow: $white 0 1px;
+		text-shadow: $white 0 1px;*/
 	}
 }

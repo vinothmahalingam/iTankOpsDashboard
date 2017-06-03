@@ -3,6 +3,13 @@
 	background:transparent;
 	margin:0 ;
 
+		margin: -20px -15px 27px;
+
+		background: rgba(0,0,0,0.010);
+		padding: $page-breadcrumb-padding;
+		border-bottom: 1px solid rgba(0,0,0,0.072);
+		text-shadow: $white 0 1px;
+
 	> li {
 		> a {
 			text-decoration: none !important;
@@ -13,3 +20,4 @@
 		}
 	}
 }
+
