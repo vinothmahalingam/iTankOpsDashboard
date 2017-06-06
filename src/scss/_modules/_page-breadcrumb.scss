@@ -1,22 +1,41 @@
 .breadcrumb {
 	padding:0;
 	background:transparent;
-	margin:0 ;
+	margin:0 0 20px;
 
-		margin: -20px -15px 27px;
+		//margin: -20px -15px 27px;
 
-		background: rgba(0,0,0,0.010);
-		padding: $page-breadcrumb-padding;
-		border-bottom: 1px solid rgba(0,0,0,0.072);
+		//background: rgba(0,0,0,0.010);
+		//padding: $page-breadcrumb-padding;
+		//border-bottom: 1px solid rgba(0,0,0,0.072);
 		text-shadow: $white 0 1px;
 
 	> li {
+
 		> a {
 			text-decoration: none !important;
 		}
 
 		&.breadcrumb-item {
 			font-size: rem($page-breadcrumb-font-size);
+			max-width: 130px;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+
+			@extend %common-animation-slow;
+
+			&:hover {
+				max-width: 200px;
+				cursor: default;
+			}
+		}
+
+		&.breadcrumb-right-placeholder {
+			max-width: 195px;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
 		}
 	}
 }

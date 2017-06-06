@@ -268,7 +268,7 @@ $depth-settings:									$depth-header + 2 !default;
 
 /* colors */
 $header-bg:											#fff !default;
-$header-border-bottom-color:						rgba($color-fusion, (25/100));		
+$header-border-bottom-color:						rgba($color-fusion, (17/100));		
 $header-link-color:									darken($header-bg, 50%) !default;
 $header-link-hover-color:							darken($header-bg, 75%) !default;
 
@@ -404,7 +404,7 @@ $nav-top-menu-count:								13 !default;	/* number of parent items on the main m
 $nav-top-minify-height:								$nav-top-height/2 !default;
 
 /* nav Info Card (appears below the logo) */
-$nav-infocard-height:								130px + 15px !default;
+$nav-infocard-height:								130px !default;
 $profile-image-width:								45px !default; 
 
 /*nav Badge Size */

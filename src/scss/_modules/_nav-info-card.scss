@@ -7,7 +7,7 @@
 	color:$white;
 	overflow: hidden;
 
-	padding-top:25px;
+	//padding-top:25px;
 
     display: flex;
     flex-direction: row;
@@ -16,7 +16,7 @@
 
 	@include transition(0.4s,ease-in-out); 
 
-	.info-card-date {
+	/*.info-card-date {
 		position: absolute;
 		top: 0;
 		left:0;
@@ -29,7 +29,7 @@
 		padding: $page-breadcrumb-padding;
 		text-shadow: $black 0 1px;
 		border-bottom: 1px solid rgba(0,0,0,0.22);
-	}
+	}*/
 
 	img.cover {
 		opacity: 0.5;

@@ -97,6 +97,10 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 							position: relative;
 							z-index: $depth-header + 1;
 
+							
+							font-weight: 500;
+							
+
 							&:before,
 							&:after {
 								content:" ";

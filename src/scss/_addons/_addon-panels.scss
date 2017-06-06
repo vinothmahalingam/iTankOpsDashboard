@@ -1,6 +1,6 @@
 $panel-padding: 15px;
 $panel-hdr-padding: $panel-padding - 3;
-$panel-hdr-font-size: 14px;
+$panel-hdr-font-size: 15px;
 $panel-hdr-height: 42px;
 $panel-btn-size: 16px;
 $panel-hdr-background: #fafafa;
@@ -17,7 +17,6 @@ $panel-edge-radius: $border-radius;
 	display: flex;
 	flex-direction: column;
 	background-color: $white;
-	//border: 1px solid rgba(0,0,0,.125);
 
 	margin-bottom: map-get($grid-gutter-widths, lg);
 	//border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.17) rgba(0, 0, 0, 0.20);
@@ -27,9 +26,7 @@ $panel-edge-radius: $border-radius;
 	.panel-hdr {
 		
 		padding: 0 $panel-hdr-padding;
-		font-size: $panel-hdr-font-size;
 		min-height: $panel-hdr-height;
-		font-weight: 500;
 
 		display:flex;
 		align-items:center;
@@ -42,6 +39,12 @@ $panel-edge-radius: $border-radius;
 
 		background: $panel-hdr-background;
 		border-radius: $panel-edge-radius $panel-edge-radius 0 0;
+
+		h2, h3 {
+			font-size: $panel-hdr-font-size;
+			margin: 0;
+			//flex:1;
+		}
 
 		.panel-subtitle {
 			font-size: $panel-hdr-font-size - 1;
@@ -58,7 +61,7 @@ $panel-edge-radius: $border-radius;
 			margin-left:auto;
 
 			.btn {
-				margin-left:5px;
+				margin-left:$p-1;
 
 				&.btn-panel {
 					padding: 0;
@@ -127,11 +130,14 @@ $panel-edge-radius: $border-radius;
 
 		.panel-hdr {
 			height:$header-height;
-			font-size: $panel-btn-size + 3;
-			font-weight:400;
 			background: #fafafa;
 			border-radius: 0 !important;
 			box-shadow: 0 0.125rem 0.125rem -0.0625rem rgba(0, 0, 0, 0.1);
+		}
+
+		h2, h3 {
+			font-size: $panel-btn-size + 3;
+			font-weight:400;
 		}
 
 		.btn-panel[data-action="panel-fullscreen"] {
@@ -170,7 +176,28 @@ $panel-edge-radius: $border-radius;
 	}*/
 
 }
-	
+
+
+.mod-panel-clean {
+
+	.panel {
+
+		.panel-hdr {
+			background-image: linear-gradient(to bottom,#f7f7f7,#fff);
+			border-bottom: 0;
+			padding: 15px 15px 12px;
+			
+			h2,h3 {
+				color: #333;
+				font-weight: 500;
+			}
+		}
+
+		.panel-container {
+			padding-top: $p-1;
+		}
+	}
+}	
 
 @media only screen and ( max-width: 420px ){
 

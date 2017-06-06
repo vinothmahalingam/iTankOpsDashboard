@@ -24,7 +24,7 @@ $grid-breakpoints: (
 		padding: 0 $grid-gutter-width-base/2;
 	}
 	#content {
-		padding: map-get($grid-gutter-widths, lg) $grid-gutter-width-base/2;
+		padding: $grid-gutter-width-base/2;
 
 		.card.panel {
 			margin-bottom: map-get($grid-gutter-widths, lg);
@@ -37,7 +37,7 @@ $grid-breakpoints: (
 		padding: 0 $grid-gutter-width-base/2;
 	}
 	#content {
-		padding: map-get($grid-gutter-widths, lg) $grid-gutter-width-base/2;
+		padding: $grid-gutter-width-base/2;
 
 		.card.panel {
 			margin-bottom: map-get($grid-gutter-widths, xl);

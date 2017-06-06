@@ -340,7 +340,12 @@ var initApp = (function(app) {
 	 * DOC: start jQuery(document).ready calls
 	 **/
 	app.domReadyMisc = function() {
-	
+		
+		/* Add app date to breadcrumb-right-placeholder */
+		if ( $( "#app-date" ).length ) {
+			$('#app-date').text(new Date($.now()));
+		}
+
 		/* Check conflicting classes to build/destroy slimscroll */
 		initApp.checkSettingConditions();
 
