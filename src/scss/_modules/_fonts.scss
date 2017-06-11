@@ -78,47 +78,37 @@ h6 small,
 
 /* font sizes */
 
-/* 9px */
-.font-nano {
-	font-size: $base-font-size - 4;
-}
-
 /* 10px */
-.font-micro {
-	font-size: $base-font-size - 3;
-}
-
-/* 11px */
-.font-xxs {
-	font-size: $base-font-size - 2;
+.fs-nano {
+	font-size: $fs-nano;
 }
 
 /* 12px */
-.font-xs {
-	font-size: $base-font-size - 1;
+.fs-xs {
+	font-size: $fs-xs;
 }
 
 /* 12.5px */
-.font-sm {
-	font-size: $base-font-size - 0.5;
+.fs-sm {
+	font-size: $fs-sm;
 }
 
 /* 13px */
-.font-norm {
+.font-base {
 	font-size: $base-font-size;
 }
 
 /* 14px */
-.font-md {
-	font-size: $base-font-size + 1;
+.fs-md {
+	font-size: $fs-md;
 }
 
 /* 15px */
-.font-lg {
-	font-size: $base-font-size + 2;
+.fs-lg {
+	font-size: $fs-lg;
 }
 
 /* 16px */
-.font-xl {
-	font-size: $base-font-size + 3;
+.fs-xl {
+	font-size: $fs-xl; 
 }

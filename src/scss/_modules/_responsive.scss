@@ -58,20 +58,6 @@ $grid-breakpoints: (
 			padding:0 $grid-gutter-width-base/2;
 			width:100%;
 
-			/*ul.list-table {
-				> li {
-					> a:not(.btn)[data-toggle="dropdown"] {
-						& + .dropdown-menu {
-							width: 290px;
-
-							.app-list {
-								padding:0;
-							}
-						}
-					}
-				}
-			}*/
-
 			#hdr-l {
 				> .search {
 					#search-field {
@@ -122,6 +108,10 @@ $grid-breakpoints: (
 			color: #222;
 			font-size: $base-font-size + 1;
 			line-height: 1.58;
+
+			.breadcrumb > .breadcrumb-item {
+				max-width: 80px;
+			}
 
 			.page-heading {
 				margin-bottom: $grid-gutter-width-base / 1.2;
@@ -186,9 +176,7 @@ $grid-breakpoints: (
 		}
 
 		#content {
-
 			margin-top: rem($header-height);
-
 		}
 	}
 
@@ -294,43 +282,12 @@ $grid-breakpoints: (
 				}				
 			}
 
-
-			/*#page-wrapper {
-				margin-left:$nav-width;
-			}
-
-			&.header-function-fixed {
-				#banner {
-					margin-left: $nav-width !important;
-				}
-			}
-
-			&.header-function-fixed {
-				&.nav-function-top {
-					#banner {
-						margin-left:0;
-					}
-				}
-			}
-
-			&.nav-function-fixed:not(.nav-function-top),
-			&.nav-function-fixed {
-				#left-panel {
-					left:0;
-				}
-			}*/
-
 		}
 
 		/* Off canvas turned ON*/
 		&.nav-mobile-slide-out {
 
 			#page-wrapper {
-
-				/*#left-panel {
-					@include translate3d (0px, 0, 0);
-					z-index: 0;
-				}*/
 
 				#banner,
 				#content,
@@ -352,11 +309,6 @@ $grid-breakpoints: (
 				
 			}
 		}
-
-		/*&.nav-function-fixed {
-			overflow: hidden;
-			height: 100vh;
-		}*/
 
 		/* 'not' is ON by default */
 		&:not(.nav-mobile-no-overlay) {
@@ -401,43 +353,6 @@ $grid-breakpoints: (
 
 		#hdr-r {
 			[data-elipsis] {
-				/*background: #5E93EC;
-				border-radius: 50%;
-				height: 30px;
-				padding: 0;
-				line-height: 30px;
-				width: 30px;
-				min-width: auto;
-				text-transform: capitalize;
-				text-align: center;
-
-				&:before,
-				&:after {
-					bottom:-14px;
-					right:8px;
-				}
-				&:after {
-					bottom:-15px;
-				}
-
-				& > * {
-					display: none;
-				}
-
-				& > span {
-					display: inline-block;
-					visibility:hidden;
-					max-width: 12px;
-					text-overflow: clip;
-					font-size: 18px;
-					font-weight: 300;
-					color: #fff;
-
-					&:first-letter {
-						visibility:visible;
-					}
-				}*/
-
 				span,
 				i {
 					display: none;

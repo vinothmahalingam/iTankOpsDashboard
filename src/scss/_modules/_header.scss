@@ -63,7 +63,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 							position: relative;
 							left: auto;
 							right: auto;
-							font-size: 14px;
+							font-size: $fs-md;
 							height: 26px;
 							width: 26px;
 							line-height: 21px;

@@ -343,7 +343,17 @@ var initApp = (function(app) {
 		
 		/* Add app date to breadcrumb-right-placeholder */
 		if ( $( "#app-date" ).length ) {
-			$('#app-date').text(new Date($.now()));
+			//$('#app-date').text(new Date().toJSON().slice(0,10).split('-').reverse().join('/'));
+
+			var months = ['January', 'February', 'March', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+				day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+				now = new Date(),
+				formatted = day[now.getDay()] + ', ' +  
+							months[now.getMonth()] + ' ' +  
+							now.getDate() + ', ' +
+							now.getFullYear();
+			$('#app-date').text(formatted);				
+
 		}
 
 		/* Check conflicting classes to build/destroy slimscroll */
