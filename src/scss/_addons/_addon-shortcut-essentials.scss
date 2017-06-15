@@ -3,6 +3,7 @@ $app-shortcut-btn-size: 49px;
 $menu-item-size: 45px;
 $menu-items:4;
 $menu-grid-icon: 5px;
+$menu-item-direction: 'top'; //top or left
 
 %ball{
   background:$primary-500;
@@ -38,33 +39,29 @@ label.menu-open-button {
 
 label.menu-open-button {
   z-index: $footer-zindex + 2;
-  transition-timing-function:cubic-bezier(0.175, 0.885, 0.320, 1.275);
-  transition-duration:400ms;
-  //transform:scale(1.1,1.1) translate3d(0,0,0);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  transition-duration: 400ms;
   cursor:pointer;
   margin:0;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
- 
 }
 
 .app-shortcut-icon {
-    width: $menu-grid-icon;
-    height: $menu-grid-icon;
-    background: #ecf0f1;
-    color: #ecf0f1;
-    transition: .3s;
-    box-shadow: -0.5rem -0.5rem, 0 -0.5rem, 0.5rem -0.5rem, -0.5rem 0, 0.5rem 0, -0.5rem 0.5rem, 0 0.5rem, 0.5rem 0.5rem;
+  width: $menu-grid-icon;
+  height: $menu-grid-icon;
+  background: #ecf0f1;
+  color: #ecf0f1;
+  transition: .3s;
+  box-shadow: -0.5rem -0.5rem, 0 -0.5rem, 0.5rem -0.5rem, -0.5rem 0, 0.5rem 0, -0.5rem 0.5rem, 0 0.5rem, 0.5rem 0.5rem;
 }
 
 .menu-open:checked+.menu-open-button{
-  transition-timing-function:linear;
-  transition-duration:200ms;
-  transform:scale(0.9,0.9) translate3d(0,0,0);
-
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transform: scale(0.9,0.9) translate3d(0,0,0);
   background: $fusion-500;
 
   .app-shortcut-icon {
@@ -72,16 +69,27 @@ label.menu-open-button {
     -webkit-transform: rotate3d(0,0,1,-45deg) scale3d(.8,.8,.8);
     transform: rotate3d(0,0,1,-45deg) scale3d(.8,.8,.8);
   }
-
 }
 
 .menu-open:checked~.menu-item{
   transition-timing-function:cubic-bezier(0.165, 0.840, 0.440, 1.000);
-  @for $i from 1 through $menu-items{
 
-    &:nth-child(#{$i+2}){
-      transition-duration:50ms+(100ms*$i);
-      transform:translate3d(0,-($menu-item-size+3)*$i,0);
+    @if $menu-item-direction == 'top' {
+
+      @for $i from 1 through $menu-items{
+        &:nth-child(#{$i+2}){
+          transition-duration:50ms+(100ms*$i);
+          transform:translate3d(0,-($menu-item-size+3)*$i,0);
+        }
+      }
+
+    } @else {
+
+      @for $i from 1 through $menu-items{
+        &:nth-child(#{$i+2}){
+          transition-duration:50ms+(100ms*$i);
+          transform:translate3d(-($menu-item-size+3)*$i,0,0);
+        }
+      }
     }
-  }
 }

@@ -108,7 +108,7 @@
 	Ingredients
 </p>
 <ul class="ngmenu">
-	<li {{#is pagename "in" "ui_alerts,ui_breadcrumbs,ui_buttons,ui_cards_wells,ui_carousel,ui_helpers,ui_icons_fontawesome,ui_icons_ng,ui_labels_badges,ui_navbars,ui_pagination,ui_tabs_accordions,ui_progress_bars,ui_scrollspy,ui_tooltips_popovers,ui_typography"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "ui_alerts,ui_breadcrumbs,ui_buttons,ui_cards_wells,ui_carousel,ui_helpers,ui_icons_fontawesome,ui_icons_ng,ui_labels_badges,ui_navbars,ui_pagination,ui_tabs_accordions,ui_progress_bars,ui_scrollspy,ui_tooltips_popovers,ui_typography,ui_fonts"}}class="active open"{{/is}}>
 		<a href="#" title="UI Components"> 
 			<i class="icon icon-fire"></i>
 			<span class="ngmenu-link-text">UI Components</span> 
@@ -179,7 +179,7 @@
 					<span class="ngmenu-link-text">Tooltips & Popovers</span> 
 				</a>
 			</li>
-			<li {{#is pagename "in" "a,b,ui_typography"}}class="active open"{{/is}}>
+			<li {{#is pagename "in" "a,b,ui_typography,ui_fonts"}}class="active open"{{/is}}>
 				<a href="#"> 
 					<i class="icon icon-fire"></i>
 					<span class="ngmenu-link-text">
@@ -212,6 +212,13 @@
 						<a href="ui_colors.html"> 
 							<span class="ngmenu-link-text">
 								Colors
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "ui_fonts"}}class="active"{{/is}}>
+						<a href="ui_fonts.html"> 
+							<span class="ngmenu-link-text">
+								Fonts
 							</span>
 						</a>
 					</li>
