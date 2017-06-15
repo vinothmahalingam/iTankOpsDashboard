@@ -5,9 +5,1207 @@
 {{#*inline "header-space-block"}}test{{/inline}}
 
 {{#*inline "content-block"}}
-app.core
+
+<div class="row">
+	<div class="col-sm-6">
+<div class="custom-scroll" style="height:700px">
+	<pre class="prettyprint p-1">
+var myapp_config = {
+    /*
+       SAVE INSTANCE REFERENCE
+       Save a reference to the global object (window in the browser)
+     */
+    root_: $('body'), // used for core app reference
+    /*
+       REFERENCE OBJ FOR WINDOW HEIGHT
+       we are saving some memory and repeated calls for window height
+       window height is only updated during window resize
+     */
+    windowHeight: $(window).height(),
+    navHeightGap: ($('#nav-footer').height() || 0) + $('header').height() + 1,
+    /*
+       DELAY VAR FOR FIRING REPEATED EVENTS (eg., scroll & resize events)
+       Lowering the variable makes faster response time but taxing on the CPU
+       Reference: http://benalman.com/code/projects/jquery-throttle-debounce/examples/throttle/
+     */
+    throttleDelay: 450, //ms
+    /*
+       DETECT MOBILE DEVICES
+       Description: Detects mobile device - if any of the listed device is 
+       detected a class is inserted to $.root_ and the variable thisDevice 
+       is decleard. (so far this is covering most hand held devices)
+     */
+    thisDevice: null, // desktop or mobile
+    isMobile: (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase())), //popular device types available on the market
+    mobileMenuTrigger: null, // used by pagescrolling and appHeight script, do not change!
+    /*
+      DETECT IF WEBKIT
+      Description: this variable is used to fire the custom scroll plugin. 
+      If it is a non-webkit it will fire the plugin.
+    */
+    isWebkit: ((!!window.chrome && !!window.chrome.webstore) === true || Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0 === true),
+    /*
+      DETECT CHROME
+      Description: this variable is used to fire the custom CSS hacks
+    */
+    isChrome: (/chrom(e|ium)/.test(navigator.userAgent.toLowerCase())),
+    /*
+       DEBUGGING MODE
+       debugState = true; will spit all debuging message inside browser console.
+     */
+    debugState: true, // outputs debug information on browser console
+    /*
+       Turn on ripple effect for buttons and touch events
+       Dependency: 
+     */
+    disableRippleEffect: false, // material design effect that appears on all buttons
+    /*
+       Primary theme anchor point #mytheme
+       This anchor is created dynamically
+    */
+    mythemeAnchor: '#mytheme',
+    /*
+       Primary menu anchor point #primary-nav
+       This is the root anchor point where the menu script will begin its build
+    */
+    navAnchor: '#primary-nav', //changing this may implicate CSS targets
+    /*
+       The rate at which the menu expands revealing child elements on click
+       Lower rate reels faster expansion of nav childs
+     */
+    navSpeed: 500, //ms
+    /*
+       Nav close and open signs
+       This uses the fontawesome css class
+     */
+    navClosedSign: 'icon icon-chevron-down',
+    navOpenedSign: 'icon icon-chevron-up',
+    /*
+       Collapse current menu item as other menu items are expanded
+       Careful when using this option, if you have a long menu it will
+       keep expanding and may distrupt the user experience. This is best 
+       used with Fixed Navigation for a better experience
+     */
+    navAccordion: true, //if one menu item is opened, the other will close
+    /*
+     * SaveSettings to localStorage
+     * DOC: to store settings to a DB instead of LocalStorage see below:
+     *    initApp.pushSettings("className1 className2") //sets value
+     *    var DB_string = initApp.getSettings(); //returns setting string
+     */
+    storeLocally: true
+};		
+	</pre>
+</div>		
+	</div>
+	<div class="col-sm-6">
+<div class="custom-scroll" style="height:700px">
+	<pre class="prettyprint p-1">
+/**
+ * Menu Plugin
+ **/
+$.fn.extend({
+
+    /**
+     * pass the options variable to the function
+     **/
+    ngmenu: function(options) {
+
+        var defaults = {
+                accordion: 'true',
+                animate: 'easeOutExpo',
+                speed: 200,
+                closedSign: '[+]',
+                openedSign: '[-]'
+            },
+
+            /**
+             * Extend our default options with those provided.
+             **/
+            opts = $.extend(defaults, options),
+
+            /**
+             * Assign current element to variable, in this case is UL element
+             **/
+            $this = $(this);
+
+        /**
+         * add a mark [+] to a multilevel menu
+         **/
+        $this.find("li").each(function() {
+            if ($(this).find("ul").length !== 0) {
+
+                /**
+                 * add the multilevel sign next to the link
+                 **/
+                $(this).find("a:first").append("<b class='collapse-sign'>" + opts.closedSign + "</b>");
+
+                /**
+                 * avoid jumping to the top of the page when the href is an #
+                 **/
+                if ($(this).find("a:first").attr('href') == "#") {
+                    $(this).find("a:first").click(function() {
+                        return false;
+                    });
+                }
+            }
+        });
+
+        //add open sign to all active lists
+        $this.find("li.active").each(function() {
+            $(this).parents("ul")
+                .parent("li")
+                //.addClass("open") [disabled: creates a wierd jumping effect]
+                .find("a:first")
+                .attr('aria-expanded', true)
+                .find("b:first")
+                .html(opts.openedSign);
+        });
+
+        $this.find("li a").on('mousedown', function(e) {
+
+            if ($(this).parent().find("ul").length !== 0) {
+
+                if (opts.accordion) {
+
+                    /**
+                     * Do nothing when the list is open
+                     **/
+                    if (!$(this).parent().find("ul").is(':visible')) {
+
+                        parents = $(this).parent().parents("ul");
+                        visible = $this.find("ul:visible");
+                        visible.each(function(visibleIndex) {
+                            var close = true;
+                            parents.each(function(parentIndex) {
+
+                                if (parents[parentIndex] == visible[visibleIndex]) {
+
+                                    close = false;
+                                    return false;
+                                }
+                            });
+                            if (close) {
+
+                                if ($(this).parent().find("ul") != visible[visibleIndex]) {
+
+                                    $(visible[visibleIndex]).slideUp(opts.speed + 300, opts.animate, function() {
+                                        $(this).parent("li")
+                                            .removeClass("open")
+                                            .find("a:first")
+                                            .attr('aria-expanded', false)
+                                            .find("b:first")
+                                            .html(opts.closedSign);
+                                    });
+                                }
+                            }
+                        });
+                    }
+                }
+
+                /**
+                 * Add active class to open element
+                 **/
+                if ($(this).parent().find("ul:first").is(":visible") && !$(this).parent().find("ul:first").hasClass("active")) {
+
+                    $(this).parent().find("ul:first").slideUp(opts.speed + 100, opts.animate, function() {
+                        $(this).parent("li")
+                            .removeClass("open")
+                            .find("a:first")
+                            .attr('aria-expanded', false)
+                            .find("b:first").delay(opts.speed)
+                            .html(opts.closedSign);
+                    });
+                } else {
+                    $(this).parent().find("ul:first").slideDown(opts.speed, opts.animate, function() {
+
+                        $(this).parent("li")
+                            .addClass("open")
+                            .find("a:first")
+                            .attr('aria-expanded', true)
+                            .find("b:first").delay(opts.speed)
+                            .html(opts.openedSign);
+
+                        /*bug fixed: addresses the .mod-main-boxed class bug, when nav exceeds content height*/
+                        if (myapp_config.root_.hasClass("mod-main-boxed")) {
+                            initApp.fixAppHeight();
+                        }
+                    });
+                }
+            }
+        });
+    },
+
+    destroy: function() {
+        $this = $(this);
+        console.log("destroy ngmenu");
+        $this._destroy(); //or this.delete; depends on jQuery version
+
+    }
+});
+
+/**
+ * App Initialize
+ * DOC: initializes the app with intApp();
+ **/
+var initApp = (function(app) {
+
+    /**
+     * Javascript Animation for save settings 
+     **/
+    app.saveSettings = function() {
+
+        /* if saveSettings function exists */
+        if (typeof saveSettings !== 'undefined' && $.isFunction(saveSettings) && myapp_config.storeLocally) {
+
+            /* call accessIndicator animation */
+            initApp.accessIndicator();
+
+            /* call saveSettings function from myapp_config.root_ (HTML) */
+            saveSettings();
+
+            if (myapp_config.debugState)
+                console.log((localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {});
+
+        } else {
+            console.log("save function does not exist")
+        }
+    }
+
+    /**
+     * Reset settings 
+     * DOC: removes all classes from root_ then saves
+     **/
+    app.resetSettings = function() {
+
+        /* remove all classes */
+        myapp_config.root_.removeClass();
+
+        /* remove custom css skin */
+        $(myapp_config.mythemeAnchor).attr('href', "");
+
+        /* save settings if "storeLocally == true" */
+        initApp.saveSettings();
+
+    }
+
+    /**
+     * Access Indicator
+     * DOC: spinning icon that appears whenever you
+     * access localstorage or change settings
+     **/
+    app.accessIndicator = function() {
+
+        myapp_config.root_.addClass("saving").delay(600).queue(function() {
+            $(this).removeClass("saving").dequeue();
+            return true;
+        });
+
+    }
+
+    /*
+     * usage: initApp.pushSettings("className1 className2")
+     * DOC: pushSettings will also auto save to localStorage if "storeLocally == true" 
+     * we will use this "pushSettings" when loading settings from a database
+     */
+    app.pushSettings = function(DB_string) {
+
+        /* clear localstorage variable 'themeSettings' */
+        localStorage.setItem("themeSettings", "");
+
+        /* replace classes from <body> with fetched DB string */
+        myapp_config.root_.removeClass().addClass(DB_string);
+
+        /* save settings if "storeLocally == true" */
+        initApp.saveSettings();
+
+        /* return string */
+        return DB_string;
+    }
+
+    /*
+     * usage: var DB_string = initApp.getSettings();
+     * we will use this "getSettings" when storing settings to a database
+     */
+    app.getSettings = function() {
+
+        return myapp_config.root_.attr('class').split(/[^\w-]+/).filter(function(item) {
+            return /^(nav|header|mod|display)-/i.test(item);
+        }).join(' ');
+    }
+
+    /**
+     * Assign new height to 'var'
+     * DOC: this will be used later for other calculations, we only call this funtion during screen resize 
+     **/
+    app.getNewWindowHeight = function() {
+
+        myapp_config.windowHeight = $(window).height();
+
+        if (myapp_config.debugState)
+            console.log("app height updated " + myapp_config.windowHeight + " | app.getNewWindowHeight()");
+    }
+
+    /**
+     * Add browser type
+     * DOC: detect if browser supports webkit CSS
+     **/
+    app.detectBrowserType = function() {
+
+        /* safari or chrome detect */
+        if (myapp_config.isChrome) {
+
+            myapp_config.root_.addClass("chrome webkit");
+
+        } else if (myapp_config.isWebkit) {
+
+            myapp_config.root_.addClass("webkit");
+        }
+
+    };
+
+    /**
+     * Add device type
+     * DOC: Detect if mobile or desktop
+     **/
+    app.addDeviceType = function() {
+
+        if (!myapp_config.isMobile) {
+
+            /* desktop */
+            myapp_config.root_.addClass('desktop');
+            myapp_config.thisDevice = 'desktop';
+
+        } else {
+
+            /* mobile */
+            myapp_config.root_.addClass('mobile');
+            myapp_config.thisDevice = 'mobile';
+
+            if (myapp_config.fastClick) {
+
+                /**
+                 * removes the tap delay in idevices
+                 * dependency: js/plugin/fastclick/fastclick.js
+                 **/
+                myapp_config.root_.addClass('needsclick');
+                FastClick.attach(document.body);
+            }
+
+        }
+
+    };
+
+    /**
+     * Fix app height
+     * DOC: Calculates a bunch of condition to fix the CSS height issue
+     **/
+    app.fixAppHeight = function() {
+
+        app.calculateAppHeight = function() {
+
+            var primaryNavHeight = $(myapp_config.navAnchor).height() + myapp_config.navHeightGap,
+
+                /* sort next new height, get max value */
+                newHeight = Math.max(primaryNavHeight, myapp_config.windowHeight);
+
+            switch (true) {
+
+                case (primaryNavHeight < myapp_config.windowHeight):
+
+                    /* nav is higher than wrapper */
+                    myapp_config.root_.css("min-height", newHeight + "px");
+
+                    if (myapp_config.debugState)
+                        console.log("nav height : " + newHeight + " | app.fixAppHeight()");
+
+                    break;
+
+                case (primaryNavHeight > myapp_config.windowHeight):
+
+                    /* wrapper is higher than nav */
+                    myapp_config.root_.css("min-height", newHeight + "px");
+
+                    if (myapp_config.debugState)
+                        console.log("body height : " + newHeight + " | app.fixAppHeight()");
+
+                    break;
+
+                case (myapp_config.root_.hasClass('nav-function-fixed')):
+
+                    /* if navigation is fixed */
+                    myapp_config.root_.css("min-height", primaryNavHeight + "px");
+
+                    if (myapp_config.debugState)
+                        console.log("nav-function-fixed new height : " + primaryNavHeight + " | app.fixAppHeight()");
+
+                    break;
+
+            }
+        }
+
+        /* HINT! alternative way to save ROM for mobile:
+           if ( myapp_config.thisDevice === 'desktop' && !myapp_config.root_.is('.nav-function-top, .nav-function-fixed') ) { */
+        if (!myapp_config.root_.is('.nav-function-top, .nav-function-fixed')) {
+
+            initApp.calculateAppHeight();
+
+        }
+
+    }
+
+    /**
+     * Fix logo position on .header-function-fixed & .nav-function-hidden
+     * DOC: Counters browser bug for fixed position and overflow:hidden for the logo (firefox/IE/Safari)
+     *      Will not fire for webkit devices or Chrome as its not needed
+     **/
+    app.windowScrollEvents = function() {
+        if (myapp_config.root_.is(".nav-function-hidden.header-function-fixed:not(.nav-function-top)") && myapp_config.thisDevice === 'desktop') {
+            $('#logo').css({
+                'top': $(window).scrollTop()
+            })
+        } else if (myapp_config.root_.is(".header-function-fixed:not(.nav-function-top):not(.nav-function-hidden)") && myapp_config.thisDevice === 'desktop') {
+            $('#logo').attr("style", "");
+        }
+    }
+
+    /**
+     * Check setting conditions
+     * DOC: sometimes settings can trigger certain plugins; so we check this condition and activate accordingly
+     * E.g: the fixed navigation activates slimScroll plugin for the navigation, but this only happens when
+     *  it detects desktop browser and destroys the plugin when navigation is on top or if its not fixed.
+     **/
+    app.checkSettingConditions = function() {
+
+        /**
+         * DOC: add the plugin with the following rules: fixed navigation is selected, top navigation is not active, minify nav is not active, 
+         * and the device is desktop. We do not need to activate the plugin when loading from a mobile phone as it is not needed for touch screens.
+         **/
+        switch (true) {
+
+            case (myapp_config.root_.hasClass('nav-function-fixed') && !myapp_config.root_.is('.nav-function-top, .nav-function-minify, .mod-main-boxed') && myapp_config.thisDevice === 'desktop'):
+
+                /* start slimscroll on nav */
+                if (typeof $.fn.slimScroll !== 'undefined') {
+                    $(myapp_config.navAnchor).slimScroll({
+                        height: '100%',
+                        railOpacity: 0.4,
+                        wheelStep: 10
+                    });
+
+                    if (myapp_config.debugState)
+                        console.log("slimScroll Enabled");
+
+                } else {
+                    console.log("$.fn.slimScroll...NOT FOUND");
+                }
+
+                /* fix app height (only needs to be called once) */
+                initApp.calculateAppHeight();
+
+                break;
+
+            case ($(myapp_config.navAnchor).parent().hasClass('slimScrollDiv') && myapp_config.thisDevice === 'desktop' && typeof $.fn.slimScroll !== 'undefined'):
+
+                /* destroy the plugin if it is in violation of rules above */
+                $(myapp_config.navAnchor).slimScroll({
+                    destroy: true
+                });
+                $(myapp_config.navAnchor).attr('style', '');
+
+                /* clear event listners (IE bug) */
+                events = jQuery._data($(myapp_config.navAnchor)[0], "events");
+
+                if (events)
+                    jQuery._removeData($(myapp_config.navAnchor)[0], "events");
+
+                if (myapp_config.debugState)
+                    console.log("slimScroll destroyed");
+
+                break;
+        }
+
+    };
+
+    /**
+     * Activate Nav
+     * DOC: activation will not take place if top navigation is on
+     **/
+    app.leftNav = function() {
+
+        /**
+         * start left nav
+         * app.ngmenu.js
+         **/
+        $(myapp_config.navAnchor + ' ul').ngmenu({
+
+            accordion: myapp_config.navAccordion,
+            speed: myapp_config.navSpeed,
+            closedSign: '<em class="' + myapp_config.navClosedSign + '"></em>',
+            openedSign: '<em class="' + myapp_config.navOpenedSign + '"></em>'
+
+        });
+    };
+
+    /**
+     * Mobile Check Activate
+     * DOC: check on window resize if screen width is less than [value]
+     */
+    app.mobileCheckActivation = function() {
+
+        if ($(window).width() < 993) {
+
+            myapp_config.root_.addClass('mobile-view-activated');
+            myapp_config.mobileMenuTrigger = true;
+
+        } else if (myapp_config.root_.hasClass('mobile-view-activated')) {
+
+            myapp_config.root_.removeClass('mobile-view-activated');
+            myapp_config.mobileMenuTrigger = false;
+
+        }
+
+        if (myapp_config.debugState)
+            console.log("mobileCheckActivation on " + $(window).width() + "px" + " | mobileMenuTrigger :" + myapp_config.mobileMenuTrigger + " | app.mobileCheckActivation()");
+
+    }
+
+    /**
+     *  Toggle visibility
+     *  DOC: show and hide content with a button action
+     *  Usage: onclick="initApp.toggleVisibility('foo');"
+     **/
+    app.toggleVisibility = function(id) {
+        var e = document.getElementById(id);
+        if (e.style.display == 'block')
+            e.style.display = 'none';
+        else
+            e.style.display = 'block';
+    }
+
+    /**
+     * Miscelaneous DOM ready functions
+     * DOC: start jQuery(document).ready calls
+     **/
+    app.domReadyMisc = function() {
+
+        /* Add app date to breadcrumb-right-placeholder */
+        if ($("#app-date").length) {
+            //$('#app-date').text(new Date().toJSON().slice(0,10).split('-').reverse().join('/'));
+
+            var months = ['January', 'February', 'March', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                now = new Date(),
+                formatted = day[now.getDay()] + ', ' +
+                months[now.getMonth()] + ' ' +
+                now.getDate() + ', ' +
+                now.getFullYear();
+            $('#app-date').text(formatted);
+
+        }
+
+        /* Check conflicting classes to build/destroy slimscroll */
+        initApp.checkSettingConditions();
+
+        /* Activate the last tab clicked using localStorage */
+        var lastTab = localStorage.getItem('lastTab');
+
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+            localStorage.setItem('lastTab', $(this).attr('href'));
+        });
+        if (lastTab) {
+            $('[href="' + lastTab + '"]').tab('show');
+        }
+
+        /**
+         * Other options:
+         * --------------
+         width: '300px',
+         height: '500px',
+         size: '10px',
+         position: 'left',
+         color: '#ffcc00',
+         alwaysVisible: true,
+         distance: '20px',
+         start: $('#child_image_element'),
+         railVisible: true,
+         railColor: '#222',
+         railOpacity: 0.3,
+         wheelStep: 10,
+         allowPageScroll: false,
+         disableFadeOut: false
+         **/
+        if (typeof $.fn.slimScroll !== 'undefined' && myapp_config.thisDevice === 'desktop') {
+            $('.custom-scroll >:first-child').slimscroll({
+                height: '100%',
+                distance: '0'
+            })
+        } else {
+            console.log("warning: $.fn.slimScroll not or user is on desktop");
+            myapp_config.root_.addClass("no-slimscroll");
+        }
+
+        /**
+         * Start bootstrap tooltips
+         * doc: only fires for desktop
+         **/
+        if (typeof($.fn.tooltip) !== 'undefined' && myapp_config.thisDevice === 'desktop' && $('[data-toggle="tooltip"]').length) {
+            $('[data-toggle="tooltip"]').tooltip()
+        }
+
+        /**
+         * Lazyload images
+         * doc: lazy load images to optimize performance
+         * DEV NOTES: way too long; Please shorten it!!!
+         */
+
+        if (typeof $.fn.lazy !== 'undefined' && typeof $.fn.slimScroll !== 'undefined') {
+            $('.custom-scroll img').lazy({
+                effect: "fadeIn",
+                effectTime: 200,
+                threshold: 10,
+                enableThrottle: true,
+                throttle: 500,
+                visibleOnly: true,
+                combined: true,
+                appendScroll: $('.slimScrollDiv > :first-child')
+            });
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function() {
+                $('.slimScrollDiv > :first-child').trigger('scroll');
+            })
+            $('#index').on('show.bs.dropdown', function() {
+                $('.slimScrollDiv > :first-child').trigger('scroll');
+            })
+        } else {
+            $('.custom-scroll img').lazy({
+                effect: "fadeIn",
+                effectTime: 200,
+                threshold: 10,
+                visibleOnly: true,
+                combined: true,
+                appendScroll: $('.custom-scroll')
+            });
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function() {
+                $('.custom-scroll').trigger('scroll');
+            })
+            $('#index').on('show.bs.dropdown', function() {
+                $('.custom-scroll').trigger('scroll');
+            })
+        }
+
+
+        /*app.buildCustomScroll = function (slim_target) {
+
+         $('.custom-scroll img').lazy({
+          effect: "fadeIn",
+          effectTime: 200,
+          threshold: 10,
+          enableThrottle: true,
+          throttle: 500,
+          visibleOnly: true,
+          combined: true,
+          appendScroll: slim_target
+         });
+         $('a[data-toggle="tab"]').on('shown.bs.tab', function () {
+          slim_target.trigger('scroll');
+         })
+         $('#index').on('show.bs.dropdown', function () {
+          slim_target.trigger('scroll');
+         })
+        }
+
+        if ( typeof $.fn.lazy !== 'undefined' && typeof $.fn.slimScroll !== 'undefined') {
+         initApp.buildCustomScroll( $('.slimScrollDiv > :first-child') );
+
+        } else {
+         initApp.buildCustomScroll( $('.custom_scroll') );
+        }*/
+
+        /**
+         * Dropdowns will not close on click
+         * doc: only close dropdowns on click outside hit area
+         **/
+        $(document).on('click', '.dropdown-menu', function(e) {
+            e.stopPropagation();
+        });
+
+        /**
+         * Ripple effect (plugin has issues with IE9)
+         * Note: 'window.atob' detects if IE9+ 
+         * ref: http://tanalin.com/en/articles/ie-version-js/
+         **/
+        if ($.fn.ripple && !myapp_config.disableRippleEffect && window.atob && !myapp_config.isMobile) {
+
+            $(myapp_config.navAnchor + ' ' + 'a:not(.no-ripple)').ripple({
+                scaleMode: false
+            });
+
+            $('.btn:not(.no-ripple)').ripple({
+                scaleMode: false
+            });
+
+            if (myapp_config.debugState)
+                console.log("rippler active" + " | myapp_config.rippleEffect : " + myapp_config.rippleEffect);
+
+        } else {
+            if (myapp_config.debugState)
+                console.log("rippler inactive" + " | myapp_config.rippleEffect : " + myapp_config.rippleEffect);
+        }
+
+        /**
+         * Action buttons
+         **/
+        myapp_config.root_
+            .on('mousedown', '[data-action]', function(e) {
+
+                console.log("data-action clicked");
+
+                var actiontype = $(this).data('action');
+
+                switch (true) {
+
+                    /**
+                     * toggle trigger
+                     * Usage 1 (body): <a href="#" data-action="toggle" data-class="add-this-class-to-body">...</a>
+                     * Usage 2 (target): <a href="#" data-action="toggle" data-class="add-this-class-to-target" data-target="target">...</a>
+                     **/
+                    case (actiontype === 'toggle'):
+
+                        var target = $(this).attr('data-target') || myapp_config.root_,
+                            dataClass = $(this).attr('data-class');
+
+                        /* remove previous background image if alternate is selected */
+                        if (dataClass.indexOf('mod-bg-') !== -1) {
+                            $(target).removeClass(function(index, css) {
+                                return (css.match(/(^|\s)mod-bg-\S+/g) || []).join(' ');
+                            });
+                        }
+
+                        /* trigger class change */
+                        $(target).toggleClass(dataClass);
+
+                        /* save settings */
+                        if (typeof classHolder != 'undefined' || classHolder != null) {
+
+                            /* NOTE: saveSettings function is located right after <body> tag */
+                            initApp.checkSettingConditions();
+                            initApp.saveSettings();
+                        }
+
+                        /* fix app height when switching nav from top, side, minify and takes care of some ipad bugs */
+                        if (dataClass === 'nav-function-top' ||
+                            dataClass === 'nav-function-minify' && myapp_config.root_.hasClass('mod-main-boxed') ||
+                            dataClass === 'nav-function-fixed') {
+
+                            initApp.calculateAppHeight();
+                        }
+
+                        break;
+
+                        /**
+                         * panel 'collapse' trigger
+                         **/
+                    case (actiontype === 'panel-collapse'):
+
+                        var selectedPanel = $(this).closest('.panel');
+
+                        $(this).closest('.panel').toggleClass("panel-collapse");
+
+                        if (myapp_config.debugState)
+                            console.log("panel id:" + selectedPanel.attr('id') + " | action: collapse");
+
+                        /* return ID of panel */
+                        //return selectedPanel.attr('id');
+
+                        break;
+
+                        /**
+                         * panel 'fullscreen' trigger
+                         **/
+                    case (actiontype === 'panel-fullscreen'):
+
+                        var selectedPanel = $(this).closest('.panel');
+
+                        $(this).closest('.panel').toggleClass("panel-fullscreen");
+                        myapp_config.root_.toggleClass("panel-fullscreen");
+
+                        if (myapp_config.debugState)
+                            console.log("panel id:" + selectedPanel.attr('id') + " | action: fullscreen");
+
+                        /* return ID of panel */
+                        //return selectedPanel.attr('id');
+
+                        break;
+
+                        /**
+                         * panel 'close' trigger
+                         **/
+                    case (actiontype === 'panel-close'):
+
+                        var selectedPanel = $(this).closest('.panel');
+
+                        selectedPanel.fadeOut(500, function() {
+
+                            /* remove panel */
+                            $(this).remove();
+
+                            if (myapp_config.debugState)
+                                console.log("panel id:" + selectedPanel.attr('id') + " | action: removed");
+
+                            /* return ID of panel */
+                            //return selectedPanel.attr('id');
+
+                        });
+
+                        break;
+
+                        /**
+                         * update header css, 'theme-update' trigger
+                         * eg:  data-action = "theme-update" 
+                         *      data-theme = "css/cust-theme-1.min.css"
+                         **/
+                    case (actiontype === 'theme-update'):
+
+                        if ($(myapp_config.mythemeAnchor).length) {
+                            $(myapp_config.mythemeAnchor).attr('href', $(this).attr('data-theme'));
+                        } else {
+                            var mytheme = $("<link>", {
+                                id: myapp_config.mythemeAnchor.replace('#', ''),
+                                "rel": "stylesheet",
+                                "href": $(this).attr('data-theme')
+                            });
+                            $("head").append(mytheme);
+                        }
+
+                        initApp.saveSettings();
+
+                        break;
+
+                        /**
+                         * theme 'app-reset' trigger
+                         **/
+                    case (actiontype === "app-reset"):
+
+                        initApp.resetSettings();
+
+                        if (myapp_config.debugState)
+                            console.log("settings was reset");
+
+                        break;
+
+                        /**
+                         * app print
+                         * starts print priview for browser
+                         **/
+                    case (actiontype === 'app-print'):
+
+                        window.print();
+
+                        break;
+
+                        /**
+                         * app 'fullscreen' trigger
+                         **/
+                    case (actiontype === 'app-fullscreen'):
+
+                        /* NOTE: this may not work for all browsers if the browser security does not permit it 
+                            IE issues: http://stackoverflow.com/questions/33732805/fullscreen-not-working-in-ie */
+
+                        if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+
+                            if (document.documentElement.requestFullscreen) {
+                                /* Standard browsers */
+                                document.documentElement.requestFullscreen();
+                            } else if (document.documentElement.msRequestFullscreen) {
+                                /* Internet Explorer */
+                                document.documentElement.msRequestFullscreen();
+                            } else if (document.documentElement.mozRequestFullScreen) {
+                                /* Firefox */
+                                document.documentElement.mozRequestFullScreen();
+                            } else if (document.documentElement.webkitRequestFullscreen) {
+                                /* Chrome */
+                                document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+                            }
+
+                            if (myapp_config.debugState)
+                                console.log("app fullscreen toggle active");
+
+                        } else {
+
+                            if (document.exitFullscreen) {
+                                document.exitFullscreen();
+                            } else if (document.msExitFullscreen) {
+                                document.msExitFullscreen();
+                            } else if (document.mozCancelFullScreen) {
+                                document.mozCancelFullScreen();
+                            } else if (document.webkitExitFullscreen) {
+                                document.webkitExitFullscreen();
+                            }
+
+                            if (myapp_config.debugState)
+                                console.log("app fullscreen toggle inactive");
+                        }
+
+                        break;
+                }
+
+                /* hide tooltip if any present */
+                $(this).tooltip('hide');
+
+                /* stop default link action */
+                e.stopPropagation();
+                e.preventDefault();
+            });
+
+
+        /**
+         * Mobile menu action for screen tap or click to close menu (-)
+         **/
+
+        $(document)
+            .on('touchend mousedown', '.mobile-nav-on #content', function(e) {
+                myapp_config.root_.removeClass("mobile-nav-on");
+
+                if (myapp_config.debugState)
+                    console.log(this + " : was clicked to close mobile menu");
+
+                /* stops default action */
+                e.preventDefault();
+            });
+
+        /**
+         * Windows mobile 8 fix ~
+         * doc: bootstrap related
+         **/
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement('style')
+            msViewportStyle.appendChild(
+                document.createTextNode(
+                    '@-ms-viewport{width:auto!important}'
+                )
+            )
+            document.head.appendChild(msViewportStyle)
+        }
+    };
+
+    /**
+     * Material Forms effects activation
+     * DOC: starts listeners
+     **/
+    app.materialFormEffects = function() {
+
+        var parentClass = '.ng-forms',
+            focusClass = 'has-length',
+            disabledClass = 'has-disabled';
+
+        $('.form-control').each(function() {
+            checkLength(this);
+        });
+
+        function checkLength(e) {
+            if (e.value.length > 0) {
+                $(e).parents(parentClass).addClass(focusClass);
+                if ($(e).is('[readonly]') || $(e).is('[disabled]')) {
+                    $(e).parents(parentClass).addClass(disabledClass);
+                }
+            } else {
+                $(e).parents(parentClass).removeClass(focusClass);
+                if ($(e).is('[readonly]') || $(e).is('[disabled]')) {
+                    $(e).parents(parentClass).removeClass(disabledClass);
+                }
+            }
+        }
+
+        function setClass(e, parentClass, focusClass) {
+            $(e).parents(parentClass).addClass(focusClass);
+        }
+
+        function deleteClass(e, parentClass, focusClass) {
+            if (e.value.length) {
+
+            } else {
+                $(e).parents(parentClass).removeClass(focusClass);
+            }
+        }
+
+        $(parentClass).each(function() {
+            var input = $(this).find('.form-control');
+            input.on('focus', function() {
+                setClass(this, parentClass, focusClass);
+            });
+            input.on('blur', function() {
+                deleteClass(this, parentClass, focusClass);
+            });
+        })
+
+    }
+
+    return app;
+
+})({});
+
+initApp.addDeviceType();
+
+/**
+ * Bind the throttled handler to the resize event.
+ * NOTE: Please do not change the order displayed (e.g. 1a, 1b, 2a, 2b...etc)
+ **/
+$(window).resize(
+
+    $.throttle(myapp_config.throttleDelay, function(e) {
+
+        /**
+         * (1a) ADD CLASS WHEN BELOW CERTAIN WIDTH (MOBILE MENU)
+         * Description: tracks the page min-width of #CONTENT and NAV when navigation is resized.
+         * This is to counter bugs for minimum page width on many desktop and mobile devices.
+         **/
+        initApp.mobileCheckActivation();
+
+        /**
+         * (2a) FIX APP HEIGHT
+         * Get and assign new height during page resize
+         **/
+        initApp.getNewWindowHeight();
+
+        /**
+         * (2b) FIX APP HEIGHT
+         * Compare the height of nav and content;
+         * If one is longer/shorter than the other, measure them to be equal.
+         * This event is only fired on desktop.
+         **/
+        initApp.calculateAppHeight();
+
+        /** -- insert your resize codes below this line -- **/
+
+    })
+);
+
+/**
+ * Bind the throttled handler to the scroll event
+ **/
+$(window).scroll(
+
+    $.throttle(myapp_config.throttleDelay, function(e) {
+
+        /**
+         * FIX APP HEIGHT
+         * Compare the height of nav and content;
+         * If one is longer/shorter than the other, measure them to be equal.
+         * This event is only fired on desktop.
+         **/
+        initApp.fixAppHeight();
+
+        /** -- insert your other resize codes below this line -- **/
+
+    })
+
+);
+
+/**
+ * Initiate scroll events
+ **/
+$(window).on('scroll', initApp.windowScrollEvents);
+
+/**
+ * DOCUMENT LOADED EVENT
+ * DOC: Fire when DOM is ready
+ * Do not change order a, b, c, d...
+ **/
+jQuery(document).ready(function() {
+
+    /**
+     * detect Webkit Browser 
+     **/
+    initApp.detectBrowserType();
+
+    /**
+     * a. check for mobile view width and add class .mobile-view-activated
+     **/
+    initApp.mobileCheckActivation();
+
+    /**
+     * b. assign window height on page load
+     **/
+    initApp.getNewWindowHeight();
+
+    /**
+     * c. fix application height
+     **/
+    initApp.fixAppHeight();
+
+    /**
+     * d. build navigation
+     **/
+    initApp.leftNav();
+
+    /**
+     * e. run DOM misc functions
+     **/
+    initApp.domReadyMisc();
+
+    /**
+     * f. material form effects
+     **/
+    initApp.materialFormEffects();
+
+});
+
+/**
+ * Mobile orientation change events
+ * DOC: recalculates app height
+ **/
+$(window).on("orientationchange", function(event) {
+    /* reset any .CSS heights and force appHeight function to recalculate */
+    $("#page-wrapper").css("min-height", "");
+
+    initApp.calculateAppHeight();
+
+    if (myapp_config.debugState)
+        console.log("orientationchange event");
+});
+
+/**
+ * Window load function
+ * DOC: window focus blur detection
+ **/
+$(window).on("blur focus", function(e) {
+    var prevType = $(this).data("prevType");
+    /**
+     * reduce double fire issues
+     **/
+    if (prevType != e.type) {
+        switch (e.type) {
+            case "blur":
+                myapp_config.root_.toggleClass("blur")
+
+                if (myapp_config.debugState)
+                    console.log("blur");
+
+                break;
+            case "focus":
+                myapp_config.root_.toggleClass("blur")
+                if (myapp_config.debugState)
+
+                    console.log("focused");
+
+                break;
+        }
+    }
+
+    $(this).data("prevType", e.type);
+})
+	</pre>
+</div>		
+	</div>
+</div>
+
+
+
+
 {{/inline}}
 
-{{#*inline "scripts-block"}}{{/inline}}
+{{#*inline "scripts-block"}}
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;skin=desert"></script>
+{{/inline}}
 
 {{/layouts/main}}
