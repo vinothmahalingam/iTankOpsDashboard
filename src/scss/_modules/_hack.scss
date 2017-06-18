@@ -50,7 +50,9 @@ body.desktop-detected {
     user-select: none;
     z-index: 0;
 }
+
 /* bootstrap CSS overrides */
+
 #banner {
 	.dropdown-item {
 		padding: $spacer * 0.5 $spacer * 1;
@@ -58,6 +60,16 @@ body.desktop-detected {
 		cursor: pointer;
 	}	
 }
+
+/*.btn {
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05), 
+				0 1px 2px rgba(0, 0, 0, 0.1);
+
+	&:hover,
+	&:active {
+		box-shadow: none;
+	}
+}*/
 
 /* nav pills */
 .nav-pills {
@@ -119,10 +131,10 @@ body.desktop-detected {
 .btn-pills {
 	@include rounded(15px);
 }
-/* removes inline block gaps */
+/* removes inline block gaps 
 .no-inline-block-gap {
 	font-size: 0;
-}
+}*/
 /* change the white to any color ;) */
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;

@@ -13,7 +13,7 @@ $(window).scroll(
 		  **/
 		  initApp.fixAppHeight();
 
-		  /** -- insert your other resize codes below this line -- **/
+		  /** -- insert your other scroll codes below this line -- **/
 
 	})
 

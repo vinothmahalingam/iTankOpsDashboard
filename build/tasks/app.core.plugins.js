@@ -9,6 +9,7 @@ var gulp = require('gulp'),
 
 gulp.task('compile-app-core-plugins', function(){
     return gulp.src([
+      config.paths.js_path_src_module + 'app.ngmenu.js',  
       config.paths.path_bower + 'jquery-lazy/jquery.lazy.js ',  
       config.paths.path_bower + 'legitripple/js/ripple.js ',
       config.paths.path_bower + 'jquery-throttle-debounce/jquery.ba-throttle-debounce.js '

@@ -11,7 +11,7 @@ gulp.task('compile-app-core', function(){
     return gulp.src([
       /* app core modules */
       config.paths.js_path_src_config + 'app.config.js',
-      config.paths.js_path_src_module + 'app.ngmenu.js',
+      //config.paths.js_path_src_module + 'app.ngmenu.js',
       config.paths.js_path_src_module + 'app.init.js', 
       config.paths.js_path_src_module + 'app.resize.trigger.js', 
       config.paths.js_path_src_module + 'app.scroll.trigger.js',

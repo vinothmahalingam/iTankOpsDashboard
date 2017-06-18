@@ -7,9 +7,9 @@
 {{#*inline "content-block"}}
 
 <div class="row">
-	<div class="col-sm-6">
-<div class="custom-scroll" style="height:700px">
-	<pre class="prettyprint p-1">
+	<div class="col-sm-12">
+
+	<pre class="prettyprint p-1" style="height:500px; overflow:auto">
 var myapp_config = {
     /*
        SAVE INSTANCE REFERENCE
@@ -95,154 +95,13 @@ var myapp_config = {
      */
     storeLocally: true
 };		
-	</pre>
-</div>		
+		</pre>
+	
 	</div>
-	<div class="col-sm-6">
-<div class="custom-scroll" style="height:700px">
-	<pre class="prettyprint p-1">
-/**
- * Menu Plugin
- **/
-$.fn.extend({
 
-    /**
-     * pass the options variable to the function
-     **/
-    ngmenu: function(options) {
+	<div class="col-sm-12">
 
-        var defaults = {
-                accordion: 'true',
-                animate: 'easeOutExpo',
-                speed: 200,
-                closedSign: '[+]',
-                openedSign: '[-]'
-            },
-
-            /**
-             * Extend our default options with those provided.
-             **/
-            opts = $.extend(defaults, options),
-
-            /**
-             * Assign current element to variable, in this case is UL element
-             **/
-            $this = $(this);
-
-        /**
-         * add a mark [+] to a multilevel menu
-         **/
-        $this.find("li").each(function() {
-            if ($(this).find("ul").length !== 0) {
-
-                /**
-                 * add the multilevel sign next to the link
-                 **/
-                $(this).find("a:first").append("<b class='collapse-sign'>" + opts.closedSign + "</b>");
-
-                /**
-                 * avoid jumping to the top of the page when the href is an #
-                 **/
-                if ($(this).find("a:first").attr('href') == "#") {
-                    $(this).find("a:first").click(function() {
-                        return false;
-                    });
-                }
-            }
-        });
-
-        //add open sign to all active lists
-        $this.find("li.active").each(function() {
-            $(this).parents("ul")
-                .parent("li")
-                //.addClass("open") [disabled: creates a wierd jumping effect]
-                .find("a:first")
-                .attr('aria-expanded', true)
-                .find("b:first")
-                .html(opts.openedSign);
-        });
-
-        $this.find("li a").on('mousedown', function(e) {
-
-            if ($(this).parent().find("ul").length !== 0) {
-
-                if (opts.accordion) {
-
-                    /**
-                     * Do nothing when the list is open
-                     **/
-                    if (!$(this).parent().find("ul").is(':visible')) {
-
-                        parents = $(this).parent().parents("ul");
-                        visible = $this.find("ul:visible");
-                        visible.each(function(visibleIndex) {
-                            var close = true;
-                            parents.each(function(parentIndex) {
-
-                                if (parents[parentIndex] == visible[visibleIndex]) {
-
-                                    close = false;
-                                    return false;
-                                }
-                            });
-                            if (close) {
-
-                                if ($(this).parent().find("ul") != visible[visibleIndex]) {
-
-                                    $(visible[visibleIndex]).slideUp(opts.speed + 300, opts.animate, function() {
-                                        $(this).parent("li")
-                                            .removeClass("open")
-                                            .find("a:first")
-                                            .attr('aria-expanded', false)
-                                            .find("b:first")
-                                            .html(opts.closedSign);
-                                    });
-                                }
-                            }
-                        });
-                    }
-                }
-
-                /**
-                 * Add active class to open element
-                 **/
-                if ($(this).parent().find("ul:first").is(":visible") && !$(this).parent().find("ul:first").hasClass("active")) {
-
-                    $(this).parent().find("ul:first").slideUp(opts.speed + 100, opts.animate, function() {
-                        $(this).parent("li")
-                            .removeClass("open")
-                            .find("a:first")
-                            .attr('aria-expanded', false)
-                            .find("b:first").delay(opts.speed)
-                            .html(opts.closedSign);
-                    });
-                } else {
-                    $(this).parent().find("ul:first").slideDown(opts.speed, opts.animate, function() {
-
-                        $(this).parent("li")
-                            .addClass("open")
-                            .find("a:first")
-                            .attr('aria-expanded', true)
-                            .find("b:first").delay(opts.speed)
-                            .html(opts.openedSign);
-
-                        /*bug fixed: addresses the .mod-main-boxed class bug, when nav exceeds content height*/
-                        if (myapp_config.root_.hasClass("mod-main-boxed")) {
-                            initApp.fixAppHeight();
-                        }
-                    });
-                }
-            }
-        });
-    },
-
-    destroy: function() {
-        $this = $(this);
-        console.log("destroy ngmenu");
-        $this._destroy(); //or this.delete; depends on jQuery version
-
-    }
-});
+		<pre class="prettyprint p-1" style="height:700px; overflow:auto">
 
 /**
  * App Initialize
@@ -473,7 +332,7 @@ var initApp = (function(app) {
      * Check setting conditions
      * DOC: sometimes settings can trigger certain plugins; so we check this condition and activate accordingly
      * E.g: the fixed navigation activates slimScroll plugin for the navigation, but this only happens when
-     *  it detects desktop browser and destroys the plugin when navigation is on top or if its not fixed.
+     *		it detects desktop browser and destroys the plugin when navigation is on top or if its not fixed.
      **/
     app.checkSettingConditions = function() {
 
@@ -572,7 +431,7 @@ var initApp = (function(app) {
 
     /**
      *  Toggle visibility
-     *  DOC: show and hide content with a button action
+     * 	DOC: show and hide content with a button action
      *  Usage: onclick="initApp.toggleVisibility('foo');"
      **/
     app.toggleVisibility = function(id) {
@@ -620,20 +479,20 @@ var initApp = (function(app) {
         /**
          * Other options:
          * --------------
-         width: '300px',
-         height: '500px',
-         size: '10px',
-         position: 'left',
-         color: '#ffcc00',
-         alwaysVisible: true,
-         distance: '20px',
-         start: $('#child_image_element'),
-         railVisible: true,
-         railColor: '#222',
-         railOpacity: 0.3,
-         wheelStep: 10,
-         allowPageScroll: false,
-         disableFadeOut: false
+        	width: '300px',
+        	height: '500px',
+        	size: '10px',
+        	position: 'left',
+        	color: '#ffcc00',
+        	alwaysVisible: true,
+        	distance: '20px',
+        	start: $('#child_image_element'),
+        	railVisible: true,
+        	railColor: '#222',
+        	railOpacity: 0.3,
+        	wheelStep: 10,
+        	allowPageScroll: false,
+        	disableFadeOut: false
          **/
         if (typeof $.fn.slimScroll !== 'undefined' && myapp_config.thisDevice === 'desktop') {
             $('.custom-scroll >:first-child').slimscroll({
@@ -692,34 +551,6 @@ var initApp = (function(app) {
                 $('.custom-scroll').trigger('scroll');
             })
         }
-
-
-        /*app.buildCustomScroll = function (slim_target) {
-
-         $('.custom-scroll img').lazy({
-          effect: "fadeIn",
-          effectTime: 200,
-          threshold: 10,
-          enableThrottle: true,
-          throttle: 500,
-          visibleOnly: true,
-          combined: true,
-          appendScroll: slim_target
-         });
-         $('a[data-toggle="tab"]').on('shown.bs.tab', function () {
-          slim_target.trigger('scroll');
-         })
-         $('#index').on('show.bs.dropdown', function () {
-          slim_target.trigger('scroll');
-         })
-        }
-
-        if ( typeof $.fn.lazy !== 'undefined' && typeof $.fn.slimScroll !== 'undefined') {
-         initApp.buildCustomScroll( $('.slimScrollDiv > :first-child') );
-
-        } else {
-         initApp.buildCustomScroll( $('.custom_scroll') );
-        }*/
 
         /**
          * Dropdowns will not close on click
@@ -909,7 +740,7 @@ var initApp = (function(app) {
                     case (actiontype === 'app-fullscreen'):
 
                         /* NOTE: this may not work for all browsers if the browser security does not permit it 
-                            IE issues: http://stackoverflow.com/questions/33732805/fullscreen-not-working-in-ie */
+					 	   IE issues: http://stackoverflow.com/questions/33732805/fullscreen-not-working-in-ie */
 
                         if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
 
@@ -1075,7 +906,7 @@ $(window).resize(
          **/
         initApp.calculateAppHeight();
 
-        /** -- insert your resize codes below this line -- **/
+        /** -- insert your scroll codes below this line -- **/
 
     })
 );
@@ -1194,8 +1025,9 @@ $(window).on("blur focus", function(e) {
 
     $(this).data("prevType", e.type);
 })
-	</pre>
-</div>		
+
+		</pre>
+		
 	</div>
 </div>
 

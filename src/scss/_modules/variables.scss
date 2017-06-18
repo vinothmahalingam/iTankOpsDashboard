@@ -295,7 +295,7 @@ $header-icon-size:									22px;
 
 /* search input box */
 $header-search-border-color:						transparent !default;									/* suggestion: #ccced0*/
-$header-search-bg:									$white !default;
+$header-search-bg:									transparent !default;
 $header-search-width:								400px !default;
 $header-search-height:								$header-height - 24 !default; 
 $header-search-font-size:							$base-font-size + 2;

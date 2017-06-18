@@ -18,6 +18,8 @@ $menu-item-direction: 'top'; //top or left
   line-height:$menu-item-size;
   transform:translate3d(0,0,0);
   transition:transform ease-out 200ms;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05), 
+              0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .app-shortcut {

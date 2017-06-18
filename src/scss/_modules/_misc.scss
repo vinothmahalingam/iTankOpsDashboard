@@ -124,11 +124,6 @@ ul.list-verticle {
 	}
 }
 
-/* font-color contrast */
-.text-contrast {
-	color:$black !important;
-}
-
 /* height */
 .h-auto {
 	height: auto !important;
@@ -152,17 +147,17 @@ ul.list-verticle {
 
 .profile-image {
 	width: 45px;
-	height: auto;
+	height: 45px;
 }
 
 .profile-image-md {
-	width: 30px;
-	height: auto;
+	width: 35px;
+	height: 35px;
 }
 
 .profile-image-sm {
-	width: 20px;
-	height: auto;
+	width: 25px;
+	height: 25px;
 }
 
 /* image share */
@@ -436,3 +431,21 @@ ul.list-verticle {
 		background: $danger-500;
 	}
 }
+
+/* containers */
+.container {
+
+	&.container-sm {
+		max-width: map-get($grid-breakpoints, sm)
+	}
+
+	&.container-md {
+		max-width: map-get($grid-breakpoints, md)
+	}
+
+	&.container-md {
+		max-width: map-get($grid-breakpoints, lg)
+	}
+
+}
+

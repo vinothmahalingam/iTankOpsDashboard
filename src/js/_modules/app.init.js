@@ -445,34 +445,6 @@ var initApp = (function(app) {
 			})
 		}
 
-
-		/*app.buildCustomScroll = function (slim_target) {
-
-			$('.custom-scroll img').lazy({
-				effect: "fadeIn",
-				effectTime: 200,
-				threshold: 10,
-				enableThrottle: true,
-				throttle: 500,
-				visibleOnly: true,
-				combined: true,
-				appendScroll: slim_target
-			});
-			$('a[data-toggle="tab"]').on('shown.bs.tab', function () {
-				slim_target.trigger('scroll');
-			})
-			$('#index').on('show.bs.dropdown', function () {
-				slim_target.trigger('scroll');
-			})
-		}
-
-		if ( typeof $.fn.lazy !== 'undefined' && typeof $.fn.slimScroll !== 'undefined') {
-			initApp.buildCustomScroll( $('.slimScrollDiv > :first-child') );
-
-		} else {
-			initApp.buildCustomScroll( $('.custom_scroll') );
-		}*/
-
 		/**
 		 * Dropdowns will not close on click
 		 * doc: only close dropdowns on click outside hit area
@@ -551,6 +523,20 @@ var initApp = (function(app) {
 
 							initApp.calculateAppHeight();
 						}
+
+					break;
+
+					/**
+					 * toggle swap trigger
+					 * Usage (target): <a href="#" data-action="toggle-swap" data-class=".add-this-class-to-target .another-class" data-target="#id">...</a>
+					 **/
+					case ( actiontype === 'toggle-swap' ):
+
+						var target = $(this).attr('data-target'),
+							dataClass = $(this).attr('data-class');
+
+						/* trigger class change */
+						$(target).removeClass().addClass( dataClass );
 
 					break;
 

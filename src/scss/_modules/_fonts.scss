@@ -86,35 +86,45 @@ h6 small,
 
 /* 10px */
 .fs-nano {
-	font-size: $fs-nano;
+	font-size: rem($fs-nano);
 }
 
 /* 12px */
 .fs-xs {
-	font-size: $fs-xs;
+	font-size:  rem($fs-xs);
 }
 
 /* 12.5px */
 .fs-sm {
-	font-size: $fs-sm;
+	font-size:  rem($fs-sm);
 }
 
 /* 13px */
 .font-base {
-	font-size: $base-font-size;
+	font-size:  rem($base-font-size);
 }
 
 /* 14px */
 .fs-md {
-	font-size: $fs-md;
+	font-size: rem($fs-md);
 }
 
 /* 15px */
 .fs-lg {
-	font-size: $fs-lg;
+	font-size: rem($fs-lg);
 }
 
 /* 16px */
 .fs-xl {
-	font-size: $fs-xl; 
+	font-size: rem($fs-xl); 
+}
+
+/* page header */
+.fs-xxl {
+	font-size: rem($page-header-font-size); 
+}
+
+/* contrast text */
+.text-contrast {
+	color: lighten($black, 20%) !important;
 }
