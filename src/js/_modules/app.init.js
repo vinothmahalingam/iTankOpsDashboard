@@ -19,7 +19,7 @@ var initApp = (function(app) {
 			saveSettings();
 
 			if (myapp_config.debugState)
-				console.log( (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {} );
+				console.log(localStorage.getItem('themeSettings'));
 
 		} else {
 			console.log("save function does not exist")
@@ -97,7 +97,9 @@ var initApp = (function(app) {
 		myapp_config.windowHeight = $(window).height();
 		
 		if (myapp_config.debugState)
-			console.log("app height updated " + myapp_config.windowHeight + " | app.getNewWindowHeight()");		
+			console.log("app height updated: " + myapp_config.windowHeight);		
+
+		return myapp_config.windowHeight;
 	}
 
 	/**
@@ -110,10 +112,12 @@ var initApp = (function(app) {
 		if(myapp_config.isChrome){
 
 			myapp_config.root_.addClass("chrome webkit");
+			return "chrome webkit";
 
 		} else if (myapp_config.isWebkit) {
 
 			myapp_config.root_.addClass("webkit");
+			return "webkit";
 		}
 
 	};
@@ -147,6 +151,8 @@ var initApp = (function(app) {
 			}
 			
 		}
+
+		return myapp_config.thisDevice;
 		
 	};
 	
@@ -171,7 +177,7 @@ var initApp = (function(app) {
 					myapp_config.root_.css("min-height",  newHeight + "px");
 
 					if (myapp_config.debugState)
-						console.log("nav height : " +  newHeight + " | app.fixAppHeight()");
+						console.log("nav height : " +  newHeight);
 
 					break;
 
@@ -181,7 +187,7 @@ var initApp = (function(app) {
 					myapp_config.root_.css("min-height",  newHeight + "px");
 
 					if (myapp_config.debugState)
-						console.log("body height : " +  newHeight + " | app.fixAppHeight()");
+						console.log("body height : " +  newHeight);
 
 					break;
 
@@ -191,7 +197,7 @@ var initApp = (function(app) {
 					myapp_config.root_.css("min-height",  primaryNavHeight + "px");
 
 					if (myapp_config.debugState)
-						console.log("nav-function-fixed new height : " +  primaryNavHeight + " | app.fixAppHeight()");
+						console.log("nav-function-fixed new height : " +  primaryNavHeight);
 
 					break;
 
@@ -224,7 +230,7 @@ var initApp = (function(app) {
 	 }
 
 	/**
-	 * Check setting conditions
+	 * checkSettingConditions by checking layout conditions
 	 * DOC: sometimes settings can trigger certain plugins; so we check this condition and activate accordingly
 	 * E.g: the fixed navigation activates slimScroll plugin for the navigation, but this only happens when
 	 *		it detects desktop browser and destroys the plugin when navigation is on top or if its not fixed.
@@ -277,19 +283,19 @@ var initApp = (function(app) {
 				break;
 		}
 
-	 };
+	};
 	
 	/**
 	 * Activate Nav
 	 * DOC: activation will not take place if top navigation is on
 	 **/
-	app.leftNav = function() {
+	app.ngMenu = function(id) {
 		
 		/**
 		 * start left nav
 		 * app.ngmenu.js
 		 **/
-		$(myapp_config.navAnchor + ' ul').ngmenu({ 
+		$(id + ' ul').ngmenu({ 
 
 			accordion : myapp_config.navAccordion,
 			speed : myapp_config.navSpeed,
@@ -297,6 +303,8 @@ var initApp = (function(app) {
 			openedSign : '<em class="' + myapp_config.navOpenedSign + '"></em>'
 
 		});
+
+		return id;
 	};
 	
 	/**
@@ -318,8 +326,9 @@ var initApp = (function(app) {
 		}
 
 		if (myapp_config.debugState)
-			console.log("mobileCheckActivation on " + $(window).width() + "px" + " | mobileMenuTrigger :" + myapp_config.mobileMenuTrigger + " | app.mobileCheckActivation()");
+			console.log( "mobileCheckActivation on " + $(window).width() + " | activated: " + myapp_config.mobileMenuTrigger);
 
+		return myapp_config.mobileMenuTrigger;
 	} 
 
 	/**
@@ -469,11 +478,11 @@ var initApp = (function(app) {
 			});
 
 			if (myapp_config.debugState)
-				console.log("rippler active" + " | myapp_config.rippleEffect : " + myapp_config.rippleEffect);
+				console.log("rippler active");
 			
 		} else {
 			if (myapp_config.debugState)
-				console.log("rippler inactive" + " | myapp_config.rippleEffect : " + myapp_config.rippleEffect);
+				console.log("rippler inactive");
 		}
 
 		/**
@@ -482,10 +491,8 @@ var initApp = (function(app) {
 		myapp_config.root_
 			.on('mousedown', '[data-action]', function(e) {
 
-				console.log("data-action clicked");
-
 				var actiontype = $(this).data('action');
-				
+
 				switch ( true ) {
 
 					/**
@@ -524,7 +531,7 @@ var initApp = (function(app) {
 							initApp.calculateAppHeight();
 						}
 
-					break;
+						break;
 
 					/**
 					 * toggle swap trigger
@@ -538,7 +545,7 @@ var initApp = (function(app) {
 						/* trigger class change */
 						$(target).removeClass().addClass( dataClass );
 
-					break;
+						break;
 
 					/**
 					 * panel 'collapse' trigger
@@ -555,7 +562,7 @@ var initApp = (function(app) {
 						/* return ID of panel */
 						//return selectedPanel.attr('id');
 
-					break;
+						break;
 
 					/**
 					 * panel 'fullscreen' trigger
@@ -573,7 +580,7 @@ var initApp = (function(app) {
 						/* return ID of panel */
 						//return selectedPanel.attr('id');
 
-					break;
+						break;
 
 					/**
 					 * panel 'close' trigger
@@ -595,7 +602,7 @@ var initApp = (function(app) {
 
 						});
 
-					break;
+						break;
 
 					/**
 					 * update header css, 'theme-update' trigger
@@ -613,7 +620,7 @@ var initApp = (function(app) {
 
 						initApp.saveSettings();
 
-					break;
+						break;
 
 					/**
 					 * theme 'app-reset' trigger
@@ -625,7 +632,7 @@ var initApp = (function(app) {
 						if (myapp_config.debugState)
 								console.log( "settings was reset" );
 
-					break;
+						break;
 
 					/**
 					 * app print
@@ -635,7 +642,7 @@ var initApp = (function(app) {
 
 						window.print();
 
-					break;
+						break;
 
 					/**
 					 * app 'fullscreen' trigger
@@ -680,11 +687,14 @@ var initApp = (function(app) {
 								console.log( "app fullscreen toggle inactive" );
 						}
 
-					break; 
+						break; 
 				}
 
 				/* hide tooltip if any present */
 				$(this).tooltip('hide');
+
+				if (myapp_config.debugState)
+					console.log("data-action clicked: " + actiontype);
 
 				/* stop default link action */				
 				e.stopPropagation(); 

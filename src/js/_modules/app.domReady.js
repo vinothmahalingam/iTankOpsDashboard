@@ -28,7 +28,7 @@ jQuery(document).ready(function() {
  	/**
 	 * d. build navigation
 	 **/
-	initApp.leftNav();
+	initApp.ngMenu(myapp_config.navAnchor);
 
  	/**
 	 * e. run DOM misc functions

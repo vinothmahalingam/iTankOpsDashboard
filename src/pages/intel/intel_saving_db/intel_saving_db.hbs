@@ -73,8 +73,8 @@
 
 		if($('#ng-eventlog').length) {
 
-			var dt = new Date();
-			var time = "<div class='p-1'><span class='badge badge-primary fw-500 border-radius-0'>" + dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds() + " </span> <i>body class changed to: </i>";
+			var dt = new Date(),
+				time = "<div class='p-1'><span class='badge badge-primary fw-500 border-radius-0'>" + dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds() + " </span> <i>body class changed to: </i>";
 			$('#ng-eventlog').prepend( time + "<strong> [ " + initApp.getSettings().split(' ') + " ] </strong>" + "</div/>" ); 
 
 		}
