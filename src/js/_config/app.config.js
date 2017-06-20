@@ -60,7 +60,7 @@ var myapp_config = {
        Primary menu anchor point #primary-nav
        This is the root anchor point where the menu script will begin its build
     */
-    navAnchor: '#primary-nav', //changing this may implicate CSS targets
+    navAnchor: '#primary-nav > ul.ngmenu', //changing this may implicate CSS targets
     /*
        The rate at which the menu expands revealing child elements on click
        Lower rate reels faster expansion of nav childs

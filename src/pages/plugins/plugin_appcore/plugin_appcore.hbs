@@ -218,6 +218,82 @@
 
         </div>
 
+        <div class="card p-3 mrg-b-gutter d-block">
+
+            <h3>
+                Action <span class="fw-300">buttons</span> 
+                <small>
+                    Allows you to
+                </small>
+            </h3>
+
+            <table class="table table-hover table-bordered bg-white">
+                <thead>
+                    <tr>
+                        <th>
+                            Usage
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <code>data-toggle</code>
+                        </td>
+                        <td class="fs-xs">
+                            Pushes selected classes from the <code>body</code> tag to localstorage/database
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>data-toggle-swap</code>
+                        </td>
+                        <td class="fs-xs">
+                            Indicator for Save Settings (mostly aesthetics)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>data-panel-collapse</code><br>
+                            <code>data-panel-fullscreen</code><br>
+                            <code>data-panel-close</code>
+                        </td>
+                        <td class="fs-xs">
+                            Push array to <code>body</code> tag. See <a href="intel_saving_db.html">saving to database</a> for more details
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>data-panel-close</code>
+                        </td>
+                        <td class="fs-xs">
+                            Fetch class names from <code>body</code> and convert them to JSON string. See <a href="intel_saving_db.html">saving to database</a> for more details
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>data-panel-close</code>
+                        </td>
+                        <td class="fs-xs">
+                            Remove classes from <code>body</code> & saves to localstorage/database
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td>
+                            <code>data-theme-update</code>
+                        </td>
+                        <td class="fs-xs">
+                            Remove classes from <code>body</code> & saves to localstorage/database
+                        </td>
+                    </tr>             
+                </tbody>
+            </table>
+
+        </div>
+
     </div>
 
     <div class="col-lg-6 col-xl-6">
@@ -266,11 +342,9 @@ var myapp_config = {
                     Allows you to
                 </small>
             </h3>
+            
 <pre class="prettyprint p-2 m-0 h-auto border-0 fs-base" style="height:700px; overflow:auto; background: rgba(255, 138, 31, 0.07); font-size:100%">
-/**
- * App Initialize
- * Initializes the app with intApp();
- **/
+/* App initialize */
 var initApp = (function(app) {
     app.saveSettings = function () { ... }
     app.resetSettings = function () { ... }
@@ -287,38 +361,59 @@ var initApp = (function(app) {
     app.mobileCheckActivation = function(){ ... }
     app.toggleVisibility = function (id) { ... }
     app.domReadyMisc = function() { 
-       // get app date;
-       // activate last tab used
-       // activate/destroy slimscroll
-       // activates tooltip
-       // activates image lazyload mechanic
-       // enable dropdown
-       // enable ripple effect
-       // attach action buttons
-       // menu tap actions (for mobile)
-       // initialize windows mobile 8 fix for BS4
+       /* get app date */
+       /* activate last tab used */
+       /* activate/destroy slimscroll */
+       /* activates tooltip */
+       /* activates image lazyload mechanic */
+       /* enable dropdown */
+       /* enable ripple effect */
+       /* attach action buttons */
+       /* menu tap actions (for mobile) */
+       /* initialize windows mobile 8 fix for BS4 */
        ...
     }
     return app;
 })({});
 
-/* Bind the throttled handler to the resize event. */
+/* Bind the throttled handler to the resize event */
 $(window).resize(
     $.throttle( myapp_config.throttleDelay, function (e) {
-        ...
+        /* (1a) ADD CLASS WHEN BELOW CERTAIN WIDTH (MOBILE MENU) */
+        initApp.mobileCheckActivation();
+        /* (2a) FIX APP HEIGHT */
+        initApp.getNewWindowHeight();
+        /* (2b) FIX APP HEIGHT */
+        initApp.calculateAppHeight();     
     })
 ); 
 
 /* Bind the throttled handler to the scroll event */
 $(window).scroll(
     $.throttle( myapp_config.throttleDelay, function (e) {
-        ...
+        /* FIX APP HEIGHT */
+        initApp.fixAppHeight();
     })
 );
+/* Initiate scroll events */
+$(window).on('scroll', initApp.windowScrollEvents);
 
-/* DOCUMENT LOADED EVENT */
+/* Document loaded event */
 jQuery(document).ready(function() {
-    ...
+    /* detect Webkit Browser */
+    initApp.detectBrowserType();
+    /* a. check for mobile view width and add class .mobile-view-activated */
+    initApp.mobileCheckActivation();
+    /* b. assign window height on page load */    
+    initApp.getNewWindowHeight();
+    /* c. fix application height */    
+    initApp.fixAppHeight(); 
+    /* d. build navigation */
+    initApp.ngMenu(myapp_config.navAnchor);
+    /* e. run DOM misc functions */
+    initApp.domReadyMisc();
+    /* f. material form effects */
+    initApp.materialFormEffects();
 });</pre>
 
         </div>
@@ -336,7 +431,7 @@ jQuery(document).ready(function() {
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;skin=default"></script>
 <script>
     
-myapp_config.debugState = true;
+    myapp_config.debugState = true;
 
     var lastMsg = "",
         repeatCount = 0,
@@ -371,7 +466,7 @@ myapp_config.debugState = true;
     };
 
     console.error = console.debug = console.info =  console.log
-    
+
 </script>
 {{/inline}}
 

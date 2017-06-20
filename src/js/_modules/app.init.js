@@ -295,7 +295,7 @@ var initApp = (function(app) {
 		 * start left nav
 		 * app.ngmenu.js
 		 **/
-		$(id + ' ul').ngmenu({ 
+		$(id).ngmenu({ 
 
 			accordion : myapp_config.navAccordion,
 			speed : myapp_config.navSpeed,
