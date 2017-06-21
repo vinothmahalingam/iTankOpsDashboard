@@ -19,7 +19,7 @@ var initApp = (function(app) {
 			saveSettings();
 
 			if (myapp_config.debugState)
-				console.log(localStorage.getItem('themeSettings'));
+				console.log('Theme settings: ' + '\n' +localStorage.getItem('themeSettings'));
 
 		} else {
 			console.log("save function does not exist")
@@ -40,6 +40,9 @@ var initApp = (function(app) {
 
 		/* save settings if "storeLocally == true" */
 		initApp.saveSettings();
+
+		if (myapp_config.debugState)
+			console.log(" App reset successful");
 		
 	}
 
@@ -629,9 +632,6 @@ var initApp = (function(app) {
 
 						initApp.resetSettings();
 
-						if (myapp_config.debugState)
-								console.log( "settings was reset" );
-
 						break;
 
 					/**
@@ -787,5 +787,3 @@ var initApp = (function(app) {
 	return app;
 	
 })({});
-
-initApp.addDeviceType();

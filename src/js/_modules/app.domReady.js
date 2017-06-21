@@ -6,6 +6,11 @@
 jQuery(document).ready(function() {
 
 	/**
+	 * detect desktop or mobile 
+	 **/
+	initApp.addDeviceType();
+
+	/**
 	 * detect Webkit Browser 
 	 **/
 	initApp.detectBrowserType();
@@ -28,7 +33,7 @@ jQuery(document).ready(function() {
  	/**
 	 * d. build navigation
 	 **/
-	initApp.ngMenu(myapp_config.navAnchor);
+	initApp.ngMenu(myapp_config.navHooks);
 
  	/**
 	 * e. run DOM misc functions
