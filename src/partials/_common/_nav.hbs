@@ -403,7 +403,7 @@
 			</li>																															
 		</ul>
 	</li>
-	<li {{#is pagename "in" "plugin_appcore,plugin_pacejs,plugin_panels,plugin_ripplejs,plugin_slimscroll,plugin_throttle"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "plugin_appcore,plugin_pacejs,plugin_panels,plugin_ripplejs,plugin_slimscroll,plugin_throttle,ngmenu"}}class="active open"{{/is}}>
 		<a href="#" title="Plugins"> 
 			<i class="icon icon-my-apps"></i>
 			<span class="ngmenu-link-text">Core Plugins</span> 
@@ -446,6 +446,14 @@
 					<span class="ngmenu-link-text">
 						Throttle
 						<span class="dl-ref label bg-fusion-500 ml-1">1 KB</span>
+					</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "ngmenu"}}class="active"{{/is}}>
+				<a href="ngmenu.html"> 
+					<span class="ngmenu-link-text">
+						ngMenu
+						<span class="dl-ref label bg-fusion-500 ml-1">2 KB</span>
 					</span>
 				</a>
 			</li>	

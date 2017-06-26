@@ -6,9 +6,9 @@
 
 {{#*inline "content-block"}}
 
-<div class="card border-radius-0">
+<div class="card border-radius-0 p-0">
 	
-	<table class="table table-hover table-border-0 m-0">
+	<table class="table table-hover m-0">
 	    <thead>
 	        <tr class="bg-fusion-300">
 				<th class="pt-2 pb-2 pl-2 text-center">
@@ -21,7 +21,7 @@
 	                <span class="m-0 fw-500 text-white">Description <small class="m-0 d-inline text-white">(what it does)</small> </span>
 	            </th>
 				<th class="pt-2 pb-2">
-	                <span class="m-0 fw-500 text-white">Supported Resolutions</span>
+	                <span class="m-0 fw-500 text-white">Supported</span>
 	            </th>
 	            <th class="pt-2 pb-2">
 	                <span class="m-0 fw-500 text-white">Incompatibility</span>
@@ -37,7 +37,7 @@
 	                <strong>Fixed Header</strong>
 	            </td>
 	            <td class="fs-sm">
-	            	Header is in a fixed position at all times. This settings effects mobile view. The function adds the following class to the body
+	            	header is in a fixed position at all times, effecting mobile & desktop view
 	            	<span class="text-muted d-block">
 	            		<code>&lt;body class="header-function-fixed"> </code>
 	            		<br>
@@ -56,7 +56,7 @@
 	            <td>
 	                <strong>Fixed Navigation</strong>
 	            </td>
-	            <td class="fs-sm">Left panel position becomes fixed. We activate the <a href="slimscroll.html" class="fw-500">slimScroll</a> plugin to keep it neat and tidy
+	            <td class="fs-sm">left panel position becomes fixed, activates <a href="slimscroll.html" class="fw-500">slimScroll</a> plugin
 					<span class="text-muted d-block">
 	            		<code>&lt;body class="nav-function-fixed"> </code>
 	            	</span>
@@ -73,7 +73,7 @@
 	            <td>
 	                <strong>Minify Navigation</strong>
 	            </td>
-	            <td class="fs-sm">Navigation items are hidden and collapsed. Only visible portion are the icons. Hovering over icon will reveal child elements.
+	            <td class="fs-sm">navigation items are hidden and collapsed. Only visible portion are the icons. Hovering over icon will reveal child elements.
 					<span class="text-muted d-block">
 	            		<code>&lt;body class="nav-function-minify"> </code>
 	            	</span>
@@ -90,7 +90,7 @@
 	            <td>
 	                <strong>Hide Navigation</strong>
 	            </td>
-	            <td class="fs-sm">Entire navigation pane shifts to off screen. This is useful for large map applications. Navigation is revealed when mouse touches the left portion of the screen
+	            <td class="fs-sm">entire navigation pane shifts to off screen. This is useful for large map applications. Navigation is revealed when mouse touches the left portion of the screen
 	            	<span class="text-muted d-block">
 	            		<code>&lt;body class="nav-function-hidden"> </code>
 	            	</span>
@@ -107,7 +107,7 @@
 	            <td>
 	                <strong>Top Navigation</strong>
 	            </td>
-	            <td class="fs-sm">Otherwise known as horizontal navigation. The entire navigation pane shifts to the top. You will need to hover over icons to navigate to other menu items
+	            <td class="fs-sm">otherwise known as horizontal navigation. The entire navigation pane shifts to the top. You will need to hover over icons to navigate to other menu items
 	            	<span class="text-muted d-block">
 	            		<code>&lt;body class="nav-function-top"> </code>
 	            	</span>
@@ -124,7 +124,7 @@
 	            <td>
 	                <strong>Boxed Layout</strong>
 	            </td>
-	            <td class="fs-sm">Minimize layout by inserting into a container. Some classes are not compatible with this change, however it does provide lots of whitespace
+	            <td class="fs-sm">minimize layout by inserting into a container. Some classes are not compatible with this change, however it does provide lots of whitespace
 	            	<span class="text-muted d-block">
 	            		<code>&lt;body class="mod-main-boxed"> </code>
 	            	</span>
@@ -141,7 +141,7 @@
 	            <td>
 	                <strong>Push Content</strong>
 	            </td>
-	            <td class="fs-sm">Content pushed on menu reveal. Menu will be treated as a 'physical object' that will push the content aside.
+	            <td class="fs-sm">content pushed on menu reveal. Menu will be treated as a 'physical object' that will push the content aside.
 	            	<span class="text-muted d-block">
 	            		<code>&lt;body class="nav-mobile-push"> </code>
 	            	</span>
@@ -158,7 +158,7 @@
 	            <td>
 	                <strong>No Overlay</strong>
 	            </td>
-	            <td class="fs-sm">Removes mesh on menu reveal
+	            <td class="fs-sm">removes mesh on menu reveal
 	            	<span class="text-muted d-block">
 	            		<code>&lt;body class="nav-mobile-no-overlay"> </code>
 	            	</span>
@@ -209,7 +209,7 @@
 	            <td>
 	                <strong>High Contrast Text</strong>
 	            </td>
-	            <td class="fs-sm">Grey fonts are reduced
+	            <td class="fs-sm">grey fonts are reduced
 	            	<span class="text-muted d-block">
 	            		<code>&lt;body class="mod-high-contrast"> </code>
 	            	</span>
@@ -226,7 +226,7 @@
 	            <td>
 	                <strong>Daltonism <sup>beta</sup></strong>
 	            </td>
-	            <td class="fs-sm">Color vision deficiency
+	            <td class="fs-sm">color vision deficiency
 	            	<span class="text-muted d-block">
 	            		<code>&lt;body class="mod-color-blind"> </code>
 	            	</span>
@@ -243,7 +243,7 @@
 	            <td>
 	                <strong>Preloader Inside</strong>
 	            </td>
-	            <td class="fs-sm">Preloader will be inside content
+	            <td class="fs-sm">preloader will be inside content
 	            	<span class="text-muted d-block">
 	            		<code>&lt;body class="mod-pace-custom"> </code>
 	            	</span>
@@ -260,7 +260,7 @@
 	            <td>
 	                <strong>Clean Page Background</strong>
 	            </td>
-	            <td class="fs-sm">Preloader will be inside content
+	            <td class="fs-sm">preloader will be inside content
 	            	<span class="text-muted d-block">
 	            		<code>&lt;body class="mod-clean-page-bg"> </code>
 	            	</span>
@@ -277,7 +277,7 @@
 	            <td>
 	                <strong>Hide Navigation Icons</strong>
 	            </td>
-	            <td class="fs-sm">invisible navigation icons
+	            <td class="fs-sm">hides navigation icons for a slick and clean look
 	            	<span class="text-muted d-block">
 	            		<code>&lt;body class="mod-hide-nav-icons"> </code>
 	            	</span>
@@ -294,7 +294,7 @@
 	            <td>
 	                <strong>Disable CSS Animation</strong>
 	            </td>
-	            <td class="fs-sm">invisible navigation icons
+	            <td class="fs-sm">hides info card in the navigation page for visible spacing
 	            	<span class="text-muted d-block">
 	            		<code>&lt;body class="mod-disable-animation"> </code>
 	            	</span>
@@ -328,7 +328,7 @@
 	            <td>
 	                <strong>Lean Page Header</strong>
 	            </td>
-	            <td class="fs-sm">invisible navigation icons
+	            <td class="fs-sm">a less prominent header
 	            	<span class="text-muted d-block">
 	            		<code>&lt;body class="mod-lean-page-header"> </code>
 	            	</span>

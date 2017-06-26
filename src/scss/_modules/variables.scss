@@ -222,13 +222,13 @@ $baseURL:											"../" !default;
 $base-font-size:									13px !default;
 $base-text-color:									darken($white,60%) !default;
 
-$fs-nano:											$base-font-size - 3; /* 10px   */
+$fs-nano:											$base-font-size - 3;   /* 10px   */
 $fs-xs: 											$base-font-size - 1;   /* 12px   */
 $fs-sm: 											$base-font-size - 0.5; /* 12.5px */
 $fs-md: 											$base-font-size + 1;   /* 14px   */
 $fs-lg: 											$base-font-size + 2;   /* 15px   */
 $fs-xl: 											$base-font-size + 3;   /* 16px   */
-$fw-page-header: 									28px;
+$fs-xxl: 											28px;
 
 /*  Font Family
 ========================================================================== */
@@ -438,10 +438,6 @@ $list-table-padding-y:								0 !default;
 ========================================================================== */
 $settings-panel-bg:									lighten($color-fusion, 66%) !default;
 $settings-width:									260px !default;
-
-/*   PAGE HEADING 
-========================================================================== */
-$page-header-font-size:								26px !default;
 
 /*   PAGE BREADCRUMB 
 ========================================================================== */

@@ -4,7 +4,6 @@
 body {
 	font-family: $heading-font-family;
 	font-size: rem($base-font-size);
-	//line-height: $baseLINE-Height;
 	letter-spacing: rem(0.1px);
 }
 
@@ -14,8 +13,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.3;
-	//color: darken($base-text-color, 10%);
 	font-weight: 400;
+	color:$fusion-500;
 }
 
 strong {
@@ -121,7 +120,7 @@ h6 small,
 
 /* page header */
 .fs-xxl {
-	font-size: rem($page-header-font-size); 
+	font-size: rem($fs-xxl); 
 }
 
 /* contrast text */

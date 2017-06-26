@@ -1,6 +1,8 @@
 {{#> layouts/main title="App.Core" pagename="plugin_appcore" category_1="Core Plugins" heading="App.core.js <sup class='badge badge-warning fw-300 fs-sm'>main-application</sup>" pagedescription="App.Core.js is the main application plugin"}}
 
-{{#*inline "head-block"}}{{/inline}}
+{{#*inline "head-block"}}
+<link rel="stylesheet" media="screen, print" href="css/theme-demo.min.css">
+{{/inline}}
 
 {{#*inline "header-space-block"}}test{{/inline}}
 
@@ -14,26 +16,13 @@
         <div class="card p-3 mrg-b-gutter d-block">
 
             <h3>
-                App <span class="fw-300">console.log</span> 
+                App <span class="fw-300">API</span> 
                 <small>
                     Allows you to
                 </small>
             </h3>
 
-            <div id="ng-eventlog" class="card bg-faded p-1" style="max-height:450px; overflow:auto;"></div>
-
-        </div>
-
-        <div class="card p-3 mrg-b-gutter d-block">
-
-            <h3>
-                App <span class="fw-300">functions</span> 
-                <small>
-                    Allows you to
-                </small>
-            </h3>
-
-            <table class="table table-hover table-bordered bg-white">
+            <table class="table table-hover table-bordered bg-white m-0">
                 <thead>
                     <tr>
                         <th>
@@ -55,7 +44,7 @@
                         <td>
                             <i class="text-muted">-</i>
                         </td>
-                        <td class="fs-xs">
+                        <td class="fs-sm">
                             Pushes selected classes from the <code>body</code> tag to localstorage/database
                         </td>
                     </tr>
@@ -66,7 +55,7 @@
                         <td>
                             <i class="text-muted">-</i>
                         </td>
-                        <td class="fs-xs">
+                        <td class="fs-sm">
                             Remove classes from <code>body</code> & saves to localstorage/database
                         </td>
                     </tr>
@@ -77,18 +66,18 @@
                         <td>
                             <i class="text-muted">-</i>
                         </td>
-                        <td class="fs-xs">
+                        <td class="fs-sm">
                             Indicator for Save Settings (mostly aesthetics)
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <code>initApp.pushSettings(.class_1 .class_2)</code>
+                            <code>initApp.pushSettings()</code>
                         </td>
                         <td>
                             <i class="text-muted">-</i>
                         </td>
-                        <td class="fs-xs">
+                        <td class="fs-sm">
                             Push array to <code>body</code> tag. See <a href="intel_saving_db.html">saving to database</a> for more details
                         </td>
                     </tr>
@@ -99,7 +88,7 @@
                         <td>
                             <i class="fw-500 text-primary">string</i>
                         </td>
-                        <td class="fs-xs">
+                        <td class="fs-sm">
                             Fetch class names from <code>body</code> and convert them to JSON string. See <a href="intel_saving_db.html">saving to database</a> for more details
                         </td>
                     </tr>
@@ -110,7 +99,7 @@
                         <td>
                             <i class="fw-500 text-success">int</i>
                         </td>
-                        <td class="fs-xs">
+                        <td class="fs-sm">
                             Returns window height for layout calculations
                         </td>
                     </tr>
@@ -121,7 +110,7 @@
                         <td>
                             <i class="fw-500 text-primary">string</i>
                         </td>
-                        <td class="fs-xs">
+                        <td class="fs-sm">
                             Detects webkit and chrome browsers
                         </td>
                     </tr>
@@ -132,7 +121,7 @@
                         <td>
                             <i class="fw-500 text-primary">string</i>
                         </td>
-                        <td class="fs-xs">
+                        <td class="fs-sm">
                             Detects whether device is desktop or mobile
                         </td>
                     </tr>
@@ -143,7 +132,7 @@
                         <td>
                             <i class="text-muted">-</i>
                         </td>
-                        <td class="fs-xs">
+                        <td class="fs-sm">
                             Saves app settings to localstorage
                         </td>
                     </tr>
@@ -154,7 +143,7 @@
                         <td>
                             <i class="text-muted">-</i>
                         </td>
-                        <td class="fs-xs">
+                        <td class="fs-sm">
                             Saves app settings to localstorage
                         </td>
                     </tr>
@@ -165,18 +154,18 @@
                         <td>
                             <i class="text-muted">-</i>
                         </td>
-                        <td class="fs-xs">
+                        <td class="fs-sm">
                             Saves app settings to localstorage
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <code>initApp.ngMenu("#id")</code>
+                            <code>initApp.ngMenu()</code>
                         </td>
                         <td>
                             <i class="fw-500 text-primary">string</i>
                         </td>
-                        <td class="fs-xs">
+                        <td class="fs-sm">
                             Saves app settings to localstorage
                         </td>
                     </tr>
@@ -187,18 +176,18 @@
                         <td>
                             <i class="fw-500 text-danger">bool</i>
                         </td>
-                        <td class="fs-xs">
+                        <td class="fs-sm">
                             Saves app settings to localstorage
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <code>onclick="initApp.toggleVisibility('foo');"</code>
+                            <code>initApp.toggleVisibility()</code>
                         </td>
                         <td>
                             <i class="text-muted">-</i>
                         </td>
-                        <td class="fs-xs">
+                        <td class="fs-sm">
                             Saves app settings to localstorage
                         </td>
                     </tr>
@@ -209,12 +198,25 @@
                         <td>
                             <i class="text-muted">-</i>
                         </td>
-                        <td class="fs-xs">
+                        <td class="fs-sm">
                             Fires a series of events, see "Initialization shell" to your left, for more details.
                         </td>
                     </tr>                
                 </tbody>
             </table>
+
+        </div>
+
+        <div class="card p-3 mrg-b-gutter d-block">
+
+            <h3>
+                Debugging <span class="fw-300">console.log</span> 
+                <small>
+                    view the app.core.js debugger in realtime; assists in the detection and correction of errors
+                </small>
+            </h3>
+
+            <div id="ng-eventlog" class="card bg-faded p-1"></div>
 
         </div>
 
@@ -227,11 +229,11 @@
                 </small>
             </h3>
 
-            <table class="table table-hover table-bordered bg-white">
+            <table class="table table-hover table-bordered bg-white m-0">
                 <thead>
                     <tr>
                         <th>
-                            Usage
+                            Action
                         </th>
                         <th>
                             Description
@@ -243,52 +245,61 @@
                         <td>
                             <code>data-toggle</code>
                         </td>
-                        <td class="fs-xs">
-                            Pushes selected classes from the <code>body</code> tag to localstorage/database
+                        <td class="fs-sm">
+                            Push data-class to <code>body</code> element 
+                            usage: <pre class="m-0 prettyprint border-0 fs-base">data-action="toggle" data-class="class-a class-b" data-target="#target"</pre>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <code>data-toggle-swap</code>
                         </td>
-                        <td class="fs-xs">
-                            Indicator for Save Settings (mostly aesthetics)
+                        <td class="fs-sm">
+                            <pre class="m-0 prettyprint border-0 fs-base">data-action="toggle-swap" data-class="class-a class-b" data-target="#target"</pre>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <code>data-panel-collapse</code><br>
-                            <code>data-panel-fullscreen</code><br>
-                            <code>data-panel-close</code>
+                            <code>data-panel-*</code>
                         </td>
-                        <td class="fs-xs">
+                        <td class="fs-sm">
                             Push array to <code>body</code> tag. See <a href="intel_saving_db.html">saving to database</a> for more details
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <code>data-panel-close</code>
+                            <code>data-theme-update</code>
                         </td>
-                        <td class="fs-xs">
-                            Fetch class names from <code>body</code> and convert them to JSON string. See <a href="intel_saving_db.html">saving to database</a> for more details
+                        <td class="fs-sm">
+                            <pre class="m-0 prettyprint border-0 fs-base">data-action="theme-update" data-theme="path_to_css/css.css"</pre>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <code>data-panel-close</code>
+                            <code>data-app-reset</code>
                         </td>
-                        <td class="fs-xs">
-                            Remove classes from <code>body</code> & saves to localstorage/database
+                        <td class="fs-sm">
+                            <pre class="m-0 prettyprint border-0 fs-base">data-action="app-reset"</pre>
                         </td>
                     </tr>  
                     <tr>
                         <td>
-                            <code>data-theme-update</code>
+                            <code>data-app-print</code>
                         </td>
-                        <td class="fs-xs">
-                            Remove classes from <code>body</code> & saves to localstorage/database
+                        <td class="fs-sm">
+                            Print page (similar to pressing CTRL/CMD + P)
+                            <pre class="m-0 prettyprint border-0 fs-base">data-action="app-print"</pre>
                         </td>
-                    </tr>             
+                    </tr> 
+                    <tr>
+                        <td>
+                            <code>data-app-fullscreen</code>
+                        </td>
+                        <td class="fs-sm">
+                            Activates broswer's fullscreen command (may not work in all browsers)
+                            <pre class="m-0 prettyprint border-0 fs-base">data-action="app-fullscreen"</pre>
+                        </td>
+                    </tr>           
                 </tbody>
             </table>
 
@@ -303,11 +314,11 @@
             <h3>
                 Config <span class="fw-300">settings</span> 
                 <small>
-                    Allows you to
+                    Define preferred application behaviors or configuration options; can modify some functionality of the app
                 </small>
             </h3>
 
-<pre class="prettyprint p-2 m-0 h-auto border-0" style="height:700px; overflow:auto; background: rgba(255, 138, 31, 0.07); font-size:100%">
+<pre class="prettyprint p-2 m-0 h-auto border-0">
 var myapp_config = {
     root_: $('body'),
     windowHeight: $(window).height(),
@@ -325,6 +336,7 @@ var myapp_config = {
     disableRippleEffect: false, 
     mythemeAnchor: '#mytheme',
     navAnchor: '#primary-nav',
+    navHooks: '#primary-nav > ul.ngmenu'
     navSpeed: 500, 
     navClosedSign: 'icon icon-chevron-down',
     navOpenedSign: 'icon icon-chevron-up',
@@ -339,11 +351,11 @@ var myapp_config = {
             <h3>
                 Initilization <span class="fw-300">shell</span> 
                 <small>
-                    Allows you to
+                    Showcasing app 
                 </small>
             </h3>
-            
-<pre class="prettyprint p-2 m-0 h-auto border-0 fs-base" style="height:700px; overflow:auto; background: rgba(255, 138, 31, 0.07); font-size:100%">
+
+<pre class="prettyprint p-2 m-0 h-auto border-0 fs-base">
 /* App initialize */
 var initApp = (function(app) {
     app.saveSettings = function () { ... }
@@ -400,6 +412,8 @@ $(window).on('scroll', initApp.windowScrollEvents);
 
 /* Document loaded event */
 jQuery(document).ready(function() {
+    /* detect desktop or mobile */
+    initApp.addDeviceType();
     /* detect Webkit Browser */
     initApp.detectBrowserType();
     /* a. check for mobile view width and add class .mobile-view-activated */
@@ -409,7 +423,7 @@ jQuery(document).ready(function() {
     /* c. fix application height */    
     initApp.fixAppHeight(); 
     /* d. build navigation */
-    initApp.ngMenu(myapp_config.navAnchor);
+    initApp.ngMenu(myapp_config.navHooks);
     /* e. run DOM misc functions */
     initApp.domReadyMisc();
     /* f. material form effects */
@@ -428,19 +442,25 @@ jQuery(document).ready(function() {
 {{/inline}}
 
 {{#*inline "scripts-block"}}
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;skin=default"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&amp;skin=default"></script>
 <script>
     
+    //$('#index').scrollspy({ target: '#ng-eventlog', offset: 1 });
+
+    // state debug state for debug msg
     myapp_config.debugState = true;
 
+    // variables
     var lastMsg = "",
         repeatCount = 0,
+        // get new time date on page load
         getTime = function () {
             var dt = new Date(),
                 time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
             return time;
         };
 
+    //define type    
     if (typeof console  != "undefined") 
         if (typeof console.log != 'undefined') {
             console.nglog = console.log;
@@ -449,6 +469,7 @@ jQuery(document).ready(function() {
             console.nglog = function() {};
         }
 
+    // push console messages to #div 
     console.log = function(message) {
         console.nglog(message); 
         if (lastMsg != message) {
@@ -465,6 +486,7 @@ jQuery(document).ready(function() {
         }
     };
 
+    // compile messages to one log
     console.error = console.debug = console.info =  console.log
 
 </script>
