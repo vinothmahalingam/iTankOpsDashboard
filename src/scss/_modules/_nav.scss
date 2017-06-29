@@ -10,371 +10,378 @@
 	background: $nav-background;
 	will-change: left, right;
 
-	.ngmenu-title {
-		text-transform: uppercase;
-		margin:0;
-		color: $nav-title-color;
-		border-bottom: 1px solid rgba($nav-title-border-bottom-color, 0.2);
-		padding: rem(8px) rem($nav-padding-left);
-		font-size: rem($nav-title-font-size);
-		letter-spacing: 1px;
-		font-weight: 500;
-	}
-
 	#primary-nav {
 		overflow: auto;
     	overflow-x: hidden;
     	-webkit-overflow-scrolling: touch;
 		-webkit-backface-visibility: hidden; 
 			backface-visibility: hidden;
+	}
+}
 
-		.ngmenu {
-			padding: 0;
-			list-style: none;
+.navigation-title {
+	text-transform: uppercase;
+	margin:0;
+	color: $nav-title-color;
+	border-bottom: 1px solid rgba($nav-title-border-bottom-color, 0.2);
+	padding: rem(8px) rem($nav-padding-left);
+	font-size: rem($nav-title-font-size);
+	letter-spacing: 1px;
+	font-weight: 500;
+}
 
-			b.collapse-sign {
+.navigation {
+	padding: 0;
+	list-style: none;
 
-				display: flex;
-				align-items: center;
-				justify-content: center;
+	a,
+	a > .fa,
+	a > .#{$cust-icon-prefix} {
+		@include transition(0.3s,ease-out);
+	}
 
-				> .fa,
+
+	b.collapse-sign {
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		> .fa,
+		>.#{$cust-icon-prefix} {
+			font-size: rem($nav-collapse-sign-font-size);
+    	}
+	}
+
+	ul {
+		padding-left: 0;
+		list-style: none;
+		display:none;
+	}
+
+	li {
+		position: relative;
+
+		&.open {
+			> a {
+				@include text-contrast($nav-background);
+			}
+		}
+
+		&.active {
+
+			> a {
+				@include text-contrast($nav-background);
+				background-color: darken($nav-base-color, 5%);
+				@include box-shadow(inset 3px 0 0 $color-primary);
+				font-weight: 400;
+
+				&:hover {
+
+					>.fa,
+					>.#{$cust-icon-prefix} {
+					    color:$nav-icon-hover-color;
+					}
+
+				}
+
+			}
+
+			> ul {
+				display: block;
+				padding-bottom: rem(10px);
+			}
+
+			/* arrow that appears next to active/selected items */
+			&:not(.open) > a:before {
+				content: "\f0d9";
+				font-family: FontAwesome;
+				display: block;
+				height: 20px;
+				line-height: normal;
+				width: auto;
+				position: absolute;
+				right: -1px;
+				font-size: 20px;
+				color: #f1f1f1;
+				top: calc(50% - 10px);
+			}
+		}
+
+		a {
+			display: flex; /*new*/
+			align-items:center; /*new*/
+			outline: 0;
+			padding: 12.5px rem($nav-padding-right) 12.5px rem($nav-padding-left);
+			font-size: rem($nav-font-link-size);
+			color: $nav-link-color;
+			//min-height: rem($nav-link-height);
+			//height: rem($nav-link-height/2); /* ie10 bug fix - IE cannot calculate align-center with min-height*/
+			font-weight: 400;
+			text-decoration: none;
+
+			.dl-ref {
+				font-size: rem($nav-dl-font-size);
+				text-align: center;
+				min-width: rem($nav-dl-width);
+				//height: rem($nav-dl-height);
+				display: inline-block;
+				border-radius: rem($border-radius);
+				letter-spacing: rem(0.5px);
+				margin-left: rem(-$nav-dl-margin-left);
+				margin-right: rem($nav-dl-margin-right);
+				font-weight:500;
+				overflow:hidden;
+				padding: 0 rem(2px);
+				-webkit-font-smoothing: subpixel-antialiased;
+
+				&.label {
+					margin-left:0;
+					margin-right: $spacer * 0.25;
+					padding: 0 rem(4px);
+					font-weight: 400;
+					color: rgba(255,255,255,0.7);
+				}
+			}
+
+			> .badge {
+
+				@extend %ping-badge;
+
+				& + .fa,
+				& + .#{$cust-icon-prefix} {
+					display: none;
+				}
+
+			}
+
+			>.fa,
+			>.#{$cust-icon-prefix} {
+				margin-right:rem($nav-icon-margin-right);
+				font-size:rem($nav-font-icon-size);
+				width:rem($nav-icon-width);
+				text-align: center;
+			    color:$nav-icon-color;
+			} 
+
+			> img {
+				background: #2196F3;
+				padding: 0.125rem;
+				width: rem(20px);
+				height: rem(20px);
+				margin-left: 5px;
+				margin-right: $nav-icon-margin-right + 3px;
+			}
+
+			> .navigation-link-text {
+
+				flex: 1; /*new*/
+				display: inline-flex;
+				align-items:center;
+				line-height: normal;
+			}
+
+			> .badge:not(.clear-badge):first-child  {
+				position: static;
+				display: inline-block;
+				border-radius: 5px;
+				margin-right: 10px;
+				width: 28px;
+				height: auto;
+				padding: 4px 0;
+				font-size: $font-size-base;
+			}
+
+			&.collapsed {
+				.navigation-btn-sub-collapse {
+					@include rotate(180deg);
+				}
+			}
+
+			&:hover {
+				@include text-contrast(rgba(lighten($nav-base-color, 1%), (80/100)))
+				text-decoration: none;
+				background-color: rgba(lighten($nav-base-color, 1%), (80/100));
+
+				.badge {
+					color: $nav-badge-color;
+				}
+
+				>.fa,
 				>.#{$cust-icon-prefix} {
-					font-size: rem($nav-collapse-sign-font-size);
-		    	}
+					color:$nav-icon-hover-color;
+				}
+
+				> .badge {
+					box-shadow: 0 0 0 1px rgba(lighten($nav-base-color, 1%), (80/100));
+					border: 1px solid rgba(lighten($nav-base-color, 1%), (80/100));
+				}
+			
 			}
 
-			ul {
-				padding-left: 0;
-				list-style: none;
-				display:none;
+			&:focus {
+				@include text-contrast( rgba(darken($nav-base-color, 5% ), (50/100)) );
+
+				.badge {
+					color: $nav-badge-color;
+				}
 			}
+		} 
+
+		// Sub nav level 1
+		> ul {
+			background-color: darken($nav-base-color, 11%);
+			padding-bottom: rem(8px);
 
 			li {
-				position: relative;
-
-				&.open {
-					> a {
-						@include text-contrast($nav-background);
-					}
-				}
-
-				&.active {
-
-					> a {
-						@include text-contrast($nav-background);
-						background-color: darken($nav-base-color, 5%);
-						@include box-shadow(inset 3px 0 0 $color-primary);
-						font-weight: 400;
-
-						&:hover {
-
-							>.fa,
-							>.#{$cust-icon-prefix} {
-							    color:$nav-icon-hover-color;
-							}
-
-						}
-
-					}
-
-					> ul {
-						display: block;
-						padding-bottom: rem(10px);
-					}
-
-					/* arrow that appears next to active/selected items */
-					&:not(.open) > a:before {
-						content: "\f0d9";
-						font-family: FontAwesome;
-						display: block;
-						height: 20px;
-						line-height: normal;
-						width: auto;
-						position: absolute;
-						right: -1px;
-						font-size: 20px;
-						color: #f1f1f1;
-						top: calc(50% - 10px);
-					}
-				}
 
 				a {
-					display: flex; /*new*/
-					align-items:center; /*new*/
-					outline: 0;
-					padding: 12.5px rem($nav-padding-right) 12.5px rem($nav-padding-left);
+					color: lighten(darken($nav-base-color, 11%),55%);
+
+					padding: 10px $nav-padding-right 10px rem($nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.5px);
 					font-size: rem($nav-font-link-size);
-					color: $nav-link-color;
-					//min-height: rem($nav-link-height);
-					//height: rem($nav-link-height/2); /* ie10 bug fix - IE cannot calculate align-center with min-height*/
-					font-weight: 400;
-					text-decoration: none;
+					//min-height: $nav-sub-link-height;
 
-					.dl-ref {
-						font-size: rem($nav-dl-font-size);
-						text-align: center;
-						min-width: rem($nav-dl-width);
-						//height: rem($nav-dl-height);
-						display: inline-block;
-						border-radius: rem($border-radius);
-						letter-spacing: rem(0.5px);
-						margin-left: rem(-$nav-dl-margin-left);
-						margin-right: rem($nav-dl-margin-right);
-						font-weight:500;
-						overflow:hidden;
-						padding: 0 rem(2px);
-						-webkit-font-smoothing: subpixel-antialiased;
-
-						&.label {
-							margin-left:0;
-							margin-right: $spacer * 0.25;
-							padding: 0 rem(4px);
-							font-weight: 400;
-							color: rgba(255,255,255,0.7);
+					b.collapse-sign {
+						>.fa,
+						>.#{$cust-icon-prefix} {
+							font-size: rem($nav-collapse-sign-font-size - 2); 
 						}
-					}
-
-					> .badge {
-
-						@extend %ping-badge;
-
-						& + .fa,
-						& + .#{$cust-icon-prefix} {
-							display: none;
-						}
-
 					}
 
 					>.fa,
 					>.#{$cust-icon-prefix} {
-						margin-right:rem($nav-icon-margin-right);
-						font-size:rem($nav-font-icon-size);
-						width:rem($nav-icon-width);
+						margin-left: rem(-35px);
+						margin-right: rem($nav-dl-margin-right);
+						font-size:rem($nav-font-icon-size-sub);
+						color:$nav-icon-color;
+						font-size:rem($nav-font-icon-size-sub - 4);
+						width: $nav-dl-width;
 						text-align: center;
-					    color:$nav-icon-color;
-					} 
-
-					> img {
-						background: #2196F3;
-						padding: 0.125rem;
-						width: rem(20px);
-						height: rem(20px);
-						margin-left: 5px;
-						margin-right: $nav-icon-margin-right + 3px;
 					}
 
-					> .ngmenu-link-text {
+					> .badge {
+						color: $nav-badge-color;
+						background-color: $nav-badge-bg-color;
+						border: 1px solid darken($color-fusion, 0%);
 
-						flex: 1; /*new*/
-						display: inline-flex;
-						align-items:center;
-						line-height: normal;
 					}
-
-					> .badge:not(.clear-badge):first-child  {
-						position: static;
-						display: inline-block;
-						border-radius: 5px;
-						margin-right: 10px;
-						width: 28px;
-						height: auto;
-						padding: 4px 0;
-						font-size: $font-size-base;
-					}
-
-					&.collapsed {
-						.ngmenu-btn-sub-collapse {
-							@include rotate(180deg);
-						}
-					}
-
-					&:hover {
-						@include text-contrast(rgba(lighten($nav-base-color, 1%), (80/100)))
-						text-decoration: none;
-						background-color: rgba(lighten($nav-base-color, 1%), (80/100));
-
-						.badge {
-							color: $nav-badge-color;
-						}
-
-						>.fa,
-						>.#{$cust-icon-prefix} {
-							color:$nav-icon-hover-color;
-						}
-
-						> .badge {
-							box-shadow: 0 0 0 1px rgba(lighten($nav-base-color, 1%), (80/100));
-							border: 1px solid rgba(lighten($nav-base-color, 1%), (80/100));
-						}
 					
-					}
+					&:hover {
+						@include text-contrast(rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)));
+						background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100));
 
-					&:focus {
-						@include text-contrast( rgba(darken($nav-base-color, 5% ), (50/100)) );
-
-						.badge {
-							color: $nav-badge-color;
+						> .navigation-link-text {
+							>.fa,
+							>.#{$cust-icon-prefix} {
+							    color:$nav-icon-hover-color;
+							}
 						}
 					}
-				} 
+				}
 
-				// Sub nav level 1
+				&.active {
+					
+					> a {
+						@include text-contrast(rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)))
+						//background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100));
+						//@include box-shadow(inset rem(3px) 0 0 rgba($color-primary, (50/100)) );
+
+						background-color:transparent;
+						box-shadow:none;
+
+						font-weight: 400;
+
+						> .navigation-link-text {
+							>.fa,
+							>.#{$cust-icon-prefix} {
+							    @include text-contrast(rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)));
+							}
+						}	
+
+						&:hover {
+							> .navigation-link-text {
+								>.fa,
+								>.#{$cust-icon-prefix} {
+								    color:$nav-icon-hover-color;
+								}
+							}			
+						}
+					}
+				}
+
+				&:last-child {
+					> ul {
+						padding-bottom:0;
+					}
+				}
+
+				// Sub nav level 2
 				> ul {
-					background-color: darken($nav-base-color, 11%);
-					padding-bottom: rem(8px);
+
+					background-color: darken($nav-base-color, 15%);
+					padding-bottom: rem(5px);
 
 					li {
+						border-top-color: 1px solid darken($color-fusion, 3%);
+
+						&.active {
+							> a {
+								@include text-contrast( rgba(lighten(darken($nav-base-color, 11%), 5%), (20/100)) )
+								//background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (20/100));
+								//@include box-shadow(inset rem(3px) 0 0 rgba($color-primary, (20/100)) );
+							}
+						}
 
 						a {
 							color: lighten(darken($nav-base-color, 11%),55%);
+							padding: 9px $nav-padding-right 9px rem($nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.5);
+							font-size:rem($nav-font-link-size - 1);
 
-							padding: 10px $nav-padding-right 10px rem($nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.5px);
-							font-size: rem($nav-font-link-size);
-							//min-height: $nav-sub-link-height;
-
-							b.collapse-sign {
-								>.fa,
-								>.#{$cust-icon-prefix} {
-									font-size: rem($nav-collapse-sign-font-size - 2); 
-								}
+							.dl-ref {
+								margin-left: 0;
+								margin-right: rem($nav-icon-margin-right / 1.2);
 							}
-
+							
 							>.fa,
 							>.#{$cust-icon-prefix} {
-								margin-left: rem(-35px);
-								margin-right: rem($nav-dl-margin-right);
-								font-size:rem($nav-font-icon-size-sub);
-								color:$nav-icon-color;
-								font-size:rem($nav-font-icon-size-sub - 4);
-								width: $nav-dl-width;
-								text-align: center;
+								margin-left: 0;
+								margin-right: rem($nav-icon-margin-right / 1.2);
+							}
+							
+							&:hover {
+								
+								background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (20/100));
+								@include text-contrast( rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)) )
 							}
 
 							> .badge {
 								color: $nav-badge-color;
 								background-color: $nav-badge-bg-color;
 								border: 1px solid darken($color-fusion, 0%);
-
 							}
-							
-							&:hover {
-								@include text-contrast(rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)));
-								background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100));
 
-								> .ngmenu-link-text {
-									>.fa,
-									>.#{$cust-icon-prefix} {
-									    color:$nav-icon-hover-color;
-									}
-								}
-							}
-						}
-
-						&.active {
-							
-							> a {
-								@include text-contrast(rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)))
-								//background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100));
-								//@include box-shadow(inset rem(3px) 0 0 rgba($color-primary, (50/100)) );
-
-								background-color:transparent;
-								box-shadow:none;
-
-								font-weight: 400;
-
-								> .ngmenu-link-text {
-									>.fa,
-									>.#{$cust-icon-prefix} {
-									    @include text-contrast(rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)));
-									}
-								}	
-
-								&:hover {
-									> .ngmenu-link-text {
-										>.fa,
-										>.#{$cust-icon-prefix} {
-										    color:$nav-icon-hover-color;
-										}
-									}			
-								}
-							}
-						}
-
-						&:last-child {
-							> ul {
-								padding-bottom:0;
-							}
-						}
-
-						// Sub nav level 2
-						> ul {
-
-							background-color: darken($nav-base-color, 15%);
-							padding-bottom: rem(5px);
-
-							li {
-								border-top-color: 1px solid darken($color-fusion, 3%);
-
-								&.active {
-									> a {
-										@include text-contrast( rgba(lighten(darken($nav-base-color, 11%), 5%), (20/100)) )
-										//background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (20/100));
-										//@include box-shadow(inset rem(3px) 0 0 rgba($color-primary, (20/100)) );
-									}
-								}
-
-								a {
-									color: lighten(darken($nav-base-color, 11%),55%);
-									padding: 9px $nav-padding-right 9px rem($nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.5);
-									font-size:rem($nav-font-link-size - 1);
-
-									.dl-ref {
-										margin-left: 0;
-										margin-right: rem($nav-icon-margin-right / 1.2);
-									}
-									
-									>.fa,
-									>.#{$cust-icon-prefix} {
-										margin-left: 0;
-										margin-right: rem($nav-icon-margin-right / 1.2);
-									}
-									
-									&:hover {
-										
-										background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (20/100));
-										@include text-contrast( rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)) )
-									}
-
-									> .badge {
-										color: $nav-badge-color;
-										background-color: $nav-badge-bg-color;
-										border: 1px solid darken($color-fusion, 0%);
-									}
-
-								}
-							}
 						}
 					}
-				} 
-
-				&:last-child {
-					margin-bottom:0;
 				}
 			}
-
-			&:last-child {
-				margin-bottom:0;
-			}
 		} 
+
+		&:last-child {
+			margin-bottom:0;
+		}
 	}
-}
+
+	&:last-child {
+		margin-bottom:0;
+	}
+} 
 
 #index:not(.nav-function-top) {
 
 	#primary-nav {
 
-		.ngmenu {
+		.navigation {
 
 			a,
 			a:hover,
@@ -407,11 +414,6 @@
 	}
 }
 
-.ngmenu a,
-.ngmenu a > .fa,
-.ngmenu a > .#{$cust-icon-prefix} {
-	@include transition(0.3s,ease-out);
-}
 
 
 @include media-breakpoint-up(xl) {
@@ -420,7 +422,7 @@
 
 		#primary-nav {
 
-			.ngmenu {
+			.navigation {
 
 				> li {
 

@@ -292,22 +292,22 @@ var initApp = (function(app) {
 	 * Activate Nav
 	 * DOC: activation will not take place if top navigation is on
 	 **/
-	app.ngMenu = function(id) {
+	app.buildNavigation = function(id) {
 		
 		/**
 		 * start left nav
-		 * app.ngmenu.js
+		 * app.navigation.js
 		 **/
-		$(id).ngmenu({ 
+		$(id).navigation({ 
 
-			accordion : myapp_config.navAccordion,
+			accordion : $(id).data("nav-accordion"),
 			speed : myapp_config.navSpeed,
 			closedSign : '<em class="' + myapp_config.navClosedSign + '"></em>',
 			openedSign : '<em class="' + myapp_config.navOpenedSign + '"></em>'
 
 		});
 
-		return id;
+		return (id);
 	};
 	
 	/**
@@ -738,7 +738,7 @@ var initApp = (function(app) {
 	 **/
 	app.materialFormEffects = function() {
 
-		var parentClass 	= '.ng-forms',
+		var parentClass 	= '.app-forms',
 			focusClass 		= 'has-length',
 			disabledClass	= 'has-disabled';
 

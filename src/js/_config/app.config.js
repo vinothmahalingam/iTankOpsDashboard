@@ -61,7 +61,7 @@ var myapp_config = {
        This is the root anchor point where the menu script will begin its build
     */
     navAnchor: '#primary-nav', //changing this may implicate slimscroll plugin target
-    navHooks: '#primary-nav > ul.ngmenu', //changing this may implicate CSS targets
+    navHooks: '#primary-nav > ul.navigation', //changing this may implicate CSS targets
     /*
        The rate at which the menu expands revealing child elements on click
        Lower rate reels faster expansion of nav childs
@@ -78,8 +78,8 @@ var myapp_config = {
        Careful when using this option, if you have a long menu it will
        keep expanding and may distrupt the user experience. This is best 
        used with Fixed Navigation for a better experience
-     */
-    navAccordion: true, //if one menu item is opened, the other will close
+     
+    navAccordion: true, //if one menu item is opened, the other will close*/
     /*
      * SaveSettings to localStorage
      * DOC: to store settings to a DB instead of LocalStorage see below:

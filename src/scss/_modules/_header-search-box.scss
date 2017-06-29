@@ -1,7 +1,7 @@
 
 .search{
 
-	.ng-forms {
+	.app-forms {
 		padding:0;
 		position: static;
 
@@ -32,7 +32,7 @@
 @include media-breakpoint-up(xl) {
 
 	.search{
-		.ng-forms {
+		.app-forms {
 			#search-field {
 				width: rem($header-search-width);
 			}

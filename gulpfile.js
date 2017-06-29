@@ -14,7 +14,7 @@ gulp.task('watch', function() {
       console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
     // watch `.js` changes & avoiding `.min.js`
-    gulp.watch(['./src/js/**/*.js', '!./src/js/**/*.min.js', '!./src/js/build/myapp.core.js'], ['compile-app-core'])
+    gulp.watch(['./src/js/**/*.js', '!./src/js/**/*.min.js', '!./src/js/build/myapp.core.js'], ['compile-app-core', 'compile-app-core-plugins'])
     .on('change', function(event) {
       console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });

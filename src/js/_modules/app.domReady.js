@@ -33,7 +33,7 @@ jQuery(document).ready(function() {
  	/**
 	 * d. build navigation
 	 **/
-	initApp.ngMenu(myapp_config.navHooks);
+	initApp.buildNavigation(myapp_config.navHooks);
 
  	/**
 	 * e. run DOM misc functions

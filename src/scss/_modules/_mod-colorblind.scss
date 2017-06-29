@@ -3,7 +3,7 @@
     filter: grayscale(55%);
 }
 
-.mod-color-blind #left-panel #primary-nav .ngmenu > li.active > a,
+.mod-color-blind #left-panel #primary-nav .navigation > li.active > a,
 .mod-color-blind [class*="bg-danger-"],
 .mod-color-blind .btn-danger,
 .mod-color-blind .btn-outline-danger,
@@ -11,7 +11,7 @@
 	@extend %pattern-0;
 }
 
-.mod-color-blind #left-panel #primary-nav .ngmenu > li.active > a + ul > li.active > a,
+.mod-color-blind #left-panel #primary-nav .navigation > li.active > a + ul > li.active > a,
 .pattern-1 {
 	@extend %pattern-1;
 }

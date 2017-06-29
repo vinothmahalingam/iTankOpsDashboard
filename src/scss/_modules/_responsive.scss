@@ -89,7 +89,7 @@ $grid-breakpoints: (
 					}
 				}*/
 
-				.ngmenu {
+				.navigation {
 					> li {
 						a {
 							font-size: $base-font-size + 1;
@@ -369,7 +369,7 @@ $grid-breakpoints: (
 		padding-right: $grid-gutter-width-base/3 !important;
 	}
 
-	#primary-nav .ngmenu li a > .badge {
+	#primary-nav .navigation li a > .badge {
 		font-size: 10px !important;
 	}
 }

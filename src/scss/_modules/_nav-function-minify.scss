@@ -45,10 +45,10 @@
 					}
 				}
 
-				.ngmenu-title {
+				.navigation-title {
 					display: none;
 				}
-				.ngmenu {
+				.navigation {
 					margin:0;
 
 					li {
@@ -91,7 +91,7 @@
 								margin-right: 0;
 							}
 
-							> .ngmenu-link-text {
+							> .navigation-link-text {
 								display: none;	
 								position:absolute;
 								text-align: left;
@@ -139,7 +139,7 @@
 										}
 									}
 
-									.ngmenu-link-text {
+									.navigation-link-text {
 										> .fa,
 										> .#{$cust-icon-prefix} {
 											display:none;
@@ -160,14 +160,14 @@
 				&:hover {
 					overflow: visible;
 					
-					.ngmenu > li:hover {
+					.navigation > li:hover {
 
 						> a {
 							background: $nav-minify-hover-bg;
 							color: $white;
 							overflow: visible;
 
-							>.ngmenu-link-text {
+							>.navigation-link-text {
 								display: flex;
 							}
 

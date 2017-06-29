@@ -12,7 +12,7 @@
 
 			#primary-nav {
 
-				.ngmenu {
+				.navigation {
 					margin:0;
 
 					> li {
@@ -21,7 +21,7 @@
 
 							text-align: center;
 
-							> .ngmenu-link-text {
+							> .navigation-link-text {
 								background:$nav-minify-hover-bg;
 							}
 
@@ -32,7 +32,7 @@
 
 				&:hover {
 					
-					.ngmenu > li:hover {
+					.navigation > li:hover {
 
 						> a {
 							background: $nav-minify-hover-bg;

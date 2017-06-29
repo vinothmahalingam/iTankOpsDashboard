@@ -1,79 +1,76 @@
+/* Hierarchical Navigation */
+
 .mod-nav-link:not(.nav-function-top):not(.nav-function-minify):not(.nav-function-hover):not(.mod-hide-nav-icons) {
 
-	nav {
+	ul.navigation:not(.navigation-compact) {
 
-		ul {
+		li {
 
-			li {
+			a {
+				.dl-ref {
+					margin-left:0 !important;
+				}
+			}
 
-				a {
-					.dl-ref {
-						margin-left:0 !important;
-					}
+			ul {
+				&:before {
+					content: "";
+					display: block;
+					position: absolute;
+					z-index: 1;
+					left: $nav-padding-left + 14px;
+					top: 45px;
+					bottom: 0;
+					border-left: 1px solid darken($nav-icon-color, 15%);
 				}
 
-				ul {
-					&:before {
-						content: "";
-						display: block;
-						position: absolute;
-						z-index: 1;
-						left: $nav-padding-left + 14px;
-						top: 45px;
-						bottom: 0;
-						border-left: 1px solid darken($nav-icon-color, 15%);
-					}
-
-					/* addressing all second, third children */
-					> li {
-						a {
-							&:after {
-								content: "";
-								display: block;
-								position: absolute;
-								width: 10px;
-								left: $nav-padding-left + 14px;
-								top: unquote("calc(50% - 1px)");
-								border-top: 1px solid darken($nav-icon-color, 15%);
-								z-index: 1;
-							}
-						}
-
-						li {
-							> a {
-								&:after{
-									content: "";
-									display: none;
-								}
-							}
+				/* addressing all second, third children */
+				> li {
+					a {
+						&:after {
+							content: "";
+							display: block;
+							position: absolute;
+							width: 10px;
+							left: $nav-padding-left + 14px;
+							top: unquote("calc(50% - 1px)");
+							border-top: 1px solid darken($nav-icon-color, 15%);
+							z-index: 1;
 						}
 					}
 
 					li {
-						a {
-							i {
-								margin-left: 0 !important;
+						> a {
+							&:after{
+								content: "";
+								display: none;
 							}
 						}
-					}
-
-					&:hover {
-						&:before {
-							border-color: darken($nav-icon-color, 5%);
-						}
-						> li {
-							a {
-								&:after {
-									border-color: darken($nav-icon-color, 5%);
-								}
-							}
-						}							
 					}
 				}
 
+				li {
+					a {
+						i {
+							margin-left: 0 !important;
+						}
+					}
+				}
+
+				&:hover {
+					&:before {
+						border-color: darken($nav-icon-color, 5%);
+					}
+					> li {
+						a {
+							&:after {
+								border-color: darken($nav-icon-color, 5%);
+							}
+						}
+					}							
+				}
 			}
+
 		}
-
 	}
-
 }

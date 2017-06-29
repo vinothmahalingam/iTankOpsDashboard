@@ -5,11 +5,20 @@ $.fn.extend({
 
     /**
      * pass the options variable to the function
+     *
+     *   $(id).navigation({ 
+     *       accordion: true,
+     *       animate: 'easeOutExpo',
+     *       speed: 200,
+     *       closedSign: '[+]',
+     *       openedSign: '[-]'
+     *   });
+     *
      **/
-    ngmenu: function(options) {
+    navigation: function(options) {
 
         var defaults = {
-                accordion: 'true',
+                accordion: true,
                 animate: 'easeOutExpo',
                 speed: 200,
                 closedSign: '[+]',
@@ -26,12 +35,12 @@ $.fn.extend({
              **/
             $this = $(this);
 
-        if (!$this.hasClass("ngmenu-built")) {
+        if (!$this.hasClass("menu-built")) {
 
             /**
              * confirm build to prevent rebuild error
              **/
-            $this.addClass("ngmenu-built");
+            $this.addClass("menu-built");
 
             /**
              * add a mark [+] to a multilevel menu
@@ -148,10 +157,15 @@ $.fn.extend({
 
     },
 
+    /**
+     * DOC: $(id).destroy();
+     **/
     destroy: function() {
         $this = $(this);
-        console.log("destroy ngmenu");
-        $this._destroy(); //or this.delete; depends on jQuery version
-
+        if ($this.hasClass("menu-built")) {
+            $this.find("li").removeClass("active open");
+            $this.find("li a").off('mousedown').removeClass("active").removeAttr("aria-expanded").find(".collapse-sign").remove();
+            $this.removeClass("menu-built").find("ul").removeAttr("style");
+        }
     }
-});
+}); 

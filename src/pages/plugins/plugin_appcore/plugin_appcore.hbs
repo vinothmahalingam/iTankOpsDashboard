@@ -160,7 +160,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <code>initApp.ngMenu()</code>
+                            <code>initApp.buildNavigation()</code>
                         </td>
                         <td>
                             <i class="fw-500 text-primary">string</i>
@@ -216,7 +216,7 @@
                 </small>
             </h3>
 
-            <div id="ng-eventlog" class="card bg-faded p-1"></div>
+            <div id="app-eventlog" class="card bg-faded p-1"></div>
 
         </div>
 
@@ -336,7 +336,7 @@ var myapp_config = {
     disableRippleEffect: false, 
     mythemeAnchor: '#mytheme',
     navAnchor: '#primary-nav',
-    navHooks: '#primary-nav > ul.ngmenu'
+    navHooks: '#primary-nav > ul.navigation'
     navSpeed: 500, 
     navClosedSign: 'icon icon-chevron-down',
     navOpenedSign: 'icon icon-chevron-up',
@@ -369,7 +369,7 @@ var initApp = (function(app) {
     app.fixAppHeight = function () { ... }
     app.windowScrollEvents = function () { ... }
     app.checkSettingConditions = function() { ... }
-    app.ngMenu = function() { ... }
+    app.buildNavigation = function() { ... }
     app.mobileCheckActivation = function(){ ... }
     app.toggleVisibility = function (id) { ... }
     app.domReadyMisc = function() { 
@@ -423,7 +423,7 @@ jQuery(document).ready(function() {
     /* c. fix application height */    
     initApp.fixAppHeight(); 
     /* d. build navigation */
-    initApp.ngMenu(myapp_config.navHooks);
+    initApp.buildNavigation(myapp_config.navHooks);
     /* e. run DOM misc functions */
     initApp.domReadyMisc();
     /* f. material form effects */
@@ -445,7 +445,7 @@ jQuery(document).ready(function() {
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&amp;skin=default"></script>
 <script>
     
-    //$('#index').scrollspy({ target: '#ng-eventlog', offset: 1 });
+    //$('#index').scrollspy({ target: '#app-eventlog', offset: 1 });
 
     // state debug state for debug msg
     myapp_config.debugState = true;
@@ -473,16 +473,16 @@ jQuery(document).ready(function() {
     console.log = function(message) {
         console.nglog(message); 
         if (lastMsg != message) {
-            $('#ng-eventlog').append('<div class="fs-base highlight p-1"><span class="d-flex align-items-center">' + '<span class="badge badge-default mr-2 text-right" style="min-width:50px">' + getTime() + '</span>' + message + '</span></div>');
+            $('#app-eventlog').append('<div class="fs-base highlight p-1"><span class="d-flex align-items-center">' + '<span class="badge badge-default mr-2 text-right" style="min-width:50px">' + getTime() + '</span>' + message + '</span></div>');
             lastMsg = message;
             repeatCount = 0;
-             $('#ng-eventlog').animate({ scrollTop: $('#ng-eventlog').prop("scrollHeight")}, 200);
+             $('#app-eventlog').animate({ scrollTop: $('#app-eventlog').prop("scrollHeight")}, 200);
         } else {
             lastMsg = message;
             repeatCount = repeatCount + 1;
-            $('#ng-eventlog >:last-child').remove();
-            $('#ng-eventlog').append('<div class="fs-base highlight p-1"><span class="d-flex align-items-center">'+ '<span class="badge badge-default mr-2 text-right" style="min-width:50px">' + getTime() + '</span>' + '<span class="badge badge-primary mr-1">' + repeatCount + '</span>' + message + '</span></div>');
-            $('#ng-eventlog').animate({ scrollTop: $('#ng-eventlog').prop("scrollHeight")}, 200);
+            $('#app-eventlog >:last-child').remove();
+            $('#app-eventlog').append('<div class="fs-base highlight p-1"><span class="d-flex align-items-center">'+ '<span class="badge badge-default mr-2 text-right" style="min-width:50px">' + getTime() + '</span>' + '<span class="badge badge-primary mr-1">' + repeatCount + '</span>' + message + '</span></div>');
+            $('#app-eventlog').animate({ scrollTop: $('#app-eventlog').prop("scrollHeight")}, 200);
         }
     };
 

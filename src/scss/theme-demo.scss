@@ -1,15 +1,15 @@
-.ng-body-demo {
+.app-body-demo {
 	height:350px;
 	max-width: 550px;
 	margin: 0 auto;
     background-color: #fff;
     border: 1px solid rgba(0,0,0,.125);
 
-	.ng-nav-demo:not(.ng-nav-demo-minify) {
+	.app-nav-demo:not(.app-nav-demo-minify) {
 		width:20%;
 	}
 
-	.ng-nav-demo-minify {
+	.app-nav-demo-minify {
 		width: 7%;
 		padding:3px;
 
@@ -18,23 +18,23 @@
 		}
 	}
 
-	.ng-nav-demo-hidden {
+	.app-nav-demo-hidden {
 		width:10px;
 	}
 
-	.ng-header-demo {
+	.app-header-demo {
 		height:30px;
 	}
 
-	.ng-nav-demo-top {
+	.app-nav-demo-top {
 		height:35px;
 	}
 
-	.ng-container-demo {
+	.app-container-demo {
 		//background-color: #fff;
 	}
 
-	.ng-header-btn-demo {
+	.app-header-btn-demo {
 		width: 26px;
 		height: 18px;
 		border-radius: 2px;
@@ -42,24 +42,24 @@
 		font-size: 10px;
 	}
 
-	.ng-hematite-demo {
+	.app-hematite-demo {
 		background: #434a51;
 	}
 
-	.ng-amethyst-demo {
+	.app-amethyst-demo {
 		background: #5c4581;
 	}
 
-	.ng-aquamarine-demo {
+	.app-aquamarine-demo {
 		background: #476f85;
 	}
 
-	.ng-sapphire-demo {
+	.app-sapphire-demo {
 		background: #334768;
 	}
 }
 
-#ng-eventlog {
+#app-eventlog {
 	width:100%;
 	height:290px;
     max-height:453px; 

@@ -57,7 +57,7 @@
 		</div>
 
 		<div class="col">
-			<div id="ng-eventlog" class="card p-1 d-block"></div>
+			<div id="app-eventlog" class="card p-1 d-block"></div>
 		</div>
 		
 	</div>
@@ -71,18 +71,18 @@
 
 	var ng_eventlog = function () {
 
-		if($('#ng-eventlog').length) {
+		if($('#app-eventlog').length) {
 
 			var dt = new Date(),
 				time = "<div class='p-1'><span class='badge badge-primary fw-500 border-radius-0'>" + dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds() + " </span> <i>body class changed to: </i>";
-			$('#ng-eventlog').prepend( time + "<strong> [ " + initApp.getSettings().split(' ') + " ] </strong>" + "</div/>" ); 
+			$('#app-eventlog').prepend( time + "<strong> [ " + initApp.getSettings().split(' ') + " ] </strong>" + "</div/>" ); 
 
 		}
 
 	};
 
 	var ng_eventlog_clear = function () {
-		$('#ng-eventlog').empty();
+		$('#app-eventlog').empty();
 	}
 
 	var ng_pushSettings = function () {
