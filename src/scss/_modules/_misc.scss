@@ -20,8 +20,8 @@
 }
 
 /* mostly used for nav items */
-.disable,
-.disable > * {
+.disabled,
+.disabled > * {
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
 	opacity: 0.45 !important;
@@ -131,78 +131,6 @@ ul.list-verticle {
 
 .w-auto {
 	width: auto !important;
-}
-
-/* nav hover elements */
-.navigation-hover {
-
-	li > ul {
-		background-color: rgba(0,0,0,0.17) !important;
-	}
-
-	li {
-		a {
-			color: rgba(255,255,255,0.90);
-			span {
-				color: rgba(255,255,255,0.90);
-			}
-			
-
-			&:hover {
-				background:rgba(255,255,255,0.09) !important;
-				color: $white !important;
-				span {
-					color: $white;
-				}
-				
-			}
-		}
-	}
-}
-
-
-.navigation-bordered {
-	border: 1px solid #e6e6e6;
-
-	li a {
-		border-bottom: 1px solid #e6e6e6;
-	}
-
-	li > ul li > ul > li:not(:last-child) a {
-		border-bottom: none;
-	}
-
-}
-
-.navigation-clean {
-	ul {
-		background: transparent !important;
-		padding-bottom: 0 !important;
-	}
-
-	li {
-		a {
-			background: transparent !important;
-			color: $fusion-500 !important;
-			span {
-				color: $fusion-500 !important;
-			}
-
-			&:hover {
-				background-color: #f4f4f4 !important;
-			}
-		}	
-	}
-}
-
-.navigation-compact {
-	li > ul li a,
-	li > ul li > ul li a {
-		padding: $p-2 rem($nav-padding-right) $p-2 $p-4;
-	}
-	li > ul li > ul li a {
-		padding-left: $p-4 + $p-2;
-	}
 }
 
 /* flex 
