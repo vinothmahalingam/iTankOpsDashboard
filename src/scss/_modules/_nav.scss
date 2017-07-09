@@ -378,7 +378,7 @@
 	}
 } 
 
-/* nav hover elements */
+/* nav hover elements 
 .navigation-hover {
 
 	li > ul {
@@ -403,21 +403,7 @@
 			}
 		}
 	}
-}
-
-/* nav bordered elements */
-.navigation-bordered {
-	border: 1px solid #e6e6e6;
-
-	li a {
-		border-bottom: 1px solid #e6e6e6;
-	}
-
-	li > ul li > ul > li:not(:last-child) a {
-		border-bottom: none;
-	}
-
-}
+}*/
 
 /* nav clean elements */
 .navigation-clean {
@@ -441,6 +427,28 @@
 			}
 		}	
 	}
+
+	li a {
+		border-bottom: 1px solid transparent;
+	}
+
+	li > ul li > ul > li:not(:last-child) a {
+		border-bottom: none;
+	}
+}
+
+/* nav bordered elements */
+.navigation-bordered {
+	border: 1px solid $card-border-color;
+
+	li a {
+		border-bottom: 1px solid $card-border-color;
+	}
+
+	li > ul li > ul > li:not(:last-child) a {
+		border-bottom: none;
+	}
+
 }
 
 /* nav compact elements */
