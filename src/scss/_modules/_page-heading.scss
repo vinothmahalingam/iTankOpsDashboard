@@ -8,7 +8,8 @@
 	align-items: center; 
 
 	.page-header {
-		font-size: $fs-xxl;
+		//font-size: $fs-xxl;
+		font-size: unquote("calc(16px + 5 * ((100vw - 320px) / 680))");
 		font-weight: 300;
 		color: $fusion-500;
 		text-shadow: $white 0 1px;

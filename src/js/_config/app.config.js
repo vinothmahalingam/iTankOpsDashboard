@@ -86,5 +86,10 @@ var myapp_config = {
      *    initApp.pushSettings("className1 className2") //sets value
      *    var DB_string = initApp.getSettings(); //returns setting string
      */
-    storeLocally: true
+    storeLocally: true,
+    /*
+     * Used with initApp.loadScripts
+     * DOC: Please leave it blank
+     */
+    jsArray : []
 };

@@ -5,6 +5,42 @@
 var initApp = (function(app) {
 
 	/**
+	 * Load scripts using lazyload method 
+	 * usage: initApp.loadScript("js/my_lovely_script.js", myPrettyCode);
+	 **/
+	app.loadScript = function (scriptName, callback) {
+
+		if (!myapp_config.jsArray[scriptName]) {	
+			var promise = jQuery.Deferred();
+
+			/* adding the script tag to the head as suggested before */
+			var body = document.getElementsByTagName('body')[0],
+				script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.src = scriptName;
+
+			/* then bind the event to the callback function
+			   there are several events for cross browser compatibility */
+			script.onload = function() {
+				promise.resolve();
+			};
+
+			/* fire the loading */
+			body.appendChild(script);
+			myapp_config.jsArray[scriptName] = promise.promise();
+		}	
+
+		else if (myapp_config.debugState)
+			console.log("This script was already loaded: " + scriptName);
+
+		myapp_config.jsArray[scriptName].then(function () {
+			if(typeof callback === 'function') {
+				callback();
+			}
+		});
+	}
+
+	/**
 	 * Javascript Animation for save settings 
 	 **/
 	app.saveSettings = function () {
@@ -643,6 +679,48 @@ var initApp = (function(app) {
 						window.print();
 
 						break;
+
+					/**
+					 * app language selection
+					 * lazyloads i18n plugin and activates selected language
+					 **/
+					case ( actiontype === 'lang' ):
+
+						var applang = $(this).attr('data-lang').toString();
+
+						if (!$.i18n) {
+						//jQuery.getScript('http://url/to/the/script');
+
+							initApp.loadScript("vendor/js/i18next-1.11.2.min.js", 
+
+								function activateLang () {
+									
+									$.i18n.init({
+										resGetPath: 'lang/__lng__.json',
+										load: 'unspecific',
+										fallbackLng: false,
+										lng: applang
+									}, function (t){
+										$('[data-i18n]').i18n();
+									});								
+									
+								}
+							)
+
+						} else {
+
+							i18n.setLng(applang, function(){
+								//$(myapp_config.navAnchor).i18n();
+								//$('#hdr-r').i18n();
+								$('[data-i18n]').i18n();
+
+								$('[data-lang]').removeClass('active');
+								$(this).addClass('active');
+							});
+
+						}
+
+						break;	
 
 					/**
 					 * app 'fullscreen' trigger

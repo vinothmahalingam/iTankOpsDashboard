@@ -15,6 +15,7 @@ module.exports = {
         path_vendor            : "./dist/vendor/",
         path_custom            : "./src/custom/",
         fonts_path_dist        : "./dist/fonts/",
-        video_path_dist        : "./dist/video/"
+        video_path_dist        : "./dist/video/",
+        lang_path_dist         : "./dist/lang/"
     }
 }

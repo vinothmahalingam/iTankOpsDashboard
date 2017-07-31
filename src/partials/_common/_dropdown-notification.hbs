@@ -1,12 +1,12 @@
 <ul class="nav nav-pills nav-table-cell p-3" role="tablist">
 	<li class="nav-item">
-		<a class="nav-link no-ripple" data-toggle="tab" href="#messages">Messages</a>
+		<a class="nav-link no-ripple" data-toggle="tab" href="#messages" data-i18n="drpdwn.messages">Messages</a>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link no-ripple" data-toggle="tab" href="#feeds">Feeds</a>
+		<a class="nav-link no-ripple" data-toggle="tab" href="#feeds" data-i18n="drpdwn.feeds">Feeds</a>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link no-ripple" data-toggle="tab" href="#events">Events</a>
+		<a class="nav-link no-ripple" data-toggle="tab" href="#events" data-i18n="drpdwn.events">Events</a>
 	</li>
 </ul>
 <div class="tab-content tab-notification">
@@ -73,7 +73,7 @@
 				</li>
 				<li>
 					<a href="#" class="d-flex align-items-center">
-						<img src="img/avatar-m.png"class="lazy profile-image rounded-circle" alt="Dr. Codex Lantern" />
+						<img src="img/avatar-m.png" class="lazy profile-image rounded-circle" alt="Dr. Codex Lantern" />
 						<span class="d-flex flex-column flex-1">
 							<span class="name">Anothony Bezyeth</span>
 							<span class="msg-a fs-sm">Msed quia non numquam eius</span>
@@ -108,9 +108,11 @@
 				</div>
 			</li>
 			<li>
-				<div href="#" class="d-flex align-items-center">
+				<div class="d-flex align-items-center">
 					<span class="d-flex flex-column flex-1">
-						<span class="name">Adison Lee <span class="fw-300 d-inline">replied to your video <a href="#" class="fw-400"> Cancer Drug</a> </span></span>
+						<span class="name">
+							Adison Lee <span class="fw-300 d-inline">replied to your video <a href="#" class="fw-400"> Cancer Drug</a> </span>
+						</span>
 						<span class="msg-a fs-sm mt-2">Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day...</span>	
 						<span class="fs-nano text-muted mt-1">10 minutes ago</span>
 					</span>
@@ -120,7 +122,9 @@
 				<div class="d-flex align-items-center">
 					<!--<img src="img/avatar-m.png" data-src="img/avatars/avatar-k.png" class="profile-image rounded-circle" alt="k" />-->
 					<span class="d-flex flex-column flex-1">
-						<span class="name">Troy Norman'<span class="fw-300">s new connections</span></span>
+						<span class="name">
+							Troy Norman'<span class="fw-300">s new connections</span>
+						</span>
 						<span class="fs-sm d-flex align-items-center mt-2">
 							<img src="img/avatar-m.png" data-src="img/avatars/avatar-a.png" class="profile-image-md mr-1 rounded-circle" alt="a" />
 							<img src="img/avatar-m.png" data-src="img/avatars/avatar-b.png" class="profile-image-md mr-1 rounded-circle" alt="a" />
@@ -149,9 +153,9 @@
 					<span class="d-flex flex-column flex-1">
 						<span class="name">Sarah McBrook'<span class="fw-300">s added new images</span></span>
 						<span class="fs-sm d-flex align-items-center mt-1">
-							<a href="#"><img src="" data-src="img/thumbs/pic-4.png" class="img-share mr-1 mt-1" alt="a" /></a>
-							<a href="#"><img src="" data-src="img/thumbs/pic-5.png" class="img-share mr-1 mt-1" alt="a" /></a>
-							<a href="#"><img src="" data-src="img/thumbs/pic-6.png" class="img-share mr-1 mt-1" alt="a" /></a>
+							<a href="#"><img src="javascript:void(0);" data-src="img/thumbs/pic-4.png" class="img-share mr-1 mt-1" alt="a" /></a>
+							<a href="#"><img src="javascript:void(0);" data-src="img/thumbs/pic-5.png" class="img-share mr-1 mt-1" alt="a" /></a>
+							<a href="#"><img src="javascript:void(0);" data-src="img/thumbs/pic-6.png" class="img-share mr-1 mt-1" alt="a" /></a>
 							<a href="#">+1</a>
 						</span>
 						<span class="fs-nano text-muted mt-1">55 minutes ago</span>
@@ -175,66 +179,74 @@
 		</ul>	
 	</div>
 	<div class="tab-pane" id="events" role="tabpanel">
-		<div class="h-50 p-3">
-			<table class="table table-sm m-0 w-100 h-100 border-top-0">
-				<tr class="text-center">
-					<th class="border-top-0 fw-500">Sun</th>
-					<th class="border-top-0 fw-500">Mon</th>
-					<th class="border-top-0 fw-500">Tue</th>
-					<th class="border-top-0 fw-500">Wed</th>
-					<th class="border-top-0 fw-500">Thu</th>
-					<th class="border-top-0 fw-500">Fri</th>
-					<th class="border-top-0 fw-500">Sat</th>
-				</tr>
-				<tr>
-					<td class="text-muted">30</td>
-					<td>1</td>
-					<td>2</td>
-					<td>3</td>
-					<td>4</td>
-					<td>5</td>
-					<td>6</td>
-				</tr>
-				<tr>
-					<td>7</td>
-					<td>8</td>
-					<td>9</td>
-					<td>10</td>
-					<td>11</td>
-					<td>12</td>
-					<td>13</td>
-				</tr>
-				<tr>
-					<td>14</td>
-					<td>15</td>
-					<td>16</td>
-					<td>17</td>
-					<td>18</td>
-					<td>19</td>
-					<td>20</td>
-				</tr>
-				<tr>
-					<td>21</td>
-					<td>22</td>
-					<td>23</td>
-					<td>24</td>
-					<td>25</td>
-					<td>26</td>
-					<td>27</td>
-				</tr>
-				<tr>
-					<td>28</td>
-					<td>29</td>
-					<td>30</td>
-					<td>31</td>
-					<td class="text-muted">1</td>
-					<td class="text-muted">2</td>
-					<td class="text-muted">3</td>
-				</tr>
-			</table>
-		</div>
-		<div class="custom-scroll h-50">
-			<div class="p-2">
+		<div class="d-flex flex-column h-100 no-slimscroll">
+			
+			<div class="h-auto">
+				<table class="table table-bordered table-calendar m-0 w-100 h-100 border-0">
+					<tr>
+						<th colspan="7" class="text-center fw-500 fs-lg">
+							August, 
+							<span class="fw-400">2017</span>
+						</th>
+					</tr>	
+					<tr class="text-center">
+						<th>Sun</th>
+						<th>Mon</th>
+						<th>Tue</th>
+						<th>Wed</th>
+						<th>Thu</th>
+						<th>Fri</th>
+						<th>Sat</th>
+					</tr>
+					<tr>
+						<td class="text-muted bg-faded">30</td>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>8</td>
+						<td>9</td>
+						<td>10</td>
+						<td>11</td>
+						<td>12</td>
+						<td>13</td>
+					</tr>
+					<tr>
+						<td>14</td>
+						<td>15</td>
+						<td>16</td>
+						<td>17</td>
+						<td>18</td>
+						<td>19</td>
+						<td>20</td>
+					</tr>
+					<tr>
+						<td>21</td>
+						<td>22</td>
+						<td>23</td>
+						<td>24</td>
+						<td>25</td>
+						<td>26</td>
+						<td>27</td>
+					</tr>
+					<tr>
+						<td>28</td>
+						<td>29</td>
+						<td>30</td>
+						<td>31</td>
+						<td class="text-muted bg-faded">1</td>
+						<td class="text-muted bg-faded">2</td>
+						<td class="text-muted bg-faded">3</td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="flex-1 p-2 custom-scrollbar">
 				<h5 class="fw-300">
 					Wednesday 10, May 2017
 				</h5>
@@ -247,23 +259,10 @@
 				<p>a</p>
 				<p>a</p>
 				<p>a</p>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
 			</div>
+
 		</div>
+
 	</div>
 </div>
 <div class="pt-1 pb-1 pr-3 pl-3 bg-faded card d-block border-left-0 border-right-0 border-bottom-0 rounded-0 text-right">

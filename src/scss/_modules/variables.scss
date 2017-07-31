@@ -158,6 +158,8 @@ $table-bg-accent:               					rgba($black,.02);
 40px = 2.5rem
 */
 
+/* Fonts */
+
 $font-size-lg:   									1.25rem;   //20px
 $font-size-base:             						0.8125rem; //13px
 $font-size-sm:   									0.75rem;   //12px
@@ -222,7 +224,7 @@ $baseURL:											"../" !default;
 $base-font-size:									13px !default;
 $base-text-color:									darken($white,60%) !default;
 
-$fs-nano:											$base-font-size - 3;   /* 10px   */
+$fs-nano:											$base-font-size - 2;   /* 11px   */
 $fs-xs: 											$base-font-size - 1;   /* 12px   */
 $fs-sm: 											$base-font-size - 0.5; /* 12.5px */
 $fs-md: 											$base-font-size + 1;   /* 14px   */
