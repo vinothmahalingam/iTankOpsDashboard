@@ -681,6 +681,19 @@ var initApp = (function(app) {
 						break;
 
 					/**
+					 * ondemand
+					 * load onDemand scripts
+					 **/
+					case ( actiontype === 'app-loadscript' ):
+
+						var loadurl = $(this).attr('data-loadurl'),
+							loadfunction = $(this).attr('data-loadfunction');
+
+						initApp.loadScript(loadurl,loadfunction);
+
+						break;	
+
+					/**
 					 * app language selection
 					 * lazyloads i18n plugin and activates selected language
 					 **/

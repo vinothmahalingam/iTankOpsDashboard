@@ -26,12 +26,12 @@ $.fn.extend({
             },
 
             /**
-             * Extend our default options with those provided.
+             * extend our default options with those provided.
              **/
             opts = $.extend(defaults, options),
 
             /**
-             * Assign current element to variable, in this case is UL element
+             * assign current element to variable, in this case is UL element
              **/
             $this = $(this);
 
@@ -64,7 +64,9 @@ $.fn.extend({
                 }
             });
 
-            //add open sign to all active lists
+            /**
+             * add open sign to all active lists
+             **/
             $this.find("li.active").each(function() {
                 $(this).parents("ul")
                 	.parent("li")
@@ -75,7 +77,9 @@ $.fn.extend({
                 	.html(opts.openedSign);
             });
 
-            //click events
+            /**
+             * click events
+             **/
             $this.find("li a").on('mousedown', function(e) {
 
                 if ($(this).parent().find("ul").length !== 0) {
@@ -83,7 +87,7 @@ $.fn.extend({
                     if (opts.accordion) {
 
                         /**
-                         * Do nothing when the list is open
+                         * do nothing when the list is open
                          **/
                         if (!$(this).parent().find("ul").is(':visible')) {
 
@@ -140,7 +144,7 @@ $.fn.extend({
                             	.find("b:first").delay(opts.speed)
                             	.html(opts.openedSign);
 
-                            /*bug fixed: addresses the .mod-main-boxed class bug, when nav exceeds content height*/
+                            /* bug fixed: addresses the .mod-main-boxed class bug, when nav exceeds content height */
                             if (myapp_config.root_.hasClass("mod-main-boxed")) {
                                 initApp.fixAppHeight();
                             }

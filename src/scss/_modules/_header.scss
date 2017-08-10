@@ -194,6 +194,8 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 
 			> li {
 
+				position: static;
+
 				&:last-child {
 					> a {
 						padding-right:0;
