@@ -2,6 +2,11 @@
 
 	.nav-function-minify:not(.nav-function-top) {
 
+		/* hide elements when nav-function-minify */
+		.hidden-nav-function-minify {
+			display: none !important;
+		}
+
 		#left-panel {
 			
 			width: rem($nav-minify-width);

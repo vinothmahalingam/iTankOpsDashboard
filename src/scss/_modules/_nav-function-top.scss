@@ -9,6 +9,11 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 	.nav-function-top {
 
+		/* hide elements when nav-function-top */
+		.hidden-nav-function-top {
+			display: none !important;
+		}
+
 		&.display-right-panel {
 			[data-class=display-right-panel] {
 				top:rem($nav-top-height);

@@ -29,7 +29,7 @@ $menu-item-direction: 'top'; //top or left
 
 .app-shortcut {
   position:fixed;
-  right: $grid-gutter-width-base/2;
+  right: $grid-gutter-width/2;
   bottom: $app-shortcut-btn-size/4;
   z-index: $footer-zindex + 1; 
 }

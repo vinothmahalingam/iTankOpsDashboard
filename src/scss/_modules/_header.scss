@@ -132,8 +132,9 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 						& + .dropdown-menu {
 
 							@extend %header-dropdown;
-							right: $grid-gutter-width-base/2;
-							top: $header-height - 1;
+							right: $grid-gutter-width-base/2 !important;
+							top: $header-height - 1 !important;
+							left: auto !important;
 							padding: 0;
 						}
 

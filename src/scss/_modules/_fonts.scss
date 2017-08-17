@@ -2,7 +2,7 @@
 @import url($font-import);
 
 body {
-	font-family: $heading-font-family;
+	font-family: $page-font;
 	font-size: rem($base-font-size);
 	letter-spacing: rem(0.1px);
 }

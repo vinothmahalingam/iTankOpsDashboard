@@ -235,24 +235,24 @@ label {
     color: #c1c1c1 !important;
 }
 &.has-success{
-	&:before {border-bottom-color: $brand-success;}
-	label {color: $brand-success;}
+	&:before {border-bottom-color: theme-color("success")}
+	label {color: theme-color("success")}
 	+ .help-block {
-		color: $brand-success;
+		color: theme-color("success");
 	}
 }
 &.has-warning{
-	&:before {border-bottom-color: $brand-warning;}
-	label {color: $brand-warning;}
+	&:before {border-bottom-color: theme-color("warning")}
+	label {color: theme-color("warning")}
 	+ .help-block {
-		color: $brand-warning;
+		color: theme-color("warning");
 	}
 }
 &.has-error{
-	&:before {border-bottom-color: $brand-danger;}
-	label {color: $brand-danger;}
+	&:before {border-bottom-color: theme-color("danger")}
+	label {color: theme-color("danger")}
 	+ .help-block {
-		color: $brand-danger;
+		color: theme-color("danger");
 	}
 }
 
@@ -338,58 +338,58 @@ label {
 	}
 	&.has-success {
 		.vradio{
-			border-color: $brand-success;
+			border-color: theme-color("success");
 		}
 		input:checked ~ .vradio{
-			border-color: $brand-success;
+			border-color: theme-color("success");
 			&:before {
-				background: $brand-success;
+				background: theme-color("success");
 			}
 		}
 		.vlabel {
-			color: $brand-success;
+			color: theme-color("success");
 		}
 	}
 	&.has-warning {
 		.vradio{
-			border-color: $brand-warning;
+			border-color: theme-color("warning");
 		}
 		input:checked ~ .vradio{
-			border-color: $brand-warning;
+			border-color: theme-color("warning");
 			&:before {
-				background: $brand-warning;
+				background: theme-color("warning");
 			}
 		}
 		.vlabel {
-			color: $brand-warning;
+			color: theme-color("warning");
 		}
 	}
 	&.has-info {
 		.vradio{
-			border-color: $brand-info;
+			border-color: theme-color("info");
 		}
 		input:checked ~ .vradio{
-			border-color: $brand-info;
+			border-color: theme-color("info");
 			&:before {
-				background: $brand-info;
+				background: theme-color("info");
 			}
 		}
 		.vlabel {
-			color: $brand-info;
+			color: theme-color("info");
 		}
 	}
 	&.has-error {
 		.vradio{
-			border-color: $brand-danger;
+			border-color: theme-color("danger");
 		}
 		input:checked ~ .vradio{
-			border-color: $brand-danger;
+			border-color: theme-color("danger");
 			&:before {
-				background: $brand-danger;
+				background: theme-color("danger");
 			}
 		}
 		.vlabel {
-			color: $brand-danger;
+			color: theme-color("danger");
 		}
 	}
 	.vlabel {
@@ -532,57 +532,57 @@ label {
 		}
 	}
 	&.has-success:active input:checked ~ .vswitch {
-		background: rgba($brand-success, 0.5);
+		background: rgba(theme-color("success"), 0.5);
 		&:before {
-			box-shadow: 0 2px 8px transparent, 0 0 0 24px rgba($brand-success, .2);
+			box-shadow: 0 2px 8px transparent, 0 0 0 24px rgba(theme-color("success"), .2);
 		}
 	}
 	&.has-warning:active input:checked ~ .vswitch {
 
 		&:before {
-			box-shadow: 0 2px 8px transparent, 0 0 0 24px rgba($brand-warning, .2);
+			box-shadow: 0 2px 8px transparent, 0 0 0 24px rgba(theme-color("warning"), .2);
 		}
 	}
 	&.has-error:active input:checked ~ .vswitch {
 		&:before {
-			box-shadow: 0 2px 8px transparent, 0 0 0 24px rgba($brand-danger, .2);
+			box-shadow: 0 2px 8px transparent, 0 0 0 24px rgba(theme-color("danger"), .2);
 		}
 	}
 	&.has-info:active input:checked ~ .vswitch {
 		&:before {
-			box-shadow: 0 2px 8px transparent, 0 0 0 24px rgba($brand-info, .2);
+			box-shadow: 0 2px 8px transparent, 0 0 0 24px rgba(theme-color("info"), .2);
 		}
 	}
 	&.has-success {
 		.vlabel {
-			color: $brand-success;
+			color: theme-color("success");
 		}
 		input:checked ~ .vswitch {
-			background: rgba($brand-success, 0.5);
+			background: rgba(theme-color("success"), 0.5);
 		}
 	}
 	&.has-warning {
 		.vlabel {
-			color: $brand-warning;
+			color: theme-color("warning");
 		}
 		input:checked ~ .vswitch {
-			background: rgba($brand-warning, 0.5);
+			background: rgba(theme-color("warning"), 0.5);
 		}
 	}
 	&.has-error {
 		.vlabel {
-			color: $brand-danger;
+			color: theme-color("danger");
 		}
 		input:checked ~ .vswitch {
-			background: rgba($brand-danger, 0.5);
+			background: rgba(theme-color("danger"), 0.5);
 		}
 	}
 	&.has-info {
 		.vlabel {
-			color: $brand-info;
+			color: theme-color("info");
 		}
 		input:checked ~ .vswitch {
-			background: rgba($brand-info, 0.5);
+			background: rgba(theme-color("info"), 0.5);
 		}
 	}
 
@@ -591,7 +591,7 @@ label {
 		&:checked ~ .vswitch {
 			background: rgba($primary-500, 0.5);
 			&:before {
-				background: #fff;
+				background: $white;
 			}
 		} 
 		~ .vlabel {
@@ -618,7 +618,7 @@ label {
 	    input {
 			&:checked ~ .vswitch{
 				&:before {
-					background: #fff;
+					background: $white;
 				}
 			}
 		}
@@ -721,29 +721,29 @@ label {
 	  }
 	}
 	&.has-error {
-		color: $brand-danger;
+		color: theme-color("danger");
 		.chk-span {
-			border-color: $brand-danger;
+			border-color: theme-color("danger");
 		}
 		input[type="checkbox"]:checked ~ label {
-			color: $brand-danger;
+			color: theme-color("danger");
 			.chk-span {
-				border-bottom-color: $brand-danger;
-				border-left-color: $brand-danger;
+				border-bottom-color: theme-color("danger");
+				border-left-color: theme-color("danger");
 			}
 		}
 
 	}
 	&.has-success {
-		color: $brand-success;
+		color: theme-color("success");
 		.chk-span {
-			border-color: $brand-success;
+			border-color: theme-color("success");
 		}
 		input[type="checkbox"]:checked ~ label {
-			color: $brand-success;
+			color: theme-color("success");
 			.chk-span {
-				border-bottom-color: $brand-success;
-				border-left-color: $brand-success;
+				border-bottom-color: theme-color("success");
+				border-left-color: theme-color("success");
 			}
 		}
 	}

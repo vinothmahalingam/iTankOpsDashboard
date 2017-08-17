@@ -3,7 +3,7 @@
 @import './src/scss/_imports/_global-import';
 
 /* #FRAMEWORK - Structure and layout files. (**DO NOT** change order)
-                DOC: You free to disable _modules if not plan to use
+                DOC: you can disable inactive _modules
 ========================================================================== */
 @import '_modules/_reset';
 @import '_modules/_body';
@@ -16,6 +16,7 @@
 @import '_modules/_header-function-fixed';
 @import '_modules/_nav';
 @import '_modules/_nav-info-card';
+@import '_modules/_nav-filter';
 @import '_modules/_nav-function-top';
 @import '_modules/_nav-function-hidden';
 @import '_modules/_nav-function-fixed';

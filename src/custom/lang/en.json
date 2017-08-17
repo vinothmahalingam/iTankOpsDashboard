@@ -87,22 +87,51 @@
   },
   "drpdwn":
   {
-    "messages": "Messages",
-    "feeds": "Feeds",
-    "events": "Events",
-    "language": "Language",
-    "settings": "Settings",
-    "reset_layout": "Reset Layout",
-    "fullscreen": "Fullscreen",
-    "print": "Print",
-    "logout": "Logout"    
+    "messages" : "Messages",
+    "feeds" : "Feeds",
+    "events" : "Events",
+    "language" : "Language",
+    "settings" : "Settings",
+    "reset_layout" : "Reset Layout",
+    "fullscreen" : "Fullscreen",
+    "print" : "Print",
+    "logout" : "Logout"    
   },
   "values":
   {
-    "yes": "Yes",
-    "no": "No",
-    "ok": "Ok",
-    "cancel": "Cancel"
+    "yes" : "Yes",
+    "no" : "No",
+    "ok" : "Ok",
+    "cancel" : "Cancel"
+  },
+  "settings":
+  {
+    "app_layout" : "App Layout",
+    "fixed_header" : "Fixed Header",
+    "fixed_navigation" : "Fixed Navigation",
+    "minify_navigation" : "Minify Navigation",
+    "hide_navigation" : "Hide Navigation",
+    "top_navigation" : "Top Navigation",
+    "boxed_navigation" : "Boxed Navigation",
+    "boxed_layout" : "Boxed Layout",
+    "fixed_background" : "Fixed Background",
+    "mobile_menu" : "Mobile Menu",
+    "push_content" : "Push Content",
+    "no_overlay" : "No Overlay",
+    "off_canvas" : "Off Canvas",
+    "accessibility" : "Accessibility",
+    "bigger_font" : "Bigger Font",
+    "high_contrast_text" : "High Contrast Text",
+    "daltonism" : "Daltonism",
+    "preloader_inside" : "Preloader Inside",
+    "hover_navigation" : "Hover Navigation",
+    "global_modifications" : "Global Modifications",
+    "disable_css_animation" : "Disable CSS Animation",
+    "hide_info_card" : "Hide Info Card",
+    "lean_page_header" : "Lean Page Header",
+    "hierarchical_navigation" : "Hierarchical Navigation",
+    "preloader_inside" : "Preloader Inside",
+    "rtl_support" : "RTL Support",
+    "theme_colors" : "Themes colors" 
   }
-
 }

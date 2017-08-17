@@ -10,7 +10,7 @@
     "tether": "^1.4.0",
     "throttle-debounce": "^1.0.1",
     "font-awesome": "^4.7.0",
-    "bootstrap": "v4.0.0-alpha.6",
+    "bootstrap": "v4.0.0-beta",
     "jquery-throttle-debounce": "*",
     "jquery-slimscroll": "^1.3.8",
     "jquery-lazy": "^1.7.5",

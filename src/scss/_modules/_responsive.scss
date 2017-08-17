@@ -49,6 +49,7 @@ $grid-breakpoints: (
 
 	body {
 		overflow-x: hidden;
+
 	}	
 
 	#page-wrapper {
@@ -109,6 +110,8 @@ $grid-breakpoints: (
 			font-size: $base-font-size + 1;
 			line-height: 1.58;
 
+			min-height: calc(100vh - #{$header-height + $footer-height});
+
 			.breadcrumb > .breadcrumb-item {
 				max-width: 80px;
 			}
@@ -132,7 +135,7 @@ $grid-breakpoints: (
 						text-overflow: ellipsis;
 						white-space: nowrap;
 						overflow: hidden;
-						width: unquote("calc(100% - #{30px})");
+						width: calc(100% - 30px);
 
 					}
 				}
@@ -219,7 +222,7 @@ $grid-breakpoints: (
 			}
 
 			#content {
-				min-height: calc(100vh - #{96px}); //header + footer height
+				/* min-height: calc(100vh - #{$header-height + $footer-height});  no longer needed here */
 				background: $page-bg;
 			}
 		}
