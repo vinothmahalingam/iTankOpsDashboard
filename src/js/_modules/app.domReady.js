@@ -36,12 +36,17 @@ jQuery(document).ready(function() {
 	initApp.buildNavigation(myapp_config.navHooks);
 
  	/**
-	 * e. run DOM misc functions
+	 * e. initalize nav filter
+	 **/
+	initApp.listFilter(myapp_config.navHooks, myapp_config.navFilterInput);
+
+ 	/**
+	 * f. run DOM misc functions
 	 **/
 	initApp.domReadyMisc();
 
  	/**
-	 * f. material form effects
+	 * g. material form effects
 	 **/
 	initApp.materialFormEffects();
 

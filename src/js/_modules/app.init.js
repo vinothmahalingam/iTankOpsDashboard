@@ -5,6 +5,36 @@
 var initApp = (function(app) {
 
 	/**
+	 * List filter 
+	 * usage: initApp.listFilter($('.navigation'), $('#nav-filter > input[type="text"]'));
+	 **/
+	app.listFilter = function (list, input) {
+
+		jQuery.expr[':'].Contains = function(a,i,m){
+			return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
+		};
+
+		$(input).change( function () {
+
+			var filter = $(this).val();
+			if(filter) {
+				/* this finds all links in a list that contain the input,
+				   and hide the ones not containing the input while showing the ones that do */
+				$(list).find('a:not(:Contains(' + filter + '))').parent().hide();
+				$(list).find('a:Contains(' + filter + ')').parent().show().parents().show();
+			} else {
+				$(list).find('li').removeAttr('style');
+			}
+			return false;
+
+		}).keyup( function () {
+			/* fire the above change event after every letter */
+			$(this).change();
+		});
+
+	}
+
+	/**
 	 * Load scripts using lazyload method 
 	 * usage: initApp.loadScript("js/my_lovely_script.js", myPrettyCode);
 	 **/
@@ -391,8 +421,6 @@ var initApp = (function(app) {
 		
 		/* Add app date to breadcrumb-right-placeholder */
 		if ( $( "#app-date" ).length ) {
-			//$('#app-date').text(new Date().toJSON().slice(0,10).split('-').reverse().join('/'));
-
 			var months = ['January', 'February', 'March', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
 				day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
 				now = new Date(),
@@ -401,7 +429,6 @@ var initApp = (function(app) {
 							now.getDate() + ', ' +
 							now.getFullYear();
 			$('#app-date').text(formatted);				
-
 		}
 
 		/* Check conflicting classes to build/destroy slimscroll */

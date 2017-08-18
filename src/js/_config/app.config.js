@@ -62,6 +62,7 @@ var myapp_config = {
     */
     navAnchor: '#primary-nav', //changing this may implicate slimscroll plugin target
     navHooks: '#primary-nav > ul.navigation', //changing this may implicate CSS targets
+    navFilterInput: '#nav-filter > input[type="text"]', //changing this may implicate CSS targets
     /*
        The rate at which the menu expands revealing child elements on click
        Lower rate reels faster expansion of nav childs
