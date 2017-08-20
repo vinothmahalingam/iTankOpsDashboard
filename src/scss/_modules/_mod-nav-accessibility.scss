@@ -1,6 +1,7 @@
 /* Hierarchical Navigation */
 
-.mod-nav-link:not(.nav-function-top):not(.nav-function-minify):not(.nav-function-hover):not(.mod-hide-nav-icons) {
+.mod-nav-link:not(.nav-function-top):not(.nav-function-minify):not(.nav-function-hover):not(.mod-hide-nav-icons),
+.filter-nav:not(.nav-function-top):not(.nav-function-minify):not(.mod-hide-nav-icons) {
 
 	ul.navigation:not(.navigation-compact) {
 

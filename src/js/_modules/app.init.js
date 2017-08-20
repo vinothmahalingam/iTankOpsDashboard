@@ -17,28 +17,38 @@ var initApp = (function(app) {
 		$(input).change( function () {
 
 			var filter = $(this).val();
+
 			if(filter) {
+
 				/* this finds all links in a list that contain the input,
 				   and hide the ones not containing the input while showing the ones that do */
+
 				$(list).find('a:not(:Contains(' + filter + '))')
-				.parent().removeClass('filter-show')
-				.addClass('filter-hide');
+					.parent().removeClass('filter-show')
+					.addClass('filter-hide');
 
 				$(list).find('a:Contains(' + filter + ')')
-				.parent().removeClass('filter-hide')
-				.addClass('filter-show')
-				.parents().removeClass('filter-hide')
-				.addClass('filter-show');
+					.parent().removeClass('filter-hide')
+					.addClass('filter-show')
+					.parents().removeClass('filter-hide')
+					.addClass('filter-show');
 
 			} else {
-				$(list).find('ul').removeClass('filter-hide filter-show')
-				$(list).find('li').removeClass('filter-hide filter-show')
+
+				$(list).find('ul')
+					.removeClass('filter-hide filter-show');
+
+				$(list).find('li')
+					.removeClass('filter-hide filter-show');
 			}
+
 			return false;
 
 		}).keyup( function () {
+
 			/* fire the above change event after every letter */
 			$(this).change();
+			
 		});
 
 	}

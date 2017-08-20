@@ -1,14 +1,7 @@
-
 .tooltip-inner {
 	border-radius: 0;
     font-size: 11px;
     font-weight: 500;
-    padding: 6px 10px;
     font-family: $page-font;
-    letter-spacing: 0.1px;
-}
-
-.tooltip.bs-tether-element-attached-bottom, 
-.tooltip.tooltip-top {
-	margin-top:0; 
+    background-color: $tooltip-bg;
 }

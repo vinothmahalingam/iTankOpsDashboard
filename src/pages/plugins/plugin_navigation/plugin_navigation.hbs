@@ -258,7 +258,7 @@
 				</li>
 			</ul>
 
-<pre id="pre-nav-1" class="card p-0 pt-2 pb-2 bg-faded m-0"></pre>
+<!--<pre id="pre-nav-1" class="card p-0 pt-2 pb-2 bg-faded m-0"></pre>-->
 
 		</div>
 		<!-- /clean look -->
@@ -521,7 +521,7 @@ developer/.../src/scss/_modules/_nav-*.scss</pre>
 <script type="text/javascript">
 
 $("#destroy").hide();
-$('#pre-nav-1').hide()
+//$('#pre-nav-1').hide()
 	
 	//$('#nav_accordion').val()
 
@@ -541,11 +541,11 @@ $('#pre-nav-1').hide()
 		$("#destroy").show();
 		$("#nav_accordion, #nav_animation, #nav_speed, #nav_closedSign, #nav_openedSign, #nav_syndicate").attr('disabled', true);
 
-		$('#pre-nav-1').show().text( $('#nav-1')[0].innerHTML ).css('max-height', '400px');
+		//$('#pre-nav-1').show().text( $('#nav-1')[0].innerHTML ).css('max-height', '400px');
 
-		$('#pre-nav-1').html(function() {
+/*		$('#pre-nav-1').html(function() {
 			return this.innerHTML.replace(/\t/g, '&nbsp;');
-		});
+		});*/
 
 	});
 	$("#destroy").on('click', function () {
@@ -555,7 +555,7 @@ $('#pre-nav-1').hide()
 		$("#build").show();
 		$("#nav_accordion, #nav_animation, #nav_speed, #nav_closedSign, #nav_openedSign, #nav_syndicate").removeAttr('disabled');
 
-		$('#pre-nav-1').text("").hide();
+		//$('#pre-nav-1').text("").hide();
 	});
 
 </script>

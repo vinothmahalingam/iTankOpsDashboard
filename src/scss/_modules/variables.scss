@@ -199,6 +199,12 @@ $table-hover-bg:									  rgba($fusion-300,.035);
 $table-border-color:								darken($gray-lighter, 5%);
 $table-accent-bg:               		rgba($black,.02);
 
+/* tooltip */
+$tooltip-bg:                        $primary-600;
+$tooltip-arrow-color:               $tooltip-bg;
+$tooltip-opacity:                   1;
+$tooltip-padding-x:                 10px; 
+$tooltip-padding-y:                 5px;
 
 /* reference guide
 8px = 0.5rem
