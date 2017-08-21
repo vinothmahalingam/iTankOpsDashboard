@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     flatten = require('gulp-flatten'),
     gulpFilter = require('gulp-filter'),
     mainBowerFiles = require('main-bower-files'),
+    //mainNpmFiles = require('gulp-main-npm-files'),
     config = require('../config');
 
 gulp.task('copy-bower-files', function() {

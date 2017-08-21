@@ -36,7 +36,7 @@ jQuery(document).ready(function() {
 	initApp.buildNavigation(myapp_config.navHooks);
 
  	/**
-	 * e. initalize nav filter
+	 * e. initialize nav filter
 	 **/
 	initApp.listFilter(myapp_config.navHooks, myapp_config.navFilterInput);
 
