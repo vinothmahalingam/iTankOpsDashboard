@@ -12,6 +12,7 @@ module.exports = {
         js_path_dist           : "./dist/js",
         js_path_build          : "./dist/js/",
         path_bower             : "./bower_components/",
+        path_node_modules      : "./node_modules/",
         path_vendor            : "./dist/vendor/",
         path_custom            : "./src/custom/",
         fonts_path_dist        : "./dist/fonts/",

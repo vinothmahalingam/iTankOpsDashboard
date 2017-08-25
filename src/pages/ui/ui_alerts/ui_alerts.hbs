@@ -1,0 +1,331 @@
+{{#> layouts/main title="Alerts" pagename="ui_alerts" heading="Alerts" category_1="UI Components" pagedescription="Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages."}}
+
+{{#*inline "head-block"}}
+<link rel="stylesheet" media="screen, print" href="css/theme-demo.min.css">
+{{/inline}}
+
+{{#*inline "content-block"}}
+
+
+<div class="container card p-g mb-g d-block">
+	
+	<h3>
+		How it works
+		<small>
+			Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the eight required contextual classes (e.g., <code>.alert .alert-{primary|success|danger|warning|secondary|info|note}</code> or use any from the theme color palet <code>.alert .bg-{pallet_name}-{pallet_number}</code>). 
+		</small>
+	</h3>
+
+	<div class="row">
+		<div class="col-md-6">
+
+			<div class="alert alert-primary alert-dismissible fade show" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<strong>Primary</strong> Alert
+			</div>
+
+			<div class="alert alert-secondary alert-dismissible fade show" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<strong>Secondary</strong> Alert
+			</div>
+
+			<div class="alert alert-success alert-dismissible fade show" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<strong>Success</strong> Alert
+			</div>
+
+			<div class="alert alert-danger alert-dismissible fade show" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<strong>Danger</strong> Alert
+			</div>
+
+			<div class="alert alert-warning alert-dismissible fade show" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<strong>Warning</strong> Alert
+			</div>
+
+			<div class="alert alert-info alert-dismissible fade show" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<strong>Info</strong> Alert
+			</div>
+
+			<div class="alert alert-light alert-dismissible fade show" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<strong>Light</strong> Alert
+			</div>
+
+			<div class="alert alert-dark alert-dismissible fade show" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<strong>Dark</strong> Alert
+			</div>
+
+		</div>
+		<div class="col-md-6">
+
+			<div class="alert bg-primary-300 alert-dismissible fade show" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<select class="float-sm-right target btn-w-l">
+					
+						<option value="bg-primary-50">bg-primary-50</option>
+						<option value="bg-primary-100">bg-primary-100</option>
+						<option value="bg-primary-200">bg-primary-200</option>
+						<option value="bg-primary-300" selected="selected">bg-primary-300</option>
+						<option value="bg-primary-400">bg-primary-400</option>
+						<option value="bg-primary-500">bg-primary-500</option>
+						<option value="bg-primary-600">bg-primary-600</option>
+						<option value="bg-primary-700">bg-primary-700</option>
+						<option value="bg-primary-800">bg-primary-800</option>
+						<option value="bg-primary-900">bg-primary-900</option>
+					
+				</select>
+				<strong>Primary</strong> Alert
+			</div>
+
+			<div class="alert bg-fusion-200 alert-dismissible fade show" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<select class="float-sm-right target btn-w-l">
+					
+						<option value="bg-fusion-50">bg-fusion-50</option>
+						<option value="bg-fusion-100">bg-fusion-100</option>
+						<option value="bg-fusion-200">bg-fusion-200</option>
+						<option value="bg-fusion-300" selected="selected">bg-fusion-300</option>
+						<option value="bg-fusion-400">bg-fusion-400</option>
+						<option value="bg-fusion-500">bg-fusion-500</option>
+						<option value="bg-fusion-600">bg-fusion-600</option>
+						<option value="bg-fusion-700">bg-fusion-700</option>
+						<option value="bg-fusion-800">bg-fusion-800</option>
+						<option value="bg-fusion-900">bg-fusion-900</option>
+				
+				</select>
+				<strong>Secondary</strong> Alert
+			</div>
+
+			<div class="alert bg-success-400 alert-dismissible fade show" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<strong>Success</strong> Alert
+				<select class="float-sm-right target btn-w-l">
+					<option value="bg-success-50">bg-success-50</option>
+					<option value="bg-success-100">bg-success-100</option>
+					<option value="bg-success-200">bg-success-200</option>
+					<option value="bg-success-300">bg-success-300</option>
+					<option value="bg-success-400" selected="selected">bg-success-400</option>
+					<option value="bg-success-500">bg-success-500</option>
+					<option value="bg-success-600">bg-success-600</option>
+					<option value="bg-success-700">bg-success-700</option>
+					<option value="bg-success-800">bg-success-800</option>
+					<option value="bg-success-900">bg-success-900</option>
+				</select>
+			</div>
+
+			<div class="alert bg-danger-200 alert-dismissible fade show" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<strong>Danger</strong> Alert
+				<select class="float-sm-right target btn-w-l">
+					<option value="bg-danger-50">bg-danger-50</option>
+					<option value="bg-danger-100">bg-danger-100</option>
+					<option value="bg-danger-200" selected="selected">bg-danger-200</option>
+					<option value="bg-danger-300">bg-danger-300</option>
+					<option value="bg-danger-400">bg-danger-400</option>
+					<option value="bg-danger-500">bg-danger-500</option>
+					<option value="bg-danger-600">bg-danger-600</option>
+					<option value="bg-danger-700">bg-danger-700</option>
+					<option value="bg-danger-800">bg-danger-800</option>
+					<option value="bg-danger-900">bg-danger-900</option>
+				</select>
+			</div>
+
+			<div class="alert bg-warning-100 alert-dismissible fade show" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<strong>Warning</strong> Alert
+				<select class="float-sm-right target btn-w-l">
+					<option value="bg-warning-50">bg-warning-50</option>
+					<option value="bg-warning-100" selected="selected">bg-warning-100</option>
+					<option value="bg-warning-200">bg-warning-200</option>
+					<option value="bg-warning-300">bg-warning-300</option>
+					<option value="bg-warning-400">bg-warning-400</option>
+					<option value="bg-warning-500">bg-warning-500</option>
+					<option value="bg-warning-600">bg-warning-600</option>
+					<option value="bg-warning-700">bg-warning-700</option>
+					<option value="bg-warning-800">bg-warning-800</option>
+					<option value="bg-warning-900">bg-warning-900</option>
+				</select>
+			</div>
+
+			<div class="alert bg-info-100 alert-dismissible fade show" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<strong>Info</strong> Alert
+				<select class="float-sm-right target btn-w-l">
+					<option value="bg-info-50">bg-info-50</option>
+					<option value="bg-info-100" selected="selected">bg-info-100</option>
+					<option value="bg-info-200">bg-info-200</option>
+					<option value="bg-info-300">bg-info-300</option>
+					<option value="bg-info-400">bg-info-400</option>
+					<option value="bg-info-500">bg-info-500</option>
+					<option value="bg-info-600">bg-info-600</option>
+					<option value="bg-info-700">bg-info-700</option>
+					<option value="bg-info-800">bg-info-800</option>
+					<option value="bg-info-900">bg-info-900</option>
+				</select>
+			</div>
+
+			<div class="alert alert-note fade show" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<strong>Note</strong> Alert
+			</div>
+
+			<div class="alert alert-notice alert-dismissible fade show" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<strong>Notice</strong> Alert
+			</div>
+
+		</div>
+	</div>
+
+
+
+</div>
+
+<div class="container card p-g mb-g d-block">
+
+	<h3>
+		Link color
+		<small>
+			Use the .alert-link utility class to quickly provide matching colored links within any alert.
+		</small>
+	</h3>
+
+	<div class="alert alert-primary" role="alert">
+	  This is a primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+	</div>
+	<div class="alert alert-secondary" role="alert">
+	  This is a secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+	</div>
+	<div class="alert alert-success" role="alert">
+	  This is a success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+	</div>
+	<div class="alert alert-danger" role="alert">
+	  This is a danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+	</div>
+	<div class="alert alert-warning" role="alert">
+	  This is a warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+	</div>
+	<div class="alert alert-info" role="alert">
+	  This is a info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+	</div>
+	<div class="alert alert-light" role="alert">
+	  This is a light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+	</div>
+	<div class="alert alert-dark" role="alert">
+	  This is a dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+	</div>
+
+</div>
+
+<div class="container card p-g mb-g d-block">
+
+	<div class="alert alert-success" role="alert">
+	  <h3 class="alert-heading">Well done!</h3>
+	  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+	  <hr>
+	  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+	</div>
+
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	    <span aria-hidden="true">&times;</span>
+	  </button>
+	  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+	</div>
+
+</div>
+
+{{/inline}}
+
+{{#*inline "scripts-block"}}
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&amp;skin=default"></script>
+
+<script>
+
+/**
+ * jQuery alterClass plugin
+ *
+ * Remove element classes with wildcard matching. Optionally add classes:
+ *   $( '#foo' ).alterClass( 'foo-* bar-*', 'foobar' )
+ *
+ * Copyright (c) 2011 Pete Boere (the-echoplex.net)
+ * Free under terms of the MIT license: http://www.opensource.org/licenses/mit-license.php
+ *
+ */
+(function ( $ ) {
+	
+$.fn.alterClass = function ( removals, additions ) {
+	
+	var self = this;
+	
+	if ( removals.indexOf( '*' ) === -1 ) {
+		// Use native jQuery methods if there is no wildcard matching
+		self.removeClass( removals );
+		return !additions ? self : self.addClass( additions );
+	}
+
+	var patt = new RegExp( '\\s' + 
+			removals.
+				replace( /\*/g, '[A-Za-z0-9-_]+' ).
+				split( ' ' ).
+				join( '\\s|\\s' ) + 
+			'\\s', 'g' );
+
+	self.each( function ( i, it ) {
+		var cn = ' ' + it.className + ' ';
+		while ( patt.test( cn ) ) {
+			cn = cn.replace( patt, ' ' );
+		}
+		it.className = $.trim( cn );
+	});
+
+	return !additions ? self : self.addClass( additions );
+};
+
+})( jQuery );
+
+$(".target").change(function() {
+	$(this).parent(".alert").alterClass( 'bg-*', $(this).val() );
+});
+
+</script
+
+{{/inline}}
+
+{{/layouts/main}}

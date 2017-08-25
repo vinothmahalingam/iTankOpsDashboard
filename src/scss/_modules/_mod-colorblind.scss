@@ -1,14 +1,6 @@
 .mod-color-blind {
-	-webkit-filter: grayscale(65%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(55%);
-}
-
-.mod-color-blind #left-panel #primary-nav .navigation > li.active > a,
-.mod-color-blind [class*="bg-danger-"],
-.mod-color-blind .btn-danger,
-.mod-color-blind .btn-outline-danger,
-.pattern-0 {
-	@extend %pattern-0;
+	-webkit-filter: grayscale(65%);
+	filter: grayscale(55%);
 }
 
 .mod-color-blind #left-panel #primary-nav .navigation > li.active > a + ul > li.active > a,
@@ -16,9 +8,19 @@
 	@extend %pattern-1;
 }
 
+.mod-color-blind #left-panel #primary-nav .navigation > li.active > a,
+.mod-color-blind [class*="bg-danger-"],
+.mod-color-blind .btn-danger,
+.mod-color-blind .btn-outline-danger,
+.mod-color-blind .alert-danger,
+.pattern-0 {
+	@extend %pattern-0;
+}
+
 .mod-color-blind [class*="bg-primary-"],
 .mod-color-blind .btn-primary,
 .mod-color-blind .btn-outline-primary,
+.mod-color-blind .alert-primary,
 .pattern-2 {
 	@extend %pattern-2;
 }
@@ -26,6 +28,7 @@
 .mod-color-blind [class*="bg-success-"],
 .mod-color-blind .btn-success,
 .mod-color-blind .btn-outline-success,
+.mod-color-blind .alert-success,
 .pattern-3 {
 	@extend %pattern-3;
 }
@@ -33,6 +36,7 @@
 .mod-color-blind  [class*="bg-info-"],
 .mod-color-blind  .btn-info,
 .mod-color-blind  .btn-outline-info,
+.mod-color-blind .alert-info,
 .pattern-4 {
 	@extend %pattern-4;
 }
@@ -40,6 +44,7 @@
 .mod-color-blind [class*="bg-warning-"],
 .mod-color-blind .btn-warning,
 .mod-color-blind .btn-outline-warning,
+.mod-color-blind .alert-warning,
 .pattern-5 {
 	@extend %pattern-5;
 }

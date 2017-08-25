@@ -106,16 +106,22 @@ body.desktop-detected {
 
 			&:first-child {
 				> .nav-link {
-					@include rounded (4px 0 0 4px);
+					@include rounded ($border-radius 0 0 $border-radius);
 				}
 			}
 
 			&:last-child {
 				> .nav-link {
-					@include rounded (0 4px 4px 0);
+					@include rounded (0 $border-radius $border-radius 0);
 				}
 			}
 		}
+	}
+}
+/* remove extra margin in card child items */
+.card {
+	> :last-child {
+		margin-bottom: 0px;
 	}
 }
 /* buttons */
@@ -131,10 +137,6 @@ body.desktop-detected {
 .btn-pills {
 	@include rounded(15px);
 }
-/* removes inline block gaps 
-.no-inline-block-gap {
-	font-size: 0;
-}*/
 /* change the white to any color ;) */
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
@@ -159,4 +161,9 @@ button:focus {
 /* reset table */
 th {
     font-weight: 500;
+}
+/* IE input clear field "X" input remove */
+::-ms-clear {
+  width : 0;
+  height: 0;
 }
