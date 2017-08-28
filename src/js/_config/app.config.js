@@ -21,7 +21,8 @@ var myapp_config = {
        Lowering the variable makes faster response time but taxing on the CPU
        Reference: http://benalman.com/code/projects/jquery-throttle-debounce/examples/throttle/
      */
-    throttleDelay: 450, //ms
+    throttleDelay: 450, // for window.scrolling
+    filterDelay: 250,   // for keyup.functions 
     /*
        DETECT MOBILE DEVICES
        Description: Detects mobile device - if any of the listed device is 

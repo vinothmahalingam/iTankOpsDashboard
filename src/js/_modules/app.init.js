@@ -10,24 +10,20 @@ var initApp = (function(app) {
 	 **/
 	app.listFilter = function (list, input) {
 
-		jQuery.expr[':'].Contains = function(a,i,m){
-			return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
-		};
-
 		$(input).change( function () {
 
-			var filter = $(this).val();
+			var filter = $(this).val().toLowerCase();
 
-			if(filter) {
+			if(filter.length > 1) {
 
-				/* this finds all links in a list that contain the input,
-				   and hide the ones not containing the input while showing the ones that do */
-
-				$(list).find('a:not(:Contains(' + filter + '))')
+				/* this finds all data-filter-tags in a list that contain the input val,
+				   hiding the ones not containing the input while showing the ones that do */
+				   
+				$(list).find($("a:not([data-filter-tags*='" + filter + "'])"))
 					.parent().removeClass('filter-show')
 					.addClass('filter-hide');
 
-				$(list).find('a:Contains(' + filter + ')')
+				$(list).find($("[data-filter-tags*='" + filter + "']"))
 					.parent().removeClass('filter-hide')
 					.addClass('filter-show')
 					.parents().removeClass('filter-hide')
@@ -40,17 +36,16 @@ var initApp = (function(app) {
 
 				$(list).find('li')
 					.removeClass('filter-hide filter-show');
-			}
-
+			} 
+			
 			return false;
 
-		}).keyup( function () {
+		}).keyup( $.debounce( myapp_config.filterDelay, function (e) {
 
-			/* fire the above change event after every letter */
-			$(this).change();
-			
-		});
+			/* fire the above change event after every letter is typed with a delay of 250ms */
+		 	$(this).change()
 
+		}));
 	}
 
 	/**
