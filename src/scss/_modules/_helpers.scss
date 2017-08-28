@@ -1,0 +1,104 @@
+/* height */
+.h-auto {
+	height: auto !important;
+}
+.w-auto {
+	width: auto !important;
+}
+
+/* line-heights */
+.l-h-n {
+	line-height:normal;
+}
+
+/* display */
+.flex-1 {
+	flex:1 !important;
+}
+
+/* margins */
+.mrg-auto,
+.m-auto {
+	margin: 0 auto;
+}
+.mrg-l-a,
+.ml-auto {
+	margin-left: auto !important;
+}
+.mrg-r-a,
+.mr-auto {
+	margin-right: auto !important;
+}
+.mrg-gutter,
+.m-g {
+	margin: $grid-gutter-width-base;
+}
+.mrg-gutter-half,
+.m-g-h {
+	margin: $grid-gutter-width-base/2;
+}
+.mrg-b-gutter,
+.mb-g {
+	margin-bottom: map-get($grid-gutter-widths, xl) !important;
+}
+.pad-gutter,
+.p-g {
+	padding:$grid-gutter-width-base;
+}
+.pad-gutter-half,
+.p-g-h {
+	padding:$grid-gutter-width-base/2;
+}
+
+/* data elipsis */
+[data-elipsis="xs"] span,
+[data-elipsis="sm"] span,
+[data-elipsis="md"] span,
+[data-elipsis="default"] span,
+[data-elipsis="lg"] span {
+	text-overflow: ellipsis;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	vertical-align: text-bottom;
+}
+
+[data-elipsis="xs"] span { max-width: rem( map-get($grid-gutter-widths, xl) + 73px ) }
+[data-elipsis="sm"] span { max-width: rem(117px) }
+[data-elipsis="md"] span { max-width: rem(160px) }
+[data-elipsis="default"] span { max-width: rem(180px) }
+[data-elipsis="lg"] span { max-width: rem(200px) }
+[data-elipsis] {
+	> i {
+		vertical-align: text-bottom;
+		height: $header-height;
+		line-height: $header-height;
+	}
+}
+
+/* HELPERS */
+/* absolute position */
+.pos-a,
+.a-tr,
+.a-tl,
+.a-br,
+.a-bl {
+	position:absolute !important;
+}
+.a-tr {
+	top:0;
+	right:0;
+}
+.a-tl {
+	top:0;
+	left:0;	
+}
+.a-br {
+	bottom:0;
+	right:0;	
+}
+.a-bl {
+	bottom:0;
+	left:0;	
+}
+

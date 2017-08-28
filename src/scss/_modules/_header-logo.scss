@@ -14,7 +14,7 @@
 	img {
 		width: rem($header-logo-width);
 		height: rem($header-logo-height);
-		transition: all 0.2s ease;
+		transition: transform 0.2s ease;
 	}
 
 	>.minify-logo {
