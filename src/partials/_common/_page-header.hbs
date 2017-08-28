@@ -28,7 +28,11 @@
 		<!-- app search field -->
 		<li class="search">
 			<form class="app-forms hidden-xs-down" role="search" action="search-results.html" autocomplete="off">
+				<i class="fa fa-search d-none"></i>
 				<input type="text" id="search-field" placeholder="Search for anything" class="form-control" tabindex="1">
+				<a href="javascript:void(0);" class="btn-primary btn-search-close no-ripple d-none" data-action="toggle" data-class="mobile-search-on">
+					<i class="fa fa-close"></i>
+				</a>
 			</form>
 		</li>
 	</ul>
@@ -40,9 +44,9 @@
 				<i class="icon icon-settings"></i>
 			</a>
 		</li>
-		<!-- app settings for mobile view -->
+		<!-- activate app search field (mobile) -->
 		<li class="hidden-sm-up">
-			<a href="#" data-action="toggle" data-class="show-search-field" title="Display Settings">
+			<a href="#" data-action="toggle" data-class="mobile-search-on" data-focus="search-field" title="Search">
 				<i class="icon icon-magnifier"></i>
 			</a>
 		</li>
