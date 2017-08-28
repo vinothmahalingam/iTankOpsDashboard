@@ -17,11 +17,11 @@
 }
 
 .h-alt-f {
-   min-height: unquote("calc(100vh - #{$footer-height + ( (map-get($grid-gutter-widths, xl) + 5 ) * 2) })");
+   min-height: unquote("calc(100vh - #{$footer-height + ( (map-get($grid-gutter-widths, xl) + 15 ) * 2) })");
    width: 100%;
 }
 
 .h-alt-hf {
-   min-height: unquote("calc(100vh - #{ $footer-height + $header-height + ( (map-get($grid-gutter-widths, xl) + 5 ) * 2) })"); 
+   min-height: unquote("calc(100vh - #{ $footer-height + $header-height + ( (map-get($grid-gutter-widths, xl) + 15 ) * 2) })"); 
    width: 100%;
 }
