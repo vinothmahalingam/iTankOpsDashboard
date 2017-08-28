@@ -127,7 +127,7 @@ var initApp = (function(app) {
 		initApp.saveSettings();
 
 		if (myapp_config.debugState)
-			console.log(" App reset successful");
+			console.log("App reset successful");
 		
 	}
 
@@ -138,8 +138,8 @@ var initApp = (function(app) {
 	 **/
 	app.accessIndicator = function () {
 
-		myapp_config.root_.addClass("saving").delay(600).queue(function(){
-			$(this).removeClass("saving").dequeue();
+		myapp_config.root_.addClass('saving').delay(600).queue(function(){
+			$(this).removeClass('saving').dequeue();
 			return true;
 		});
 
@@ -199,12 +199,12 @@ var initApp = (function(app) {
 		/* safari or chrome detect */	
 		if(myapp_config.isChrome){
 
-			myapp_config.root_.addClass("chrome webkit");
+			myapp_config.root_.addClass('chrome webkit');
 			return "chrome webkit";
 
 		} else if (myapp_config.isWebkit) {
 
-			myapp_config.root_.addClass("webkit");
+			myapp_config.root_.addClass('webkit');
 			return "webkit";
 		}
 
@@ -227,17 +227,7 @@ var initApp = (function(app) {
 			/* mobile */
 			myapp_config.root_.addClass('mobile');
 			myapp_config.thisDevice = 'mobile';
-			
-			if (myapp_config.fastClick) {
-
-				/**
-				 * removes the tap delay in idevices
-				 * dependency: js/plugin/fastclick/fastclick.js
-				 **/
-				myapp_config.root_.addClass('needsclick');
-				FastClick.attach(document.body); 
-			}
-			
+			 
 		}
 
 		return myapp_config.thisDevice;
@@ -252,7 +242,7 @@ var initApp = (function(app) {
 
 		app.calculateAppHeight = function (){
 
-			var primaryNavHeight = $(myapp_config.navAnchor).height() + myapp_config.navHeightGap,
+			var primaryNavHeight = myapp_config.navAnchor.height() + myapp_config.navHeightGap,
 
 				/* sort next new height, get max value */
 				newHeight =  Math.max(primaryNavHeight, myapp_config.windowHeight); 
@@ -308,12 +298,12 @@ var initApp = (function(app) {
 	 *      Will not fire for webkit devices or Chrome as its not needed
 	 **/
 	 app.windowScrollEvents = function () {
-		if ( myapp_config.root_.is(".nav-function-hidden.header-function-fixed:not(.nav-function-top)") &&  myapp_config.thisDevice === 'desktop') {
-			$('#logo').css({
+		if ( myapp_config.root_.is('.nav-function-hidden.header-function-fixed:not(.nav-function-top)') &&  myapp_config.thisDevice === 'desktop') {
+			myapp_config.root_logo.css({
 				'top': $(window).scrollTop()
 			})
-		} else if ( myapp_config.root_.is(".header-function-fixed:not(.nav-function-top):not(.nav-function-hidden)") &&  myapp_config.thisDevice === 'desktop') {
-			$('#logo').attr("style", "");
+		} else if ( myapp_config.root_.is('.header-function-fixed:not(.nav-function-top):not(.nav-function-hidden)') &&  myapp_config.thisDevice === 'desktop') {
+			myapp_config.root_logo.attr("style", "");
 		}
 	 }
 
@@ -335,7 +325,7 @@ var initApp = (function(app) {
 
 				/* start slimscroll on nav */
 				if ( typeof $.fn.slimScroll !== 'undefined' ) {
-					$(myapp_config.navAnchor).slimScroll({
+					myapp_config.navAnchor.slimScroll({
 						height: '100%',
 						railOpacity: 0.4,
 						wheelStep: 10
@@ -353,17 +343,17 @@ var initApp = (function(app) {
 
 				break;
 
-			case ( $(myapp_config.navAnchor).parent().hasClass('slimScrollDiv') && myapp_config.thisDevice === 'desktop' && typeof $.fn.slimScroll !== 'undefined' ):
+			case ( myapp_config.navAnchor.parent().hasClass('slimScrollDiv') && myapp_config.thisDevice === 'desktop' && typeof $.fn.slimScroll !== 'undefined' ):
 
 				/* destroy the plugin if it is in violation of rules above */
-	    		$(myapp_config.navAnchor).slimScroll({ destroy: true });
-	    		$(myapp_config.navAnchor).attr('style', '');
+	    		myapp_config.navAnchor.slimScroll({ destroy: true });
+	    		myapp_config.navAnchor.attr('style', '');
 
 				/* clear event listners (IE bug) */
-				events = jQuery._data( $(myapp_config.navAnchor)[0], "events" );
+				events = jQuery._data( myapp_config.navAnchor[0], "events" );
 
 				if (events) 
-					jQuery._removeData( $(myapp_config.navAnchor)[0], "events" );
+					jQuery._removeData( myapp_config.navAnchor[0], "events" );
 
 				if (myapp_config.debugState)
 					console.log("slimScroll destroyed");
@@ -385,7 +375,7 @@ var initApp = (function(app) {
 		 **/
 		$(id).navigation({ 
 
-			accordion : $(id).data("nav-accordion"),
+			accordion : $(id).data('nav-accordion'),
 			speed : myapp_config.navSpeed,
 			closedSign : '<em class="' + myapp_config.navClosedSign + '"></em>',
 			openedSign : '<em class="' + myapp_config.navOpenedSign + '"></em>'
@@ -439,7 +429,7 @@ var initApp = (function(app) {
 	app.domReadyMisc = function() {
 		
 		/* Add app date to breadcrumb-right-placeholder */
-		if ( $( "#app-date" ).length ) {
+		if ( myapp_config.appDateHook.length ) {
 			var months = ['January', 'February', 'March', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
 				day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
 				now = new Date(),
@@ -447,7 +437,7 @@ var initApp = (function(app) {
 							months[now.getMonth()] + ' ' +  
 							now.getDate() + ', ' +
 							now.getFullYear();
-			$('#app-date').text(formatted);				
+			myapp_config.appDateHook.text(formatted);				
 		}
 
 		/* Check conflicting classes to build/destroy slimscroll */
@@ -520,7 +510,7 @@ var initApp = (function(app) {
 			$('a[data-toggle="tab"]').on('shown.bs.tab', function () {
 				$('.slimScrollDiv > :first-child').trigger('scroll');
 			})
-			$('#index').on('show.bs.dropdown', function () {
+			myapp_config.root_.on('show.bs.dropdown', function () {
 				$('.slimScrollDiv > :first-child').trigger('scroll');
 			})
 		} else {
@@ -535,7 +525,7 @@ var initApp = (function(app) {
 			$('a[data-toggle="tab"]').on('shown.bs.tab', function () {
 				$('.custom-scroll').trigger('scroll');
 			})
-			$('#index').on('show.bs.dropdown', function () {
+			myapp_config.root_.on('show.bs.dropdown', function () {
 				$('.custom-scroll').trigger('scroll');
 			})
 		}
@@ -555,7 +545,7 @@ var initApp = (function(app) {
 		 **/
 		if ($.fn.ripple && !myapp_config.disableRippleEffect && window.atob &&  !myapp_config.isMobile) {
 
-			$(myapp_config.navAnchor + ' ' + 'a:not(.no-ripple)').ripple({
+			$('.navigation a:not(.no-ripple)').ripple({
 				scaleMode: false
 			});
 
@@ -589,7 +579,8 @@ var initApp = (function(app) {
 					case ( actiontype === 'toggle' ):
 
 						var target = $(this).attr('data-target') || myapp_config.root_,
-							dataClass = $(this).attr('data-class');
+							dataClass = $(this).attr('data-class'),
+							inputFocus = $(this).attr('data-focus');
 
 						/* remove previous background image if alternate is selected */
 						if ( dataClass.indexOf('mod-bg-') !== -1 ) {
@@ -600,6 +591,13 @@ var initApp = (function(app) {
 
 						/* trigger class change */
 						$(target).toggleClass( dataClass );
+
+						/* focus input if available 
+						   FAQ: We had to put a delay timer to slow it down for chrome
+						*/
+						if(inputFocus != undefined) {
+							setTimeout(function(){ $('#' + inputFocus).focus(); }, 200);
+						}
 
 						/* save settings */
 						if ( typeof classHolder != 'undefined' || classHolder != null ) {
@@ -657,8 +655,8 @@ var initApp = (function(app) {
 
 						var selectedPanel = $(this).closest('.panel');
 
-						$(this).closest('.panel').toggleClass("panel-fullscreen");
-						myapp_config.root_.toggleClass("panel-fullscreen");
+						$(this).closest('.panel').toggleClass('panel-fullscreen');
+						myapp_config.root_.toggleClass('panel-fullscreen');
 
 						if (myapp_config.debugState)
 						console.log( "panel id:" + selectedPanel.attr('id') + " | action: fullscreen" );
@@ -701,7 +699,7 @@ var initApp = (function(app) {
 							$(myapp_config.mythemeAnchor).attr('href', $(this).attr('data-theme') );
 						} else {
 							var mytheme = $("<link>", {id: myapp_config.mythemeAnchor.replace('#', ''), "rel": "stylesheet", "href" : $(this).attr('data-theme') });
-							$("head").append(mytheme);
+							$('head').append(mytheme);
 						}
 
 						initApp.saveSettings();
@@ -711,7 +709,7 @@ var initApp = (function(app) {
 					/**
 					 * theme 'app-reset' trigger
 					 **/
-					case ( actiontype === "app-reset" ):
+					case ( actiontype === 'app-reset' ):
 
 						initApp.resetSettings();
 
@@ -770,10 +768,7 @@ var initApp = (function(app) {
 						} else {
 
 							i18n.setLng(applang, function(){
-								//$(myapp_config.navAnchor).i18n();
-								//$('#hdr-r').i18n();
 								$('[data-i18n]').i18n();
-
 								$('[data-lang]').removeClass('active');
 								$(this).addClass('active');
 							});
@@ -829,6 +824,8 @@ var initApp = (function(app) {
 				}
 
 				/* hide tooltip if any present */
+				/*  Note: was added with tether.js, but looks like popper.js fixed the issue(?) 
+				 ** needs to run more tests... */
 				$(this).tooltip('hide');
 
 				if (myapp_config.debugState)
@@ -845,11 +842,11 @@ var initApp = (function(app) {
 		 **/
 
 		$(document)
-			.on('touchend mousedown', '.mobile-nav-on #content', function(e) {
-				myapp_config.root_.removeClass("mobile-nav-on");
+			.on('touchend mousedown', '.mobile-nav-on' + ' ' + myapp_config.mobileOverlayTrigger, function(e) {
+				myapp_config.root_.removeClass('mobile-nav-on');
 
 				if (myapp_config.debugState)
-					console.log(this + " : was clicked to close mobile menu");
+					console.log(JSON.stringify(myapp_config.mobileOverlayTrigger) + " : was clicked to close mobile menu");
 
 				/* stops default action */
 				e.preventDefault();
