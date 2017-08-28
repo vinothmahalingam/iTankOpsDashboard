@@ -8,6 +8,7 @@ var myapp_config = {
        Save a reference to the global object (window in the browser)
      */
     root_: $('body'), // used for core app reference
+    root_logo: $('#logo'), // used for core app reference
     /*
        REFERENCE OBJ FOR WINDOW HEIGHT
        we are saving some memory and repeated calls for window height
@@ -31,6 +32,11 @@ var myapp_config = {
     isMobile: (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase())), //popular device types available on the market
     mobileMenuTrigger: null, // used by pagescrolling and appHeight script, do not change!
     /*
+      The overlay mesh that appears on top of content 
+      Description: users can touch the mesh to close the menu 
+    */
+    mobileOverlayTrigger: '#content',
+    /*
       DETECT IF WEBKIT
       Description: this variable is used to fire the custom scroll plugin. 
       If it is a non-webkit it will fire the plugin.
@@ -52,17 +58,17 @@ var myapp_config = {
      */
     disableRippleEffect: false, // material design effect that appears on all buttons
     /*
-       Primary theme anchor point #mytheme
-       This anchor is created dynamically
+       Primary theme anchor point ID
+       This anchor is created dynamically and CSS is loaded as an override theme
     */
     mythemeAnchor: '#mytheme',
     /*
        Primary menu anchor point #primary-nav
        This is the root anchor point where the menu script will begin its build
     */
-    navAnchor: '#primary-nav', //changing this may implicate slimscroll plugin target
-    navHooks: '#primary-nav > ul.navigation', //changing this may implicate CSS targets
-    navFilterInput: '#nav-filter > input[type="text"]', //changing this may implicate CSS targets
+    navAnchor: $('#primary-nav'), //changing this may implicate slimscroll plugin target
+    navHooks: $('#primary-nav > ul.navigation'), //changing this may implicate CSS targets
+    navFilterInput: $('#nav-filter > input[type="text"]'), //changing this may implicate CSS targets
     /*
        The rate at which the menu expands revealing child elements on click
        Lower rate reels faster expansion of nav childs
@@ -74,6 +80,11 @@ var myapp_config = {
      */
     navClosedSign: 'icon icon-chevron-down',
     navOpenedSign: 'icon icon-chevron-up',
+    /*
+       App date ID
+       found inside the breadcrumb unit, displays current date to the app on pageload
+    */
+    appDateHook: $('#app-date'),
     /*
        Collapse current menu item as other menu items are expanded
        Careful when using this option, if you have a long menu it will
