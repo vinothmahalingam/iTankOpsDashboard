@@ -49,7 +49,6 @@ $grid-breakpoints: (
 
 	body {
 		overflow-x: hidden;
-
 	}	
 
 	#page-wrapper {
@@ -246,6 +245,18 @@ $grid-breakpoints: (
 			border-right:1px solid rgba(0,0,0,0.03);
 			@include box-shadow( 0 rem(3px) rem(35px) rem(3px) rgba(0,0,0,0.52) );
 		}
+
+		#content:before {
+			content:" ";
+			position:fixed;
+			z-index: $space;
+			background:rgba(0,0,0,0);
+			display: block;
+			height:100vh;
+			width:100vw;
+			left: 0;
+			top: 0;
+		}
 		
 		&:not(.nav-mobile-push) {
 
@@ -271,7 +282,9 @@ $grid-breakpoints: (
 
 		/* Push content */
 		&.nav-mobile-push:not(.nav-mobile-slide-out) {
+
 			#page-wrapper {
+
 				#left-panel {
 					left:0;
 					@include translate3d (0px, 0, 0);
@@ -282,7 +295,8 @@ $grid-breakpoints: (
 				footer,
 				.footer-push {
 					@include translate3d ($nav-width, 0, 0);
-				}				
+				}	
+
 			}
 
 		}
@@ -319,15 +333,7 @@ $grid-breakpoints: (
 			#page-wrapper {
 
 				#content:before {
-					content:" ";
-					position:fixed;
-					z-index: $space;
 					background:rgba(0,0,0,0.3);
-					display: block;
-					height:100%;
-					width:100%;
-					left: 0;
-	    			top: 0;
 				}
 
 			}
@@ -337,10 +343,60 @@ $grid-breakpoints: (
 
 }
 
-@media only screen and ( max-width: 420px ){
+@media only screen and ( max-width: map-get($grid-breakpoints, sm) ){
 
+	/* here we turn on mobile font for smaller screens */
 	body {
 		font-family: $mobile-page-font !important;
+	}
+
+	/* mobile nav search */
+	.mobile-search-on:not(.mobile-nav-on) {
+
+		#hdr-l {
+			display: flex;
+			align-items: center;
+
+			float:none !important;
+
+			> li {
+				display: inline-flex;
+
+				&.search {
+					flex: 1;
+
+					.app-forms {
+						display: block !important;
+						position: relative !important;
+						width: 100%;
+
+						.btn-search-close {
+							display: block !important;
+							right:10px;
+						}
+
+						#search-field {
+							border: 1px solid #d4d4d4;
+							padding-left: 15px;
+
+							&:focus {
+								border-color: $primary-500;
+							}
+						}
+					}
+				}
+
+				[data-class="mobile-nav-on"] {
+					display: none !important;
+				}
+			}
+
+		}
+
+		#hdr-r {
+			display: none;
+		}
+
 	}
 
 	#banner {
@@ -349,7 +405,7 @@ $grid-breakpoints: (
 			> li {
 				> a:not(.btn)[data-toggle="dropdown"] + .dropdown-menu {
 					width: calc(100% - #{$grid-gutter-width-base / 1.5}) !important;
-					right: $grid-gutter-width-base / 3;
+					right: $grid-gutter-width-base / 3 !important;
 				}
 			}
 		}
@@ -362,7 +418,6 @@ $grid-breakpoints: (
 				}
 
 			}
-
 		}
 	}
 
