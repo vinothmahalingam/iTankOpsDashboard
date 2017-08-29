@@ -3,32 +3,32 @@
 	<head>
 		{{> _common/_head/_head}}
 
-		<!-- Optional: Page related CSS-->
-		{{#> head-block}}{{/head-block}}
+		<!-- Optional: page related CSS-->
+		{{#>head-block}}{{/head-block}}
 	</head>
 	<body id="index" class="mod-bg-1">
 		
-		{{!-- SAVE SETTINGS SCRIPT --}}
+		{{!-- save-settings-script --}}
 		{{> _common/_scripts/loading-saving}}
 		
-		<!-- BEGIN WRAPPER -->
+		<!-- BEGIN #page-wrapper -->
 		<div id="page-wrapper" class="clearfix">
 
-			<!-- BEGIN LEFT PANEL -->
+			<!-- BEGIN #left-panel -->
 			{{> _common/_left-panel }}
-			<!-- END LEFT PANEL -->
+			<!-- END #left-panel -->
 			
 			<!-- BEGIN HEADER -->
 			{{> _common/_page-header }}
 			<!-- END HEADER -->
 
-			<!-- BEGIN CONTENT -->
+			<!-- BEGIN #content -->
 			<main id="content" role="main">
 				{{> _common/_page-breadcrumb }}
 				{{> _common/_page-heading }}
-				{{#> content-block}}{{/content-block}}
+				{{#>content-block}}{{/content-block}}
 			</main>
-			<!-- END CONTENT -->
+			<!-- END #content -->
 
 			<!--{{#if splitcontent}}
 			<div id="splitcontent">
@@ -36,20 +36,20 @@
 			</div>
 			{{/if}}-->
 
-			<!-- BEGIN FOOTER -->
+			<!-- BEGIN footer -->
 			{{> _common/_page-footer }}
-			<!-- END FOOTER -->
+			<!-- END footer -->
 
-			<!-- BEGIN SHORTCUT BUTTONS -->
+			<!-- BEGIN .app-shortcut -->
 			{{> _common/_shortcut }}
-			<!-- END SHORTCUT BUTTONS -->
+			<!-- END .app-shortcut -->
 
-			<!-- BEGIN RIGHT PANEL -->
+			<!-- BEGIN #right-panel -->
 			{{> _common/_right-panel }}
-			<!-- END RIGHT PANEL -->
+			<!-- END #right-panel -->
 
 		</div>
-		<!-- END WRAPPER -->
+		<!-- END #page-wrapper -->
 
 		{{!-- Google Analytics  code if GOOGLE_ANALYTICS_ID id available --}}
 		{{#if GOOGLE_ANALYTICS_ID}}
@@ -65,7 +65,7 @@
 			</script>
 		{{/if}}
 		{{> _common/_scripts/base-plugins}}
-		{{#> scripts-block}}
+		{{#>scripts-block}}
 			{{!-- Custom scripts per page can be added. --}}
 		{{/scripts-block}}
 	</body>

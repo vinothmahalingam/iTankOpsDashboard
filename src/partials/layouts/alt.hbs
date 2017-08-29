@@ -3,30 +3,30 @@
 	<head>
 		{{> _common/_head/_head}}
 
-		<!-- Optional: Page related CSS-->
-		{{#> head-block}}{{/head-block}}
+		<!-- Optional: page related CSS-->
+		{{#>head-block}}{{/head-block}}
 	</head>
 	<body id="index">
 			
-		<!-- BEGIN WRAPPER -->
+		<!-- BEGIN #page-wrapper -->
 		<div id="page-wrapper" class="clearfix alt">
 
-			<!-- BEGIN CONTENT -->
+			<!-- BEGIN #content -->
 			<main id="content" role="main">
-				{{#> content-block}}{{/content-block}}
+				{{#>content-block}}{{/content-block}}
 			</main>
-			<!-- END CONTENT -->
+			<!-- END #content -->
 
-			<!-- BEGIN FOOTER -->
+			<!-- BEGIN footer -->
 			{{> _common/_page-footer }}
-			<!-- END FOOTER -->
+			<!-- END footer -->
 
 		</div>
-		<!-- END WRAPPER -->
+		<!-- END #page-wrapper -->
 
-		<!-- BEGIN SHORTCUT BUTTONS -->
+		<!-- BEGIN .app-shortcut -->
 		{{> _common/_shortcut }}
-		<!-- END SHORTCUT BUTTONS -->
+		<!-- END .app-shortcut -->
 
 		{{!-- Google Analytics  code if GOOGLE_ANALYTICS_ID id available --}}
 		{{#if GOOGLE_ANALYTICS_ID}}
@@ -42,7 +42,7 @@
 			</script>
 		{{/if}}
 		{{> _common/_scripts/base-plugins}}
-		{{#> scripts-block}}
+		{{#>scripts-block}}
 			{{!-- Custom scripts per page can be added. --}}
 		{{/scripts-block}}
 	</body>

@@ -3,15 +3,15 @@
 	<head>
 		{{> _common/_head/_head}}
 		
-		<!-- Optional: Page related CSS-->
-		{{#> head-block}}{{/head-block}}
+		<!-- Optional: page related CSS-->
+		{{#>head-block}}{{/head-block}}
 	</head>
 	<body id="index">
 		
-		{{!-- SAVE SETTINGS SCRIPT --}}
+		{{!-- save-settings-script --}}
 		{{> _common/_scripts/loading-saving}}
 
-		{{#> content-block}}{{/content-block}}
+		{{#>content-block}}{{/content-block}}
 
 		{{!-- Google Analytics  code if GOOGLE_ANALYTICS_ID id available --}}
 		{{#if GOOGLE_ANALYTICS_ID}}
@@ -27,7 +27,7 @@
 			</script>
 		{{/if}}
 		{{> _common/_scripts/base-plugins}}
-		{{#> scripts-block}}
+		{{#>scripts-block}}
 			{{!-- Custom scripts per page can be added. --}}
 		{{/scripts-block}}
 	</body>
