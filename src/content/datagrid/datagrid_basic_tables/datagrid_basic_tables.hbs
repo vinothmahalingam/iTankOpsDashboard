@@ -1,0 +1,218 @@
+{{#> 
+	layouts/main 
+	title="Basic Tables" 
+	pagename="datagrid_basic_tables" 
+	heading="Basic tables" 
+	category_1="Datagrid" 
+	pagedescription="Just add the base class .table to any table, then extend with custom styles or our various included modifier classes."
+}}
+
+{{#*inline "head-block"}}{{/inline}}
+
+{{#*inline "content-block"}}
+
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="card p-3 mrg-b-gutter d-block">
+
+				<label class="custom-control custom-checkbox mb-0">
+				  <input type="checkbox" class="custom-control-input" id="bordered" data-class="table-bordered">
+				  <span class="custom-control-indicator"></span>
+				  <span class="custom-control-description">Bordered Table</span>
+				</label>
+				<label class="custom-control custom-checkbox mb-0">
+				  <input type="checkbox" class="custom-control-input" id="smaller" data-class="table-sm">
+				  <span class="custom-control-indicator"></span>
+				  <span class="custom-control-description">Smaller Table</span>
+				</label>
+				<label class="custom-control custom-checkbox mb-0">
+				  <input type="checkbox" class="custom-control-input" id="inverse" data-class="table-inverse">
+				  <span class="custom-control-indicator"></span>
+				  <span class="custom-control-description">Table Inverse</span>
+				</label>
+				<label class="custom-control custom-checkbox mb-0">
+				  <input type="checkbox" class="custom-control-input" id="hover" data-class="table-hover">
+				  <span class="custom-control-indicator"></span>
+				  <span class="custom-control-description">Table Hover</span>
+				</label>
+				<label class="custom-control custom-checkbox mb-0">
+				  <input type="checkbox" class="custom-control-input" id="stripe" data-class="table-striped">
+				  <span class="custom-control-indicator"></span>
+				  <span class="custom-control-description">Table Stripped</span>
+				</label>
+
+
+		</div>
+	</div>
+	<div class="col-sm-12">
+
+		<div class="card p-3 mrg-b-gutter d-block">
+
+			<table class="table m-0" id="table-example">
+			  <thead>
+			    <tr>
+			      <th>Client</th>
+			      <th>Email</th>
+			      <th>Phone</th>
+			      <th>Company</th>
+			      <th>City</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td>Helen</td>
+			      <td>ligula.Donec.luctus@aliquetvelvulputate.org</td>
+			      <td>1-957-664-9965</td>
+			      <td>Maecenas LLC</td>
+			      <td>Villers-la-Ville</td>
+			    </tr>
+			    <tr>
+			      <td>Armand</td>
+			      <td>aliquet@nisl.com</td>
+			      <td>1-625-404-5085</td>
+			      <td>Eget Venenatis Consulting</td>
+			      <td>Cappelle sul Tavo</td>
+			    </tr>
+			    <tr>
+			      <td>Mercedes</td>
+			      <td>odio@netusetmalesuada.com</td>
+			      <td>1-446-920-2685</td>
+			      <td>Aliquet Diam Industries</td>
+			      <td>Birmingham</td>
+			    </tr>
+			    <tr>
+			      <td>Iola</td>
+			      <td>purus@diam.com</td>
+			      <td>1-845-724-8361</td>
+			      <td>Scelerisque Dui Consulting</td>
+			      <td>Giardinello</td>
+			    </tr>
+			    <tr>
+			      <td>Troy</td>
+			      <td>scelerisque.dui@ornareegestasligula.net</td>
+			      <td>1-223-186-1776</td>
+			      <td>Facilisis Suspendisse Corporation</td>
+			      <td>Leicester</td>
+			    </tr>
+			    <tr>
+			      <td>Tanisha</td>
+			      <td>laoreet.ipsum.Curabitur@egestasFusce.co.uk</td>
+			      <td>1-323-514-3293</td>
+			      <td>In Magna Phasellus LLC</td>
+			      <td>Williams Lake</td>
+			    </tr>
+			    <tr>
+			      <td>Sybill</td>
+			      <td>amet@dictum.com</td>
+			      <td>1-416-785-7526</td>
+			      <td>Dolor Egestas Corporation</td>
+			      <td>Vico del Gargano</td>
+			    </tr>
+			    <tr>
+			      <td>Blaine</td>
+			      <td>felis.purus.ac@Sed.net</td>
+			      <td>1-332-816-8924</td>
+			      <td>Morbi Tristique LLP</td>
+			      <td>Cercepiccola</td>
+			    </tr>
+			    <tr>
+			      <td>Inga</td>
+			      <td>metus.Aliquam@ametlorem.ca</td>
+			      <td>1-318-627-3874</td>
+			      <td>Montes Industries</td>
+			      <td>Dolgellau</td>
+			    </tr>
+			    <tr>
+			      <td>Price</td>
+			      <td>nec.enim.Nunc@facilisis.net</td>
+			      <td>1-963-499-3886</td>
+			      <td>Risus Quisque Inc.</td>
+			      <td>Cascavel</td>
+			    </tr>
+			    <tr>
+			      <td>Jeanette</td>
+			      <td>non@afeugiattellus.co.uk</td>
+			      <td>1-133-240-5173</td>
+			      <td>Quis Diam Corporation</td>
+			      <td>Springdale</td>
+			    </tr>
+			    <tr>
+			      <td>Randall</td>
+			      <td>dignissim.magna.a@ipsum.co.uk</td>
+			      <td>1-859-866-0345</td>
+			      <td>Mauris Blandit Associates</td>
+			      <td>Patarrá</td>
+			    </tr>
+			    <tr>
+			      <td>Roanna</td>
+			      <td>nascetur.ridiculus@fermentumvel.co.uk</td>
+			      <td>1-289-706-6780</td>
+			      <td>Non Enim Commodo Incorporated</td>
+			      <td>New Galloway</td>
+			    </tr>
+			    <tr>
+			      <td>Macaulay</td>
+			      <td>Fusce@egestasligulaNullam.ca</td>
+			      <td>1-726-644-6609</td>
+			      <td>Et LLC</td>
+			      <td>Sandy</td>
+			    </tr>
+			    <tr>
+			      <td>Chiquita</td>
+			      <td>luctus@metuseuerat.edu</td>
+			      <td>1-258-865-1127</td>
+			      <td>Cursus Consulting</td>
+			      <td>Masterton</td>
+			    </tr>
+			    <tr>
+			      <td>Dawn</td>
+			      <td>cursus@nunc.co.uk</td>
+			      <td>1-375-607-7039</td>
+			      <td>Feugiat Tellus LLC</td>
+			      <td>Scarborough</td>
+			    </tr>
+			    <tr>
+			      <td>Ulric</td>
+			      <td>In.ornare@Aenean.net</td>
+			      <td>1-500-419-2852</td>
+			      <td>A Dui Cras Ltd</td>
+			      <td>Kanchrapara</td>
+			    </tr>
+			    <tr>
+			      <td>Xander</td>
+			      <td>nonummy@duiSuspendisseac.ca</td>
+			      <td>1-839-590-9303</td>
+			      <td>Facilisis Facilisis LLC</td>
+			      <td>San Carlos</td>
+			    </tr>
+			    <tr>
+			      <td>Claudia</td>
+			      <td>a.nunc.In@necluctus.net</td>
+			      <td>1-363-589-6109</td>
+			      <td>Magna Inc.</td>
+			      <td>Rhemes-Saint-Georges</td>
+			    </tr>
+			  </tbody>
+			</table>
+
+		</div>
+
+	</div>
+
+{{/inline}}
+
+{{#*inline "scripts-block"}}
+
+<script>
+$('input:checkbox').change(function(){
+    if($(this).is(":checked")) {
+        $('#table-example').addClass( $(this).attr("data-class") );
+    } else {
+        $('#table-example').removeClass( $(this).attr("data-class") );
+    }
+});
+</script>
+
+{{/inline}}
+
+{{/layouts/main}}

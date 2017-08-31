@@ -1,0 +1,1111 @@
+{{#> 
+	layouts/main 
+	title="Material Forms" 
+	pagename="form_material" 
+	heading="Material Forms" 
+	category_1="Form Stuff" 
+	pagedescription="form-material"
+}}
+
+{{#*inline "head-block"}}{{/inline}}
+
+{{#*inline "content-block"}}
+
+	<div class="row">
+		<div class="col">
+
+			<div class="card p-g">
+			
+				<form novalidate>
+				
+					<h3>Elements Different Sizes</h3>
+					<div class="form-group app-forms input-sm">
+						<label>Input Small</label>
+						<input type="email" class="form-control" placeholder="placeholder">
+					</div>
+					<span class="help-block">hello</span>
+					<div class="form-group app-forms">
+						<label>Input Default</label>
+						<input type="email" class="form-control" placeholder="placeholder" value="email@example.com">
+					</div>
+					<span class="help-block">hello</span>
+					<div class="form-group app-forms input-lg">
+						<label>Input Large</label>
+						<input type="email" class="form-control" placeholder="placeholder">
+					</div>
+					<span class="help-block">hello</span>
+
+					<h4>Input Disabled Style</h4>
+					<div class="form-group app-forms input-sm">
+						<label>Input Small</label>
+						<input type="email" class="form-control" placeholder="placeholder" disabled>
+					</div>
+					<div class="form-group app-forms">
+						<label>Input Default</label>
+						<input type="email" class="form-control" placeholder="placeholder" disabled value="email@example.com">
+					</div>
+					<div class="form-group app-forms input-lg">
+						<label>Input Large</label>
+						<input type="email" class="form-control" placeholder="placeholder" disabled>
+					</div>
+
+
+					<h4>Elements Validation States</h4>
+					<div class="form-group app-forms">
+						<label class="control-label" for="input1">Input Default</label>
+						<input type="text" class="form-control form-control-success" id="input1">
+					</div>
+					<span class="help-block">Default message will come here...</span>
+					<div class="form-group has-success app-forms">
+						<label class="control-label" for="inputSuccess1">Input with success</label>
+						<input type="text" class="form-control form-control-success" id="inputSuccess1">
+					</div>
+					<span class="help-block">Success message will come here...</span>
+					<div class="form-group has-warning app-forms">
+						<label class="control-label" for="inputWarning1">Input with warning</label>
+						<input type="text" class="form-control form-control-warning" id="inputWarning1">
+					</div>
+					<span class="help-block">Warning message will come here...</span>
+					<div class="form-group has-error app-forms">
+						<label class="control-label" for="inputError1">Input with error</label>
+						<input type="text" class="form-control form-control-error" id="inputError1">
+					</div>
+					<span class="help-block">Error message will come here...</span>
+					<h4>Checkboxes</h4>
+					<div class="v-checkbox has-success">
+					    <input type="checkbox" id="anId1a" checked>
+					    <label for="anId1a"><span class="chk-span"></span> error state</label>
+					</div>
+					<div class="v-checkbox has-error">
+					    <input type="checkbox" id="anId2a" checked>
+					    <label for="anId2a"><span class="chk-span"></span> success state</label>
+					</div>
+					<div class="v-checkbox form-group">
+					    <input type="checkbox" id="anId3a" checked>
+					    <label for="anId3a"><span class="chk-span"></span> default state</label>
+					</div>
+					<div class="form-group">
+					    <label class="switch-label has-error">
+					    	<input type="checkbox" checked>
+					    	<span class="vswitch"></span>
+					    	<span class="vlabel">Checkbox Switch error</span>
+					    </label>
+					    <br>
+					    <label class="switch-label has-success">
+					    	<input type="checkbox" checked>
+					    	<span class="vswitch"></span>
+					    	<span class="vlabel">Checkbox Switch success</span>
+					    </label>
+					    <br>
+					     <label class="switch-label switch2 has-error">
+					    	<input type="checkbox" checked>
+					    	<span class="vswitch"></span>
+					    	<span class="vlabel">Checkbox Switch error</span>
+					    </label>
+					    <br>
+					    <label class="switch-label switch2 has-success">
+					    	<input type="checkbox" checked>
+					    	<span class="vswitch"></span>
+					    	<span class="vlabel">Checkbox Switch success</span>
+					    </label>
+					</div>
+					<h4>Radio Buttons</h4>
+					<ul class="list-unstyled">
+						<li>
+							<label class="vcheck-label has-success">
+						    	<input type="radio" checked>
+								<span class="vradio"></span>
+								<span class="vlabel">Radio error state</span>
+							</label>
+						</li>
+						<li>
+							<label class="vcheck-label has-error">
+						    	<input type="radio" checked>
+								<span class="vradio"></span>
+								<span class="vlabel">Radio success state</span>
+							</label>
+						</li>
+						<li>
+							<label class="vcheck-label has-warning">
+						    	<input type="radio" checked>
+								<span class="vradio"></span>
+								<span class="vlabel">Radio warning state</span>
+							</label>
+						</li>
+						<li>
+							<label class="vcheck-label">
+						    	<input type="radio" checked>
+								<span class="vradio"></span>
+								<span class="vlabel">Radio default state</span>
+							</label>
+						</li>
+					</ul>
+					<div class="form-group">
+					    <label class="switch-label has-error">
+					    	<input type="radio" checked>
+					    	<span class="vswitch"></span>
+					    	<span class="vlabel">Checkbox Switch error</span>
+					    </label>
+					    <br>
+					    <label class="switch-label has-success">
+					    	<input type="radio" checked>
+					    	<span class="vswitch"></span>
+					    	<span class="vlabel">Checkbox Switch success</span>
+					    </label>
+					    <br>
+					     <label class="switch-label switch2 has-error">
+					    	<input type="radio" checked>
+					    	<span class="vswitch"></span>
+					    	<span class="vlabel">Checkbox Switch error</span>
+					    </label>
+					    <br>
+					    <label class="switch-label switch2 has-success">
+					    	<input type="radio" checked>
+					    	<span class="vswitch"></span>
+					    	<span class="vlabel">Checkbox Switch success</span>
+					    </label>
+					</div>
+
+
+					<h4>Floating Labels</h4>
+					<div class="form-group app-forms input-sm floating-label">
+						<label>Input Default</label>
+						<input type="email" class="form-control" placeholder="placeholder">
+					</div>
+					<div class="form-group app-forms floating-label">
+						<label>Input Default</label>
+						<input type="email" class="form-control" placeholder="placeholder">
+					</div>
+					<div class="form-group app-forms input-lg floating-label">
+						<label>Input Default</label>
+						<input type="email" class="form-control" placeholder="placeholder">
+					</div>
+					<div class="form-group app-forms input-sm floating-label">
+						<label>Input Default</label>
+						<input type="email" class="form-control" placeholder="placeholder" disabled>
+					</div>
+					<div class="form-group app-forms floating-label">
+						<label>Input Default</label>
+						<input type="email" class="form-control" placeholder="placeholder" disabled>
+					</div>
+					<div class="form-group app-forms input-lg floating-label">
+						<label>Input Default</label>
+						<input type="email" class="form-control" placeholder="placeholder" disabled>
+					</div>
+
+
+					<h4>Floating Labels with validation</h4>
+
+					<div class="form-group has-success app-forms floating-label">
+						<label class="control-label" for="inputSuccess1">Input with success</label>
+						<input type="text" class="form-control form-control-success">
+					</div>
+					<div class="form-group has-warning app-forms floating-label">
+						<label class="control-label" for="inputWarning1">Input with warning</label>
+						<input type="text" class="form-control form-control-warning">
+					</div>
+					<div class="form-group has-error app-forms floating-label">
+						<label class="control-label" for="inputError1">Input with error</label>
+						<input type="text" class="form-control form-control-error">
+					</div>
+
+					<h4>Other input elements</h4>
+
+					<div class="form-group app-forms">
+						<label>Input Default</label>
+						<select class="form-control c-select">
+							<option value="">Select a Category</option>
+							<option value="1">list item 1</option>
+							<option value="2">list item 2</option>
+							<option value="3">list item 3</option>
+							<option value="4">list item 4</option>
+						</select>
+					</div>
+
+					<div class="form-group app-forms">
+						<label>Input Default</label>
+						<select class="form-control" multiple>
+							<option value="">Select a Category</option>
+							<option value="1">list item 1</option>
+							<option value="2">list item 2</option>
+							<option value="3">list item 3</option>
+							<option value="4">list item 4</option>
+						</select>
+					</div>
+					<div class="form-group app-forms">
+						<label>Upload Image field</label>
+						<div class="input-group input-group-upload">
+					      <input type="text" onclick="inputFileBase(this, 'fileinputBase')" id="fileinput" class="form-control">
+						  <input type="file" onchange="inputFile(this, 'fileinput');" id="fileinputBase" style="display: none">
+					      <span class="input-group-btn">
+					        <span class="btn btn-custom btn-primary">Choose File</span>
+					      </span>
+					    </div>
+					</div>
+					<h3>Checkboxes / Radio</h3>
+					<div class="row">
+						<div class="col-sm-4 form-group">
+							<div class="v-checkbox">
+						        <input type="checkbox" id="anId1" />
+						        <label for="anId1"><span class="chk-span"></span> uncheck</label>
+						    </div>
+						    <div class="v-checkbox">
+						        <input type="checkbox" id="anId2" checked />
+						        <label for="anId2"><span class="chk-span"></span> Checked</label>
+						    </div>
+						    <div class="v-checkbox">
+						        <input type="checkbox" id="anId3" disabled />
+						        <label for="anId3"><span class="chk-span"></span> Check disabled</label>
+						    </div>
+						</div>
+						<div class="col-sm-4 form-group">
+							<div class="v-checkbox v-checkbox-sm">
+						        <input type="checkbox" id="anId11" />
+						        <label for="anId11"><span class="chk-span"></span> Small uncheck</label>
+						    </div>
+						    <div class="v-checkbox v-checkbox-sm">
+						        <input type="checkbox" id="anId12" checked />
+						        <label for="anId12"><span class="chk-span"></span> Small Checked</label>
+						    </div>
+						    <div class="v-checkbox v-checkbox-sm">
+						        <input type="checkbox" id="anId13" disabled />
+						        <label for="anId13"><span class="chk-span"></span> Small Check disabled</label>
+						    </div>
+						</div>
+						<div class="col-sm-4 form-group">
+							<div class="v-checkbox v-checkbox-lg">
+						        <input type="checkbox" id="anId21" />
+						        <label for="anId21"><span class="chk-span"></span> Large uncheck</label>
+						    </div>
+						    <div class="v-checkbox v-checkbox-lg">
+						        <input type="checkbox" id="anId22" checked />
+						        <label for="anId22"><span class="chk-span"></span> Large Checked</label>
+						    </div>
+						    <div class="v-checkbox v-checkbox-lg">
+						        <input type="checkbox" id="anId23" disabled />
+						        <label for="anId23"><span class="chk-span"></span> Large Check disabled</label>
+						    </div>
+						</div>
+						
+
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="vcheck-label has-success"><input type="radio" name="type1"><span class="vradio"></span><span class="vlabel">Radio success Default</span></label></li>
+						    	<li><label class="vcheck-label  has-success"><input type="radio" name="type1"><span class="vradio"></span><span class="vlabel">Radio success Default</span></label></li>
+						    	<li><label class="vcheck-label  has-success"><input type="radio" name="type1" disabled><span class="vradio" ></span><span class="vlabel">Radio disabled Default</span></label></li>
+						    </ul>
+						</div>
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="vcheck-label vcheck-label-sm has-warning"><input type="radio" name="type1"><span class="vradio"></span><span class="vlabel">Radio warning Small</span></label></li>
+						    	<li><label class="vcheck-label vcheck-label-sm has-warning"><input type="radio" name="type1"><span class="vradio"></span><span class="vlabel">Radio warning Small</span></label></li>
+						    	<li><label class="vcheck-label vcheck-label-sm has-warning"><input type="radio" name="type1" disabled><span class="vradio" ></span><span class="vlabel">Radio disabled Small</span></label></li>
+						    </ul>
+						</div>
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="vcheck-label vcheck-label-lg has-error"><input type="radio" name="type1"><span class="vradio"></span><span class="vlabel">Radio danger Large</span></label></li>
+						    	<li><label class="vcheck-label vcheck-label-lg has-error"><input type="radio" name="type1"><span class="vradio"></span><span class="vlabel">Radio danger Large</span></label></li>
+						    	<li><label class="vcheck-label vcheck-label-lg has-error"><input type="radio" name="type1" disabled><span class="vradio" ></span><span class="vlabel">Radio disabled Large</span></label></li>
+						    </ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="vcheck-label"><input type="radio" name="type1"><span class="vradio vradio-info"></span><span class="vlabel">Radio info</span></label></li>
+						    	<li><label class="vcheck-label"><input type="radio" name="type1"><span class="vradio vradio-info"></span><span class="vlabel">Radio info</span></label></li>
+						    	<li><label class="vcheck-label"><input type="radio" name="type1" disabled><span class="vradio vradio-info" ></span><span class="vlabel">Radio disabled</span></label></li>
+						    </ul>
+						</div>
+					</div>
+					<h3>Checkbox Switches</h3>
+					<div class="row">
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="switch-label"><input type="checkbox"><span class="vswitch"></span><span class="vlabel">Checkbox Switch</span></label></li>
+						    	<li><label class="switch-label"><input type="checkbox"><span class="vswitch"></span><span class="vlabel">Checkbox Switch</span></label></li>
+						    	<li><label class="switch-label"><input type="checkbox" disabled><span class="vswitch" ></span><span class="vlabel">Checkbox Switch disabled</span></label></li>
+						    </ul>
+						</div>
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="switch-label has-success"><input type="checkbox"><span class="vswitch"></span><span class="vlabel">Checkbox Switch success</span></label></li>
+						    	<li><label class="switch-label has-success"><input type="checkbox"><span class="vswitch"></span><span class="vlabel">Checkbox Switch success</span></label></li>
+						    	<li><label class="switch-label has-success"><input type="checkbox" disabled><span class="vswitch" ></span><span class="vlabel">Checkbox Switch disabled</span></label></li>
+						    </ul>
+						</div>
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="switch-label has-warning"><input type="checkbox"><span class="vswitch"></span><span class="vlabel">Checkbox Switch warning</span></label></li>
+						    	<li><label class="switch-label has-warning"><input type="checkbox"><span class="vswitch"></span><span class="vlabel">Checkbox Switch warning</span></label></li>
+						    	<li><label class="switch-label has-warning"><input type="checkbox" disabled><span class="vswitch" ></span><span class="vlabel">Checkbox Switch disabled</span></label></li>
+						    </ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="switch-label has-error"><input type="checkbox"><span class="vswitch"></span><span class="vlabel">Checkbox Switch danger</span></label></li>
+						    	<li><label class="switch-label has-error"><input type="checkbox"><span class="vswitch"></span><span class="vlabel">Checkbox Switch danger</span></label></li>
+						    	<li><label class="switch-label has-error"><input type="checkbox" disabled><span class="vswitch" ></span><span class="vlabel">Checkbox Switch disabled</span></label></li>
+						    </ul>
+						</div>
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="switch-label has-info"><input type="checkbox"><span class="vswitch"></span><span class="vlabel">Checkbox Switch info</span></label></li>
+						    	<li><label class="switch-label has-info"><input type="checkbox"><span class="vswitch"></span><span class="vlabel">Checkbox Switch info</span></label></li>
+						    	<li><label class="switch-label has-info"><input type="checkbox" disabled><span class="vswitch" ></span><span class="vlabel">Checkbox Switch disabled</span></label></li>
+						    </ul>
+						</div>
+					</div>
+					<h3>Radio Switches</h3>
+					<div class="row">
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="switch-label has-warning"><input type="radio" name="radioswitches"><span class="vswitch"></span><span class="vlabel">Radio Switch warning</span></label></li>
+						    	<li><label class="switch-label has-warning"><input type="radio" name="radioswitches"><span class="vswitch"></span><span class="vlabel">Radio Switch warning</span></label></li>
+						    	<li><label class="switch-label has-warning"><input type="radio" disabled><span class="vswitch" ></span><span class="vlabel">Radio Switch disabled</span></label></li>
+						    </ul>
+						</div>
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="switch-label has-error"><input type="radio" name="radioswitches"><span class="vswitch"></span><span class="vlabel">Radio Switch danger</span></label></li>
+						    	<li><label class="switch-label has-error"><input type="radio" name="radioswitches"><span class="vswitch"></span><span class="vlabel">Radio Switch danger</span></label></li>
+						    	<li><label class="switch-label has-error"><input type="radio" disabled><span class="vswitch" ></span><span class="vlabel">Radio Switch disabled</span></label></li>
+						    </ul>
+						</div>
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="switch-label has-info"><input type="radio" name="radioswitches"><span class="vswitch"></span><span class="vlabel">Radio Switch info</span></label></li>
+						    	<li><label class="switch-label has-info"><input type="radio" name="radioswitches"><span class="vswitch"></span><span class="vlabel">Radio Switch info</span></label></li>
+						    	<li><label class="switch-label has-info"><input type="radio" disabled><span class="vswitch" ></span><span class="vlabel">Radio Switch disabled</span></label></li>
+						    </ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="switch-label"><input type="radio" name="radioswitches"><span class="vswitch"></span><span class="vlabel">Radio Switch Default</span></label></li>
+						    	<li><label class="switch-label"><input type="radio" name="radioswitches"><span class="vswitch"></span><span class="vlabel">Radio Switch Default</span></label></li>
+						    	<li><label class="switch-label"><input type="radio" disabled><span class="vswitch" ></span><span class="vlabel">Radio Switch Default disabled</span></label></li>
+						    </ul>
+						</div>
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="switch-label has-success vswitch-sm"><input type="radio" name="radioswitches"><span class="vswitch"></span><span class="vlabel">Radio Switch success Small</span></label></li>
+						    	<li><label class="switch-label has-success vswitch-sm"><input type="radio" name="radioswitches"><span class="vswitch"></span><span class="vlabel">Radio Switch success Small</span></label></li>
+						    	<li><label class="switch-label has-success vswitch-sm"><input type="radio" disabled><span class="vswitch" ></span><span class="vlabel">Radio Switch disabled Small</span></label></li>
+						    </ul>
+						</div>
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="switch-label has-success vswitch-lg"><input type="radio" name="radioswitches"><span class="vswitch"></span><span class="vlabel">Radio Switch success Large</span></label></li>
+						    	<li><label class="switch-label has-success vswitch-lg"><input type="radio" name="radioswitches"><span class="vswitch"></span><span class="vlabel">Radio Switch success Large</span></label></li>
+						    	<li><label class="switch-label has-success vswitch-lg"><input type="radio" disabled><span class="vswitch" ></span><span class="vlabel">Radio Switch disabled Large</span></label></li>
+						    </ul>
+						</div>
+					</div>
+					<h3>Alternate Switches</h3>
+					<div class="row">
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="switch-label switch2"><input type="radio" name="radioswitches2"><span class="vswitch"></span><span class="vlabel">Radio Switch</span></label></li>
+						    	<li><label class="switch-label switch2"><input type="radio" name="radioswitches2"><span class="vswitch"></span><span class="vlabel">Radio Switch</span></label></li>
+						    	<li><label class="switch-label switch2"><input type="radio" disabled><span class="vswitch" ></span><span class="vlabel">Radio Switch disabled</span></label></li>
+						    </ul>
+						</div>
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="switch-label has-success vswitch-sm switch2"><input type="radio" name="radioswitches2"><span class="vswitch"></span><span class="vlabel">Radio Switch success</span></label></li>
+						    	<li><label class="switch-label has-success vswitch-sm switch2"><input type="radio" name="radioswitches2"><span class="vswitch"></span><span class="vlabel">Radio Switch success</span></label></li>
+						    	<li><label class="switch-label has-success vswitch-sm switch2"><input type="radio" disabled><span class="vswitch" ></span><span class="vlabel">Radio Switch disabled</span></label></li>
+						    </ul>
+						</div>
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="switch-label has-warning vswitch-lg switch2"><input type="radio" name="radioswitches2"><span class="vswitch"></span><span class="vlabel">Radio Switch warning</span></label></li>
+						    	<li><label class="switch-label has-warning vswitch-lg switch2"><input type="radio" name="radioswitches2"><span class="vswitch"></span><span class="vlabel">Radio Switch warning</span></label></li>
+						    	<li><label class="switch-label has-warning vswitch-lg switch2"><input type="radio" disabled><span class="vswitch" ></span><span class="vlabel">Radio Switch disabled</span></label></li>
+						    </ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="switch-label switch2"><input type="radio" name="radioswitches2"><span class="vswitch"></span><span class="vlabel">Radio Switch</span></label></li>
+						    	<li><label class="switch-label switch2"><input type="radio" name="radioswitches2"><span class="vswitch"></span><span class="vlabel">Radio Switch</span></label></li>
+						    	<li><label class="switch-label switch2"><input type="radio" disabled><span class="vswitch" ></span><span class="vlabel">Radio Switch disabled</span></label></li>
+						    </ul>
+						</div>
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="switch-label has-success switch2"><input type="radio" name="radioswitches2"><span class="vswitch"></span><span class="vlabel">Radio Switch success</span></label></li>
+						    	<li><label class="switch-label has-success switch2"><input type="radio" name="radioswitches2"><span class="vswitch"></span><span class="vlabel">Radio Switch success</span></label></li>
+						    	<li><label class="switch-label has-success switch2"><input type="radio" disabled><span class="vswitch" ></span><span class="vlabel">Radio Switch disabled</span></label></li>
+						    </ul>
+						</div>
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="switch-label has-warning switch2"><input type="radio" name="radioswitches2"><span class="vswitch"></span><span class="vlabel">Radio Switch warning</span></label></li>
+						    	<li><label class="switch-label has-warning switch2"><input type="radio" name="radioswitches2"><span class="vswitch"></span><span class="vlabel">Radio Switch warning</span></label></li>
+						    	<li><label class="switch-label has-warning switch2"><input type="radio" disabled><span class="vswitch" ></span><span class="vlabel">Radio Switch disabled</span></label></li>
+						    </ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="switch-label has-error switch2"><input type="radio" name="radioswitches2"><span class="vswitch"></span><span class="vlabel">Radio Switch danger</span></label></li>
+						    	<li><label class="switch-label has-error switch2"><input type="radio" name="radioswitches2"><span class="vswitch"></span><span class="vlabel">Radio Switch danger</span></label></li>
+						    	<li><label class="switch-label has-error switch2"><input type="radio" disabled><span class="vswitch" ></span><span class="vlabel">Radio Switch disabled</span></label></li>
+						    </ul>
+						</div>
+						<div class="col-sm-4">
+						    <ul class="list-unstyled">
+						    	<li><label class="switch-label has-info switch2"><input type="radio" name="radioswitches2"><span class="vswitch"></span><span class="vlabel">Radio Switch info</span></label></li>
+						    	<li><label class="switch-label has-info switch2"><input type="radio" name="radioswitches2"><span class="vswitch"></span><span class="vlabel">Radio Switch info</span></label></li>
+						    	<li><label class="switch-label has-info"><input type="radio" disabled><span class="vswitch" ></span><span class="vlabel">Radio Switch disabled</span></label></li>
+						    </ul>
+						</div>
+					</div>
+
+					<h3>Buttons</h3>
+					<div class="form-group">
+					    <button class="btn btn-custom btn-primary">Primary</button>
+					    <button class="btn btn-custom btn-primary btn-raised">Raised</button>
+					    <button class="btn btn-custom btn-primary" disabled="">Disabled</button>
+					</div>
+					    
+					
+				</form>
+
+			</div>
+
+		</div>
+		<div class="col">
+
+			<div class="card p-g mb-g">
+				
+				<form>
+				  <div class="form-group">
+				    <label for="exampleInputEmail1">Email address</label>
+				    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+				    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleInputPassword1">Password</label>
+				    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleSelect1">Example select</label>
+				    <select class="form-control" id="exampleSelect1">
+				      <option>1</option>
+				      <option>2</option>
+				      <option>3</option>
+				      <option>4</option>
+				      <option>5</option>
+				    </select>
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleSelect2">Example multiple select</label>
+				    <select multiple class="form-control" id="exampleSelect2">
+				      <option>1</option>
+				      <option>2</option>
+				      <option>3</option>
+				      <option>4</option>
+				      <option>5</option>
+				    </select>
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleTextarea">Example textarea</label>
+				    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleInputFile">File input</label>
+				    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+				    <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+				  </div>
+				  <fieldset class="form-group">
+				    <legend>Radio buttons</legend>
+				    <div class="form-check">
+				      <label class="form-check-label">
+				        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+				        Option one is this and that&mdash;be sure to include why it's great
+				      </label>
+				    </div>
+				    <div class="form-check">
+				    <label class="form-check-label">
+				        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+				        Option two can be something else and selecting it will deselect option one
+				      </label>
+				    </div>
+				    <div class="form-check disabled">
+				    <label class="form-check-label">
+				        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+				        Option three is disabled
+				      </label>
+				    </div>
+				  </fieldset>
+				  <div class="form-check">
+				    <label class="form-check-label">
+				      <input type="checkbox" class="form-check-input">
+				      Check me out
+				    </label>
+				  </div>
+				  <button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+
+			</div>
+
+			<div class="card p-g mb-g">
+				
+				<div class="form-group row">
+				  <label for="example-text-input" class="col-2 col-form-label">Text</label>
+				  <div class="col-10">
+				    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
+				  </div>
+				</div>
+				<div class="form-group row">
+				  <label for="example-search-input" class="col-2 col-form-label">Search</label>
+				  <div class="col-10">
+				    <input class="form-control" type="search" value="How do I shoot web" id="example-search-input">
+				  </div>
+				</div>
+				<div class="form-group row">
+				  <label for="example-email-input" class="col-2 col-form-label">Email</label>
+				  <div class="col-10">
+				    <input class="form-control" type="email" value="bootstrap@example.com" id="example-email-input">
+				  </div>
+				</div>
+				<div class="form-group row">
+				  <label for="example-url-input" class="col-2 col-form-label">URL</label>
+				  <div class="col-10">
+				    <input class="form-control" type="url" value="https://getbootstrap.com" id="example-url-input">
+				  </div>
+				</div>
+				<div class="form-group row">
+				  <label for="example-tel-input" class="col-2 col-form-label">Telephone</label>
+				  <div class="col-10">
+				    <input class="form-control" type="tel" value="1-(555)-555-5555" id="example-tel-input">
+				  </div>
+				</div>
+				<div class="form-group row">
+				  <label for="example-password-input" class="col-2 col-form-label">Password</label>
+				  <div class="col-10">
+				    <input class="form-control" type="password" value="hunter2" id="example-password-input">
+				  </div>
+				</div>
+				<div class="form-group row">
+				  <label for="example-number-input" class="col-2 col-form-label">Number</label>
+				  <div class="col-10">
+				    <input class="form-control" type="number" value="42" id="example-number-input">
+				  </div>
+				</div>
+				<div class="form-group row">
+				  <label for="example-datetime-local-input" class="col-2 col-form-label">Date and time</label>
+				  <div class="col-10">
+				    <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+				  </div>
+				</div>
+				<div class="form-group row">
+				  <label for="example-date-input" class="col-2 col-form-label">Date</label>
+				  <div class="col-10">
+				    <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+				  </div>
+				</div>
+				<div class="form-group row">
+				  <label for="example-month-input" class="col-2 col-form-label">Month</label>
+				  <div class="col-10">
+				    <input class="form-control" type="month" value="2011-08" id="example-month-input">
+				  </div>
+				</div>
+				<div class="form-group row">
+				  <label for="example-week-input" class="col-2 col-form-label">Week</label>
+				  <div class="col-10">
+				    <input class="form-control" type="week" value="2011-W33" id="example-week-input">
+				  </div>
+				</div>
+				<div class="form-group row">
+				  <label for="example-time-input" class="col-2 col-form-label">Time</label>
+				  <div class="col-10">
+				    <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+				  </div>
+				</div>
+				<div class="form-group row">
+				  <label for="example-color-input" class="col-2 col-form-label">Color</label>
+				  <div class="col-10">
+				    <input class="form-control" type="color" value="#563d7c" id="example-color-input">
+				  </div>
+				</div>
+
+			</div>
+
+			<div class="card p-g mb-g">
+				
+				<form>
+				  <div class="form-group">
+				    <label for="formGroupExampleInput">Example label</label>
+				    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+				  </div>
+				  <div class="form-group">
+				    <label for="formGroupExampleInput2">Another label</label>
+				    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+				  </div>
+				</form>
+
+			</div>
+
+			<div class="card p-g mb-g">
+				
+				<form class="form-inline">
+				  <label class="sr-only" for="inlineFormInput">Name</label>
+				  <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Jane Doe">
+
+				  <label class="sr-only" for="inlineFormInputGroup">Username</label>
+				  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+				    <div class="input-group-addon">@</div>
+				    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+				  </div>
+
+				  <div class="form-check mb-2 mr-sm-2 mb-sm-0">
+				    <label class="form-check-label">
+				      <input class="form-check-input" type="checkbox"> Remember me
+				    </label>
+				  </div>
+
+				  <button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+
+			</div>
+
+			<div class="card p-g mb-g">
+				
+				<form class="form-inline">
+				  <label class="mr-sm-2" for="inlineFormCustomSelect">Preference</label>
+				  <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+				    <option selected>Choose...</option>
+				    <option value="1">One</option>
+				    <option value="2">Two</option>
+				    <option value="3">Three</option>
+				  </select>
+
+				  <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+				    <input type="checkbox" class="custom-control-input">
+				    <span class="custom-control-indicator"></span>
+				    <span class="custom-control-description">Remember my preference</span>
+				  </label>
+
+				  <button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+
+			</div>
+
+			<div class="card p-g mb-g">
+				
+				
+				  <form>
+				    <div class="form-group row">
+				      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+				      <div class="col-sm-10">
+				        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+				      </div>
+				    </div>
+				    <div class="form-group row">
+				      <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+				      <div class="col-sm-10">
+				        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+				      </div>
+				    </div>
+				    <fieldset class="form-group row">
+				      <legend class="col-form-legend col-sm-2">Radios</legend>
+				      <div class="col-sm-10">
+				        <div class="form-check">
+				          <label class="form-check-label">
+				            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+				            Option one is this and that&mdash;be sure to include why it's great
+				          </label>
+				        </div>
+				        <div class="form-check">
+				          <label class="form-check-label">
+				            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+				            Option two can be something else and selecting it will deselect option one
+				          </label>
+				        </div>
+				        <div class="form-check disabled">
+				          <label class="form-check-label">
+				            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+				            Option three is disabled
+				          </label>
+				        </div>
+				      </div>
+				    </fieldset>
+				    <div class="form-group row">
+				      <label class="col-sm-2">Checkbox</label>
+				      <div class="col-sm-10">
+				        <div class="form-check">
+				          <label class="form-check-label">
+				            <input class="form-check-input" type="checkbox"> Check me out
+				          </label>
+				        </div>
+				      </div>
+				    </div>
+				    <div class="form-group row">
+				      <div class="offset-sm-2 col-sm-10">
+				        <button type="submit" class="btn btn-primary">Sign in</button>
+				      </div>
+				    </div>
+				  </form>
+				
+
+			</div>
+
+			<div class="card p-g mb-g">
+
+				
+				  <form>
+				    <div class="form-group row">
+				      <label for="lgFormGroupInput" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
+				      <div class="col-sm-10">
+				        <input type="email" class="form-control form-control-lg" id="lgFormGroupInput" placeholder="you@example.com">
+				      </div>
+				    </div>
+				    <div class="form-group row">
+				      <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+				      <div class="col-sm-10">
+				        <input type="email" class="form-control form-control-sm" id="smFormGroupInput" placeholder="you@example.com">
+				      </div>
+				    </div>
+				  </form>
+				
+				
+			</div>
+
+			<div class="card p-g mb-g">
+				
+				<div class="alert alert-primary">
+					Default (stacked)
+					By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with .form-check.
+				</div>
+
+				<div class="form-check">
+				  <label class="form-check-label">
+				    <input class="form-check-input" type="checkbox" value="">
+				    Option one is this and that&mdash;be sure to include why it's great
+				  </label>
+				</div>
+				<div class="form-check disabled">
+				  <label class="form-check-label">
+				    <input class="form-check-input" type="checkbox" value="" disabled>
+				    Option two is disabled
+				  </label>
+				</div>
+
+				<div class="form-check">
+				  <label class="form-check-label">
+				    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+				    Option one is this and that&mdash;be sure to include why it's great
+				  </label>
+				</div>
+				<div class="form-check">
+				  <label class="form-check-label">
+				    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+				    Option two can be something else and selecting it will deselect option one
+				  </label>
+				</div>
+				<div class="form-check disabled">
+				  <label class="form-check-label">
+				    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+				    Option three is disabled
+				  </label>
+				</div>
+
+			</div>
+
+			<div class="card p-g mb-g">
+				
+				<div class="alert alert-primary">
+					Group checkboxes or radios on the same horizontal row by adding .form-check-inline to any .form-check.
+				</div>
+
+				<div class="form-check form-check-inline">
+				  <label class="form-check-label">
+				    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> 1
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+				  <label class="form-check-label">
+				    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> 2
+				  </label>
+				</div>
+				<div class="form-check form-check-inline disabled">
+				  <label class="form-check-label">
+				    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled> 3
+				  </label>
+				</div>
+
+				<div class="form-check form-check-inline">
+				  <label class="form-check-label">
+				    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+				  <label class="form-check-label">
+				    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+				  </label>
+				</div>
+				<div class="form-check form-check-inline disabled">
+				  <label class="form-check-label">
+				    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled> 3
+				  </label>
+				</div>
+
+			</div>
+
+			<div class="card p-g mb-g">
+				
+				<h3>
+					Static controls
+					<small>When you need to place plain text next to a form label within a form, use the .form-control-static class on an element of your choice.</small>
+				</h3>
+				<form>
+				  <div class="form-group row">
+				    <label class="col-sm-2 col-form-label">Email</label>
+				    <div class="col-sm-10">
+				      <p class="form-control-static">email@example.com</p>
+				    </div>
+				  </div>
+				  <div class="form-group row">
+				    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+				    <div class="col-sm-10">
+				      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+				    </div>
+				  </div>
+				</form>
+
+				<br><br>
+
+				<form class="form-inline">
+				  <div class="form-group">
+				    <label class="sr-only">Email</label>
+				    <p class="form-control-static">email@example.com</p>
+				  </div>
+				  <div class="form-group mx-sm-3">
+				    <label for="inputPassword2" class="sr-only">Password</label>
+				    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+				  </div>
+				  <button type="submit" class="btn btn-primary">Confirm identity</button>
+				</form>
+
+				<h4>
+					disabled states
+				</h4>
+
+				<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+			</div>
+
+			<div class="card p-g mb-g">
+				
+				<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
+				<input class="form-control" type="text" placeholder="Default input">
+				<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
+				<select class="form-control form-control-lg">
+				  <option>Large select</option>
+				</select>
+				<select class="form-control">
+				  <option>Default select</option>
+				</select>
+				<select class="form-control form-control-sm">
+				  <option>Small select</option>
+				</select>
+			</div>
+
+			<div class="card p-g mb-g">
+				<h3>help block</h3>
+				<label for="inputPassword5">Password</label>
+				<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+				<p id="passwordHelpBlock" class="form-text text-muted">
+				  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+				</p>
+
+				<h3>
+					Inline
+					<small>
+						Inline text can use any typical inline HTML element (be it a or something else).
+					</small>
+				</h3>
+				<form class="form-inline">
+				  <div class="form-group">
+				    <label for="inputPassword4">Password</label>
+				    <input type="password" id="inputPassword4" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+				    <small id="passwordHelpInline" class="text-muted">
+				      Must be 8-20 characters long.
+				    </small>
+				  </div>
+				</form>
+			</div>
+
+			<div class="card p-g mb-g">
+				<h3>
+					Defining states
+				</h3>
+				<div class="form-group has-success">
+				  <label class="form-control-label" for="inputSuccess1">Input with success</label>
+				  <input type="text" class="form-control form-control-success" id="inputSuccess1">
+				  <div class="form-control-feedback">Success! You've done it.</div>
+				  <small class="form-text text-muted">Example help text that remains unchanged.</small>
+				</div>
+				<div class="form-group has-warning">
+				  <label class="form-control-label" for="inputWarning1">Input with warning</label>
+				  <input type="text" class="form-control form-control-warning" id="inputWarning1">
+				  <div class="form-control-feedback">Shucks, check the formatting of that and try again.</div>
+				  <small class="form-text text-muted">Example help text that remains unchanged.</small>
+				</div>
+				<div class="form-group has-danger">
+				  <label class="form-control-label" for="inputDanger1">Input with danger</label>
+				  <input type="text" class="form-control form-control-danger" id="inputDanger1">
+				  <div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
+				  <small class="form-text text-muted">Example help text that remains unchanged.</small>
+				</div>
+
+				<h4>
+					Horizontal
+				</h4>
+				
+				  <form>
+				    <div class="form-group row has-success">
+				      <label for="inputHorizontalSuccess" class="col-sm-2 col-form-label">Email</label>
+				      <div class="col-sm-10">
+				        <input type="email" class="form-control form-control-success" id="inputHorizontalSuccess" placeholder="name@example.com">
+				        <div class="form-control-feedback">Success! You've done it.</div>
+				        <small class="form-text text-muted">Example help text that remains unchanged.</small>
+				      </div>
+				    </div>
+				    <div class="form-group row has-warning">
+				      <label for="inputHorizontalWarning" class="col-sm-2 col-form-label">Email</label>
+				      <div class="col-sm-10">
+				        <input type="email" class="form-control form-control-warning" id="inputHorizontalWarning" placeholder="name@example.com">
+				        <div class="form-control-feedback">Shucks, check the formatting of that and try again.</div>
+				        <small class="form-text text-muted">Example help text that remains unchanged.</small>
+				      </div>
+				    </div>
+				    <div class="form-group row has-danger">
+				      <label for="inputHorizontalDnger" class="col-sm-2 col-form-label">Email</label>
+				      <div class="col-sm-10">
+				        <input type="email" class="form-control form-control-danger" id="inputHorizontalDnger" placeholder="name@example.com">
+				        <div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
+				        <small class="form-text text-muted">Example help text that remains unchanged.</small>
+				      </div>
+				    </div>
+				  </form>
+
+				  <div class="form-check has-success">
+					  <label class="form-check-label">
+					    <input type="checkbox" class="form-check-input" id="checkboxSuccess" value="option1">
+					    Checkbox with success
+					  </label>
+					</div>
+					<div class="form-check has-warning">
+					  <label class="form-check-label">
+					    <input type="checkbox" class="form-check-input" id="checkboxWarning" value="option1">
+					    Checkbox with warning
+					  </label>
+					</div>
+					<div class="form-check has-danger">
+					  <label class="form-check-label">
+					    <input type="checkbox" class="form-check-input" id="checkboxDanger" value="option1">
+					    Checkbox with danger
+					  </label>
+					</div>
+				
+			</div>
+
+			<div class="card p-g mb-g">
+				<h3>
+					Custom
+				</h3>
+				<label class="custom-control custom-checkbox">
+				  <input type="checkbox" class="custom-control-input">
+				  <span class="custom-control-indicator"></span>
+				  <span class="custom-control-description">Check this custom checkbox</span>
+				</label>
+				<label class="custom-control custom-radio">
+				  <input id="radio1" name="radio" type="radio" class="custom-control-input">
+				  <span class="custom-control-indicator"></span>
+				  <span class="custom-control-description">Toggle this custom radio</span>
+				</label>
+				<label class="custom-control custom-radio">
+				  <input id="radio2" name="radio" type="radio" class="custom-control-input">
+				  <span class="custom-control-indicator"></span>
+				  <span class="custom-control-description">Or toggle this other custom radio</span>
+				</label>
+				<label class="custom-control custom-checkbox">
+				  <input type="checkbox" class="custom-control-input" disabled>
+				  <span class="custom-control-indicator"></span>
+				  <span class="custom-control-description">Check this custom checkbox</span>
+				</label>
+
+				<label class="custom-control custom-radio">
+				  <input id="radio3" name="radioDisabled" type="radio" class="custom-control-input" disabled>
+				  <span class="custom-control-indicator"></span>
+				  <span class="custom-control-description">Toggle this custom radio</span>
+				</label>
+
+				<div class="form-group has-success">
+				  <label class="custom-control custom-checkbox">
+				    <input type="checkbox" class="custom-control-input">
+				    <span class="custom-control-indicator"></span>
+				    <span class="custom-control-description">Check this custom checkbox</span>
+				  </label>
+				</div>
+				<div class="form-group has-warning">
+				  <label class="custom-control custom-checkbox">
+				    <input type="checkbox" class="custom-control-input">
+				    <span class="custom-control-indicator"></span>
+				    <span class="custom-control-description">Check this custom checkbox</span>
+				  </label>
+				</div>
+				<div class="form-group has-danger mb-0">
+				  <label class="custom-control custom-checkbox">
+				    <input type="checkbox" class="custom-control-input">
+				    <span class="custom-control-indicator"></span>
+				    <span class="custom-control-description">Check this custom checkbox</span>
+				  </label>
+				</div>
+
+				<div class="custom-controls-stacked">
+				  <label class="custom-control custom-radio">
+				    <input id="radioStacked1" name="radio-stacked" type="radio" class="custom-control-input">
+				    <span class="custom-control-indicator"></span>
+				    <span class="custom-control-description">Toggle this custom radio</span>
+				  </label>
+				  <label class="custom-control custom-radio">
+				    <input id="radioStacked2" name="radio-stacked" type="radio" class="custom-control-input">
+				    <span class="custom-control-indicator"></span>
+				    <span class="custom-control-description">Or toggle this other custom radio</span>
+				  </label>
+				</div>
+
+				<select class="custom-select">
+				  <option selected>Open this select menu</option>
+				  <option value="1">One</option>
+				  <option value="2">Two</option>
+				  <option value="3">Three</option>
+				</select>
+
+				<label class="custom-file">
+				  <input type="file" id="file" class="custom-file-input">
+				  <span class="custom-file-control"></span>
+				</label>
+			</div>
+
+		</div>
+	</div>
+
+{{/inline}}
+
+{{#*inline "scripts-block"}}{{/inline}}
+
+{{/layouts/main}}

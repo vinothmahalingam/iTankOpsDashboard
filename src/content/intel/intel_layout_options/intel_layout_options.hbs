@@ -1,0 +1,358 @@
+{{#> 
+	layouts/main 
+	title="Layout Options" 
+	pagename="intel_layout_options" 
+	category_1="NextGen Intel" 
+	category_2="Theme Settings" 
+	heading="Theme Settings: <span class='fw-400'>Layout Options</span>" 
+	pagedescription="Over 36 layout possibilities and over <span class='fw-400 text-primary'>285</span> different <span class='fw-400 text-primary'>combinations</span>"
+}}
+
+{{#*inline "head-block"}}
+<link rel="stylesheet" media="screen, print" href="css/theme-demo.min.css">
+{{/inline}}
+
+{{#*inline "content-block"}}
+
+<div class="container card border-radius-0 p-0 border-top-0">
+	
+	<table class="table table-hover m-0">
+	    <thead>
+	        <tr class="bg-fusion-300">
+				<th class="pt-2 pb-2 pl-2 text-center">
+	                <span class="m-0 fw-500 text-white">Try</span>
+	            </th>
+	            <th class="pt-2 pb-2">
+	                <span class="m-0 fw-500 text-white">Function</span>
+	            </th>
+	            <th class="pt-2 pb-2">
+	                <span class="m-0 fw-500 text-white">Description <small class="m-0 d-inline text-white">(what it does)</small> </span>
+	            </th>
+				<th class="pt-2 pb-2">
+	                <span class="m-0 fw-500 text-white">Supported</span>
+	            </th>
+	            <th class="pt-2 pb-2">
+	                <span class="m-0 fw-500 text-white">Incompatibility</span>
+	            </th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr>
+	            <th scope="row" style="width:80px">
+	                <a href="javascript:void(0);" class="btn btn-switch m-0" data-action="toggle" data-class="header-function-fixed"></a>
+	            </th>
+	            <td>
+	                <strong>Fixed Header</strong>
+	            </td>
+	            <td class="fs-sm">
+	            	header is in a fixed position at all times, effecting mobile & desktop view
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="header-function-fixed"> </code>
+	            		<br>
+	            		<i><strong>Note:</strong> when <code>.nav-function-top</code> you must first enable <code>.nav-function-fixed</code></i>
+	            	</span>
+	            </td>
+	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
+	            </td>
+	            <td><code>none</code>
+	            </td>
+	        </tr>
+	        <tr>
+	            <th scope="row" style="width:80px">
+	                <a href="javascript:void(0);" class="btn btn-switch m-0" data-action="toggle" data-class="nav-function-fixed"></a>
+	            </th>
+	            <td>
+	                <strong>Fixed Navigation</strong>
+	            </td>
+	            <td class="fs-sm">left panel position becomes fixed, activates <a href="slimscroll.html" class="fw-500">slimScroll</a> plugin
+					<span class="text-muted d-block">
+	            		<code>&lt;body class="nav-function-fixed"> </code>
+	            	</span>
+	            </td>
+	            <td><span class="badge badge-warning fw-500">DESKTOP</span> <span class="badge bg-warning-800 fw-500">TABLETS</span>
+	            </td>
+	            <td><code>none</code>
+	            </td>
+	        </tr>
+	        <tr>
+	            <th scope="row" style="width:80px">
+	                <a href="javascript:void(0);" class="btn btn-switch m-0" data-action="toggle" data-class="nav-function-minify"></a>
+	            </th>
+	            <td>
+	                <strong>Minify Navigation</strong>
+	            </td>
+	            <td class="fs-sm">navigation items are hidden and collapsed. Only visible portion are the icons. Hovering over icon will reveal child elements.
+					<span class="text-muted d-block">
+	            		<code>&lt;body class="nav-function-minify"> </code>
+	            	</span>
+	            </td>
+	            <td><span class="badge badge-warning fw-500">DESKTOP</span> <span class="badge bg-warning-800 fw-500">TABLETS</span>
+	            </td>
+	            <td><code>none</code>
+	            </td>
+	        </tr>
+	        <tr>
+	            <th scope="row" style="width:80px">
+	                <a href="javascript:void(0);" class="btn btn-switch m-0" data-action="toggle" data-class="nav-function-hidden"></a>
+	            </th>
+	            <td>
+	                <strong>Hide Navigation</strong>
+	            </td>
+	            <td class="fs-sm">entire navigation pane shifts to off screen. This is useful for large map applications. Navigation is revealed when mouse touches the left portion of the screen
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="nav-function-hidden"> </code>
+	            	</span>
+	            </td>
+	            <td><span class="badge badge-warning fw-500">DESKTOP</span> <span class="badge bg-warning-800 fw-500">TABLETS</span>
+	            </td>
+	            <td>Top Navigation
+	            </td>
+	        </tr>
+	        <tr>
+	            <th scope="row" style="width:80px">
+	                <a href="javascript:void(0);" class="btn btn-switch m-0" data-action="toggle" data-class="nav-function-top"></a>
+	            </th>
+	            <td>
+	                <strong>Top Navigation</strong>
+	            </td>
+	            <td class="fs-sm">otherwise known as horizontal navigation. The entire navigation pane shifts to the top. You will need to hover over icons to navigate to other menu items
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="nav-function-top"> </code>
+	            	</span>
+	            </td>
+	            <td><span class="badge badge-warning fw-500">DESKTOP</span> <span class="badge bg-warning-800 fw-500">TABLETS</span>
+	            </td>
+	            <td><code>none</code>
+	            </td>
+	        </tr>
+	        <tr>
+	            <th scope="row" style="width:80px">
+	                <a href="javascript:void(0);" class="btn btn-switch m-0" data-action="toggle" data-class="mod-main-boxed"></a>
+	            </th>
+	            <td>
+	                <strong>Boxed Layout</strong>
+	            </td>
+	            <td class="fs-sm">minimize layout by inserting into a container. Some classes are not compatible with this change, however it does provide lots of whitespace
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-main-boxed"> </code>
+	            	</span>
+	            </td>
+	            <td><span class="badge badge-warning fw-500">DESKTOP</span>
+	            </td>
+	            <td>Fixed Navigation
+	            </td>
+	        </tr>
+	        <tr>
+	            <th scope="row" style="width:80px">
+	                <a href="javascript:void(0);" class="btn btn-switch m-0" data-action="toggle" data-class="nav-mobile-push"></a>
+	            </th>
+	            <td>
+	                <strong>Push Content</strong>
+	            </td>
+	            <td class="fs-sm">content pushed on menu reveal. Menu will be treated as a 'physical object' that will push the content aside.
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="nav-mobile-push"> </code>
+	            	</span>
+	            </td>
+	            <td><span class="badge badge-success fw-500">MOBILE</span> 
+	            </td>
+	            <td>Off-Canvas
+	            </td>
+	        </tr>
+	        <tr>
+	            <th scope="row" style="width:80px">
+	                <a href="javascript:void(0);" class="btn btn-switch m-0" data-action="toggle" data-class="nav-mobile-no-overlay"></a>
+	            </th>
+	            <td>
+	                <strong>No Overlay</strong>
+	            </td>
+	            <td class="fs-sm">removes mesh on menu reveal
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="nav-mobile-no-overlay"> </code>
+	            	</span>
+	            </td>
+	            <td><span class="badge badge-success fw-500">MOBILE</span> 
+	            </td>
+	            <td>Off-Canvas
+	            </td>
+	        </tr>
+	        <tr>
+	            <th scope="row" style="width:80px">
+	                <a href="javascript:void(0);" class="btn btn-switch m-0" data-action="toggle" data-class="nav-mobile-slide-out"></a>
+	            </th>
+	            <td>
+	                <strong>Off-Canvas <sup>beta</sup></strong>
+	            </td>
+	            <td class="fs-sm">content overlaps menu
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="nav-mobile-slide-out"> </code>
+	            	</span>
+	            </td>
+	            <td><span class="badge badge-success fw-500">MOBILE</span> 
+	            </td>
+	            <td>Push Content, No Overlay
+	            </td>
+	        </tr>
+	        <tr>
+	            <th scope="row" style="width:80px">
+	                <a href="javascript:void(0);" class="btn btn-switch m-0" data-action="toggle" data-class="mod-bigger-font"></a>
+	            </th>
+	            <td>
+	                <strong>Bigger Font</strong>
+	            </td>
+	            <td class="fs-sm">fonts are bigger for readability
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-bigger-font"> </code>
+	            	</span>
+	            </td>
+	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
+	            </td>
+	            <td><code>none</code>
+	            </td>
+	        </tr>
+	        <tr>
+	            <th scope="row" style="width:80px">
+	                <a href="javascript:void(0);" class="btn btn-switch m-0" data-action="toggle" data-class="mod-high-contrast"></a>
+	            </th>
+	            <td>
+	                <strong>High Contrast Text</strong>
+	            </td>
+	            <td class="fs-sm">grey fonts are reduced
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-high-contrast"> </code>
+	            	</span>
+	            </td>
+	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
+	            </td>
+	            <td><code>none</code>
+	            </td>
+	        </tr> 
+	        <tr>
+	            <th scope="row" style="width:80px">
+	                <a href="javascript:void(0);" class="btn btn-switch m-0" data-action="toggle" data-class="mod-color-blind"></a>
+	            </th>
+	            <td>
+	                <strong>Daltonism <sup>beta</sup></strong>
+	            </td>
+	            <td class="fs-sm">color vision deficiency
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-color-blind"> </code>
+	            	</span>
+	            </td>
+	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
+	            </td>
+	            <td><code>none</code>
+	            </td>
+	        </tr>    
+	        <tr>
+	            <th scope="row" style="width:80px">
+	                <a href="javascript:void(0);" class="btn btn-switch m-0" data-action="toggle" data-class="mod-pace-custom"></a>
+	            </th>
+	            <td>
+	                <strong>Preloader Inside</strong>
+	            </td>
+	            <td class="fs-sm">preloader will be inside content
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-pace-custom"> </code>
+	            	</span>
+	            </td>
+	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
+	            </td>
+	            <td><code>none</code>
+	            </td>
+	        </tr>
+	        <tr>
+	            <th scope="row" style="width:80px">
+	                <a href="javascript:void(0);" class="btn btn-switch m-0" data-action="toggle" data-class="mod-clean-page-bg"></a>
+	            </th>
+	            <td>
+	                <strong>Clean Page Background</strong>
+	            </td>
+	            <td class="fs-sm">preloader will be inside content
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-clean-page-bg"> </code>
+	            	</span>
+	            </td>
+	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
+	            </td>
+	            <td><code>none</code>
+	            </td>
+	        </tr>
+	        <tr>
+	            <th scope="row" style="width:80px">
+	                <a href="javascript:void(0);" class="btn btn-switch m-0" data-action="toggle" data-class="mod-hide-nav-icons"></a>
+	            </th>
+	            <td>
+	                <strong>Hide Navigation Icons</strong>
+	            </td>
+	            <td class="fs-sm">hides navigation icons for a slick and clean look
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-hide-nav-icons"> </code>
+	            	</span>
+	            </td>
+	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
+	            </td>
+	            <td><code>none</code>
+	            </td>
+	        </tr>
+	        <tr>
+	            <th scope="row" style="width:80px">
+	                <a href="javascript:void(0);" class="btn btn-switch m-0" data-action="toggle" data-class="mod-disable-animation"></a>
+	            </th>
+	            <td>
+	                <strong>Disable CSS Animation</strong>
+	            </td>
+	            <td class="fs-sm">hides info card in the navigation page for visible spacing
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-disable-animation"> </code>
+	            	</span>
+	            </td>
+	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
+	            </td>
+	            <td><code>none</code>
+	            </td>
+	        </tr>
+	        <tr>
+	            <th scope="row" style="width:80px">
+	                <a href="javascript:void(0);" class="btn btn-switch m-0" data-action="toggle" data-class="mod-hide-info-card"></a>
+	            </th>
+	            <td>
+	                <strong>Hide Info Card</strong>
+	            </td>
+	            <td class="fs-sm">invisible navigation icons
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-disable-animation"> </code>
+	            	</span>
+	            </td>
+	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
+	            </td>
+	            <td><code>none</code>
+	            </td>
+	        </tr>
+	        <tr>
+	            <th scope="row" style="width:80px">
+	                <a href="javascript:void(0);" class="btn btn-switch m-0" data-action="toggle" data-class="mod-lean-page-header"></a>
+	            </th>
+	            <td>
+	                <strong>Lean Page Header</strong>
+	            </td>
+	            <td class="fs-sm">a less prominent header
+	            	<span class="text-muted d-block">
+	            		<code>&lt;body class="mod-lean-page-header"> </code>
+	            	</span>
+	            </td>
+	            <td><span class="badge badge-primary fw-500">GLOBAL</span>
+	            </td>
+	            <td><code>none</code>
+	            </td>
+	        </tr>
+	    </tbody>
+	</table>
+ 
+</div>
+
+{{/inline}}
+
+{{#*inline "scripts-block"}}{{/inline}}
+
+{{/layouts/main}}

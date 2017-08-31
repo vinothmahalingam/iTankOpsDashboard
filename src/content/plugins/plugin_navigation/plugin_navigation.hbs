@@ -1,0 +1,570 @@
+{{#> 
+	layouts/main 
+	title="Navigation" 
+	pagename="plugin_navigation" 
+	category_1="Core Plugins" 
+	heading="Navigation <sup class='badge badge-warning fw-300 fs-sm'>core-plugin</sup>" 
+	pagedescription="Application Navigation"
+}}
+
+{{#*inline "head-block"}}
+<link rel="stylesheet" media="screen, print" href="css/theme-demo.min.css">
+{{/inline}}
+
+{{#*inline "content-block"}}
+
+<!-- card -->
+<div class="container card p-3 mrg-b-gutter d-block">
+
+    <h3>
+        Action <span class="fw-300">buttons</span> 
+        <small>
+            Allows you to
+        </small>
+    </h3>
+
+    <div class="row">
+
+		<!-- build controled menu -->
+		<div class="col-sm-12">
+
+			<div class="card d-block bg-faded p-3">
+
+				<form>
+					<div class="row">
+						<div class="form-group col-sm-6">
+							<label for="nav_animation">Animation</label>
+							<select class="custom-select w-100" id="nav_animation">
+								<option value="easeOutExpo">easeOutExpo</option>
+								<option value="easeInExpo">easeInExpo</option>
+								<option value="easeInOutBounce">easeInOutBounce</option>
+								<option value="easeOutBounce">easeOutBounce</option>
+								<option value="easeInBounce">easeInBounce</option>
+								<option value="easeInOutElastic">easeInOutElastic</option>
+								<option value="easeOutElastic">easeOutElastic</option>
+								<option value="easeInElastic">easeInElastic</option>
+								<option value="easeInOutBack">easeInOutBack</option>
+								<option value="easeOutBack">easeOutBack</option>
+								<option value="easeInOutCirc">easeInOutCirc</option>
+								<option value="easeOutCirc">easeOutCirc</option>
+								<option value="easeInOutExpo">easeInOutExpo</option>
+								<option value="easeInOutQuint">easeInOutQuint</option>
+								<option value="easeOutQuint">easeOutQuint</option>
+								<option value="easeInQuint">easeInQuint</option>
+								<option value="easeInOutQuart">easeInOutQuart</option>
+								<option value="easeOutQuart">easeOutQuart</option>
+								<option value="easeInQuart">easeInQuart</option>
+								<option value="easeInOutCubic">easeInOutCubic</option>
+								<option value="easeOutCubic">easeOutCubic</option>
+								<option value="easeInCubic">easeInCubic</option>
+								<option value="easeInOutQuad">easeInOutQuad</option>
+								<option value="easeInQuad">easeInQuad</option>
+								<option value="easeInOutSine">easeInOutSine</option>
+								<option value="easeOutSine">easeOutSine</option>
+								<option value="easeInSine">easeInSine</option>
+							</select>
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="nav_openedSign">Collapse Sign</label>
+							<select class="custom-select w-100" id="nav_openedSign">
+								<option value="-">Default icon...</option>
+								<option value="[-]">[-]</option>
+								<option value="<i class='icon icon-chevron-up'></i>">icon-chevron-down</option>
+							</select>
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="nav_speed">Speed</label>
+							<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+								<input type="text" class="form-control" id="nav_speed" placeholder="Speed" value="400">
+								<div class="input-group-addon">miliseconds</div>
+							</div>
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="nav_closedSign">Expand Sign</label>
+							<select class="custom-select w-100" id="nav_closedSign">
+								<option value="+">Default icon...</option>
+								<option value="[+]">[+]</option>
+								<option value="<i class='icon icon-chevron-down'></i>">icon-chevron-up</option>
+							</select>
+						</div>
+					</div>
+				</form>
+
+				<div class="d-flex align-items-center">
+					<div class="flex-1">
+						<label for="nav_accordion" class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+							<input type="checkbox" class="custom-control-input" id="nav_accordion" checked="checked">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">Accordion menu</span>
+						</label>
+						<label for="nav_syndicate" class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+							<input type="checkbox" class="custom-control-input" id="nav_syndicate">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">Syndicated structure</span>
+						</label>
+					</div>
+
+					<button id="destroy" class="btn btn-danger btn-w-m"> Destroy Menu </button>
+					<button id="build" class="btn btn-success btn-w-m"> Build Menu </button>
+				</div>
+
+			</div>
+
+		</div>
+		<!-- / build controled menu -->
+
+    	<!-- clean look -->
+    	<div class="col-sm-6">
+
+    		<h6 class="mb-1 mt-4 fw-300">Clean & Compact</h6>
+
+			<ul id="nav-1" class="navigation navigation-compact navigation-clean card border-radius-0 w-100" data-nav-accordion="true">
+				<li>
+					<a href="#"> 
+						<span class="navigation-link-text">Menu Parent </span> 
+						<strong class="dl-ref bg-primary-500">&nbsp;1.0&nbsp;</strong>
+					</a>
+					<ul>
+						<li>
+							<a href="#"> 
+								<span class="navigation-link-text"> Menu Item</span> 
+							</a>
+						</li>
+						<li>
+							<a href="#"> 
+								<span class="navigation-link-text"> Menu Item</span> 
+							</a>
+						</li>
+						<li>
+							<a href="#"> 
+								<span class="navigation-link-text">
+									Menu Item w/ child
+								</span> 
+								<strong class="dl-ref bg-primary-500">&nbsp;1.3&nbsp;</strong>
+							</a>
+							<ul>
+								<li>
+									<a href="#"> 
+										<span class="navigation-link-text">
+											First Child (1.3.1)
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#"> 
+										<span class="navigation-link-text">
+											Second Child (1.3.2)
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#"> 
+										<span class="navigation-link-text">
+											Last child (1.3.3)
+										</span>
+									</a>
+								</li>
+							</ul>		
+						</li>
+					</ul>	
+				</li>
+				<li>
+					<a href="#"> 
+						<span class="navigation-link-text">
+							Menu Parent
+						</span> 
+						<strong class="dl-ref bg-primary-500">&nbsp;2.0&nbsp;</strong>
+					</a>						
+					<ul>
+						<li>
+							<a href="#"> 
+								<span class="navigation-link-text">
+									Menu Item
+								</span> 
+							</a>
+						</li>
+						<li>
+							<a href="#"> 
+								<span class="navigation-link-text">
+									Menu Item
+								</span> 
+							</a>
+						</li>
+						<li>
+							<a href="#"> 
+								<span class="navigation-link-text">
+									Menu Item
+								</span> 
+							</a>
+						</li>
+						<li>
+							<a href="#"> 
+								<span class="navigation-link-text">
+									Menu Item
+								</span> 
+							</a>
+						</li>
+
+					</ul>
+				</li>
+				<li>
+					<a href="#"> 
+						<span class="navigation-link-text">Menu Parent </span> 
+						<strong class="dl-ref bg-primary-500">&nbsp;3.0&nbsp;</strong>
+					</a>
+					<ul>
+						<li>
+							<a href="#"> 
+								<span class="navigation-link-text"> Menu Item</span> 
+							</a>
+						</li>
+						<li>
+							<a href="#"> 
+								<span class="navigation-link-text"> Menu Item</span> 
+							</a>
+						</li>
+						<li>
+							<a href="#"> 
+								<span class="navigation-link-text">
+									Menu Item w/ child
+								</span> 
+								<strong class="dl-ref bg-primary-500">&nbsp;3.3&nbsp;</strong>
+							</a>
+							<ul>
+								<li>
+									<a href="#"> 
+										<span class="navigation-link-text">
+											First Child (3.3.1)
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#"> 
+										<span class="navigation-link-text">
+											Second Child (3.3.2)
+										</span>
+									</a>
+								</li>
+								<li class="disabled">
+									<a href="#"> 
+										<span class="navigation-link-text">
+											Last child (3.3.3)
+										</span>
+									</a>
+								</li>
+							</ul>		
+						</li>
+					</ul>	
+				</li>
+				<li class="disabled">
+					<a href="#"> 
+						<span class="navigation-link-text">
+							Menu Parent (disabled)
+						</span> 
+					</a>
+				</li>
+			</ul>
+
+		</div>
+		<!-- /clean look -->
+
+		<!-- default settings -->
+		<div class="col-sm-6">
+
+			<h6 class="mb-1 mt-4 fw-300">Clean & Bordered</h6>
+
+			<ul id="nav-2" class="navigation navigation-clean navigation-bordered w-100" data-nav-accordion="false">
+				<li>
+					<a href="#" title="Menu Parent" class=""> 
+						<span class="navigation-link-text">Menu Parent </span> 
+						<strong class="dl-ref bg-primary-500">&nbsp;1.0&nbsp;</strong>
+					</a>
+					<ul class="bg-info-800">
+						<li>
+							<a href="#"> 
+								<span class="navigation-link-text"> Menu Item</span> 
+							</a>
+						</li>
+						<li>
+							<a href="#"> 
+								<span class="navigation-link-text"> Menu Item</span> 
+							</a>
+						</li>
+						<li>
+							<a href="#"> 
+								<span class="navigation-link-text">
+									Menu Item w/ child
+								</span> 
+								<strong class="dl-ref bg-primary-500">&nbsp;1.3&nbsp;</strong>
+							</a>
+							<ul class="bg-info-900">
+								<li>
+									<a href="#"> 
+										<span class="navigation-link-text">
+											First Child (1.3.1)
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#"> 
+										<span class="navigation-link-text">
+											Second Child (1.3.2)
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#"> 
+										<span class="navigation-link-text">
+											Last child (1.3.3)
+										</span>
+									</a>
+								</li>
+							</ul>		
+						</li>
+					</ul>	
+				</li>
+				<li>
+					<a href="#" title="Package Info"> 
+						<span class="navigation-link-text">
+							Menu Parent
+						</span> 
+						<strong class="dl-ref bg-primary-500">&nbsp;2.0&nbsp;</strong>
+					</a>						
+					<ul class="bg-info-800">
+						<li>
+							<a href="documentation-and-faq.html"> 
+								<span class="navigation-link-text">
+									Menu Item
+								</span> 
+							</a>
+						</li>
+						<li>
+							<a href="info_package.html"> 
+								<span class="navigation-link-text">
+									Menu Item
+								</span> 
+							</a>
+						</li>
+						<li>
+							<a href="info_app_licensing.html"> 
+								<span class="navigation-link-text">
+									Menu Item
+								</span> 
+							</a>
+						</li>
+						<li>
+							<a href="info_app_flavors.html"> 
+								<span class="navigation-link-text">
+									Menu Item
+								</span> 
+							</a>
+						</li>
+
+					</ul>
+				</li>
+				<li>
+					<a href="#"> 
+						<span class="navigation-link-text">Menu Parent </span> 
+						<strong class="dl-ref bg-primary-500">&nbsp;3.0&nbsp;</strong>
+					</a>
+					<ul class="bg-info-800">
+						<li>
+							<a href="#"> 
+								<span class="navigation-link-text"> Menu Item</span> 
+							</a>
+						</li>
+						<li>
+							<a href="#"> 
+								<span class="navigation-link-text"> Menu Item</span> 
+							</a>
+						</li>
+						<li>
+							<a href="#"> 
+								<span class="navigation-link-text">
+									Menu Item w/ child
+								</span> 
+								<strong class="dl-ref bg-primary-500">&nbsp;3.3&nbsp;</strong>
+							</a>
+							<ul class="bg-info-900">
+								<li>
+									<a href="#"> 
+										<span class="navigation-link-text">
+											First Child (3.3.1)
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#"> 
+										<span class="navigation-link-text">
+											Second Child (3.3.2)
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#"> 
+										<span class="navigation-link-text">
+											Last child (3.3.3)
+										</span>
+									</a>
+								</li>
+							</ul>		
+						</li>
+					</ul>	
+				</li>
+				<li class="disabled">
+					<a href="#"> 
+						<span class="navigation-link-text">
+							Menu Parent (disabled)
+						</span> 
+					</a>
+				</li>
+			</ul>
+			
+		</div>
+		<!-- /default settings -->
+
+	</div>	
+
+</div>
+<!--/ card -->
+
+<!--card -->
+<div class="container card p-3 mrg-b-gutter d-block">
+
+    <h3>
+        Action <span class="fw-300">buttons</span> 
+        <small>
+            Allows you to
+        </small>
+    </h3>
+
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>
+					Classes (optional)
+				</th>
+				<th>
+					Description
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<code>Pace.start</code>
+				</td>
+				<td class="fs-sm">
+					Show the progress bar and start updating. Called automatically if you don't use AMD or CommonJS.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<code>Pace.restart</code>
+				</td>
+				<td class="fs-sm">
+					 Show the progress bar if it's hidden and start reporting the progress from scratch.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<code>Pace.ignore</code>
+				</td>
+				<td class="fs-sm">
+					Expliticly ignore one or more requests, see Tracking below
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h6 class="m-0 mb-1 fw-300">
+		Dependencies
+	</h6>
+
+<pre class="prettyprint p-2 border-0 m-auto m-0 p-0 h-auto">
+&lt;link rel="stylesheet" media="screen, print" href="css/myapp.css">
+&lt;script src="vendor/js/jquery.min.js">&lt;/script>
+&lt;script src="vendor/js/jquery-ui-cust.min.js">&lt;/script>
+&lt;script src="js/app.core-plugins.min.js">&lt;/script></pre>
+
+<h6 class="mt-3 mb-1 fw-300">
+	SCSS path
+</h6>
+
+<pre class="prettyprint p-2 border-0 m-auto m-0 p-0 h-auto">
+developer/.../src/scss/_modules/_nav.scss
+developer/.../src/scss/_modules/_nav-*.scss</pre>
+
+<h6 class="mt-3 mb-1 fw-300">
+	HTML Mock
+</h6>
+
+<pre class="prettyprint p-2 m-0 h-auto border-0">
+&lt;ul id="nav-2" class="navigation" data-nav-accordion="false">
+  &lt;li> &lt;a href="#"> &lt;span class="navigation-link-text"> [text] &lt;/span> &lt;/a>
+    &lt;ul>
+      &lt;li> &lt;a href="#"> &lt;span class="navigation-link-text"> [text] &lt;/span> &lt;/a> &lt;/li>
+      &lt;li> &lt;a href="#"> &lt;span class="navigation-link-text"> [text] &lt;/span> &lt;/a>
+        &lt;ul>
+          &lt;li> &lt;a href="#"> &lt;span class="navigation-link-text"> [text] &lt;/span>  &lt;/a> &lt;/li>
+        &lt;/ul>  
+      &lt;/li>
+    &lt;/ul>
+  &lt;/li>
+&lt;/ul>
+</pre>	
+										
+</div>
+
+			<!--/ card -->
+
+{{/inline}}
+
+{{#*inline "scripts-block"}}
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+<script type="text/javascript">
+
+$("#destroy").hide();
+//$('#pre-nav-1').hide()
+	
+	//$('#nav_accordion').val()
+
+	$("#build").on('click', function () {
+
+		if ( $("#nav_syndicate").is(':checked') ? true : false ) {
+			$("#nav-1, #nav-2").navigation({accordion: $("#nav_accordion").is(':checked') ? true : false, animate: $('#nav_animation').val(), speed: parseInt( $('#nav_speed').val(), 10 ), closedSign:$('#nav_closedSign').val(), openedSign:$('#nav_openedSign').val()}); 
+
+			//$("#app-eventlog").text('$("#nav-1, #nav-2").navigation({ accordion:' + true + ', ' + 'animate:' +  $('#nav_animation').val() + '})')
+
+		} else {
+			$("#nav-1").navigation({accordion: $("#nav_accordion").is(':checked') ? true : false, animate: $('#nav_animation').val(), speed: parseInt( $('#nav_speed').val(), 10 ), closedSign:$('#nav_closedSign').val(), openedSign:$('#nav_openedSign').val()}); 
+			$("#nav-2").navigation({accordion: $("#nav_accordion").is(':checked') ? true : false, animate: $('#nav_animation').val(), speed: parseInt( $('#nav_speed').val(), 10 ), closedSign:$('#nav_closedSign').val(), openedSign:$('#nav_openedSign').val()}); 
+		}
+
+		$("#build").hide();
+		$("#destroy").show();
+		$("#nav_accordion, #nav_animation, #nav_speed, #nav_closedSign, #nav_openedSign, #nav_syndicate").attr('disabled', true);
+
+		//$('#pre-nav-1').show().text( $('#nav-1')[0].innerHTML ).css('max-height', '400px');
+
+/*		$('#pre-nav-1').html(function() {
+			return this.innerHTML.replace(/\t/g, '&nbsp;');
+		});*/
+
+	});
+	$("#destroy").on('click', function () {
+		$("#nav-1").destroy(); 
+		$("#nav-2").destroy();
+		$("#destroy").hide();
+		$("#build").show();
+		$("#nav_accordion, #nav_animation, #nav_speed, #nav_closedSign, #nav_openedSign, #nav_syndicate").removeAttr('disabled');
+
+		//$('#pre-nav-1').text("").hide();
+	});
+
+</script>
+
+{{/inline}}
+
+{{/layouts/main}}

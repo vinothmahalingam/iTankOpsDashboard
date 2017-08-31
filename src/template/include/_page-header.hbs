@@ -1,0 +1,85 @@
+<header id="banner" role="banner">
+		
+	<ul id="hdr-l" class="list-table">
+		<!-- DOC: dropdown / shortcuts -->
+		<li class="hidden-md-down dropdown-icon-menu">
+			<a href="#" class="btn no-ripple" data-action="toggle" data-class="nav-function-hidden" data-toggle="tooltip" data-placement="right" title="HIDDEN">
+				<i class="icon icon-menu"></i>
+			</a>
+			<ul>
+				<li>
+					<a href="#" class="btn no-ripple" data-action="toggle" data-class="nav-function-minify" data-toggle="tooltip" data-placement="right" title="MINIFY">
+						<i class="icon icon-minify-nav"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="btn no-ripple" data-action="toggle" data-class="nav-function-fixed" data-toggle="tooltip" data-placement="right" title="LOCK">
+						<i class="icon icon-lock-nav"></i>
+					</a>
+				</li>
+			</ul>
+		</li>
+		<!-- DOC: mobile button appears during mobile width -->
+		<li class="hidden-lg-up">
+			<a href="#" class="btn" data-action="toggle" data-class="mobile-nav-on">
+				<i class="icon icon-menu"></i>
+			</a>
+		</li>
+		<!-- app search field -->
+		<li class="search">
+			<form class="app-forms hidden-xs-down" role="search" action="search-results.html" autocomplete="off">
+				<i class="fa fa-search d-none"></i>
+				<input type="text" id="search-field" placeholder="Search for anything" class="form-control" tabindex="1">
+				<a href="javascript:void(0);" class="btn-primary btn-search-close no-ripple d-none" data-action="toggle" data-class="mobile-search-on">
+					<i class="fa fa-close"></i>
+				</a>
+			</form>
+		</li>
+	</ul>
+	
+	<ul id="hdr-r" class="list-table">
+		<!-- app settings -->
+		<li class="hidden-md-down">
+			<a href="#" data-action="toggle" data-class="display-right-panel" data-toggle="tooltip" data-placement="left" title="SETTINGS">
+				<i class="icon icon-settings"></i>
+			</a>
+		</li>
+		<!-- activate app search field (mobile) -->
+		<li class="hidden-sm-up">
+			<a href="#" data-action="toggle" data-class="mobile-search-on" data-focus="search-field" title="Search">
+				<i class="icon icon-magnifier"></i>
+			</a>
+		</li>
+		<!-- app shortcuts -->
+		<li>
+			<a href="#" data-toggle="dropdown" id="dropdown-app" title="My Apps" class="no-ripple">
+				<i class="icon icon-my-apps"></i>
+			</a>
+			<div class="dropdown-menu custom-scroll w-auto h-auto" aria-labelledby="dropdown-app">
+				{{> include/_dropdown-app}}
+			</div>
+		</li>
+		<!-- app notification -->
+		<li>
+			<a href="#" data-toggle="dropdown" id="dropdown-notification" title="You got 11 notifications" class="no-ripple">
+				<i class="icon icon-bell"></i>
+				<span class="badge">11</span>
+			</a>
+			<div class="dropdown-menu dropdown-xl p-0 h-auto" aria-labelledby="dropdown-notification">
+				{{> include/_dropdown-notification}}
+			</div>
+		</li>
+		<!-- app user menu -->
+		<li>
+			<a href="#" data-elipsis="xs" data-toggle="dropdown" id="dropdown-menu" title="dr.codex.lantern@nextgenadmin.com" class="no-ripple d-flex align-items-center justify-content-center">
+				<img src="img/avatar-sunny.png" class="profile-image rounded-circle" alt="Codex Profile"> 
+				<span class="mr-1">Dr. Codex Lantern</span>
+				<i class="icon icon-chevron-down"></i> 
+			</a>
+			<div class="dropdown-menu dropdown-sm p-0" aria-labelledby="dropdown-menu">
+				{{> include/_dropdown-menu}}
+			</div>
+		</li>
+	</ul>
+
+</header>
