@@ -1,7 +1,7 @@
 module.exports = { 
     port                       : 8080,
     paths: {
-       scss_path_src           : ['./src/scss/*.scss', './src/pages/**/*.scss', './src/scss/!(variable|_variable)*.scss', './src/scss/pages/**/*.scss', './src/scss/_themes/*.scss'],
+       scss_path_src           : ['./src/scss/*.scss', './src/content/**/*.scss', './src/scss/!(variable|_variable)*.scss', './src/scss/content/**/*.scss', './src/scss/_themes/*.scss'],
       scss_path_build          : './dist/css',
            path_src            : './src/',
            path_dist           : './dist',
@@ -17,6 +17,12 @@ module.exports = {
         path_custom            : "./src/custom/",
         fonts_path_dist        : "./dist/fonts/",
         video_path_dist        : "./dist/video/",
-        lang_path_dist         : "./dist/lang/"
+        lang_path_dist         : "./dist/lang/",
+        template: {
+            content_           : "./src/content/**/*.hbs",
+            partials_          : "./src/template/**/*.hbs",
+            helpers_           : "./src/template/_helpers/*.js",
+            data_              : "./src/template/_data/*.{js,json}" 
+        }        
     }
 }
