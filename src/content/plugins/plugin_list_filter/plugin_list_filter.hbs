@@ -1,0 +1,41 @@
+{{#> 
+	layouts/main 
+	title="List filter" 
+	pagename="plugin_list_filter" 
+	category_1="Core Plugins"
+	heading="List filter" 
+	pagedescription="List filter"
+}}
+
+{{#*inline "head-block"}}{{/inline}}
+
+{{#*inline "content-block"}}
+
+<div class="container card p-g d-block list-filter">
+	<input type="text" id="text-filter">
+	<a href="#" class="btn btn-primary btn-sm">test</a>
+	<ul id="mytest">
+		<li>
+			<a href="" data-filter-tags="aa">aa</a>
+		</li>
+		<li>
+			<a href="" data-filter-tags="bb">bb</a>
+		</li>
+		<li>
+			<a href="" data-filter-tags="cc">cc</a>
+		</li>
+		<li>
+			<a href="" data-filter-tags="aa">aa</a>
+		</li>
+	</ul>
+</div>
+
+{{/inline}}
+
+{{#*inline "scripts-block"}}
+<script>
+	initApp.listFilter($('#mytest'), $('#text-filter'));
+</script>
+{{/inline}}
+
+{{/layouts/main}}

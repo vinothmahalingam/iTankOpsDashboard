@@ -6,7 +6,7 @@ var initApp = (function(app) {
 
 	/**
 	 * List filter 
-	 * usage: initApp.listFilter($('.navigation'), $('#nav-filter > input[type="text"]'));
+	 * usage: initApp.listFilter($('.navigation'), $('input#nav-filter'));
 	 **/
 	app.listFilter = function (list, input) {
 
@@ -20,13 +20,11 @@ var initApp = (function(app) {
 				   hiding the ones not containing the input while showing the ones that do */
 				   
 				$(list).find($("a:not([data-filter-tags*='" + filter + "'])"))
-					.parent().removeClass('filter-show')
+					.parentsUntil(list).removeClass('filter-show')
 					.addClass('filter-hide');
 
 				$(list).find($("[data-filter-tags*='" + filter + "']"))
-					.parent().removeClass('filter-hide')
-					.addClass('filter-show')
-					.parents().removeClass('filter-hide')
+					.parentsUntil(list).removeClass('filter-hide')
 					.addClass('filter-show');
 
 			} else {
