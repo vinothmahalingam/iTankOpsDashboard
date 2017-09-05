@@ -22,7 +22,7 @@ var myapp_config = {
        Reference: http://benalman.com/code/projects/jquery-throttle-debounce/examples/throttle/
      */
     throttleDelay: 450, // for window.scrolling
-    filterDelay: 250,   // for keyup.functions 
+    filterDelay: 150,   // for keyup.functions 
     /*
        DETECT MOBILE DEVICES
        Description: Detects mobile device - if any of the listed device is 
