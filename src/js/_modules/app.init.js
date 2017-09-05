@@ -6,36 +6,49 @@ var initApp = (function(app) {
 
 	/**
 	 * List filter 
-	 * usage: initApp.listFilter($('.navigation'), $('input#nav-filter'));
+	 * DOC: searches list items, it could be UL or DIV elements
+	 * usage: initApp.listFilter($('.list'), $('#intput-id'));
+	 *        inside the .list you will need to insert 'data-filter-tags'
 	 **/
 	app.listFilter = function (list, input) {
 
 		$(input).change( function () {
 
 			var filter = $(this).val().toLowerCase();
+			var	listPrev = $(list).next().filter('.filter-message');
 
+			/* when user types more than 1 letter start search filter */
 			if(filter.length > 1) {
 
 				/* this finds all data-filter-tags in a list that contain the input val,
 				   hiding the ones not containing the input while showing the ones that do */
-				   
+				
+				/* (1) hide all that does not match */   
 				$(list).find($("a:not([data-filter-tags*='" + filter + "'])"))
 					.parentsUntil(list).removeClass('filter-show')
 					.addClass('filter-hide');
 
+				/* (2) hide all that does match */	
 				$(list).find($("[data-filter-tags*='" + filter + "']"))
 					.parentsUntil(list).removeClass('filter-hide')
 					.addClass('filter-show');
 
+				/* if element exists then print results */	
+				if (listPrev){	
+					listPrev.text("showing " + $(list).find('li.filter-show').length + " from " + $(list).find('[data-filter-tags]').length + " total");
+				}
+
 			} else {
 
-				$(list).find('ul')
-					.removeClass('filter-hide filter-show');
+				/* when filter length is blank reset the classes */
+				$(list).find('[data-filter-tags]').parentsUntil(list).removeClass('filter-hide filter-show')	
 
-				$(list).find('li')
-					.removeClass('filter-hide filter-show');
+				/* if element exists reset print results */
+				if (listPrev){
+					listPrev.text("");
+				}
 			} 
-			
+
 			return false;
 
 		}).keyup( $.debounce( myapp_config.filterDelay, function (e) {
