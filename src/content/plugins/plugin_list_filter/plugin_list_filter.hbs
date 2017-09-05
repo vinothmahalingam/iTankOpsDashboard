@@ -11,23 +11,106 @@
 
 {{#*inline "content-block"}}
 
-<div class="container card p-g d-block list-filter">
-	<input type="text" id="text-filter">
-	<a href="#" class="btn btn-primary btn-sm">test</a>
-	<ul id="mytest">
-		<li>
-			<a href="" data-filter-tags="aa">aa</a>
-		</li>
-		<li>
-			<a href="" data-filter-tags="bb">bb</a>
-		</li>
-		<li>
-			<a href="" data-filter-tags="cc">cc</a>
-		</li>
-		<li>
-			<a href="" data-filter-tags="aa">aa</a>
-		</li>
-	</ul>
+
+
+
+<div class="container card p-g d-block">
+
+
+
+
+	<div class="list-filter col-md-4 d-flex flex-column bg-light p-0">
+
+		<div class="form-group bg-light pt-2 pr-2 pl-2 pb-0 m-0">
+			<input type="text" class="form-control mb-2" id="text-filter" aria-describedby="emailHelp" placeholder="Filter list">
+		</div>
+
+		<ul id="mytest" class="nav nav-pills flex-column">
+			<li class="nav-item">
+			  <a class="nav-link active border-radius-0" href="#" data-filter-tags="overview">Overview <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#" data-filter-tags="reports">Reports</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#" data-filter-tags="analytics">Analytics</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#" data-filter-tags="export">Export</a>
+			</li>
+			<li class="nav-item">
+				<a href="" class="nav-link" data-filter-tags="aa">aa</a>
+			</li>
+			<li class="nav-item">
+				<a href="" class="nav-link" data-filter-tags="bb">bb</a>
+			</li>
+			<li class="nav-item">
+				<a href="" class="nav-link" data-filter-tags="cc">cc</a>
+			</li>
+			<li class="nav-item">
+				<a href="" class="nav-link" data-filter-tags="aa">aa</a>
+			</li>
+		</ul>
+		<span class="filter-message bg-primary-600"></span>
+	</div>
+
+	<br>
+
+	<div class="list-filter col-md-4 d-flex flex-column bg-light p-0">
+
+		<div class="form-group bg-light pt-2 pr-2 pl-2 pb-0 m-0">
+			<input type="text" class="form-control mb-2" id="text-filter-2" aria-describedby="emailHelp" placeholder="Filter list">
+		</div>
+
+		<div id="accordion" role="tablist">
+		  <div class="card">
+		    <div class="card-header" role="tab" id="headingOne">
+		      <h5 class="mb-0">
+		        <a data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" data-filter-tags="reports">
+		          Collapsible Group Item #1
+		        </a>
+		      </h5>
+		    </div>
+
+		    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+		      <div class="card-body">
+		        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+		      </div>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <div class="card-header" role="tab" id="headingTwo">
+		      <h5 class="mb-0">
+		        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" data-filter-tags="reports">
+		          Collapsible Group Item #2
+		        </a>
+		      </h5>
+		    </div>
+		    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+		      <div class="card-body">
+		        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+		      </div>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <div class="card-header" role="tab" id="headingThree">
+		      <h5 class="mb-0">
+		        <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" data-filter-tags="collapsible">
+		          Collapsible Group Item #3
+		        </a>
+		      </h5>
+		    </div>
+		    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+		      <div class="card-body">
+		        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<span class="filter-message"></span>
+	</div>
+
 </div>
 
 {{/inline}}
@@ -35,6 +118,7 @@
 {{#*inline "scripts-block"}}
 <script>
 	initApp.listFilter($('#mytest'), $('#text-filter'));
+	initApp.listFilter($('#accordion'), $('#text-filter-2'));
 </script>
 {{/inline}}
 
