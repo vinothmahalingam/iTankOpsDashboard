@@ -61,68 +61,6 @@ h6 small,
 	font-size: 13px;	
 }
 
-/* font weights */
-.fw-300 {
-	font-weight: 300 !important;
-}
-.fw-400 {
-	font-weight: 400 !important;
-}
-.fw-500 {
-	font-weight: 500 !important;
-}
-.fw-700 {
-	font-weight: 700 !important;
-}
-.fw-900 {
-	font-weight: 900 !important;
-}
-.fw-n {
-	font-weight:normal !important;
-}
-
-/* font sizes */
-
-/* 10px */
-.fs-nano {
-	font-size: rem($fs-nano);
-}
-
-/* 12px */
-.fs-xs {
-	font-size:  rem($fs-xs);
-}
-
-/* 12.5px */
-.fs-sm {
-	font-size:  rem($fs-sm);
-}
-
-/* 13px */
-.font-base {
-	font-size:  rem($base-font-size);
-}
-
-/* 14px */
-.fs-md {
-	font-size: rem($fs-md);
-}
-
-/* 15px */
-.fs-lg {
-	font-size: rem($fs-lg);
-}
-
-/* 16px */
-.fs-xl {
-	font-size: rem($fs-xl); 
-}
-
-/* page header */
-.fs-xxl {
-	font-size: rem($fs-xxl); 
-}
-
 /* contrast text */
 .text-contrast {
 	color: lighten($black, 20%) !important;

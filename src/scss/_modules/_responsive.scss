@@ -140,7 +140,7 @@ $grid-breakpoints: (
 				}
 			}
 
-			.pad-gutter {
+			.p-g {
 				padding: map-get($grid-gutter-widths, xs);
 			}
 		}

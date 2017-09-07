@@ -180,9 +180,13 @@ $theme-colors: (
   dark: $gray-800
 );
 
-/* Forms */
+/* forms */
 $input-focus-border-color:					$primary-500;
 $link-color:            						$primary-800;
+
+/* cards */
+$card-spacer-y:                     20px;
+$card-spacer-x:                     20px;
 
 /* nav link */
 $nav-link-padding-y:                0.25rem;
@@ -344,6 +348,10 @@ $depth-header:								       $depth + 1 !default;
 $depth-nav:										       $depth-header + 2 !default;
 $depth-settings:							       $depth-header + 2 !default;
 
+/*  Components
+========================================================================== */
+$frame-border-color:                 #f7f9fa !default;
+
 /*  HEADER STUFF
 ========================================================================== */
 
@@ -436,7 +444,7 @@ aside#left-panel ($nav-width, $nav-background)
 /* main navigation */
 $nav-background:									darken($color-fusion, 7%) !default;
 $nav-base-color:									lighten($nav-background, 7%) !default;
-$nav-width:											  240px !default;
+$nav-width:											  250px !default;
 
 /* nav parent level-0 */
 $nav-link-color: 									lighten($nav-base-color, 50%) !default;
@@ -506,10 +514,10 @@ $nav-dl-margin-left:							$nav-dl-width + $nav-dl-margin-right !default; 	/* wi
 $list-table-padding-x:						11px !default;
 $list-table-padding-y:						0 !default;
 
-/*   SETTINGS Panel
+/*   SETTINGS Panel (#right-panel)
 ========================================================================== */
-$settings-panel-bg:								lighten($color-fusion, 66%) !default;
-$settings-width:									260px !default;
+$settings-panel-bg:								$white !default;
+$settings-width:									300px !default;
 
 /*   PAGE BREADCRUMB 
 ========================================================================== */

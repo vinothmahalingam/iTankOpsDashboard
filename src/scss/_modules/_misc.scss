@@ -302,3 +302,25 @@ ul.list-verticle {
     }
   }
 }
+
+/* display frame */
+.frame-wrap {
+	background: white;
+	border: 4px solid $frame-border-color;
+	padding: 20px;
+	margin-bottom: 30px;
+}
+.frame-headings {
+	font-size: $base-font-size;
+	font-weight: 500;
+	margin-bottom: $grid-gutter-width-base/3;
+
+	color: lighten($fusion-50, 7%);
+}
+.card-body > .frame-wrap:last-child {
+	margin-bottom:0 !important;
+}
+/* bg faded */
+.bg-faded {
+	background: $frame-border-color;
+}

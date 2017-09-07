@@ -29,8 +29,8 @@ $menu-item-direction: 'top'; //top or left
 
 .app-shortcut {
   position:fixed;
-  right: $grid-gutter-width/2;
-  bottom: $app-shortcut-btn-size/4;
+  right: $grid-gutter-width;
+  bottom: $footer-height + $grid-gutter-width;
   z-index: $footer-zindex + 1; 
 }
 

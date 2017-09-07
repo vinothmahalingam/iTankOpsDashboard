@@ -24,7 +24,7 @@
 							//align-items:center;
 							text-align: center;
 							cursor: pointer;
-							width: 109px !important;
+							width: ($settings-width/2-20px) !important;
 							color: $white;
 							//font-size: 13px;
 							text-decoration: none;

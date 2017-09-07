@@ -88,7 +88,7 @@
 	padding: 0px 5px;
 	border-radius: 3px;
 	color: $white;
-	right: 15px;
+	right: 8px;
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -99,11 +99,15 @@
 
 /* btn widths */
 .btn-w-m {
-	min-width: 95px;
+	min-width: 85px;
 }
 
 .btn-w-l {
 	min-width: 130px;
+}
+
+.btn-m-s {
+	margin: 3px 1px;
 }
 
 /* dropdown btn */

@@ -15,64 +15,76 @@
 
 	<div class="col-md-12 col-xl-6">
 
-		<div class="card p-3 mrg-b-gutter d-block">
+		<div class="card mb-g">
 
-				<h3>
+			<div class="card-body">
+
+				<h3 class="mb-4">
 					Button <span class="fw-300">Colors</span> 
 					<small>
 						NextGen includes seven predefined button styles, each serving its own semantic purpose.
 					</small>
 				</h3>
-				<h4 class="fw-300">
-					<small>Default button styles with predefined colors</small>
+
+				<h4 class="frame-headings">
+					Default button styles with predefined colors
 				</h4>
 
-				<div>
-
-					<button type="button" class="btn btn-primary btn-w-m mb-1">Primary</button>
-					<button type="button" class="btn btn-secondary btn-w-m mb-1">Secondary</button>
-					<button type="button" class="btn btn-default btn-w-m mb-1">Default</button>
-					<button type="button" class="btn btn-success btn-w-m mb-1">Success</button>
-					<button type="button" class="btn btn-info btn-w-m mb-1">Info</button>
-					<button type="button" class="btn btn-warning btn-w-m mb-1">Warning</button>
-					<button type="button" class="btn btn-danger btn-w-m mb-1">Danger</button>
-
-					<hr>
-					<h4 class="fw-300">
-						<small>Rounded edge with <code>.btn-pills</code> class</small>
-					</h4>
-					<button type="button" class="btn btn-primary btn-pills btn-w-m mb-1">Primary</button>
-					<button type="button" class="btn btn-secondary btn-pills btn-w-m mb-1">Secondary</button>
-					<button type="button" class="btn btn-default btn-pills btn-w-m mb-1">Default</button>
-					<button type="button" class="btn btn-success btn-pills btn-w-m mb-1">Success</button>
-					<button type="button" class="btn btn-info btn-pills btn-w-m mb-1">Info</button>
-					<button type="button" class="btn btn-warning btn-pills btn-w-m mb-1">Warning</button>
-					<button type="button" class="btn btn-danger btn-pills btn-w-m mb-1">Danger</button>
-
+				<div class="frame-wrap text-center">			
+					<button type="button" class="btn btn-primary btn-w-m btn-m-s">Primary</button>
+					<button type="button" class="btn btn-secondary btn-w-m btn-m-s">Secondary</button>
+					<button type="button" class="btn btn-default btn-w-m btn-m-s">Default</button>
+					<button type="button" class="btn btn-success btn-w-m btn-m-s">Success</button>
+					<button type="button" class="btn btn-info btn-w-m btn-m-s">Info</button>
+					<button type="button" class="btn btn-warning btn-w-m btn-m-s">Warning</button>
+					<button type="button" class="btn btn-danger btn-w-m btn-m-s">Danger</button>
 				</div>
 
+				<h4 class="frame-headings">
+					Rounded edge with <code>.btn-pills</code> class
+				</h4>
+
+				<div class="frame-wrap text-center">			
+					<button type="button" class="btn btn-primary btn-pills btn-w-m btn-m-s">Primary</button>
+					<button type="button" class="btn btn-secondary btn-pills btn-w-m btn-m-s">Secondary</button>
+					<button type="button" class="btn btn-default btn-pills btn-w-m btn-m-s">Default</button>
+					<button type="button" class="btn btn-success btn-pills btn-w-m btn-m-s">Success</button>
+					<button type="button" class="btn btn-info btn-pills btn-w-m btn-m-s">Info</button>
+					<button type="button" class="btn btn-warning btn-pills btn-w-m btn-m-s">Warning</button>
+					<button type="button" class="btn btn-danger btn-pills btn-w-m btn-m-s">Danger</button>
+				</div>
+
+			</div>
+			
 		</div>
 
-		<div class="card p-3 mrg-b-gutter d-block">
 
-			<h3>
-				Option <span class="fw-300">Sizes</span> 
-				<small>
-					Fancy larger or smaller buttons? Add <code>.btn-lg</code> or <code>.btn-sm</code> for additional sizes.
-				</small>
-			</h3>
+		<div class="card mb-g">
 
-			<button type="button" class="btn btn-primary btn-lg btn-w-l mb-2">Large</button>
-			<button type="button" class="btn btn-outline-info btn-lg btn-w-l mb-2">Large</button>
+			<div class="card-body">
 
-			<div>
-				<button type="button" class="btn btn-primary btn-w-m mb-2">Default</button>
-				<button type="button" class="btn btn-outline-info btn-w-m mb-2">Default</button>
-			</div>
+				<h3 class="mb-4">
+					Option <span class="fw-300">Sizes</span>
+					<small>
+						Fancy larger or smaller buttons? Add <code>.btn-lg</code> or <code>.btn-sm</code> for additional sizes.
+					</small>
+				</h3>
 
-			<div>
-				<button type="button" class="btn btn-primary btn-sm mb-2">Small</button>
-				<button type="button" class="btn btn-outline-info btn-sm mb-2">Small</button>
+				<div class="frame-wrap text-center">			
+					<button type="button" class="btn btn-primary btn-lg btn-w-l btn-m-s">Large</button>
+					<button type="button" class="btn btn-outline-info btn-lg btn-w-l btn-m-s">Large</button>
+
+					<div>
+						<button type="button" class="btn btn-primary btn-w-m btn-m-s">Default</button>
+						<button type="button" class="btn btn-outline-info btn-w-m btn-m-s">Default</button>
+					</div>
+
+					<div>
+						<button type="button" class="btn btn-primary btn-sm btn-m-s">Small</button>
+						<button type="button" class="btn btn-outline-info btn-sm btn-m-s">Small</button>
+					</div>
+				</div>
+
 			</div>
 			
 		</div>
@@ -80,167 +92,242 @@
 	</div>
 
 	<div class="col-md-12 col-xl-6">
-		
-		<div class="card p-3 mrg-b-gutter d-block">
 
-			<h3>
-				Buttons <span class="fw-300">Outline</span>
-				<small>
-					Replace the default modifier classes with the <code>.btn-outline-*</code> ones to remove all background images and colors.
-				</small>
-			</h3>
+		<div class="card mb-g">
 
-			<h4>
-				<small>
-					Default outline style
-				</small>
-			</h4>
+			<div class="card-body">
 
-			<button type="button" class="btn btn-outline-primary btn-w-m mb-1">Primary</button>
-			<button type="button" class="btn btn-outline-secondary btn-w-m mb-1">Secondary</button>
-			<button type="button" class="btn btn-outline-default btn-w-m mb-1">Default</button>
-			<button type="button" class="btn btn-outline-success btn-w-m mb-1">Success</button>
-			<button type="button" class="btn btn-outline-info btn-w-m mb-1">Info</button>
-			<button type="button" class="btn btn-outline-warning btn-w-m mb-1">Warning</button>
-			<button type="button" class="btn btn-outline-danger btn-w-m mb-1">Danger</button>
-			<hr>
+				<h3 class="mb-4">
+					Button <span class="fw-300">Outline</span> 
+					<small>
+						Replace the default modifier classes with the <code>.btn-outline-*</code> ones to remove all background images and colors.
+					</small>
+				</h3>
 
-			<h4>
-				<small>
-					Rounded outline edge with <code>.btn-pills</code> class
-				</small>
-			</h4>
+				<h4 class="frame-headings">
+					Default button styles with predefined colors
+				</h4>
 
-			<button type="button" class="btn btn-outline-primary btn-pills btn-w-m mb-1">Primary</button>
-			<button type="button" class="btn btn-outline-secondary btn-pills btn-w-m mb-1">Secondary</button>
-			<button type="button" class="btn btn-outline-default btn-pills btn-w-m mb-1">Secondary</button>
-			<button type="button" class="btn btn-outline-success btn-pills btn-w-m mb-1">Success</button>
-			<button type="button" class="btn btn-outline-info btn-pills btn-w-m mb-1">Info</button>
-			<button type="button" class="btn btn-outline-warning btn-pills btn-w-m mb-1">Warning</button>
-			<button type="button" class="btn btn-outline-danger btn-pills btn-w-m mb-1">Danger</button>
+				<div class="frame-wrap text-center">			
+					<button type="button" class="btn btn-outline-primary btn-w-m btn-m-s">Primary</button>
+					<button type="button" class="btn btn-outline-secondary btn-w-m btn-m-s">Secondary</button>
+					<button type="button" class="btn btn-outline-default btn-w-m btn-m-s">Default</button>
+					<button type="button" class="btn btn-outline-success btn-w-m btn-m-s">Success</button>
+					<button type="button" class="btn btn-outline-info btn-w-m btn-m-s">Info</button>
+					<button type="button" class="btn btn-outline-warning btn-w-m btn-m-s">Warning</button>
+					<button type="button" class="btn btn-outline-danger btn-w-m btn-m-s">Danger</button>
+				</div>
 
+				<h4 class="frame-headings">
+					Rounded edge with <code>.btn-pills</code> class
+				</h4>
+
+				<div class="frame-wrap text-center">			
+					<button type="button" class="btn btn-outline-primary btn-pills btn-w-m btn-m-s">Primary</button>
+					<button type="button" class="btn btn-outline-secondary btn-pills btn-w-m btn-m-s">Secondary</button>
+					<button type="button" class="btn btn-outline-default btn-pills btn-w-m btn-m-s">Secondary</button>
+					<button type="button" class="btn btn-outline-success btn-pills btn-w-m btn-m-s">Success</button>
+					<button type="button" class="btn btn-outline-info btn-pills btn-w-m btn-m-s">Info</button>
+					<button type="button" class="btn btn-outline-warning btn-pills btn-w-m btn-m-s">Warning</button>
+					<button type="button" class="btn btn-outline-danger btn-pills btn-w-m btn-m-s">Danger</button>
+				</div>
+
+			</div>
+			
 		</div>
 
-		<div class="card p-3 mrg-b-gutter d-block">
+		<div class="card mb-g">
 
-			<h3>
-				Buttons <span class="fw-300">Block</span>
-				<small>
-					Create block level buttons—those that span the full width of a parent—by adding <code>.btn-block</code>.
-				</small>
-			</h3>
+			<div class="card-body">
 
-			<div class="row">
-				<div class="col col-md-6 col-xl-6">
-					<button type="button" class="btn btn-primary btn-lg btn-block mb-2">Block <span>large</span></button>
-				</div>
-				<div class="col col-md-6 col-xl-6">
-					<button type="button" class="btn btn-outline-info btn-lg btn-block mb-2">Block <span>large</span></button>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6 col-xl-6">
-					<button type="button" class="btn btn-primary btn-block mb-2">Block <span>default</span></button>
-				</div>
-				<div class="col-md-6 col-xl-6">
-					<button type="button" class="btn btn-outline-info btn-block mb-2">Block <span>default</span></button>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6 col-xl-6">
-					<button type="button" class="btn btn-primary btn-sm btn-block mb-2">Block <span>small</span></button>
-				</div>
-				<div class="col-md-6 col-xl-6">
-					<button type="button" class="btn btn-outline-info btn-sm btn-block mb-2">Block <span>small</span></button>
-				</div>
-			</div>
+				<h3 class="mb-4">
+					Buttons <span class="fw-300">Block</span>
+					<small>
+						Create block level buttons—those that span the full width of a parent—by adding <code>.btn-block</code>.
+					</small>
+				</h3>
 
-		</div>
+				<div class="frame-wrap text-center">	
+
+					<div class="row">
+						<div class="col col-md-6 col-xl-6">
+							<button type="button" class="btn btn-primary btn-lg btn-block btn-m-s">Block <span>large</span></button>
+						</div>
+						<div class="col col-md-6 col-xl-6">
+							<button type="button" class="btn btn-outline-info btn-lg btn-block btn-m-s">Block <span>large</span></button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-xl-6">
+							<button type="button" class="btn btn-primary btn-block btn-m-s">Block <span>default</span></button>
+						</div>
+						<div class="col-md-6 col-xl-6">
+							<button type="button" class="btn btn-outline-info btn-block btn-m-s">Block <span>default</span></button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-xl-6">
+							<button type="button" class="btn btn-primary btn-sm btn-block btn-m-s">Block <span>small</span></button>
+						</div>
+						<div class="col-md-6 col-xl-6">
+							<button type="button" class="btn btn-outline-info btn-sm btn-block btn-m-s">Block <span>small</span></button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			
+		</div>	
 
 	</div>
 
 	<div class="col-md-12">
 		
-		<div class="card p-3 mrg-b-gutter d-block">
+		<div class="card mb-g">
 
-			<h3>
-				Checkbox and radio buttons
-			</h3>
+			<div class="card-body">
+
+				<h3 class="mb-4">
+					Checkbox & Radio <span class="fw-300">Buttons</span>
+				</h3>
+
 				<div class="alert alert-primary">
 					NextGen <code>.btn</code> styles can be applied to other elements, such as <code>&lt;label></code>s, to provide checkbox or radio style button toggling. Add <code>data-toggle="buttons"</code> to a <code>.btn-group</code> containing those modified buttons to enable toggling in their respective styles.
 					
 					The checked state for these buttons is <strong>only updated via</strong> click <strong>event</strong> on the button. If you use another method to update the input—e.g., with <code>&lt;input type="reset"></code> or by manually applying the input’s checked property—you’ll need to toggle <code>.active</code> on the <code>&lt;label></code> manually.
 				</div>
 
-			<div class="row">
+				<div class="row">
 
-				<div class="col-md-6 col-xl-6">
-					<h4><small>Checkbox</small></h4>
-					<div class="btn-group mb-2" data-toggle="buttons">
-						<label class="btn btn-success active">
-							<input type="checkbox" checked> Options 1
-						</label>
-						<label class="btn btn-success">
-							<input type="checkbox"> Options 2
-						</label>
-						<label class="btn btn-success">
-							<input type="checkbox"> Options 3
-						</label>
-						<label class="btn btn-success disabled">
-							<input type="checkbox" disabled> Disabled
-						</label>
-					</div>
+					<div class="col-md-6 col-xl-6">
 
-					<div>
-						<div class="btn-group" data-toggle="buttons">
-							<label class="btn btn-outline-warning  btn-sm active">
-								<input type="checkbox" checked> Options 1
-							</label>
-							<label class="btn btn-outline-warning btn-sm">
-								<input type="checkbox"> Options 2
-							</label>
-							<label class="btn btn-outline-warning btn-sm">
-								<input type="checkbox"> Options 3
-							</label>
-							<label class="btn btn-outline-warning btn-sm disabled">
-								<input type="checkbox" disabled> Disabled
-							</label>
+						<h4 class="frame-headings">
+							Checkbox
+						</h4>						
+
+						<div class="frame-wrap text-center m-0">
+
+							<div class="btn-group btn-m-s" data-toggle="buttons">
+								<label class="btn btn-success active">
+									<input type="checkbox" checked> Options 1
+								</label>
+								<label class="btn btn-success">
+									<input type="checkbox"> Options 2
+								</label>
+								<label class="btn btn-success">
+									<input type="checkbox"> Options 3
+								</label>
+								<label class="btn btn-success disabled">
+									<input type="checkbox" disabled> Disabled
+								</label>
+							</div>
+							<br>
+							<div class="btn-group btn-m-s" data-toggle="buttons">
+								<label class="btn btn-outline-warning  btn-sm active">
+									<input type="checkbox" checked> Options 1
+								</label>
+								<label class="btn btn-outline-warning btn-sm">
+									<input type="checkbox"> Options 2
+								</label>
+								<label class="btn btn-outline-warning btn-sm">
+									<input type="checkbox"> Options 3
+								</label>
+								<label class="btn btn-outline-warning btn-sm disabled">
+									<input type="checkbox" disabled> Disabled
+								</label>
+							</div>
+
 						</div>
+
+					</div>
+					<div class="col-md-6 col-xl-6">
+
+						<h4 class="frame-headings">
+							Radio
+						</h4>
+
+						<div class="frame-wrap text-center m-0">
+
+							<div class="btn-group btn-m-s" data-toggle="buttons">
+								<label class="btn btn-secondary active">
+									<input type="radio" name="options" id="option1" checked> Option 1
+								</label>
+								<label class="btn btn-secondary">
+									<input type="radio" name="options" id="option2"> Option 2
+								</label>
+								<label class="btn btn-secondary">
+									<input type="radio" name="options" id="option3"> Option 3
+								</label>
+								<label class="btn btn-secondary disabled">
+									<input type="radio" name="options" id="option4" disabled> Disabled
+								</label>
+							</div>
+							<br>
+							<div class="btn-group btn-m-s" data-toggle="buttons">
+								<label class="btn btn-outline-primary btn-sm active">
+									<input type="radio" name="options" id="option-sm-1" checked> Option 1
+								</label>
+								<label class="btn btn-outline-primary btn-sm">
+									<input type="radio" name="options" id="option-sm-2"> Option 2
+								</label>
+								<label class="btn btn-outline-primary btn-sm">
+									<input type="radio" name="options" id="option-sm-3"> Option 3
+								</label>
+								<label class="btn btn-outline-primary btn-sm disabled">
+									<input type="radio" name="options" id="option-sm-4" disabled> Disabled
+								</label>
+							</div>
+
+						</div>
+
 					</div>
 
 				</div>
-				<div class="col-md-6 col-xl-6">
-					<h4><small>Radio</small></h4>
-					<div class="btn-group mb-2" data-toggle="buttons">
-						<label class="btn btn-secondary active">
-							<input type="radio" name="options" id="option1" checked> Option 1
-						</label>
-						<label class="btn btn-secondary">
-							<input type="radio" name="options" id="option2"> Option 2
-						</label>
-						<label class="btn btn-secondary">
-							<input type="radio" name="options" id="option3"> Option 3
-						</label>
-						<label class="btn btn-secondary disabled">
-							<input type="radio" name="options" id="option4" disabled> Disabled
-						</label>
-					</div>
 
-					<div>
-						<div class="btn-group" data-toggle="buttons">
-							<label class="btn btn-outline-primary btn-sm active">
-								<input type="radio" name="options" id="option-sm-1" checked> Option 1
-							</label>
-							<label class="btn btn-outline-primary btn-sm">
-								<input type="radio" name="options" id="option-sm-2"> Option 2
-							</label>
-							<label class="btn btn-outline-primary btn-sm">
-								<input type="radio" name="options" id="option-sm-3"> Option 3
-							</label>
-							<label class="btn btn-outline-primary btn-sm disabled">
-								<input type="radio" name="options" id="option-sm-4" disabled> Disabled
-							</label>
+			</div>
+
+		</div>
+
+		<div class="card mb-g">
+
+			<div class="card-body">
+
+				<h3 class="mb-4">
+					Button <span class="fw-300">States</span>
+					<small>
+						Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. <strong>There’s no need to add a class to <code>&lt;button&gt;</code>s as they use a pseudo-class</strong>. However, you can still force the same active appearance with <code>.active</code> (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically. To make  buttons look inactive add the disabled boolean attribute to any <code>&lt;button></code> element.
+					</small>
+				</h3>
+
+				<div class="row">
+
+					<div class="col-md-6 col-xl-6">
+
+						<h4 class="frame-headings">
+							Active
+						</h4>						
+
+						<div class="frame-wrap text-center m-0">
+
+							<a href="#" class="btn btn-primary active btn-w-l" role="button" aria-pressed="true">Link</a>
+							<button class="btn btn-secondary active btn-w-l" type="button" aria-pressed="true">Button</button>							
+
 						</div>
+
+					</div>
+					<div class="col-md-6 col-xl-6">
+
+						<h4 class="frame-headings">
+							Disabled
+						</h4>
+
+						<div class="frame-wrap text-center m-0">
+
+							<a href="#" class="btn btn-primary disabled btn-w-l" role="button" aria-disabled="true">Link</a>
+							<button class="btn btn-secondary btn-w-l" type="button" disabled>Button</button>							
+
+						</div>
+
 					</div>
 
 				</div>
@@ -251,34 +338,6 @@
 
 	</div>
 
-	<div class="col-md-12">
-		
-		<div class="card p-3 mrg-b-gutter d-block">
-
-			<h3>
-				Button <span class="fw-300">States</span>
-				<small>
-					Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. <strong>There’s no need to add a class to <code>&lt;button&gt;</code>s as they use a pseudo-class</strong>. However, you can still force the same active appearance with <code>.active</code> (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically. To make  buttons look inactive add the disabled boolean attribute to any <code>&lt;button></code> element.
-				</small>
-			</h3>
-
-			<div class="row">
-				<div class="col-md-12 col-xl-6">
-					<h4><small>Active</small></h4>
-					<a href="#" class="btn btn-primary active btn-w-l" role="button" aria-pressed="true">Link</a>
-					<button class="btn btn-secondary active btn-w-l" type="button" aria-pressed="true">Button</button>
-				</div>
-
-				<div class="col-md-12 col-xl-6">
-					<h4><small>Disabled</small></h4>
-					<a href="#" class="btn btn-primary disabled btn-w-l" role="button" aria-disabled="true">Link</a>
-					<button class="btn btn-secondary btn-w-l" type="button" disabled>Button</button>
-				</div>
-			</div>
-
-		</div>
-
-	</div>
 
 </div>
 

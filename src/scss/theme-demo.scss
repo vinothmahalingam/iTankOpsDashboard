@@ -1,3 +1,5 @@
+@import "./src/scss/_modules/variables";
+
 .app-body-demo {
 	height:350px;
 	max-width: 550px;
@@ -98,6 +100,9 @@
 		.badge {
 			font-size: 90% !important;
 			font-weight: 400 !important;
+			background: #a9a9a9;
+			text-align: left;
+			min-width: 50px;
 		}
 	}
 
@@ -105,6 +110,9 @@
 
 .prettyprint {
     overflow:auto; 
-    background: rgba(255, 138, 31, 0.07); 
-    font-size:100%
+    background: $frame-border-color; 
+    font-size:100%;
+    padding: $grid-gutter-width-base/1.5 !important;
+    border: 0 !important;
+    margin-bottom: $grid-gutter-width-base;
 }

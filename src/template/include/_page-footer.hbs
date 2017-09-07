@@ -1,6 +1,16 @@
 {{!-- To remove footer, remove both footer-push as well as footer --}}
 <footer role="contentinfo">
-	 <img src="img/logo-minify.png" alt="NextGen Logo" class="footer-logo rounded-circle">
-	 <span> {{> _data/copyright-text }} </span>
+	<div class="d-flex align-items-center flex-1 text-muted">
+		<img src="img/logo-minify.png" alt="NextGen Logo" class="footer-logo rounded-circle">
+		{{> _data/copyright-text }}	
+	</div>
+	<div>
+		<ul class="list-table m-0">
+			<li><a href="#" class="text-muted">About</a></li>
+			<li class="pl-3"><a href="#" class="text-muted">License</a></li>
+			<li class="pl-3"><a href="#" class="text-muted">Documentation</a></li>
+			<li class="pl-3 fs-xl"><a href="#" class="text-muted"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a></li>
+		</ul>
+	</div>
 </footer>
 <div class="footer-push"></div>
