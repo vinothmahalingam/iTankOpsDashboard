@@ -6,12 +6,12 @@
 			overflow: auto;
 			overflow-x: hidden;
 			-webkit-overflow-scrolling: touch;
-			height: unquote("calc(100% - #{rem($header-height + $footer-height)})");
+			height: unquote("calc(100% - #{$header-height + $footer-height})");
 		}
 
 		.slimScrollDiv {
 
-			height: unquote("calc(100% - #{rem($header-height + $footer-height)})") !important;
+			height: unquote("calc(100% - #{$header-height + $footer-height})") !important;
 
 			#primary-nav {
 				padding-bottom: 0;

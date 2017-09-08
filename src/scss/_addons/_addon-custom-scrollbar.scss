@@ -7,8 +7,8 @@ $handleBarHover:                 darken($handleBar, 10%);
 
 body:not(.mobile-detected) {
     &::-webkit-scrollbar {
-        height: rem(8px);
-        width: rem(8px);
+        height: 8px;
+        width: 8px;
     }
 
     &::-webkit-scrollbar:hover{
@@ -45,12 +45,12 @@ body:not(.mobile-detected) {
 }
 
 #left-panel #primary-nav::-webkit-scrollbar {
-    height: rem(4px);
-    width: rem(4px);
+    height: 4px;
+    width: 4px;
 }
 
 #left-panel #primary-nav:hover::-webkit-scrollbar-corner {
-    width: rem(40px);
+    width: 40px;
 }
 
 #left-panel #primary-nav::-webkit-scrollbar-track-piece {

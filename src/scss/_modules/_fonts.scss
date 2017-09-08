@@ -4,7 +4,7 @@
 body {
 	font-family: $page-font;
 	font-size: rem($base-font-size);
-	letter-spacing: rem(0.1px);
+	letter-spacing: 0.1px;
 }
 
 #content {
@@ -33,12 +33,11 @@ h6 small,
 .h4 small, 
 .h5 small, 
 .h6 small {
-    //color: $gray-light;
     font-weight: 300;
     display: block;
-	font-size: 15px;
+	font-size: rem($fs-lg);
     line-height: 1.7;
-    letter-spacing: rem(-0.2px);
+    letter-spacing: -0.2px;
     margin:2px 0 ($grid-gutter-width-base / 2);
 }
 
@@ -46,19 +45,19 @@ h2 small,
 h3 small, 
 .h2 small, 
 .h3 small, {
-	font-size: 15px;
+	font-size: rem($fs-lg);
 }
 
 h4 small, 
 .h4 small {
-	font-size: 14px;
+	font-size: rem($fs-md);
 }
 
 h5 small, 
 h6 small, 
 .h5 small, 
 .h6 small {
-	font-size: 13px;	
+	font-size: rem($base-font-size);	
 }
 
 /* contrast text */

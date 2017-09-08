@@ -1,6 +1,6 @@
 #logo {
-	height:rem($header-height);
-	width: rem($nav-width);
+	height:$header-height;
+	width: $nav-width;
 	background: lighten($nav-background, 5%);
 	border-bottom: 1px solid $header-logo-border-bottom;
 	overflow: hidden; 
@@ -12,8 +12,8 @@
 	@extend %general-animation;
 
 	img {
-		width: rem($header-logo-width);
-		height: rem($header-logo-height);
+		width: $header-logo-width;
+		height: $header-logo-height;
 		transition: transform 0.2s ease;
 	}
 

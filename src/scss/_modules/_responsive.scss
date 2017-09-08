@@ -78,11 +78,11 @@ $grid-breakpoints: (
 				overflow: auto;
 				overflow-x: hidden;
 				-webkit-overflow-scrolling: touch;
-				height: unquote("calc(100% - #{rem($header-height + $footer-height)})");
+				height: unquote("calc(100% - #{$header-height + $footer-height})");
 
 				/*.slimScrollDiv {
 
-					height: unquote("calc(100% - #{rem($header-height + $footer-height)})") !important;
+					height: unquote("calc(100% - #{$header-height + $footer-height})") !important;
 
 					#primary-nav {
 						padding-bottom: 0;
@@ -178,7 +178,7 @@ $grid-breakpoints: (
 		}
 
 		#content {
-			margin-top: rem($header-height);
+			margin-top: $header-height;
 		}
 	}
 
@@ -191,7 +191,7 @@ $grid-breakpoints: (
 			}
 			#banner,
 			#content,
-			footer,
+			.footer,
 			.footer-push {
 				transition: $nav-hide-animate;
 				//@include translate3d (0px, 0, 0);
@@ -214,7 +214,7 @@ $grid-breakpoints: (
 
 			#banner,
 			#content,
-			footer,
+			.footer,
 			.footer-push {
                 transition: $nav-hide-animate;
 			    @include translate3d (0, 0, 0);        		      
@@ -243,7 +243,7 @@ $grid-breakpoints: (
 
 		#left-panel {
 			border-right:1px solid rgba(0,0,0,0.03);
-			@include box-shadow( 0 rem(3px) rem(35px) rem(3px) rgba(0,0,0,0.52) );
+			@include box-shadow( 0 3px 35px 3px rgba(0,0,0,0.52) );
 		}
 
 		#content:before {
@@ -292,7 +292,7 @@ $grid-breakpoints: (
 
 				#banner,
 				#content,
-				footer,
+				.footer,
 				.footer-push {
 					@include translate3d ($nav-width, 0, 0);
 				}	
@@ -308,7 +308,7 @@ $grid-breakpoints: (
 
 				#banner,
 				#content,
-				footer,
+				.footer,
 				.footer-push {
 					@include translate3d ($nav-width, 0, 0);
 				}
@@ -319,7 +319,7 @@ $grid-breakpoints: (
 
 				#banner,
 				#content,
-				footer,
+				.footer,
 				.footer-push {
 					box-shadow: 0 9px 0px 0px $page-bg, 0 -9px 0px 0px $page-bg, 12px 0 15px -4px rgba(0, 0, 0, 0.32), -12px 0 15px -4px rgba(0, 0, 0, 0.32);       
 				}				

@@ -41,13 +41,12 @@ $panel-edge-radius: $border-radius;
 		border-radius: $panel-edge-radius $panel-edge-radius 0 0;
 
 		h2, h3 {
-			font-size: $panel-hdr-font-size;
+			font-size: rem($panel-hdr-font-size);
 			margin: 0;
-			//flex:1;
 		}
 
 		.panel-subtitle {
-			font-size: $panel-hdr-font-size - 1;
+			font-size: rem($panel-hdr-font-size - 1);
 			display: block;
 			font-weight: 400;
 			opacity: 0.8;
@@ -67,7 +66,7 @@ $panel-edge-radius: $border-radius;
 					padding: 0;
 					width: $panel-btn-size;
 					height: $panel-btn-size;
-					font-size: $base-font-size;
+					font-size: rem($base-font-size);
 					border-color: transparent;
 
 					@include box-sizing(border-box);
@@ -136,7 +135,7 @@ $panel-edge-radius: $border-radius;
 		}
 
 		h2, h3 {
-			font-size: $panel-btn-size + 3;
+			font-size: rem($panel-btn-size + 3);
 			font-weight:400;
 		}
 
@@ -205,7 +204,7 @@ $panel-edge-radius: $border-radius;
 		&.panel {
 			.panel-hdr {
 				padding: 0 10px;
-				font-size: $panel-hdr-font-size;
+				font-size: rem($panel-hdr-font-size);
 				color: #060606;
 				min-height: $panel-hdr-height - 4;
 			}

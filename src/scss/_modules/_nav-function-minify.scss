@@ -9,7 +9,7 @@
 
 		#left-panel {
 			
-			width: rem($nav-minify-width);
+			width: $nav-minify-width;
 			z-index: $depth-header + 1;
 
 			will-change: left, right;
@@ -19,7 +19,7 @@
 			#logo {
 
 				background:$nav-minify-logo-bg;
-				width:rem($nav-minify-width);
+				width:$nav-minify-width;
 							
 				>img {
 					display: none;
@@ -35,16 +35,16 @@
 				overflow: hidden; 
 
 				#info-card {
-					height: rem($nav-width/3 + 5);
+					height: $nav-width/3 + 5;
 					width:100%;
-					padding: rem($header-height/3.4) 0;
+					padding: $header-height/3.4 0;
 					text-align:center;
 					overflow: hidden; 
 
 					.profile-image + div {
 						position: absolute;
 					    top: 0;
-					    width: rem($nav-width/1.2);
+					    width: $nav-width/1.2;
 					    text-align: left; 
 					    display: none;
 					}
@@ -69,10 +69,6 @@
 						> a {
 
 							text-align: center;
-							//padding-right: $nav-padding-left;
-
-							//padding: 0;
-
 							justify-content: center;
 							align-items: center;
 
@@ -101,13 +97,12 @@
 								position:absolute;
 								text-align: left;
 								background:$nav-minify-hover-bg;
-								padding-left: rem($nav-minify-sub-width / 10);
+								padding-left: $nav-minify-sub-width / 10;
 								color: $white;
 								top: 0;
-							    left: rem($nav-minify-width);
+							    left: $nav-minify-width;
 							    height: 100%;
-							    //line-height: rem($nav-link-height);
-							    width: rem($nav-minify-sub-width);
+							    width: $nav-minify-sub-width;
 							    font-weight:400;
 
 							}
@@ -119,14 +114,14 @@
 							// sub 1
 							& + ul {
 								position: absolute;
-								width: rem($nav-minify-sub-width);
-								left: rem($nav-minify-width);
+								width: $nav-minify-sub-width;
+								left: $nav-minify-width;
 
 								> li {
 
 									> a {
 
-										padding-left: rem($nav-minify-sub-width / 10);
+										padding-left: $nav-minify-sub-width / 10;
 
 
 										> b.collapse-sign > .fa,
@@ -138,7 +133,7 @@
 										& + ul {
 											> li {
 												> a {
-													padding-left: rem($nav-minify-sub-width / 8);
+													padding-left: $nav-minify-sub-width / 8;
 												}
 											}
 										}
@@ -194,7 +189,7 @@
 		}
 		
 		#page-wrapper {
-			padding-left: rem($nav-minify-width);
+			padding-left: $nav-minify-width;
 		}
 
 		#banner {
@@ -208,10 +203,10 @@
 
 		&.nav-function-hidden {
 			#page-wrapper {
-				padding-left: rem($nav-hidden-visiblity);
+				padding-left: $nav-hidden-visiblity;
 			}
 			#left-panel {
-				left: rem($nav-hidden-visiblity - $nav-minify-width);
+				left: $nav-hidden-visiblity - $nav-minify-width;
 				overflow: visible;
 				&:hover {
 					left: 0;
@@ -224,13 +219,13 @@
 
 		&.header-function-fixed {
 			#banner {
-				margin-left: rem($nav-minify-width);
+				margin-left: $nav-minify-width;
 			}
 		}
 
 		&.nav-function-hidden.header-function-fixed {
 			#banner {
-				margin-left: rem($nav-hidden-visiblity);
+				margin-left: $nav-hidden-visiblity;
 			}
 		}
 

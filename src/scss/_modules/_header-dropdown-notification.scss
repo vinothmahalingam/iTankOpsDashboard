@@ -65,7 +65,7 @@
 	.name {
 		color: $gray-darker;
 		font-weight: 400;
-		font-size: $base-font-size;
+		font-size: rem($base-font-size);
 	}
 
 	.msg-a,

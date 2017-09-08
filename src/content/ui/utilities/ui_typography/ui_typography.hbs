@@ -4,6 +4,7 @@
 	pagename="ui_typography" 
 	heading="Typography" 
 	category_1="UI Components" 
+	category_2="Utilities" 
 	pagedescription="Typography description"
 }}
 
@@ -21,34 +22,16 @@
 
 				<h3 class="mb-4">
 					Heading <span class="fw-300">Formats</span>
-					<small>
-						Various heading formats used within the content paramater
-					</small>
 				</h3>
 
 				<h4 class="frame-headings">
-					Basic HTML heading, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are accessible.
+					Display headings <code>.display-*{1-3}</code>
 				</h4>
 
-				<div class="frame-wrap">			
-					<div class="row">
-						<div class="col-md-6">
-							<h1>h1. Heading 1</h1>
-							<h2>h2. Heading 2</h2>
-							<h3>h3. Heading 3</h3>
-							<h4>h4. Heading 4</h4>
-							<h5>h5. Heading 5</h5>
-							<h6 class="mb-0">h6. Heading 6</h6>
-						</div>
-						<div class="col-md-6">
-							<h1 class="text-success">h1. Heading 1</h1>
-							<h2 class="text-info">h2. Heading 2</h2>
-							<h3 class="text-warning">h3. Heading 3</h3>
-							<h4 class="text-danger">h4. Heading 4</h4>
-							<h5 class="text-primary">h5. Heading 5</h5>
-							<h6 class="text-muted mb-0">h6. Heading 6</h6>
-						</div>
-					</div>
+				<div class="frame-wrap">
+					<h3 class="display-1">Display 1</h3>
+					<h3 class="display-2">Display 2</h3>
+					<h3 class="display-3 mb-0">Display 3</h3>		
 				</div>
 
 				<h4 class="frame-headings">
@@ -67,40 +50,263 @@
 				</div>
 
 				<h4 class="frame-headings">
-					Display headings <code>.display-*{1-3}</code>
+					Basic HTML heading, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are accessible.
+				</h4>
+
+				<div class="frame-wrap">			
+					<div class="row">
+						<div class="col-md-6">
+							<h1>h1. Heading 1</h1>
+							<h2>h2. Heading 2</h2>
+							<h3>h3. Heading 3</h3>
+							<h4>h4. Heading 4</h4>
+							<h5>h5. Heading 5</h5>
+							<h6 class="mb-0">h6. Heading 6</h6>
+						</div>
+						<div class="col-md-6">
+							<h1 class="text-primary">h1. Heading 1</h1>
+							<h2 class="text-success">h2. Heading 2</h2>
+							<h3 class="text-info">h3. Heading 3</h3>
+							<h4 class="text-warning">h4. Heading 4</h4>
+							<h5 class="text-danger">h5. Heading 5</h5>
+							<h6 class="text-muted mb-0">h6. Heading 6</h6>
+						</div>
+					</div>
+				</div>
+
+				<h4 class="frame-headings">
+					Lead text markup
 				</h4>
 
 				<div class="frame-wrap">
-					<h3 class="display-1">Display 1</h3>
-					<h3 class="display-2">Display 2</h3>
-					<h3 class="display-3 mb-0">Display 3</h3>		
+					
+					<p class="lead m-0">
+						Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+					</p>
+
 				</div>
 
 			</div>
 			
 		</div>
 
+		<div class="card mb-g">
+
+			<div class="card-body">
+
+				<h3 class="mb-4">
+					General <span class="fw-300">markup</span>
+				</h3>
+
+				<h4 class="frame-headings">
+					Inline text markups
+				</h4>	
+
+				<div class="frame-wrap">
+					
+					<p>You can use the mark tag to <mark>highlight</mark> text.</p>
+					<p><del>This line of text is meant to be treated as deleted text.</del></p>
+					<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+					<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+					<p><u>This line of text will render as underlined</u></p>
+					<p><small>This line of text is meant to be treated as fine print.</small></p>
+					<p><strong>This line rendered as bold text.</strong></p>
+					<p><em>This line rendered as italicized text.</em></p>
+
+				</div>
+
+				<h4 class="frame-headings">
+					Abbreviations style using <code>abbr</code> element
+				</h4>
+
+				<div class="frame-wrap">
+					<p><abbr title="attribute">attr</abbr></p>
+					<p class="m-0"><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
+				</div>
+
+				<h4 class="frame-headings">
+					Block quote
+				</h4>
+
+				<div class="frame-wrap">
+				
+					<blockquote class="blockquote">
+						<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+						<footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+					</blockquote>
+
+					<blockquote class="blockquote text-center">
+						<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+						<footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+					</blockquote>
+
+					<blockquote class="blockquote text-right">
+						<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+						<footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+					</blockquote>
+
+				</div>
+
+			</div>
+
+		</div>	
+
 	</div>
 
 	<div class="col-md-12 col-xl-6">
+
 		<div class="card mb-g">
 			
+			<div class="card-body">
+
+				<h3 class="mb-4">
+					Text <span class="fw-300">Formats</span>
+				</h3>
+
+				<div class="row">
+
+					<div class="col-sm-6">
+
+						<h4 class="frame-headings">
+							Font weights
+						</h4>	
+
+						<div class="frame-wrap">
+							<p><span>Sample text</span></p>
+							<p><span class="fw-300">Sample light text</span></p>
+							<p><span class="fw-500">Sample bold text</span></p>
+							<p><span class="fw-700">Sample bolder text</span></p>
+							<p><span class="fw-900">Sample boldest text</span></p>
+							<p><span class="fw-300"><i>Sample light & italic text</i></span></p>
+							<p class="m-0"><span class="fw-900"><u>Sample boldest & underline text</u></span></p>
+						</div>	
+
+					</div>
+
+					<div class="col-sm-6">
+
+						<h4 class="frame-headings">
+							Font colors
+						</h4>
+						<div class="frame-wrap">
+							<p><span class="text-primary">Primary state text</span></p>
+							<p><span class="text-success">Success state text</span></p>
+							<p><span class="text-warning">Warning state text</span></p>
+							<p><span class="text-info">Info state text</span></p>
+							<p><span class="text-danger">Danger state text</span></p>
+							<p><span>Normal state text</span></p>
+							<p class="m-0"><span class="text-muted">Muted state text</span></p>
+							
+						</div>
+
+					</div>
+
+					<div class="col-sm-12">
+						
+						<h4 class="frame-headings">
+							Font sizes <code>fs-xxl</code> <code>fs-xl</code> <code>fs-lg</code> <code>fs-md</code> <code>fs-sm</code> <code>fs-xs</code> <code>fs-nano</code>
+						</h4>
+
+						<div class="frame-wrap d-flex flex-row align-items-center justify-content-center">
+							<span class="fs-xxl p-3">
+								.fs-xxl
+							</span>	
+							<span class="fs-xl p-3">
+								.fs-xl
+							</span>	
+							
+							<span class="fs-lg p-3">
+								.fs-lg
+							</span>	
+							<span class="fs-md p-3">
+								.fs-md
+							</span>	
+							<span class="fs-sm p-3">
+								.fs-sm
+							</span>	
+							<span class="fs-xs p-3">
+								.fs-xs
+							</span>		
+							<span class="fs-nano p-3">
+								.fs-nano
+							</span>					
+						</div>					
+
+					</div>
+
+				</div>
+	
+
+			</div>
+
 		</div>
+
+		<div class="card mb-g">
+			
+			<div class="card-body">
+				
+				<h3 class="mb-4">
+					Link <span class="fw-300">States</span>
+				</h3>
+
+				<h4 class="frame-headings">
+					Basic links
+				</h4>
+
+				<div class="frame-wrap">
+
+					<div class="row">
+						<div class="col-sm-6">
+							<p><a href="#"><span>Sample text</span></a></p>
+							<p><a href="#"><span class="fw-300">Sample light text</span></a></p>
+							<p><a href="#"><span class="fw-500">Sample bold text</span></a></p>
+							<p><a href="#"><span class="fw-700">Sample bolder text</span></a></p>
+							<p class="m-0"><a href="#" class="linky"><span class="fw-900">Sample boldest text</span></a></p>
+						</div>
+						<div class="col-sm-6">
+							<p><a href="#" class="disabled"><span>Sample text</span></a></p>
+							<p><a href="#" class="disabled"><span class="fw-300">Sample light text</span></a></p>
+							<p><a href="#" class="disabled"><span class="fw-500">Sample bold text</span></a></p>
+							<p><a href="#" class="disabled"><span class="fw-700">Sample bolder text</span></a></p>
+							<p class="m-0"><a href="#"  class="disabled"><span class="fw-900">Sample boldest text</span></a></p>
+						</div>
+					</div>
+				</div>
+
+				<h4 class="frame-headings">
+					State colors
+				</h4>
+
+				<div class="frame-wrap">
+
+					<div class="row">
+						<div class="col-sm-6">
+							<p><a href="#" class="text-primary">Primary state</a></p>
+							<p><a href="#" class="text-success">Success state</a></p>
+							<p><a href="#" class="text-warning">Warning state</a></p>
+							<p><a href="#" class="text-info">Info state</a></p>
+							<p><a href="#" class="text-danger">Danger state</a></p>
+							<p><a href="#" class="text-secondary">Secondary state</a></p>
+							<p><a href="#" class="text-muted">Muted state</a></p>
+						</div>
+						<div class="col-sm-6">
+							<p><a href="#" class="text-primary disabled">Primary state</a></p>
+							<p><a href="#" class="text-success disabled">Success state</a></p>
+							<p><a href="#" class="text-warning disabled">Warning state</a></p>
+							<p><a href="#" class="text-info disabled">Info state</a></p>
+							<p><a href="#" class="text-danger disabled">Danger state</a></p>
+							<p><a href="#" class="text-secondary disabled">Secondary state</a></p>
+							<p><a href="#" class="text-muted disabled">Muted state</a></p>							
+						</div>
+					</div>
+				</div>			
+
+			</div>
+
+		</div>
+
 	</div>
 
-</div>
-
-<div class="row">
-	<div class="col-md-12 col-xl-6">
-		<div class="card mb-g">
-			
-		</div>
-	</div>
-	<div class="col-md-12 col-xl-6">
-		<div class="card mb-g">
-			
-		</div>
-	</div>
 </div>
 
 {{/inline}}

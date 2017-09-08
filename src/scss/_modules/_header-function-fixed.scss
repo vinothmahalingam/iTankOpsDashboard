@@ -13,7 +13,7 @@
 		}
 
 		#content {
-			margin-top: rem($header-height);
+			margin-top: $header-height;
 		}
 
 
@@ -26,18 +26,17 @@
 		&:not(.nav-function-fixed) {
 
 			#logo {
-				width:rem($nav-width);
+				width:$nav-width;
 				position:fixed;
 				top:0;
 				z-index: $cloud;
-				//border-bottom-width: 0;
 
 				@extend %fixed-header-shadow;
 			}
 
 			#left-panel {
 				#primary-nav {
-					margin-top:rem($header-height);
+					margin-top:$header-height;
 				}
 			}
 
@@ -59,13 +58,13 @@
 		&:not(.nav-function-top) {
 
 			#banner {
-				margin-left: rem($nav-width);
+				margin-left: $nav-width;
 			}
 
 			&.nav-function-minify {
 				#left-panel {
 					#logo {
-						width:rem($nav-minify-width);
+						width:$nav-minify-width;
 					}
 				}
 			}
@@ -80,7 +79,7 @@
 					left: 0;
 				}
 				#page-wrapper {
-					padding-top: rem($header-height + $nav-top-height);
+					padding-top: $header-height + $nav-top-height;
 				}
 
 				&.nav-function-minify {
@@ -88,7 +87,7 @@
 						top: $nav-top-minify-height;
 					}
 					#page-wrapper {
-						padding-top: rem($header-height + $nav-top-minify-height);
+						padding-top: $header-height + $nav-top-minify-height;
 					}
 				}
 			}

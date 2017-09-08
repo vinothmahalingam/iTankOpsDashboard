@@ -2,8 +2,8 @@ ul.app-list {
 	margin:0 auto;
 	padding:0;
 	display: block;
-	width: rem($header-applist-rows-width) !important;
-	height: rem($header-applist-rows-height) !important;
+	width: $header-applist-rows-width !important;
+	height: $header-applist-rows-height !important;
 	font-size:0; //removes wierd spacing
 	padding: $header-applist-box-padding-x $header-applist-box-padding-y;
 	text-align: center;
@@ -20,12 +20,12 @@ ul.app-list {
 		}
 
 		> a {
-			height:rem($header-applist-link-block-height);
-			width:rem($header-applist-link-block-width);
+			height:$header-applist-link-block-height;
+			width:$header-applist-link-block-width;
 			display: block;
 			text-decoration: none;
 			color:$base-text-color;
-			margin: rem(10px) rem(2px);
+			margin: 10px 2px;
 			border:1px solid transparent;
 			outline: none;
 			@include rounded(2px);

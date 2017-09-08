@@ -1,11 +1,11 @@
-footer,
+.footer,
 .footer-push {
-    height: rem($footer-height);
+    height: $footer-height;
     display: block;
     width: 100%;
 }
 
-footer {
+.footer {
 	position: absolute;
 	display: flex;
 	align-items:center;
@@ -18,10 +18,10 @@ footer {
 
 	.footer-logo {
 	    background: $primary-500;
-	    padding: rem(2px);
-	    width: rem(22px);
-	    height: rem(22px);
-	    margin-right: rem(5px);
+	    padding: 2px;
+	    width: 22px;
+	    height: 22px;
+	    margin-right: 5px;
 	}
 
 	& + .footer-push {
@@ -42,18 +42,18 @@ footer {
 
 @include media-breakpoint-up(lg) {
 
-	footer {
+	.footer {
 		width: calc(100% - #{$nav-width});
 	}
 
 	.nav-function-minify {
-		footer {
+		.footer {
 			width: calc(100% - #{$nav-minify-width});
 		}	
 	}
 
 	.nav-function-hidden {
-		footer {
+		.footer {
 			width: calc(100% - #{$nav-hidden-visiblity});
 		}
 	}

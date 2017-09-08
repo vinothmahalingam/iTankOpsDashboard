@@ -87,7 +87,7 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 			&:not(.nav-function-top):not(.nav-function-hidden):not(.nav-function-minify) {
 				#page-wrapper {
 					#banner {
-						padding-left:rem($nav-width + $grid-gutter-width-base/2);
+						padding-left:$nav-width + $grid-gutter-width-base/2;
 					}
 				}
 			}
@@ -95,7 +95,7 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 			&.nav-function-minify:not(.nav-function-top):not(.nav-function-hidden) {
 				#page-wrapper {
 					#banner {
-						padding-left:rem($nav-minify-width + $grid-gutter-width-base/2);
+						padding-left:$nav-minify-width + $grid-gutter-width-base/2;
 					}
 				}
 			}
@@ -164,12 +164,11 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 							position:fixed;
 							top:0;
 							z-index: $cloud;
-							//border-bottom-width: 0;
-							@include box-shadow(0 rem(2px) rem(2px) rem(-1px) rgba(0,0,0,.1));
+							@include box-shadow(0 2px 2px -1px rgba(0,0,0,.1));
 						}
 
 						#primary-nav {
-							margin-top:rem($header-height);
+							margin-top: $header-height;
 						}
 					}
 

@@ -3,14 +3,14 @@
 
 		&:first-child {
 			td {
-				height:rem(100px);
+				height: 100px;
 				box-shadow: inset 0 -5px 0 rgba(255,255,255,0.8);
 			}
 		}
 		td {
 			border:none;
-			padding-top: rem(7px);
-			padding-bottom: rem(7px);
+			padding-top: 7px;
+			padding-bottom: 7px;
 
 			@extend %common-animation;
 

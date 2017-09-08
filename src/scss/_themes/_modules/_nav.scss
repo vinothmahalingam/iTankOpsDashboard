@@ -70,7 +70,7 @@
 			&:focus {
 				@include text-contrast( rgba(darken($nav-base-color, 5% ), (50/100)) );
 				background-color: rgba(darken($nav-base-color, 5% ), (50/100));
-				@include box-shadow(inset rem(3px) 0 0 rgba($color-primary, (40/100)));
+				@include box-shadow(inset 3px 0 0 rgba($color-primary, (40/100)));
 
 				.badge {
 					color: $nav-badge-color;
@@ -89,7 +89,7 @@
 					a {
 						@include text-contrast(rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)))
 						background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100));
-						@include box-shadow(inset rem(3px) 0 0 rgba($color-primary, (50/100)) );
+						@include box-shadow(inset 3px 0 0 rgba($color-primary, (50/100)) );
 
 						> .navigation-link-text {
 							>.fa,
@@ -135,7 +135,7 @@
 						@include text-contrast(rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)));
 						background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100));
 						
-						@include box-shadow(inset rem(3px) 0 0 rgba($color-primary, (50/100)) );
+						@include box-shadow(inset 3px 0 0 rgba($color-primary, (50/100)) );
 
 						> .navigation-link-text {
 							>.fa,
@@ -164,7 +164,7 @@
 								
 								background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100));
 								@include text-contrast( rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)) )
-								@include box-shadow( inset rem(3px) 0 0 rgba($color-primary, (40/100)) );
+								@include box-shadow( inset 3px 0 0 rgba($color-primary, (40/100)) );
 							}
 
 							> .badge {
@@ -178,7 +178,7 @@
 						&.active {
 							> a {
 								background-color: darken($nav-base-color, 13%);
-								@include box-shadow(inset rem(3px) 0 0 darken($nav-base-color, 13%));
+								@include box-shadow(inset 3px 0 0 darken($nav-base-color, 13%));
 							}
 						}
 					}

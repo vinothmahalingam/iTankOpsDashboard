@@ -2,10 +2,10 @@
 
 	.nav-function-hidden:not(.nav-function-top) {
 		#page-wrapper {
-			padding-left: rem($nav-hidden-visiblity);
+			padding-left: $nav-hidden-visiblity;
 		}
 		#left-panel {
-			left: rem($nav-hidden-visiblity - $nav-width);
+			left: $nav-hidden-visiblity - $nav-width;
 			z-index: $depth-header + 1;
 			transition: $nav-hide-animate;
 
@@ -41,7 +41,7 @@
 
 	.nav-function-hidden.header-function-fixed:not(.nav-function-top) {
 		#banner {
-			margin-left: rem($nav-hidden-visiblity); 
+			margin-left: $nav-hidden-visiblity; 
 		}
 	}
 	

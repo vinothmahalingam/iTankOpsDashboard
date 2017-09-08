@@ -16,12 +16,12 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 		&.display-right-panel {
 			[data-class=display-right-panel] {
-				top:rem($nav-top-height);
+				top: $nav-top-height;
 				transition: $nav-hide-animate;
 			}
 			&.nav-function-minify {
 				[data-class=display-right-panel] {
-					top:rem($nav-top-minify-height);
+					top: $nav-top-minify-height;
 				}
 			}
 		}
@@ -79,10 +79,10 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 		}
 
 		#page-wrapper {
-			padding-top:rem($nav-top-height);
+			padding-top:$nav-top-height;
 			padding-left:0;
 
-			footer {
+			.footer {
 				width: 100%;
 			}
 		}
@@ -186,7 +186,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 						ul {
 							display: none !important;
-							width: rem($nav-width - 35); 
+							width: $nav-width - 35; 
 							position: absolute;
 							box-shadow: 0 2px 3px rgba(0,0,0,0.15);
 
@@ -350,16 +350,16 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 			&.display-right-panel:not(.mod-main-boxed) {
 				[data-class=display-right-panel] {
-					top:rem($nav-top-minify-height);
+					top:$nav-top-minify-height;
 				}
 			}
 
 			#left-panel {
-				height: rem($nav-top-minify-height);
+				height: $nav-top-minify-height;
 
 				#logo {
 					width: auto !important;
-					height: rem($nav-top-minify-height);
+					height: $nav-top-minify-height;
 					padding: 0 5px;			
 
 					> img {
@@ -381,8 +381,8 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 							> a {
 
-								min-width:rem($nav-top-minify-height);
-								height: rem($nav-top-minify-height);
+								min-width:$nav-top-minify-height;
+								height: $nav-top-minify-height;
 								padding-top:23% !important;
 
 								> .navigation-link-text {
@@ -391,7 +391,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 								}
 
 								> .badge {
-									left:rem(24px);
+									left:24px;
 								}
 
 							}

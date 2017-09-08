@@ -8,25 +8,25 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 	background-color: $header-bg;
 	border-bottom: 1px solid $header-border-bottom-color;
 	display: block;
-	height: rem($header-height);
+	height: $header-height;
 	position: relative;
 	z-index: $depth-header;
 
 	ul.list-table {
-		height: rem($header-height);
+		height: $header-height;
 
 		> li {
 
 			 > a {
 				color: $base-text-color;
-				height: rem($header-height);
+				height: $header-height;
 			    display: block;
-			    line-height: rem($header-height);
-			    padding: $list-table-padding-y rem($list-table-padding-x);
+			    line-height: $header-height;
+			    padding: $list-table-padding-y $list-table-padding-x;
 			    text-decoration: none;
 
 				&:not(.btn) {
-					min-width: rem($header-non-btn-width);
+					min-width: $header-non-btn-width;
 					text-align: center;
 					overflow: visible;
 
@@ -48,8 +48,8 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 			   			@include box-shadow(0 0 0 1px $header-bg);
 			   			cursor: default;
 						border-color: transparent;
-						left: ($header-badge-left);
-						top: ($header-badge-top);
+						left: $header-badge-left;
+						top: $header-badge-top;
 						font-size: rem(10px);
 						font-weight: 500;
 						height: ($header-badge-min-width); 
@@ -107,9 +107,9 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 								border-color: transparent;
 								border-bottom-color: $white;
 								border-style: dashed dashed solid;
-								border-width: 0 rem(8.5px) rem(8.5px);
+								border-width: 0 8.5px 8.5px;
 								position: absolute;
-								right: rem($header-non-btn-width/3);
+								right: $header-non-btn-width/3;
 								bottom: 0;
 								z-index: 1;
 								height: 0;

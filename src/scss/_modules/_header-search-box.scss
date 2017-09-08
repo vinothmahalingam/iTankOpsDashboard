@@ -14,8 +14,8 @@
 		}
 
 		#search-field {
-			width: rem($header-search-width - 50px);
-			height: rem($header-search-height);
+			width: $header-search-width - 50px;
+			height: $header-search-height;
 			line-height: normal;
 			border-radius: $header-btn-border-radius;
 			background: $header-search-bg;
@@ -23,7 +23,6 @@
 			box-shadow: none;
 			font-size: rem($header-search-font-size);
 			padding: $header-search-padding;
-			//font-family: $page-font, $icon-font-family;
 		}
 	}
 }
@@ -34,7 +33,7 @@
 	.search{
 		.app-forms {
 			#search-field {
-				width: rem($header-search-width);
+				width: $header-search-width;
 			}
 		}
 	}
