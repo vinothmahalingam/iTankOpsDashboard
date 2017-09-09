@@ -1,0 +1,42 @@
+/* bootstrap override table stripe */
+.table {
+	&.table-striped:not(.table-bordered) {
+		th, 
+		tbody th,
+		tbody td {
+			 border: 0;
+		}
+	}
+
+	thead[class^="bg-"] tr > th,
+	thead[class*=" bg-"] tr > th {
+		border-top: 0;
+		border-bottom: 0; 	
+	}
+
+	tr[class^="bg-"] > td,
+	tr[class^="bg-"] > th,
+	tr[class*=" bg-"] > td,
+	tr[class*=" bg-"] > th {
+		border-top:0 !important;
+	}
+}
+
+.thead-themed {
+	@include gradient-img(#f2f2f2,#fafafa)
+}
+
+.table-bordered {
+	&[class*=" bg-"],
+	&[class*=" bg-"] td,
+	&[class*=" bg-"] th,
+	&[class^="bg-"],
+	&[class^="bg-"] td,
+	&[class^="bg-"] th {
+		border: 1px solid rgba(255,255,255,0.1);
+	}
+}
+/* reset table (global) */
+th {
+    font-weight: 500;
+}

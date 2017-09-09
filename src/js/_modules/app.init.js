@@ -56,6 +56,10 @@ var initApp = (function(app) {
 			/* fire the above change event after every letter is typed with a delay of 250ms */
 		 	$(this).change()
 
+		 	/*if(e.keyCode == 13) {
+				console.log( $(list).find(".filter-show:not(.filter-hide) > a") );
+			}*/
+
 		}));
 	}
 
@@ -479,10 +483,15 @@ var initApp = (function(app) {
 			disableFadeOut: false
 		 **/
 		if ( typeof $.fn.slimScroll !== 'undefined' && myapp_config.thisDevice === 'desktop') {
+
 			$('.custom-scroll >:first-child').slimscroll({
 				height: '100%',
 				distance: '0'
-			})
+			});
+
+			if (myapp_config.debugState)
+				console.log( 'slimscroll plugin active' );
+
 		} else {
 			console.log("warning: $.fn.slimScroll not or user is on desktop");
 			myapp_config.root_.addClass("no-slimscroll");
@@ -860,7 +869,7 @@ var initApp = (function(app) {
 
 		/**
 		 * Windows mobile 8 fix ~
-		 * doc: bootstrap related
+		 * DOC: bootstrap related
 		 **/
 		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 			var msViewportStyle = document.createElement('style')
@@ -871,6 +880,13 @@ var initApp = (function(app) {
 			)
 			document.head.appendChild(msViewportStyle)
 		}
+
+		/**
+		 * Display APP version
+		 * DOC: only show this if debug state tree
+		 **/
+		 if (myapp_config.debugState)
+			console.log("Finished app.init() v" + myapp_config.VERSION + '\n' + "---------------------------");		
 	};
 
 	/**

@@ -4,6 +4,10 @@
 //--------------------------------------------------------------------------
 var myapp_config = {
     /*
+       APP VERSION
+     */
+    VERSION: '1.0.0',
+    /*
        SAVE INSTANCE REFERENCE
        Save a reference to the global object (window in the browser)
      */

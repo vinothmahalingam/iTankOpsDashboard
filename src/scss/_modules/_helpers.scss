@@ -56,30 +56,23 @@
 	padding: $grid-gutter-width-base/1.5 !important;
 }
 
-/* data elipsis */
-[data-elipsis="xs"] span,
-[data-elipsis="sm"] span,
-[data-elipsis="md"] span,
-[data-elipsis="default"] span,
-[data-elipsis="lg"] span {
-	text-overflow: ellipsis;
-	display: inline-block;
-	white-space: nowrap;
-	overflow: hidden;
-	vertical-align: text-bottom;
+.text-truncate-header {
+	max-width:  map-get($grid-gutter-widths, xl) + 73px;
 }
-
-[data-elipsis="xs"] span { max-width:  map-get($grid-gutter-widths, xl) + 73px }
-[data-elipsis="sm"] span { max-width: 117px }
-[data-elipsis="md"] span { max-width: 160px }
-[data-elipsis="default"] span { max-width: 180px }
-[data-elipsis="lg"] span { max-width: 200px }
-[data-elipsis] {
-	> i {
-		vertical-align: text-bottom;
-		height: $header-height;
-		line-height: $header-height;
-	}
+.text-truncate-xs {
+	max-width:  73px;
+}
+.text-truncate-sm {
+	max-width: 117px;
+}
+.text-truncate-md {
+	max-width: 160px
+}
+.text-truncate-default {
+	max-width: 180px
+}
+.text-truncate-lg {
+	max-width: 200px
 }
 
 /* HELPERS */

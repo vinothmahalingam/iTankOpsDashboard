@@ -6,7 +6,7 @@
 	 **/
 	'use strict';
 
-	var classHolder = document.getElementById('index'),
+	var classHolder = document.getElementsByTagName("BODY")[0],
 	/** 
 	 * Load from localstorage
 	 **/
@@ -20,7 +20,7 @@
 		classHolder.className = themeSettings.themeOptions;
 		console.log("Theme settings loaded")
 	} else {
-		console.log("ALERT! Theme settings is empty or does not exist, loading default settings...");
+		console.log("Heads up! Theme settings is empty or does not exist, loading default settings...");
 	}
 	if (themeSettings.themeURL && !document.getElementById('mytheme') ) {
 		var cssfile  = document.createElement('link');

@@ -304,18 +304,22 @@ ul.list-verticle {
 }
 
 /* display frame */
+.frame-heading {
+	font-size: $base-font-size;
+	font-weight: 700;
+	margin-bottom: $grid-gutter-width-base/3;
+
+	color: lighten($fusion-50, 7%);
+
+	small {
+		font-size: rem($base-font-size);
+	}
+}
 .frame-wrap {
 	background: white;
 	border: 4px solid  darken($frame-border-color, 1%);
 	padding: 20px;
 	margin-bottom: 30px;
-}
-.frame-headings {
-	font-size: $base-font-size;
-	font-weight: 500;
-	margin-bottom: $grid-gutter-width-base/3;
-
-	color: lighten($fusion-50, 7%);
 }
 .card-body > .frame-wrap:last-child {
 	margin-bottom:0 !important;

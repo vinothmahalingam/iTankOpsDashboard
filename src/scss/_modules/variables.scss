@@ -198,10 +198,14 @@ $border-radius-lg:                  $border-radius;
 $border-radius-sm:									$border-radius;
 
 /* bootstrap tables */
-$table-inverse-bg:									$fusion-400;
+$table-border-color:                darken($gray-lighter, 5%);
+
 $table-hover-bg:									  rgba($fusion-300,.035);
-$table-border-color:								darken($gray-lighter, 5%);
-$table-accent-bg:               		rgba($black,.02);
+$table-accent-bg:               		rgba($black,.04);
+
+$table-inverse-bg:                  $fusion-600;
+$table-inverse-accent-bg:           rgba($white, .05);
+$table-inverse-hover-bg:            $primary-500;
 
 /* tooltip */
 $tooltip-bg:                        $primary-600;
