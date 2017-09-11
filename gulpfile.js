@@ -1,12 +1,18 @@
-var gulp = require('gulp'), 
-    requireDir = require('require-dir'),
-    connect = require('gulp-connect'),
-    config = require('./build/config');
+"use strict";
 
-// load all tasks from the tasks dir
+var gulp = require('gulp'); 
+var requireDir = require('require-dir');
+var connect = require('gulp-connect');
+var config = require('./build/config');
+
+/**
+ * load all tasks from the tasks dir
+ */
 requireDir('./build/tasks/');
 
-// run and watch file changes
+/**
+ * run and watch file changes
+ */
 gulp.task('watch', function() {
     // watch `.scss` changes
     gulp.watch(['./src/**/*.scss'], ['compile-sass','cssnano'])
@@ -25,7 +31,10 @@ gulp.task('watch', function() {
     });
 });
 
-// task registery
+// 
+/**
+ * task registery
+ */
 gulp.task('default', ['compile-sass', 'cssnano', 'compile-app-core', 'connect', 'watch']);
 gulp.task('build-sass', ['compile-sass', 'cssnano', 'connect', 'compile-html', 'watch']);
 gulp.task('build', ['compile-sass', 'cssnano', 'compile-app-core', 'compile-app-core-plugins', 'connect', 'compile-html', 'img-min', 'copy-cust-fonts', 'copy-cust-plugins', 'copy-bower-files', 'copy-favicon', 'copy-video', 'copy-lang', 'watch']);
