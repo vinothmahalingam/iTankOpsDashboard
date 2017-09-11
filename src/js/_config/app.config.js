@@ -19,7 +19,7 @@ var myapp_config = {
        window height is only updated during window resize
      */
     windowHeight: $(window).height(),
-    navHeightGap: ( $('#nav-footer').height() || 0 ) + $('header').height() + 1,
+    navHeightGap: ( $('#left-panel .nav-footer').height() || 0 ) + $('header').height() + 1,
     /*
        DELAY VAR FOR FIRING REPEATED EVENTS (eg., scroll & resize events)
        Lowering the variable makes faster response time but taxing on the CPU
