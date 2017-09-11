@@ -12,150 +12,6 @@
 {{#*inline "content-block"}}
 
 <div class="row">
-
-	<div class="col-sm-12">
-
-		<div class="card mb-g">
-
-			<div class="card-body">
-
-				<h3 class="mb-4">
-					Table <span class="fw-300">Layout Generator </span>
-				</h3>
-
-				<h4 class="frame-heading">
-					Play with settings below to generate various table layouts
-				</h4>
-
-				<div class="frame-wrap bg-faded">
-
-					<label class="custom-control custom-checkbox mb-0">
-					  <input type="checkbox" class="custom-control-input" id="bordered" data-class="table-bordered">
-					  <span class="custom-control-indicator"></span>
-					  <span class="custom-control-description">Bordered Table</span>
-					</label>
-					<label class="custom-control custom-checkbox mb-0">
-					  <input type="checkbox" class="custom-control-input" id="smaller" data-class="table-sm">
-					  <span class="custom-control-indicator"></span>
-					  <span class="custom-control-description">Smaller Table</span>
-					</label>
-					<label class="custom-control custom-checkbox mb-0">
-					  <input type="checkbox" class="custom-control-input" id="inverse" data-class="table-inverse">
-					  <span class="custom-control-indicator"></span>
-					  <span class="custom-control-description">Table Inverse</span>
-					</label>
-					<label class="custom-control custom-checkbox mb-0">
-					  <input type="checkbox" class="custom-control-input" id="hover" data-class="table-hover">
-					  <span class="custom-control-indicator"></span>
-					  <span class="custom-control-description">Table Hover</span>
-					</label>
-					<label class="custom-control custom-checkbox mb-0">
-					  <input type="checkbox" class="custom-control-input" id="stripe" data-class="table-striped">
-					  <span class="custom-control-indicator"></span>
-					  <span class="custom-control-description">Table Stripped</span>
-					</label>
-					
-				</div>
-
-				<h4 class="frame-heading">
-					Generated preview
-				</h4>
-				<div class="frame-wrap p-0 border-0 m-0">
-
-					<table class="table m-0 table-bordered" id="table-example">
-
-					  <thead>
-					    <tr>
-					      <th>Client</th>
-					      <th>Email</th>
-					      <th>Phone</th>
-					      <th>Company</th>
-					      <th>City</th>
-					    </tr>
-					  </thead>
-						<tfoot>
-							<tr>
-						      <td colspan="5">
-
-								<div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
-								  <div class="btn-group" role="group" aria-label="First group">
-								    <button type="button" class="btn btn-default active">1</button>
-								    <button type="button" class="btn btn-default">2</button>
-								    <button type="button" class="btn btn-default">3</button>
-								    <button type="button" class="btn btn-default">4</button>
-								    <button type="button" class="btn btn-default">5</button>
-								    <button type="button" class="btn btn-default">6</button>
-								  </div>
-								</div>
-
-						      </td>
-							</tr>
-						</tfoot>
-						<tbody>
-							<tr>
-							  <td>Inga</td>
-							  <td>metus.Aliquam@ametlorem.ca</td>
-							  <td>1-318-627-3874</td>
-							  <td>Montes Industries</td>
-							  <td>Dolgellau</td>
-							</tr>
-							<tr>
-							  <td>Price</td>
-							  <td>nec.enim.Nunc@facilisis.net</td>
-							  <td>1-963-499-3886</td>
-							  <td>Risus Quisque Inc.</td>
-							  <td>Cascavel</td>
-							</tr>
-							<tr>
-							  <td>Jeanette</td>
-							  <td>non@afeugiattellus.co.uk</td>
-							  <td>1-133-240-5173</td>
-							  <td>Quis Diam Corporation</td>
-							  <td>Springdale</td>
-							</tr>
-							<tr>
-							  <td>Randall</td>
-							  <td>dignissim.magna.a@ipsum.co.uk</td>
-							  <td>1-859-866-0345</td>
-							  <td>Mauris Blandit Associates</td>
-							  <td>Patarrá</td>
-							</tr>
-							<tr>
-							  <td>Roanna</td>
-							  <td>nascetur.ridiculus@fermentumvel.co.uk</td>
-							  <td>1-289-706-6780</td>
-							  <td>Non Enim Commodo Incorporated</td>
-							  <td>New Galloway</td>
-							</tr>
-							<tr>
-							  <td>Macaulay</td>
-							  <td>Fusce@egestasligulaNullam.ca</td>
-							  <td>1-726-644-6609</td>
-							  <td>Et LLC</td>
-							  <td>Sandy</td>
-							</tr>
-							<tr>
-							  <td>Chiquita</td>
-							  <td>luctus@metuseuerat.edu</td>
-							  <td>1-258-865-1127</td>
-							  <td>Cursus Consulting</td>
-							  <td>Masterton</td>
-							</tr>
-						</tbody>
-
-					</table>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</div>
-
-</div>
-
-<div class="row">
 	
 	<div class="col-md-6">
 		
@@ -174,7 +30,7 @@
 					</small>
 				</h4>
 				<div class="frame-wrap border-0 p-0">
-					<table class="table">
+					<table class="table m-0">
 					  <thead>
 					    <tr>
 					      <th>#</th>
@@ -202,6 +58,11 @@
 					      <td>the Bird</td>
 					      <td>@twitter</td>
 					    </tr>
+						<tr>
+					      <th scope="row">4</th>
+					      <td colspan="2">Larry the Bird</td>
+					      <td>@twitter</td>
+					    </tr>
 					  </tbody>
 					</table>
 				</div>
@@ -213,7 +74,7 @@
 					</small>
 				</h4>
 				<div class="frame-wrap border-0 p-0">
-					<table class="table table-inverse">
+					<table class="table table-inverse m-0">
 					  <thead>
 					    <tr>
 					      <th>#</th>
@@ -265,7 +126,7 @@
 				</h4>
 
 				<div class="frame-wrap border-0 p-0">
-					<table class="table">
+					<table class="table m-0">
 					  <thead class="thead-inverse">
 					    <tr>
 					      <th>#</th>
@@ -287,6 +148,12 @@
 					      <td>Thornton</td>
 					      <td>@fat</td>
 					    </tr>
+					    <tr>
+					      <th scope="row">3</th>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					    </tr>
 					  </tbody>
 					</table>
 				</div>
@@ -298,7 +165,7 @@
 					</small>
 				</h4>
 				<div class="frame-wrap border-0 p-0">
-					<table class="table">
+					<table class="table m-0">
 					  <thead class="bg-fusion-50">
 					    <tr>
 					      <th>#</th>
@@ -320,16 +187,21 @@
 					      <td>Thornton</td>
 					      <td>@fat</td>
 					    </tr>
+					    <tr>
+					      <th scope="row">3</th>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					    </tr>
 					  </tbody>
 					</table>
 				</div>
-
 
 				<h4 class="frame-heading">
 					Default <code>.thead-default</code>
 				</h4>
 				<div class="frame-wrap border-0 p-0">
-					<table class="table">
+					<table class="table m-0">
 					  <thead class="thead-default">
 					    <tr>
 					      <th>#</th>
@@ -351,6 +223,12 @@
 					      <td>Thornton</td>
 					      <td>@fat</td>
 					    </tr>
+					    <tr>
+					      <th scope="row">3</th>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					    </tr>
 					  </tbody>
 					</table>
 				</div>	
@@ -359,7 +237,7 @@
 					Themed <code>.thead-themed</code>
 				</h4>
 				<div class="frame-wrap border-0 p-0">
-					<table class="table">
+					<table class="table m-0">
 					  <thead class="thead-themed">
 					    <tr>
 					      <th>#</th>
@@ -380,6 +258,12 @@
 					      <td>Jacob</td>
 					      <td>Thornton</td>
 					      <td>@fat</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">3</th>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
 					    </tr>
 					  </tbody>
 					</table>
@@ -406,7 +290,7 @@
 
 				<div class="frame-wrap border-0 p-0">
 					
-					<table class="table table-striped">
+					<table class="table table-striped m-0">
 					  <thead>
 					    <tr>
 					      <th>#</th>
@@ -448,7 +332,7 @@
 
 				<div class="frame-wrap border-0 p-0">
 
-					<table class="table table-striped table-inverse">
+					<table class="table table-striped table-inverse m-0">
 					  <thead>
 					    <tr>
 					      <th>#</th>
@@ -505,7 +389,7 @@
 				</h4>
 
 				<div class="frame-wrap border-0 p-0">
-					<table class="table table-bordered">
+					<table class="table table-bordered m-0">
 					  <thead>
 					    <tr>
 					      <th>#</th>
@@ -562,7 +446,47 @@
 				</h4>
 				<div class="frame-wrap border-0 p-0">
 
-					<table class="table table-bordered table-hover">
+					<table class="table table-bordered table-hover m-0">
+						<thead class="thead-themed">
+						<tr>
+					  		<th>#</th>
+					  		<th>First Name</th>
+					  		<th>Last Name</th>
+					  		<th>Username</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+					      	<th scope="row">1</th>
+					      	<td>Jhon</td>
+					      	<td>Stone</td>
+					      	<td>@jhon</td>
+						</tr>
+						<tr>
+					  		<th scope="row">2</th>
+					  		<td>Lisa</td>
+					  		<td>Nilson</td>
+					  		<td>@lisa</td>
+						</tr>
+						<tr>
+					  		<th scope="row">3</th>
+					  		<td>Larry</td>
+					  		<td>the Bird</td>
+					  		<td>@twitter</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<h4 class="frame-heading">
+					Inverse table hover
+					<small>
+						This is inverse hover with <code>.thead-themed</code> as header
+					</small>
+				</h4>
+				<div class="frame-wrap border-0 p-0">
+
+					<table class="table table-bordered table-hover table-inverse m-0">
 						<thead class="thead-themed">
 						<tr>
 					  		<th>#</th>
@@ -615,7 +539,7 @@
 
 				<div class="frame-wrap border-0 p-0">
 
-					<table class="table">
+					<table class="table m-0">
 					  	<thead>
 					    	<tr>
 					      		<th>#</th>
@@ -685,7 +609,7 @@
 					</small>
 				</h4>
 				<div class="frame-wrap border-0 p-0">
-					<table class="table table-sm">
+					<table class="table table-sm m-0">
 					  <thead class="bg-primary-500">
 					    <tr>
 					      <th>#</th>
@@ -725,7 +649,7 @@
 
 				<div class="frame-wrap border-0 p-0">
 
-					<table class="table table-sm bg-info-900 table-bordered">
+					<table class="table table-sm bg-info-900 table-bordered m-0">
 					  <thead class="bg-info-500">
 					    <tr>
 					      <th>#</th>
@@ -779,7 +703,7 @@
 
 				<div class="frame-wrap border-0 p-0">
 
-					<table class="table table-bordered table-responsive">
+					<table class="table table-bordered table-responsive m-0">
 					    <thead>
 					      <tr>
 					        <th>#</th>
@@ -834,18 +758,6 @@
 
 {{/inline}}
 
-{{#*inline "scripts-block"}}
-
-<script>
-$('input:checkbox').change(function(){
-    if($(this).is(":checked")) {
-        $('#table-example').addClass( $(this).attr("data-class") );
-    } else {
-        $('#table-example').removeClass( $(this).attr("data-class") );
-    }
-});
-</script>
-
-{{/inline}}
+{{#*inline "scripts-block"}}{{/inline}}
 
 {{/layouts/main}}

@@ -31,8 +31,8 @@
                     </small>
                 </h3>
 
-                <table class="table table-hover table-bordered bg-white m-0">
-                    <thead>
+                <table class="table table-hover table-bordered m-0">
+                    <thead class="thead-themed">
                         <tr>
                             <th>
                                 Try
@@ -294,8 +294,8 @@
                     </small>
                 </h3>
 
-                <table class="table table-hover table-bordered bg-white m-0">
-                    <thead>
+                <table class="table table-hover table-bordered m-0">
+                    <thead class="thead-themed">
                         <tr>
                             <th>
                                 Action
@@ -391,7 +391,7 @@
 var myapp_config = {
     root_: $('body'),
     windowHeight: $(window).height(),
-    navHeightGap: ($('#nav-footer').height() || 0) + $('header').height() + 1,
+    navHeightGap: ($('#left-panel .nav-footer').height() || 0) + $('header').height() + 1,
     throttleDelay: 450, //ms
     thisDevice: null, 
     isMobile: (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i

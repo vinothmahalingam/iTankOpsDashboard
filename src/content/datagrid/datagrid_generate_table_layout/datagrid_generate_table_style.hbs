@@ -1,0 +1,208 @@
+{{#> 
+	layouts/main 
+	title="Generate Table Style" 
+	pagename="datagrid_generate_table_style" 
+	heading="Generate Table Style" 
+	category_1="Datagrid" 
+	pagedescription="Generate Table Style"
+}}
+
+{{#*inline "head-block"}}{{/inline}}
+
+{{#*inline "content-block"}}
+
+<div class="row">
+
+	<div class="col-sm-12">
+
+		<div class="card mb-g">
+
+			<div class="card-body">
+
+				<h3 class="mb-4">
+					Table <span class="fw-300">Layout Generator </span>
+				</h3>
+
+				<div class="alert alert-primary">
+					<strong>Did you know?</strong>
+					<br>
+					Alternatively you can generate a dummy table and simply insert the classes needed manually with this external generator <a href="https://www.generatedata.com/" target="_blank">https://www.generatedata.com</a>
+				</div>
+
+				<h4 class="frame-heading">
+					Generated preview
+				</h4>
+
+				<div class="frame-wrap bg-faded mb-2">
+
+					<label class="custom-control custom-checkbox mb-0">
+					  <input type="checkbox" checked="checked" class="custom-control-input" id="bordered" data-class="table-bordered">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">Bordered Table</span>
+					</label>
+					<label class="custom-control custom-checkbox mb-0">
+					  <input type="checkbox" class="custom-control-input" id="smaller" data-class="table-sm">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">Smaller Table</span>
+					</label>
+					<label class="custom-control custom-checkbox mb-0">
+					  <input type="checkbox" class="custom-control-input" id="inverse" data-class="table-inverse">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">Table Inverse</span>
+					</label>
+					<label class="custom-control custom-checkbox mb-0">
+					  <input type="checkbox" class="custom-control-input" id="hover" data-class="table-hover">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">Table Hover</span>
+					</label>
+					<label class="custom-control custom-checkbox mb-0">
+					  <input type="checkbox" class="custom-control-input" id="stripe" data-class="table-striped">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">Table Stripped</span>
+					</label>
+					
+				</div>
+				<div class="frame-wrap p-0 border-0 m-0">
+
+					<table class="table m-0 table-bordered" id="table-example">
+
+					  <thead>
+					  	<tr>
+					  		<th colspan="5">
+
+								<div class="input-group">
+								  <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
+								  <input type="text" class="form-control" placeholder="Search Client" aria-label="client" aria-describedby="client-name"id="myInput" onkeyup="myFunction()">
+								</div>
+
+					  		</th>
+					  	</tr>
+					    <tr>
+					      <th>Client</th>
+					      <th>Email</th>
+					      <th>Phone</th>
+					      <th>Company</th>
+					      <th>City</th>
+					    </tr>
+					  </thead>
+						<tfoot>
+							<tr>
+						      <td colspan="5">
+
+								<div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
+								  <div class="btn-group" role="group" aria-label="First group">
+								    <button type="button" class="btn btn-default active">1</button>
+								    <button type="button" class="btn btn-default">2</button>
+								    <button type="button" class="btn btn-default">3</button>
+								    <button type="button" class="btn btn-default">4</button>
+								    <button type="button" class="btn btn-default">5</button>
+								    <button type="button" class="btn btn-default">6</button>
+								  </div>
+								</div>
+
+						      </td>
+							</tr>
+						</tfoot>
+						<tbody>
+							<tr>
+							  <td>Inga</td>
+							  <td>metus.Aliquam@ametlorem.ca</td>
+							  <td>1-318-627-3874</td>
+							  <td>Montes Industries</td>
+							  <td>Dolgellau</td>
+							</tr>
+							<tr>
+							  <td>Price</td>
+							  <td>nec.enim.Nunc@facilisis.net</td>
+							  <td>1-963-499-3886</td>
+							  <td>Risus Quisque Inc.</td>
+							  <td>Cascavel</td>
+							</tr>
+							<tr>
+							  <td>Jeanette</td>
+							  <td>non@afeugiattellus.co.uk</td>
+							  <td>1-133-240-5173</td>
+							  <td>Quis Diam Corporation</td>
+							  <td>Springdale</td>
+							</tr>
+							<tr>
+							  <td>Randall</td>
+							  <td>dignissim.magna.a@ipsum.co.uk</td>
+							  <td>1-859-866-0345</td>
+							  <td>Mauris Blandit Associates</td>
+							  <td>Patarrá</td>
+							</tr>
+							<tr>
+							  <td>Roanna</td>
+							  <td>nascetur.ridiculus@fermentumvel.co.uk</td>
+							  <td>1-289-706-6780</td>
+							  <td>Non Enim Commodo Incorporated</td>
+							  <td>New Galloway</td>
+							</tr>
+							<tr>
+							  <td>Macaulay</td>
+							  <td>Fusce@egestasligulaNullam.ca</td>
+							  <td>1-726-644-6609</td>
+							  <td>Et LLC</td>
+							  <td>Sandy</td>
+							</tr>
+							<tr>
+							  <td>Chiquita</td>
+							  <td>luctus@metuseuerat.edu</td>
+							  <td>1-258-865-1127</td>
+							  <td>Cursus Consulting</td>
+							  <td>Masterton</td>
+							</tr>
+						</tbody>
+
+					</table>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+{{/inline}}
+
+{{#*inline "scripts-block"}}
+<script>
+
+	$('input:checkbox').change(function(){
+	    if($(this).is(":checked")) {
+	        $('#table-example').addClass( $(this).attr("data-class") );
+	    } else {
+	        $('#table-example').removeClass( $(this).attr("data-class") );
+	    }
+	});
+
+	/* simple table search script */
+	function myFunction() {
+	  // Declare variables 
+	  var input, filter, table, tr, td, i;
+	  input = document.getElementById("myInput");
+	  filter = input.value.toUpperCase();
+	  table = document.getElementById("table-example");
+	  tr = table.getElementsByTagName("tr");
+
+	  // Loop through all table rows, and hide those who don't match the search query
+	  for (i = 0; i < tr.length; i++) {
+	    td = tr[i].getElementsByTagName("td")[0];
+	    if (td) {
+	      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+	        tr[i].style.display = "";
+	      } else {
+	        tr[i].style.display = "none";
+	      }
+	    } 
+	  }
+	}
+
+</script>
+{{/inline}}
+
+{{/layouts/main}}
