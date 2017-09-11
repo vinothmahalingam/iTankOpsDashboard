@@ -26,6 +26,12 @@
 	@include gradient-img(#f2f2f2,#fafafa)
 }
 
+.table-inverse {
+	.thead-themed {
+		@include gradient-img($fusion-700,$fusion-800)
+	}
+}
+
 .table-bordered {
 	&[class*=" bg-"],
 	&[class*=" bg-"] td,
@@ -36,6 +42,17 @@
 		border: 1px solid rgba(255,255,255,0.1);
 	}
 }
+/* table hover 
+.table-hover:not(.table-inverse) {
+	tbody {
+		tr {
+			&:hover {
+				
+			}
+		}
+	}
+}*/
+
 /* reset table (global) */
 th {
     font-weight: 500;

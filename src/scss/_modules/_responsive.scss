@@ -409,16 +409,6 @@ $grid-breakpoints: (
 				}
 			}
 		}
-
-		/*#hdr-r {
-			#dropdown-menu {
-				span,
-				i {
-					display: none;
-				}
-
-			}
-		}*/
 	}
 
 	#banner,
@@ -429,5 +419,9 @@ $grid-breakpoints: (
 
 	#primary-nav .navigation li a > .badge {
 		font-size: 10px !important;
+	}
+
+	.frame-wrap {
+		padding: $p-2 $p-1;
 	}
 }

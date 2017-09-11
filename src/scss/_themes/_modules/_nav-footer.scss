@@ -1,5 +1,5 @@
 
-#nav-footer {
+.nav-footer {
     background: $nav-background;
 
 
@@ -16,7 +16,7 @@
 
 .nav-function-fixed {
 
-	#nav-footer {
+	.nav-footer {
 
 		background: $nav-background;
 
@@ -34,7 +34,7 @@
 
 @include media-breakpoint-up(lg) {
 	.nav-function-minify {
-		#nav-footer {
+		.nav-footer {
 
 			background: $fusion-600;
 

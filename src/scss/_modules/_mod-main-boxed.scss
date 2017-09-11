@@ -10,8 +10,8 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 
 		&.display-right-panel {
 			[data-class="display-right-panel"] {
-				position: relative;
-				right: 0;
+				position: absolute;
+				right: $settings-width;
 				top:0;
 				transition: none;
 			}
@@ -29,24 +29,20 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 						position:relative;
 
 						.onoffswitch-title {
-							color: $warning-700;
+							color: $settings-incompat-title;
 						}
 						.onoffswitch-title-desc {
-							text-overflow: ellipsis;
-							white-space: nowrap;
-							overflow: hidden;
-							max-width: 140px;
-							color: $warning-500;
+							color: $settings-incompat-desc;
 						}
 						&:after {
 							content: "DISABLED";
 							display: block;
 							position: absolute;
-							background: $warning-50;
+							background: $settings-incompat-bg;
 							font-size: 10px;
 							width: 65px;
 							text-align: center;
-							border: 1px solid $warning-800;
+							border: 1px solid $settings-incompat-border;
 							height: 22px;
 							line-height: 20px;
 							border-radius: 10px;
@@ -65,10 +61,10 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 					width: $mod-main-boxed-width - 2;
 					margin:0 auto;
 
-					[data-class="display-right-panel"] {
+					/*[data-class="display-right-panel"] {
 						position:relative;
 						right:0;
-					}
+					}*/
 				}
 				#right-panel {
 					position: absolute !important;

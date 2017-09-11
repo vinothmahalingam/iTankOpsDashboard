@@ -93,7 +93,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 
 						&[aria-expanded="true"] {
 							color: $header-link-hover-color;
-							// new lines for arrow visibility
+							/* new lines for arrow visibility */
 							position: relative;
 							z-index: $depth-header + 1;
 
@@ -163,7 +163,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 
 					&[data-class='mobile-nav-on'] {
 						border-color: $danger-300;
-						@include gradient-img($start: $danger-200,$stop: $danger-300);
+						@include gradient-img($start: $danger-400,$stop: $danger-500);
 						color:$white;
 						width: $header-btn-width + 10px;
 					}

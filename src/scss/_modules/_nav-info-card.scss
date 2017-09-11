@@ -1,4 +1,4 @@
-#info-card {
+.info-card {
 	position: relative;
 	width:$nav-width;
 	height:$nav-infocard-height;
@@ -63,7 +63,7 @@
 }
 
 @include media-breakpoint-up(xl) {
-	#info-card {
+	.info-card {
 
 		&:hover {
 			@include transition(0.10s,ease-in-out); 

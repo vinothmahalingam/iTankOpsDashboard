@@ -1,13 +1,3 @@
-/* 
-	NOTE: ALL PIXELS ARE AUTOMATICALLY CONVERTED TO REM
-	"Oh la la! Custom conversion!"
-
-	If you need help with REM to PX translation, 
-	this is the website I used as reference: http://pxtoem.com/
-
-*/
-
-
 /*  PRIMARY COLOR - Single color unit below impacts all color pallets
 ========================================================================== */
 $color-primary:         				    #2196F3 !default;
@@ -19,10 +9,10 @@ $color-primary-lighter: 				    lighten($color-primary-light, 6%) !default;
 $color-primary-dark: 						    darken($color-primary, 10%) !default;
 $color-primary-darker: 					    darken($color-primary-dark, 6%) !default;
 
-$color-success:      						    darken(desaturate(adjust-hue($color-primary, 275), 30%),11%) !default;
-$color-info:            				    darken(desaturate(adjust-hue($color-primary, 90), 30%), 10%) !default;
-$color-warning:         				    lighten(saturate(adjust-hue($color-primary, 182), 12%), 2%) !default;
-$color-danger:          				    darken(saturate(adjust-hue($color-primary, 155), 5%), 2%) !default;
+$color-success:                     #1abc42;
+$color-info:                        #9b59b6;
+$color-warning:                     #ffb822;
+$color-danger:                      #e74c3c;
 
 //$color-fusion: 								    light(desaturate(adjust-hue($color-primary, 5), 70%), 10%) !default;  
 $color-fusion: 									    darken(desaturate(adjust-hue($color-primary, 5), 80%), 25%) !default; 
@@ -119,6 +109,8 @@ $fusion-900:										    darken($fusion-500, 20%) !default;
 ========================================================================== */ 
 //theme-color("primary")
 
+//$theme-color-interval: 6%;
+
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
 $gray-300: #dee2e6;
@@ -141,28 +133,12 @@ $grays: (
   900: $gray-900
 );
 
-$blue:    $primary-500;
-$indigo:  #6610f2;
-$purple:  #6f42c1;
-$pink:    $danger-200;
-$red:     $danger-500;
-$orange:  $warning-500;
-$yellow:  $warning-200;
-$green:   $success-500;
-$teal:    #20c997;
-$cyan:    #17a2b8;
-
 $colors: (
   blue: $primary-500,
-  indigo: $indigo,
-  purple: $purple,
-  pink: $pink,
-  red: $danger-800,
+  red: $danger-500,
   orange: $warning-500,
-  yellow: $warning-200,
+  yellow: $warning-500,
   green: $success-500,
-  teal: $teal,
-  cyan: $cyan,
   white: $white,
   gray: $gray-600,
   gray-dark: $gray-800
@@ -175,7 +151,7 @@ $theme-colors: (
   success: $success-500,
   info: $info-500,
   warning: $warning-500,
-  danger: $danger-800,
+  danger: $danger-500,
   light: $gray-100,
   dark: $gray-800
 );
@@ -424,7 +400,7 @@ Guide:
 aside#left-panel ($nav-width, $nav-background)
 	#logo
 	#primary-nav
-		#info-card
+		.info-card
 		ul.navigation
 			li
 				a (parent level-0..., $nav-link-color, $nav-link-hover-color, $nav-link-hover-bg-color, $nav-link-hover-left-border-color)
@@ -454,7 +430,7 @@ $nav-base-color:									lighten($nav-background, 7%) !default;
 $nav-width:											  250px !default;
 
 /* nav parent level-0 */
-$nav-link-color: 									lighten($nav-base-color, 50%) !default;
+$nav-link-color: 									lighten($nav-base-color, 45%) !default;
 $nav-font-link-size: 							$base-font-size + 1 !default;
 $nav-collapse-sign-font-size:			$nav-font-link-size + 3 !default;	
 $nav-padding-left:								16px !default; //$p-2
@@ -469,10 +445,10 @@ $nav-icon-margin-right:						12px !default;
 
 /* badge default */
 $nav-badge-color: 								$white !default;
-$nav-badge-bg-color: 							lighten(desaturate($danger-700, 35%), 5%) !default;
+$nav-badge-bg-color: 							$danger-500 !default;
 
 /* all child */
-$nav-icon-color:									lighten(darken($nav-base-color, 11%),38%) !default;
+$nav-icon-color:									lighten(darken($nav-base-color, 11%),27%) !default;
 $nav-icon-hover-color:						lighten(desaturate($color-primary, 30%), 10%) !default;
 
 /* nav title */
@@ -525,6 +501,10 @@ $list-table-padding-y:						0 !default;
 ========================================================================== */
 $settings-panel-bg:								$white !default;
 $settings-width:									300px !default;
+$settings-incompat-title:         #d58100 !default;
+$settings-incompat-desc:          #ec9f28 !default;
+$settings-incompat-bg:            $warning-50 !default;
+$settings-incompat-border:        $warning-700 !default;
 
 /*   PAGE BREADCRUMB 
 ========================================================================== */

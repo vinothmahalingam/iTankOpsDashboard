@@ -168,14 +168,10 @@ RESULT:
     position:relative;
     
     .onoffswitch-title {
-      color: $warning-700 !important;
+      color: $settings-incompat-title !important;
     }
     .onoffswitch-title-desc {
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-      max-width:140px;
-      color: $warning-500 !important;
+      color: $settings-incompat-desc !important;
     }
     &:after {
       content: "DISABLED";
@@ -333,11 +329,11 @@ RESULT:
 %incompatible {
   display: block;
   position: absolute;
-  background: $warning-50;
+  background: $settings-incompat-bg;
   font-size: 10px;
   width: 65px;
   text-align: center;
-  border: 1px solid $warning-800;
+  border: 1px solid $settings-incompat-border;
   height: 22px;
   line-height: 20px;
   border-radius: 10px;

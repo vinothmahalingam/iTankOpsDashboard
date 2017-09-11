@@ -228,13 +228,13 @@
 
 		// Sub nav level 1
 		> ul {
-			background-color: darken($nav-base-color, 11%);
+			background-color: darken($nav-base-color, 9%);
 			padding-bottom: 8px;
 
 			li {
 
 				a {
-					color: lighten(darken($nav-base-color, 11%),55%);
+					color: $nav-link-color;
 
 					padding: 10px $nav-padding-right 10px $nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.5px;
 					font-size: rem($nav-font-link-size);
@@ -313,7 +313,7 @@
 				// Sub nav level 2
 				> ul {
 
-					background-color: darken($nav-base-color, 15%);
+					background-color: darken($nav-base-color, 11%);
 					padding-bottom: 5px;
 
 					li {
@@ -326,7 +326,7 @@
 						}
 
 						a {
-							color: lighten(darken($nav-base-color, 11%),55%);
+							color: $nav-link-color;
 							padding: 9px $nav-padding-right 9px $nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.5;
 							font-size: rem($nav-font-link-size - 1);
 
@@ -490,7 +490,6 @@ body:not(.nav-function-top) {
 }
 
 
-
 @include media-breakpoint-up(xl) {
 	
 	#left-panel {
@@ -510,4 +509,3 @@ body:not(.nav-function-top) {
 		}
 	}
 }
-

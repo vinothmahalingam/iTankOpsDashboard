@@ -165,3 +165,7 @@ button:focus {
 }
 /* links */
 a { text-decoration: none !important }
+/* touch action */
+a, area, button, [role="button"], input, label, select, summary, textarea {
+    touch-action: manipulation;
+}
