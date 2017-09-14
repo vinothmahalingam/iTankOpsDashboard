@@ -3,7 +3,7 @@
 @import './src/scss/_imports/_global-import';
 
 /* #FRAMEWORK - Structure and layout files. (**DO NOT** change order)
-                DOC: you can disable inactive _modules
+                DOC: you can disable unused _modules
 ========================================================================== */
 @import '_modules/_reset';
 @import '_modules/_body';
@@ -14,6 +14,8 @@
 @import '_modules/_header-dropdown-notification';
 @import '_modules/_header-dropdown-app-list';
 @import '_modules/_header-function-fixed';
+@import '_modules/_left-panel';
+@import '_modules/_right-panel';
 @import '_modules/_nav';
 @import '_modules/_nav-info-card';
 @import '_modules/_nav-function-top';
@@ -41,7 +43,6 @@
 
 /* #DEMO ELEMS - elements mostly used for demo (can be removed)
 ========================================================================== */ 
-@import '_modules/_right-panel';
 @import '_modules/_settings-*';
 @import '_modules/_demo-only';
 
