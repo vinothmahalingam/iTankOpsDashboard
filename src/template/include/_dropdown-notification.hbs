@@ -18,8 +18,8 @@
 			</small>
 		</h5>
 	</div>
-	<div class="tab-pane custom-scroll" id="messages" role="tabpanel">
-		<div>
+	<div class="tab-pane" id="messages" role="tabpanel">
+		<div class="custom-scroll h-100">
 			<ul class="notification">
 				<li class="unread">
 					<a href="#" class="d-flex align-items-center">
@@ -95,93 +95,94 @@
 			</ul>
 		</div>
 	</div>
-	<div class="tab-pane custom-scroll" id="feeds" role="tabpanel">
-		<ul class="notification">
-			<li class="unread">
-				<div class="d-flex align-items-center">
-					<span class="d-flex flex-column flex-1">
-						<span class="name d-flex align-items-center">Administrator <span class="badge badge-success fw-n ml-1">UPDATE</span></span>
-						<span class="msg-a fs-sm">System updated to version <strong>{{> _data/version-number}}</strong>
-							(<a href="intel_build_notes.html">patch notes</a>)
-						</span>	
-						<span class="fs-nano text-muted mt-1">5 mins ago</span>
-					</span>
-				</div>
-			</li>
-			<li>
-				<div class="d-flex align-items-center">
-					<span class="d-flex flex-column flex-1">
-						<span class="name">
-							Adison Lee <span class="fw-300 d-inline">replied to your video <a href="#" class="fw-400"> Cancer Drug</a> </span>
+	<div class="tab-pane" id="feeds" role="tabpanel">
+		<div class="custom-scroll h-100">
+			<ul class="notification">
+				<li class="unread">
+					<div class="d-flex align-items-center">
+						<span class="d-flex flex-column flex-1">
+							<span class="name d-flex align-items-center">Administrator <span class="badge badge-success fw-n ml-1">UPDATE</span></span>
+							<span class="msg-a fs-sm">System updated to version <strong>{{> _data/version-number}}</strong>
+								(<a href="intel_build_notes.html">patch notes</a>)
+							</span>	
+							<span class="fs-nano text-muted mt-1">5 mins ago</span>
 						</span>
-						<span class="msg-a fs-sm mt-2">Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day...</span>	
-						<span class="fs-nano text-muted mt-1">10 minutes ago</span>
-					</span>
-				</div>
-			</li>
-			<li>
-				<div class="d-flex align-items-center">
-					<!--<img src="img/avatar-m.png" data-src="img/avatars/avatar-k.png" class="profile-image rounded-circle" alt="k" />-->
-					<span class="d-flex flex-column flex-1">
-						<span class="name">
-							Troy Norman'<span class="fw-300">s new connections</span>
-						</span>
-						<span class="fs-sm d-flex align-items-center mt-2">
-							<img src="img/avatar-m.png" data-src="img/avatars/avatar-a.png" class="profile-image-md mr-1 rounded-circle" alt="a" />
-							<img src="img/avatar-m.png" data-src="img/avatars/avatar-b.png" class="profile-image-md mr-1 rounded-circle" alt="a" />
-							<img src="img/avatar-m.png" data-src="img/avatars/avatar-c.png" class="profile-image-md mr-1 rounded-circle" alt="a" />
-							<img src="img/avatar-m.png" data-src="img/avatars/avatar-e.png" class="profile-image-md mr-1 rounded-circle" alt="a" />
-							<img src="img/avatar-m.png" data-src="img/avatars/avatar-h.png" class="profile-image-md mr-1 rounded-circle" alt="a" />
-							<a href="#">+3</a>
-						</span>
-						<span class="fs-nano text-muted mt-1">55 minutes ago</span>
-					</span>
-				</div>
-			</li>
-			<li>
-				<div class="d-flex align-items-center">
-					<!--<img src="img/avatar-m.png" data-src="img/avatars/avatar-e.png" class="profile-image-sm rounded-circle align-self-start mt-1" alt="k" />-->
-					<span class="d-flex flex-column flex-1">
-						<span class="name">Dr John Cook <span class="fw-300">sent a <span class="text-danger">new signal</span></span></span>
-						<span class="msg-a fs-sm mt-2">Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</span>
-						<span class="fs-nano text-muted mt-1">10 minutes ago</span>
-					</span>
-				</div>
-			</li>
-			<li>
-				<div class="d-flex align-items-center">
-					<!--<img src="img/avatar-m.png" data-src="img/avatars/avatar-h.png" class="profile-image rounded-circle align-self-start mt-1" alt="k" />-->
-					<span class="d-flex flex-column flex-1">
-						<span class="name">Sarah McBrook'<span class="fw-300">s added new images</span></span>
-						<span class="fs-sm d-flex align-items-center mt-1">
-							<a href="#"><img src="javascript:void(0);" data-src="img/thumbs/pic-4.png" class="img-share mr-1 mt-1" alt="a" /></a>
-							<a href="#"><img src="javascript:void(0);" data-src="img/thumbs/pic-5.png" class="img-share mr-1 mt-1" alt="a" /></a>
-							<a href="#"><img src="javascript:void(0);" data-src="img/thumbs/pic-6.png" class="img-share mr-1 mt-1" alt="a" /></a>
-							<a href="#">+1</a>
-						</span>
-						<span class="fs-nano text-muted mt-1">55 minutes ago</span>
-					</span>
-				</div>
-			</li>
-			<li>
-				<div class="d-flex align-items-center">
-					<!--<img src="img/avatar-m.png" data-src="img/avatars/avatar-h.png" class="profile-image rounded-circle align-self-start mt-1" alt="k" />-->
-					<span class="d-flex flex-column flex-1">
-						<span class="name">Sarah McBrook'<span class="fw-300">s added new images</span></span>
-						
-							<span class="progress d-flex border-radius-0 mt-2 mb-2">
-								<span class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></span>
+					</div>
+				</li>
+				<li>
+					<div class="d-flex align-items-center">
+						<span class="d-flex flex-column flex-1">
+							<span class="name">
+								Adison Lee <span class="fw-300 d-inline">replied to your video <a href="#" class="fw-400"> Cancer Drug</a> </span>
 							</span>
-						
-							<span class="fs-nano text-muted">July</span>
-					</span>
-				</div>
-			</li>
-		</ul>	
+							<span class="msg-a fs-sm mt-2">Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day...</span>	
+							<span class="fs-nano text-muted mt-1">10 minutes ago</span>
+						</span>
+					</div>
+				</li>
+				<li>
+					<div class="d-flex align-items-center">
+						<!--<img src="img/avatar-m.png" data-src="img/avatars/avatar-k.png" class="profile-image rounded-circle" alt="k" />-->
+						<span class="d-flex flex-column flex-1">
+							<span class="name">
+								Troy Norman'<span class="fw-300">s new connections</span>
+							</span>
+							<span class="fs-sm d-flex align-items-center mt-2">
+								<img src="img/avatar-m.png" data-src="img/avatars/avatar-a.png" class="profile-image-md mr-1 rounded-circle" alt="a" />
+								<img src="img/avatar-m.png" data-src="img/avatars/avatar-b.png" class="profile-image-md mr-1 rounded-circle" alt="a" />
+								<img src="img/avatar-m.png" data-src="img/avatars/avatar-c.png" class="profile-image-md mr-1 rounded-circle" alt="a" />
+								<img src="img/avatar-m.png" data-src="img/avatars/avatar-e.png" class="profile-image-md mr-1 rounded-circle" alt="a" />
+								<img src="img/avatar-m.png" data-src="img/avatars/avatar-h.png" class="profile-image-md mr-1 rounded-circle" alt="a" />
+								<a href="#">+3</a>
+							</span>
+							<span class="fs-nano text-muted mt-1">55 minutes ago</span>
+						</span>
+					</div>
+				</li>
+				<li>
+					<div class="d-flex align-items-center">
+						<!--<img src="img/avatar-m.png" data-src="img/avatars/avatar-e.png" class="profile-image-sm rounded-circle align-self-start mt-1" alt="k" />-->
+						<span class="d-flex flex-column flex-1">
+							<span class="name">Dr John Cook <span class="fw-300">sent a <span class="text-danger">new signal</span></span></span>
+							<span class="msg-a fs-sm mt-2">Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</span>
+							<span class="fs-nano text-muted mt-1">10 minutes ago</span>
+						</span>
+					</div>
+				</li>
+				<li>
+					<div class="d-flex align-items-center">
+						<!--<img src="img/avatar-m.png" data-src="img/avatars/avatar-h.png" class="profile-image rounded-circle align-self-start mt-1" alt="k" />-->
+						<span class="d-flex flex-column flex-1">
+							<span class="name">Sarah McBrook'<span class="fw-300">s added new images</span></span>
+							<span class="fs-sm d-flex align-items-center mt-1">
+								<a href="#"><img src="javascript:void(0);" data-src="img/thumbs/pic-4.png" class="img-share mr-1 mt-1" alt="a" /></a>
+								<a href="#"><img src="javascript:void(0);" data-src="img/thumbs/pic-5.png" class="img-share mr-1 mt-1" alt="a" /></a>
+								<a href="#"><img src="javascript:void(0);" data-src="img/thumbs/pic-6.png" class="img-share mr-1 mt-1" alt="a" /></a>
+								<a href="#">+1</a>
+							</span>
+							<span class="fs-nano text-muted mt-1">55 minutes ago</span>
+						</span>
+					</div>
+				</li>
+				<li>
+					<div class="d-flex align-items-center">
+						<!--<img src="img/avatar-m.png" data-src="img/avatars/avatar-h.png" class="profile-image rounded-circle align-self-start mt-1" alt="k" />-->
+						<span class="d-flex flex-column flex-1">
+							<span class="name">Sarah McBrook'<span class="fw-300">s added new images</span></span>
+							
+								<span class="progress d-flex border-radius-0 mt-2 mb-2">
+									<span class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></span>
+								</span>
+							
+								<span class="fs-nano text-muted">July</span>
+						</span>
+					</div>
+				</li>
+			</ul>	
+		</div>
 	</div>
 	<div class="tab-pane" id="events" role="tabpanel">
-		<div class="d-flex flex-column h-100 no-slimscroll">
-			
+		<div class="d-flex flex-column h-100">
 			<div class="h-auto">
 				<table class="table table-bordered table-calendar m-0 w-100 h-100 border-0">
 					<tr>
@@ -247,19 +248,21 @@
 				</table>
 			</div>
 
-			<div class="flex-1 p-2 custom-scrollbar">
-				<h5 class="fw-300">
-					Wednesday 10, May 2017
-				</h5>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
-				<p>a</p>
+			<div class="flex-1 custom-scroll">
+				<div class="p-2">
+					<h5 class="fw-300">
+						Wednesday 10, May 2017
+					</h5>
+					<p>a</p>
+					<p>a</p>
+					<p>a</p>
+					<p>a</p>
+					<p>a</p>
+					<p>a</p>
+					<p>a</p>
+					<p>a</p>
+					<p>a</p>
+				</div>
 			</div>
 
 		</div>
