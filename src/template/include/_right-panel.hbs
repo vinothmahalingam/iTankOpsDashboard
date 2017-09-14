@@ -2,31 +2,37 @@
  	 this "right-panel" portion is not necessarily needed for your project -->
 <aside id="right-panel" role="complementary">
 
-	<ul class="nav nav-pills nav-table-cell" role="tablist">
+	<!-- alternate styles "nav nav-table-cell" OR "nav-table-cell nav-table-tabs"  -->
+	<ul class="nav nav-tabs-panel" role="tablist">
 		<li class="nav-item">
 			<a class="nav-link active" data-toggle="tab" href="#settings">
 				Settings
 			</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" data-toggle="tab" href="#project">
-				Project
+			<a class="nav-link" data-toggle="tab" href="#social">
+				Social
 			</a>
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" data-toggle="tab" href="#memo">
-				Memo
+				Project
+			</a>
+		</li>
+		<li class="nav-tabs-panel--close d-none">
+			<a href="#" class="h-100 w-100 p-2 text-secondary d-flex align-items-center justify-content-center" data-action="toggle" data-class="display-right-panel" data-toggle="tooltip" data-placement="left" title="" data-original-title="CLOSE">
+				<i class="icon icon-close"></i>
 			</a>
 		</li>
 	</ul>
 
-	<div class="custom-scroll settings-wrap">
+	<div class="settings-wrap">
 
 		<div class="tab-content">
 
 			{{> include/_tab-settings }}
 
-			{{> include/_tab-project }}
+			{{> include/_tab-social }}
 
 			{{> include/_tab-memo }}
 
@@ -36,8 +42,8 @@
 
 	<span id="saving"></span>
 
-	<a id="opener" href="#" data-action="toggle" data-class="display-right-panel" class="hidden-lg-up">
-		<i class="icon icon-settings"></i>
-	</a>
+	<!--<a class="aside-close" href="#" data-action="toggle" data-class="display-right-panel">
+		<i class="icon icon-close"></i>
+	</a>-->
 
 </aside>

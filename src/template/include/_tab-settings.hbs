@@ -1,6 +1,6 @@
-<div class="tab-pane active" id="settings">
+<div id="settings" class="tab-pane active bg-offwhite-fade custom-scroll h-100 pos-r">
 
-	<div class="settings-panel">
+	<div class="settings-panel pt-3">
 		
 		<h5>App Layout</h5>
 
@@ -47,10 +47,6 @@
 			</div>
 		</div>
 		
-	</div>
-
-	<div class="settings-panel">
-		
 		<h5>Mobile Menu</h5>
 		
 		<div class="list" id="nmp">
@@ -68,10 +64,6 @@
 			<span class="onoffswitch-title">Off-Canvas <sup>(beta)</sup></span>
 			<span class="onoffswitch-title-desc">Content overlaps menu</span>
 		</div>
-
-	</div>
-
-	<div class="settings-panel">
 	
 		<h5>Accessibility</h5>
 			
@@ -100,9 +92,6 @@
 			<span class="onoffswitch-title">Hover Navigation</span>
 			<span class="onoffswitch-title-desc">Child items display on hover</span>
 		</div>
-	</div>
-
-	<div class="settings-panel">
 	
 		<h5>Global Modifications</h5>
 
@@ -142,40 +131,39 @@
 			<span class="onoffswitch-title-desc">Layout for Arabic, Hibrew,...</span>
 		</div>
 
-	</div>
+		<div class="text-center">
+			<h5>Themes colors <small>(overlays base css)</small></h5>
+				<div class="expanded theme-colors">
+					<ul>
+						<li><a href="#" 
+						             id = "myapp-1"
+							data-action = "theme-update" 
+							 data-theme = "">Hematite</a></li>
+							 
+						<li><a href="#" 
+						             id = "myapp-2"
+							data-action = "theme-update" 
+							 data-theme = "css/cust-theme-1.min.css">Sapphire</a></li>
+						
+						<li><a href="#" 
+						             id = "myapp-3"
+							data-action = "theme-update" 
+							 data-theme = "css/cust-theme-2.min.css">Aquamarine</a></li>
 
-	<div class="settings-panel text-center">
-	
-		<h5>Themes colors <small>(overlays base css)</small></h5>
-			<div class="expanded theme-colors">
-				<ul>
-					<li><a href="#" 
-					             id = "myapp-1"
-						data-action = "theme-update" 
-						 data-theme = "">Hematite</a></li>
-						 
-					<li><a href="#" 
-					             id = "myapp-2"
-						data-action = "theme-update" 
-						 data-theme = "css/cust-theme-1.min.css">Sapphire</a></li>
-					
-					<li><a href="#" 
-					             id = "myapp-3"
-						data-action = "theme-update" 
-						 data-theme = "css/cust-theme-2.min.css">Aquamarine</a></li>
+						<li><a href="#" 
+						             id = "myapp-4"
+							data-action = "theme-update" 
+							 data-theme = "css/cust-theme-3.min.css">Amethyst</a></li>
 
-					<li><a href="#" 
-					             id = "myapp-4"
-						data-action = "theme-update" 
-						 data-theme = "css/cust-theme-3.min.css">Amethyst</a></li>
+					</ul>
+				</div>
+		</div>
 
-				</ul>
-			</div>
-	</div>
+		<hr class="m-0">
+		<div class="p-2 d-flex align-items-center justify-content-center bg-faded">
+			<a href="#" class="btn btn-danger btn-sm" data-action="app-reset"><strong>Reset theme settings</strong></a>
+		</div>
 
-	<hr class="mt-0 mb-1">
-	<div class="p-2 d-flex align-items-center justify-content-center bg-faded">
-		<a href="#" class="btn btn-danger btn-sm" data-action="app-reset"><strong>Reset theme settings</strong></a>
 	</div>
 	
 
