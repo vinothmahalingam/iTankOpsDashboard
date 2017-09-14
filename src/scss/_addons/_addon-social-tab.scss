@@ -75,7 +75,8 @@ $social-option-list-width-collapsed: 50px;
 
 	.social-content-chatbox {
 
-		.message-left {
+		.chat-message-left {
+			display: flex;
 			
 		}
 
