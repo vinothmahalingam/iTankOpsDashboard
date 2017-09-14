@@ -1,0 +1,86 @@
+$social-option-list-width: 230px;
+$social-option-list-width-collapsed: 50px; 
+
+.social-option-list {
+	width: $social-option-list-width;
+    position: absolute;
+    right: $social-option-list-width-collapsed - $social-option-list-width;
+    top: 0;
+    bottom: 0;
+
+    border-left: 1px solid rgba(0,0,0,0.1);
+    z-index: 101;
+
+    @extend %general-animation;
+    transition-delay: 400ms;
+
+
+	& + .social-content {
+
+		width: unquote("calc(100% - #{$social-option-list-width-collapsed})");
+		height: 100%;
+
+		&:before {
+			content:'';
+			height:100%;
+			width:100%;
+			background:rgba(255,255,255,0.7);	
+			position:absolute;
+			z-index: 100;
+
+			@extend %general-animation;
+			transition-delay: 400ms;
+
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+    
+
+    &:hover {
+    	right: 0;
+    	border-left-color: rgba(0,0,0,0.1);
+
+    	& + .social-content {
+    		&:before {
+    			opacity: 1;
+    			visibility: visible;
+    		}
+    	}
+    }
+
+	.social-option-list--item {
+		font-size: 21px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 50px; 
+
+		color: $primary-500;
+
+		.social-option-list--icon {
+			width: $social-option-list-width-collapsed;
+			text-align: center;
+		}
+	}
+}
+
+.social-content {
+
+	.social-content-chatuser {
+		height: 90px;
+		border-bottom: 1px solid rgba(0,0,0,0.07);
+
+	}
+
+	.social-content-chatbox {
+
+	}
+
+	.social-content-chatinput {
+
+
+
+	}
+
+}
