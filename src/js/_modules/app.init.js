@@ -320,7 +320,7 @@ var initApp = (function(app) {
 	/**
 	 * checkSettingConditions by checking layout conditions
 	 * DOC: sometimes settings can trigger certain plugins; so we check this condition and activate accordingly
-	 * E.g: the fixed navigation activates slimScroll plugin for the navigation, but this only happens when
+	 * E.g: the fixed navigation activates custom scroll plugin for the navigation, but this only happens when
 	 *		it detects desktop browser and destroys the plugin when navigation is on top or if its not fixed.
 	 **/
 	 app.checkSettingConditions = function() {
