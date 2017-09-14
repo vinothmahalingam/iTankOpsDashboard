@@ -14,7 +14,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 			display: none !important;
 		}
 
-		&.display-right-panel {
+		/*&.display-right-panel {
 			[data-class=display-right-panel] {
 				top: $nav-top-height;
 				transition: $nav-hide-animate;
@@ -24,7 +24,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 					top: $nav-top-minify-height;
 				}
 			}
-		}
+		}*/
 
 		&:not(.nav-function-fixed) {
 
@@ -344,11 +344,11 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 		&.nav-function-minify {
 
-			&.display-right-panel:not(.mod-main-boxed) {
+			/*&.display-right-panel:not(.mod-main-boxed) {
 				[data-class=display-right-panel] {
 					top:$nav-top-minify-height;
 				}
-			}
+			}*/
 
 			#left-panel {
 				height: $nav-top-minify-height;

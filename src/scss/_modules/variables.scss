@@ -247,7 +247,7 @@ $grid-breakpoints: (
   // Large screen / desktop
   lg: 992px,
   // Extra large screen / wide desktop
-  xl: 1200px
+  xl: 1340px
 );
 
 $mobile-breakpoint:									 lg !default; 											        /* define when mobile menu activates, here we are declearing (lg) so it targets the one after it */
@@ -500,11 +500,14 @@ $list-table-padding-y:						0 !default;
 /*   SETTINGS Panel (#right-panel)
 ========================================================================== */
 $settings-panel-bg:								$white !default;
-$settings-width:									300px !default;
+$settings-width:									350px !default;
+$settings-width-mobile:           300px !default
 $settings-incompat-title:         #d58100 !default;
 $settings-incompat-desc:          #ec9f28 !default;
 $settings-incompat-bg:            $warning-50 !default;
 $settings-incompat-border:        $warning-700 !default;
+
+$nav-tabs-panel-link-height:      35px !default;
 
 /*   PAGE BREADCRUMB 
 ========================================================================== */

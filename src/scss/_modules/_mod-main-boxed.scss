@@ -8,22 +8,22 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 		margin: 0 auto;
 		box-shadow: 5px 0 20px 0px rgba(0, 0, 0, 0.1), -5px 0 20px 0px rgba(0, 0, 0, 0.1);
 
-		&.display-right-panel {
+		/*&.display-right-panel {
 			[data-class="display-right-panel"] {
 				position: absolute;
 				right: $settings-width;
 				top:0;
 				transition: none;
 			}
-		}	
+		}*/	
 
-		#right-panel {
+		/*#right-panel {
 			position:absolute;
-		}
+		}*/
 
 		&:not(.nav-function-top) {
 			#right-panel {
-				position:absolute;
+				/*position:absolute;*/
 				.list {
 					&#nff {
 						position:relative;
@@ -66,9 +66,9 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 						right:0;
 					}*/
 				}
-				#right-panel {
+				/*#right-panel {
 					position: absolute !important;
-				}
+				}*/
 							
 			}
 
@@ -110,13 +110,13 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 		    	}
 			}
 
-			&.header-function-fixed {
+			/*&.header-function-fixed {
 				&.display-right-panel {
 					[data-class=display-right-panel] {
 						top:0;
 					}
 				}
-			}
+			}*/
 
 		}
 

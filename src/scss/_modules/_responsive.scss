@@ -234,7 +234,7 @@ $grid-breakpoints: (
 		&.display-right-panel {
 			#right-panel {
 				transition: $nav-hide-animate;
-				@include translate3d ($settings-width, 0, 0);
+				@include translate3d ($settings-width-mobile, 0, 0);
 			}
 		}
 

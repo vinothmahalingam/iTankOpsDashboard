@@ -1,22 +1,9 @@
-// LEFT PANEL START
-
-#left-panel {
-	left: 0;
-	top: 0;
-	bottom:0;
-	position: absolute;
-	width: $nav-width;
-	z-index: $depth-nav;
-	background: $nav-background;
-	will-change: left, right;
-
-	#primary-nav {
-		overflow: auto;
-    	overflow-x: hidden;
-    	-webkit-overflow-scrolling: touch;
-		-webkit-backface-visibility: hidden; 
-			backface-visibility: hidden;
-	}
+#primary-nav {
+	overflow: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	-webkit-backface-visibility: hidden; 
+		backface-visibility: hidden;
 }
 
 .navigation-title {

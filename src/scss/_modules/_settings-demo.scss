@@ -1,7 +1,7 @@
 .settings-wrap {
 
-	height: unquote("calc(100% - 29.5px)");
-	overflow-x: auto;
+	height: unquote("calc(100% - #{$header-height - 15})");
+	//overflow-x: auto;
 
 	.settings-panel {
 
@@ -71,7 +71,7 @@
 				padding: 9px 15px 6px;
 				display: none;
 
-				&:before,
+				/*&:before,
 				&:after {
 					content:" ";
 					border-color: transparent;
@@ -84,7 +84,7 @@
 					right: 12%;
 					height: 0;
 					width: 0;
-				}
+				}*/
 				&:before {
 					border-bottom-color: $fusion-400;
 					bottom: 1px;

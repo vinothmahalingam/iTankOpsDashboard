@@ -222,6 +222,14 @@ ul.list-verticle {
 	background: $white !important;
 }
 
+.bg-offwhite-fade {
+	@include gradient-img($white, lighten($color-fusion, 66%))	
+}
+
+.bg-grade-light {
+    @include gradient-img(lighten($color-primary, 44%), $white)	
+}
+
 .shadow-hover {
 	@extend %shadow-hover;
 }
