@@ -247,7 +247,7 @@ RESULT:
   box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.125);
   border-bottom: 1px solid rgba(0,0,0,0.06);
   border-width: 0 0 1px 0;
-  background: lighten($gray-lightest, 3%);
+  background: $white;
 }
 
 %header-btn-active {

@@ -231,6 +231,8 @@ $grid-breakpoints: (
 	/* general */
 	&.mobile-nav-on {
 
+		touch-action: none;
+		
 		&.display-right-panel {
 			#right-panel {
 				transition: $nav-hide-animate;

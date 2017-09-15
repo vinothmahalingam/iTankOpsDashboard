@@ -168,7 +168,7 @@ body.desktop-detected {
 			border-radius: 0;
 			border: 0;
 			padding: 0 $p-3;
-			height: unquote("calc(100% + 1px)");;
+			height: $header-height - 15;
 
 			font-size: $fs-md;
 			font-weight: 500;
