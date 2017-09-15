@@ -348,9 +348,9 @@ $grid-breakpoints: (
 @media only screen and ( max-width: map-get($grid-breakpoints, sm) ){
 
 	/* here we turn on mobile font for smaller screens */
-	body {
+	/*body {
 		font-family: $mobile-page-font !important;
-	}
+	}*/
 
 	/* mobile nav search */
 	.mobile-search-on:not(.mobile-nav-on) {
