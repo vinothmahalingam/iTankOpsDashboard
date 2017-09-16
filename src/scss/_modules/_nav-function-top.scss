@@ -104,6 +104,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 				background: transparent;
 				border: 0;
 				height: $nav-top-height;
+				position:relative;
 
 				& > img {
 					display:block;
@@ -116,7 +117,6 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 				}
 
 				&:after {
-						
 					content: "";
 					position: absolute;
 					width: 1px;
@@ -126,8 +126,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 					background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
 					background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
 					background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
-					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$collapseText-color, endColorstr=$collapseText-color,GradientType=0 );
-					z-index: 1 // this way the line is always displayed and not covered by bg
+					z-index: 1;
 						
 				}
 
@@ -240,14 +239,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 									a {
 										.collapse-sign {
-											//position: absolute;
-											//top: 20%;
-											//right: 5px;
-											@include transform(rotate(-90deg))
-
-											//em {
-												//font-size: 120%;
-											//}
+											@include rotate(270);
 										}
 									}
 
@@ -329,8 +321,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 							background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
 							background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
 							background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
-							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$collapseText-color, endColorstr=$collapseText-color,GradientType=0 );
-							z-index: 1 // this way the line is always displayed and not covered by bg
+							z-index: 1;
 						}
 
 					}

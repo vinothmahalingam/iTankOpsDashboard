@@ -37,7 +37,7 @@
 			> .app-list__name {
 				text-align: center;
 				display: block;
-				font-size: $base-font-size;
+				font-size: rem($base-font-size);
 				text-overflow: ellipsis;
 				display: inline-block;
 				white-space: nowrap;

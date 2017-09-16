@@ -67,7 +67,7 @@
 
 	& + .onoffswitch-title {
 		margin-top:0.5px;
-		font-size:rem(13px);
+		font-size:$base-font-size;
 		display: block;
 
 		& + .onoffswitch-title-desc {
@@ -92,6 +92,15 @@
 	margin: auto 0 auto auto;
 	width: 20px;
 	height: 20px;
+}
+
+/* button press animation */
+.btn-press-scale-down {
+	transition: transform 0.2s ease;
+
+	&:active {
+		@include scale(0.95);
+	}
 }
 
 /* btn widths */

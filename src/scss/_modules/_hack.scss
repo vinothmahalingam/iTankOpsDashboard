@@ -170,7 +170,7 @@ body.desktop-detected {
 			padding: 0 $p-3;
 			height: $header-height - 15;
 
-			font-size: $fs-md;
+			font-size: rem($fs-md);
 			font-weight: 500;
 
 			color: #333;

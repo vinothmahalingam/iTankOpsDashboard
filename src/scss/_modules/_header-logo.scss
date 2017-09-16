@@ -14,17 +14,10 @@
 	img {
 		width: $header-logo-width;
 		height: $header-logo-height;
-		transition: transform 0.2s ease;
 	}
 
 	>.minify-logo {
 		display: none;
-	}
-
-	&:active {
-		img {
-			@include scale(0.95);
-		}
 	}
 
 }

@@ -179,7 +179,7 @@
 
 			&.collapsed {
 				.navigation-btn-sub-collapse {
-					@include rotate(180deg);
+					@include rotate(180);
 				}
 			}
 
@@ -304,7 +304,7 @@
 					padding-bottom: 5px;
 
 					li {
-						border-top-color: 1px solid darken($color-fusion, 3%);
+						//border-top: 1px solid darken($color-fusion, 3%);
 
 						&.active {
 							> a {

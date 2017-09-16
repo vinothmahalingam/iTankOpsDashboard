@@ -10,20 +10,6 @@
 
     @include transition(0.3s,ease-in-out);
 
-	&:after {
-		content: "";
-		height: 8px;
-		width: 100%;
-		position: absolute;
-		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAAICAMAAAD9VPKTAAAATlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADEoqZZAAAAGnRSTlMACRVXPCMeNMEsdZ98SZBDbFDIrZhkXreCiM2g9MAAAAD1SURBVDjLzZHbDoIwEAVdEC94raLi//+otD1Lu4tgCWqYhPC0J5np4jeQ+2gKYWZukCLrYTWKvpVOl/9AAeVUMNuWtWA5AnkZFgtGlaHA901jTeEYa50cB4/x5A6Tp2H478GU342ziBJRBsqmNIAqaVWIwpMVW7l7w81y9pSS/QdKCUbcoF1GEMTgDm0ETqALpPraA6nLskKVRWEZzOq6fjYcQQV2CVSAb+1OMxeaoANHEAk4gNQn6A+/sBDu+kayrApPKMLuCh6ezQhwwgvogRSowAmiAG/ttXyPs35lLW0MpNOstfJlEK2e5g1xY7S4fnUPzF+TRjAMoku43AAAAABJRU5ErkJggg==);
-	 -webkit-background-size: cover;
-	    -moz-background-size: cover;
-	      -o-background-size: cover;
-	         background-size: cover;
-		top: -7px;
-		opacity: 0.05;		    	
-	}
-
 	.footer-buttons {
 
 		> li {
@@ -61,7 +47,6 @@
 			background: -moz-linear-gradient(left, $nav-background 0%, lighten($nav-background, 15%) 50%, lighten($nav-background, 15%) 50%, $nav-background 100%);
 			background: -webkit-linear-gradient(left, $nav-background 0%, lighten($nav-background, 15%) 50%, lighten($nav-background, 15%) 50%, $nav-background 100%);
 			background: linear-gradient(to right, $nav-background 0%, lighten($nav-background, 15%) 50%, lighten($nav-background, 15%) 50%, $nav-background 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e22d30', endColorstr='#00e22d30',GradientType=1 );
 			opacity: 0.5;
 		}
 

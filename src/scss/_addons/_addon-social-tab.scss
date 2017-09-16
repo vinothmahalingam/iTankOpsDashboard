@@ -49,7 +49,7 @@ $social-option-list-width-collapsed: 50px;
     	}
     }
 
-	.social-option-list--item {
+	.social-option-list__item {
 		font-size: 21px;
 		display: flex;
 		flex-direction: column;
@@ -58,7 +58,7 @@ $social-option-list-width-collapsed: 50px;
 
 		color: $primary-500;
 
-		.social-option-list--icon {
+		.social-option-list__icon {
 			width: $social-option-list-width-collapsed;
 			text-align: center;
 		}
@@ -69,7 +69,7 @@ $social-option-list-width-collapsed: 50px;
 
 	.social-content-chatuser {
 		height: 90px;
-		border-bottom: 1px solid rgba(0,0,0,0.07);
+		border-bottom: 1px solid rgba(0,0,0,0.02);
 
 	}
 
@@ -84,7 +84,8 @@ $social-option-list-width-collapsed: 50px;
 
 	.social-content-chatinput {
 
-
+		height: 70px;
+		border-top: 1px solid rgba(0,0,0,0.02);
 
 	}
 

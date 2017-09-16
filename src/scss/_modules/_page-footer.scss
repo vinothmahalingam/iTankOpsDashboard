@@ -13,7 +13,7 @@
 	background: $footer-bg;
     z-index: $footer-zindex;
     color:$footer-text-color;
-    font-size:$footer-font-size;
+    font-size: rem($footer-font-size);
     padding:0 $grid-gutter-width-base/2;
 
 	.footer-logo {

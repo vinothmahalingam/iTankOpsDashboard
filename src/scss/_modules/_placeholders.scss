@@ -358,7 +358,6 @@ RESULT:
   -pie-background: linear-gradient(45deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
                    transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,
                    transparent 75%, transparent) 0 0 / 10px 10px transparent;
-  behavior: url(/pie/PIE.htc);
 }
 
 %pattern-1 {
@@ -375,7 +374,6 @@ RESULT:
   -pie-background: linear-gradient(45deg, rgba(255, 255, 255, .04) 25%, transparent 25%,
                    transparent 50%, rgba(255, 255, 255, .04) 50%, rgba(255, 255, 255, .04) 75%,
                    transparent 75%, transparent) 0 0 / 5px 5px transparent;
-  behavior: url(/pie/PIE.htc);
 }
 
 %pattern-2 {
@@ -384,7 +382,6 @@ RESULT:
   background-image: -moz-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
   background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
   -pie-background: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent) 0 0 / 15px transparent;
-  behavior: url(/pie/PIE.htc);
 }
 
 %pattern-3 {
@@ -393,7 +390,6 @@ RESULT:
   background-image: -moz-linear-gradient(0deg, rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
   background-image: linear-gradient(90deg, rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
   -pie-background: linear-gradient(90deg, rgba(255, 255, 255, .2) 50%, transparent 50%, transparent) 0 0 / 15px 15px transparent;
-  behavior: url(/pie/PIE.htc);
 }
 
 %pattern-4 {
@@ -408,7 +404,6 @@ RESULT:
   -pie-background: linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, .2) 75%, rgba(255, 255, 255, .2)) 0 0 / 37px,
                    linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, .2) 75%, rgba(255, 255, 255, .2)) 37px 37px / 74px,
                    transparent;
-  behavior: url(/pie/PIE.htc);
 }
 
 %pattern-5 {
@@ -422,7 +417,6 @@ RESULT:
   -pie-background: linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, .2) 75%, rgba(255, 255, 255, .2)) 0 0 / 60px,
                    linear-gradient(135deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, .2) 75%, rgba(255, 255, 255, .2)) 0 0 / 60px,
                    #eee;
-  behavior: url(/pie/PIE.htc);
 }
 
 %pattern-6 {
@@ -439,6 +433,5 @@ RESULT:
   -pie-background: linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
                    transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
                    transparent 75%, transparent) 0 0 / 50px 50px transparent;
-  behavior: url(/pie/PIE.htc);
 }
 

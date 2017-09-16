@@ -47,16 +47,24 @@ $grid-breakpoints: (
 
 @media only screen and ( max-width: $mobile-breakpoint-size ){
 
+	html {
+		font-size: 18px;
+	}
+
 	body {
 		overflow-x: hidden;
 	}	
 
 	#page-wrapper {
 		padding-left:0;
+		background: $white;
 
 		#banner {
 			padding:0 $grid-gutter-width-base/2;
 			width:100%;
+
+			background: #f1f1f1;
+			border-bottom: 1px solid #e5e5e5;
 
 			#hdr-l {
 				> .search {
@@ -90,11 +98,11 @@ $grid-breakpoints: (
 				}*/
 
 				.navigation {
-					> li {
+					/*> li {
 						a {
 							font-size: $base-font-size + 1;
 						}
-					}
+					}*/
 
 					.dl-ref {
 						vertical-align: text-top;
@@ -143,6 +151,11 @@ $grid-breakpoints: (
 			.p-g {
 				padding: map-get($grid-gutter-widths, xs);
 			}
+		}
+
+		.footer {
+			border-top: 1px solid rgba(0,0,0,0.02);
+			background: #f7f7f7;
 		}
 
 	}

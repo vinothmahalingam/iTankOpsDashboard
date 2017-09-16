@@ -25,7 +25,6 @@
 			background: -moz-linear-gradient(left, $nav-background 0%, lighten($nav-background, 15%) 50%, lighten($nav-background, 15%) 50%, $nav-background 100%);
 			background: -webkit-linear-gradient(left, $nav-background 0%, lighten($nav-background, 15%) 50%, lighten($nav-background, 15%) 50%, $nav-background 100%);
 			background: linear-gradient(to right, $nav-background 0%, lighten($nav-background, 15%) 50%, lighten($nav-background, 15%) 50%, $nav-background 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e22d30', endColorstr='#00e22d30',GradientType=1 );
 		}
 
 	}
