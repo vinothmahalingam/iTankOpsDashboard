@@ -3,10 +3,10 @@
 	<!-- BEGIN social-option-list -->
 	<div class="social-option-list d-flex flex-column bg-grade-light" role="tablist">
 		<div class="social_option-container">
-			<a class="social-option-list__item" data-toggle="tab" href="#test--1" aria-expanded="true">
+			<a class="social-option-list__item" data-toggle="tab" href="#chat-1" aria-expanded="true">
 				<i class="social-option-list__icon icon icon-menu"></i>
 			</a>
-			<a class="social-option-list__item" data-toggle="tab" href="#test--2" aria-expanded="false">
+			<a class="social-option-list__item" data-toggle="tab" href="#chat-2" aria-expanded="false">
 				<i class="fa fa-search social-option-list__icon"></i>
 			</a>
 		</div>
@@ -24,56 +24,72 @@
 	<!-- BEGIN social-content -->
 	<div class="tab-content social-content">
 
-		<div class="tab-pane active d-flex h-100 flex-column" id="test--1">
+		<div class="tab-pane active d-flex h-100 flex-column" id="chat-1">
 
 			<!-- BEGIN social-content-chatuser -->
-			<div class="social-content-chatuser d-flex align-items-center justify-content-center mr-3 ml-3 pos-r shadow-bottom">
-				User
+			<div class="social-content-chatuser d-flex align-items-center justify-content-center pr-3 pl-3 pos-r shadow-bottom">
+				<h4>Zahid Iqbal</h4>
 			</div>
 			<!-- END social-content-chatuser -->
 
 			<!-- BEGIN social-content-chatbox -->
 			<div class="social-content-chatbox flex-1 custom-scroll h-100 pr-1">
 
-				<div class="social-content-chatlog w-100 pt-2 pr-3 pb-2 pl-3">
+				<div class="social-content-chatlog w-100 p-3">
 					
-					<div class="chat-message-left">
-						a
+					<!-- start .chat-message-container -->
+					<div class="chat-message-container chat-message-container__client mb-2 mr-5 ml-1">
+						<div class="chat-message__header fs-xs fw-500 text-secondary opacity-75">
+							Ching Chan
+						</div>
+						<div class="chat-message__body pos-r">
+							<p>
+								Hi
+							</p>
+							<p>
+								Sorry going through a busy time in office. Yeah I analyzed the solution. 
+							</p>
+							<p>
+								It will require human resource, which I could not manage. Also it requires a long time to develop.
+							</p>
+						</div>
+						<div class="chat-message__footer fs-nano mt-1 text-muted fw-300 opacity-90">
+							Sep 9 at 3:24 am
+						</div>
 					</div>
-					<div class="chat-message-left">
-						a
+					<!--  end .chat-message-container -->
+
+					<!-- start .chat-message-container -->
+					<div class="chat-message-container chat-message-container__user mb-2 ml-5 mr-1">
+						<div class="chat-message__header fs-xs fw-500 text-primary opacity-75 text-right">
+							Dr. Codex Lantern
+						</div>
+						<div class="chat-message__body pos-r">
+							<p>
+								I am transfering it to your account today, you can allocate the resources to this project.
+							</p>
+						</div>
+						<div class="chat-message__footer fs-nano mt-1 text-muted fw-300 opacity-90 text-right">
+							Seen <i class="fa fa-check"></i>
+						</div>
 					</div>
+					<!--  end .chat-message-container -->
 
-
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
-					<p>chat log</p>
+					<!-- start .chat-message-container -->
+					<div class="chat-message-container chat-message-container__client mb-2 mr-5 ml-1">
+						<div class="chat-message__header fs-xs fw-500 text-secondary opacity-75">
+							Ching Chan
+						</div>
+						<div class="chat-message__body pos-r">
+							<p>
+								Thanks a lot!
+							</p>
+						</div>
+						<div class="chat-message__footer fs-nano mt-1 text-muted fw-300 opacity-90">
+							Sep 9 at 3:27 am
+						</div>
+					</div>
+					<!--  end .chat-message-container -->
 
 				</div>
 
@@ -81,14 +97,19 @@
 			<!-- END social-content-chatbox -->
 
 			<!-- BEGIN social-content__chatinput -->
-			<div class="social-content-chatinput d-flex align-items-center justify-content-center mr-3 ml-3 pos-r shadow-top">
-				
+			<div class="social-content-chatinput p-3 pos-r shadow-top">
+				<textarea class="w-100 h-auto">
+					Type your message here
+				</textarea>
 			</div>
 			<!-- END social-content__chatinput -->
 
 		</div>
-		<div class="tab-pane " id="test--2">
-			test--2
+		<div class="tab-pane " id="chat-2">
+
+
+
+
 		</div>
 
 	</div>

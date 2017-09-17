@@ -24,7 +24,7 @@ $social-option-list-width-collapsed: 50px;
 			content:'';
 			height:100%;
 			width:100%;
-			background:rgba(255,255,255,0.7);	
+			background:rgba($white,0.5);	
 			position:absolute;
 			z-index: 100;
 
@@ -42,6 +42,7 @@ $social-option-list-width-collapsed: 50px;
     	border-left-color: rgba(0,0,0,0.1);
 
     	& + .social-content {
+
     		&:before {
     			opacity: 1;
     			visibility: visible;
@@ -75,8 +76,93 @@ $social-option-list-width-collapsed: 50px;
 
 	.social-content-chatbox {
 
-		.chat-message-left {
-			display: flex;
+		.chat-message-container {
+		
+			.chat-message__body {
+				padding: $p-2 + $p-1;
+				border-radius: $border-radius;
+
+				> p {
+					padding: $p-2 + $p-1 0 0;
+					margin:0;
+				}
+
+				> p:first-child {
+					padding-top: 0;
+				}
+
+				.chat-message__body-image-send {
+					border-radius: 0 0 $border-radius * 2 $border-radius * 2;
+				}
+			}
+
+			&.chat-message-container__client {
+
+				.chat-message__body {
+					background: lighten($fusion-50, 40%);
+
+					&:before {
+						content: "";
+						width: 0;
+						height: 0;
+						border: 0 solid transparent;
+						border-top-width: $p-1;
+						border-bottom-width: $p-1;
+						border-right: $p-1 solid lighten($fusion-50, 40%);
+						position: absolute;
+						left: -$p-1;
+						top: $p-3;			
+					}				
+				}
+
+				/*& + .chat-message-container__client {
+					
+					.chat-message__header {
+						display:none;
+					}
+				}*/
+
+				/*& ~ .chat-message-container__client:not(:last-child) {
+					
+					.chat-message__footer {
+						display: none;
+					}
+				}*/	
+			}
+
+			&.chat-message-container__user {
+
+				.chat-message__body {
+					background: rgba($primary-500, 0.2);
+
+					&:before {
+						content: "";
+						width: 0;
+						height: 0;
+						border: 0 solid transparent;
+						border-bottom-width: $p-1;
+						border-top-width: $p-1;
+						border-left: $p-1 solid rgba($primary-500, 0.2);
+						position: absolute;
+						right: -$p-1;
+						top: $p-3;			
+					}				
+				}
+
+				/*& + .chat-message-container__user {
+
+					.chat-message__header {
+						display:none;
+					}
+				}*/
+
+				/*& ~ .chat-message-container__user:not(:last-child) {
+					.chat-message__footer {
+						display: none;
+					}
+				}*/
+
+			}	
 			
 		}
 
@@ -84,7 +170,8 @@ $social-option-list-width-collapsed: 50px;
 
 	.social-content-chatinput {
 
-		height: 70px;
+		min-height: 110px;
+		max-height: 200px;
 		border-top: 1px solid rgba(0,0,0,0.02);
 
 	}

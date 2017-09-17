@@ -149,58 +149,58 @@ $cust-icon-prefix:									icon !default;
 /*  Common Element Variables
 ========================================================================== */
 $body-background-color:								$white !default; //darken($color-fusion, 7%) !default;	
-$page-bg:											#f1f1f1 !default //desaturate(lighten($color-fusion, 65.5%),20%) !default;
+$page-bg:											        #f1f1f1 !default //desaturate(lighten($color-fusion, 65.5%),20%) !default;
 
 
 /*  HEADER STUFF
 ========================================================================== */
 
 /* colors */
-$header-bg:											#fff !default;
-$header-border-bottom-color:						rgba($color-fusion, (25/100));		
-$header-link-color:									darken($header-bg, 50%) !default;
+$header-bg:											      $white !default;
+$header-border-bottom-color:					rgba($color-fusion, (25/100));		
+$header-link-color:									  darken($header-bg, 50%) !default;
 $header-link-hover-color:							darken($header-bg, 75%) !default;
 
 
 /* search input box */
-$header-search-border-color:						transparent !default;									/* suggestion: #ccced0*/
-$header-search-bg:									$white !default;
+$header-search-border-color:					transparent !default;									/* suggestion: #ccced0*/
+$header-search-bg:									  $white !default;
 
 /* btn */
 $header-btn-active-bg:								$fusion-500 !default;
-$header-btn-color:									darken($page-bg, 40%) !default;
+$header-btn-color:									  $fusion-500 !default;
 $header-btn-hover-color:							darken($header-btn-color, 20%) !default;
 $header-btn-active-color:							#fff !default;
 
 /* dropdowns */
-$header-dropdown-menu-border-color:					#ccc !default;
+$header-dropdown-menu-border-color:		#ccc !default;
 
 
 /*  NAVIGATION STUFF
 ========================================================================== */
 
 /* main navigation */
-$nav-background:									darken($color-fusion, 7%) !default;
-$nav-base-color:									lighten($nav-background, 7%) !default;
+$nav-background:									   darken($color-fusion, 7%) !default;
+$nav-base-color:									   lighten($nav-background, 7%) !default;
 
 /* nav parent level-0 */
-$nav-link-color: 									lighten($nav-base-color, 50%) !default;
+$nav-link-color: 									  lighten($nav-base-color, 50%) !default;
 
 /* badge default */
 $nav-badge-color: 									#fff !default;
 $nav-badge-bg-color: 								lighten(desaturate($danger-700, 35%), 5%) !default;
 
 /* all child */
-$nav-icon-color:									lighten(darken($nav-base-color, 11%),38%) !default;
-$nav-icon-hover-color:								lighten(desaturate($color-primary, 30%), 10%) !default;
+$nav-icon-color:									  lighten(darken($nav-base-color, 11%),38%) !default;
+$nav-icon-hover-color:							lighten(desaturate($color-primary, 30%), 10%) !default;
 
 /* nav title */
 $nav-title-color: 									lighten($nav-base-color, 45%) !default;
-$nav-title-border-bottom-color: 					lighten($nav-base-color, 15%) !default;
+$nav-title-border-bottom-color: 		lighten($nav-base-color, 15%) !default;
 
 /* nav Minify */
 $nav-minify-hover-bg:								darken($nav-base-color, 3%) !default;
-$nav-minify-hover-text:								#fff !default;
+$nav-minify-hover-text:							#fff !default;
 $nav-minify-logo-bg:								$nav-background !default;
 
 /*   SETTINGS Panel
@@ -209,5 +209,5 @@ $settings-panel-bg:									lighten($color-fusion, 66%) !default;
 
 /*   FOOTER
 ========================================================================== */
-$footer-bg:											#fff !default;
+$footer-bg:											    #fff !default;
 $footer-text-color:									darken($base-text-color, 10%);

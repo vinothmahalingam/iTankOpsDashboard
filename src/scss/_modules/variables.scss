@@ -322,7 +322,7 @@ $print-page-margin:						       1.0cm;
 /*  Common Element Variables
 ========================================================================== */
 $body-background-color:				       $white !default; //darken($color-fusion, 7%) !default;	
-$page-bg:											       #f1f1f1 !default //desaturate(lighten($color-fusion, 65.5%),20%) !default;
+$page-bg:											       desaturate(lighten($color-fusion, 65.5%),20%) !default;
 
 /* Z-index decleartion "birds eye view"
 ========================================================================== */
@@ -500,8 +500,8 @@ $list-table-padding-y:						0 !default;
 /*   SETTINGS Panel (#right-panel)
 ========================================================================== */
 $settings-panel-bg:								$white !default;
-$settings-width:									350px !default;
-$settings-width-mobile:           300px !default
+$settings-width:									400px !default;
+$settings-width-mobile:           calc(100vw - 11%) !default
 $settings-incompat-title:         #d58100 !default;
 $settings-incompat-desc:          #ec9f28 !default;
 $settings-incompat-bg:            $warning-50 !default;
