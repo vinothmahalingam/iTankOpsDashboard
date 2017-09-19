@@ -452,8 +452,8 @@ $nav-icon-color:									lighten(darken($nav-base-color, 11%),27%) !default;
 $nav-icon-hover-color:						lighten(desaturate($color-primary, 30%), 10%) !default;
 
 /* nav title */
-$nav-title-color: 								lighten($nav-base-color, 45%) !default;
-$nav-title-border-bottom-color: 	lighten($nav-base-color, 15%) !default;
+$nav-title-color: 								lighten($nav-base-color, 10%) !default;
+$nav-title-border-bottom-color: 	lighten($nav-base-color, 3%) !default;
 $nav-title-font-size: 						$base-font-size - 2.8;
 
 /* nav Minify */
