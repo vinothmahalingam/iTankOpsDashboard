@@ -73,11 +73,21 @@
 			}
 		}*/
 
+		/*height: $header-height;*/
+
+		/*.nav-item {
+
+			.nav-link {
+				margin-top: $header-height - 45px;
+			}
+
+		}*/
+
 		.nav-tabs-panel__close {
 			display: block !important;
 			position: absolute;
 			right: 6px;
-			top: 4px;
+			top: 5px;
 			font-size: 21px;
 		}
 	}
