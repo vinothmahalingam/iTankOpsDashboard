@@ -7,7 +7,7 @@
 			display: none !important;
 		}
 
-		#left-panel {
+		.left-panel {
 			
 			width: $nav-minify-width;
 			z-index: $depth-header + 1;
@@ -16,7 +16,7 @@
 			
 			transition: $nav-hide-animate;
 
-			#logo {
+			.logo {
 
 				background:$nav-minify-logo-bg;
 				width:$nav-minify-width;
@@ -31,7 +31,7 @@
 				}
 			}
 
-			#primary-nav {
+			.primary-nav {
 				overflow: hidden; 
 
 				.info-card {
@@ -50,7 +50,7 @@
 					}
 				}
 
-				.navigation-title {
+				.nav-title {
 					display: none;
 				}
 				.navigation {
@@ -188,11 +188,11 @@
 
 		}
 		
-		#page-wrapper {
+		.page-wrapper {
 			padding-left: $nav-minify-width;
 		}
 
-		#banner {
+		.header {
 			[data-class="nav-function-minify"] {
 				background: $header-btn-active-bg !important;
 				border-color: darken($header-btn-active-bg, 10%) !important;
@@ -202,29 +202,29 @@
 		}
 
 		&.nav-function-hidden {
-			#page-wrapper {
+			.page-wrapper {
 				padding-left: $nav-hidden-visiblity;
 			}
-			#left-panel {
+			.left-panel {
 				left: $nav-hidden-visiblity - $nav-minify-width;
 				overflow: visible;
 				&:hover {
 					left: 0;
 				}
 			}
-			#banner {
+			.header {
 				margin-left: 0;
 			}
 		}
 
 		&.header-function-fixed {
-			#banner {
+			.header {
 				margin-left: $nav-minify-width;
 			}
 		}
 
 		&.nav-function-hidden.header-function-fixed {
-			#banner {
+			.header {
 				margin-left: $nav-hidden-visiblity;
 			}
 		}

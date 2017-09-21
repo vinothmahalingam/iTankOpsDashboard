@@ -36,27 +36,27 @@ body:not(.mobile-detected) {
  * Left Panel custom scroll 
  */
 
-#left-panel #primary-nav::-webkit-scrollbar-track-piece {
+.left-panel .primary-nav::-webkit-scrollbar-track-piece {
     background-color: $trackPieceColor;
 }
 
-#left-panel #primary-nav::-webkit-scrollbar-thumb:vertical {
+.left-panel .primary-nav::-webkit-scrollbar-thumb:vertical {
     background-color: #666;
 }
 
-#left-panel #primary-nav::-webkit-scrollbar {
+.left-panel .primary-nav::-webkit-scrollbar {
     height: 4px;
     width: 4px;
 }
 
-#left-panel #primary-nav:hover::-webkit-scrollbar-corner {
+.left-panel .primary-nav:hover::-webkit-scrollbar-corner {
     width: 40px;
 }
 
-#left-panel #primary-nav::-webkit-scrollbar-track-piece {
+.left-panel .primary-nav::-webkit-scrollbar-track-piece {
 	background-color: $trackPieceColor;
 }
 
-#left-panel #primary-nav::-webkit-scrollbar-thumb:vertical {
+.left-panel .primary-nav::-webkit-scrollbar-thumb:vertical {
 	background-color: #666;
 }

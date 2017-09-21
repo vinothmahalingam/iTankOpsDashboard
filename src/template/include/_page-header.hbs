@@ -1,4 +1,4 @@
-<header id="banner" role="banner">
+<header class="header" role="banner">
 		
 	<ul id="hdr-l" class="list-table">
 		<!-- DOC: dropdown / shortcuts -->
@@ -38,16 +38,16 @@
 	</ul>
 	
 	<ul id="hdr-r" class="list-table">
-		<!-- app settings -->
-		<li class="hidden-md-down">
-			<a href="#" data-action="toggle" data-class="display-right-panel" data-toggle="tooltip" data-placement="left" title="SETTINGS">
-				<i class="icon icon-settings"></i>
-			</a>
-		</li>
 		<!-- activate app search field (mobile) -->
 		<li class="hidden-sm-up">
 			<a href="#" data-action="toggle" data-class="mobile-search-on" data-focus="search-field" title="Search">
 				<i class="icon icon-magnifier"></i>
+			</a>
+		</li>
+		<!-- app settings -->
+		<li class="hidden-md-down">
+			<a href="#" data-action="toggle" data-class="display-right-panel">
+				<i class="icon icon-settings"></i>
 			</a>
 		</li>
 		<!-- app shortcuts -->
@@ -71,10 +71,11 @@
 		</li>
 		<!-- app user menu -->
 		<li>
-			<a href="#" data-toggle="dropdown" title="dr.codex.lantern@nextgenadmin.com" class="no-ripple d-flex align-items-center justify-content-center">
+			<a href="#" data-toggle="dropdown" title="dr.codex.lantern@nextgenadmin.com" class="no-ripple flex-m">
 				<img src="img/avatar-sunny.png" class="profile-image rounded-circle" alt="Codex Profile"> 
-				<span class="mr-1 text-truncate text-truncate-header hidden-xs-down">Dr. Codex Lantern</span>
-				<i class="icon icon-chevron-down hidden-xs-down"></i> 
+				<!-- you can also add username next to the avatar with the codes below:
+				<span class="ml-1 mr-1 text-truncate text-truncate-header hidden-xs-down">Dr. Codex Lantern</span>
+				<i class="icon icon-chevron-down hidden-xs-down"></i> -->
 			</a>
 			<div class="dropdown-menu dropdown-sm p-0">
 				{{> include/_dropdown-menu}}

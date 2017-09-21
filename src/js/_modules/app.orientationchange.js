@@ -4,7 +4,7 @@
  **/
 $( window ).on( "orientationchange", function( event ) {
 	/* reset any .CSS heights and force appHeight function to recalculate */
-	$("#page-wrapper").css("min-height", "");
+	myapp_config.root_.css("min-height", "");
 
 	initApp.calculateAppHeight();
 

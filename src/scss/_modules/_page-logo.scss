@@ -1,4 +1,4 @@
-#logo {
+.logo {
 	height:$header-height;
 	width: $nav-width;
 	background: lighten($nav-background, 5%);
@@ -23,7 +23,7 @@
 }
 
 body:not(.header-function-fixed) {
-	#logo {
+	.logo {
 		@extend %general-animation;
 	}
 }

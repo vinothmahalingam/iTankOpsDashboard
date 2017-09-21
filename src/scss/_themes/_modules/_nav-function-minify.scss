@@ -2,15 +2,14 @@
 
 	.nav-function-minify:not(.nav-function-top) {
 
-		#left-panel {
+		.left-panel {
 
-			#logo {
+			.logo {
 
-				background:$nav-minify-logo-bg;
-
+				background: $nav-minify-logo-bg;
 			}
 
-			#primary-nav {
+			.primary-nav {
 
 				.navigation {
 					margin:0;
@@ -22,7 +21,7 @@
 							text-align: center;
 
 							> .navigation-link-text {
-								background:$nav-minify-hover-bg;
+								background: $nav-minify-hover-bg;
 							}
 
 						}
@@ -46,7 +45,7 @@
 
 		}
 		
-		#banner {
+		.header {
 			[data-class="nav-function-minify"] {
 				background: $header-btn-active-bg !important;
 				border-color: darken($header-btn-active-bg, 10%) !important;

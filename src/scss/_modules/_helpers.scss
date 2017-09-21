@@ -5,8 +5,13 @@
 /* line-heights */
 .l-h-n { line-height:normal; }
 
-/* display */
+/* flexs */
 .flex-1 { flex:1 !important; }
+.flex-m { 
+	display: flex !important; 
+	align-items:center; 
+	justify-content:center; 
+}
 
 /* margins */
 .mrg-auto,
@@ -37,19 +42,24 @@
 .text-truncate-lg {	max-width: 200px; }
 
 /* absolute position */
-.pos-a,
-.a-tr,
+/*.a-tr,
 .a-tl,
 .a-br,
 .a-bl {	position:absolute !important; }
 .a-tr {	top:0; right:0; }
 .a-tl {	top:0; left:0; }
 .a-br {	bottom:0; right:0; }
-.a-bl {	bottom:0; left:0; }
+.a-bl {	bottom:0; left:0; }*/
 
 /* positions */
+.pos-a { position:absolute !important; }
 .pos-r { position: relative !important; }
 .pos-s { position: static !important; }
+.pos-f { position: fixed !important;}
+.pos-top { top: 0;}
+.pos-left { left: 0;}
+.pos-right { right: 0;}
+.pos-bottom { bottom: 0;}
 
 /* font weights */
 .fw-300 { font-weight: 300 !important; }

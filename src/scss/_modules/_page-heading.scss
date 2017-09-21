@@ -1,4 +1,4 @@
-.page-heading {
+.subheader {
 	margin-bottom: $grid-gutter-width-base - 4;
 	//margin-bottom: $grid-gutter-width-base - 15;
 	position: relative;
@@ -7,7 +7,7 @@
 	flex-direction: row;
 	align-items: center; 
 
-	.page-header {
+	.subheader-title {
 		//font-size: $fs-xxl;
 		font-size: unquote("calc(16px + 5 * ((100vw - 320px) / 680))");
 		font-weight: 300;

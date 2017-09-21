@@ -1,8 +1,8 @@
-#left-panel {
+.left-panel {
 	background: $nav-background; 
 }
 
-.navigation-title {
+.nav-title {
 	color: $nav-title-color;
 	border-bottom: 1px solid rgba($nav-title-border-bottom-color, 0.2);
 }
@@ -195,7 +195,7 @@
 
 body:not(.nav-function-top) {
 
-	#primary-nav {
+	.primary-nav {
 
 		.navigation {
 

@@ -1,15 +1,15 @@
 @media only screen and ( max-width: $mobile-breakpoint-size ){
 
 
-	#page-wrapper {
+	.page-wrapper {
 
 
 		#content {
 			color: #222;
 
-			.page-heading {
+			.subheader {
 
-				.page-header {
+				.subheader-title {
 					color: #22282d;
 
 					small {
@@ -24,7 +24,7 @@
 	/* Off canvas */
 	&.nav-mobile-slide-out {
 
-		#page-wrapper {
+		.page-wrapper {
 
 			#content {
 				background: $page-bg;

@@ -28,7 +28,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 		&:not(.nav-function-fixed) {
 
-			#right-panel {
+			.right-panel {
 				position:absolute;
 				
 				.list {
@@ -63,7 +63,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 		}
 
-		#banner {
+		.header {
 			margin-top: 0;
 			.dropdown-icon-menu {
 				display: none;
@@ -74,7 +74,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 			}
 		}
 
-		#page-wrapper {
+		.page-wrapper {
 			padding-top:$nav-top-height;
 			padding-left:0;
 
@@ -83,7 +83,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 			}
 		}
 
-		#left-panel {
+		.left-panel {
 			left:0;
 			padding-bottom:0;
 			top: 0;
@@ -97,7 +97,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 				overflow:visible;
 			}
 
-			#logo {
+			.logo {
 				float: left;
 				width: $nav-function-top-logo-width-sm;
 				padding: 0;
@@ -133,11 +133,11 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 			}
 
 			.info-card,
-			.navigation-title {
+			.nav-title {
 				display: none;
 			}
 
-			#primary-nav {
+			.primary-nav {
 				overflow:visible;
 				float:left;
 
@@ -341,10 +341,10 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 				}
 			}*/
 
-			#left-panel {
+			.left-panel {
 				height: $nav-top-minify-height;
 
-				#logo {
+				.logo {
 					width: auto !important;
 					height: $nav-top-minify-height;
 					padding: 0 5px;			
@@ -360,7 +360,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 					}
 				}
 
-				#primary-nav {
+				.primary-nav {
 					 
 					.navigation {
 
@@ -390,15 +390,15 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 				}
 			}
 
-			#page-wrapper {
+			.page-wrapper {
 				padding-top:$nav-top-minify-height;
 			}
 		}
 
 		&.mod-main-boxed {
-			#left-panel {
+			.left-panel {
 
-				#primary-nav {
+				.primary-nav {
 					.navigation:last-child,
 					.navigation:only-child {
 						> li:last-child,
@@ -427,13 +427,13 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 	.nav-function-top {
 		
-		#left-panel {
+		.left-panel {
 
-			#logo {
+			.logo {
 				width: 143px;
 			}
 
-			#primary-nav {
+			.primary-nav {
 
 				.navigation {
 

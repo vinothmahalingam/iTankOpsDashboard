@@ -1,4 +1,4 @@
-#primary-nav {
+.primary-nav {
 	overflow: auto;
 	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
@@ -6,7 +6,7 @@
 		backface-visibility: hidden;
 }
 
-.navigation-title {
+.nav-title {
 	text-transform: uppercase;
 	margin:0;
 	color: $nav-title-color;
@@ -442,7 +442,7 @@
 
 body:not(.nav-function-top) {
 
-	#primary-nav {
+	.primary-nav {
 
 		.navigation {
 
@@ -479,9 +479,9 @@ body:not(.nav-function-top) {
 
 @include media-breakpoint-up(xl) {
 	
-	#left-panel {
+	.left-panel {
 
-		#primary-nav {
+		.primary-nav {
 
 			.navigation {
 

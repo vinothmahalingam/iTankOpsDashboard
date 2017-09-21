@@ -1,124 +1,117 @@
-.settings-wrap {
+.settings-panel {
 
-	height: unquote("calc(100% - #{$header-height - 15})");
-	//overflow-x: auto;
-
-	.settings-panel {
-
-		&:first-child {
-			h5 {
-				margin-top:0;
-				padding-top:5px;
-			}
-		}
-
+	&:first-child {
 		h5 {
-			margin:0;
-			font-weight:500;
-			font-size: rem($base-font-size + 1);
-			padding: $p-3 $p-3 5px;
-			box-sizing: content-box;
-			display: block;
-			overflow:hidden;
-			text-decoration: none;
-			margin-top: 5px;
-			color: $fusion-500;
-			text-align: left;
-
-			small {
-				display: inline;
-			}
-		}
-
-		.list {
-			width:100%;
-			font-weight:400;
-			min-height:35px;
-			padding: 4.75px $p-3 4.75px $p-3;
-			color:darken($settings-panel-bg, 60%);
-			position: relative;
-
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-
-			@extend %common-animation;
-
-			&:hover{
-				color:darken($settings-panel-bg, 80%);
-				background:rgba( $white, .7 );
-
-				.onoffswitch {
-					@include scale(1.13);
-				}
-			}
-
-			.onoffswitch,
-			&:hover .onoffswitch {
-				@extend %common-animation;
-			}
-
-			.btn-switch {
-				position: absolute;
-				right: 15px;
-				margin: 0;
-				top: 30%;
-			}
-
-			& + .expanded {
-				@extend %expanded-box;
-				position: relative;
-				padding: 16px 16px 10px;
-				display: none;
-
-				&:before {
-					border-bottom-color: $fusion-400;
-					bottom: 1px;
-				}
-
-				> ul {
-					padding: 0;
-					margin: 0;
-					text-align: center;
-					
-					> li {
-						display: inline-block;
-						margin:0;
-						padding:0;
-
-						&:last-child {
-							[data-action="toggle"] {
-								margin-right:0;
-							}
-						}
-					}
-				}
-
-				.list {
-					padding: 0 0 0 7px;
-					min-height: auto;
-					margin-top: 8px;
-
-					.btn-switch {
-						margin-top:3px;
-						@include scale(0.9);
-						top: -2px;
-
-						& + .onoffswitch-title {
-							font-size:12px;
-						}
-					}
-
-					&:hover {
-						background:transparent;
-					}
-				} 
-			}
-
+			margin-top:0;
+			padding-top:5px;
 		}
 	}
-}
 
+	h5 {
+		margin:0;
+		font-weight:500;
+		font-size: rem($base-font-size + 1);
+		padding: $p-3 $p-3 5px;
+		box-sizing: content-box;
+		display: block;
+		overflow:hidden;
+		text-decoration: none;
+		margin-top: 5px;
+		color: $fusion-500;
+		text-align: left;
+
+		small {
+			display: inline;
+		}
+	}
+
+	.list {
+		width:100%;
+		font-weight:400;
+		min-height:35px;
+		padding: 4.75px $p-3 4.75px $p-3;
+		color:darken($settings-panel-bg, 60%);
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		@extend %common-animation;
+
+		&:hover{
+			color:darken($settings-panel-bg, 80%);
+			background:rgba( $white, .7 );
+
+			.onoffswitch {
+				@include scale(1.13);
+			}
+		}
+
+		.onoffswitch,
+		&:hover .onoffswitch {
+			@extend %common-animation;
+		}
+
+		.btn-switch {
+			position: absolute;
+			right: 15px;
+			margin: 0;
+			top: 30%;
+		}
+
+		& + .expanded {
+			@extend %expanded-box;
+			position: relative;
+			padding: 16px 16px 10px;
+			display: none;
+
+			&:before {
+				border-bottom-color: $fusion-400;
+				bottom: 1px;
+			}
+
+			> ul {
+				padding: 0;
+				margin: 0;
+				text-align: center;
+				
+				> li {
+					display: inline-block;
+					margin:0;
+					padding:0;
+
+					&:last-child {
+						[data-action="toggle"] {
+							margin-right:0;
+						}
+					}
+				}
+			}
+
+			.list {
+				padding: 0 0 0 7px;
+				min-height: auto;
+				margin-top: 8px;
+
+				.btn-switch {
+					margin-top:3px;
+					@include scale(0.9);
+					top: -2px;
+
+					& + .onoffswitch-title {
+						font-size:12px;
+					}
+				}
+
+				&:hover {
+					background:transparent;
+				}
+			} 
+		}
+
+	}
+}
 
 @include set-settings(display-right-panel);
 @include set-settings(header-function-fixed);
@@ -139,7 +132,7 @@
 @include set-settings(mod-color-blind);
 @include set-settings(mod-hide-nav-icons);
 @include set-settings(mod-hide-info-card);
-@include set-settings(mod-lean-page-header);
+@include set-settings(mod-lean-subheader);
 @include set-settings(mod-disable-animation);
 @include set-settings(mod-nav-link);
 @include set-settings(mod-app-rtl);

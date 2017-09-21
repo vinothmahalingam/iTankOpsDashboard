@@ -22,10 +22,10 @@
 	a:link { 
 		font-weight: bold; 
 		text-decoration: underline; 
-		color: #06c; 
+		color: #06c;
 	}
 
-	.page-header {
+	.subheader-title {
 		font-size: 14pt !important;
 
 		small {
@@ -37,15 +37,15 @@
 		font-weight: bold !important;
 	}
 
-	#left-panel,
-	#right-panel,
+	.left-panel,
+	.right-panel,
 	.btn,
-	#banner,
+	.header,
 	.footer {
 		display: none !important;
 	}
 
-	#page-wrapper,
+	.page-wrapper,
 	#content,
 	.container.card {
 	   	padding: 0;

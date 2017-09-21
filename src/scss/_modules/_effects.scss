@@ -1,6 +1,6 @@
 .shadow-top,
 .shadow-bottom,
-.mobile-view-activated.header-function-fixed #banner,
+.mobile-view-activated.header-function-fixed .header,
 .mobile-view-activated.header-function-fixed .footer {
 	&:after {
 		content: "";
@@ -19,7 +19,7 @@
 }
 
 .shadow-bottom,
-.mobile-view-activated.header-function-fixed #banner {
+.mobile-view-activated.header-function-fixed .header {
 	&:after {
 		top: auto;
 		bottom: -7px;

@@ -13,7 +13,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 	<head>
 		{{> include/_head}}
 
-		<!-- Optional: page related CSS-->
+		<!-- Optional: page related CSS--> 
 		{{#>head-block}}{{/head-block}}
 	</head>
 	<body class="mod-bg-1">
@@ -21,24 +21,24 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 		{{!-- save-settings-script --}}
 		{{> include/_scripts-loading-saving}}
 		
-		<!-- BEGIN #page-wrapper -->
-		<div id="page-wrapper" class="clearfix">
+		<!-- BEGIN Page Wrapper -->
+		<div class="page-wrapper clearfix">
 
-			<!-- BEGIN #left-panel -->
+			<!-- BEGIN Left Aside -->
 			{{> include/_left-panel }}
-			<!-- END #left-panel -->
+			<!-- END Left Aside -->
 			
-			<!-- BEGIN HEADER -->
+			<!-- BEGIN Page Header -->
 			{{> include/_page-header }}
-			<!-- END HEADER -->
+			<!-- END Page Header -->
 
-			<!-- BEGIN #content -->
+			<!-- BEGIN Page Content -->
 			<main id="content" role="main">
 				{{> include/_page-breadcrumb }}
 				{{> include/_page-heading }}
 				{{#>content-block}}{{/content-block}}
 			</main>
-			<!-- END #content -->
+			<!-- END Page Content -->
 
 			<!--{{#if splitcontent}}
 			<div id="splitcontent">
@@ -46,20 +46,20 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 			</div>
 			{{/if}}-->
 
-			<!-- BEGIN footer -->
+			<!-- BEGIN Page Footer -->
 			{{> include/_page-footer }}
-			<!-- END footer -->
-
-			<!-- BEGIN .app-shortcut -->
-			{{> include/_shortcut }}
-			<!-- END .app-shortcut -->
+			<!-- END Page Footer -->
 
 		</div>
-		<!-- END #page-wrapper -->
+		<!-- END Page Wrapper -->
 
-		<!-- BEGIN #right-panel -->
+		<!-- BEGIN Shortcut -->
+		{{> include/_shortcut }}
+		<!-- END Shortcut -->
+
+		<!-- BEGIN Right Aside -->
 		{{> include/_right-panel }}
-		<!-- END #right-panel -->
+		<!-- END Right Aside -->
 
 		{{!-- Google Analytics  code if GOOGLE_ANALYTICS_ID id available --}}
 		{{#if GOOGLE_ANALYTICS_ID}}

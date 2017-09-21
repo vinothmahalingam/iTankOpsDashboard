@@ -15,7 +15,7 @@ var initApp = (function(app) {
 		$(input).change( function () {
 
 			var filter = $(this).val().toLowerCase();
-			var	listPrev = $(list).next().filter('.filter-message');
+			var	listPrev = $(list).next().filter('.js-filter-message');
 
 			/* when user types more than 1 letter start search filter */
 			if(filter.length > 1) {

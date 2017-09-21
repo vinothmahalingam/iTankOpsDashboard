@@ -1,44 +1,58 @@
-<div class="tab-pane h-100 bg-white" id="social">
+<div class="tab-pane h-100 bg-white" id="msgr">
 
-	<!-- BEGIN social-list -->
-	<div class="social-list d-flex flex-column bg-grade-light" role="tablist">
-		<div class="social-option-container">
-			<a class="social-list--item" data-toggle="tab" href="#chat-1" aria-expanded="true">
-				<i class="social-list__icon icon icon-menu"></i>
+	<!-- BEGIN msgr-list -->
+	<div class="msgr-list d-flex flex-column bg-grade-light" role="tablist">
+		<div class="msgr-option-container">
+			<a class="msgr-list--item" data-toggle="tab" href="#chat-1" aria-expanded="true">
+				<i class="msgr-list__icon icon icon-menu"></i>
 			</a>
-			<a class="social-list--item" data-toggle="tab" href="#chat-2" aria-expanded="false">
-				<i class="fa fa-search social-list__icon"></i>
+			<a class="msgr-list--item" data-toggle="tab" href="#chat-2" aria-expanded="false">
+				<i class="fa fa-search msgr-list__icon"></i>
 			</a>
 		</div>
-		<div class="social-option-container flex-1">
-			a
+		<div class="msgr-option-container flex-1 h-100 custom-scroll">
+			<div class="w-100">
+				<ul>
+					<li>
+						a
+					</li>
+				</ul>
+			</div>
 		</div>
-		<div class="social-option-container">
-			<a class="social-list--item" data-toggle="tab" href="#test--2" aria-expanded="false">
-				<i class="fa fa-gear social-list__icon"></i>
+		<div class="msgr-option-container">
+			<a class="msgr-list--item" data-toggle="tab" href="#test--2" aria-expanded="false">
+				<i class="fa fa-gear msgr-list__icon"></i>
 			</a>
 		</div>
 	</div>
-	<!-- END social-list -->
+	<!-- END msgr-list -->
 
-	<!-- BEGIN social -->
-	<div class="tab-content social">
+	<!-- BEGIN msgr -->
+	<div class="tab-content msgr">
 
 		<div class="tab-pane active d-flex h-100 flex-column" id="chat-1">
 
-			<!-- BEGIN social-user -->
-			<div class="social-user d-flex align-items-center justify-content-center mr-3 ml-3 pos-r shadow-bottom">
+			<!-- BEGIN msgr-user 
+			<div class="msgr-user flex-m mr-3 ml-3 pos-r shadow-bottom">
 				<div class="info-card-text text-center">
 					<span class="d-line-block text-truncate text-truncate-sm text-muted">IT Director</span>
 					<div class="text-truncate text-truncate-sm">Ching S. Chan <i class="icon icon-chevron-down hidden-xs-down"></i></div>
 				</div>
-			</div>
-			<!-- END social-user -->
+			</div>-->
+			<!-- END msgr-user -->
 
 			<!-- BEGIN custom-scroll -->
 			<div class="custom-scroll flex-1 h-100">
 
 				<div class="w-100 p-3">
+
+					<!-- start .chat-container -->
+					<div class="chat-container">
+						<div class="chat-stamp text-center mb-2 fw-400">
+							Jun 19
+						</div>
+					</div>
+					<!--  end .chat-container -->
 
 					<!-- start .chat-container -->
 					<div class="chat-container chat-container--sent">
@@ -48,13 +62,14 @@
 							</p>
 						</div>
 						<div class="chat-stamp text-right">
-							<i class="fa fa-check"></i> Sep 9 at 3:00 am
+							3:00 am
 						</div>
 					</div>
 					<!--  end .chat-container -->
 					
 					<!-- start .chat-container -->
 					<div class="chat-container chat-container--rcvd">
+						<img src="img/avatar-m.png" data-src="img/avatars/avatar-i.png" class="profile-image-sm rounded-circle chat-img" alt="Ching Chan">
 						<div class="chat-message">
 							<p>
 								Hi
@@ -67,7 +82,7 @@
 							</p>
 						</div>
 						<div class="chat-stamp">
-							Sep 9 at 3:24 am
+							3:24 am
 						</div>
 					</div>
 					<!--  end .chat-container -->
@@ -80,7 +95,7 @@
 							</p>
 						</div>
 						<div class="chat-stamp text-right">
-							<i class="fa fa-check"></i> Seen
+							3:26 am
 						</div>
 					</div>
 					<!--  end .chat-container -->
@@ -93,33 +108,49 @@
 							</p>
 						</div>
 						<div class="chat-stamp text-right">
-							<i class="fa fa-check"></i> Seen
+							3:26 am
 						</div>
 					</div>
 					<!--  end .chat-container -->
 
 					<!-- start .chat-container -->
 					<div class="chat-container chat-container--rcvd chat-start">
+						<img src="img/avatar-m.png" data-src="img/avatars/avatar-i.png" class="profile-image-sm rounded-circle chat-img" alt="Ching Chan">	
 						<div class="chat-message">
 							<p>
-								Thanks a lot!
+								Perfect. Thanks a lot!
 							</p>
 						</div>
 						<div class="chat-stamp">
-							Sep 9 at 3:27 am
+							3:27 am
 						</div>
 					</div>
 					<!--  end .chat-container -->
 
 					<!-- start .chat-container -->
-					<div class="chat-container chat-container--rcvd chat-end">
+					<div class="chat-container chat-container--rcvd">
+						<img src="img/avatar-m.png" data-src="img/avatars/avatar-i.png" class="profile-image-sm rounded-circle chat-img" alt="Ching Chan">
 						<div class="chat-message">
 							<p>
 								I will have them ready by tonight.
 							</p>
 						</div>
 						<div class="chat-stamp">
-							Sep 9 at 3:27 am
+							3:27 am
+						</div>
+					</div>
+					<!--  end .chat-container -->
+
+					<!-- start .chat-container -->
+					<div class="chat-container chat-container--rcvd chat-end">
+						<img src="img/avatar-m.png" data-src="img/avatars/avatar-i.png" class="profile-image-sm rounded-circle chat-img" alt="Ching Chan">
+						<div class="chat-message">
+							<p>
+								Cheers
+							</p>
+						</div>
+						<div class="chat-stamp">
+							3:27 am
 						</div>
 					</div>
 					<!--  end .chat-container -->
@@ -129,13 +160,13 @@
 			</div>
 			<!-- END custom-scroll  -->
 
-			<!-- BEGIN social__chatinput -->
-			<div class="social-chatinput pt-3 pb-3 mr-3 ml-3 pos-r shadow-top">
+			<!-- BEGIN msgr__chatinput -->
+			<div class="msgr-chatinput pt-3 pb-3 mr-3 ml-3 pos-r shadow-top">
 				<div class="form-group">
 					<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
 				</div>
 			</div>
-			<!-- END social__chatinput -->
+			<!-- END msgr__chatinput -->
 
 		</div>
 		<div class="tab-pane " id="chat-2">
@@ -143,6 +174,6 @@
 		</div>
 
 	</div>
-	<!-- END social -->
+	<!-- END msgr -->
 
 </div>

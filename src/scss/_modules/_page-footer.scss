@@ -30,14 +30,14 @@
 		float:left;
 	}
 
-	&:hover {
+	/*&:hover {
 		& + .footer-push + .app-shortcut {
 			-webkit-animation: 1s ease 0s normal forwards 1 subtle;
     		animation: 1s ease 0s normal forwards 1 subtle;
 			-webkit-animation-delay: 1s;
 			animation-delay: 1s;
 		}
-	}
+	}*/
 }
 
 @include media-breakpoint-up(lg) {

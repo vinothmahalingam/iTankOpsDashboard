@@ -7,7 +7,7 @@ $nav-function-top-menu-item-bg: darken($nav-base-color, 15%);
 
 		&:not(.nav-function-fixed) {
 
-			#right-panel {
+			.right-panel {
 				position:absolute;
 				
 				.list {
@@ -30,9 +30,9 @@ $nav-function-top-menu-item-bg: darken($nav-base-color, 15%);
 		}
 
 
-		#left-panel {
+		.left-panel {
 
-			#primary-nav {
+			.primary-nav {
 
 				.navigation {
 

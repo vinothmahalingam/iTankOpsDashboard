@@ -1,7 +1,7 @@
 .mod-high-contrast {
 
 	.navigation li a,
-	.navigation-title,
+	.nav-title,
 	.navigation li a .fa, 
 	.navigation li a .icon,
 	.dl-ref,
@@ -15,7 +15,7 @@
 		font-weight:500 !important;
 	}
 
-	.page-header,
+	.subheader-title,
 	h1,
 	h2,
 	h3,
@@ -26,7 +26,7 @@
 	.badge-detached,
 	.btn-secondary,
 	.btn-default,
-	#banner .btn,
+	.header .btn,
 	[class*="btn-outline-"] {
 		text-shadow:
 			   -1px -1px 0 $white,  
@@ -38,7 +38,7 @@
 	}
 
 
-	.page-header small,
+	.subheader-title small,
 	.breadcrumb > li > a,
 	#content,
 	h1 small,

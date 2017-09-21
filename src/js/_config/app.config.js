@@ -12,14 +12,14 @@ var myapp_config = {
        Save a reference to the global object (window in the browser)
      */
     root_: $('body'), // used for core app reference
-    root_logo: $('#logo'), // used for core app reference
+    root_logo: $('#left_panel > .logo'), // used for core app reference
     /*
        REFERENCE OBJ FOR WINDOW HEIGHT
        we are saving some memory and repeated calls for window height
        window height is only updated during window resize
      */
     windowHeight: $(window).height(),
-    navHeightGap: ( $('#left-panel .nav-footer').height() || 0 ) + $('header').height() + 1,
+    navHeightGap: ( $('#left_panel .nav-footer').height() || 0 ) + $('header').height() + 1,
     /*
        DELAY VAR FOR FIRING REPEATED EVENTS (eg., scroll & resize events)
        Lowering the variable makes faster response time but taxing on the CPU
@@ -68,11 +68,12 @@ var myapp_config = {
     */
     mythemeAnchor: '#mytheme',
     /*
-       Primary menu anchor point #primary-nav
+       Primary menu anchor point #primary_nav
        This is the root anchor point where the menu script will begin its build
     */
-    navAnchor: $('#primary-nav'), //changing this may implicate slimscroll plugin target
-    navHooks: $('#primary-nav > ul.navigation'), //changing this may implicate CSS targets
+    navAnchor: $('#primary_nav'), //changing this may implicate slimscroll plugin target
+    navHooks: $('#primary_nav > ul.navigation'), //changing this may implicate CSS targets
+    navInitalized: 'js-nav-init', //nav finished class
     navFilterInput: $('#nav-filter-input'), //changing this may implicate CSS targets
     /*
        The rate at which the menu expands revealing child elements on click

@@ -35,12 +35,12 @@ $.fn.extend({
              **/
             $this = $(this);
 
-        if (!$this.hasClass("menu-built")) {
+        if (!$this.hasClass(myapp_config.navInitalized)) {
 
             /**
              * confirm build to prevent rebuild error
              **/
-            $this.addClass("menu-built");
+            $this.addClass(myapp_config.navInitalized);
 
             /**
              * add a mark [+] to a multilevel menu
@@ -166,10 +166,10 @@ $.fn.extend({
      **/
     destroy: function() {
         $this = $(this);
-        if ($this.hasClass("menu-built")) {
+        if ($this.hasClass(myapp_config.navInitalized)) {
             $this.find("li").removeClass("active open");
             $this.find("li a").off('mousedown').removeClass("active").removeAttr("aria-expanded").find(".collapse-sign").remove();
-            $this.removeClass("menu-built").find("ul").removeAttr("style");
+            $this.removeClass(myapp_config.navInitalized).find("ul").removeAttr("style");
         }
     }
 }); 

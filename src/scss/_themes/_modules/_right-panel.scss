@@ -1,4 +1,4 @@
-#settings-demo {
+.right-panel {
 
 	background: $settings-panel-bg;
 	border: 1px solid lighten($fusion-50, 15%);
@@ -127,6 +127,6 @@
 @include set-settings(mod-color-blind);
 @include set-settings(mod-hide-nav-icons);
 @include set-settings(mod-hide-info-card);
-@include set-settings(mod-lean-page-header);
+@include set-settings(mod-lean-subheader);
 @include set-settings(mod-disable-animation);
 @include set-settings(mod-app-rtl);

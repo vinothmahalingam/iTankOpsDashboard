@@ -1,8 +1,8 @@
 .nav-function-fixed:not(.nav-function-top)  {
-	#left-panel{
+	.left-panel{
 		position: fixed !important;
 		
-		#primary-nav {
+		.primary-nav {
 			overflow: auto;
 			overflow-x: hidden;
 			-webkit-overflow-scrolling: touch;
@@ -13,14 +13,14 @@
 
 			height: unquote("calc(100% - #{$header-height + $footer-height})") !important;
 
-			#primary-nav {
+			.primary-nav {
 				padding-bottom: 0;
 			}
 		}
 
 	}
 	
-	#banner {
+	.header {
 		[data-class="nav-function-fixed"] {
 			@extend %header-btn-active;
 		}
@@ -37,7 +37,7 @@
 		 */
 		&:not(.nav-function-top){
 			&.mod-main-boxed {
-				#left-panel{
+				.left-panel{
 					position: fixed !important;
 				}	
 			}
@@ -48,7 +48,7 @@
 		 */
 		&:not(.mod-main-boxed) {
 			&.nav-function-top {
-				#left-panel {
+				.left-panel {
 					position: fixed !important;
 				}
 			}
@@ -59,7 +59,7 @@
 		 */
 		&.nav-function-top {
 			&.mod-main-boxed {
-				#left-panel {
+				.left-panel {
 					position: fixed !important;
 					right: 0;
 					left: 0;
@@ -80,7 +80,7 @@
 		 */
 		&:not(.nav-function-top){
 			&.mod-main-boxed {
-				#left-panel{
+				.left-panel{
 					position: absolute !important;
 				}	
 			}

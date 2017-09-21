@@ -128,7 +128,7 @@
     "global_modifications" : "Global Modifications",
     "disable_css_animation" : "Disable CSS Animation",
     "hide_info_card" : "Hide Info Card",
-    "lean_page_header" : "Lean Page Header",
+    "lean_subheader" : "Lean Subheader",
     "hierarchical_navigation" : "Hierarchical Navigation",
     "preloader_inside" : "Preloader Inside",
     "rtl_support" : "RTL Support",

@@ -397,9 +397,9 @@ $header-applist-box-padding-y:			 $p-3;
 
 Guide:
 
-aside#left-panel ($nav-width, $nav-background)
-	#logo
-	#primary-nav
+aside.left-panel ($nav-width, $nav-background)
+	.logo
+	.primary-nav
 		.info-card
 		ul.navigation
 			li
@@ -419,7 +419,7 @@ aside#left-panel ($nav-width, $nav-background)
 								a ($nav-level-2... $nav-sub-link-height)
 									span
 
-		p.navigation-title ($nav-title-*...)
+		p.nav-title ($nav-title-*...)
 
 
 ========================================================================== */
@@ -472,12 +472,15 @@ $nav-hidden-visiblity:						10px !default;
 
 /* navigation on top */
 $nav-top-height:									63px !default;
-$nav-top-menu-count:							13 !default;	/* number of parent items on the main menu (adjust this if you have more or less items) */
+$nav-top-menu-count:							8 !default;	/* number of parent items on the main menu (adjust this if you have more or less items) */
 $nav-top-minify-height:						$nav-top-height/2 !default;
 
 /* nav Info Card (appears below the logo) */
 $nav-infocard-height:							130px !default;
 $profile-image-width:							45px !default; 
+$profile-image-width-md:          35px !default;
+$profile-image-width-sm:          25px !default;
+$image-share-height:              45px !default; /* width is auto */
 
 /*nav Badge Size */
 $nav-badge-height:								16px !default;
@@ -497,10 +500,10 @@ $nav-dl-margin-left:							$nav-dl-width + $nav-dl-margin-right !default; 	/* wi
 $list-table-padding-x:						11px !default;
 $list-table-padding-y:						0 !default;
 
-/*   SETTINGS Panel (#right-panel)
+/*   SETTINGS Panel (.right-panel)
 ========================================================================== */
 $settings-panel-bg:								$white !default;
-$settings-width:									400px !default;
+$settings-width:									370px !default;
 $settings-width-mobile:           calc(100vw - 11%) !default
 $settings-incompat-title:         #d58100 !default;
 $settings-incompat-desc:          #ec9f28 !default;
