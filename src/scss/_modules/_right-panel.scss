@@ -85,7 +85,7 @@
 		}*/
 
 		.nav-tabs-panel--close {
-			display: block !important;
+			display: block;
 			position: absolute;
 			right: 0;
 			top: 0;
@@ -95,14 +95,14 @@
 				width: 50px;
 
 				&:hover {
-					cursor: pointer !important;
+					cursor: pointer;
 				}
 			}
 		}
 	}
 
 	#saving {
-		position:inherit;
+		position: inherit;
 		z-index: inherit;
 		top: $header-height + 5;
     	left: -40px;
@@ -116,7 +116,7 @@
 
 	#saving {
 		@extend %spin-loader;
-		display: block !important;
+		display: block;
 	}
 
 	[data-action="app-reset"] {
