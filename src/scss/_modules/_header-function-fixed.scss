@@ -2,7 +2,7 @@
 
 	&:not(.nav-function-top) {
 
-		.header {
+		.page-header {
 			left:0;
 			position:fixed !important;
 			right:0;
@@ -57,7 +57,7 @@
 
 		&:not(.nav-function-top) {
 
-			.header {
+			.page-header {
 				margin-left: $nav-width;
 			}
 
@@ -72,7 +72,7 @@
 
 		&.nav-function-top {
 			&.nav-function-fixed {
-				.header {
+				.page-header {
 					position: fixed !important;
 					top: $nav-top-height;
 					right: 0;
@@ -83,7 +83,7 @@
 				}
 
 				&.nav-function-minify {
-					.header {
+					.page-header {
 						top: $nav-top-minify-height;
 					}
 					.page-wrapper {

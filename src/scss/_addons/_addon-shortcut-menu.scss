@@ -27,7 +27,7 @@ $menu-item-direction: 'top'; //top or left
     }
 }
 
-.app-shortcut {
+.shortcut-menu {
   position:fixed;
   right: $grid-gutter-width;
   bottom: $footer-height + $grid-gutter-width;

@@ -20,7 +20,7 @@ $grid-breakpoints: (
 *********************************************************/
 
 @include media-breakpoint-up(lg) {
-	.header {
+	.page-header {
 		padding: 0 $grid-gutter-width-base/2;
 	}
 	#content {
@@ -33,7 +33,7 @@ $grid-breakpoints: (
 }
 
 @include media-breakpoint-up(xl) {
-	.header {
+	.page-header {
 		padding: 0 $grid-gutter-width-base/2;
 	}
 	#content {
@@ -59,7 +59,7 @@ $grid-breakpoints: (
 		padding-left:0;
 		background: $white;
 
-		.header {
+		.page-header {
 			padding:0 $grid-gutter-width-base/2;
 			width:100%;
 
@@ -97,7 +97,7 @@ $grid-breakpoints: (
 					}
 				}*/
 
-				.navigation {
+				.nav-menu {
 					/*> li {
 						a {
 							font-size: $base-font-size + 1;
@@ -153,7 +153,7 @@ $grid-breakpoints: (
 			}
 		}
 
-		.footer {
+		.page-footer {
 			border-top: 1px solid rgba(0,0,0,0.02);
 			background: #f7f7f7;
 		}
@@ -164,9 +164,9 @@ $grid-breakpoints: (
 
 		overflow: hidden;
 
-		.header,
+		.page-header,
 		#content,
-		.footer {
+		.page-footer {
 			-webkit-filter: blur(2px);
 			-moz-filter: blur(2px);
 			-o-filter: blur(2px);
@@ -178,7 +178,7 @@ $grid-breakpoints: (
 
 	&.header-function-fixed {
 
-		.header {
+		.page-header {
 			margin-left: 0;
 			left: 0;
 			position: fixed;
@@ -188,7 +188,7 @@ $grid-breakpoints: (
 		    transition: $nav-hide-animate;
 		}
 
-		.header,
+		.page-header,
 		.logo {
 			box-shadow: none !important;
 
@@ -217,10 +217,10 @@ $grid-breakpoints: (
 			.left-panel {
 				@include translate3d (-$nav-width, 0, 0);
 			}
-			.header,
+			.page-header,
 			#content,
-			.footer,
-			.footer-push {
+			.page-footer,
+			.page-footer-push {
 				transition: $nav-hide-animate;
 				//@include translate3d (0px, 0, 0);
 			}		
@@ -240,10 +240,10 @@ $grid-breakpoints: (
 				@include translate3d (0px, 0, 0);	
 			}
 
-			.header,
+			.page-header,
 			#content,
-			.footer,
-			.footer-push {
+			.page-footer,
+			.page-footer-push {
                 transition: $nav-hide-animate;
 			    @include translate3d (0, 0, 0);        		      
 			}
@@ -321,10 +321,10 @@ $grid-breakpoints: (
 					@include translate3d (0px, 0, 0);
 				}
 
-				.header,
+				.page-header,
 				#content,
-				.footer,
-				.footer-push {
+				.page-footer,
+				.page-footer-push {
 					@include translate3d ($nav-width, 0, 0);
 				}	
 
@@ -337,10 +337,10 @@ $grid-breakpoints: (
 
 			.page-wrapper {
 
-				.header,
+				.page-header,
 				#content,
-				.footer,
-				.footer-push {
+				.page-footer,
+				.page-footer-push {
 					@include translate3d ($nav-width, 0, 0);
 				}
 
@@ -348,10 +348,10 @@ $grid-breakpoints: (
 					background:transparent !important;
 				}
 
-				.header,
+				.page-header,
 				#content,
-				.footer,
-				.footer-push {
+				.page-footer,
+				.page-footer-push {
 					box-shadow: 0 9px 0px 0px $page-bg, 0 -9px 0px 0px $page-bg, 12px 0 15px -4px rgba(0, 0, 0, 0.32), -12px 0 15px -4px rgba(0, 0, 0, 0.32);       
 				}				
 				
@@ -430,7 +430,7 @@ $grid-breakpoints: (
 
 	}
 
-	.header {
+	.page-header {
 
 		ul.list-table {
 			> li {
@@ -442,13 +442,13 @@ $grid-breakpoints: (
 		}
 	}
 
-	.header,
+	.page-header,
 	#content {
 		padding-left: $grid-gutter-width-base/3 !important;
 		padding-right: $grid-gutter-width-base/3 !important;
 	}
 
-	.primary-nav .navigation li a > .badge {
+	.primary-nav .nav-menu li a > .badge {
 		font-size: 10px !important;
 	}
 

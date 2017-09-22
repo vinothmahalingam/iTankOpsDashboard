@@ -1,9 +1,9 @@
 .mod-high-contrast {
 
-	.navigation li a,
+	.nav-menu li a,
 	.nav-title,
-	.navigation li a .fa, 
-	.navigation li a .icon,
+	.nav-menu li a .fa, 
+	.nav-menu li a .icon,
 	.dl-ref,
 	.btn {
 		text-shadow:
@@ -26,7 +26,7 @@
 	.badge-detached,
 	.btn-secondary,
 	.btn-default,
-	.header .btn,
+	.page-header .btn,
 	[class*="btn-outline-"] {
 		text-shadow:
 			   -1px -1px 0 $white,  

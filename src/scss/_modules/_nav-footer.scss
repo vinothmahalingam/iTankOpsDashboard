@@ -9,7 +9,7 @@
 
     @include transition(0.3s,ease-in-out);
 
-	.footer-buttons {
+	.nav-footer-buttons {
 
 		> li {
 			> a {
@@ -99,7 +99,7 @@
 				}
 			}
 
-			.footer-buttons {
+			.nav-footer-buttons {
 				display: none;
 			}
 		}

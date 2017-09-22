@@ -72,9 +72,9 @@ var myapp_config = {
        This is the root anchor point where the menu script will begin its build
     */
     navAnchor: $('#primary_nav'), //changing this may implicate slimscroll plugin target
-    navHooks: $('#primary_nav > ul.navigation'), //changing this may implicate CSS targets
-    navInitalized: 'js-nav-init', //nav finished class
-    navFilterInput: $('#nav-filter-input'), //changing this may implicate CSS targets
+    navHooks: $('#primary_nav > ul.nav-menu'), //changing this may implicate CSS targets
+    navInitalized: 'js-nav-built', //nav finished class
+    navFilterInput: $('#nav_filter_input'), //changing this may implicate CSS targets
     /*
        The rate at which the menu expands revealing child elements on click
        Lower rate reels faster expansion of nav childs

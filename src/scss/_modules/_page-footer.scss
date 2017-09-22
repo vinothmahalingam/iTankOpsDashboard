@@ -1,11 +1,11 @@
-.footer,
-.footer-push {
+.page-footer,
+.page-footer-push {
     height: $footer-height;
     display: block;
     width: 100%;
 }
 
-.footer {
+.page-footer {
 	position: absolute;
 	display: flex;
 	align-items:center;
@@ -16,7 +16,7 @@
     font-size: rem($footer-font-size);
     padding:0 $grid-gutter-width-base/2;
 
-	.footer-logo {
+	.page-footer-logo {
 	    background: $primary-500;
 	    padding: 2px;
 	    width: 22px;
@@ -24,36 +24,28 @@
 	    margin-right: 5px;
 	}
 
-	& + .footer-push {
+	& + .page-footer-push {
 		position:static;
 		z-index: initial;
 		float:left;
 	}
 
-	/*&:hover {
-		& + .footer-push + .app-shortcut {
-			-webkit-animation: 1s ease 0s normal forwards 1 subtle;
-    		animation: 1s ease 0s normal forwards 1 subtle;
-			-webkit-animation-delay: 1s;
-			animation-delay: 1s;
-		}
-	}*/
 }
 
 @include media-breakpoint-up(lg) {
 
-	.footer {
+	.page-footer {
 		width: calc(100% - #{$nav-width});
 	}
 
 	.nav-function-minify {
-		.footer {
+		.page-footer {
 			width: calc(100% - #{$nav-minify-width});
 		}	
 	}
 
 	.nav-function-hidden {
-		.footer {
+		.page-footer {
 			width: calc(100% - #{$nav-hidden-visiblity});
 		}
 	}

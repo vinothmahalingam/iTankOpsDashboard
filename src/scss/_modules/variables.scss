@@ -401,20 +401,20 @@ aside.left-panel ($nav-width, $nav-background)
 	.logo
 	.primary-nav
 		.info-card
-		ul.navigation
+		ul.nav-menu
 			li
 				a (parent level-0..., $nav-link-color, $nav-link-hover-color, $nav-link-hover-bg-color, $nav-link-hover-left-border-color)
 					icon 
 					span
 					collapse-sign 
 					
-				ul.navigation-sub-one  
+				ul.nav-menu-sub-one  
 					li
 						a ($nav-level-1... $nav-sub-link-height)
 							span
 							collapse-sign
 
-						ul.navigation-sub-two
+						ul.nav-menu-sub-two
 							li
 								a ($nav-level-2... $nav-sub-link-height)
 									span

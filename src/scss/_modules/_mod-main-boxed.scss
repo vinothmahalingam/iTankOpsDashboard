@@ -43,9 +43,9 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 
 		&.header-function-fixed {
 			.page-wrapper {
-				.header {
+				.page-header {
 					width: $mod-main-boxed-width - 2;
-					margin:0 auto;
+					margin: 0 auto !important;
 				}			
 			}
 
@@ -59,7 +59,7 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 
 			&:not(.nav-function-top):not(.nav-function-hidden):not(.nav-function-minify) {
 				.page-wrapper {
-					.header {
+					.page-header {
 						padding-left:$nav-width + $grid-gutter-width-base/2;
 					}
 				}
@@ -67,7 +67,7 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 
 			&.nav-function-minify:not(.nav-function-top):not(.nav-function-hidden) {
 				.page-wrapper {
-					.header {
+					.page-header {
 						padding-left:$nav-minify-width + $grid-gutter-width-base/2;
 					}
 				}
@@ -142,6 +142,7 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 
 					.logo {
 						position: absolute !important;
+						transition: none;
 					}
 				}
 			}

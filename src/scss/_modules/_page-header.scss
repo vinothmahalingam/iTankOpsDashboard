@@ -4,7 +4,7 @@ $header-badge-padding-y: 							2px !default;
 $header-badge-left: 								23px !default;
 $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !default; 
 
-.header {
+.page-header {
 	background-color: $header-bg;
 	border-bottom: 1px solid $header-border-bottom-color;
 	display: block;

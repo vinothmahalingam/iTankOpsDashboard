@@ -17,7 +17,7 @@
 	font-weight: 500;
 }
 
-.navigation {
+.nav-menu {
 	padding: 0;
 	list-style: none;
 	background: $nav-background;
@@ -158,7 +158,7 @@
 				margin-right: $nav-icon-margin-right + 3px;
 			}
 
-			> .navigation-link-text {
+			> .nav-link-text {
 
 				flex: 1; /*new*/
 				display: inline-flex;
@@ -178,7 +178,7 @@
 			}
 
 			&.collapsed {
-				.navigation-btn-sub-collapse {
+				.nav-menu-btn-sub-collapse {
 					@include rotate(180);
 				}
 			}
@@ -254,7 +254,7 @@
 						@include text-contrast(rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)));
 						background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100));
 
-						> .navigation-link-text {
+						> .nav-link-text {
 							>.fa,
 							>.#{$cust-icon-prefix} {
 							    color:$nav-icon-hover-color;
@@ -273,7 +273,7 @@
 
 						font-weight: 400;
 
-						> .navigation-link-text {
+						> .nav-link-text {
 							>.fa,
 							>.#{$cust-icon-prefix} {
 							    @include text-contrast(rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)));
@@ -281,7 +281,7 @@
 						}	
 
 						&:hover {
-							> .navigation-link-text {
+							> .nav-link-text {
 								>.fa,
 								>.#{$cust-icon-prefix} {
 								    color:$nav-icon-hover-color;
@@ -357,7 +357,7 @@
 } 
 
 /* nav hover elements 
-.navigation-hover {
+.nav-menu-hover {
 
 	li > ul {
 		background-color: rgba(0,0,0,0.17) !important;
@@ -384,7 +384,7 @@
 }*/
 
 /* nav clean elements */
-.navigation-clean {
+.nav-menu-clean {
 	background:$white;
 	
 	ul {
@@ -416,7 +416,7 @@
 }
 
 /* nav bordered elements */
-.navigation-bordered {
+.nav-menu-bordered {
 	border: 1px solid $card-border-color;
 
 	li a {
@@ -430,7 +430,7 @@
 }
 
 /* nav compact elements */
-.navigation-compact {
+.nav-menu-compact {
 	li > ul li a,
 	li > ul li > ul li a {
 		padding: $p-2 $nav-padding-right $p-2 $p-4;
@@ -444,7 +444,7 @@ body:not(.nav-function-top) {
 
 	.primary-nav {
 
-		.navigation {
+		.nav-menu {
 
 			a,
 			a:hover,
@@ -483,7 +483,7 @@ body:not(.nav-function-top) {
 
 		.primary-nav {
 
-			.navigation {
+			.nav-menu {
 
 				> li {
 

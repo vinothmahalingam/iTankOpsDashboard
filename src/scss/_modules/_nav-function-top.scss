@@ -63,7 +63,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 		}
 
-		.header {
+		.page-header {
 			margin-top: 0;
 			.dropdown-icon-menu {
 				display: none;
@@ -78,7 +78,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 			padding-top:$nav-top-height;
 			padding-left:0;
 
-			.footer {
+			.page-footer {
 				width: 100%;
 			}
 		}
@@ -141,7 +141,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 				overflow:visible;
 				float:left;
 
-				.navigation {
+				.nav-menu {
 					float:left;
 					margin:0;
 
@@ -194,7 +194,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 									max-height: none;
 									box-shadow: none;
 
-									.navigation-link-text {
+									.nav-link-text {
 										display: block;
 
 										> .dl-ref {
@@ -281,7 +281,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 							>.fa {
 								font-size: 18px;
 							}
-							> .navigation-link-text {
+							> .nav-link-text {
 								width: auto;
 								max-width: $nav-function-top-menu-item-width-md;
 								overflow: hidden;
@@ -362,7 +362,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 				.primary-nav {
 					 
-					.navigation {
+					.nav-menu {
 
 						> li{
 
@@ -372,7 +372,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 								height: $nav-top-minify-height;
 								padding-top:23% !important;
 
-								> .navigation-link-text {
+								> .nav-link-text {
 									display: none;
 
 								}
@@ -399,8 +399,8 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 			.left-panel {
 
 				.primary-nav {
-					.navigation:last-child,
-					.navigation:only-child {
+					.nav-menu:last-child,
+					.nav-menu:only-child {
 						> li:last-child,
 						> li:nth-last-child(2),
 						> li:nth-last-child(3) {
@@ -435,7 +435,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 			.primary-nav {
 
-				.navigation {
+				.nav-menu {
 
 					> li {
 						> a {
@@ -457,7 +457,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 							>.fa {
 								font-size: rem(18px);
 							}
-							> .navigation-link-text {
+							> .nav-link-text {
 								width:auto;
 								max-width: $nav-function-top-menu-item-width-lg;
 							}

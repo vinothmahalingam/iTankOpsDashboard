@@ -1,7 +1,7 @@
 .shadow-top,
 .shadow-bottom,
-.mobile-view-activated.header-function-fixed .header,
-.mobile-view-activated.header-function-fixed .footer {
+.mobile-view-activated.header-function-fixed .page-header,
+.mobile-view-activated.header-function-fixed .page-footer {
 	&:after {
 		content: "";
 		height: 8px;
@@ -19,7 +19,7 @@
 }
 
 .shadow-bottom,
-.mobile-view-activated.header-function-fixed .header {
+.mobile-view-activated.header-function-fixed .page-header {
 	&:after {
 		top: auto;
 		bottom: -7px;

@@ -26,7 +26,7 @@
 				left: 0;
 			}
 		}
-		.header {
+		.page-header {
 			margin-left: 0;
 
 			/* active button state for "nav-function-hidden" */
@@ -40,7 +40,7 @@
 	}
 
 	.nav-function-hidden.header-function-fixed:not(.nav-function-top) {
-		.header {
+		.page-header {
 			margin-left: $nav-hidden-visiblity; 
 		}
 	}
