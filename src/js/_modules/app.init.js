@@ -119,6 +119,7 @@ var initApp = (function(app) {
 		} else {
 			console.log("save function does not exist")
 		}
+		
 	}
 
 	/**
@@ -195,6 +196,26 @@ var initApp = (function(app) {
 			return /^(nav|header|mod|display)-/i.test(item);
 		}).join(' ');
 	}
+
+	/*
+	 * Checks and sets active settings selections
+	 *DOC: ?
+	 */
+	/*app.indicateSelections = function () {
+
+		var classNames = initApp.getSettings()
+			.split(' ')
+			.map(function(c) {
+				return '[data-class="' +  c + '"].js-indicateSelections';
+			})
+			.join(',');
+
+		$('[data-class].active.js-indicateSelections').removeClass('active');
+		$(classNames).addClass('active');
+
+		if (myapp_config.debugState)
+			console.log(classNames);
+	}*/
 
 	/**
 	 * Assign new height to 'var'
