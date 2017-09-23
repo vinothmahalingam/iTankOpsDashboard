@@ -127,18 +127,25 @@ var initApp = (function(app) {
 	 **/
 	app.resetSettings = function () {
 
-		/* remove all classes */
-		myapp_config.root_.removeClass();
+		/* remove all setting classes nav|header|mod|display */
+		myapp_config.root_.removeClass (function (index, className) {
+			return (className.match (/(^|\s)(nav-|header-|mod-|display-)\S+/g) || []).join(' ');
+		});
 
-		/* remove custom css skin */
+		/* detach custom css skin */
 		$(myapp_config.mythemeAnchor).attr('href', "");
+
+		/* check non-conflicting plugins */
+		initApp.checkSettingConditions();
+
+		/* adjust app height */
+		initApp.calculateAppHeight();
 
 		/* save settings if "storeLocally == true" */
 		initApp.saveSettings();
 
 		if (myapp_config.debugState)
 			console.log("App reset successful");
-		
 	}
 
 	/**
@@ -167,6 +174,9 @@ var initApp = (function(app) {
 
 		/* replace classes from <body> with fetched DB string */
 		myapp_config.root_.removeClass().addClass(DB_string);
+
+		/* destroy or enable slimscroll */
+		initApp.checkSettingConditions();
 
 		/* save settings if "storeLocally == true" */
 		initApp.saveSettings();
@@ -888,58 +898,6 @@ var initApp = (function(app) {
 		 if (myapp_config.debugState)
 			console.log("Finished app.init() v" + myapp_config.VERSION + '\n' + "---------------------------");		
 	};
-
-	/**
-	 * Material Forms effects activation
-	 * DOC: starts listeners
-	 **/
-	app.materialFormEffects = function() {
-
-		var parentClass 	= '.app-forms',
-			focusClass 		= 'has-length',
-			disabledClass	= 'has-disabled';
-
-		$('.form-control').each(function () {
-			checkLength(this);
-		});
-
-		function checkLength(e) {
-			if (e.value.length > 0 ) {
-				$(e).parents(parentClass).addClass(focusClass);
-				if($(e).is('[readonly]') || $(e).is('[disabled]')) {
-					$(e).parents(parentClass).addClass(disabledClass);
-				}
-			} else {
-				$(e).parents(parentClass).removeClass(focusClass);
-				if($(e).is('[readonly]') || $(e).is('[disabled]')) {
-					$(e).parents(parentClass).removeClass(disabledClass);
-				}
-			}
-		}
-
-		function setClass(e, parentClass, focusClass) {
-			$(e).parents(parentClass).addClass(focusClass);
-		}
-
-		function deleteClass(e, parentClass, focusClass) {
-			if(e.value.length) {
-
-			} else {
-				$(e).parents(parentClass).removeClass(focusClass);
-			}
-		}
-
-		$(parentClass).each(function () {
-			var input = $(this).find('.form-control');
-			input.on('focus', function(){
-				setClass(this, parentClass, focusClass);
-			});
-			input.on('blur', function(){
-				deleteClass(this, parentClass, focusClass);
-			});
-		})
-
-	}
 
 	return app;
 	

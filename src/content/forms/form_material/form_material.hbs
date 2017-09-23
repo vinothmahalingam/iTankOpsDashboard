@@ -7,7 +7,9 @@
 	pagedescription="form-material"
 }}
 
-{{#*inline "head-block"}}{{/inline}}
+{{#*inline "head-block"}}
+	<link rel="stylesheet" media="screen, print" href="css/material-forms.min.css">
+{{/inline}}
 
 {{#*inline "content-block"}}
 
@@ -1106,6 +1108,10 @@
 
 {{/inline}}
 
-{{#*inline "scripts-block"}}{{/inline}}
+{{#*inline "scripts-block"}}
+
+		<!-- Page related scripts -->
+		<script src="js/material-forms.min.js"></script>
+{{/inline}}
 
 {{/layouts/main}}

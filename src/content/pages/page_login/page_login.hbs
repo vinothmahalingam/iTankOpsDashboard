@@ -5,7 +5,8 @@
 }}
 
 {{#*inline "head-block"}}
-<link rel="stylesheet" media="screen, print" href="css/page_login.css">
+	<link rel="stylesheet" media="screen, print" href="css/material-forms.min.css">
+	<link rel="stylesheet" media="screen, print" href="css/page_login.css">
 {{/inline}}
 
 {{#*inline "content-block"}}
@@ -17,7 +18,7 @@
 
 	<div class="card container">
 	
-		<form action="introduction.html">
+		<form action="intel_introduction.html">
 
 			<div class="form-group app-forms">
 				<label for="username">Username</label>
@@ -64,6 +65,12 @@
 	<source src="video/cc.webm" type="video/webm">
 	<source src="video/cc.mp4" type="video/mp4">
 </video>
+{{/inline}}
+
+{{#*inline "scripts-block"}}
+
+		<!-- Page related scripts -->
+		<script src="js/material-forms.min.js"></script>
 {{/inline}}
 
 {{/layouts/auth}}

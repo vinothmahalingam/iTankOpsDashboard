@@ -2,7 +2,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sassGlob = require('gulp-sass-glob'),
     sourcemaps = require('gulp-sourcemaps'),
-    //csscomb = require('gulp-csscomb'),
+    csscomb = require('gulp-csscomb'),
     rename = require('gulp-rename'),
 	config = require('../config')
 
@@ -24,7 +24,7 @@ gulp.task('compile-sass', function () {
     /* write sourcemaps*/
     .pipe(sourcemaps.write('./'))
     /* clean CSS files for readibility */
-    //.pipe(csscomb()) //FYI...causes issues with sourcemaps
+    .pipe(csscomb()) //FYI...causes issues with sourcemaps
     /* write CSS to dist */
     .pipe(gulp.dest(config.paths.scss_path_build));
 });

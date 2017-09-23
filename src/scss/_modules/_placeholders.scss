@@ -232,11 +232,6 @@ RESULT:
   cursor: default;
   color:$header-btn-color;
 
-  &.livicon {
-   line-height: 0 !important;
-   padding-top:($header-btn-height - 23) / 2 !important;
-  }
-
   &.active {
     @extend %header-btn-active;
   }

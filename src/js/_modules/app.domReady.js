@@ -45,9 +45,4 @@ jQuery(document).ready(function() {
 	 **/
 	initApp.domReadyMisc();
 
- 	/**
-	 * g. material form effects
-	 **/
-	initApp.materialFormEffects();
-
 }); 
