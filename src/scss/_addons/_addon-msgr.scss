@@ -1,7 +1,7 @@
 $msgr-list-width: 230px;
 $msgr-list-width-collapsed: 50px;
 
-$chat-rcvd-background: #f2f2f2;
+$chat-rcvd-background: adjust-hue(lighten($primary-500, 39%), -6); //#DCF2FA;
 $chat-sent-background: $primary-500;
 
 .msgr-list {

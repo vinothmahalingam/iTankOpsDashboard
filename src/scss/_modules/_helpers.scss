@@ -69,6 +69,12 @@
 .fw-900 { font-weight: 900 !important; }
 .fw-n   { font-weight:normal !important; }
 
+/* alignments */
+.v-align-t { vertical-align: top; }
+.v-align-m { vertical-align: middle; }
+.v-align-b { vertical-align: bottom; }
+
+
 /* font sizes */
 .fs-nano { font-size: rem($fs-nano) } /* 10px */
 .fs-xs { font-size:  rem($fs-xs) }    /* 12px */

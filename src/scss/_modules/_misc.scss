@@ -226,8 +226,8 @@ ul.list-verticle {
 	@include gradient-img($white, lighten($color-fusion, 66%))	
 }
 
-.bg-grade-light {
-    @include gradient-img(lighten($color-primary, 44%), $white)	
+.bg-subtlelight {
+    background-color: lighten($color-primary, 44%)
 }
 
 .shadow-hover {
@@ -272,6 +272,11 @@ ul.list-verticle {
 		background: $warning-500;
 		border-radius: 50%;
 		border: 2px solid #fff;
+	}
+
+	&.status-sm:before {
+		width: 12px;
+		height: 12px;	
 	}
 
 	&.status-online:before {
