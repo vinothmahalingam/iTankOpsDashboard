@@ -17,6 +17,17 @@ $chat-sent-background: $primary-500;
     @extend %general-animation;
     transition-delay: 400ms;
 
+    #msgr_listfilter_input {
+		width: unquote("calc(100% - #{$p-3})");
+		margin: 0 auto;
+		margin-top: -41px;
+		padding-left: 41px;
+		margin-bottom: 10px;
+		opacity: 0; 
+		background: transparent;
+		@extend %general-animation;
+		transition-delay: 400ms;  	
+    }
 
 	& + .msgr {
 
@@ -43,6 +54,10 @@ $chat-sent-background: $primary-500;
     &:hover {
     	right: 0;
     	border-left-color: rgba(0,0,0,0.1);
+
+    	#msgr_listfilter_input {
+    		opacity: 1;
+    	}
 
     	& + .msgr {
 
@@ -85,11 +100,32 @@ $chat-sent-background: $primary-500;
 	.msgr-chatinput {
 
 		min-height: 110px;
-		max-height: 200px;
-		border-top: 1px solid rgba($black,0.07);
+		max-height: 160px;
+
+		[contenteditable="true"] {
+			min-height:50px;
+			max-height:110px;
+		}
 
 	}
 
+	.msgr-chatinput__icons {
+		height: 30px;
+	}
+
+	.msgr-chatinput__container {
+		> div {
+			border-top: 1px solid rgba($black,0.07);
+		}
+	}
+
+}
+
+/* IE HACK */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	[contenteditable="true"] {
+		height: 50px;
+	}
 }
 
 .chat-container {

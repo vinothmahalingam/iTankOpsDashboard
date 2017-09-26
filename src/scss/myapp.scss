@@ -37,6 +37,10 @@
 @import '_modules/_responsive';
 @import '_modules/_hack';
 
+/* #FORMS (customized bootstrap form elems)
+========================================================================== */ 
+@import '_modules/_forms';
+
 /* #COMPONENTS (can be removed but may or may not impact other components)
 ========================================================================== */ 
 /*@import '_modules/_form-switches';*/

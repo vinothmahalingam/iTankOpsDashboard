@@ -3,83 +3,152 @@
 	<!-- BEGIN msgr-list -->
 	<div class="msgr-list d-flex flex-column bg-white" role="tablist">
 		<div class="msgr-option-container">
-			<a class="msgr-list--item" data-toggle="tab" href="#chat-2" aria-expanded="false">
+			<div class="msgr-list--item msgr-search">
 				<i class="fa fa-search msgr-list__icon"></i>
-			</a>
+			</div>
+			<input type="text" class="form-control" id="msgr_listfilter_input" placeholder="Filter friends" aria-label="FriendSearch" data-listfilter="#js_msgr_listfilter">
 		</div>
 		<div class="msgr-option-container flex-1 h-100 custom-scroll">
 			<div class="w-100">
 
-				<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-secondary">
-					<div class="d-table-cell v-align-m status status-online status-sm ">
-						<img src="img/avatar-m.png" data-src="img/avatars/avatar-i.png" class="profile-image-md rounded-circle" alt="aa">
-					</div>
-					<div class="d-table-cell w-100 v-align-m pl-2 pr-2">
-						<div class="text-truncate text-truncate-md">
-							Miles K. Miller
-							<small class="d-block font-italic text-success fs-xs">
-								Online
-							</small>
-						</div>
-					</div>
-				</a>	
-
-				<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-secondary">
-					<div class="d-table-cell v-align-m status status-online status-sm ">
-						<img src="img/avatar-m.png" data-src="img/avatars/avatar-b.png" class="profile-image-md rounded-circle" alt="aa">
-					</div>
-					<div class="d-table-cell w-100 v-align-m pl-2 pr-2">
-						<div class="text-truncate text-truncate-md">
-							oliver.kopyuv@nextgenadmin.com
-							<small class="d-block font-italic text-success fs-xs">
-								Online
-							</small>
-						</div>
-					</div>
-				</a>	
-
-				<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-secondary">
-					<div class="d-table-cell v-align-m status status-away status-sm ">
-						<img src="img/avatar-m.png" data-src="img/avatars/avatar-e.png" class="profile-image-md rounded-circle" alt="aa">
-					</div>
-					<div class="d-table-cell w-100 v-align-m pl-2 pr-2">
-						<div class="text-truncate text-truncate-md">
-							oliver.kopyuv@nextgenadmin.com
-							<small class="d-block font-italic fs-xs">
-								Away
-							</small>
-						</div>
-					</div>
-				</a>
-
-				<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-secondary">
-					<div class="d-table-cell v-align-m">
-						<img src="img/avatar-m.png" data-src="img/avatars/avatar-a.png" class="profile-image-md rounded-circle opacity-40" alt="aa">
-					</div>
-					<div class="d-table-cell w-100 v-align-m pl-2 pr-2">
-						<div class="text-truncate text-truncate-md">
-							oliver.kopyuv@nextgenadmin.com
-							<small class="d-block font-italic fs-xs">
-								Offline
-							</small>
-						</div>
-					</div>
-				</a>
-	
-				<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-secondary">
-					<div class="d-table-cell v-align-m">
-						<img src="img/avatar-m.png" data-src="img/avatars/avatar-c.png" class="profile-image-md rounded-circle opacity-40" alt="aa" >
-					</div>
-					<div class="d-table-cell w-100 v-align-m pl-2 pr-2">
-						<div class="text-truncate text-truncate-md">
-							oliver.kopyuv@nextgenadmin.com
-							<small class="d-block font-italic fs-xs">
-								Offline
-							</small>
-						</div>
-					</div>
-				</a>
-		
+				<ul id="js_msgr_listfilter" class="list-unstyled m-0">
+					<li>
+						<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-secondary" data-filter-tags="miles k. miller online">
+							<div class="d-table-cell v-align-m status status-success status-sm ">
+								<img src="img/avatar-m.png" data-src="img/avatars/avatar-i.png" class="profile-image-md rounded-circle" alt="aa">
+							</div>
+							<div class="d-table-cell w-100 v-align-m pl-2 pr-2">
+								<div class="text-truncate text-truncate-md">
+									Miles K. Miller
+									<small class="d-block font-italic text-success fs-xs">
+										Online
+									</small>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-secondary" data-filter-tags="oliver kopyuv online">
+							<div class="d-table-cell v-align-m status status-success status-sm ">
+								<img src="img/avatar-m.png" data-src="img/avatars/avatar-b.png" class="profile-image-md rounded-circle" alt="aa">
+							</div>
+							<div class="d-table-cell w-100 v-align-m pl-2 pr-2">
+								<div class="text-truncate text-truncate-md">
+									Oliver Kopyuv
+									<small class="d-block font-italic text-success fs-xs">
+										Online
+									</small>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-secondary" data-filter-tags="dr. john cook phd away">
+							<div class="d-table-cell v-align-m status status-warning status-sm ">
+								<img src="img/avatar-m.png" data-src="img/avatars/avatar-e.png" class="profile-image-md rounded-circle" alt="aa">
+							</div>
+							<div class="d-table-cell w-100 v-align-m pl-2 pr-2">
+								<div class="text-truncate text-truncate-md">
+									Dr. John Cook PhD
+									<small class="d-block font-italic fs-xs">
+										Away
+									</small>
+								</div>
+							</div>
+						</a>					
+					</li>
+					<li>
+						<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-secondary" data-filter-tags="ali amdaney online">
+							<div class="d-table-cell v-align-m status status-success status-sm ">
+								<img src="img/avatar-m.png" data-src="img/avatars/avatar-g.png" class="profile-image-md rounded-circle" alt="aa">
+							</div>
+							<div class="d-table-cell w-100 v-align-m pl-2 pr-2">
+								<div class="text-truncate text-truncate-md">
+									Ali Amdaney
+									<small class="d-block font-italic fs-xs text-success">
+										Online
+									</small>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-secondary" data-filter-tags="ali amdaney online">
+							<div class="d-table-cell v-align-m status status-success status-sm">
+								<img src="img/avatar-m.png" data-src="img/avatars/avatar-h.png" class="profile-image-md rounded-circle" alt="aa">
+							</div>
+							<div class="d-table-cell w-100 v-align-m pl-2 pr-2">
+								<div class="text-truncate text-truncate-md">
+									Sarah McBrook
+									<small class="d-block font-italic fs-xs text-success">
+										Online
+									</small>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-secondary" data-filter-tags="ali amdaney offline">
+							<div class="d-table-cell v-align-m status status-sm">
+								<img src="img/avatar-m.png" data-src="img/avatars/avatar-a.png" class="profile-image-md rounded-circle" alt="aa">
+							</div>
+							<div class="d-table-cell w-100 v-align-m pl-2 pr-2">
+								<div class="text-truncate text-truncate-md">
+									oliver.kopyuv@nextgenadmin.com
+									<small class="d-block font-italic fs-xs">
+										Offline
+									</small>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-secondary" data-filter-tags="ali amdaney busy">
+							<div class="d-table-cell v-align-m status status-danger status-sm">
+								<img src="img/avatar-m.png" data-src="img/avatars/avatar-j.png" class="profile-image-md rounded-circle" alt="aa">
+							</div>
+							<div class="d-table-cell w-100 v-align-m pl-2 pr-2">
+								<div class="text-truncate text-truncate-md">
+									oliver.kopyuv@nextgenadmin.com
+									<small class="d-block font-italic fs-xs text-danger">
+										Busy
+									</small>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-secondary" data-filter-tags="ali amdaney offline">
+							<div class="d-table-cell v-align-m status status-sm">
+								<img src="img/avatar-m.png" data-src="img/avatars/avatar-c.png" class="profile-image-md rounded-circle" alt="aa" >
+							</div>
+							<div class="d-table-cell w-100 v-align-m pl-2 pr-2">
+								<div class="text-truncate text-truncate-md">
+									oliver.kopyuv@nextgenadmin.com
+									<small class="d-block font-italic fs-xs">
+										Offline
+									</small>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-secondary" data-filter-tags="ali amdaney inactive">
+							<div class="d-table-cell v-align-m">
+								<img src="img/avatar-m.png" class="profile-image-md rounded-circle" alt="aa" >
+							</div>
+							<div class="d-table-cell w-100 v-align-m pl-2 pr-2">
+								<div class="text-truncate text-truncate-md">
+									oliver.kopyuv@nextgenadmin.com
+									<small class="d-block font-italic fs-xs opacity-50">
+										Inactive
+									</small>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<div class="filter-message js-filter-message"></div>
 			</div>
 		</div>
 		<div class="msgr-option-container">
@@ -125,7 +194,7 @@
 							</p>
 						</div>
 						<div class="chat-stamp text-right">
-							3:00 am
+							3:00 pm
 						</div>
 					</div>
 					<!--  end .chat-container -->
@@ -145,7 +214,7 @@
 							</p>
 						</div>
 						<div class="chat-stamp">
-							3:24 am
+							3:24 pm
 						</div>
 					</div>
 					<!--  end .chat-container -->
@@ -158,7 +227,7 @@
 							</p>
 						</div>
 						<div class="chat-stamp text-right">
-							3:26 am
+							3:26 pm
 						</div>
 					</div>
 					<!--  end .chat-container -->
@@ -171,7 +240,7 @@
 							</p>
 						</div>
 						<div class="chat-stamp text-right">
-							3:26 am
+							3:26 pm
 						</div>
 					</div>
 					<!--  end .chat-container -->
@@ -185,7 +254,7 @@
 							</p>
 						</div>
 						<div class="chat-stamp">
-							3:27 am
+							3:27 pm
 						</div>
 					</div>
 					<!--  end .chat-container -->
@@ -199,7 +268,7 @@
 							</p>
 						</div>
 						<div class="chat-stamp">
-							3:27 am
+							3:27 pm
 						</div>
 					</div>
 					<!--  end .chat-container -->
@@ -213,10 +282,16 @@
 							</p>
 						</div>
 						<div class="chat-stamp">
-							3:27 am
+							3:27 pm
 						</div>
 					</div>
 					<!--  end .chat-container -->
+
+					<div class="chat-container">
+						<div class="chat-stamp text-center mb-2 fw-400">
+							Jun 20
+						</div>
+					</div>
 
 				</div>
 
@@ -224,14 +299,40 @@
 			<!-- END custom-scroll  -->
 
 			<!-- BEGIN msgr__chatinput -->
-			<div class="msgr-chatinput pt-3 pb-3 mr-3 ml-3 pos-r shadow-top">
-				<div class="form-group">
-					<textarea class="form-control btn-press-scale-down" id="messenger_textarea" rows="3"></textarea>
+			<div class="msgr-chatinput d-flex flex-column">
+				<div class="msgr-chatinput__container flex-1 mr-3 ml-3 pos-r shadow-top">
+					<div class="pt-3 pb-1 pr-0 pl-0 border-radius-0" tabindex="-1">
+						<div contenteditable="true" data-placeholder="Type your message here..."></div>
+					</div>
+				</div>
+				<div class="msgr-chatinput__icons d-flex align-items-center ml-2 mr-2">
+					<div class="ml-1 p-1 h-100 v-align-m fs-xl text-secondary">
+						<label for="attach_picture" title="upload a picture">
+							<i class="fa fa-picture-o"></i>
+						</label>
+						<input id="attach_picture" class="d-none" type="file"/>	
+					</div>
+					<a href="#" class="ml-1 p-1 h-100 v-align-m fs-xl text-secondary" title="add emoji">
+						<i class="fa fa-smile-o"></i>
+					</a>
+					<div class="ml-1 p-1 h-100 v-align-m fs-xl text-secondary">
+						<label for="attach_file" title="attach a file">
+							<i class="fa fa-paperclip"></i>
+						</label>
+						<input id="attach_file" class="d-none" type="file"/>	
+					</div>
+					<a href="#" class="ml-1 p-1 h-100 v-align-m fs-xl text-secondary" title="take a picture with webcam">
+						<i class="fa fa-camera"></i>
+					</a>
+					<a href="#" class="ml-1 p-1 h-100 v-align-m fs-xl text-secondary" title="Thumbs up">
+						<i class="fa fa-thumbs-o-up"></i>
+					</a>	
 				</div>
 			</div>
 			<!-- END msgr__chatinput -->
 
 		</div>
+
 		<div class="tab-pane " id="chat-2">
 
 		</div>

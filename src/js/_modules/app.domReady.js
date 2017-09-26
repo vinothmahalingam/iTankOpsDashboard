@@ -38,7 +38,7 @@ jQuery(document).ready(function() {
  	/**
 	 * e. initialize nav filter
 	 **/
-	initApp.listFilter(myapp_config.navHooks, myapp_config.navFilterInput);
+	initApp.listFilter(myapp_config.navHooks, myapp_config.navFilterInput, myapp_config.navAnchor);
 
  	/**
 	 * f. run DOM misc functions

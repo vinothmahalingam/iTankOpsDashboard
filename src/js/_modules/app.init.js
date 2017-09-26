@@ -10,13 +10,21 @@ var initApp = (function(app) {
 	 * usage: initApp.listFilter($('.list'), $('#intput-id'));
 	 *        inside the .list you will need to insert 'data-filter-tags'
 	 **/
-	app.listFilter = function (list, input) {
+	app.listFilter = function (list, input, anchor) {
 
+		/* add class to filter hide/show */
+		if (anchor) {
+			$(anchor).addClass('js-list-filter')
+		} else {
+			$(list).addClass('js-list-filter');
+		}
+
+		/* on change keyboard */
 		$(input).change( function () {
 
-			var filter = $(this).val().toLowerCase();
-			var	listPrev = $(list).next().filter('.js-filter-message');
-
+			var filter = $(this).val().toLowerCase(),
+				listPrev = $(list).next().filter('.js-filter-message');
+	
 			/* when user types more than 1 letter start search filter */
 			if(filter.length > 1) {
 
@@ -25,23 +33,23 @@ var initApp = (function(app) {
 				
 				/* (1) hide all that does not match */   
 				$(list).find($("a:not([data-filter-tags*='" + filter + "'])"))
-					.parentsUntil(list).removeClass('filter-show')
-					.addClass('filter-hide');
+					.parentsUntil(list).removeClass('js-filter-show')
+					.addClass('js-filter-hide');
 
 				/* (2) hide all that does match */	
 				$(list).find($("[data-filter-tags*='" + filter + "']"))
-					.parentsUntil(list).removeClass('filter-hide')
-					.addClass('filter-show');
+					.parentsUntil(list).removeClass('js-filter-hide')
+					.addClass('js-filter-show');
 
 				/* if element exists then print results */	
 				if (listPrev){	
-					listPrev.text("showing " + $(list).find('li.filter-show').length + " from " + $(list).find('[data-filter-tags]').length + " total");
+					listPrev.text("showing " + $(list).find('li.js-filter-show').length + " from " + $(list).find('[data-filter-tags]').length + " total");
 				}
 
 			} else {
 
 				/* when filter length is blank reset the classes */
-				$(list).find('[data-filter-tags]').parentsUntil(list).removeClass('filter-hide filter-show')	
+				$(list).find('[data-filter-tags]').parentsUntil(list).removeClass('js-filter-hide js-filter-show')	
 
 				/* if element exists reset print results */
 				if (listPrev){
@@ -529,11 +537,36 @@ var initApp = (function(app) {
 		}
 
 		/**
+		 * Activate listFilters
+		 * usage: <input id="inputID" data-listfilter="listFilter" />
+		 **/
+		if( typeof initApp.listFilter !== 'undefined' && $.isFunction(initApp.listFilter) && $('[data-listfilter]').length ) {
+
+
+			var inputID = $('[data-listfilter]').attr('id'),
+				listFilter = $('[data-listfilter]').attr("data-listfilter");
+
+			/* initApp.listFilter($('.list'), $('#intput-id')); */
+			initApp.listFilter(listFilter, '#' + inputID);
+		}
+
+		/**
 		 * Start bootstrap tooltips
 		 * doc: only fires for desktop
 		 **/
 		if( typeof($.fn.tooltip) !== 'undefined' && myapp_config.thisDevice === 'desktop' && $('[data-toggle="tooltip"]').length ){
 			$('[data-toggle="tooltip"]').tooltip()
+		} else {
+			console.log("bs.tooltip is not loaded");
+		}
+
+		/**
+		 * Start bootstrap popovers
+		 **/
+		if( typeof($.fn.popover) !== 'undefined' && $('[data-toggle="popover"]').length ){
+			$('[data-toggle="popover"]').popover();
+		} else {
+			console.log("bs.popover is not loaded");
 		}
 
 		/**

@@ -4,6 +4,10 @@
 	-webkit-overflow-scrolling: touch;
 	-webkit-backface-visibility: hidden; 
 		backface-visibility: hidden;
+
+	.nav-menu:last-of-type {
+		margin: 0;
+	}	
 }
 
 .nav-title {

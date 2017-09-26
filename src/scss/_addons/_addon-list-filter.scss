@@ -1,80 +1,29 @@
-.nav-filter {
-	background: lighten($nav-background, 5%);
-	margin: 0;
-	opacity: 0;
-	visibility: hidden;
-	overflow: hidden;
-    height: 0px;
-    position: relative;
-	transform: scale(0.3);
-	transition: all 400ms cubic-bezier(0.34, 1.25, 0.3, 1);
-
-	input[type="text"] {
-		padding: 8px 40px 8px 14px; 
-		width: ($nav-width - 20px) ;
-		background: rgba($black, 0.4); 
-		color: $white;
-	}
-}
-
 .filter-message {
-	display: none;
-}
+	display: block;
+	text-align: center;
+	padding: 2px;
+	font-size: $font-size-xs;
+	text-transform: capitalize;
+	font-style: italic;
+	width: calc(100% - 60px);
+	max-width: 180px;
+	border-radius: $border-radius;
+	margin: $p-3 auto;
 
-.list-filter {
-
-	.info-card {
-		height: calc(#{$nav-infocard-height} - #{$nav-infocard-height});
-		max-height: calc(#{$nav-infocard-height} - #{$nav-infocard-height});
-		transition: all 400ms cubic-bezier(0.34, 1.25, 0.3, 1);
-	}
-
-	.nav-filter {
-		opacity: 1;
-		visibility: visible;
-		height: 50px;
-		border-bottom: 1px solid;
-		transform: scale(1);
-	}
-
-	.nav-title {
+	&:empty {
 		display: none;
 	}
+}
 
-	.nav-menu {
-		margin:0;
-
-		li > ul {
-			padding: 0;
-		}
-	}
-
+.js-list-filter:not(.primary-nav) {
 
 	/* these classes are triggered by JS */
-	.filter-hide {
-		display:none !important;
+	.js-filter-hide {
+		display:none;
 	}
 
-	.filter-show {
-		display:block !important;
-	}
-
-	.filter-message {
-		display: block !important;
-		text-align: center;
-		padding: 2px;
-		font-size: $font-size-xs;
-		text-transform: capitalize;
-		font-style: italic;
-		width: calc(100% - 60px);
-		max-width: 180px;
-		border-radius: $border-radius;
-		margin: $p-3 auto;
-
-		&:empty {
-			display: none !important;
-		}
+	.js-filter-show {
+		display:block;
 	}
 
 }
-

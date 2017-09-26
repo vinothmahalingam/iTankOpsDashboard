@@ -230,6 +230,11 @@ ul.list-verticle {
     background-color: lighten($color-primary, 44%)
 }
 
+.bg-subtlelight-fade {
+    @include gradient-img($white, lighten($color-primary, 44%));	
+}
+
+
 .shadow-hover {
 	@extend %shadow-hover;
 }
@@ -269,7 +274,7 @@ ul.list-verticle {
 		display: block;
 		top: -2px;
 		right: -2px;
-		background: $warning-500;
+		background: $fusion-500;
 		border-radius: 50%;
 		border: 2px solid #fff;
 	}
@@ -279,12 +284,16 @@ ul.list-verticle {
 		height: 12px;	
 	}
 
-	&.status-online:before {
+	&.status-success:before {
 		background: $success-500;
 	}
 
-	&.status-offline:before {
+	&.status-danger:before {
 		background: $danger-500;
+	}
+
+	&.status-warning:before {
+		background: $warning-500;
 	}
 }
 

@@ -1,0 +1,29 @@
+textarea {
+
+}
+
+[contenteditable="true"] {
+	overflow:auto;
+	-webkit-user-modify: read-write-plaintext-only;
+
+	line-height: normal;
+
+	&:focus {
+		outline: 0;
+	}
+
+	&:empty:not(:focus):before{
+		content: attr(data-placeholder);
+		color: $fusion-50;
+	}
+
+	&::selection {
+		background: rgba(0, 132, 255, .2);
+		color: $black;
+	}
+
+	&::-moz-selection {
+		background: rgba(0, 132, 255, .2);
+		color: $black;
+	}
+}
