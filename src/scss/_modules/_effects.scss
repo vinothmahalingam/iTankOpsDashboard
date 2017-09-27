@@ -26,3 +26,21 @@
 		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAAICAMAAAD9VPKTAAAANlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC3dmhyAAAAEnRSTlMACRUgPnjDV51MNCxhkIVsrbfUWo5iAAAA/UlEQVQ4y8zR7WqEMBCF4Xy4HeNos73/m605M+HQlIB2oeyjP5XwngQTXTLZqOp2WqCAiOxQa32Yz+Zo1u5pvpqPP8CPT7N2R4PDHqbWuoOIFFhgO6lqNslEFwaoHsKV4cXCpZl3H+z2cLidjGjozfNqaX5F6xANYSKO8aDjtXMAqJwAK8Dh1hXvNf41oJKdUL2VsZNeBp8Pii+Inp9cdsoBTHECe1fN4yXV7J1AYSpjUesSeyHcF8EXcLlT2HwFKj+IKXJNYRwt4LZGITO1i8Dc10VKjjNwCa5Byw0beR8bmUmRwv+IgzSRb0kTcRDezfcYwRhEUAKgxtAEAACGmyM6KW9inQAAAABJRU5ErkJggg==)
 	}
 }
+
+/* press animation */
+.press-scale-down {
+	transition: transform 0.2s ease;
+
+	&:active {
+		@include scale(0.95);
+	}
+}
+
+.hover-white {
+	&:hover {
+		background: $gray-lightest;
+	}
+	&:active {
+		background: darken($gray-lightest, 5%);
+	}
+}

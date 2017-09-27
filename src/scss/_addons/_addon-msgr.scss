@@ -4,6 +4,8 @@ $msgr-list-width-collapsed: 50px;
 $chat-rcvd-background: adjust-hue(lighten($primary-500, 39%), -6); //#DCF2FA;
 $chat-sent-background: $primary-500;
 
+$animation-delay: 100ms;
+
 .msgr-list {
 	width: $msgr-list-width;
     position: absolute;
@@ -15,7 +17,7 @@ $chat-sent-background: $primary-500;
     z-index: 101;
 
     @extend %general-animation;
-    transition-delay: 400ms;
+    transition-delay: $animation-delay;
 
     #msgr_listfilter_input {
 		width: unquote("calc(100% - #{$p-3})");
@@ -26,7 +28,7 @@ $chat-sent-background: $primary-500;
 		opacity: 0; 
 		background: transparent;
 		@extend %general-animation;
-		transition-delay: 400ms;  	
+		transition-delay: $animation-delay;  	
     }
 
 	& + .msgr {
@@ -38,12 +40,12 @@ $chat-sent-background: $primary-500;
 			content:'';
 			height:100%;
 			width:100%;
-			background:rgba($white,0.5);	
+			background:rgba($primary-50,0.2);	
 			position:absolute;
 			z-index: 100;
 
 			@extend %general-animation;
-			transition-delay: 400ms;
+			transition-delay: $animation-delay;
 
 			opacity: 0;
 			visibility: hidden;
@@ -110,7 +112,7 @@ $chat-sent-background: $primary-500;
 	}
 
 	.msgr-chatinput__icons {
-		height: 30px;
+		height: 40px;
 	}
 
 	.msgr-chatinput__container {
@@ -128,7 +130,7 @@ $chat-sent-background: $primary-500;
 	}
 }
 
-.chat-container {
+.chat-segment {
 
 	.chat-message {
 		padding: $p-2 + $p-1;
@@ -161,7 +163,7 @@ $chat-sent-background: $primary-500;
 			display: none;
 		}
 
-		& + .chat-container:not(.chat-end) {
+		& + .chat-segment:not(.chat-end) {
 
 			margin-bottom: 3px !important;
 
@@ -173,7 +175,7 @@ $chat-sent-background: $primary-500;
 		}
 	}
 
-	&.chat-container--rcvd {
+	&.chat-segment--rcvd {
 
 		text-align: left;
 		position: relative;
@@ -214,7 +216,7 @@ $chat-sent-background: $primary-500;
 		}
 	}
 
-	&.chat-container--sent {
+	&.chat-segment--sent {
 
 		text-align: right;
 		position: relative;
