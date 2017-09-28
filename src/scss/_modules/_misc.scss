@@ -198,40 +198,11 @@ ul.list-verticle {
 .img-share {
 	width: auto;
     height: $image-share-height;
-    border: 1px solid #e4e4e4;
-    padding: 2px;
-    background: $white;
 }
-
-
 
 .notes {
 	padding: 5px;
 	background: #f9f4b5;
-}
-
-.border-radius-0 {
-	border-radius:0 !important;
-}
-
-.bg-transparent {
-	background: transparent !important;
-}
-
-.bg-white {
-	background: $white !important;
-}
-
-.bg-offwhite-fade {
-	@include gradient-img($white, lighten($color-fusion, 66%))	
-}
-
-.bg-subtlelight {
-    background-color: lighten($color-primary, 44%)
-}
-
-.bg-subtlelight-fade {
-    @include gradient-img($white, lighten($color-primary, 44%));	
 }
 
 
@@ -349,7 +320,30 @@ ul.list-verticle {
 .card-body > .frame-wrap:last-child {
 	margin-bottom:0 !important;
 }
-/* bg faded */
-.bg-faded {
-	background: $frame-border-color;
+
+/* time stamp */
+.time-stamp {
+	font-size: rem($fs-sm);
+	margin: $p-1 0 0 0;
+	color: $fusion-200;
+	font-weight: 300;
+}
+
+/* data-hasmore */
+[data-hasmore] {
+	position: relative;
+	color: $white;
+	&:before {
+		content: attr(data-hasmore);
+		border-radius: inherit;
+		background: rgba($black, 0.4);
+		height: inherit;
+		width: 100%;
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 500;
+		font-size: inherit;
+	}
 }

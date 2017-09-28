@@ -14,7 +14,7 @@ var gulp = require('gulp'),
 
     cleanCSSOptions = {
       advanced: false
-    };
+    };  
 
 gulp.task('cssnano', ['compile-sass'], function () {
   return gulp.src([config.paths.scss_path_build + '/*.css', '!' + config.paths.scss_path_build + '/*.min.css'])

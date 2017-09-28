@@ -14,17 +14,11 @@
 }
 
 /* margins */
-.mrg-auto,
 .m-auto { margin: 0 auto; }
-.mrg-l-a,
 .ml-auto {	margin-left: auto !important;}
-.mrg-r-a,
 .mr-auto {	margin-right: auto !important;}
-.mrg-gutter,
 .m-g { margin: $grid-gutter-width-base; }
-.mrg-gutter-half,
 .m-g-h { margin: $grid-gutter-width-base/2; }
-.mrg-b-gutter,
 .mb-g {	margin-bottom: map-get($grid-gutter-widths, xl) !important; }
 .mb-gb { margin-bottom:$grid-gutter-width-base; }
 
@@ -40,16 +34,6 @@
 .text-truncate-md {	max-width: 160px; }
 .text-truncate-default { max-width: 180px; }
 .text-truncate-lg {	max-width: 200px; }
-
-/* absolute position */
-/*.a-tr,
-.a-tl,
-.a-br,
-.a-bl {	position:absolute !important; }
-.a-tr {	top:0; right:0; }
-.a-tl {	top:0; left:0; }
-.a-br {	bottom:0; right:0; }
-.a-bl {	bottom:0; left:0; }*/
 
 /* positions */
 .pos-a { position:absolute !important; }
@@ -106,3 +90,21 @@
 .opacity-90 { opacity: 0.9 }
 .opacity-95 { opacity: 0.95 }
 .opacity-100 { opacity: 1 }
+
+/* backgrounds */
+.bg-transparent { background: transparent !important; }
+.bg-white { background: $white !important; }
+.bg-faded {	background: $frame-border-color; }
+.bg-offwhite-fade {	@include gradient-img($white, lighten($color-fusion, 66%)) }
+.bg-subtlelight { background-color: lighten($color-primary, 44%) }
+.bg-subtlelight-fade { @include gradient-img($white, lighten($color-primary, 44%));	}
+
+/* border radius */
+.border-radius-0 { border-radius:0 !important; }
+
+/* progressbars */
+.progress-xs > .progress-bar { height: 5px; }
+.progress-sm > .progress-bar { height: 8px; }
+.progress-md > .progress-bar { height: 14px; }
+.progress-lg > .progress-bar { height: 20px; }
+.progress-xl > .progress-bar { height: 30px; }

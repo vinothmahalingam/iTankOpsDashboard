@@ -158,7 +158,7 @@ $animation-delay: 100ms;
 
 		margin-bottom: 3px !important;
 		
-		.chat-stamp,
+		.time-stamp,
 		.chat-img {
 			display: none;
 		}
@@ -167,7 +167,7 @@ $animation-delay: 100ms;
 
 			margin-bottom: 3px !important;
 
-			.chat-stamp,
+			.time-stamp,
 			.chat-img {
 				display: none;
 			}
@@ -251,12 +251,5 @@ $animation-delay: 100ms;
 		}
 
 	}	
-
-	.chat-stamp {
-		font-size: rem($fs-sm);
-		margin: $p-1 0 0 0;
-		color: $fusion-200;
-		font-weight: 300;
-	}
 	
 }
