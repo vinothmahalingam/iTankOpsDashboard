@@ -329,7 +329,7 @@ $page-bg:											       desaturate(lighten($color-fusion, 65.5%),20%) !defaul
 $depth:												       999 !default;
 $depth-header:								       $depth + 1 !default;
 $depth-nav:										       $depth-header + 2 !default;
-$depth-settings:							       $depth-header + 2 !default;
+$depth-right-panel:							     $depth-header + 2 !default;
 
 /*  Components
 ========================================================================== */
@@ -500,11 +500,11 @@ $nav-dl-margin-left:							$nav-dl-width + $nav-dl-margin-right !default; 	/* wi
 $list-table-padding-x:						11px !default;
 $list-table-padding-y:						0 !default;
 
-/*   SETTINGS Panel (.right-panel)
+/*   RIGHT Aside (.right-panel)
 ========================================================================== */
-$settings-panel-bg:								$white !default;
-$settings-width:									350px !default;
-$settings-width-mobile:           calc(100vw - 11%) !default
+$right-panel-bg:								  $white !default;
+$right-panel-width:								350px !default;
+$right-panel-width-mobile:        calc(100vw - 11%) !default
 $settings-incompat-title:         #d58100 !default;
 $settings-incompat-desc:          #ec9f28 !default;
 $settings-incompat-bg:            $warning-50 !default;

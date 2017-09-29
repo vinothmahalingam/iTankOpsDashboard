@@ -41,7 +41,7 @@ $menu-item-direction: 'top'; //top or left
 .menu-item,
 label.menu-open-button {
   @extend %ball;
-  font-size: rem(18px);
+  font-size: 16px;
 }
 
 label.menu-open-button {

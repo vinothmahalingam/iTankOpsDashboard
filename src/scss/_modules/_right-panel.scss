@@ -1,10 +1,10 @@
 .right-panel {
 	
-	width: $settings-width;
-	right: -$settings-width;
+	width: $right-panel-width;
+	right: -$right-panel-width;
 	will-change: left, right;
-	z-index: $depth-settings;
-	background: $settings-panel-bg;
+	z-index: $depth-right-panel;
+	background: $right-panel-bg;
 	transition: 470ms cubic-bezier(0.34, 1.25, 0.3, 1);
 
 	border-left: 1px solid #CACACA;
@@ -20,7 +20,7 @@
 	}
 
 	.right-panel-content {
-		height: unquote("calc(100% - #{$header-height - 15})");
+		height: unquote("calc(100% - #{$header-height - 25})");
 		/*overflow-x: auto;*/
 	}	
 
@@ -143,7 +143,7 @@
 
 	cursor: default;
 
-	z-index: $depth-settings + 1;
+	z-index: $depth-right-panel + 1;
 
 	&:hover {
 		color:$white;
@@ -167,12 +167,17 @@
 	.dropdown-menu {
 		display:none;
 	}
+
+	/* display close btn */
+	.nav-tabs-panel--close > .close {
+		display: block !important;
+	}
 }
 
 @media only screen and ( max-width: $mobile-breakpoint-size ) {
 
 	.right-panel {
-		width: $settings-width-mobile;
+		width: $right-panel-width-mobile;
 		right: -100vw;
 	}
 }

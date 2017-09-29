@@ -21,27 +21,13 @@ $mod-bg-4-prev: url("#{$baseURL}img/backgrounds/prev-bg-4.png") !default;
 					display: block;
 
 					> ul {
-						padding: 0;
-						margin: 0;
-						text-align: center;
-						height: 50px;
 
 						> li {
 							display: inline-block;
 							margin:0;
 							padding:0;
 
-							[data-action="toggle"] {
-								width: 50px;
-								height: 50px;
-								padding:0;
-								border-radius: 50%;
-								margin-right: 2px;
-								display: block;
-								cursor: pointer;
-								position: relative;
-
-								box-shadow: 0 1px 10px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.1);
+							[data-action] {
 
 								&[data-class="mod-bg-1"] {
 									background-image: $mod-bg-1-prev;

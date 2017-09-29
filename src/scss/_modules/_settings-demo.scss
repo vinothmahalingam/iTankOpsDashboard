@@ -26,11 +26,11 @@
 	}
 
 	.list {
-		width:100%;
 		font-weight:400;
-		min-height:35px;
+		min-height:45px;
 		padding: 4.75px $p-3 4.75px $p-3;
-		color:darken($settings-panel-bg, 60%);
+		margin: 0 $p-3 0 $p-4;
+		color:darken($right-panel-bg, 60%);
 		position: relative;
 
 		display: flex;
@@ -40,7 +40,7 @@
 		@extend %common-animation;
 
 		&:hover{
-			color:darken($settings-panel-bg, 80%);
+			color:darken($right-panel-bg, 80%);
 			background:rgba( $white, .7 );
 
 			.onoffswitch {
@@ -60,56 +60,58 @@
 			top: 30%;
 		}
 
-		& + .expanded {
-			@extend %expanded-box;
-			position: relative;
-			padding: 16px 16px 10px;
-			display: none;
+	}
 
-			&:before {
-				border-bottom-color: $fusion-400;
-				bottom: 1px;
-			}
+	.expanded {
+		@extend %expanded-box;
+		position: relative;
+		display: none;
 
-			> ul {
-				padding: 0;
-				margin: 0;
-				text-align: center;
-				
-				> li {
-					display: inline-block;
-					margin:0;
-					padding:0;
-
-					&:last-child {
-						[data-action="toggle"] {
-							margin-right:0;
-						}
-					}
-				}
-			}
-
-			.list {
-				padding: 0 0 0 7px;
-				min-height: auto;
-				margin-top: 8px;
-
-				.btn-switch {
-					margin-top:3px;
-					@include scale(0.9);
-					top: -2px;
-
-					& + .onoffswitch-title {
-						font-size:12px;
-					}
-				}
-
-				&:hover {
-					background:transparent;
-				}
-			} 
+		&:before {
+			border-bottom-color: $fusion-400;
+			bottom: 1px;
 		}
 
+		> ul {
+			padding: 0;
+			margin: 0;
+			margin: 0 0 0 24px;
+			height: 50px;
+			
+			> li {
+				display: inline-block;
+				margin:0;
+				padding:0;
+
+				[data-action] {
+					width: 50px;
+					height: 50px;
+					border-radius: 50%;
+					margin-right: 2px;
+					display: block;
+					cursor: pointer;
+					position: relative;
+
+					box-shadow: 0 1px 10px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.1);
+				}
+
+			}
+		}
+
+		.list {
+			padding: 0 0 0 7px;
+			min-height: auto;
+			margin: 8px 0 0 16px;
+
+			.btn-switch {
+				margin-top:2px;
+				top: -2px;
+			}
+
+			&:hover {
+				background:transparent;
+			}
+		} 
 	}
 }
 

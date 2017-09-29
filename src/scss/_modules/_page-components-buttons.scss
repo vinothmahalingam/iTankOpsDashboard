@@ -3,13 +3,13 @@
 	background: $fusion-300;
 	padding: 2px 8px 1px 22px;
 	font-size: 10px;
-	line-height: 11px;
+	line-height: 15px;
 	border-radius: 20px;
 	text-transform: uppercase;
 	@include text-contrast($fusion-300);
 	font-weight: 500;
-	min-width:52px;
-	height:17px;
+	min-width:55px;
+	height:20px;
 	margin-top:5%;
 	position:relative;
 	overflow: hidden;
@@ -31,9 +31,8 @@
 		content: " ";
 		text-align: center;
 		@include text-contrast(#828282);
-		font-size: 14px;
-		width: 13px;
-		height: 13px;
+		width: 16px;
+		height: 16px;
 		position: absolute;
 		background: $white;
 		padding:1px;
@@ -67,12 +66,12 @@
 
 	& + .onoffswitch-title {
 		margin-top:0.5px;
-		font-size:$base-font-size;
+		font-size: rem($base-font-size);
 		display: block;
 
 		& + .onoffswitch-title-desc {
 			display: block;
-			font-size: 11px;
+			font-size: rem(12px);
 			color: #989da5;
 			text-transform: lowercase;
 		}

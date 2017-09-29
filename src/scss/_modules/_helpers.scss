@@ -1,6 +1,11 @@
-/* height */
+/* height & width auto */
 .h-auto { height: auto !important; }
 .w-auto { width: auto !important; }
+
+/* width preset */
+.width-p-3 { width: $p-3; }
+.width-p-4 { width: $p-4; }
+.width-p-5 { width: $p-5; }
 
 /* line-heights */
 .l-h-n { line-height:normal; }

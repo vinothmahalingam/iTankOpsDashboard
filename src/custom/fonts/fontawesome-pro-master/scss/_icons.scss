@@ -3,6 +3,7 @@ readers do not read off random characters that represent icons */
 
 .#{$fa-css-prefix}-500px:before { content: unquote("\"#{ $fa-var-500px }\""); }
 .#{$fa-css-prefix}-accessible-icon:before { content: unquote("\"#{ $fa-var-accessible-icon }\""); }
+.#{$fa-css-prefix}-accusoft:before { content: unquote("\"#{ $fa-var-accusoft }\""); }
 .#{$fa-css-prefix}-address-book:before { content: unquote("\"#{ $fa-var-address-book }\""); }
 .#{$fa-css-prefix}-address-card:before { content: unquote("\"#{ $fa-var-address-card }\""); }
 .#{$fa-css-prefix}-adjust:before { content: unquote("\"#{ $fa-var-adjust }\""); }
@@ -117,7 +118,6 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-binoculars:before { content: unquote("\"#{ $fa-var-binoculars }\""); }
 .#{$fa-css-prefix}-birthday-cake:before { content: unquote("\"#{ $fa-var-birthday-cake }\""); }
 .#{$fa-css-prefix}-bitbucket:before { content: unquote("\"#{ $fa-var-bitbucket }\""); }
-.#{$fa-css-prefix}-bitbucket-square:before { content: unquote("\"#{ $fa-var-bitbucket-square }\""); }
 .#{$fa-css-prefix}-bitcoin:before { content: unquote("\"#{ $fa-var-bitcoin }\""); }
 .#{$fa-css-prefix}-bity:before { content: unquote("\"#{ $fa-var-bity }\""); }
 .#{$fa-css-prefix}-black-tie:before { content: unquote("\"#{ $fa-var-black-tie }\""); }
@@ -567,6 +567,7 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-newspaper:before { content: unquote("\"#{ $fa-var-newspaper }\""); }
 .#{$fa-css-prefix}-nintendo-switch:before { content: unquote("\"#{ $fa-var-nintendo-switch }\""); }
 .#{$fa-css-prefix}-npm:before { content: unquote("\"#{ $fa-var-npm }\""); }
+.#{$fa-css-prefix}-ns8:before { content: unquote("\"#{ $fa-var-ns8 }\""); }
 .#{$fa-css-prefix}-nutritionix:before { content: unquote("\"#{ $fa-var-nutritionix }\""); }
 .#{$fa-css-prefix}-object-group:before { content: unquote("\"#{ $fa-var-object-group }\""); }
 .#{$fa-css-prefix}-object-ungroup:before { content: unquote("\"#{ $fa-var-object-ungroup }\""); }
@@ -839,6 +840,7 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-underline:before { content: unquote("\"#{ $fa-var-underline }\""); }
 .#{$fa-css-prefix}-undo:before { content: unquote("\"#{ $fa-var-undo }\""); }
 .#{$fa-css-prefix}-undo-alt:before { content: unquote("\"#{ $fa-var-undo-alt }\""); }
+.#{$fa-css-prefix}-uniregistry:before { content: unquote("\"#{ $fa-var-uniregistry }\""); }
 .#{$fa-css-prefix}-universal-access:before { content: unquote("\"#{ $fa-var-universal-access }\""); }
 .#{$fa-css-prefix}-university:before { content: unquote("\"#{ $fa-var-university }\""); }
 .#{$fa-css-prefix}-unlink:before { content: unquote("\"#{ $fa-var-unlink }\""); }

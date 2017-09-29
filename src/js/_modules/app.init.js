@@ -828,7 +828,7 @@ var initApp = (function(app) {
 						if (!$.i18n) {
 						//jQuery.getScript('http://url/to/the/script');
 
-							initApp.loadScript("vendor/js/i18next-1.11.2.min.js", 
+							initApp.loadScript("js/i18next-1.11.2.min.js", 
 
 								function activateLang () {
 									
