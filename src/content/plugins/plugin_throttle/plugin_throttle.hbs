@@ -4,15 +4,194 @@
 	pagename="plugin_throttle" 
 	category_1="Core Plugins" 
 	heading="Throttle <sup class='badge badge-warning fw-300 fs-sm'>core-plugin</sup>" 
-	pagedescription="slimscroll description"
+	pagedescription="An intelligent way to increase app performance"
 }}
 
-{{#*inline "head-block"}}{{/inline}}
-
-{{#*inline "content-block"}}
-throttle
+{{#*inline "head-block"}}
+<link rel="stylesheet" media="screen, print" href="css/theme-demo.min.css">
 {{/inline}}
 
-{{#*inline "scripts-block"}}{{/inline}}
+{{#*inline "content-block"}}
+
+<div class="container">
+	
+	<div class="card mb-g">
+
+		<div class="card-body">
+
+
+			<h3 class="mb-4">
+			    jQuery <span class="fw-300">throttle / debounce</span> 
+			    <small>
+			        Sometimes, less is more!
+			    </small>
+			</h3>
+
+			<p>
+				jQuery throttle / debounce allows you to rate-limit your functions in multiple useful ways. Passing a delay and callback to <code>$.throttle</code> returns a new function that will execute no more than once every delay milliseconds. Passing a delay and callback to <code>$.debounce</code> returns a new function that will execute only once, coalescing multiple sequential calls into a single execution at either the very beginning or end.
+			</p>
+
+			<h4 class="mt-4">
+				Throttling
+			</h4>
+			<p>
+				You can pass a delay and function to <code>$.throttle</code> to get a new function, that when called repetitively, executes the original function (in the same context and with all arguments passed through) no more than once every delay milliseconds.
+			</p>
+
+			<div class="row mb-4">
+				<div class="col-sm-6">
+					<strong>Throttled with <code>no_trailing</code> specified as false or unspecified:</strong>
+					<img src="img/demo/throttle.png" alt="throttle" class="mt-2 img-fluid">
+				</div>
+				<div class="col-sm-6">
+					<strong>Throttled with <code>no_trailing</code> specified as true: </strong>
+					<img src="img/demo/throttle-no_trailing.png" alt="throttle-no_trailing" class="mt-2 img-fluid">
+				</div>
+			</div>
+
+			<h4 class="mt-4">
+				Debouncing
+			</h4>
+			<p>
+				You can pass a delay and function to <code>$.debounce</code> to get a new function, that when called repetitively, executes the original function just once per “bunch” of calls, effectively coalescing multiple sequential calls into a single execution at either the beginning or end.
+			</p>
+
+			<div class="row mb-4">
+				<div class="col-sm-6">
+					<strong>Debounced with <code>at_begin</code> specified as false or unspecified: :</strong>
+					<img src="img/demo/debounce.png" alt="throttle" class="mt-2 img-fluid">
+				</div>
+				<div class="col-sm-6">
+					<strong>Debounced with <code>at_begin</code> specified as true:  </strong>
+					<img src="img/demo/debounce-at_begin.png" alt="throttle-no_trailing" class="mt-2 img-fluid">
+				</div>
+			</div>			
+			
+		</div>
+										
+	</div>
+	<!--/ card -->
+
+	<div class="card mb-g">
+
+		<div class="card-body">
+
+			<h3 class="mb-4">
+			    jQuery throttle / debounce: <span class="fw-300">Sometimes, less is more!</span> 
+			    <small>
+			        A perfect way to increase app performance
+			    </small>
+			</h3>
+
+			<table class="table table-bordered mb-gb">
+				<thead>
+					<tr>
+						<th>
+							Arguments
+						</th>
+						<th>
+							Description
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<code>delay</code>
+						</td>
+						<td class="fs-sm">
+							(Number) A zero-or-greater delay in milliseconds.  For event callbacks, values around 100 or 250 (or even higher) are most useful.
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<code>no_trailing</code>
+						</td>
+						<td class="fs-sm">
+							(Boolean) Optional, defaults to false.  If no_trailing is true, callback will only execute every `delay` milliseconds while the throttled-function is being called.  If no_trailing is false or unspecified, callback will be executed one final time after the last throttled-function call.  (After the throttled-function has not been called for `delay` milliseconds, the internal counter is reset)
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<code>at_begin</code>
+						</td>
+						<td class="fs-sm">
+							(Boolean) Optional, defaults to false.  If at_begin is false or unspecified, callback will only be executed `delay` milliseconds after the last debounced-function call.  If at_begin is true, callback will be executed only at the first debounced-function call.  (After the throttled-function has not been called for `delay` milliseconds, the internal counter is reset)
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<code>callback</code>
+						</td>
+						<td class="fs-sm">
+							(Function) A function to be executed after delay milliseconds.  The `this` context and all arguments are passed through, as-is, to `callback` when the debounced-function is executed.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h4 class="frame-heading">
+				Usage
+			</h4>
+<pre class="prettyprint">
+/**
+ * Sample usage
+ **/
+var throttled = jQuery.throttle( delay, [ no_trailing, ] callback );
+jQuery('selector').bind( 'someevent', throttled );
+jQuery('selector').unbind( 'someevent', throttled );
+
+/**
+ * Usage within the NextGen App
+ * Bind the throttled handler to the scroll event
+ **/
+$(window).scroll(
+  $.throttle( myapp_config.throttleDelay, function (e) {
+	/**
+	* FIX APP HEIGHT
+	* Compare the height of nav and content;
+	* If one is longer/shorter than the other, measure them to be equal.
+	* This event is only fired on desktop.
+	**/
+	initApp.fixAppHeight();
+
+	/** -- insert your other scroll codes below this line -- **/
+  })
+);
+</pre>
+
+			<h4 class="frame-heading">
+				Dependencies
+			</h4>
+			<div class="mb-gb">
+				<strong>developer/.../dist/js/app.core-plugins.min.js</strong>
+			</div>
+
+			<h4 class="frame-heading">
+				Full Documentation
+			</h4>
+			<div class="mb-gb">
+				<a href="http://benalman.com/code/projects/jquery-throttle-debounce/docs/files/jquery-ba-throttle-debounce-js.html" target="_blank">http://benalman.com/code/projects/jquery-throttle-debounce/docs/files/jquery-ba-throttle-debounce-js.html</a>
+			</div>
+
+			<h4 class="frame-heading">
+				GitHub
+			</h4>
+			<div class="mb-gb">
+				<a href="https://github.com/cowboy/jquery-throttle-debounce" target="_blank">https://github.com/cowboy/jquery-throttle-debounce</a>
+			</div>
+
+
+		</div>
+
+	</div>	
+
+</div>
+
+{{/inline}}
+
+{{#*inline "scripts-block"}}
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+{{/inline}}
 
 {{/layouts/main}}

@@ -504,7 +504,7 @@ var initApp = (function(app) {
 		} 
 
 		/**
-		 * Other options:
+		 * all options:
 		 * --------------
 			width: '300px',
 			height: '500px',
@@ -524,8 +524,16 @@ var initApp = (function(app) {
 		if ( typeof $.fn.slimScroll !== 'undefined' && myapp_config.thisDevice === 'desktop') {
 
 			$('.custom-scroll >:first-child').slimscroll({
-				height: '100%',
-				distance: '0'
+				height: $(this).data('scrollHeight') || '100%',
+				size: $(this).data('scrollSize') || '7px',
+				position: $(this).data('scrollPosition') || 'right',
+				color: $(this).data('scrollColor') || '#b3b3b3',
+				alwaysVisible: $(this).data('scrollAlwaysVisible') || false,
+				distance: $(this).data('scrollDistance') || '0',
+				railVisible: $(this).data('scrollRailVisible') || false,
+				railColor: $(this).data('scrollRailColor') || '#fafafa',
+				allowPageScroll: false,
+				disableFadeOut: false
 			});
 
 			if (myapp_config.debugState)
