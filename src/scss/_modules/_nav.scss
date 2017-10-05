@@ -27,7 +27,7 @@
 	background: $nav-background;
 
 	a,
-	a > .fa,
+	a > [class*='fa-'],
 	a > .#{$cust-icon-prefix} {
 		@include transition(0.3s,ease-out);
 	}
@@ -39,7 +39,7 @@
 		align-items: center;
 		justify-content: center;
 
-		> .fa,
+		> [class*='fa-'],
 		>.#{$cust-icon-prefix} {
 			font-size: $nav-collapse-sign-font-size;
     	}
@@ -70,7 +70,7 @@
 
 				&:hover {
 
-					>.fa,
+					>[class*='fa-'],
 					>.#{$cust-icon-prefix} {
 					    color:$nav-icon-hover-color;
 					}
@@ -137,14 +137,14 @@
 
 				@extend %ping-badge;
 
-				& + .fa,
+				& + [class*='fa-'],
 				& + .#{$cust-icon-prefix} {
 					display: none;
 				}
 
 			}
 
-			>.fa,
+			>[class*='fa-'],
 			>.#{$cust-icon-prefix} {
 				margin-right:$nav-icon-margin-right;
 				font-size: $nav-font-icon-size;
@@ -196,7 +196,7 @@
 					color: $nav-badge-color;
 				}
 
-				>.fa,
+				>[class*='fa-'],
 				>.#{$cust-icon-prefix} {
 					color:$nav-icon-hover-color;
 				}
@@ -231,13 +231,13 @@
 					font-size: rem($nav-font-link-size);
 
 					b.collapse-sign {
-						>.fa,
+						>[class*='fa-'],
 						>.#{$cust-icon-prefix} {
 							font-size: $nav-collapse-sign-font-size - 2; 
 						}
 					}
 
-					>.fa,
+					>[class*='fa-'],
 					>.#{$cust-icon-prefix} {
 						margin-left: -35px;
 						margin-right: $nav-dl-margin-right;
@@ -259,7 +259,7 @@
 						background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100));
 
 						> .nav-link-text {
-							>.fa,
+							>[class*='fa-'],
 							>.#{$cust-icon-prefix} {
 							    color:$nav-icon-hover-color;
 							}
@@ -278,7 +278,7 @@
 						font-weight: 400;
 
 						> .nav-link-text {
-							>.fa,
+							>[class*='fa-'],
 							>.#{$cust-icon-prefix} {
 							    @include text-contrast(rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)));
 							}
@@ -286,7 +286,7 @@
 
 						&:hover {
 							> .nav-link-text {
-								>.fa,
+								>[class*='fa-'],
 								>.#{$cust-icon-prefix} {
 								    color:$nav-icon-hover-color;
 								}
@@ -326,7 +326,7 @@
 								margin-right: $nav-icon-margin-right / 1.2;
 							}
 							
-							>.fa,
+							>[class*='fa-'],
 							>.#{$cust-icon-prefix} {
 								margin-left: 0;
 								margin-right: $nav-icon-margin-right / 1.2;

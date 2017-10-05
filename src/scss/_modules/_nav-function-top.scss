@@ -203,7 +203,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 											display: none;
 										}
 										> .#{$cust-icon-prefix}
-										> .fa {
+										> [class*='fa-'] {
 											margin-left: 6px;
 										}
 									}
@@ -271,14 +271,14 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 							display: block; /*override flex*/
 
 							>.#{$cust-icon-prefix},
-							>.fa {
+							>[class*='fa-'] {
 								font-size: 20px;
 								margin-right: 0;
 								display: block;
 								margin: 5px auto 0;
 								height: 24px;
 							}
-							>.fa {
+							>[class*='fa-'] {
 								font-size: 18px;
 							}
 							> .nav-link-text {
@@ -447,14 +447,14 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 								margin: 0 auto 2px !important;
 							}							
 							>.#{$cust-icon-prefix},
-							>.fa,
+							>[class*='fa-'],
 							> img {
 								font-size: 22px;
 								margin: 3px auto 3px;
 								height: 22px;
 								display: block;
 							}
-							>.fa {
+							>[class*='fa-'] {
 								font-size: rem(18px);
 							}
 							> .nav-link-text {

@@ -72,7 +72,7 @@
 							justify-content: center;
 							align-items: center;
 
-							>.fa,
+							>[class*='fa-'],
 							>.#{$cust-icon-prefix},
 							> img {	
 								font-size: rem($nav-font-icon-size * 1.1);
@@ -124,7 +124,7 @@
 										padding-left: $nav-minify-sub-width / 10;
 
 
-										> b.collapse-sign > .fa,
+										> b.collapse-sign > [class*='fa-'],
 										> b.collapse-sign > .#{$cust-icon-prefix} {
 											display: inline-block !important;
 										}
@@ -140,7 +140,7 @@
 									}
 
 									.nav-link-text {
-										> .fa,
+										> [class*='fa-'],
 										> .#{$cust-icon-prefix} {
 											display:none;
 										}

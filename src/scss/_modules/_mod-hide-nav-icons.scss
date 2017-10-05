@@ -4,8 +4,8 @@
 			.nav-menu {
 
 				a {
-					> .fa, 
-					> .icon,
+					> [class*='fa-'], 
+					> .#{$cust-icon-prefix},
 					> img {
 						display: none;
 					}
@@ -17,8 +17,8 @@
 				}
 
 				span {
-					> .fa, 
-					> .icon,
+					> [class*='fa-'], 
+					> .#{$cust-icon-prefix},
 					> img {
 						display: none;
 					}

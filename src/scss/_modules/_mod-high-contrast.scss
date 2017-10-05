@@ -2,8 +2,8 @@
 
 	.nav-menu li a,
 	.nav-title,
-	.nav-menu li a .fa, 
-	.nav-menu li a .icon,
+	.nav-menu li a [class*='fa-'], 
+	.nav-menu li a .#{$cust-icon-prefix},
 	.dl-ref,
 	.btn {
 		text-shadow:

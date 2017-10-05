@@ -17,14 +17,14 @@
 	> .mask {
 		font-size: 25px;
 
-		&.larger-icon {
+		&.icon-lg {
 			font-size:31px;
 		}
 	}
 	>:nth-child(3) {
 		font-size:22px;
 
-		&.smaller-icon {
+		&.icon-sm {
 			font-size: 16px;
 		}
 
@@ -37,3 +37,68 @@
 
     }
 }*/
+
+/* stack icons */
+.stack-icons {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+
+	.base-stack {
+		font-size: 42px;
+		color: $primary-300;
+	}
+
+	.middle-stack,
+	.top-stack {
+		position:absolute;
+		font-size: 42px/2 + 1;
+		color: $white;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 10px;
+	}
+
+	.middle-stack {
+		color: $primary-700;
+		font-size: 42px/2 + 5;
+		top: 6px;
+
+		&[class*=" base-"] {
+			top:7px;
+		}
+	}
+
+	.icon-sm {
+		font-size: 16px;
+		top:11px;
+	}
+
+	.icon-lg {
+		font-size: 31px;
+		top: 3px;
+	}
+
+	[class*="md-"]{
+		font-size: 30px;
+		top: 4px;
+		color: $primary-700;
+
+		&.middle-stack {
+			color: $white;
+			font-size: 25px;
+			top: 6px;
+		}
+
+		&.icon-sm {
+			font-size: 25px;
+		}
+
+		&.icon-lg {
+			font-size: 43px;
+			top: -1px;
+		}
+	}
+
+}

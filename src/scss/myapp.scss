@@ -31,11 +31,18 @@
 @import '_modules/_page-footer';
 @import '_modules/_page-error';
 @import '_modules/_page-components-*';
+
+/* #MISC - misc styles, helpers, effects and hacks
+========================================================================== */ 
 @import '_modules/_helpers';
 @import '_modules/_misc';
 @import '_modules/_effects';
-@import '_modules/_responsive';
 @import '_modules/_hack';
+
+/* #MOBILE - mobile media related styles
+========================================================================== */ 
+@import '_modules/_responsive';
+@import '_modules/_light-levels';
 
 /* #FORMS (customized bootstrap form elems)
 ========================================================================== */ 

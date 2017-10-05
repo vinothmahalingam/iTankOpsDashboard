@@ -48,63 +48,6 @@
 				right:0;
 			}
 
-			> .base {
-				font-size: 42px;
-				color: $primary-300;
-				margin-top: 7px;
-			}
-
-			> .top {
-				font-size: 42px/2 + 1;
-				color: $white;
-				position: absolute;
-				left: 0;
-				right: 0;
-				top: 17px;
-
-				&.mask {
-					color: $primary-700;
-					font-size: 42px/2 + 5;
-					top: 12px;
-
-					&[class*=" base-"] {
-						top:14px;
-					}
-				}
-
-				&.larger-icon {
-					font-size: 31px;
-					top: 10px;
-				}
-
-				&.smaller-icon {
-					font-size: 16px;
-					top:18px;
-				}
-
-				&[class^="md-"], 
-				&[class*=" md-"]{
-					font-size: 30px;
-					top: 11px;
-					color: $primary-700;
-
-					&.mask {
-						color: $white;
-						font-size: 30px - 5px;
-						top: 13px;
-					}
-
-					&.larger-icon {
-						font-size: 43px;
-						top: 6px;
-					}
-
-					&.smaller-icon {
-						font-size: 25px;
-					}
-				}
-			}
-
 		}
 	}
 }

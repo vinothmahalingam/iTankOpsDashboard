@@ -30,14 +30,14 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 					text-align: center;
 					overflow: visible;
 
-					>.fa:first-child,
+					>[class*='fa-']:first-child,
 					>.#{$cust-icon-prefix}:first-child {
 						color:$header-link-color;
 				    	font-size: rem($header-icon-size);
 					    vertical-align: middle;
 			   		}
-			   		>.fa:first-child {
-			   			font-size: rem($header-icon-size - 2);
+			   		>[class*='fa-']:first-child {
+			   			font-size: rem($header-icon-size - 3);
 			   		}
 			   		>.#{$cust-icon-prefix}:first-child {
 			   			font-size: rem($header-icon-size - 4);
@@ -73,7 +73,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 
 			   		&:hover {
 
-			   			&>.fa:only-child,
+			   			&>[class*='fa-']:only-child,
 			   			&>.#{$cust-icon-prefix} {
 							color: $header-link-hover-color;
 			   			}
@@ -83,7 +83,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 			   			@include text-contrast($header-btn-active-bg);
 			   			background:$header-btn-active-bg !important;
 
-			   			&>.fa:only-child,
+			   			&>[class*='fa-']:only-child,
 			   			&>.#{$cust-icon-prefix}:only-child {
 							@include text-contrast($header-btn-active-bg);
 			   			}
@@ -120,7 +120,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 								bottom: 1px;
 							}
 
-							>.fa:first-child,
+							>[class*='fa-']:first-child,
 							>.#{$cust-icon-prefix}:first-child {
 								color: $header-link-hover-color !important;
 							}
