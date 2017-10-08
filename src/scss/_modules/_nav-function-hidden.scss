@@ -24,6 +24,7 @@
 
 			&:hover {
 				left: 0;
+				transition: 450ms cubic-bezier(0.90, 0.01, 0.09, 1);
 			}
 		}
 		.page-header {
