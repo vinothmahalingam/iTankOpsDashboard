@@ -174,9 +174,9 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 						float:left;
 
 						a {
-							padding: 10px;
-	    					font-size: 10px;
-	    					box-shadow:none;
+							//padding: 10px;
+	    					font-size: rem(13px);
+	    					//box-shadow:none;
 						}
 
 						ul {

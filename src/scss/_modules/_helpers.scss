@@ -72,14 +72,14 @@
 
 
 /* font sizes */
-.fs-nano { font-size: rem($fs-nano) } /* 10px */
-.fs-xs { font-size:  rem($fs-xs) }    /* 12px */
-.fs-sm { font-size:  rem($fs-sm) }    /* 12.5px */
-.fs-b { font-size:  rem($base-font-size) } /* 13px */
-.fs-md { font-size: rem($fs-md) }     /* 14px */
-.fs-lg { font-size: rem($fs-lg) }     /* 15px */
-.fs-xl { font-size: rem($fs-xl) }     /* 16px */
-.fs-xxl { font-size: rem($fs-xxl) }   /* page header */
+.fs-nano { font-size: rem($fs-nano) !important}        /* 10px */
+.fs-xs   { font-size: rem($fs-xs) !important}          /* 12px */
+.fs-sm   { font-size: rem($fs-sm) !important}          /* 12.5px */
+.fs-b    { font-size: rem($base-font-size) !important} /* 13px */
+.fs-md   { font-size: rem($fs-md) !important}          /* 14px */
+.fs-lg   { font-size: rem($fs-lg) !important}          /* 15px */
+.fs-xl   { font-size: rem($fs-xl) !important}          /* 16px */
+.fs-xxl  { font-size: rem($fs-xxl) !important}         /* page header */
 
 /* alphas */
 .opacity-05 { opacity: 0.05 }

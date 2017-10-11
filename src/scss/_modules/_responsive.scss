@@ -127,7 +127,7 @@ $grid-breakpoints: (
 				margin-bottom: $grid-gutter-width-base / 1.2;
 
 				.subheader-title {
-					font-size: 22px;
+					//font-size: 22px;
 					line-height: 32px;
 					font-weight: 300;
 					//margin-top: 10px;
@@ -136,13 +136,13 @@ $grid-breakpoints: (
 					small {
 						font-size: 68%;
 						letter-spacing: normal;
-						line-height: 1.2;
 						margin-top: 5px;
 						color: #181c21;
-						text-overflow: ellipsis;
-						white-space: nowrap;
+						//text-overflow: ellipsis;
+						//white-space: nowrap;
 						overflow: hidden;
 						width: calc(100% - 30px);
+						font-weight: 300;
 
 					}
 				}

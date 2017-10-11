@@ -8,12 +8,31 @@
 	pagedescription="blank description"
 }}
 
-{{#*inline "head-block"}}{{/inline}}
-
-{{#*inline "content-block"}}
-blank
+{{#*inline "head-block"}}
+	{{!-- Add your custom CSS files here --}}
 {{/inline}}
 
-{{#*inline "scripts-block"}}{{/inline}}
+{{#*inline "header-space-block"}}
+	{{!-- Right content on content header --}}
+	Right content of header
+{{/inline}}
+
+{{#*inline "header-icon-block"}}
+	{{!-- Header icon --}}
+	<span class="stack-icons mr-2">
+		<i class="base-stack base-7 color-fusion-200"></i>
+		<i class="middle-stack base-7 color-fusion-500"></i>
+		<i class="top-stack ni ni-layers icon-sm"></i>
+	</span>
+{{/inline}}
+
+{{#*inline "content-block"}}
+	{{!-- Your main content goes here --}}
+	Main page content
+{{/inline}}
+
+{{#*inline "scripts-block"}}
+	{{!-- Your custom scripts goes here --}}
+{{/inline}}
 
 {{/layouts/main}}

@@ -1,5 +1,5 @@
 .subheader {
-	margin-bottom: $grid-gutter-width-base - 4;
+	margin-bottom: $grid-gutter-width-base - 5;
 	//margin-bottom: $grid-gutter-width-base - 15;
 	position: relative;
 
@@ -7,10 +7,13 @@
 	flex-direction: row;
 	align-items: center; 
 
+	.subheader-icon {
+		color: $nav-icon-hover-color;
+	}
+
 	.subheader-title {
-		//font-size: $fs-xxl;
-		font-size: unquote("calc(16px + 5 * ((100vw - 320px) / 680))");
-		font-weight: 300;
+		font-size: $fs-xxl; //unquote("calc(16px + 5 * ((100vw - 320px) / 680))") //$fs-xxl;
+		font-weight: 400;
 		color: $fusion-500;
 		text-shadow: $white 0 1px;
 		margin: 0;
@@ -27,10 +30,10 @@
 
 	    small {
 	    	font-weight: 400;
-	    	font-size: $fs-lg; 
-	    	color: #434c54; //$fusion-100;
-	    	//margin-top: -2px;
+	    	//font-size: $fs-lg; 
+	    	color: #68747d; //$fusion-100;
 	    	margin-bottom: 0;
+	    	font-size: $font-size-base;
 	    }
 	}
 }
