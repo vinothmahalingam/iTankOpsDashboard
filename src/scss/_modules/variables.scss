@@ -10,9 +10,9 @@ $color-primary-dark: 						    darken($color-primary, 10%) !default;
 $color-primary-darker: 					    darken($color-primary-dark, 6%) !default;
 
 $color-success:                     #1abc42;
-$color-info:                        #9b59b6;
-$color-warning:                     #ffb822;
-$color-danger:                      #e74c3c;
+$color-info:                        #8781d2;
+$color-warning:                     #ffc241;
+$color-danger:                      #f55f78;
 
 //$color-fusion: 								    light(desaturate(adjust-hue($color-primary, 5), 70%), 10%) !default;  
 $color-fusion: 									    darken(desaturate(adjust-hue($color-primary, 5), 80%), 25%) !default; 
@@ -174,8 +174,8 @@ $border-radius-lg:                  $border-radius;
 $border-radius-sm:									$border-radius;
 
 /* alert */
-$alert-padding-y:                   .75rem;
-$alert-padding-x:                   .75rem;
+$alert-padding-y:                   0.85rem;
+$alert-padding-x:                   1.2rem;
 
 /* bootstrap tables */
 $table-border-color:                darken($gray-lighter, 5%);
@@ -437,8 +437,8 @@ $nav-width:											  250px !default;
 $nav-link-color: 									lighten($nav-base-color, 45%) !default;
 $nav-font-link-size: 							$base-font-size + 1 !default;
 $nav-collapse-sign-font-size:			$nav-font-link-size + 3 !default;	
-$nav-padding-left:								16px !default; //$p-2
-$nav-padding-right:								16px !default; //$p-2
+$nav-padding-left:								20px !default; //$p-2
+$nav-padding-right:								20px !default; //$p-2
 
 /* nav icon sizes */
 $nav-font-icon-size:							20px !default; //23px for Fontawesome & 20px for NextGen icons
@@ -474,9 +474,9 @@ $nav-top-minify-height:						54px !default;
 /* partial visibility of the menu */
 $nav-hidden-visiblity:						10px !default; 											
 
-/* navigation on top */
+/* top navigation */
 $nav-top-height:									63px !default;
-$nav-top-menu-count:							8 !default;	/* number of parent items on the main menu (adjust this if you have more or less items) */
+$nav-top-menu-count:							9 !default;	/* number of parent items on the main menu (adjust this if you have more or less items) */
 $nav-top-minify-height:						$nav-top-height/2 !default;
 
 /* nav Info Card (appears below the logo) */

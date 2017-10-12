@@ -110,6 +110,8 @@
 			font-weight: 400;
 			text-decoration: none;
 
+			position: relative; /* needed for mod-nav-hiarchiy*/
+
 			.dl-ref {
 				font-size: rem($nav-dl-font-size);
 				text-align: center;
@@ -152,6 +154,10 @@
 				text-align: center;
 			    color:$nav-icon-color;
 			} 
+
+			/*> [class*='fa-'] {
+				font-size: $nav-font-icon-size - 2;
+			}*/
 
 			> img {
 				background: #2196F3;

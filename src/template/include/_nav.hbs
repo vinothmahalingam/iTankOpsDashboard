@@ -2,7 +2,7 @@
 	Information
 </p>
 <ul class="nav-menu">
-	<li {{#is pagename "in" "intel_introduction,intel_colors,intel_responsive_grid,intel_build_notes,intel_how_it_works,intel_layout_options,intel_skin_options,intel_saving_db"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "intel_introduction,intel_colors,intel_responsive_grid,intel_build_notes"}}class="active open"{{/is}}>
 		<a href="#" title="NextGen Intel" data-filter-tags="nextgen intel"> 
 			<img src="img/logo-minify.png" alt="NextGen Logo" class="rounded-circle">
 			<span class="nav-link-text" data-i18n="nav.nextgen_intel">NextGen Intel</span> 
@@ -30,46 +30,48 @@
 					<span class="nav-link-text" data-i18n="nav.intel_responsive_grid"> Responsive Grid</span> 
 				</a>
 			</li>
-			<li {{#is pagename "in" "intel_how_it_works,intel_layout_options,intel_skin_options,intel_saving_db"}}class="active open"{{/is}}>
-				<a href="#" data-filter-tags="intel theme settings"> 
-					<span class="nav-link-text" data-i18n="nav.intel_theme_settings"> Theme Settings</span> 
-				</a>
-				<ul>
-					<li {{#is pagename "===" "intel_how_it_works"}}class="active"{{/is}}>
-						<a href="intel_how_it_works.html" data-filter-tags="intel how to it works"> 
-							<span class="nav-link-text" data-i18n="nav.intel_how_it_works">
-								How it works
-							</span>
-						</a>
-					</li>
-					<li {{#is pagename "===" "intel_layout_options"}}class="active"{{/is}}>
-						<a href="intel_layout_options.html" data-filter-tags="intel how to layout options"> 
-							<span class="nav-link-text" data-i18n="nav.intel_layout_options">
-								Layout Options
-							</span>
-						</a>
-					</li>
-					<li {{#is pagename "===" "intel_skin_options"}}class="active"{{/is}}>
-						<a href="intel_skin_options.html" data-filter-tags="intel skin options"> 
-							<span class="nav-link-text" data-i18n="nav.intel_skin_options">
-								Skin Options
-							</span>
-						</a>
-					</li>
-					<li {{#is pagename "===" "intel_saving_db"}}class="active"{{/is}}>
-						<a href="intel_saving_db.html" data-filter-tags="intel saving how to database"> 
-							<span class="nav-link-text" data-i18n="nav.intel_saving_db">
-								Saving to Database
-							</span>
-						</a>
-					</li>
-				</ul>		
-			</li>
 		</ul>	
 	</li>
+	<li {{#is pagename "in" "settings_how_it_works,settings_layout_options,settings_skin_options,settings_saving_db"}}class="active open"{{/is}}>
+		<a href="#" data-filter-tags="settings theme settings"> 
+			<i class="fal fa-cog"></i>
+			<span class="nav-link-text" data-i18n="nav.intel_theme_settings"> Theme Settings</span> 
+		</a>
+		<ul>
+			<li {{#is pagename "===" "settings_how_it_works"}}class="active"{{/is}}>
+				<a href="settings_how_it_works.html" data-filter-tags="settings how to it works"> 
+					<span class="nav-link-text" data-i18n="nav.settings_how_it_works">
+						How it works
+					</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "settings_layout_options"}}class="active"{{/is}}>
+				<a href="settings_layout_options.html" data-filter-tags="settings how to layout options"> 
+					<span class="nav-link-text" data-i18n="nav.settings_layout_options">
+						Layout Options
+					</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "settings_skin_options"}}class="active"{{/is}}>
+				<a href="settings_skin_options.html" data-filter-tags="settings skin options"> 
+					<span class="nav-link-text" data-i18n="nav.settings_skin_options">
+						Skin Options
+					</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "settings_saving_db"}}class="active"{{/is}}>
+				<a href="settings_saving_db.html" data-filter-tags="settings saving how to database"> 
+					<span class="nav-link-text" data-i18n="nav.settings_saving_db">
+						Saving to Database
+					</span>
+				</a>
+			</li>
+		</ul>		
+	</li>	
+
 	<li {{#is pagename "in" "info_app_flavors,info_app_licensing,info_app_package,info_app_docs"}}class="active open"{{/is}}>
 		<a href="#" title="Package Info" data-filter-tags="package info"> 
-			<i class="ni ni-tag"></i>
+			<i class="fal fa-tag"></i>
 			<span class="nav-link-text" data-i18n="nav.info_package_info">
 				Package Info
 			</span> 
@@ -113,7 +115,7 @@
 <ul class="nav-menu">
 	<li {{#is pagename "in" "ui_alerts,ui_breadcrumbs,ui_buttons,ui_cards_wells,ui_carousel,ui_helpers,ui_icons_fontawesome,ui_icons_ng,ui_labels_badges,ui_navbars,ui_pagination,ui_tabs_accordions,ui_progress_bars,ui_scrollspy,ui_tooltips_popovers,ui_borders,ui_clearfix,ui_close_icon,ui_colors,ui_fonts,ui_flexbox,ui_display_property,ui_image_replacement,ui_invisible_content,ui_position,ui_responsive_helpers,ui_sizing,ui_spacing,ui_typography,ui_alignments,ui_icons_fontawesome,ui_icons_ng"}}class="active open"{{/is}}>
 		<a href="#" title="UI Components" data-filter-tags="ui components"> 
-			<i class="ni ni-fire"></i>
+			<i class="fal fa-window"></i>
 			<span class="nav-link-text" data-i18n="nav.ui_components">UI Components</span> 
 		</a>
 		<ul>
@@ -184,14 +186,14 @@
 			</li>
 			<li {{#is pagename "in" "ui_borders,ui_clearfix,ui_close_icon,ui_colors,ui_fonts,ui_flexbox,ui_display_property,ui_image_replacement,ui_invisible_content,ui_position,ui_responsive_helpers,ui_sizing,ui_spacing,ui_typography,ui_alignments"}}class="active open"{{/is}}>
 				<a href="#" data-filter-tags="utilities"> 
-					<i class="ni ni-fire"></i>
+					<i class="fal fa-bolt"></i>
 					<span class="nav-link-text" data-i18n="nav.ui_utilities">
 						Utilities
 					</span> 
 				</a>
 				<ul>
 					<li {{#is pagename "===" "ui_borders"}}class="active"{{/is}}>
-						<a href="ui_borders.html" data-filter-tags="utilities borders"> 
+						<a href="ui_borders.html" data-filter-tags="utilities borders">
 							<span class="nav-link-text" data-i18n="nav.ui_borders">
 								Borders
 							</span>
@@ -233,7 +235,7 @@
 						</a>
 					</li>
 					<li {{#is pagename "===" "ui_display_property"}}class="active"{{/is}}>
-						<a href="ui_display_property.html" data-filter-tags="utilities display property"> 
+						<a href="ui_display_property.html" data-filter-tags="utilities display property">
 							<span class="nav-link-text" data-i18n="nav.ui_display_property">
 								Display property
 							</span>
@@ -299,9 +301,7 @@
 			</li>	
 			<li {{#is pagename "in" "ui_icons_fontawesome,ui_icons_ng"}}class="active open"{{/is}}>
 				<a href="#" data-filter-tags="ui components font icons"> 
-					<span class="dl-ref bg-warning-800">
-						<i class="ni ni-fire"></i>
-					</span>
+					<i class="fal fa-mouse-pointer"></i>
 					<span class="nav-link-text" data-i18n="nav.ui_icons">
 						Icons
 					</span> 
@@ -309,7 +309,6 @@
 				<ul>
 					<li {{#is pagename "===" "ui_icons_fontawesome"}}class="active"{{/is}}>
 						<a href="ui_icons_fontawesome.html" data-filter-tags="ui components font icons fontawesome pro"> 
-							<span class="dl-ref bg-info-200">&nbsp;70kb&nbsp;</span>
 							<span class="nav-link-text" data-i18n="nav.ui_icons_fontawesome">
 								Fontawesome Pro
 							</span>
@@ -317,9 +316,8 @@
 					</li>
 					<li {{#is pagename "===" "ui_icons_ng"}}class="active"{{/is}}>
 						<a href="ui_icons_ng.html" data-filter-tags="ui components font icons nextgen icons"> 
-							<span class="dl-ref bg-info-200">&nbsp;20kb&nbsp;</span> 
 							<span class="nav-link-text" data-i18n="nav.ui_icons_ng">
-								NextGen
+								NextGen Icons
 							</span>
 						</a>
 					</li>
@@ -338,7 +336,7 @@
 						<a href="#" data-filter-tags="sublevel"> 
 							<span class="dl-ref bg-warning-200">L2</span> 
 							<span class="nav-link-text" data-i18n="nav.ui_sublevel">
-								Sublevel
+								Sublevel w/ lable
 							</span> 
 						</a>
 					</li>
@@ -350,11 +348,19 @@
 							</span> 
 						</a>
 					</li>
+					<li>
+						<a href="#" data-filter-tags="sublevel w/ icon"> 
+							<i class="ni base-7 dot"></i>
+							<span class="nav-link-text" data-i18n="nav.ui_sublevel_icon">
+								Sublevel w/ bullet
+							</span> 
+						</a>
+					</li>
 				</ul>
 			</li>
 			<li class="disabled">
 				<a href="#" data-filter-tags="disabled item"> 
-					<span class="dl-ref bg-success-500">L1</span>
+					<span class="dl-ref bg-success-500">DS</span>
 					<span class="nav-link-text" data-i18n="nav.ui_disabled_item">
 						Disabled item
 					</span> 

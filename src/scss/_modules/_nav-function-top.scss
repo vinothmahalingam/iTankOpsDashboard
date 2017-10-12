@@ -272,15 +272,15 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 							>.#{$cust-icon-prefix},
 							>[class*='fa-'] {
-								font-size: 20px;
+								font-size: $nav-font-icon-size;
 								margin-right: 0;
 								display: block;
 								margin: 5px auto 0;
 								height: 24px;
 							}
-							>[class*='fa-'] {
+							/*>[class*='fa-'] {
 								font-size: 18px;
-							}
+							}*/
 							> .nav-link-text {
 								width: auto;
 								max-width: $nav-function-top-menu-item-width-md;

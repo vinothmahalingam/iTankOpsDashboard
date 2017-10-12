@@ -43,10 +43,13 @@
 	position: relative;
 	display: inline-block;
 	text-align: center;
+	height: 43px;
+	line-height: 43px;
 
 	.base-stack {
 		font-size: 42px;
 		color: $primary-300;
+		line-height: inherit;
 	}
 
 	.middle-stack,

@@ -1,9 +1,8 @@
 {{#> 
 	layouts/main 
 	title="Saving to Database" 
-	pagename="intel_saving_db" 
-	category_1="NextGen Intel" 
-	category_2="Theme Settings" 
+	pagename="settings_saving_db"  
+	category_1="Theme Settings" 
 	heading="Theme Settings: <span class='fw-300'>Saving to Database</span>" 
 	pagedescription="How to save and load settings from database"
 }}
@@ -14,8 +13,21 @@
 
 {{#*inline "content-block"}}
 
-<div class="alert alert-primary p-2">
-	<strong>Heads Up!</strong> 	All changes are stored to localStorage by default. <strong>pushSettings()</strong> inherits this trait. Set <code>"storeLocally"</code> to <strong>false</strong> via <strong>app.config.js</strong> or <strong>app.core.js (concatinated)</strong> to disable this inheritance.
+<div class="alert alert-primary">
+	<div class="d-table w-100">
+		<div class="d-table-cell v-align-m width-6">
+			<span class="stack-icons">
+				<i class="base-stack base-2 color-primary-400"></i>
+				<i class="middle-stack base-3 color-primary-600 mt-1 opacity-70"></i>
+				<i class="top-stack fal fa-lightbulb opacity-90"></i>
+			</span>
+		</div>
+		<div class="d-table-cell v-align-m pl-1">
+			<span class="h5">Heads Up!</span> 	
+			<br>
+			All changes are stored to localStorage by default. <strong>pushSettings()</strong> inherits this trait. Set <code>"storeLocally"</code> to <strong>false</strong> via <strong>app.config.js</strong> or <strong>app.core.js (concatinated)</strong> to disable this inheritance.
+		</div>
+	</div>
 </div>
 
 <div class="card mb-g">
