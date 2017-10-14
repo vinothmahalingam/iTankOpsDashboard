@@ -217,45 +217,7 @@ body.desktop-detected {
 		margin-bottom: 0px;
 	}
 }
-/* buttons */
-[class*='btn-']:not(.btn-switch):not(.btn-group),
-[class*='btn-']:not(.btn-switch):not(.btn-group):focus {
-	box-shadow: 0 2px 6px rgba(0,0,0,.2), 0 2px 3px rgba(0,0,0,.05);
 
-	&:active,
-	.active {
-		box-shadow: 0 0px 0px 0 rgba(0,0,0,.3) !important;
-	}
-
-	&:not(.disabled):not([disabled]) {
-		&:hover {
-			box-shadow: 0 6px 17px 0 rgba(0,0,0,.3);
-		}
-	}
-
-}
-
-.btn-group {
-	[class*='btn-'] {
-		box-shadow: 0 0px 0px 0 rgba(0,0,0,.3) !important;
-	}
-}
-
-
-
-
-.btn-default {
-	@extend %btn-default;
-}
-.btn-outline-default {
-    @include button-outline-variant(#333);
-}
-[class*="btn-outline-"] {
-	@extend %common-animation;
-}
-.btn-pills {
-	@include rounded(15px);
-}
 /* change the white to any color ;) */
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
