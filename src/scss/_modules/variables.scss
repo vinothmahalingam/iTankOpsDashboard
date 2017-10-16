@@ -169,12 +169,12 @@ $nav-link-padding-y:                0.25rem;
 $nav-link-padding-x:                0.95rem;
 
 /*border radius*/
-$border-radius:										  3px;
+$border-radius:										  4px;
 $border-radius-lg:                  $border-radius;
 $border-radius-sm:									$border-radius;
 
 /* alert */
-$alert-padding-y:                   0.85rem;
+$alert-padding-y:                   0.75rem;
 $alert-padding-x:                   1.2rem;
 
 /* bootstrap tables */
@@ -272,6 +272,7 @@ $grid-gutter-widths: (
 $spacer:   										       1rem;
 
 /* Uniform Padding variable */
+/* Heads up! This is a global scoped variable - changing may impact the whole template */
 $p-1:												         0.25rem;
 $p-2:												         0.5rem;
 $p-3:												         1rem;

@@ -82,7 +82,7 @@
 .fs-xxl  { font-size: rem($fs-xxl) !important}         /* page header */
 
 /* alphas */
-.opacity-05 { opacity: 0.05 }
+.opacity-5 { opacity: 0.05 }
 .opacity-10 { opacity: 0.1 }
 .opacity-15 { opacity: 0.15 }
 .opacity-20 { opacity: 0.2 }
@@ -120,3 +120,14 @@
 .progress-md > .progress-bar { height: 14px; }
 .progress-lg > .progress-bar { height: 20px; }
 .progress-xl > .progress-bar { height: 30px; }
+
+/* rotate */
+.rotate-90 {
+	@include rotate (90);
+}
+.rotate-180 {
+	@include rotate (180);
+}
+.rotate-270 {
+	@include rotate (270);
+}

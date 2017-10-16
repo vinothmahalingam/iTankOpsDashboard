@@ -92,75 +92,10 @@
     </ul>
 </div>
 
-
-<ul id="parent"></ul>
-
 {{/inline}}
 
 {{#*inline "scripts-block"}}
 	{{!-- Your custom scripts goes here --}}
-	<script>
-
-var tree = [{
-  text: "Parent 1",
-  nodes: [{
-    text: "Child 1",
-    nodes: [{
-      text: "Grandchild 1",
-      nodes: [{
-        text: "GrandChild 3"
-      }]
-    }, {
-      text: "Grandchild 2",
-      nodes: [{
-        text: "GrandChild 4"
-      }]
-    }, {
-      text: "Grandchild 3",
-      nodes: [{
-        text: "GrandChild 5"
-      }]
-    }]
-  }, {
-    text: "Child 2"
-  }]
-}, {
-  text: "Parent 2"
-}, {
-  text: "Parent 3"
-}, {
-  text: "Parent 4"
-}, {
-  text: "Parent 5"
-}];
-
-function recursive_tree(data, tag, child_wrapper, level) {
-  var html = [];
-  //return html array;
-  level = level || 0;
-  child_wrapper = (child_wrapper != false) ? child_wrapper : 'ul';
-  $.each(data, function(i, obj) {
-    var el = $('<' + tag + '>');
-    el.html(obj.text);
-    if (obj.hasOwnProperty('nodes')) {
-      var wrapper = $('<' + child_wrapper + '>');
-      var els = recursive_tree(obj.nodes, tag, child_wrapper);
-      wrapper.append(els);
-      wrapper.appendTo(el);
-    }
-    html.push(el);
-  });
-  return html;
-}
-
-$(document).ready(function() {
-  var html = recursive_tree(tree, 'li', 'ul');
-  console.log(html);
-  $('#parent').append(html);
-
-});
-
-	</script
 {{/inline}}
 
 {{/layouts/main}}

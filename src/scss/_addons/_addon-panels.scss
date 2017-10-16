@@ -85,6 +85,18 @@ $panel-edge-radius: $border-radius;
 				}
 			}
 
+			[data-action="panel-collapse"] {
+				background: $fusion-50;
+			}
+
+			[data-action="panel-fullscreen"] {
+				background: $fusion-400;
+			}
+
+			[data-action="panel-close"] {
+				background: $danger-500;
+			}
+
 		}
 
 		&:hover {
