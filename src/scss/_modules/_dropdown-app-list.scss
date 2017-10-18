@@ -29,6 +29,7 @@
 			border:1px solid transparent;
 			outline: none;
 			@include rounded(2px);
+			padding-top: $p-2;
 
 			&:hover {
 				border:1px solid lighten($gray-mid-light, 14%);

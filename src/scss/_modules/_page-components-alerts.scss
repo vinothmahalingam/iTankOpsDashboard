@@ -1,0 +1,105 @@
+/* 	DEV NOTE: The reason why we had to add this layer for alert colors is because BS4 
+	does not allow you to add your own alert colors via variable control rather 
+	through a systemetic agent that changes the theme colors. 
+
+	REF: https://github.com/twbs/bootstrap/issues/24341#issuecomment-337457218
+*/
+
+.alert-primary {
+	color: desaturate($primary-800, 45%);
+	background-color: desaturate(lighten($primary-500, 39%), 17%);
+	border-color: desaturate(lighten($primary-500, 28%), 25%);
+}
+
+.alert-primary-outline {
+	color: desaturate($primary-500, 25%);
+	background-color: $white;
+	border-color: $primary-300;
+}
+
+.alert-success {
+	color:  desaturate($success-500, 35%);
+	background-color: desaturate(lighten($success-500, 53%), 15%);
+	border-color: desaturate(lighten($success-500, 33%), 10%);
+}
+
+.alert-success-outline {
+	color: $success-500;
+	background-color: $white;
+	border-color: desaturate(lighten($success-500, 20%), 10%);
+}
+
+.alert-danger {
+	color: $danger-800;
+	background-color: lighten($danger-500, 30%);
+	border-color: lighten($danger-500, 20%);
+}
+
+.alert-danger-outline {
+	color: $danger-600;
+	background-color: $white;
+	border-color: $danger-400;
+}
+
+.alert-warning {
+	color: darken($warning-900, 5%);
+	background-color: lighten($warning-500, 33%);
+	border-color: lighten($warning-500, 7%);
+}
+
+.alert-warning-outline {
+	color: $warning-800;
+	background-color: $white;
+	border-color: lighten($warning-500, 7%);
+}
+
+.alert-info {
+	color: $info-800;
+	background-color: lighten($info-500, 30%);
+	border-color: lighten($info-500, 20%);
+}
+
+.alert-info-outline {
+	color: $info-500;
+	background-color: $white;
+	border-color: $info-300;
+}
+
+.alert-secondary {
+	color: $fusion-500;
+	background-color: lighten($fusion-50, 42%);
+	border-color: lighten($fusion-500, 55%);
+}
+
+.alert-secondary-outline {
+	color: $fusion-400;
+	background-color: $white;
+	border-color: lighten($fusion-500, 45%);
+}
+
+.alert-icon:not(.stack-icons) {
+	width: $p-4 + $p-3;
+
+	> i {
+		font-size: $fs-xxl;
+	}
+
+	& + div {
+		padding-left: $p-1;
+	}
+}
+
+.alert-icon.stack-icons {
+	width: auto;
+	/*align-self: self-start;*/
+
+	& + div {
+		padding-left: $p-2 + $p-1;
+	}
+}
+
+
+/*E:has(rs1, rs2)*/
+/*.alert-icon:has(> .stack-icons) {
+	width: 100px;
+}*/

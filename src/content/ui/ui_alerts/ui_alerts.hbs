@@ -29,18 +29,22 @@
 				</h3>
 
 				<div class="alert alert-primary" role="alert">
+					<i class="fal fa-info-circle mr-1"></i> 
 					<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
 				</div>
 
 				<div class="alert alert-success" role="alert">
+					<i class="fal fa-check mr-1"></i> 
 					<strong>Well Done!</strong> You successfully read this important alert message.
 				</div>
 
 				<div class="alert alert-danger" role="alert">
+					<i class="fal fa-times mr-1"></i> 
 					<strong>Oh snap!</strong> Change a few things up and try submitting again.
 				</div>
 
 				<div class="alert alert-warning" role="alert">
+					<i class="fal fa-exclamation-triangle mr-1"></i> 
 					<strong>Holy guacamole!</strong> You should check in on some of those fields below.
 				</div>
 
@@ -124,32 +128,45 @@
 					</small>
 				</h3>
 
-				<div class="alert alert-success bg-transparent text-success alert-dismissible fade show" role="alert">
+				<div class="alert alert-success-outline alert-dismissible fade show" role="alert">
+
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
 					<div class="d-flex align-items-center">
-						<i class="fal fa-check fs-xxl mr-3"></i> 
+
+						<div class="alert-icon">
+							<i class="fal fa-check"></i> 
+						</div>
+
 						<div class="flex-1">
 							<span class="h5 m-0 fw-700">Alert big! </span>
 							Alert for passing information to user.	
 						</div>
+
 					</div>
+
 				</div>
 
-				<div class="alert alert-info text-info alert-dismissible fade show bg-transparent" role="alert">
+				<div class="alert alert-info-outline alert-dismissible fade show" role="alert">
 					<div class="d-flex align-items-center">
-						<i class="fal fa-exclamation-triangle fs-xxl mr-3"></i> 
+
+						<div class="alert-icon">
+							<i class="fal fa-exclamation-triangle"></i> 
+						</div>
+
 						<div class="flex-1">
 							<span class="h5 m-0 fw-700">Alert big! </span>
 							Alert for passing information to user.	
 						</div>
+
 						<button type="button" class="btn btn-info btn-pills btn-sm btn-w-m  mr-1">
 							Repair
 						</button>
 						<button type="button" class="btn btn-danger btn-pills btn-sm btn-w-m" data-dismiss="alert" aria-label="Close">
 							Dismiss
 						</button>
+
 					</div>
 				</div>
 
@@ -157,87 +174,58 @@
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
+
 					<div class="d-flex align-items-center">
-						<i class="fal fa-info-circle fs-xxl mr-3"></i> 
+
+						<div class="alert-icon">
+							<i class="fal fa-info-circle"></i> 
+						</div>
+
 						<div class="flex-1">
 							<span class="h5">Tests complete!</span> 	
 							<br>
 							All member tests have passed successfully.
 						</div>
+
 					</div>
 				</div>
 
 				<div class="alert alert-primary fade show" role="alert">
 					<div class="d-flex align-items-center">
-						<i class="fal fa-lightbulb fs-xxl mr-3"></i> 
+
+						<div class="alert-icon">
+							<i class="fal fa-lightbulb"></i>
+						</div>
+
 						<div class="flex-1">
 							<span class="h5">Tests complete!</span> 	
 							<br>
 							All member tests have passed successfully.
 						</div>
-						<div class="d-flex align-items-center">
-							<a href="#" class="btn btn-primary btn-pills btn-sm width-7">OK</a>							
-						</div>
+						
+						<a href="#" class="btn btn-primary btn-pills btn-sm width-7">OK</a>							
+
 					</div>
 				</div>
 
-				<div class="alert alert-success fade show">
 
+				<div class="alert bg-fusion-400 border-0 fade show">
 					<div class="d-flex align-items-center">
 
-						<div class="width-6">
-							<span class="stack-icons">
-								<i class="base-stack base-2 color-success-500"></i>
-								<i class="middle-stack base-3 icon-lg color-success-600"></i>
-								<i class="top-stack fal fa-check"></i>
-							</span>
+						<div class="alert-icon">
+							<i class="fal fa-shield-check text-warning"></i>
 						</div>
 
-						<div class="flex-1 pl-1">
-							<span class="h5">Tests complete!</span> 	
+						<div class="flex-1">
+							<span class="h5">Download complete</span> 	
 							<br>
-							All member tests have passed successfully.
+							Install the latest version of NextGen WebApp
 						</div>
 
-						<a href="#" class="btn btn-success btn-pills btn-sm btn-w-m" data-dismiss="alert" aria-label="Close">Close</a>		
+						<a href="#" class="btn btn-warning btn-w-m fw-500 btn-sm" data-dismiss="alert" aria-label="Close">Install</a>	
 
-					</div>
-
-				</div>
-
-				<div class="alert alert-danger alert-dismissible bg-danger-400 border-0 text-white fade show">
-
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-
-					<div class="d-flex align-items-center">
-
-						<div class="width-6">
-							<span class="stack-icons">
-								<i class="base-stack base-2 color-fusion-200"></i>
-								<i class="middle-stack base-3 icon-lg color-fusion-400"></i>
-								<i class="top-stack fal fa-times"></i>
-							</span>
-						</div>
-
-						<div class="flex-1 pl-1">
-							<span class="h4">Hold on there Sparky!</span> 	
-							<br>
-							<ul class="m-0 pl-3 mt-1">
-								<li>
-									Your password needs to be more than 10 characters
-								</li>
-								<li>
-									Your address field is missing
-								</li>
-							</ul>
-						</div>
-
-					</div>
-
-				</div>
-				
+					</div>	
+				</div>			
 
 			</div>
 			
@@ -252,313 +240,211 @@
 			<div class="card-body">
 
 				<h3 class="mb-4">
-					Alert <span class="fw-300">Styles</span> 
+					Alert <span class="fw-300">Outline</span> 
 					<small>
-						Alternative alert styles.
+						We remove the background to give a cleaner look.
 					</small>
 				</h3>
 
-				<h4 class="frame-heading">
-					Outline Style
-				</h4>
-				<div class="frame-wrap p-0 border-0">	
-					<div class="alert alert-primary alert-dismissible fade show bg-transparent text-primary" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
-						<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-					</div>
-
-					<div class="alert alert-success alert-dismissible fade show bg-transparent text-success" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
-						<strong>Well Done!</strong> You successfully read this important alert message.
-					</div>
-
-					<div class="alert alert-danger alert-dismissible fade show bg-transparent text-danger" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
-						<strong>Oh snap!</strong> Change a few things up and try submitting again.
-					</div>
-
-					<div class="alert alert-info alert-dismissible fade show bg-transparent text-info" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
-						<strong>Info!</strong> Alert for passing information to user.
-					</div>
-
-					<div class="alert alert-dark alert-dismissible fade show bg-transparent" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
-						<strong>Hello World!</strong> This is default alert message box.
-					</div>
-				</div>
-
-				<h4 class="frame-heading">
-					Different background colors
-				</h4>
-				<div class="frame-wrap p-0 border-0">	
-					<div class="alert bg-info-500 alert-dismissible fade show" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
-						<strong>Info!</strong> Alert for passing information to user.
-					</div>
-
-					<div class="alert bg-primary-200 alert-dismissible fade show text-white" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
-						<strong>Info!</strong> Alert for passing information to user.
-					</div>
-
-					<div class="alert bg-danger-400 alert-dismissible fade show text-white" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
-						<strong>Info!</strong> Alert for passing information to user.
-					</div>
-
-					<div class="alert bg-fusion-200 alert-dismissible fade show text-white" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
-						<strong>Info!</strong> Alert for passing information to user.
-					</div>
-
-					<div class="alert bg-warning-700 alert-dismissible fade show text-white" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
-						<strong>Info!</strong> Alert for passing information to user.
-					</div>
-
-					<div class="alert bg-success-300 alert-dismissible fade show text-white" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
-						<strong>Info!</strong> Alert for passing information to user.
-					</div>
-
-				</div>
-
-				<h4 class="frame-heading">
-					Squar styles
-				</h4>
-
-				<div class="frame-wrap p-0 border-0">
-
-					<div class="alert alert-primary alert-dismissible fade show bg-transparent text-primary border-radius-0" role="alert">
-						<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-					</div>
-
-					<div class="alert bg-danger-50 border-radius-0 text-danger" role="alert">
-						<strong>Info!</strong> Alert for passing information to user.
-					</div>
-
-					<div class="alert alert-primary border-radius-0" role="alert">
-						<strong>Info!</strong> Alert for passing information to user.
-					</div>
-
-					<div class="alert alert-info alert-dismissible fade show border-radius-0 text-info" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
-						<div class="h5 m-0">
-							Alert big
-							<small class="m-0">
-								Alert for passing information to user.
-							</small>
-						</div>
-					</div>
-
-					<div class="alert alert-secondary alert-dismissible fade show border-radius-0" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
-						<div class="h5 m-0">
-							Alert big
-							<small class="m-0">
-								Alert for passing information to user.
-							</small>
-						</div>
-					</div>
-
-				</div>
-
-				<h4 class="frame-heading">
-					Alert with icons
-				</h4>
-
-				<div class="frame-wrap p-0 border-0">
-
-					<div class="alert alert-primary alert-dismissible fade show bg-transparent text-primary border-radius-0" role="alert">
-						<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-					</div>
-
-					<div class="alert alert-warning border-radius-0" role="alert">
-						<strong>Info!</strong> Alert for passing information to user.
-					</div>
-
-					<div class="alert bg-success-200 border-radius-0 text-white border-0" role="alert">
-						<strong>Info!</strong> Alert for passing information to user.
-					</div>
-
-					<div class="alert bg-success-200 border-radius-0 text-white" role="alert">
-						<strong>Info!</strong> Alert for passing information to user.
-					</div>
-
-				</div>
-
-				
-				{{!-- <div class="alert alert-dark alert-dismissible fade show" role="alert">
-					<div class="d-flex align-items-center">
-						<div class="flex-1">
-							This is a dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-						</div>
-						<div class="text-right">
-							<button type="button" data-dismiss="alert" aria-label="Close" class="btn btn-sm btn-secondary">
-								CLOSE
-							</button>
-						</div>
-					</div>
-				</div> --}}
-
-				{{!-- <div class="alert bg-primary-300 alert-dismissible fade show" role="alert">
+				<div class="alert alert-primary-outline alert-dismissible fade show" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
-					<select class="float-sm-right target btn-w-l">
-						
-							<option value="bg-primary-50">bg-primary-50</option>
-							<option value="bg-primary-100">bg-primary-100</option>
-							<option value="bg-primary-200">bg-primary-200</option>
-							<option value="bg-primary-300" selected="selected">bg-primary-300</option>
-							<option value="bg-primary-400">bg-primary-400</option>
-							<option value="bg-primary-500">bg-primary-500</option>
-							<option value="bg-primary-600">bg-primary-600</option>
-							<option value="bg-primary-700">bg-primary-700</option>
-							<option value="bg-primary-800">bg-primary-800</option>
-							<option value="bg-primary-900">bg-primary-900</option>
-						
-					</select>
-					<strong>Primary</strong> Alert
+					<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
 				</div>
 
-				<div class="alert bg-fusion-200 alert-dismissible fade show" role="alert">
+				<div class="alert alert-success-outline alert-dismissible fade show" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
-					<select class="float-sm-right target btn-w-l">
-						
-							<option value="bg-fusion-50">bg-fusion-50</option>
-							<option value="bg-fusion-100">bg-fusion-100</option>
-							<option value="bg-fusion-200">bg-fusion-200</option>
-							<option value="bg-fusion-300" selected="selected">bg-fusion-300</option>
-							<option value="bg-fusion-400">bg-fusion-400</option>
-							<option value="bg-fusion-500">bg-fusion-500</option>
-							<option value="bg-fusion-600">bg-fusion-600</option>
-							<option value="bg-fusion-700">bg-fusion-700</option>
-							<option value="bg-fusion-800">bg-fusion-800</option>
-							<option value="bg-fusion-900">bg-fusion-900</option>
-					
-					</select>
-					<strong>Secondary</strong> Alert
+					<strong>Well Done!</strong> You successfully read this important alert message.
 				</div>
 
-				<div class="alert bg-success-300 alert-dismissible fade show" role="alert">
+				<div class="alert alert-danger-outline alert-dismissible fade show" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
-					<strong>Success</strong> Alert
-					<select class="float-sm-right target btn-w-l">
-						<option value="bg-success-50">bg-success-50</option>
-						<option value="bg-success-100">bg-success-100</option>
-						<option value="bg-success-200">bg-success-200</option>
-						<option value="bg-success-300">bg-success-300</option>
-						<option value="bg-success-400" selected="selected">bg-success-400</option>
-						<option value="bg-success-500">bg-success-500</option>
-						<option value="bg-success-600">bg-success-600</option>
-						<option value="bg-success-700">bg-success-700</option>
-						<option value="bg-success-800">bg-success-800</option>
-						<option value="bg-success-900">bg-success-900</option>
-					</select>
+					<strong>Oh snap!</strong> Change a few things up and try submitting again.
 				</div>
 
-				<div class="alert bg-danger-500 alert-dismissible fade show" role="alert">
+				<div class="alert alert-warning-outline alert-dismissible fade show" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
-					<strong>Danger</strong> Alert
-					<select class="float-sm-right target btn-w-l">
-						<option value="bg-danger-50">bg-danger-50</option>
-						<option value="bg-danger-100">bg-danger-100</option>
-						<option value="bg-danger-200" selected="selected">bg-danger-200</option>
-						<option value="bg-danger-300">bg-danger-300</option>
-						<option value="bg-danger-400">bg-danger-400</option>
-						<option value="bg-danger-500">bg-danger-500</option>
-						<option value="bg-danger-600">bg-danger-600</option>
-						<option value="bg-danger-700">bg-danger-700</option>
-						<option value="bg-danger-800">bg-danger-800</option>
-						<option value="bg-danger-900">bg-danger-900</option>
-					</select>
+					<strong>Holy guacamole!</strong> You should check in on some of those fields below.
 				</div>
 
-				<div class="alert bg-warning-300 alert-dismissible fade show" role="alert">
+				<div class="alert alert-info-outline alert-dismissible fade show" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
-					<strong>Warning</strong> Alert
-					<select class="float-sm-right target btn-w-l">
-						<option value="bg-warning-50">bg-warning-50</option>
-						<option value="bg-warning-100" selected="selected">bg-warning-100</option>
-						<option value="bg-warning-200">bg-warning-200</option>
-						<option value="bg-warning-300">bg-warning-300</option>
-						<option value="bg-warning-400">bg-warning-400</option>
-						<option value="bg-warning-500">bg-warning-500</option>
-						<option value="bg-warning-600">bg-warning-600</option>
-						<option value="bg-warning-700">bg-warning-700</option>
-						<option value="bg-warning-800">bg-warning-800</option>
-						<option value="bg-warning-900">bg-warning-900</option>
-					</select>
+					<strong>Info!</strong> Alert for passing information to user.
 				</div>
+
+				<div class="alert alert-secondary-outline alert-dismissible fade show" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<strong>Hello World!</strong> This is default alert message box.
+				</div>
+
+			</div>
+
+		</div>	
+
+		<div class="card mb-g">
+
+			<div class="card-body">
+
+				<h3 class="mb-4">
+					Alternative <span class="fw-300">Backgrounds</span> 
+					<small>
+						Use theme's color pallet to add over 54 background choices.
+					</small>
+				</h3>
 
 				<div class="alert bg-info-500 alert-dismissible fade show" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
-					<strong>Info</strong> Alert
-					<select class="float-sm-right target btn-w-l">
-						<option value="bg-info-50">bg-info-50</option>
-						<option value="bg-info-100" selected="selected">bg-info-100</option>
-						<option value="bg-info-200">bg-info-200</option>
-						<option value="bg-info-300">bg-info-300</option>
-						<option value="bg-info-400">bg-info-400</option>
-						<option value="bg-info-500">bg-info-500</option>
-						<option value="bg-info-600">bg-info-600</option>
-						<option value="bg-info-700">bg-info-700</option>
-						<option value="bg-info-800">bg-info-800</option>
-						<option value="bg-info-900">bg-info-900</option>
-					</select>
+					<strong>Info!</strong> Alert for passing information to user.
 				</div>
 
-				<div class="alert alert-note fade show" role="alert">
+				<div class="alert bg-primary-200 alert-dismissible fade show text-white" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
-					<strong>Note</strong> Alert
+					<strong>Info!</strong> Alert for passing information to user.
 				</div>
 
-				<div class="alert alert-notice alert-dismissible fade show" role="alert">
+				<div class="alert bg-danger-400 alert-dismissible fade show text-white" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
-					<strong>Notice</strong> Alert
-				</div> --}}
+					<strong>Info!</strong> Alert for passing information to user.
+				</div>
+
+				<div class="alert bg-fusion-200 alert-dismissible fade show text-white" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<strong>Info!</strong> Alert for passing information to user.
+				</div>
+
+				<div class="alert bg-warning-700 alert-dismissible fade show text-white" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<strong>Info!</strong> Alert for passing information to user.
+				</div>
+
+				<div class="alert bg-success-300 alert-dismissible fade show text-white" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<strong>Info!</strong> Alert for passing information to user.
+				</div>
+
+			</div>
+
+		</div>	
+
+		<div class="card mb-g">
+
+			<div class="card-body">
+
+				<h3 class="mb-4">
+					Stack <span class="fw-300">Icon</span> 
+					<small>
+						We remove the background to give a cleaner look.
+					</small>
+				</h3>
+
+
+				<div class="alert alert-primary-outline alert-dismissible fade show" role="alert">
+
+					<div class="d-flex align-items-center">
+
+						<div class="icon-stack">
+							<i class="base-2 icon-stack-3x color-primary-200"></i>
+							<i class="base-3 icon-stack-2x color-primary-300"></i>
+							<i class="fal fa-check icon-stack-1x text-white"></i>
+						</div>
+						
+						<div class="flex-1">
+							<span class="h5 m-0 fw-700">Alert big! </span>
+							Alert for passing information to user.	
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="alert alert-success fade show">
+
+					<div class="d-flex align-items-center">
+
+						<div class="alert-icon stack-icons">
+							<i class="base-stack base-2 color-success-300"></i>
+							<i class="middle-stack base-3 icon-lg color-success-400"></i>
+							<i class="top-stack fal fa-check"></i>
+						</div>
+
+						<div class="flex-1">
+							<span class="h5">Tests complete!</span> 	
+							<br>
+							All member tests have passed successfully.
+						</div>
+
+						<a href="#" class="btn btn-info btn-pills btn-sm btn-w-m" data-dismiss="alert" aria-label="Close">Close</a>		
+
+					</div>
+
+				</div>
+
+				<div class="alert bg-info-400 text-white alert-dismissible fade show" role="alert">
+					<div class="d-flex align-items-center">
+
+						<div class="alert-icon stack-icons">
+							<i class="base-stack base-2 color-warning-500"></i>
+							<i class="middle-stack base-3 icon-lg color-warning-700"></i>
+							<i class="top-stack fal fa-check"></i>
+						</div>
+
+						<div class="flex-1">
+							<span class="h5">Tests complete!</span> 	
+							<br>
+							All member tests have passed successfully
+						</div>
+
+						<a href="#" class="btn btn-warning btn-pills" data-dismiss="alert" aria-label="Close">Fix</a>
+
+					</div>
+				</div>
+
+				<div class="alert alert-danger alert-dismissible bg-danger-400 border-0 text-white fade show">
+
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+
+					<div class="d-flex align-items-center">
+
+						<div class="alert-icon stack-icons">
+							<i class="base-stack base-2 color-info-600"></i>
+							<i class="middle-stack ni md-mask"></i>
+							<i class="top-stack ni md-profile color-info-800"></i>	
+						</div>
+
+						<div class="flex-1">
+							<span class="h5">Hold on there Sparky!</span> 	
+							<br>
+							Better fix those errors before you can complete this request
+						</div>
+
+					</div>
+
+				</div>	
 
 
 			</div>

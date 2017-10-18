@@ -39,7 +39,7 @@
 }*/
 
 /* stack icons */
-.stack-icons {
+/*.stack-icons {
 	position: relative;
 	display: inline-block;
 	text-align: center;
@@ -104,4 +104,34 @@
 		}
 	}
 
+}*/
+
+$icon-stack-size: 3em;
+
+.icon-stack {
+	position: relative;
+	display: inline-block;
+	width: 3em;
+	height: 3em;
+	line-height: 3em;
+	vertical-align: middle;
+}
+.icon-stack-1x,
+.icon-stack-2x,
+.icon-stack-3x {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	line-height: inherit !important;
+}
+.icon-stack-1x {
+	font-size: 1.5em;
+}
+.icon-stack-2x {
+	font-size: 2.20em;
+	/*padding-right: 0.025em;*/
+}
+.icon-stack-3x {
+	font-size: 3em;
 }
