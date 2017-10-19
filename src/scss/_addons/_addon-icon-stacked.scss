@@ -1,137 +1,41 @@
-/*.icon-stacked {
-	display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-
-    > i:not(.base) {
-    	position: absolute;
-    	&.top {
-    		margin-top:-5%;
-    	}
-    }
-
-	> .base {
-		font-size: 42px;
-	}
-	> .mask {
-		font-size: 25px;
-
-		&.icon-lg {
-			font-size:31px;
-		}
-	}
-	>:nth-child(3) {
-		font-size:22px;
-
-		&.icon-sm {
-			font-size: 16px;
-		}
-
-		&.bigger-icon {
-			font-size: 30px;
-		}
-	}
-
-    &.icon-stacked-xs {
-
-    }
-}*/
-
-/* stack icons */
-/*.stack-icons {
-	position: relative;
-	display: inline-block;
-	text-align: center;
-	height: 43px;
-	line-height: 43px;
-
-	.base-stack {
-		font-size: 42px;
-		color: $primary-300;
-		line-height: inherit;
-	}
-
-	.middle-stack,
-	.top-stack {
-		position:absolute;
-		font-size: 42px/2 + 1;
-		color: $white;
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 10px;
-	}
-
-	.middle-stack {
-		color: $primary-700;
-		font-size: 42px/2 + 5;
-		top: 6px;
-
-		&[class*=" base-"] {
-			top:5px;
-		}
-	}
-
-	.icon-sm {
-		font-size: 16px;
-		top:11px;
-	}
-
-	.icon-lg {
-		font-size: 32px;
-		top: 3px;
-	}
-
-	[class*="md-"]{
-		font-size: 30px;
-		top: 4px;
-		color: $primary-700;
-
-		&.middle-stack {
-			color: $white;
-			font-size: 25px;
-			top: 6px;
-		}
-
-		&.icon-sm {
-			font-size: 25px;
-		}
-
-		&.icon-lg {
-			font-size: 43px;
-			top: -1px;
-		}
-	}
-
-}*/
-
 $icon-stack-size: 3em;
 
 .icon-stack {
 	position: relative;
 	display: inline-block;
-	width: 3em;
-	height: 3em;
-	line-height: 3em;
+	width: 1em;
+	height: 1em;
+	line-height: 1em;
 	vertical-align: middle;
+	//transition: $nav-hide-animate;
 }
 .icon-stack-1x,
 .icon-stack-2x,
 .icon-stack-3x {
 	position: absolute;
 	left: 0;
+	bottom:0;
 	width: 100%;
 	text-align: center;
 	line-height: inherit !important;
 }
 .icon-stack-1x {
-	font-size: 1.5em;
+	font-size: 0.5em;
 }
 .icon-stack-2x {
-	font-size: 2.20em;
+	font-size: 0.70em;
 	/*padding-right: 0.025em;*/
 }
 .icon-stack-3x {
-	font-size: 3em;
+	font-size: 1em;
+}
+
+.icon-stack-lg {
+	font-size: 40px;
+}
+.icon-stack-md {
+	font-size: 35px;
+}
+.icon-stack-sm {
+	font-size: 22px;
 }

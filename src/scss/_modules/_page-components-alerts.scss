@@ -77,7 +77,7 @@
 	border-color: lighten($fusion-500, 45%);
 }
 
-.alert-icon:not(.stack-icons) {
+.alert-icon {
 	width: $p-4 + $p-3;
 
 	> i {
@@ -88,18 +88,3 @@
 		padding-left: $p-1;
 	}
 }
-
-.alert-icon.stack-icons {
-	width: auto;
-	/*align-self: self-start;*/
-
-	& + div {
-		padding-left: $p-2 + $p-1;
-	}
-}
-
-
-/*E:has(rs1, rs2)*/
-/*.alert-icon:has(> .stack-icons) {
-	width: 100px;
-}*/

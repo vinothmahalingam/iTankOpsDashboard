@@ -6,6 +6,18 @@ $chat-sent-background: $primary-500;
 
 $animation-delay: 100ms;
 
+#msgr_listfilter_input {
+	width: unquote("calc(100% - #{$p-3})");
+	margin: 0 auto;
+	margin-top: -41px;
+	padding-left: 41px;
+	margin-bottom: 10px;
+	opacity: 0; 
+	background: transparent;
+	@extend %general-animation;
+	transition-delay: $animation-delay;  	
+}
+
 .msgr-list {
 	width: $msgr-list-width;
     position: absolute;
@@ -18,18 +30,6 @@ $animation-delay: 100ms;
 
     @extend %general-animation;
     transition-delay: $animation-delay;
-
-    #msgr_listfilter_input {
-		width: unquote("calc(100% - #{$p-3})");
-		margin: 0 auto;
-		margin-top: -41px;
-		padding-left: 41px;
-		margin-bottom: 10px;
-		opacity: 0; 
-		background: transparent;
-		@extend %general-animation;
-		transition-delay: $animation-delay;  	
-    }
 
 	& + .msgr {
 
@@ -51,7 +51,6 @@ $animation-delay: 100ms;
 			visibility: hidden;
 		}
 	}
-    
 
     &:hover {
     	right: 0;
@@ -69,59 +68,55 @@ $animation-delay: 100ms;
     		}
     	}
     }
-
-	.msgr-list--item {
-		font-size: 21px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		height: 50px; 
-
-		color: $primary-500;
-
-		.msgr-list__icon {
-			width: $msgr-list-width-collapsed;
-			text-align: center;
-		}
-	}
 }
 
-.msgr {
+.msgr-list--item {
+	font-size: 21px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 50px; 
 
-	.msgr-user {
-		height: 75px;
-		border-bottom: 1px solid rgba($black,0.07);
+	color: $primary-500;
+}
 
-		.msgr-user--name {
-			font-size: 15px;
-			margin: 0;
-		}
+.msgr-list__icon {
+	width: $msgr-list-width-collapsed;
+	text-align: center;
+}
 
-	}	
+.msgr-user {
+	height: 75px;
+	border-bottom: 1px solid rgba($black,0.07);
+}	
 
-	.msgr-chatinput {
+.msgr-user--name {
+	font-size: 15px;
+	margin: 0;
+}
 
-		min-height: 110px;
-		max-height: 160px;
+.msgr-chatinput {
 
-		[contenteditable="true"] {
-			min-height:50px;
-			max-height:110px;
-		}
+	min-height: 110px;
+	max-height: 160px;
 
-	}
-
-	.msgr-chatinput__icons {
-		height: 40px;
-	}
-
-	.msgr-chatinput__container {
-		> div {
-			border-top: 1px solid rgba($black,0.07);
-		}
+	[contenteditable="true"] {
+		min-height:50px;
+		max-height:110px;
 	}
 
 }
+
+.msgr-chatinput__icons {
+	height: 40px;
+}
+
+.msgr-chatinput__container {
+	> div {
+		border-top: 1px solid rgba($black,0.07);
+	}
+}
+
 
 /* IE HACK */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -130,126 +125,122 @@ $animation-delay: 100ms;
 	}
 }
 
-.chat-segment {
+.chat-message {
+	padding: $p-2 + $p-1;
+	border-radius: 10px;
 
-	.chat-message {
-		padding: $p-2 + $p-1;
-		border-radius: 10px;
+	position: relative;
 
-		position: relative;
+	display: inline-block;
 
-		display: inline-block;
-
-		> p {
-			padding: $p-2 + $p-1 0 0;
-			margin:0;
-		}
-
-		> p:first-child {
-			padding-top: 0;
-		}
-
-		.chat-message-image-send {
-			border-radius: 0 0 $border-radius * 2 $border-radius * 2;
-		}
+	> p {
+		padding: $p-2 + $p-1 0 0;
+		margin:0;
 	}
 
-	&.chat-start {
+	> p:first-child {
+		padding-top: 0;
+	}
+}
+
+.chat-message-image-send {
+	border-radius: 0 0 $border-radius * 2 $border-radius * 2;
+}
+
+.chat-start {
+
+	margin-bottom: 3px !important;
+	
+	.time-stamp,
+	.chat-img {
+		display: none;
+	}
+
+	& + .chat-segment:not(.chat-end) {
 
 		margin-bottom: 3px !important;
-		
+
 		.time-stamp,
 		.chat-img {
 			display: none;
 		}
 
-		& + .chat-segment:not(.chat-end) {
-
-			margin-bottom: 3px !important;
-
-			.time-stamp,
-			.chat-img {
-				display: none;
-			}
-
-		}
 	}
+}
 
-	&.chat-segment--rcvd {
+.chat-segment--rcvd {
 
-		text-align: left;
-		position: relative;
+	text-align: left;
+	position: relative;
 
-		margin: 0 $p-4 $p-2 $profile-image-width-sm + 5;
+	margin: 0 $p-4 $p-2 $profile-image-width-sm + 5;
 
-		&.chat-start {
+	&.chat-start {
 
+		.chat-message {
+			border-bottom-left-radius: 3px;
+		}
+
+		+ :not(.chat-end) {
 			.chat-message {
 				border-bottom-left-radius: 3px;
-			}
-
-			+ :not(.chat-end) {
-				.chat-message {
-					border-bottom-left-radius: 3px;
-					border-top-left-radius: 3px;
-				}
-			}
-		}
-
-		&.chat-end {
-			.chat-message {
 				border-top-left-radius: 3px;
 			}
 		}
+	}
 
-		.chat-img {
-			position: absolute;
-			left: - ($profile-image-width-sm + 5px);
-			bottom: $profile-image-width-sm;
-		}
-
+	&.chat-end {
 		.chat-message {
-			background: $chat-rcvd-background;
-			@include text-contrast($chat-rcvd-background);	
-
-			text-align: left;			
+			border-top-left-radius: 3px;
 		}
 	}
 
-	&.chat-segment--sent {
+	.chat-img {
+		position: absolute;
+		left: - ($profile-image-width-sm + 5px);
+		bottom: $profile-image-width-sm;
+	}
 
-		text-align: right;
-		position: relative;
+	.chat-message {
+		background: $chat-rcvd-background;
+		@include text-contrast($chat-rcvd-background);	
 
-		margin: 0 0 $p-2 $p-4 + rem($profile-image-width-sm + 5px);
+		text-align: left;			
+	}
+}
 
-		&.chat-start {
+.chat-segment--sent {
 
-			.chat-message {
-				border-bottom-right-radius: 3px;
-			}
+	text-align: right;
+	position: relative;
 
-			+ :not(.chat-end) {
-				.chat-message {
-					border-bottom-right-radius: 3px;
-					border-top-right-radius: 3px;
-				}
-			}
+	margin: 0 0 $p-2 $p-4 + rem($profile-image-width-sm + 5px);
+
+	&.chat-start {
+
+		.chat-message {
+			border-bottom-right-radius: 3px;
 		}
 
-		&.chat-end {
+		+ :not(.chat-end) {
 			.chat-message {
+				border-bottom-right-radius: 3px;
 				border-top-right-radius: 3px;
 			}
 		}
+	}
 
+	&.chat-end {
 		.chat-message {
-			background: $chat-sent-background;
-			@include text-contrast($chat-sent-background);
-
-			text-align: left;			
+			border-top-right-radius: 3px;
 		}
+	}
 
-	}	
-	
+	.chat-message {
+		background: $chat-sent-background;
+		@include text-contrast($chat-sent-background);
+
+		text-align: left;			
+	}
+
 }

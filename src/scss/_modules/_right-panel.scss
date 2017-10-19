@@ -101,17 +101,17 @@
 		}
 	}
 
-	#saving {
-		position: inherit;
-		z-index: inherit;
-		top: $header-height + 5;
-    	left: -40px;
-    	display: none;
-	}
-
 }
 
-// localstorage success fade animation
+#saving {
+	position: inherit;
+	z-index: inherit;
+	top: $header-height + 5;
+	left: -40px;
+	display: none;
+}
+
+/* localstorage success fade animation */
 .saving {
 
 	#saving {
