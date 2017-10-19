@@ -49,7 +49,7 @@
 	}
 }
 
-.#{$cust-icon-prefix}-mask:before,
+/*.#{$cust-icon-prefix}-mask:before,
 .md-mask:before,
 .fa-mask {
 	content: "\f00a";
@@ -59,8 +59,43 @@
 .md-mask-sq:before,
 .fa-mask-sq {
 	content: "\f00b";
+}*/
+.base-19:before {
+	content: "\e09b";
 }
-
+.base-18:before {
+	content: "\e09c";
+}
+.base-17:before {
+	content: "\e09d";
+}
+.base-16:before {
+	content: "\e09e";
+}
+.base-15:before {
+	content: "\e09f";
+}
+.base-14:before {
+	content: "\e0a0";
+}
+.base-13:before {
+	content: "\e0a1";
+}
+.base-12:before {
+	content: "\f000";
+}
+.base-11:before {
+	content: "\f00b";
+}
+.base-10:before {
+	content: "\f00a";
+}
+.base-9:before {
+	content: "\f1c8";
+}
+.base-8:before {
+	content: "\f1e3";
+}
 .base-7:before {
 	content: "\f413";
 }
@@ -97,9 +132,6 @@
 .#{$cust-icon-prefix}-blog-read:before {
 	content: "\f404";
 }
-.#{$cust-icon-prefix}-my-shield:before {
-	content: "\f1c8";
-}
 .#{$cust-icon-prefix}-my-apps:before {
 	content: "\f328";
 }
@@ -111,9 +143,6 @@
 }
 .#{$cust-icon-prefix}-lock-nav:before {
 	content: "\f2ae";
-}
-.#{$cust-icon-prefix}-lang:before {
-	content: "\f1e3";
 }
 .#{$cust-icon-prefix}-chevron-down:before {
 	content: "\f2f9";
@@ -588,27 +617,6 @@
 }
 .#{$cust-icon-prefix}-settings:before {
 	content: "\e09a";
-}
-.#{$cust-icon-prefix}-star:before {
-	content: "\e09b";
-}
-.#{$cust-icon-prefix}-symbol-female:before {
-	content: "\e09c";
-}
-.#{$cust-icon-prefix}-symbol-male:before {
-	content: "\e09d";
-}
-.#{$cust-icon-prefix}-target:before {
-	content: "\e09e";
-}
-.#{$cust-icon-prefix}-volume-1:before {
-	content: "\e09f";
-}
-.#{$cust-icon-prefix}-volume-2:before {
-	content: "\e0a0";
-}
-.#{$cust-icon-prefix}-volume-off:before {
-	content: "\e0a1";
 }
 .#{$cust-icon-prefix}-users:before {
 	content: "\e001";
