@@ -36,6 +36,7 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-app-store-ios:before { content: unquote("\"#{ $fa-var-app-store-ios }\""); }
 .#{$fa-css-prefix}-apper:before { content: unquote("\"#{ $fa-var-apper }\""); }
 .#{$fa-css-prefix}-apple:before { content: unquote("\"#{ $fa-var-apple }\""); }
+.#{$fa-css-prefix}-apple-pay:before { content: unquote("\"#{ $fa-var-apple-pay }\""); }
 .#{$fa-css-prefix}-archive:before { content: unquote("\"#{ $fa-var-archive }\""); }
 .#{$fa-css-prefix}-arrow-alt-circle-down:before { content: unquote("\"#{ $fa-var-arrow-alt-circle-down }\""); }
 .#{$fa-css-prefix}-arrow-alt-circle-left:before { content: unquote("\"#{ $fa-var-arrow-alt-circle-left }\""); }
@@ -89,6 +90,7 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-at:before { content: unquote("\"#{ $fa-var-at }\""); }
 .#{$fa-css-prefix}-audible:before { content: unquote("\"#{ $fa-var-audible }\""); }
 .#{$fa-css-prefix}-audio-description:before { content: unquote("\"#{ $fa-var-audio-description }\""); }
+.#{$fa-css-prefix}-autoprefixer:before { content: unquote("\"#{ $fa-var-autoprefixer }\""); }
 .#{$fa-css-prefix}-avianex:before { content: unquote("\"#{ $fa-var-avianex }\""); }
 .#{$fa-css-prefix}-aws:before { content: unquote("\"#{ $fa-var-aws }\""); }
 .#{$fa-css-prefix}-backward:before { content: unquote("\"#{ $fa-var-backward }\""); }
@@ -171,6 +173,7 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-cart-arrow-down:before { content: unquote("\"#{ $fa-var-cart-arrow-down }\""); }
 .#{$fa-css-prefix}-cart-plus:before { content: unquote("\"#{ $fa-var-cart-plus }\""); }
 .#{$fa-css-prefix}-cc-amex:before { content: unquote("\"#{ $fa-var-cc-amex }\""); }
+.#{$fa-css-prefix}-cc-apple-pay:before { content: unquote("\"#{ $fa-var-cc-apple-pay }\""); }
 .#{$fa-css-prefix}-cc-diners-club:before { content: unquote("\"#{ $fa-var-cc-diners-club }\""); }
 .#{$fa-css-prefix}-cc-discover:before { content: unquote("\"#{ $fa-var-cc-discover }\""); }
 .#{$fa-css-prefix}-cc-jcb:before { content: unquote("\"#{ $fa-var-cc-jcb }\""); }
@@ -353,6 +356,7 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-flag-checkered:before { content: unquote("\"#{ $fa-var-flag-checkered }\""); }
 .#{$fa-css-prefix}-flask:before { content: unquote("\"#{ $fa-var-flask }\""); }
 .#{$fa-css-prefix}-flickr:before { content: unquote("\"#{ $fa-var-flickr }\""); }
+.#{$fa-css-prefix}-fly:before { content: unquote("\"#{ $fa-var-fly }\""); }
 .#{$fa-css-prefix}-folder:before { content: unquote("\"#{ $fa-var-folder }\""); }
 .#{$fa-css-prefix}-folder-open:before { content: unquote("\"#{ $fa-var-folder-open }\""); }
 .#{$fa-css-prefix}-font:before { content: unquote("\"#{ $fa-var-font }\""); }
@@ -482,6 +486,7 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-leaf:before { content: unquote("\"#{ $fa-var-leaf }\""); }
 .#{$fa-css-prefix}-leanpub:before { content: unquote("\"#{ $fa-var-leanpub }\""); }
 .#{$fa-css-prefix}-lemon:before { content: unquote("\"#{ $fa-var-lemon }\""); }
+.#{$fa-css-prefix}-less:before { content: unquote("\"#{ $fa-var-less }\""); }
 .#{$fa-css-prefix}-level-down:before { content: unquote("\"#{ $fa-var-level-down }\""); }
 .#{$fa-css-prefix}-level-down-alt:before { content: unquote("\"#{ $fa-var-level-down-alt }\""); }
 .#{$fa-css-prefix}-level-up:before { content: unquote("\"#{ $fa-var-level-up }\""); }
@@ -566,6 +571,8 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-neuter:before { content: unquote("\"#{ $fa-var-neuter }\""); }
 .#{$fa-css-prefix}-newspaper:before { content: unquote("\"#{ $fa-var-newspaper }\""); }
 .#{$fa-css-prefix}-nintendo-switch:before { content: unquote("\"#{ $fa-var-nintendo-switch }\""); }
+.#{$fa-css-prefix}-node:before { content: unquote("\"#{ $fa-var-node }\""); }
+.#{$fa-css-prefix}-node-js:before { content: unquote("\"#{ $fa-var-node-js }\""); }
 .#{$fa-css-prefix}-npm:before { content: unquote("\"#{ $fa-var-npm }\""); }
 .#{$fa-css-prefix}-ns8:before { content: unquote("\"#{ $fa-var-ns8 }\""); }
 .#{$fa-css-prefix}-nutritionix:before { content: unquote("\"#{ $fa-var-nutritionix }\""); }
@@ -578,6 +585,7 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-openid:before { content: unquote("\"#{ $fa-var-openid }\""); }
 .#{$fa-css-prefix}-opera:before { content: unquote("\"#{ $fa-var-opera }\""); }
 .#{$fa-css-prefix}-optin-monster:before { content: unquote("\"#{ $fa-var-optin-monster }\""); }
+.#{$fa-css-prefix}-osi:before { content: unquote("\"#{ $fa-var-osi }\""); }
 .#{$fa-css-prefix}-outdent:before { content: unquote("\"#{ $fa-var-outdent }\""); }
 .#{$fa-css-prefix}-page4:before { content: unquote("\"#{ $fa-var-page4 }\""); }
 .#{$fa-css-prefix}-pagelines:before { content: unquote("\"#{ $fa-var-pagelines }\""); }
@@ -642,6 +650,7 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-quote-right:before { content: unquote("\"#{ $fa-var-quote-right }\""); }
 .#{$fa-css-prefix}-random:before { content: unquote("\"#{ $fa-var-random }\""); }
 .#{$fa-css-prefix}-ravelry:before { content: unquote("\"#{ $fa-var-ravelry }\""); }
+.#{$fa-css-prefix}-react:before { content: unquote("\"#{ $fa-var-react }\""); }
 .#{$fa-css-prefix}-rebel:before { content: unquote("\"#{ $fa-var-rebel }\""); }
 .#{$fa-css-prefix}-rectangle-landscape:before { content: unquote("\"#{ $fa-var-rectangle-landscape }\""); }
 .#{$fa-css-prefix}-rectangle-portrait:before { content: unquote("\"#{ $fa-var-rectangle-portrait }\""); }
@@ -675,6 +684,7 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-ruble-sign:before { content: unquote("\"#{ $fa-var-ruble-sign }\""); }
 .#{$fa-css-prefix}-rupee-sign:before { content: unquote("\"#{ $fa-var-rupee-sign }\""); }
 .#{$fa-css-prefix}-safari:before { content: unquote("\"#{ $fa-var-safari }\""); }
+.#{$fa-css-prefix}-sass:before { content: unquote("\"#{ $fa-var-sass }\""); }
 .#{$fa-css-prefix}-save:before { content: unquote("\"#{ $fa-var-save }\""); }
 .#{$fa-css-prefix}-schlix:before { content: unquote("\"#{ $fa-var-schlix }\""); }
 .#{$fa-css-prefix}-scribd:before { content: unquote("\"#{ $fa-var-scribd }\""); }
@@ -884,6 +894,7 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-volume-mute:before { content: unquote("\"#{ $fa-var-volume-mute }\""); }
 .#{$fa-css-prefix}-volume-off:before { content: unquote("\"#{ $fa-var-volume-off }\""); }
 .#{$fa-css-prefix}-volume-up:before { content: unquote("\"#{ $fa-var-volume-up }\""); }
+.#{$fa-css-prefix}-vuejs:before { content: unquote("\"#{ $fa-var-vuejs }\""); }
 .#{$fa-css-prefix}-watch:before { content: unquote("\"#{ $fa-var-watch }\""); }
 .#{$fa-css-prefix}-weibo:before { content: unquote("\"#{ $fa-var-weibo }\""); }
 .#{$fa-css-prefix}-weixin:before { content: unquote("\"#{ $fa-var-weixin }\""); }
