@@ -152,13 +152,52 @@ $theme-colors: (
   info: $info-500,
   warning: $warning-500,
   danger: $danger-500,
-  light: $gray-100,
+  light: $white,
   dark: $gray-800
 );
+
+/*$grays: ();
+$grays: map-merge((
+  "100":        $gray-100,
+  "200":        $gray-200,
+  "300":        $gray-300,
+  "400":        $gray-400,
+  "500":        $gray-500,
+  "600":        $gray-600,
+  "700":        $gray-700,
+  "800":        $gray-800,
+  "900":        $gray-900
+), $grays);
+
+$colors: ();
+$colors: map-merge((
+  "blue":       $primary-500,
+  "red":        $danger-500,
+  "orange":     $warning-500,
+  "yellow":     $warning-500,
+  "green":      $success-500,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+), $colors);
+
+$theme-colors: ();
+$theme-colors: map-merge((
+  "primary":    $primary-500,
+  "secondary":  $gray-600,
+  "success":    $success-500,
+  "info":       $info-500,
+  "warning":    $warning-500,
+  "danger":     $danger-500,
+  "light":      $white,
+  "dark":       $gray-800
+), $theme-colors);*/
 
 /* forms */
 $input-focus-border-color:					$primary-500;
 $link-color:            						$primary-800;
+$input-btn-focus-color:             transparent;
+$input-border-color:                rgba(0,0,0,.15);
 
 /* cards */
 $card-spacer-y:                     20px;
@@ -177,15 +216,20 @@ $border-radius-sm:									$border-radius;
 $alert-padding-y:                   0.75rem;
 $alert-padding-x:                   1.2rem;
 
+/* breadcrumb */
+$breadcrumb-bg:                     lighten($fusion-50, 43%);          
+
+/* button */
+$input-btn-focus-width:             2px;
+
 /* bootstrap tables */
 $table-border-color:                darken($gray-lighter, 5%);
-
 $table-hover-bg:									  rgba($fusion-300,.035);
 $table-accent-bg:               		rgba($black,.04);
 
-$table-inverse-bg:                  $fusion-600;
-$table-inverse-accent-bg:           rgba($white, .05);
-$table-inverse-hover-bg:            $primary-500;
+$table-dark-bg:                     $fusion-600;
+$table-dark-accent-bg:              rgba($white, .05);
+$table-dark-hover-bg:               $primary-500;
 
 /* tooltip */
 $tooltip-bg:                        $primary-600;
@@ -209,6 +253,7 @@ http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/
 18px = 1.125rem
 19px = 1.1875rem
 20px = 1.25rem
+21px = 1.3125rem
 22px = 1.375rem
 24px = 1.5rem
 26px = 1.625rem
@@ -222,11 +267,9 @@ http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/
 */
 
 /* Fonts */
-
-$font-size-lg:   									  1.25rem;   //20px
 $font-size-base:             			  0.8125rem; //13px
+$font-size-lg:                      1.25rem;   //20px
 $font-size-sm:   									  0.75rem;   //12px
-$font-size-xs:   									  0.6875rem; //11px
 
 $h1-font-size: 										  1.5rem;    //24px;
 $h2-font-size: 										  1.375rem;  //22px;
@@ -234,6 +277,11 @@ $h3-font-size: 										  1.1875rem; //19px;
 $h4-font-size: 										  1.0625rem; //17px;
 $h5-font-size: 										  0.9375rem; //15px;
 $h6-font-size: 										  0.875rem;  //14px;
+
+$display1-size:                     5rem !default;
+$display2-size:                     4.5rem !default;
+$display3-size:                     3.5rem !default;
+$display4-size:                     2.5rem !default;
 
 $navbar-toggler-font-size:				  21px;
 $navbar-toggler-padding-y:				  7.5px; 
@@ -284,16 +332,17 @@ $p-5:												         3rem;
 // usage: background-image: url("#{$baseURL}img/bg.png"); 
 
 $baseURL:											       "../" !default;
-$base-font-size:							       13px !default;
 $base-text-color:							       darken($white,60%) !default;
 
-$fs-nano:											       $base-font-size - 2;   /* 11px   */
-$fs-xs: 											       $base-font-size - 1;   /* 12px   */
-$fs-sm: 											       $base-font-size - 0.5; /* 12.5px */
-$fs-md: 											       $base-font-size + 1;   /* 14px   */
-$fs-lg: 											       $base-font-size + 2;   /* 15px   */
-$fs-xl: 											       $base-font-size + 3;   /* 16px   */
-$fs-xxl: 											       28px;
+/* font vars below will auto change to rem values using function rem($value)*/
+$fs-base:                            13px !default;
+$fs-nano:											       $fs-base - 2;   /* 11px   */
+$fs-xs: 											       $fs-base - 1;   /* 12px   */
+$fs-sm: 											       $fs-base - 0.5; /* 12.5px */
+$fs-md: 											       $fs-base + 1;   /* 14px   */
+$fs-lg: 											       $fs-base + 2;   /* 15px   */
+$fs-xl: 											       $fs-base + 3;   /* 16px   */
+$fs-xxl: 											       $fs-base + 15;  /* 28px   */
 
 /*  Font Family
 ========================================================================== */
@@ -359,14 +408,14 @@ $header-logo-height:						     24.45px !default 										/* you may need to cha
 $header-logo-text-align:				     center; 												      /* adjust this as you see fit : left, right, center */
 
 /* icon font size (not button) */
-$header-icon-size:							     22px;
+$header-icon-size:							     $fs-base + 9;                        /* 22px */
 
 /* search input box */
 $header-search-border-color:		     transparent !default;								/* suggestion: #ccced0*/
 $header-search-bg:							     transparent !default;
 $header-search-width:						     400px !default;
 $header-search-height:					     $header-height - 24 !default; 
-$header-search-font-size:				     $base-font-size + 2;
+$header-search-font-size:				     $fs-base + 2;
 $header-search-padding:					     $spacer * 0.38;
 
 /* btn */
@@ -436,7 +485,7 @@ $nav-width:											  250px !default;
 
 /* nav parent level-0 */
 $nav-link-color: 									lighten($nav-base-color, 45%) !default;
-$nav-font-link-size: 							$base-font-size + 1 !default;
+$nav-font-link-size: 							$fs-base + 1 !default;
 $nav-collapse-sign-font-size:			$nav-font-link-size + 3 !default;	
 $nav-padding-left:								20px !default; //$p-2
 $nav-padding-right:								20px !default; //$p-2
@@ -459,7 +508,7 @@ $nav-icon-hover-color:						lighten(desaturate($color-primary, 30%), 10%) !defau
 /* nav title */
 $nav-title-color: 								lighten($nav-base-color, 10%) !default;
 $nav-title-border-bottom-color: 	lighten($nav-base-color, 3%) !default;
-$nav-title-font-size: 						$base-font-size - 2.8;
+$nav-title-font-size: 						$fs-base - 2.8;
 
 /* nav Minify */
 $nav-minify-hover-bg:							darken($nav-base-color, 3%) !default;
@@ -519,15 +568,15 @@ $nav-tabs-panel-link-height:      35px !default;
 
 /*   PAGE BREADCRUMB 
 ========================================================================== */
-$page-breadcrumb-font-size:				$base-font-size !default;
-$page-breadcrumb-padding:					6px $grid-gutter-width/2;
+//$page-breadcrumb-font-size:				$fs-base !default;
+//$page-breadcrumb-padding:					6px $grid-gutter-width/2;
 
 /*   FOOTER
 ========================================================================== */
 $footer-bg:											  #fff !default;
 $footer-text-color:								darken($base-text-color, 10%);
 $footer-height: 									45px !default;
-$footer-font-size:								$base-font-size !default;
+$footer-font-size:								$fs-base !default;
 $footer-zindex:										$cloud - 20 !default;
 
 /*   GLOBALS

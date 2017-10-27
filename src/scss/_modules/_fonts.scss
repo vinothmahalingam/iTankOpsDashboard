@@ -3,7 +3,7 @@
 
 body {
 	font-family: $page-font;
-	font-size: rem($base-font-size);
+	font-size: rem($fs-base);
 	letter-spacing: 0.1px;
 }
 
@@ -57,7 +57,7 @@ h5 small,
 h6 small, 
 .h5 small, 
 .h6 small {
-	font-size: rem($base-font-size);	
+	font-size: rem($fs-base);	
 }
 
 /* contrast text */

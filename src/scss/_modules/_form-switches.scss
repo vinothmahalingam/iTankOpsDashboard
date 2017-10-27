@@ -52,7 +52,7 @@
     height: 15px; 
     padding: 0; 
     line-height: 15px;
-    font-size: rem(10px); 
+    font-size: rem($fs-base - 2); 
     color: $white; 
     font-weight: 500;
 
@@ -105,7 +105,7 @@
 	display:block;
 	text-align:center;
 	line-height:19px;
-	font-size: rem(10px);
+	font-size: rem($fs-base - 2);
 	text-shadow: 0 -1px 0 $white;
 	font-weight:bold;
 	font-family:FontAwesome;
@@ -162,5 +162,5 @@
 	display: inline-block;
 	vertical-align: text-top;
 	margin-top: -3px;
-	font-size: rem($base-font-size - 1);
+	font-size: rem($fs-base - 1);
 }

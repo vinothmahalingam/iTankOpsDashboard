@@ -2,7 +2,7 @@
 	layouts/main 
 	title="Generate Table Style" 
 	pagename="datagrid_generate_table_style" 
-	heading="<i class='ni ni-layers text-primary'></i>  Generate Table Style" 
+	heading="<i class='fal fa-th-list text-primary'></i>  Generate Table Style" 
 	category_1="Datagrid" 
 	pagedescription=""
 }}
@@ -25,14 +25,14 @@
 
 				<div class="alert alert-primary">
 					<div class="d-table w-100">
-						<div class="d-table-cell v-align-m width-6">
+						<div class="d-table-cell align-middle width-6">
 							<span class="icon-stack icon-stack-lg">
 								<i class="base-2 icon-stack-3x color-primary-400"></i>
 								<i class="base-3 icon-stack-2x color-primary-600 opacity-70"></i>
 								<i class="fal fa-lightbulb icon-stack-1x text-white opacity-90"></i>
 							</span>
 						</div>
-						<div class="d-table-cell v-align-m pl-1">
+						<div class="d-table-cell align-middle pl-1">
 							<span class="h5">Did you know?</span>
 							<br>
 							Alternatively you can generate a dummy table and simply insert the classes needed manually with this external generator <a href="https://www.generatedata.com/" target="_blank">https://www.generatedata.com</a>
@@ -57,9 +57,14 @@
 					  <span class="custom-control-description">Smaller Table</span>
 					</label>
 					<label class="custom-control custom-checkbox mb-0">
-					  <input type="checkbox" class="custom-control-input" id="inverse" data-class="table-inverse">
+					  <input type="checkbox" class="custom-control-input" id="dark" data-class="table-dark">
 					  <span class="custom-control-indicator"></span>
-					  <span class="custom-control-description">Table Inverse</span>
+					  <span class="custom-control-description">Table Dark</span>
+					</label>
+					<label class="custom-control custom-checkbox mb-0">
+					  <input type="checkbox" class="custom-control-input" id="light" data-class="table-light">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">Table Light</span>
 					</label>
 					<label class="custom-control custom-checkbox mb-0">
 					  <input type="checkbox" class="custom-control-input" id="hover" data-class="table-hover">

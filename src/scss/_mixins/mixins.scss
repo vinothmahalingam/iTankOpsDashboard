@@ -339,8 +339,6 @@ Color brightness is determined by the following formula:
 
 }
 
-
-
 /* backface visibility */
 @mixin backface-visibility($argument: none) {
   -webkit-backface-visibility: hidden;

@@ -63,19 +63,6 @@
 		}
 
 	}
-
-	& + .onoffswitch-title {
-		margin-top:0.5px;
-		font-size: rem($base-font-size);
-		display: block;
-
-		& + .onoffswitch-title-desc {
-			display: block;
-			font-size: rem(12px);
-			color: #989da5;
-			text-transform: lowercase;
-		}
-	}
 }
 
 /* button used to close filter and mobile search */

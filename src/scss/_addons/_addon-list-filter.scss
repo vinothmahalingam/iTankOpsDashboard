@@ -2,7 +2,7 @@
 	display: block;
 	text-align: center;
 	padding: 2px;
-	font-size: $font-size-xs;
+	font-size: rem($fs-nano);
 	text-transform: capitalize;
 	font-style: italic;
 	width: calc(100% - 60px);

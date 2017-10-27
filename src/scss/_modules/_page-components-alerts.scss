@@ -81,7 +81,7 @@
 	width: $p-4 + $p-3;
 
 	> i {
-		font-size: $fs-xxl;
+		font-size: rem($fs-xxl);
 	}
 
 	& + div {

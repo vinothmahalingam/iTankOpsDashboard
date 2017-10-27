@@ -29,22 +29,18 @@
 				</h3>
 
 				<div class="alert alert-primary" role="alert">
-					<i class="fal fa-info-circle mr-1"></i> 
 					<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
 				</div>
 
 				<div class="alert alert-success" role="alert">
-					<i class="fal fa-check mr-1"></i> 
 					<strong>Well Done!</strong> You successfully read this important alert message.
 				</div>
 
 				<div class="alert alert-danger" role="alert">
-					<i class="fal fa-times mr-1"></i> 
 					<strong>Oh snap!</strong> Change a few things up and try submitting again.
 				</div>
 
 				<div class="alert alert-warning" role="alert">
-					<i class="fal fa-exclamation-triangle mr-1"></i> 
 					<strong>Holy guacamole!</strong> You should check in on some of those fields below.
 				</div>
 
@@ -127,67 +123,129 @@
 						Alert to surely capture attention!
 					</small>
 				</h3>
+				
+				<h4 class="frame-heading">
+					Default button styles with predefined colors
+				</h4>
+				<div class="frame-wrap p-0 border-0">
+					<div class="alert alert-success-outline alert-dismissible fade show" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+						<div class="d-flex align-items-center">
 
-				<div class="alert alert-success-outline alert-dismissible fade show" role="alert">
-
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-					<div class="d-flex align-items-center">
-
-						<div class="alert-icon">
-							<i class="fal fa-sync fa-spin"></i> 
-						</div>
-
-						<div class="flex-1">
-							<span class="h5 m-0 fw-700">Task 70% Complete</span>
-							<div class="progress progress-sm d-flex mb-2 mt-1">
-								<span class="progress-bar bg-success-500 progress-bar-striped" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></span>
+							<div class="alert-icon width-1">
+								<i class="fal fa-sync fs-xl"></i> 
 							</div>
-						</div>
 
+							<div class="flex-1">
+								<span class="h6 m-0 fw-700">Task 70% Complete</span>
+							</div>
+
+						</div>
 					</div>
 
-				</div>
-
-				<div class="alert alert-info-outline alert-dismissible fade show" role="alert">
-					<div class="d-flex align-items-center">
-
-						<div class="alert-icon">
-							<i class="fal fa-exclamation-triangle"></i> 
-						</div>
-
-						<div class="flex-1">
-							<span class="h5 m-0 fw-700">Compilation error occured! </span>
-						</div>
-
-						<button type="button" class="btn btn-info btn-pills btn-sm btn-w-m  mr-1">
-							Repair
+					<div class="alert alert-success alert-dismissible fade show" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">×</span>
 						</button>
-						<button type="button" class="btn btn-danger btn-pills btn-sm btn-w-m" data-dismiss="alert" aria-label="Close">
-							Dismiss
+						<div class="d-flex align-items-center">
+
+							<div class="alert-icon width-1">
+								<i class="fal fa-sync fs-xl"></i> 
+							</div>
+
+							<div class="flex-1">
+								<span class="h6 m-0 fw-700">Task 70% Complete</span>
+							</div>
+
+						</div>
+					</div>	
+
+					<div class="alert bg-success-500 alert-dismissible fade show" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">×</span>
 						</button>
+						<div class="d-flex align-items-center">
 
+							<div class="alert-icon width-1">
+								<i class="fal fa-sync fs-xl"></i> 
+							</div>
+
+							<div class="flex-1">
+								<span class="h6 m-0 fw-700">Task 70% Complete</span>
+							</div>
+
+						</div>
 					</div>
 				</div>
 
-				<div class="alert alert-primary fade show" role="alert">
-					<div class="d-flex align-items-center">
+				<h4 class="frame-heading">
+					Default button styles with predefined colors
+				</h4>
+				<div class="frame-wrap p-0 border-0">
+					<div class="alert alert-info-outline alert-dismissible fade show" role="alert">
+						<div class="d-flex align-items-center">
 
-						<div class="alert-icon">
-							<i class="fal fa-lightbulb"></i>
+							<div class="alert-icon">
+								<i class="fal fa-exclamation-triangle"></i> 
+							</div>
+
+							<div class="flex-1">
+								<span class="h5 m-0 fw-700">Compilation error occured! </span>
+							</div>
+
+							<button type="button" class="btn btn-info btn-pills btn-sm btn-w-m  mr-1">
+								Repair
+							</button>
+							<button type="button" class="btn btn-danger btn-pills btn-sm btn-w-m" data-dismiss="alert" aria-label="Close">
+								Dismiss
+							</button>
+
 						</div>
-
-						<div class="flex-1">
-							<span class="h5">Test Complete!</span> 	
-							<br>
-							All member tests have passed successfully.
-						</div>
-						
-						<a href="#" class="btn btn-primary btn-pills btn-sm width-7">OK</a>							
-
 					</div>
-				</div>
+
+					<div class="alert alert-secondary-outline fade show" role="alert">
+						<div class="d-flex align-items-center">
+
+							<div class="alert-icon">
+								<span class="icon-stack icon-stack-md">
+									<i class="base-7 icon-stack-3x color-danger-900"></i>
+									<i class="fal fa-times icon-stack-1x text-white"></i>
+								</span>
+							</div>
+
+							<div class="flex-1">
+								<span class="h5 color-danger-900">This branch is out-of-date with the base branch </span> 	
+							</div>
+							
+							<a href="#" class="btn btn-outline-danger btn-sm btn-w-m">Report</a>							
+
+						</div>
+					</div>
+
+					<div class="alert alert-secondary-outline fade show" role="alert">
+						<div class="d-flex align-items-center">
+
+							<div class="alert-icon">
+								<span class="icon-stack icon-stack-md">
+									<i class="base-7 icon-stack-3x color-success-600"></i>
+									<i class="fal fa-check icon-stack-1x text-white"></i>
+								</span>
+							</div>
+
+							<div class="flex-1">
+								<span class="h5 color-success-600">All checks have passed!</span> 	
+								<br>
+								2 successful checks
+							</div>
+							
+							<a href="#" class="btn btn-outline-success btn-sm btn-w-m">Review</a>							
+
+						</div>
+					</div>
+
+				</div>	
 
 				<div class="alert bg-info-400 text-white alert-dismissible fade show" role="alert">
 
@@ -198,7 +256,7 @@
 						</div>
 
 						<div class="flex-1">
-							<span class="h5">Test Incomplete!</span> 	
+							<span class="h5">This branch is out-of-date with the base branch</span> 	
 							<br>
 							Some pipes failed during build.
 						</div>
@@ -225,7 +283,31 @@
 						<a href="#" class="btn btn-warning btn-w-m fw-500 btn-sm" data-dismiss="alert" aria-label="Close">Install</a>	
 
 					</div>	
-				</div>			
+				</div>	
+
+				<div class="alert bg-warning-500 alert-dismissible fade show">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+
+					<div class="d-flex align-items-center">
+
+						<div class="alert-icon">
+							<span class="icon-stack icon-stack-sm">
+								<i class="base-7 icon-stack-3x color-fusion-200"></i>
+								<i class="base-7 icon-stack-2x color-fusion-500"></i>
+								<i class="ni ni-graph icon-stack-1x text-white"></i>	
+							</span>
+						</div>
+
+						<div class="flex-1">
+							<span class="h5">Large Icon Stack</span> 	
+							<br>
+							Custom alert background with <strong>large</strong> sized icon stack.
+						</div>
+
+					</div>
+				</div>		
 
 			</div>
 			
@@ -360,128 +442,210 @@
 					</small>
 				</h3>
 
+				<h4 class="frame-heading">Custom sizes using <code>font-size</code></h4>
+				<div class="frame-wrap p-0 border-0">
+					
 
-				<div class="alert alert-primary alert-dismissible fade show" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-					<div class="d-flex align-items-center">
+					<div class="alert alert-primary alert-dismissible fade show" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+						<div class="d-flex align-items-center">
 
-						<div class="alert-icon width-2">
-							<span class="icon-stack" style="font-size: 26px;">
-								<i class="base-2 icon-stack-3x color-primary-400"></i>
-								<i class="base-10 text-white icon-stack-1x"></i>
-								<i class="ni md-profile color-primary-800 icon-stack-2x"></i>
-							</span>
+							<div class="alert-icon width-2">
+								<span class="icon-stack" style="font-size: 22px;">
+									<i class="base-2 icon-stack-3x color-primary-400"></i>
+									<i class="base-10 text-white icon-stack-1x"></i>
+									<i class="ni md-profile color-primary-800 icon-stack-2x"></i>
+								</span>
+							</div>
+							
+							<div class="flex-1">
+								<strong>Custom stack icon size! </strong>
+								You can change the stack icon size with font-size style property.	
+							</div>
+
 						</div>
-						
-						<div class="flex-1">
-							<strong>Custom stack icon size! </strong>
-							You can change the stack icon size with font-size style property.	
-						</div>
-
 					</div>
 
-				</div>
+					<div class="alert alert-primary-outline alert-dismissible fade show" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+						<div class="d-flex align-items-center">
 
-				<div class="alert alert-success alert-dismissible fade show" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-					<div class="d-flex align-items-center">
+							<div class="alert-icon width-2">
+								<span class="icon-stack" style="font-size: 22px;">
+									<i class="base-2 icon-stack-3x color-primary-400"></i>
+									<i class="base-10 text-white icon-stack-1x"></i>
+									<i class="ni md-profile color-primary-800 icon-stack-2x"></i>
+								</span>
+							</div>
+							
+							<div class="flex-1">
+								<strong>Custom stack icon size! </strong>
+								You can change the stack icon size with font-size style property.	
+							</div>
 
-						<div class="alert-icon width-3">
-							<span class="icon-stack icon-stack-sm">
-								<i class="base-2 icon-stack-3x color-success-600"></i>
-								<i class="base-10 text-white icon-stack-1x"></i>
-								<i class="ni md-profile color-success-800 icon-stack-2x"></i>
-							</span>
-						</div>
-						
-						<div class="flex-1">
-							<span class="h5 m-0 fw-700">Small Icon Stack!</span>
-							Custom alert background with <strong>small</strong> sized icon stack.	
-						</div>
-
-					</div>
-
-				</div>
-
-				<div class="alert alert-info alert-dismissible fade show" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-					<div class="d-flex align-items-center">
-
-						<div class="alert-icon">
-							<span class="icon-stack icon-stack-md">
-								<i class="base-2 icon-stack-3x color-info-400"></i>
-								<i class="base-10 text-white icon-stack-1x"></i>
-								<i class="ni md-profile color-info-800 icon-stack-2x"></i>
-							</span>
-						</div>	
-
-						<div class="flex-1">
-							<span class="h4">Medim Icon Stack</span> 	
-							<br>
-							Custom alert background with <strong>medium</strong> sized icon stack.
 						</div>
 					</div>
 				</div>
 
-				<div class="alert alert-warning alert-dismissible fade show">
 
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
+				<h4 class="frame-heading">
+    				Alerts with <code>icon-stack-sm</code>
+				</h4>
+				<div class="frame-wrap p-0 border-0">
+					
 
-					<div class="d-flex align-items-center">
+					<div class="alert alert-success alert-dismissible fade show" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+						<div class="d-flex align-items-center">
 
-						<div class="alert-icon width-6">
-							<span class="icon-stack icon-stack-lg">
-								<i class="base-2 icon-stack-3x color-warning-400"></i>
-								<i class="base-10 text-white icon-stack-1x"></i>
-								<i class="ni md-profile color-warning-800 icon-stack-2x"></i>
-							</span>
+							<div class="alert-icon width-3">
+								<span class="icon-stack icon-stack-sm">
+									<i class="base-2 icon-stack-3x color-success-600"></i>
+									<i class="base-10 text-white icon-stack-1x"></i>
+									<i class="ni md-profile color-success-800 icon-stack-2x"></i>
+								</span>
+							</div>
+							
+							<div class="flex-1">
+								<span class="h5 m-0 fw-700">Small Icon Stack!</span>
+								Custom alert background with <strong>small</strong> sized icon stack.	
+							</div>
+
 						</div>
-
-						<div class="flex-1">
-							<span class="h3">Large Icon Stack</span> 	
-							<br>
-							Custom alert background with <strong>large</strong> sized icon stack.
-						</div>
-
 					</div>
 
+					
 				</div>	
 
-				<div class="alert alert-danger alert-dismissible fade show">
 
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
+				<h4 class="frame-heading">
+					Alerts with <code>icon-stack-md</code>
+				</h4>
+				<div class="frame-wrap p-0 border-0">
+					
 
-					<div class="d-flex align-items-center">
+					<div class="alert alert-info alert-dismissible fade show" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+						<div class="d-flex align-items-center">
 
-						<div class="alert-icon width-8">
-							<span class="icon-stack icon-stack-xl">
-								<i class="base-2 icon-stack-3x color-danger-400"></i>
-								<i class="base-10 text-white icon-stack-1x"></i>
-								<i class="ni md-profile color-danger-800 icon-stack-2x"></i>
-							</span>
+							<div class="alert-icon">
+								<span class="icon-stack icon-stack-md">
+									<i class="base-2 icon-stack-3x color-info-400"></i>
+									<i class="base-10 text-white icon-stack-1x"></i>
+									<i class="ni md-profile color-info-800 icon-stack-2x"></i>
+								</span>
+							</div>	
+
+							<div class="flex-1">
+								<span class="h4">Medim Icon Stack</span> 	
+								<br>
+								Custom alert background with <strong>medium</strong> sized icon stack.
+							</div>
 						</div>
-
-						<div class="flex-1 pl-1">
-							<span class="h2">
-								Hold on there Sparky!
-							</span> 
-							<br>
-							Better fix those errors before you can complete this request 
-						</div>
-
 					</div>
 
-				</div>
+					
+				</div>	
+
+				<h4 class="frame-heading">
+					Alerts with <code>icon-stack-lg</code>
+				</h4>
+				<div class="frame-wrap p-0 border-0">
+					
+
+					<div class="alert alert-warning alert-dismissible fade show">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+
+						<div class="d-flex align-items-center">
+
+							<div class="alert-icon width-6">
+								<span class="icon-stack icon-stack-lg">
+									<i class="base-2 icon-stack-3x color-warning-400"></i>
+									<i class="base-10 text-white icon-stack-1x"></i>
+									<i class="ni md-profile color-warning-800 icon-stack-2x"></i>
+								</span>
+							</div>
+
+							<div class="flex-1">
+								<span class="h3">Large Icon Stack</span> 	
+								<br>
+								Custom alert background with <strong>large</strong> sized icon stack.
+							</div>
+
+						</div>
+					</div>
+
+						
+				</div>	
+
+				<h4 class="frame-heading">
+					Alerts with <code>icon-stack-xl</code>
+				</h4>
+				<div class="frame-wrap p-0 border-0">
+					<div class="alert bg-danger-600 alert-dismissible fade show">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+
+						<div class="d-flex align-items-center">
+
+							<div class="alert-icon width-8">
+								<span class="icon-stack icon-stack-xl">
+									<i class="base-2 icon-stack-3x color-danger-400"></i>
+									<i class="base-10 text-white icon-stack-1x"></i>
+									<i class="ni md-profile color-danger-800 icon-stack-2x"></i>
+								</span>
+							</div>
+
+							<div class="flex-1 pl-1">
+								<span class="h2">
+									Hold on there Sparky!
+								</span> 
+								<br>
+								Better fix those errors before you can complete this request 
+							</div>
+
+						</div>
+					</div>
+
+					<div class="alert alert-danger alert-dismissible fade show">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+
+						<div class="d-flex align-items-center">
+
+							<div class="alert-icon width-8">
+								<span class="icon-stack icon-stack-xl">
+									<i class="base-2 icon-stack-3x color-danger-400"></i>
+									<i class="base-10 text-white icon-stack-1x"></i>
+									<i class="ni md-profile color-danger-800 icon-stack-2x"></i>
+								</span>
+							</div>
+
+							<div class="flex-1 pl-1">
+								<span class="h2">
+									Hold on there Sparky!
+								</span> 
+								<br>
+								Better fix those errors before you can complete this request 
+							</div>
+
+						</div>
+					</div>
+
+					
+				</div>	
 
 
 			</div>

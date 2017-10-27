@@ -33,7 +33,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 					>[class*='fa-']:first-child,
 					>.#{$cust-icon-prefix}:first-child {
 						color:$header-link-color;
-				    	font-size: rem($header-icon-size);
+				    	//font-size: rem($header-icon-size);
 					    vertical-align: middle;
 			   		}
 			   		>[class*='fa-']:first-child {

@@ -100,7 +100,7 @@ $grid-breakpoints: (
 				.nav-menu {
 					/*> li {
 						a {
-							font-size: $base-font-size + 1;
+							font-size: $fs-base + 1;
 						}
 					}*/
 
@@ -114,7 +114,7 @@ $grid-breakpoints: (
 		#content {
 			padding:map-get($grid-gutter-widths, lg) $grid-gutter-width-base/2;
 			color: #222;
-			font-size: $base-font-size + 1;
+			font-size: $fs-base + 1;
 			line-height: 1.58;
 
 			min-height: calc(100vh - #{$header-height + $footer-height});

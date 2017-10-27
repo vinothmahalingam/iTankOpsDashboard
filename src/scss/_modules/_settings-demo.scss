@@ -10,7 +10,7 @@
 	h5 {
 		margin:0;
 		font-weight:500;
-		font-size: rem($base-font-size + 1);
+		font-size: rem($fs-base + 1);
 		padding: $p-3 $p-3 5px;
 		box-sizing: content-box;
 		display: block;
@@ -58,6 +58,19 @@
 			right: 15px;
 			margin: 0;
 			top: 30%;
+		}
+
+		.onoffswitch-title {
+			margin-top:0.5px;
+			font-size: rem($fs-base);
+			display: block;
+		}
+
+		.onoffswitch-title-desc {
+			display: block;
+			font-size: rem(12px);
+			color: #989da5;
+			text-transform: lowercase;
 		}
 
 	}

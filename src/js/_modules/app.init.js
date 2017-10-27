@@ -577,6 +577,15 @@ var initApp = (function(app) {
 			console.log("bs.popover is not loaded");
 		}
 
+		/* 
+         * Disable popper.js's forced hardware accelaration styles
+		 */
+		if( typeof($.fn.dropdown) !== 'undefined'){ 
+			Popper.Defaults.modifiers.computeStyle.gpuAcceleration = false;
+		} else {
+			console.log("bs.popover is not loaded");
+		} 
+
 		/**
 		 * Lazyload images
 		 * doc: lazy load images to optimize performance

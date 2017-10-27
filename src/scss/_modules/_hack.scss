@@ -142,7 +142,7 @@ body.desktop-detected {
 			border-radius: 0 !important;
 			font-weight: 500;
 			height: 35px;
-			font-size: rem(14px);
+			font-size: rem($fs-md);
 
 			&.active {
 				background: transparent;

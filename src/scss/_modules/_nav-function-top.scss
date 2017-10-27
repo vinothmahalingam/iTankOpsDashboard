@@ -152,7 +152,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 								width: 25px !important;
 								height: 25px !important;
 								line-height: 16px !important;
-								font-size: 13px !important;
+								font-size: rem($fs-base) !important;
 								display: block !important;
 								margin: 0 auto 4px !important;
 
@@ -175,7 +175,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 						a {
 							//padding: 10px;
-	    					font-size: rem(13px);
+	    					font-size: rem($fs-base);
 	    					//box-shadow:none;
 						}
 
@@ -288,7 +288,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 								white-space: nowrap;
 								text-overflow: ellipsis;
 								line-height: normal;
-								font-size: rem(11px);
+								font-size: rem($fs-nano);
 								vertical-align: text-top;
 
 								display: inline-block; /*override inline-flex*/
@@ -468,7 +468,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 						ul {
 							 li {
 							 	a {
-							 		font-size: rem(13px);
+							 		font-size: rem($fs-base);
 							 	}
 							 }
 						}

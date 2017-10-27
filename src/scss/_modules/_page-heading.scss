@@ -1,6 +1,5 @@
 .subheader {
 	margin-bottom: $grid-gutter-width-base - 5;
-	//margin-bottom: $grid-gutter-width-base - 15;
 	position: relative;
 
 	display: flex;
@@ -13,7 +12,7 @@
 }
 
 .subheader-title {
-	font-size: $fs-xxl; //unquote("calc(16px + 5 * ((100vw - 320px) / 680))") //$fs-xxl;
+	font-size: rem($fs-xxl); //unquote("calc(16px + 5 * ((100vw - 320px) / 680))") //$fs-xxl;
 	font-weight: 400;
 	color: $fusion-500;
 	text-shadow: $white 0 1px;
@@ -31,9 +30,8 @@
 
 	small {
 		font-weight: 400;
-		//font-size: $fs-lg; 
 		color: #68747d; //$fusion-100;
 		margin-bottom: 0;
-		font-size: $h6-font-size;
+		font-size: rem($fs-md);
 	}
 }

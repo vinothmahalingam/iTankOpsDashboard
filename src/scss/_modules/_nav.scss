@@ -184,7 +184,7 @@
 				width: 28px;
 				height: auto;
 				padding: 4px 0;
-				font-size: $font-size-base;
+				font-size: rem($fs-base);
 			}
 
 			&.collapsed {
@@ -464,7 +464,7 @@ body:not(.nav-function-top) {
 					
 					display: inline-block;
 					font-family: 'helvetica neue', helvetica, arial, sans-serif;
-					font-size: rem(11px);
+					font-size: rem($fs-nano);
 					min-height: 13px;
 					min-width: $nav-badge-height + 4;
 					background-color: #fff;

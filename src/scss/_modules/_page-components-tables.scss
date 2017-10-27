@@ -26,7 +26,7 @@
 	@include gradient-img(#f2f2f2,#fafafa)
 }
 
-.table-inverse {
+.table-dark {
 	.thead-themed {
 		@include gradient-img($fusion-700,$fusion-800)
 	}

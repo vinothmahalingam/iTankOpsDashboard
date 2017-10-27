@@ -1,6 +1,6 @@
 $panel-padding: $fs-lg;
 $panel-hdr-padding: $panel-padding - 3;
-$panel-hdr-font-size: 15px;
+$panel-hdr-font-size: $fs-lg;
 $panel-hdr-height: 42px;
 $panel-btn-size: 16px;
 $panel-hdr-background: #fafafa;
@@ -65,7 +65,7 @@ $panel-edge-radius: $border-radius;
 					padding: 0;
 					width: $panel-btn-size;
 					height: $panel-btn-size;
-					font-size: rem($base-font-size);
+					font-size: rem($fs-base);
 					border-color: transparent;
 
 					@include box-sizing(border-box);
@@ -146,7 +146,7 @@ $panel-edge-radius: $border-radius;
 		}
 
 		h2, h3 {
-			font-size: rem($panel-btn-size + 3);
+			font-size: rem($panel-hdr-font-size + 4);
 			font-weight:400;
 		}
 

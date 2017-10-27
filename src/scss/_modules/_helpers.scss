@@ -48,10 +48,10 @@
 .text-truncate-lg {	max-width: 200px; }
 
 /* positions */
-.pos-a { position:absolute !important; }
+/*.pos-a { position:absolute !important; }
 .pos-r { position: relative !important; }
 .pos-s { position: static !important; }
-.pos-f { position: fixed !important;}
+.pos-f { position: fixed !important;}*/
 .pos-top { top: 0;}
 .pos-left { left: 0;}
 .pos-right { right: 0;}
@@ -65,17 +65,11 @@
 .fw-900 { font-weight: 900 !important; }
 .fw-n   { font-weight:normal !important; }
 
-/* alignments */
-.v-align-t { vertical-align: top; }
-.v-align-m { vertical-align: middle; }
-.v-align-b { vertical-align: bottom; }
-
-
 /* font sizes */
 .fs-nano { font-size: rem($fs-nano) !important}        /* 10px */
 .fs-xs   { font-size: rem($fs-xs) !important}          /* 12px */
 .fs-sm   { font-size: rem($fs-sm) !important}          /* 12.5px */
-.fs-b    { font-size: rem($base-font-size) !important} /* 13px */
+.fs-b    { font-size: rem($fs-base) !important} /* 13px */
 .fs-md   { font-size: rem($fs-md) !important}          /* 14px */
 .fs-lg   { font-size: rem($fs-lg) !important}          /* 15px */
 .fs-xl   { font-size: rem($fs-xl) !important}          /* 16px */
@@ -115,11 +109,11 @@
 .border-radius-0 { border-radius:0 !important; }
 
 /* progressbars */
-.progress-xs > .progress-bar { height: 5px; }
-.progress-sm > .progress-bar { height: 8px; }
-.progress-md > .progress-bar { height: 14px; }
-.progress-lg > .progress-bar { height: 20px; }
-.progress-xl > .progress-bar { height: 30px; }
+.progress-xs { height: 5px; }
+.progress-sm { height: 8px; }
+.progress-md { height: 14px; }
+.progress-lg { height: 20px; }
+.progress-xl { height: 30px; }
 
 /* rotate */
 .rotate-90 {

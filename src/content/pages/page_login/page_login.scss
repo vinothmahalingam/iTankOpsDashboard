@@ -29,7 +29,7 @@ html {
 			}
 
 			.blankpage-btn {
-				font-size: $fs-xl;
+				font-size: rem($fs-xl);
 				font-weight: 400;
 				padding:10px 15px;
 				margin:10px 0 5px;
@@ -38,7 +38,7 @@ html {
 
 		.blankpage-footer {
 			padding: 10px 0;
-			font-size: $fs-xs;
+			font-size: rem($fs-xs);
 			color: darken($page-bg, 50%);
 		}
 
@@ -47,7 +47,7 @@ html {
 			//bottom: 0;
 			color: rgba(255,255,255,0.9);
 			//width: 100%;
-			font-size: $fs-nano;
+			font-size: rem($fs-nano);
 		}
 
 
