@@ -20,13 +20,13 @@ gulp.task('compile-html', function () {
     }))
     /* clear directory names*/
     .pipe(rename({dirname: ''}))
-    /* write html files 
+    /* write html files */
     .pipe(prettify({
         indent_inner_html: false,
         preserve_newlines: true,
         end_with_newline: true,
         extra_liners: ['head', 'body']
-    }))*/
+    }))
     .pipe(gulp.dest(config.paths.path_dist))
     /* refresh server once complete */
     .pipe(connect.reload());
