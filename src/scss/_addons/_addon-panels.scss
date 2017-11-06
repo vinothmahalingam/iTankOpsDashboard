@@ -1,7 +1,7 @@
-$panel-padding: $fs-lg;
-$panel-hdr-padding: $panel-padding - 3;
-$panel-hdr-font-size: $fs-lg;
-$panel-hdr-height: 42px;
+$panel-padding: 15px;
+$panel-hdr-padding: $panel-padding;
+$panel-hdr-font-size: $fs-xl;
+$panel-hdr-height: 45px;
 $panel-btn-size: 16px;
 $panel-hdr-background: #fafafa;
 $panel-edge-radius: $border-radius;
@@ -11,25 +11,41 @@ $panel-edge-radius: $border-radius;
 	max-width: 100%;
 }
 
+.panel,
+.panel-placeholder {
+	margin-bottom: $grid-gutter-width;
+	border-radius: $border-radius;
+}
+
+.panel-hdr,
+.panel-title,
+.panel-toolbar {
+	display: flex;
+	align-items:center;
+}
+
+.panel-sortable:not(.panel-fullscreen) .panel-title {
+	cursor: move;
+}
+
 .panel {
 
 	position: relative;
-	display: flex;
-	flex-direction: column;
 	background-color: $white;
-
-	margin-bottom: $grid-gutter-width;
 	box-shadow: 0 1px 1px rgba(0,0,0,.05);
-	border-radius: $border-radius;
+
 
 	.panel-hdr {
-		
-		padding: 0 $panel-hdr-padding;
 		min-height: $panel-hdr-height;
+		@extend %common-animation-easeout;
 
-		display:flex;
-		align-items:center;
-		flex-direction:row;
+		> :first-child {
+			padding-left: $panel-hdr-padding;
+		}
+
+		> :last-child {
+			padding-right: $panel-hdr-padding;
+		}
 
 		@include box-sizing(border-box); 
 
@@ -39,77 +55,106 @@ $panel-edge-radius: $border-radius;
 		background: $panel-hdr-background;
 		border-radius: $panel-edge-radius $panel-edge-radius 0 0;
 
+		.panel-title {
+			flex: 1;
+			min-height: $panel-hdr-height - 2;
+
+			&:not(:only-child) {
+				margin-right: $panel-padding / 1.5;
+			}
+		}
+
+
 		h2, h3 {
 			font-size: rem($panel-hdr-font-size);
 			margin: 0;
-		}
+			display: inline-flex;
+			align-items: center;
+			color: inherit;
 
-		.panel-subtitle {
-			font-size: rem($panel-hdr-font-size - 1);
-			display: block;
-			font-weight: 400;
-			opacity: 0.8;
-			margin-left: $spacer * 0.5;
+			small {
+				display: inline-block;
+				margin:0;
+				opacity: 0.8;
+				font-weight: 400;
+				font-size: rem($panel-hdr-font-size - 2);
+				margin-left: $spacer * 0.5;
+			}
+
+			> [class*='fw-'] {
+				margin-left: 4px;
+			}
+
+			.panel-icon {
+				margin-right: $p-2;
+			}
+
 		}
 
 		.panel-toolbar {
 
-			display: flex;
-			align-items: center;
-			margin-left:auto;
+			
+			.btn-panel {
+				margin-left: $panel-padding / 3;
+				padding: 0;
+				width: $panel-btn-size;
+				height: $panel-btn-size;
+				font-size: rem($fs-base);
+				border-color: transparent;
 
-			.btn {
-				margin-left: 5px;
+				@include box-sizing(border-box);
 
-				&.btn-panel {
-					padding: 0;
-					width: $panel-btn-size;
-					height: $panel-btn-size;
-					font-size: rem($fs-base);
-					border-color: transparent;
+				border-radius: 50%;
+				opacity: 0.8;
+				border: 1px solid rgba(0,0,0,0.2);
 
-					@include box-sizing(border-box);
+				@extend %common-animation;
 
-					border-radius: 50%;
-					opacity: 0.8;
-					border: 1px solid rgba(0,0,0,0.2);
+				&:hover {
+					opacity: 1;
+					color: $white !important;
+				}
 
-					@extend %common-animation;
+				&[data-action="panel-collapse"] {
+					background: $fusion-50;
+				}
 
-					&:hover {
-						opacity: 1;
-						color: $white !important;
-					}
+				&[data-action="panel-fullscreen"] {
+					background: $warning-500;
+				}
 
+				&[data-action="panel-close"] {
+					background: $danger-500;
+				}
+
+			}
+
+			.btn-panel-flat {
+				min-width: $panel-hdr-height - 8px;
+				height: $panel-hdr-height - 2px;
+				font-size: rem($fs-base);
+				padding: 5px;
+				border-radius: 0px;
+				background: transparent;
+				color: inherit;
+								border-left: 1px solid rgba(0,0,0,.09);
+
+				&:hover {
+					background-color: rgba(0,0,0,.05);
 				}
 			}
 
-			[data-action="panel-collapse"] {
-				background: $fusion-50;
-			}
-
-			[data-action="panel-fullscreen"] {
-				background: $warning-500;
-			}
-
-			[data-action="panel-close"] {
-				background: $danger-500;
+			.btn-panel-flat:last-child {
+				border-top-right-radius: $border-radius - 1px;
 			}
 
 		}
 
-		&:hover {
-			.panel-buttons {
-				.btn {
-					opacity: 0.9;
-				}
-			}
-		}
 	}	
 
 	.panel-container {
 
-		padding: $p-3;
+		padding: $panel-padding;
 		@extend %common-animation-easeout;
 
 		border: 1px solid transparent;
@@ -125,7 +170,7 @@ $panel-edge-radius: $border-radius;
 
 	/* panel fullscreen */
 	&.panel-fullscreen {
-		position: fixed;
+		position: fixed !important;
 		z-index: 9999;
 		top: 0;
 		left: 0;
@@ -133,13 +178,16 @@ $panel-edge-radius: $border-radius;
 		height: 100%;
 		border-radius: 0;
 
+		display: flex;
+		flex-direction: column;
+
 		[data-action="panel-collapse"],
 		[data-action="panel-close"]  {
 			display: none;
 		}
 
 		.panel-hdr {
-			height:$header-height;
+			height: $header-height;
 			background: #fafafa;
 			border-radius: 0 !important;
 			box-shadow: 0 0.125rem 0.125rem -0.0625rem rgba(0, 0, 0, 0.1);
@@ -157,7 +205,7 @@ $panel-edge-radius: $border-radius;
 
 		.panel-container {
 			flex: 1;
-			overflow-x: auto;
+			overflow-y: auto;
 		}
 	}
 
@@ -173,21 +221,48 @@ $panel-edge-radius: $border-radius;
 
 	}
 
+	&.ui-sortable-helper {
+		box-shadow: 0 5px 16px 0 rgba(0,0,0,0.05), 0 5px 20px 0 rgba(0,0,0,0.09);
+	}
 }
 
+.panel-placeholder {
+	background-color: #FFC;
+    border: 1px dashed #A7A7A7;
+	box-sizing: border-box;
+	margin-bottom: $grid-gutter-width - 2px;
+	border-radius: $border-radius + 1;
+	position: relative;
+
+	/*&:before {
+		font-family: "Font Awesome\ 5 Light", "Roboto", "Helvetica Neue", Helvetica, Arial;
+		content:"\f021  Place here...";
+		position: absolute;
+		padding: 8px 10px;
+		height: 100%;
+		width: 100%;
+		font-size: 18px;
+		color: darken(#FFC, 60%);
+		text-shadow: $white 0 -1px;
+	}*/
+}
 
 .mod-panel-clean {
 
 	.panel {
 
 		.panel-hdr {
-			background-image: linear-gradient(to bottom,#f7f7f7,#fff);
+			background: $white;
+			background-image: linear-gradient(to bottom,#f7f7f7, $white);
 			border-bottom: 0;
-			padding: 15px 15px 12px;
 			
-			h2,h3 {
+			h2, h3 {
 				color: #333;
 				font-weight: 500;
+			}
+
+			.panel-title {
+				min-height: $panel-hdr-height;
 			}
 		}
 

@@ -26,15 +26,31 @@
 	
 	<div class="col-sm">
 
-		<div id="panel-1" class="panel">
+		<div id="panel-1" class="panel" data-panel-sortable="false">
 			<div class="panel-hdr">
-				<h2>
-					Button <span class="fw-300">Colors</span> 
-				</h2>
+				<div class="panel-title">				
+					<h2>
+						Button <span class="fw-300">Colors</span> 
+					</h2>
+				</div>
 				<div class="panel-toolbar">
-					<a href="#" class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" title="" data-original-title="Collapse"></a>
-					<a href="#" class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" title="" data-original-title="Fullscreen"></a>
-					<a href="#" class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" title="" data-original-title="Close"></a>
+					<a href="javascript:void(0);" class="btn btn-sm btn-default mr-2 no-ripple" data-toggle="dropdown" title="Change color">
+						<i class="fal fa-tint"></i>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right">
+						a
+					</div>
+					<div class="btn-group" role="group" aria-label="First group">
+						<button type="button" class="btn btn-sm btn-default" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse">
+							<i class="fal fa-window-minimize"></i>
+						</button>
+						<button type="button" class="btn btn-sm btn-default" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen">
+							<i class="fal fa-expand-arrows"></i>
+						</button>
+						<button type="button" class="btn btn-sm btn-default" data-action="panel-close" data-toggle="tooltip" data-original-title="Close">
+							<i class="fal fa-times"></i>
+						</button>
+					</div>
 				</div>
 			</div>
 			<div class="panel-container">
@@ -50,17 +66,27 @@
 
 		<div id="panel-2" class="panel">
 			<div class="panel-hdr">
-				<h2>
-					Button <span class="fw-300">Colors</span> 
-				</h2>
-				<div class="panel-subtitle">
-					 test description
+				<div class="panel-title">				
+					<h2>
+						Button <span class="fw-300">Colors</span> 
+					</h2>
 				</div>
-				<div class="panel-toolbar">
-					<button type="button" class="btn btn-default btn-pills btn-sm">Close</button>
-					<a href="#" class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" title="" data-original-title="Collapse"></a>
-					<a href="#" class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" title="" data-original-title="Fullscreen"></a>
-					<a href="#" class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" title="" data-original-title="Close"></a>
+				<div class="panel-toolbar pr-0">
+					<button class="btn btn-panel-flat" data-toggle="dropdown" title="Change color">
+						<i class="fal fa-tint"></i>
+					</button>
+					<div class="dropdown-menu dropdown-menu-right">
+					  a
+					</div>
+					<button class="btn btn-panel-flat" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse">
+						<i class="fal fa-minus"></i>
+					</button>
+					<button class="btn btn-panel-flat" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen">
+						<i class="fal fa-expand-arrows"></i>
+					</button>
+					<button class="btn btn-panel-flat" data-action="panel-close" data-toggle="tooltip" data-original-title="Close">
+						<i class="fal fa-times"></i>
+					</button>
 				</div>
 			</div>
 			<div class="panel-container">
@@ -77,15 +103,17 @@
 	</div>
 	<div class="col-sm">
 
-		<div class="panel">
+		<div id="panel-3" class="panel">
 			<div class="panel-hdr">
-				<h2>
-					Button <span class="fw-300">Colors</span> 
-				</h2>
+				<div class="panel-title">				
+					<h2>
+						Button <span class="fw-300">Colors</span> 
+					</h2>
+				</div>
 				<div class="panel-toolbar">
-					<a href="#" class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" title="" data-original-title="Collapse"></a>
-					<a href="#" class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" title="" data-original-title="Fullscreen"></a>
-					<a href="#" class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" title="" data-original-title="Close"></a>
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
 				</div>
 			</div>
 			<div class="panel-container">
@@ -95,14 +123,15 @@
 
 		<div id="panel-4" class="panel">
 			<div class="panel-hdr">
-				<h2>
-					Button <span class="fw-300">Colors</span> 
-				</h2>
+				<div class="panel-title">				
+					<h2>
+						Button <span class="fw-300">Colors</span> 
+					</h2>
+				</div>
 				<div class="panel-toolbar">
-					<button type="button" class="btn btn-default btn-pills btn-sm">Close</button>
-					<a href="#" class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" title="" data-original-title="COLLAPSE"></a>
-					<a href="#" class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" title="" data-original-title="Fullscreen"></a>
-					<a href="#" class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" title="" data-original-title="Close"></a>
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
 				</div>
 			</div>
 			<div class="panel-container">
@@ -118,12 +147,81 @@
 		
 	</div>
 
+</div>
 
+<div id="js-widget-grid">
+	<div class="row">
+		<div class="col-sm-6">
 
+			<div id="panel-5" class="panel">
+				<div class="panel-hdr">
+					<div class="panel-title">				
+						<h2>
+							Button <span class="fw-300">Colors</span> 
+						</h2>
+					</div>
+					<div class="panel-toolbar">
+						<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+						<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+						<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+					</div>
+				</div>
+				<div class="panel-container">
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-sm-6">
+
+			<div id="panel-6" class="panel">
+				<div class="panel-hdr">
+					<div class="panel-title">				
+						<h2>
+							<i class="fal fa-shield-alt mr-2"></i>
+							Button <span class="fw-300">Colors</span> 
+							<small>
+								test
+							</small>
+						</h2>
+					</div>
+					<div class="panel-toolbar">
+						<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+						<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+						<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+					</div>
+				</div>
+				<div class="panel-container">
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
 </div>
 
 {{/inline}}
 
-{{#*inline "scripts-block"}}{{/inline}}
+{{#*inline "scripts-block"}}
+<script src="js/panelwidget.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$('#content').panelWidget();
+		//$("#content").panelWidget('_initDestroy');
+	});	
+</script>
+{{/inline}}
 
 {{/layouts/main}}

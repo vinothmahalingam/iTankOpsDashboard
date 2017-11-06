@@ -70,7 +70,6 @@ $.fn.extend({
             $this.find("li.active").each(function() {
                 $(this).parents("ul")
                 	.parent("li")
-                    //.addClass("open") [disabled: creates a wierd jumping effect]
                 	.find("a:first")
                 	.attr('aria-expanded', true)
                 	.find("b:first")

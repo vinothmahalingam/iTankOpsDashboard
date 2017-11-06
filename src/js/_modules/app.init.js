@@ -967,7 +967,7 @@ var initApp = (function(app) {
 		 * DOC: only show this if debug state tree
 		 **/
 		 if (myapp_config.debugState)
-			console.log("Finished app.init() v" + myapp_config.VERSION + '\n' + "---------------------------");		
+			console.log("✔ Finished app.init() v" + myapp_config.VERSION + '\n' + "---------------------------");		
 	};
 
 	return app;
