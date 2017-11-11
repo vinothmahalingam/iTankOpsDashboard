@@ -2,7 +2,7 @@ $panel-padding: 15px;
 $panel-hdr-padding: $panel-padding;
 $panel-hdr-font-size: $fs-xl;
 $panel-hdr-height: 45px;
-$panel-btn-size: 16px;
+$panel-btn-size: 17px;
 $panel-hdr-background: #fafafa;
 $panel-edge-radius: $border-radius;
 
@@ -18,13 +18,12 @@ $panel-edge-radius: $border-radius;
 }
 
 .panel-hdr,
-.panel-title,
 .panel-toolbar {
 	display: flex;
 	align-items:center;
 }
 
-.panel-sortable:not(.panel-fullscreen) .panel-title {
+.panel-sortable:not(.panel-fullscreen):not(.panel-locked) h2 {
 	cursor: move;
 }
 
@@ -34,43 +33,57 @@ $panel-edge-radius: $border-radius;
 	background-color: $white;
 	box-shadow: 0 1px 1px rgba(0,0,0,.05);
 
+	/*&.panel-saving {
+		.panel-saving {
+			margin: 5px;
+			height: 15px;
+			width: 15px;
+			animation: spin 0.5s infinite linear;
+			border: 2px solid #2196F3;
+			border-right-color: transparent;
+			border-radius: 50%;
+		}
+	}*/
 
+	/* panel header */
 	.panel-hdr {
 		min-height: $panel-hdr-height;
+
 		@extend %common-animation-easeout;
-
-		> :first-child {
-			padding-left: $panel-hdr-padding;
-		}
-
-		> :last-child {
-			padding-right: $panel-hdr-padding;
-		}
-
 		@include box-sizing(border-box); 
 
 		border: 1px solid;
     	border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.17);
-
 		background: $panel-hdr-background;
 		border-radius: $panel-edge-radius $panel-edge-radius 0 0;
 
-		.panel-title {
+
+		/* add padding to first and last child */
+		> :first-child {
+			padding-left: $panel-hdr-padding;
+		}
+		> :last-child {
+			padding-right: $panel-hdr-padding;
+		}
+
+		/* adjusts title */
+		h2 {
 			flex: 1;
-			min-height: $panel-hdr-height - 2;
+			font-size: rem($panel-hdr-font-size);
+			margin: 0;
+			display: flex;
+			align-items:center;
+			line-height: $panel-hdr-height - 2;
+			color: inherit;
 
 			&:not(:only-child) {
 				margin-right: $panel-padding / 1.5;
 			}
-		}
 
 
-		h2, h3 {
-			font-size: rem($panel-hdr-font-size);
-			margin: 0;
-			display: inline-flex;
-			align-items: center;
-			color: inherit;
+			> [class*='fw-'] {
+				margin-left: 4px;
+			}
 
 			small {
 				display: inline-block;
@@ -81,25 +94,24 @@ $panel-edge-radius: $border-radius;
 				margin-left: $spacer * 0.5;
 			}
 
-			> [class*='fw-'] {
-				margin-left: 4px;
-			}
-
+			/* panel header icon */
 			.panel-icon {
 				margin-right: $p-2;
 			}
 
 		}
 
+		/* panel toolbar (sits inside panel header) */
 		.panel-toolbar {
 
-			
+			border-color: inherit;
+
 			.btn-panel {
 				margin-left: $panel-padding / 3;
+
 				padding: 0;
 				width: $panel-btn-size;
 				height: $panel-btn-size;
-				font-size: rem($fs-base);
 				border-color: transparent;
 
 				@include box-sizing(border-box);
@@ -115,21 +127,26 @@ $panel-edge-radius: $border-radius;
 					color: $white !important;
 				}
 
-				&[data-action="panel-collapse"] {
+				/* add default colors for action buttons */
+				&[data-action="panel-collapse"],
+				&.js-panel-collapse {
 					background: $fusion-50;
 				}
 
-				&[data-action="panel-fullscreen"] {
+				&[data-action="panel-fullscreen"],
+				&.js-panel-fullscreen {
 					background: $warning-500;
 				}
 
-				&[data-action="panel-close"] {
+				&[data-action="panel-close"],
+				&.js-panel-close {
 					background: $danger-500;
 				}
 
 			}
 
-			.btn-panel-flat {
+			/* alternative style to button-panel*/
+			/*.btn-panel-flat {
 				min-width: $panel-hdr-height - 8px;
 				height: $panel-hdr-height - 2px;
 				font-size: rem($fs-base);
@@ -142,8 +159,36 @@ $panel-edge-radius: $border-radius;
 				&:hover {
 					background-color: rgba(0,0,0,.05);
 				}
+			}*/
+
+			.btn-toolbar-master {
+				height: $panel-hdr-height - 2;
+				border-radius: 0;
+				margin-right: -$panel-padding;
+				border-top-right-radius: 3px;
+				margin-left: 10px;
+				padding: 0 11px;
+				background: transparent;
+				border-left: 1px solid;
+				border-left-color: inherit;
+				font-size: 23px;
+				color: inherit;
+
+				& + .dropdown-menu {
+					right: 0;
+					top: $panel-hdr-height - 1 !important;
+					left: auto !important;
+					border-color: inherit;
+					margin:0;
+					border-radius:0;
+					min-width: 150px;
+					border-color: rgba($fusion-500, 0.08);
+					border-top-color: transparent;
+					border-right-color: transparent;
+				}
 			}
 
+			/* we curve the last button to make it seamless with panel's border radius */
 			.btn-panel-flat:last-child {
 				border-top-right-radius: $border-radius - 1px;
 			}
@@ -152,10 +197,13 @@ $panel-edge-radius: $border-radius;
 
 	}	
 
+	/* panel container */
 	.panel-container {
 
 		padding: $panel-padding;
 		@extend %common-animation-easeout;
+
+		position: relative;
 
 		border: 1px solid transparent;
     	border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.17) rgba(0, 0, 0, 0.2);
@@ -182,23 +230,28 @@ $panel-edge-radius: $border-radius;
 		flex-direction: column;
 
 		[data-action="panel-collapse"],
-		[data-action="panel-close"]  {
+		.js-panel-collapse,
+		[data-action="panel-close"],
+		.js-panel-close  {
 			display: none;
 		}
 
+		/* make panel header bigger */
 		.panel-hdr {
 			height: $header-height;
 			background: #fafafa;
 			border-radius: 0 !important;
 			box-shadow: 0 0.125rem 0.125rem -0.0625rem rgba(0, 0, 0, 0.1);
+
+			/* make panel header bigger */
+			h2, h3 {
+				font-size: rem($panel-hdr-font-size + 4);
+				font-weight:400;
+			}
 		}
 
-		h2, h3 {
-			font-size: rem($panel-hdr-font-size + 4);
-			font-weight:400;
-		}
-
-		.btn-panel[data-action="panel-fullscreen"] {
+		[data-action="panel-fullscreen"],
+		.js-panel-fullscreen {
 			width:$panel-hdr-height/2 !important;
 			height:$panel-hdr-height/2 !important;
 		}
@@ -221,11 +274,38 @@ $panel-edge-radius: $border-radius;
 
 	}
 
+	/* panel locked */
+	&.panel-locked:not(.panel-fullscreen) {
+
+		.js-panel-locked {
+			font-weight: bold;
+		}
+
+		.panel-hdr + .panel-container:before {
+			font-family: 'nextgen-icons';
+			content: "\f2ae";
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			font-size: 15px;
+			color: #ffffff;
+			background: $danger-400;
+			border-radius: 50%;
+			padding: 1px 5px 2px;
+		}
+
+		.panel-hdr:active + .panel-container:before {
+			color: #ffffff;
+			background: $danger-400;	
+		}
+	}
+
 	&.ui-sortable-helper {
 		box-shadow: 0 5px 16px 0 rgba(0,0,0,0.05), 0 5px 20px 0 rgba(0,0,0,0.09);
 	}
 }
 
+/* panel placeholder */
 .panel-placeholder {
 	background-color: #FFC;
     border: 1px dashed #A7A7A7;
@@ -233,18 +313,6 @@ $panel-edge-radius: $border-radius;
 	margin-bottom: $grid-gutter-width - 2px;
 	border-radius: $border-radius + 1;
 	position: relative;
-
-	/*&:before {
-		font-family: "Font Awesome\ 5 Light", "Roboto", "Helvetica Neue", Helvetica, Arial;
-		content:"\f021  Place here...";
-		position: absolute;
-		padding: 8px 10px;
-		height: 100%;
-		width: 100%;
-		font-size: 18px;
-		color: darken(#FFC, 60%);
-		text-shadow: $white 0 -1px;
-	}*/
 }
 
 .mod-panel-clean {
@@ -256,14 +324,11 @@ $panel-edge-radius: $border-radius;
 			background-image: linear-gradient(to bottom,#f7f7f7, $white);
 			border-bottom: 0;
 			
-			h2, h3 {
+			h2 {
 				color: #333;
 				font-weight: 500;
 			}
 
-			.panel-title {
-				min-height: $panel-hdr-height;
-			}
 		}
 
 		.panel-container {

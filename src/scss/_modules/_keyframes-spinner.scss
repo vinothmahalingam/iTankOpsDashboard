@@ -30,3 +30,12 @@
   border-right-color: transparent;
   border-radius: 50%;
 }
+
+// fontawesome spinner faster
+.fa-spin-4x {
+  animation: a 0.5s infinite linear;
+}
+
+.fa-spin-2x {
+  animation: a 1s infinite linear;
+}

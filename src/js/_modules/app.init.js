@@ -734,7 +734,7 @@ var initApp = (function(app) {
 
 						var selectedPanel = $(this).closest('.panel');
 
-						$(this).closest('.panel').toggleClass("panel-collapse");
+						selectedPanel.toggleClass("panel-collapse");
 						
 						if (myapp_config.debugState)
 						console.log( "panel id:" + selectedPanel.attr('id') + " | action: collapse" );
@@ -751,7 +751,7 @@ var initApp = (function(app) {
 
 						var selectedPanel = $(this).closest('.panel');
 
-						$(this).closest('.panel').toggleClass('panel-fullscreen');
+						selectedPanel.toggleClass('panel-fullscreen');
 						myapp_config.root_.toggleClass('panel-fullscreen');
 
 						if (myapp_config.debugState)
@@ -781,6 +781,22 @@ var initApp = (function(app) {
 							//return selectedPanel.attr('id');
 
 						});
+
+						break;
+
+					/**
+					 * panel 'color change' trigger
+					 **/	
+
+					case ( actiontype === 'panel-setstyle' ):
+
+						var selectedHdr = $(this).closest('.panel-hdr'),
+							val = $(this).data('panel-setstyle');
+
+							selectedHdr.removeClassPrefix('bg-')
+							.addClass(val)
+							.closest('.panel')
+							.attr('data-panel-attstyle', '' + val + '');
 
 						break;
 

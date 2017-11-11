@@ -14,6 +14,17 @@
 .width-9 { width: $p-5 + $p-2 + $p-1 }
 .width-10 { width: $p-5 + $p-3 }
 
+.height-1 { height: $p-4; }
+.height-2 { height: $p-4 + $p-1; }
+.height-3 { height: $p-4 + $p-2; }
+.height-4 { height: $p-4 + $p-2 + $p-1; }
+.height-5 { height: $p-4 + $p-3; }
+.height-6 { height: $p-5; }
+.height-7 { height: $p-5 + $p-1 }
+.height-8 { height: $p-5 + $p-2 }
+.height-9 { height: $p-5 + $p-2 + $p-1 }
+.height-10 { height: $p-5 + $p-3 }
+
 /* line-heights */
 .l-h-n { line-height:normal; }
 
