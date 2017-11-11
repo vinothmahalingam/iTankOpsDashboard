@@ -2,7 +2,7 @@
 
     //"use strict"; 
 
-    var pluginName = 'panelWidget';
+    var pluginName = 'smartPanel';
 
     /**
      * Check for touch support and set right click events.
@@ -25,7 +25,7 @@
         this.obj = $(element);
         this.o = $.extend({}, $.fn[pluginName].defaults, options);
         this.objId = this.obj.attr('id');
-        this.widget = this.obj.find(this.o.widgets);
+        this.panel = this.obj.find(this.o.panels);
         this.storage = {enabled: this.o.localStorage};
         this.initialized = false;
         this.init();
@@ -38,19 +38,22 @@
          *
          * @param:
          **/
-        _runLoaderWidget: function (elm) {
+        _runPanelLoader: function (elm) {
             var self = this;
-            elm.closest(self.o.widgets)
+
+            if (self.o.localStorage === true) {
+                elm.closest(self.o.panels)
                 .find('.panel-saving')
                 .stop(true, true)
                 .fadeIn(100)
                 .delay(500)
                 .fadeOut(100);
+            }
 
-            /*elm.closest(self.o.widgets)
+            /*elm.closest(self.o.panels)
                 .addClass('panel-saving')
                 .delay(600).queue(function(){
-                    elm.closest(self.o.widgets)
+                    elm.closest(self.o.panels)
                     .removeClass('panel-saving')
                     .dequeue()
                 }); */   
@@ -61,10 +64,10 @@
         _loadKeys : function () {
             
             var self = this;
-            var widget_url = self.o.pageKey || location.pathname;
+            var panel_url = self.o.pageKey || location.pathname;
 
-            self.storage.keySettings = 'panelWidget_settings_' + widget_url + '_' + self.objId;
-            self.storage.keyPosition = 'panelWidget_position_' + widget_url + '_' + self.objId;
+            self.storage.keySettings = 'smartPanel_settings_' + panel_url + '_' + self.objId;
+            self.storage.keyPosition = 'smartPanel_position_' + panel_url + '_' + self.objId;
         },
 
  
@@ -73,14 +76,14 @@
          *
          * @param:
          **/
-        _saveSettingsWidget: function () {
+        _savePanelSettings: function () {
 
             var self = this;
             var storage = self.storage;
 
             self._loadKeys();
 
-            var storeSettings = self.obj.find(self.o.widgets)
+            var storeSettings = self.obj.find(self.o.panels)
                 .map(function () {
                     var storeSettingsStr = {};
                     storeSettingsStr.id = $(this)
@@ -95,7 +98,7 @@
                 }).get();
 
             var storeSettingsObj = JSON.stringify({
-                'widget': storeSettings
+                'panel': storeSettings
             });
 
             /* Place it in the storage(only if needed) */
@@ -122,7 +125,7 @@
          *
          * @param:
          **/
-        _savePositionWidget: function () {
+        _savePanelPosition: function () {
 
             var self = this;
             var storage = self.storage;
@@ -132,7 +135,7 @@
             var mainArr = self.obj.find(self.o.grid + '.sortable-grid')
                 .map(function () {
                     var subArr = $(this)
-                        .children(self.o.widgets)
+                        .children(self.o.panels)
                         .map(function () {
                             return {
                                 'id': $(this).attr('id')
@@ -179,18 +182,18 @@
              **/
             if (!$('#' + self.objId)
                 .length) {
-                alert('Your widget ID is missing!');
+                alert('Your panel ID is missing!');
             }
 
             /**
              * This will add an extra class that we use to store the
-             * widgets in the right order.(savety)
+             * panels in the right order.(savety)
              **/
 
             $(self.o.grid)
                 .each(function () {
                     if ($(this)
-                        .find(self.o.widgets)
+                        .find(self.o.panels)
                         .length) {
                         $(this)
                             .addClass('sortable-grid');
@@ -198,7 +201,7 @@
                 });
 
             //*****************************************************************//
-            //////////////////////// SET POSITION WIDGET ////////////////////////
+            //////////////////////// SET POSITION PANEL /////////////////////////
             //*****************************************************************//
 
             /**
@@ -209,7 +212,7 @@
                 var jsonPosition = JSON.parse(self.storage.getKeyPosition);
 
                 /**
-                 * Loop the data, and put every widget on the right place.
+                 * Loop the data, and put every panels on the right place.
                  **/
                 for (var key in jsonPosition.grid) {
                     var changeOrder = self.obj.find(self.o.grid + '.sortable-grid')
@@ -222,7 +225,7 @@
             }
 
             //*****************************************************************//
-            /////////////////////// SET SETTINGS WIDGET /////////////////////////
+            /////////////////////// SET SETTINGS PANEL //////////////////////////
             //*****************************************************************//
 
             /**
@@ -235,57 +238,57 @@
                 console.log(self.storage.getKeySettings)
 
                 /**
-                 * Loop the data and hide/show the widgets and set the inputs in
+                 * Loop the data and hide/show the panels and set the inputs in
                  * panel to checked(if hidden) and add an indicator class to the div.
-                 * Loop all labels and update the widget titles.
+                 * Loop all labels and update the panel titles.
                  **/
-                for (var key in jsonSettings.widget) {
-                    var widgetId = $('#' + jsonSettings.widget[key].id);
+                for (var key in jsonSettings.panel) {
+                    var panelId = $('#' + jsonSettings.panel[key].id);
 
                     /**
                      * Set a style(if present).
                      **/
-                    if (jsonSettings.widget[key].style) {
-                        widgetId.attr('data-panel-attstyle', '' + jsonSettings.widget[key].style + '')
+                    if (jsonSettings.panel[key].style) {
+                        panelId.attr('data-panel-attstyle', '' + jsonSettings.panel[key].style + '')
                             .children('.panel-hdr')
                             .removeClassPrefix('bg-')
-                            .addClass(jsonSettings.widget[key].style);
+                            .addClass(jsonSettings.panel[key].style);
                     }
 
                     /**
-                     * Hide/show widget.
+                     * Hide/show panel.
                      **/
-                    /*if (jsonSettings.widget[key].hidden == 1) {
-                        widgetId.hide(1);
+                    /*if (jsonSettings.panel[key].hidden == 1) {
+                        panelId.hide(1);
                     } else {
-                        widgetId.show(1)
-                            .removeAttr('data-widget-hidden');
+                        panelId.show(1)
+                            .removeAttr('data-panel-hidden');
                     }*/
 
                     /**
-                     * Toggle content widget.
+                     * Toggle content panel.
                      **/
-                    if (jsonSettings.widget[key].collapsed == 1) {
-                        widgetId.addClass('panel-collapse');
+                    if (jsonSettings.panel[key].collapsed == 1) {
+                        panelId.addClass('panel-collapse');
                     }
 
                     /**
-                     * Locked widget from sorting.
+                     * Locked panel from sorting.
                      **/
-                    if (jsonSettings.widget[key].locked == 1) {
-                        widgetId.addClass('panel-locked');
+                    if (jsonSettings.panel[key].locked == 1) {
+                        panelId.addClass('panel-locked');
                     }
 
                 }
             }
 
             //*****************************************************************//
-            ////////////////////////// LOOP ALL WIDGETS /////////////////////////
+            ////////////////////////// LOOP ALL PANELS //////////////////////////
             //*****************************************************************//
 
-            self.widget.each(function () {
+            self.panel.each(function () {
 
-                var tWidget = $(this),
+                var tPanel = $(this),
                     closeButton,
                     fullscreenButton,
                     collapseButton,
@@ -302,75 +305,75 @@
 
 
                     /**
-                     * Adding a helper class to all sortable widgets, this will be
-                     * used to find the widgets that are sortable, it will skip the widgets
-                     * that have the dataset 'widget-sortable="false"' set to false.
+                     * Adding a helper class to all sortable panels, this will be
+                     * used to find the panels that are sortable, it will skip the panels
+                     * that have the dataset 'panels-sortable="false"' set to false.
                      **/
-                    if (self.o.sortable === true && tWidget.data('panel-sortable') === undefined  /*&& !tWidget.hasClass("panel-locked")*/ ) {
-                        tWidget.addClass('panel-sortable');
+                    if (self.o.sortable === true && tPanel.data('panel-sortable') === undefined  /*&& !tPanel.hasClass("panel-locked")*/ ) {
+                        tPanel.addClass('panel-sortable');
                     }
 
                     /**
-                    * Add a delete button to the widget header (if set to true).
+                    * Add a delete button to the panel header (if set to true).
                     **/
-                    if (self.o.closeButton === true && tWidget.data('panel-close') === undefined) {
-                        closeButton = '<button class="btn btn-panel js-panel-close" data-toggle="tooltip" data-original-title="Close"></button>';
+                    if (self.o.closeButton === true && tPanel.data('panel-close') === undefined) {
+                        closeButton = '<a href="#" class="btn btn-panel js-panel-close" data-toggle="tooltip" data-original-title="Close"></a>';
                     } else {
                         closeButton = '';
                     }
 
                     /**
-                    * Add a delete button to the widget header (if set to true).
+                    * Add a delete button to the panel header (if set to true).
                     **/
-                    if (self.o.fullscreenButton === true && tWidget.data('panel-fullscreen') === undefined) {
-                        fullscreenButton = '<button class="btn btn-panel js-panel-fullscreen" data-toggle="tooltip" data-original-title="Close"></button>';
+                    if (self.o.fullscreenButton === true && tPanel.data('panel-fullscreen') === undefined) {
+                        fullscreenButton = '<a href="#" class="btn btn-panel js-panel-fullscreen" data-toggle="tooltip" data-original-title="Close"></a>';
                     } else {
                         fullscreenButton = '';
                     }
 
                     /**
-                    * Add a delete button to the widget header (if set to true).
+                    * Add a delete button to the panel header (if set to true).
                     **/
-                    if (self.o.collapseButton === true && tWidget.data('panel-collapse') === undefined) {
-                        collapseButton = '<button class="btn btn-panel js-panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>'
+                    if (self.o.collapseButton === true && tPanel.data('panel-collapse') === undefined) {
+                        collapseButton = '<a href="#" class="btn btn-panel js-panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></a>'
                     } else {
                         collapseButton = '';
                     }
 
                     /**
-                    * Add a delete button to the widget header (if set to true).
+                    * Add a delete button to the panel header (if set to true).
                     **/
-                    if (self.o.lockedButton === true && tWidget.data('panel-locked') === undefined) {
-                        lockedButton = '<button class="dropdown-item pt-2 pr-3 pb-2 pl-3 js-panel-locked"><span data-i18n="drpdwn.lockpanel">Lock Panel</span></button>'
+                    if (self.o.lockedButton === true && tPanel.data('panel-locked') === undefined) {
+                        lockedButton = '<a href="#" class="dropdown-item pt-2 pr-3 pb-2 pl-3 js-panel-locked"><span data-i18n="drpdwn.lockpanel">Lock Panel</span></a>'
                     } else {
                         lockedButton = '';
                     }
 
                     /**
-                    * Add a delete button to the widget header (if set to true).
+                    * Add a delete button to the panel header (if set to true).
                     **/
-                    if (self.o.refreshButton === true && tWidget.data('panel-refresh') === undefined) {
-                        refreshButton = '<button class="dropdown-item pt-2 pr-3 pb-2 pl-3 js-panel-refresh"><span data-i18n="drpdwn.refreshpanel">Refresh Panel</span></button>'
+                    if (self.o.refreshButton === true && tPanel.data('panel-refresh') === undefined) {
+                        refreshButton = '<a href="#" class="dropdown-item pt-2 pr-3 pb-2 pl-3 js-panel-refresh"><span data-i18n="drpdwn.refreshpanel">Refresh Panel</span></a>'
                     } else {
                         refreshButton = '';
                     }
 
                     /**
-                    * Add a delete button to the widget header (if set to true).
+                    * Add a delete button to the panel header (if set to true).
                     **/
-                    if (self.o.colorButton === true && tWidget.data('panel-color') === undefined) {
-                        colorButton = '<div class="dropdown-item d-flex align-items-center pt-2 pr-3 pb-2 pl-3">\
+                    if (self.o.colorButton === true && tPanel.data('panel-color') === undefined) {
+                        colorButton = ' <div class="dropdown-item d-flex align-items-center pt-2 pr-3 pb-2 pl-3">\
                                             <span data-i18n="drpdwn.panelcolor">Panel Color</span>\
                                             <i class="ni ni-chevron-right ml-auto"></i>\
                                             <div class="dropdown-item-menu float-sm-left p-2 d-flex flex-wrap" style="width: 111px">\
-                                                <button class="btn btn-m-l d-inline-block btn-secondary width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-secondary"></button>\
-                                                <button class="btn btn-m-l d-inline-block btn-warning width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-warning-500"></button>\
-                                                <button class="btn btn-m-l d-inline-block btn-danger width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-danger-500"></button>\
-                                                <button class="btn btn-m-l d-inline-block btn-info width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-info-500"></button>\
-                                                <button class="btn btn-m-l d-inline-block btn-primary width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-primary-500"></button>\
-                                                <button class="btn btn-m-l d-inline-block btn-success width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-success-500"></button>\
-                                                <button class="btn btn-m-l d-inline-block bg-fusion-500 width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-fusion-500"></button>\
-                                                <button class="btn btn-m-l d-inline-block width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle=""></button>\
+                                                <a href="#" class="btn btn-m-l d-inline-block btn-secondary width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-secondary"></a>\
+                                                <a href="#" class="btn btn-m-l d-inline-block btn-warning width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-warning-500"></a>\
+                                                <a href="#" class="btn btn-m-l d-inline-block btn-danger width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-danger-500"></a>\
+                                                <a href="#" class="btn btn-m-l d-inline-block btn-info width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-info-500"></a>\
+                                                <a href="#" class="btn btn-m-l d-inline-block btn-primary width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-primary-500"></a>\
+                                                <a href="#" class="btn btn-m-l d-inline-block btn-success width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-success-500"></a>\
+                                                <a href="#" class="btn btn-m-l d-inline-block bg-fusion-500 width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-fusion-500"></a>\
+                                                <a href="#" class="btn btn-m-l d-inline-block width-1 height-1 rounded-0 bg-faded js-panel-color" data-panel-setstyle=""></a>\
                                             </div>\
                                         </div>'
                     } else {
@@ -378,7 +381,7 @@
                     }
 
                     /**
-                     * Prepend the image to the widget header.
+                     * Prepend the image to the panel header.
                      **/
                     thisHeader.append(
                         '<div class="panel-saving mr-2" style="display:none"><i class="fal fa-spinner-third fa-spin-4x fs-xl"></i></div>'
@@ -411,14 +414,14 @@
                      * Add a button wrapper to the header.
                      **/
                     if (lockedButton !== '' || colorButton !== '' || refreshButton !== '') {
-                        thisHeader.append('<div class="panel-toolbar"><button class="btn btn-toolbar-master" data-toggle="dropdown"><i class="fal fa-ellipsis-v"></i></button><div class="dropdown-menu dropdown-menu-custom dropdown-menu-right p-0">' + formatDropdownButtons + '</div></div>');
+                        thisHeader.append('<div class="panel-toolbar"><a href="#" class="btn btn-toolbar-master" data-toggle="dropdown"><i class="fal fa-ellipsis-v"></i></a><div class="dropdown-menu dropdown-menu-custom dropdown-menu-right p-0">' + formatDropdownButtons + '</div></div>');
                     }    
 
 
                     /**
                      * Adding roles to some parts.
                      **/
-                    tWidget.attr('role', 'widget')
+                    tPanel.attr('role', 'widget')
                         .children('div')
                         .attr('role', 'content')
                         .prev('.panel-hdr')
@@ -433,14 +436,14 @@
             //******************************************************************//
 
             /**
-             * jQuery UI soratble, this allows users to sort the widgets.
+             * jQuery UI soratble, this allows users to sort the panels.
              * Notice that this part needs the jquery-ui core to work.
              **/
             if (self.o.sortable === true && jQuery.ui) {
                 var sortItem = self.obj.find(self.o.grid + '.sortable-grid')
-                    .not('[data-widget-excludegrid]');
+                    .not('[data-panel-excludegrid]');
                 sortItem.sortable({
-                    items: sortItem.find(self.o.widgets + '.panel-sortable'),
+                    items: sortItem.find(self.o.panels + '.panel-sortable'),
                     connectWith: sortItem,
                     placeholder: self.o.placeholderClass,
                     cursor: 'move',
@@ -454,10 +457,10 @@
                     forcePlaceholderSize: true,
                     forceHelperSize: true,
                     update: function (event, ui) {
-                        /* run pre-loader in the widget */
-                        self._runLoaderWidget(ui.item.children());
+                        /* run pre-loader in the panel */
+                        self._runPanelLoader(ui.item.children());
                         /* store the positions of the plugins */
-                        self._savePositionWidget();
+                        self._savePanelPosition();
                         /**
                          * Run the callback function.
                          **/
@@ -544,15 +547,15 @@
         _clickEvents: function () {
 
             var self = this;
-            var headers = self.widget.children('.panel-hdr');
+            var headers = self.panel.children('.panel-hdr');
 
             /**
-             * Allow users to toggle the content of the widgets.
+             * Allow users to toggle the content of the panels.
              **/
             headers.on(clickEvent, '.js-panel-collapse', function (e) {
 
-                var tWidget = $(this);
-                var pWidget = tWidget.closest(self.o.widgets);
+                var tPanel = $(this);
+                var pPanel = tPanel.closest(self.o.panels);
 
                 /**
                  * Run function for the indicator image.
@@ -566,36 +569,36 @@
                 /**
                  * Run function for the indicator image.
                  **/
-                pWidget.toggleClass("panel-collapse");
+                pPanel.toggleClass("panel-collapse");
 
                 /**
                  * Run function for the indicator image.
                  **/
-                self._runLoaderWidget(tWidget);
+                self._runPanelLoader(tPanel);
 
 
                 /**
                  * Run the callback function.
                  **/
                 if (typeof self.o.onCollapse == 'function') {
-                    self.o.onCollapse.call(this, pWidget);
+                    self.o.onCollapse.call(this, pPanel);
                 }
 
                 /**
                  * Lets save the setings.
                  **/
-                self._saveSettingsWidget();             
+                self._savePanelSettings();             
                 
                 e.preventDefault();
             });
 
             /**
-             * Allow users to toggle the content of the widgets.
+             * Allow users to toggle the content of the panels.
              **/
             headers.on(clickEvent, '.js-panel-fullscreen', function (e) {
 
-                var tWidget = $(this);
-                var pWidget = tWidget.closest(self.o.widgets);
+                var tPanel = $(this);
+                var pPanel = tPanel.closest(self.o.panels);
 
                 /**
                  * Run function for the indicator image.
@@ -609,32 +612,32 @@
                 /**
                  * Run function for the indicator image.
                  **/
-                pWidget.toggleClass("panel-fullscreen");
+                pPanel.toggleClass("panel-fullscreen");
                 myapp_config.root_.toggleClass('panel-fullscreen');
 
                 /**
                  * Run function for the indicator image.
                  **/
-                self._runLoaderWidget(tWidget);
+                self._runPanelLoader(tPanel);
 
 
                 /**
                  * Run the callback function.
                  **/
                 if (typeof self.o.onFullscreen == 'function') {
-                    self.o.onFullscreen.call(this, pWidget);
+                    self.o.onFullscreen.call(this, pPanel);
                 }
 
                 e.preventDefault();
             });
 
             /**
-             * Allow users to toggle the content of the widgets.
+             * Allow users to toggle the content of the panels.
              **/
             headers.on(clickEvent, '.js-panel-close', function (e) {
 
-                var tWidget = $(this);
-                var pWidget = tWidget.closest(self.o.widgets);
+                var tPanel = $(this);
+                var pPanel = tPanel.closest(self.o.panels);
 
                 /**
                  * Run function for the indicator image.
@@ -648,34 +651,34 @@
                 /**
                  * Run function for the indicator image.
                  **/
-                pWidget.fadeOut(500,function(){
+                pPanel.fadeOut(500,function(){
                     /* remove panel */
                     $(this).remove();
                     /**
                      * Run the callback function.
                      **/
                     if (typeof self.o.onClose == 'function') {
-                        self.o.onClose.call(this, pWidget);
+                        self.o.onClose.call(this, pPanel);
                     }
                 });  
 
                 /**
                  * Run function for the indicator image.
                  **/
-                self._runLoaderWidget(tWidget);
+                self._runPanelLoader(tPanel);
 
                 e.preventDefault();
             });
 
             /**
-             * Allow users to toggle the content of the widgets.
+             * Allow users to toggle the content of the panels.
              **/
             headers.on(clickEvent, '.js-panel-color', function (e) {
 
-                var tWidget = $(this);
-                var pWidget = tWidget.closest(self.o.widgets);
-                var selectedHdr = tWidget.closest('.panel-hdr');
-                var val = tWidget.data('panel-setstyle');
+                var tPanel = $(this);
+                var pPanel = tPanel.closest(self.o.panels);
+                var selectedHdr = tPanel.closest('.panel-hdr');
+                var val = tPanel.data('panel-setstyle');
 
                 /**
                  * Run the callback function.
@@ -689,52 +692,79 @@
                  * Run the callback function.
                  **/
                 if (typeof self.o.onColor == 'function') {
-                    self.o.onColor.call(this, pWidget);
+                    self.o.onColor.call(this, pPanel);
                 }
 
                 /**
                  * Run function for the indicator image.
                  **/
-                self._runLoaderWidget(tWidget);
+                self._runPanelLoader(tPanel);
 
                 /**
                  * Lets save the setings.
                  **/
-                self._saveSettingsWidget();
+                self._savePanelSettings();
 
                 e.preventDefault();
             });
 
             /**
-             * Allow users to toggle the content of the widgets.
+             * Allow users to toggle the content of the panels.
              **/
             headers.on(clickEvent, '.js-panel-locked', function (e) {
 
-                var tWidget = $(this);
-                var pWidget = tWidget.closest(self.o.widgets);
+                var tPanel = $(this);
+                var pPanel = tPanel.closest(self.o.panels);
 
                 /**
                  * Run function for the indicator image.
                  **/
-                pWidget.toggleClass("panel-locked");
+                pPanel.toggleClass('panel-locked');
 
                 /**
                  * Run function for the indicator image.
                  **/
-                self._runLoaderWidget(tWidget);
+                self._runPanelLoader(tPanel);
 
 
                 /**
                  * Run the callback function.
                  **/
                 if (typeof self.o.onLocked == 'function') {
-                    self.o.onLocked.call(this, pWidget);
+                    self.o.onLocked.call(this, pPanel);
                 }
 
                 /**
                  * Lets save the setings.
                  **/
-                self._saveSettingsWidget();             
+                self._savePanelSettings();             
+                
+                e.preventDefault();
+            });
+
+            /**
+             * Allow users to toggle the content of the panels.
+             **/
+            headers.on(clickEvent, '.js-panel-refresh', function (e) {
+
+                var tPanel = $(this);
+                var pPanel = tPanel.closest(self.o.panels);
+
+                /**
+                 * Run function for the indicator image.
+                 **/
+                pPanel.addClass('panel-refresh')
+                    .delay(2000).queue(function(){
+                        pPanel.removeClass('panel-refresh').dequeue()
+                    }); 
+
+
+                /**
+                 * Run the callback function.
+                 **/
+                if (typeof self.o.onRefresh == 'function') {
+                    self.o.onRefresh.call(this, pPanel);
+                }       
                 
                 e.preventDefault();
             });
@@ -751,10 +781,10 @@
         _initDestroy: function () {
             var self = this, 
             namespace = '.' + pluginName, 
-            sortItem = self.obj.find(self.o.grid + '.sortable-grid').not('[data-widget-excludegrid]');
-            self.widget.removeClass('panel-sortable');
+            sortItem = self.obj.find(self.o.grid + '.sortable-grid').not('[data-panel-excludegrid]');
+            self.panel.removeClass('panel-sortable');
             sortItem.sortable('destroy');
-            self.widget.children('.panel-hdr').off(namespace);
+            self.panel.children('.panel-hdr').off(namespace);
             $(self.o.deletePositionKey).off(namespace);
             $(window).off(namespace);
             self.obj.removeData(pluginName);
@@ -783,7 +813,7 @@
 
     $.fn[pluginName].defaults = {
         grid: '[class*="col-"]',
-        widgets: '.panel',
+        panels: '.panel',
         placeholderClass: 'panel-placeholder',
         dragHandle: '> .panel-hdr > h2',
         localStorage: true,

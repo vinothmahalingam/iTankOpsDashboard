@@ -173,6 +173,8 @@ $panel-edge-radius: $border-radius;
 				border-left-color: inherit;
 				font-size: 23px;
 				color: inherit;
+				display: flex;
+    			align-items: center;
 
 				& + .dropdown-menu {
 					right: 0;
@@ -214,6 +216,28 @@ $panel-edge-radius: $border-radius;
 		&:only-child {
 			padding: $panel-padding;
 		}
+	}
+
+	/* panel refresh */
+	&.panel-refresh {
+
+		position: relative;
+
+		.panel-container:before {
+			content: "";
+			background:rgba($white, 0.5);
+			position: absolute;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			display: block;
+		}
+
+		.js-panel-refresh {
+			opacity: 0.5;
+		}
+
 	}
 
 	/* panel fullscreen */
