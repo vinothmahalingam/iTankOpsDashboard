@@ -5159,7 +5159,7 @@ var effect = $.effects;
  */
 
 
-var effectSlide = $.effects.effect.slide = function( o, done ) {
+/*var effectSlide = $.effects.effect.slide = function( o, done ) {
 
 	// Create element
 	var el = $( this ),
@@ -5206,7 +5206,7 @@ var effectSlide = $.effects.effect.slide = function( o, done ) {
 		}
 	});
 };
-
+*/
 
 
 }));

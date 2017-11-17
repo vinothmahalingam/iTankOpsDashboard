@@ -1,0 +1,158 @@
+{{#> 
+	layouts/main 
+	title="SmartPanels" 
+	pagename="extensions_smartpanels" 
+	category_1="Extensions" 
+	heading="<i class='subheader-icon fal fa-shield-check'></i> SmartPanels" 
+	pagedescription="Panels can be used in almost any setuation, helping wrap everything in a slick & lightweight container"
+}}
+
+{{#*inline "head-block"}}{{/inline}}
+
+{{#*inline "header-space-block"}}
+<div class="btn-group m-0" data-toggle="buttons">
+	<label class="btn btn-secondary active m-0" aria-pressed="true" data-action="toggle" data-class="mod-panel-clean">
+		<input type="radio" name="options" id="option1" checked=""> Default Panel
+	</label>
+	<label class="btn btn-secondary m-0" aria-pressed="true" data-action="toggle" data-class="mod-panel-clean">
+		<input type="radio" name="options" id="option2"> Clean Panel
+	</label>
+</div>
+{{/inline}}
+
+{{#*inline "content-block"}}
+
+<div class="row">
+	
+	<div class="col-md-6">
+
+		<div id="panel-1" class="panel" {{!-- data-panel-lock="false" data-panel-refresh="false" data-panel-color="false" data-refresh-timer="1000" --}}>
+			<div class="panel-hdr">	
+				<h2>
+					Button <span class="fw-300">Colors</span> 
+				</h2>
+			</div>
+			<div class="panel-container">
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+			</div>
+		</div>
+
+		<div id="panel-2" class="panel">
+			<div class="panel-hdr">		
+				<h2>
+					Button <span class="fw-300">Colors</span> 
+				</h2>
+			</div>
+			<div class="panel-container">
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+			</div>
+		</div>
+		
+	</div>
+	<div class="col-md-6">
+
+		<div id="panel-3" class="panel">
+			<div class="panel-hdr">
+				<h2>
+					Button <span class="fw-300">Colors</span> 
+				</h2>
+			</div>
+			<div class="panel-container">
+				My body text...
+			</div>
+		</div>
+
+		<div id="panel-4" class="panel">
+			<div class="panel-hdr">				
+				<h2>
+					Button <span class="fw-300">Colors</span> 
+				</h2>
+			</div>
+			<div class="panel-container">
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+			</div>
+		</div>
+		
+	</div>
+
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+
+		<div id="panel-5" class="panel">
+			<div class="panel-hdr">				
+				<h2>
+					Button <span class="fw-300">Colors</span> 
+				</h2>
+			</div>
+			<div class="panel-container">
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+			</div>
+		</div>
+
+	</div>
+	<div class="col-md-6">
+
+		<div id="panel-6" class="panel">
+			<div class="panel-hdr">			
+				<h2>
+					<i class="fal fa-shield-alt mr-2"></i>
+					Button <span class="fw-300">Colors</span> 
+					<small>
+						test
+					</small>
+				</h2>
+			</div>
+			<div class="panel-container">
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+				<p>tewst</p>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+{{/inline}}
+
+{{#*inline "scripts-block"}}
+{{!-- <script src="js/panelwidget.js"></script> --}}
+<script src="../src/custom/plugins/smartpanels/smartpanels.js"></script>
+
+<script type="text/javascript">
+/* Activate smart panels */
+$('#content').smartPanel();
+</script>
+{{/inline}}
+
+{{/layouts/main}}

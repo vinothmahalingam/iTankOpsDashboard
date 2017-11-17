@@ -46,6 +46,12 @@ ul.list-verticle {
 	visibility: hidden;
 	display: block;
 	@include drop-shadow(0, 2px, 10px, 0.2);
+
+	.dropdown-item {
+		padding: $spacer * 0.5 $spacer * 1;
+		font-weight: 400;
+		cursor: pointer;
+	}
 }
 
 .show {
@@ -107,7 +113,7 @@ ul.list-verticle {
 		list-style: none;
 		position: absolute;
 		top: -1px;
-		left: 95%;
+		left: 100%;
 		background:$white;
 		border: 1px solid $dropdown-border-color;
 		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -126,7 +132,7 @@ ul.list-verticle {
 		}
 
 		&.float-sm-left {
-			right: 95%;
+			right: 100%;
 			left: auto;
 		}
 	}

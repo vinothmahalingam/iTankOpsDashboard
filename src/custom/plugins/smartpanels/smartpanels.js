@@ -58,7 +58,7 @@
                     .dequeue()
                 }); */   
 
-            initApp.accessIndicator();
+            //initApp.accessIndicator();
         },
 
         _loadKeys : function () {
@@ -106,7 +106,8 @@
                 localStorage.setItem(storage.keySettings, storeSettingsObj);
                 storage.getKeySettings = storeSettingsObj;
 
-                console.log(storeSettingsObj)
+                if (myapp_config.debugState)
+                    console.log("storeSettingsObj:" + storeSettingsObj)
             }
 
             /**
@@ -116,7 +117,8 @@
             if (typeof self.o.onSave == 'function') {
                 self.o.onSave.call(this, null, storeSettingsObj, storage.keySettings);
 
-                console.log("call back: " + storage.keySettings)
+                if (myapp_config.debugState)
+                    console.log("keySettings: " + storage.keySettings)
             }
         },
 
@@ -200,9 +202,10 @@
                     }
                 });
 
-            //*****************************************************************//
-            //////////////////////// SET POSITION PANEL /////////////////////////
-            //*****************************************************************//
+
+            /**
+             * SET POSITION PANEL
+             **/
 
             /**
              * Run if data is present.
@@ -224,9 +227,9 @@
 
             }
 
-            //*****************************************************************//
-            /////////////////////// SET SETTINGS PANEL //////////////////////////
-            //*****************************************************************//
+            /**
+             * SET SETTINGS PANEL
+             **/
 
             /**
              * Run if data is present.
@@ -235,7 +238,8 @@
 
                 var jsonSettings = JSON.parse(self.storage.getKeySettings);
 
-                console.log(self.storage.getKeySettings)
+                if (myapp_config.debugState)
+                    console.log("Panel settings loaded: " + self.storage.getKeySettings)
 
                 /**
                  * Loop the data and hide/show the panels and set the inputs in
@@ -282,10 +286,9 @@
                 }
             }
 
-            //*****************************************************************//
-            ////////////////////////// LOOP ALL PANELS //////////////////////////
-            //*****************************************************************//
-
+            /**
+             * LOOP ALL PANELS
+             **/            
             self.panel.each(function () {
 
                 var tPanel = $(this),
@@ -295,26 +298,27 @@
                     lockedButton,
                     refreshButton,
                     colorButton,
-                    thisHeader = $(this).children('.panel-hdr');
+                    resetButton,
+                    customButton,
+                    thisHeader = $(this).children('.panel-hdr'),
+                    thisContainer = $(this).children('.panel-container');
 
                 /**
                  * Dont double wrap(check).
                  **/
-                if (!thisHeader.parent()
-                    .attr('role')) {
-
+                if (!thisHeader.parent().attr('role')) {
 
                     /**
                      * Adding a helper class to all sortable panels, this will be
                      * used to find the panels that are sortable, it will skip the panels
                      * that have the dataset 'panels-sortable="false"' set to false.
                      **/
-                    if (self.o.sortable === true && tPanel.data('panel-sortable') === undefined  /*&& !tPanel.hasClass("panel-locked")*/ ) {
+                    if (self.o.sortable === true && tPanel.data('panel-sortable') === undefined) {
                         tPanel.addClass('panel-sortable');
                     }
 
                     /**
-                    * Add a delete button to the panel header (if set to true).
+                    * Add a close button to the panel header (if set to true)
                     **/
                     if (self.o.closeButton === true && tPanel.data('panel-close') === undefined) {
                         closeButton = '<a href="#" class="btn btn-panel js-panel-close" data-toggle="tooltip" data-original-title="Close"></a>';
@@ -323,16 +327,16 @@
                     }
 
                     /**
-                    * Add a delete button to the panel header (if set to true).
+                    * Add a fullscreen button to the panel header (if set to true).
                     **/
                     if (self.o.fullscreenButton === true && tPanel.data('panel-fullscreen') === undefined) {
-                        fullscreenButton = '<a href="#" class="btn btn-panel js-panel-fullscreen" data-toggle="tooltip" data-original-title="Close"></a>';
+                        fullscreenButton = '<a href="#" class="btn btn-panel js-panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></a>';
                     } else {
                         fullscreenButton = '';
                     }
 
                     /**
-                    * Add a delete button to the panel header (if set to true).
+                    * Add a collapse button to the panel header (if set to true).
                     **/
                     if (self.o.collapseButton === true && tPanel.data('panel-collapse') === undefined) {
                         collapseButton = '<a href="#" class="btn btn-panel js-panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></a>'
@@ -341,31 +345,35 @@
                     }
 
                     /**
-                    * Add a delete button to the panel header (if set to true).
+                    * Add a locked button to the panel header (if set to true).
                     **/
                     if (self.o.lockedButton === true && tPanel.data('panel-locked') === undefined) {
-                        lockedButton = '<a href="#" class="dropdown-item pt-2 pr-3 pb-2 pl-3 js-panel-locked"><span data-i18n="drpdwn.lockpanel">Lock Panel</span></a>'
+                        lockedButton = '<a href="#" class="dropdown-item js-panel-locked"><span data-i18n="drpdwn.lockpanel">' + self.o.lockedButtonLabel + '</span></a>'
                     } else {
                         lockedButton = '';
                     }
 
                     /**
-                    * Add a delete button to the panel header (if set to true).
+                    * Add a refresh button to the panel header (if set to true).
                     **/
                     if (self.o.refreshButton === true && tPanel.data('panel-refresh') === undefined) {
-                        refreshButton = '<a href="#" class="dropdown-item pt-2 pr-3 pb-2 pl-3 js-panel-refresh"><span data-i18n="drpdwn.refreshpanel">Refresh Panel</span></a>'
+                        refreshButton = '<a href="#" class="dropdown-item js-panel-refresh"><span data-i18n="drpdwn.refreshpanel">' + self.o.refreshButtonLabel + '</span></a>';
+                        thisContainer.append(
+                            '<div class="panel-refresh-animation" style="display:none"><i class="fal fa-spinner-third fa-spin-4x fs-xxl"></i></div>'
+                        );
+                        
                     } else {
                         refreshButton = '';
                     }
 
                     /**
-                    * Add a delete button to the panel header (if set to true).
+                    * Add a color select button to the panel header (if set to true).
                     **/
                     if (self.o.colorButton === true && tPanel.data('panel-color') === undefined) {
                         colorButton = ' <div class="dropdown-item d-flex align-items-center pt-2 pr-3 pb-2 pl-3">\
-                                            <span data-i18n="drpdwn.panelcolor">Panel Color</span>\
+                                            <span data-i18n="drpdwn.panelcolor">' + self.o.colorButtonLabel + '</span>\
                                             <i class="ni ni-chevron-right ml-auto"></i>\
-                                            <div class="dropdown-item-menu float-sm-left p-2 d-flex flex-wrap" style="width: 111px">\
+                                            <div class="dropdown-item-menu float-sm-left p-2 d-flex flex-wrap" style="width: 6.938rem;">\
                                                 <a href="#" class="btn btn-m-l d-inline-block btn-secondary width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-secondary"></a>\
                                                 <a href="#" class="btn btn-m-l d-inline-block btn-warning width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-warning-500"></a>\
                                                 <a href="#" class="btn btn-m-l d-inline-block btn-danger width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-danger-500"></a>\
@@ -374,10 +382,29 @@
                                                 <a href="#" class="btn btn-m-l d-inline-block btn-success width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-success-500"></a>\
                                                 <a href="#" class="btn btn-m-l d-inline-block bg-fusion-500 width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-fusion-500"></a>\
                                                 <a href="#" class="btn btn-m-l d-inline-block width-1 height-1 rounded-0 bg-faded js-panel-color" data-panel-setstyle=""></a>\
+                                                <a href="#" class="btn btn-m-l d-inline-block width-1 height-1 rounded-0 bg-white js-panel-color" data-panel-setstyle="bg-white"></a>\
                                             </div>\
                                         </div>'
                     } else {
                         colorButton = '';
+                    }
+
+                    /**
+                    * Add a reset widget button to the panel header (if set to true).
+                    **/
+                    if (self.o.resetButton === true && tPanel.data('panel-reset') === undefined) {
+                        resetButton = '<div class="dropdown-divider m-0"></div><a href="#" class="dropdown-item js-panel-reset"><span data-i18n="drpdwn.resetpanel">' + self.o.resetButtonLabel + '</span></a>'
+                    } else {
+                        resetButton = '';
+                    }
+
+                    /**
+                    * Add a custom button to the panel header (if set to true).
+                    **/
+                    if (self.o.customButton === true && tPanel.data('panel-custombutton') === undefined) {
+                        customButton = '<a href="#" class="dropdown-item js-panel-custombutton pl-4"><span data-i18n="drpdwn.custombutton">' + self.o.customButtonLabel + '</span></a>'
+                    } else {
+                        customButton = '';
                     }
 
                     /**
@@ -403,20 +430,21 @@
                     }
 
                     /**
-                     * Set the buttons order.
+                     * Set the dropdown buttons order.
                      **/
                     var formatDropdownButtons = self.o.buttonOrderDropdown
                         .replace(/%locked%/g, lockedButton)
                         .replace(/%color%/g, colorButton)
-                        .replace(/%refresh%/g, refreshButton);
+                        .replace(/%refresh%/g, refreshButton)
+                        .replace(/%reset%/g, resetButton)
+                        .replace(/%custom%/g, customButton);
 
                     /**
                      * Add a button wrapper to the header.
                      **/
-                    if (lockedButton !== '' || colorButton !== '' || refreshButton !== '') {
+                    if (lockedButton !== '' || colorButton !== '' || refreshButton !== '' || resetButton !== '') {
                         thisHeader.append('<div class="panel-toolbar"><a href="#" class="btn btn-toolbar-master" data-toggle="dropdown"><i class="fal fa-ellipsis-v"></i></a><div class="dropdown-menu dropdown-menu-custom dropdown-menu-right p-0">' + formatDropdownButtons + '</div></div>');
                     }    
-
 
                     /**
                      * Adding roles to some parts.
@@ -431,10 +459,10 @@
                 }
             });
 
-            //******************************************************************//
-            ////////////////////////////// SORTABLE //////////////////////////////
-            //******************************************************************//
 
+            /**
+             * SORTABLE
+             **/
             /**
              * jQuery UI soratble, this allows users to sort the panels.
              * Notice that this part needs the jquery-ui core to work.
@@ -471,16 +499,15 @@
                 });
             }
 
-            //*****************************************************************//
-            ///////////////////////// CLICKEVENTS //////////////////////////
-            //*****************************************************************//
-
+            /**
+             * CLICKEVENTS
+             **/
             self._clickEvents();
 
-            //*****************************************************************//
-            ///////////////////// DELETE LOCAL STORAGE KEYS /////////////////////
-            //*****************************************************************//
 
+            /**
+             * DELETE LOCAL STORAGE KEYS
+             **/
             if (self.storage.enabled) {
                
                 // Delete the settings key.
@@ -540,7 +567,7 @@
         },
 
         /**
-         * All of the click events.
+         * Register all click events.
          *
          * @param:
          **/
@@ -550,12 +577,12 @@
             var headers = self.panel.children('.panel-hdr');
 
             /**
-             * Allow users to toggle the content of the panels.
+             * Allow users to toggle collapse.
              **/
             headers.on(clickEvent, '.js-panel-collapse', function (e) {
 
-                var tPanel = $(this);
-                var pPanel = tPanel.closest(self.o.panels);
+                var tPanel = $(this),
+                    pPanel = tPanel.closest(self.o.panels);
 
                 /**
                  * Run function for the indicator image.
@@ -593,12 +620,12 @@
             });
 
             /**
-             * Allow users to toggle the content of the panels.
+             * Allow users to toggle fullscreen.
              **/
             headers.on(clickEvent, '.js-panel-fullscreen', function (e) {
 
-                var tPanel = $(this);
-                var pPanel = tPanel.closest(self.o.panels);
+                var tPanel = $(this),
+                    pPanel = tPanel.closest(self.o.panels);
 
                 /**
                  * Run function for the indicator image.
@@ -632,12 +659,12 @@
             });
 
             /**
-             * Allow users to toggle the content of the panels.
+             * Allow users to close the widget.
              **/
             headers.on(clickEvent, '.js-panel-close', function (e) {
 
-                var tPanel = $(this);
-                var pPanel = tPanel.closest(self.o.panels);
+                var tPanel = $(this),
+                    pPanel = tPanel.closest(self.o.panels);
 
                 /**
                  * Run function for the indicator image.
@@ -671,14 +698,14 @@
             });
 
             /**
-             * Allow users to toggle the content of the panels.
+             * Allow users to set widget style (color).
              **/
             headers.on(clickEvent, '.js-panel-color', function (e) {
 
-                var tPanel = $(this);
-                var pPanel = tPanel.closest(self.o.panels);
-                var selectedHdr = tPanel.closest('.panel-hdr');
-                var val = tPanel.data('panel-setstyle');
+                var tPanel = $(this),
+                    pPanel = tPanel.closest(self.o.panels),
+                    selectedHdr = tPanel.closest('.panel-hdr'),
+                    val = tPanel.data('panel-setstyle');
 
                 /**
                  * Run the callback function.
@@ -709,12 +736,12 @@
             });
 
             /**
-             * Allow users to toggle the content of the panels.
+             * Allow users to lock widget to grid - preventing draging.
              **/
             headers.on(clickEvent, '.js-panel-locked', function (e) {
 
-                var tPanel = $(this);
-                var pPanel = tPanel.closest(self.o.panels);
+                var tPanel = $(this),
+                    pPanel = tPanel.closest(self.o.panels);
 
                 /**
                  * Run function for the indicator image.
@@ -743,19 +770,20 @@
             });
 
             /**
-             * Allow users to toggle the content of the panels.
+             * Allow users to toggle refresh widget content.
              **/
             headers.on(clickEvent, '.js-panel-refresh', function (e) {
 
-                var tPanel = $(this);
-                var pPanel = tPanel.closest(self.o.panels);
+                var tPanel = $(this),
+                    pPanel = tPanel.closest(self.o.panels),
+                    dTimer = pPanel.attr('data-refresh-timer') || 1000;
 
                 /**
                  * Run function for the indicator image.
                  **/
                 pPanel.addClass('panel-refresh')
-                    .delay(2000).queue(function(){
-                        pPanel.removeClass('panel-refresh').dequeue()
+                    .delay(dTimer).queue(function(){
+                        pPanel.removeClass('panel-refresh').dequeue();
                     }); 
 
 
@@ -764,6 +792,43 @@
                  **/
                 if (typeof self.o.onRefresh == 'function') {
                     self.o.onRefresh.call(this, pPanel);
+                }       
+                
+                e.preventDefault();
+            });
+
+             /**
+             * Allow users to toggle reset widget settings.
+             **/
+            headers.on(clickEvent, '.js-panel-reset', function (e) {
+
+                var tPanel = $(this),
+                    pPanel = tPanel.closest(self.o.panels),
+                    selectedHdr = tPanel.closest('.panel-hdr');
+
+                /**
+                 * Remove all setting classes.
+                 **/
+                selectedHdr.removeClassPrefix('bg-')
+                    .closest('.panel')
+                    .removeClass('panel-collapse panel-fullscreen panel-collapse panel-locked')
+                    .attr('data-panel-attstyle', ''); 
+
+                /**
+                 * Run function for the indicator image.
+                 **/
+                self._runPanelLoader(tPanel);    
+
+                /**
+                 * Lets save the setings.
+                 **/
+                self._savePanelSettings(); 
+
+                /**
+                 * Run the callback function.
+                 **/
+                if (typeof self.o.onReset == 'function') {
+                    self.o.onReset.call(this, pPanel);
                 }       
                 
                 e.preventDefault();
@@ -780,8 +845,8 @@
          **/
         _initDestroy: function () {
             var self = this, 
-            namespace = '.' + pluginName, 
-            sortItem = self.obj.find(self.o.grid + '.sortable-grid').not('[data-panel-excludegrid]');
+                namespace = '.' + pluginName, 
+                sortItem = self.obj.find(self.o.grid + '.sortable-grid').not('[data-panel-excludegrid]');
             self.panel.removeClass('panel-sortable');
             sortItem.sortable('destroy');
             self.panel.children('.panel-hdr').off(namespace);
@@ -793,8 +858,10 @@
 
     $.fn[pluginName] = function (option) {
         return this.each(function () {
-            var $this = $(this);
-            var data = $this.data(pluginName);
+
+            var $this = $(this),
+                data = $this.data(pluginName);
+
             if (!data) {
                 var options = typeof option == 'object' && option;
                 $this.data(pluginName, (data = new Plugin(this, options)));
@@ -826,30 +893,48 @@
         positionKeyLabel: 'Reset position?',
         sortable: true,
         buttonOrder: '%toggle% %fullscreen% %delete%',
-        buttonOrderDropdown: '%refresh% %locked% %color%',
+        buttonOrderDropdown: '%refresh% %locked% %color% %custom% %reset%',
+        customButton: false,
+        customButtonLabel: "Custom Label",
+        onCustom: function () {},
         closeButton: true,
         onClosepanel: function() {
-            console.log($(this).closest(".panel").attr('id') + " onClosepanel callback")
+            if (myapp_config.debugState)
+                console.log($(this).closest(".panel").attr('id') + " onClosepanel callback")
         },
         fullscreenButton: true,
         onFullscreen: function() {
-            console.log($(this).closest(".panel").attr('id') + " onFullscreen callback")
+            if (myapp_config.debugState)
+                console.log($(this).closest(".panel").attr('id') + " onFullscreen callback")
         },
         collapseButton: true,
         onCollapse: function() {
-            console.log($(this).closest(".panel").attr('id') + " collapsed callback")
+            if (myapp_config.debugState)
+                console.log($(this).closest(".panel").attr('id') + " collapsed callback")
         },
         lockedButton: true,
+        lockedButtonLabel: "Lock Position",
         onLocked: function() {
-             console.log($(this).closest(".panel").attr('id') + " onLocked callback")
+            if (myapp_config.debugState)
+                console.log($(this).closest(".panel").attr('id') + " onLocked callback")
         },
         refreshButton: true,
+        refreshButtonLabel: "Refresh Content",
         onRefresh: function() {
-            console.log($(this).closest(".panel").attr('id') + " onRefresh callback")
+            if (myapp_config.debugState)
+                console.log($(this).closest(".panel").attr('id') + " onRefresh callback")
         },
         colorButton: true,
+        colorButtonLabel: "Panel Style",
         onColor: function() {
-            console.log($(this).closest(".panel").attr('id') + " onColor callback")
+            if (myapp_config.debugState)
+                console.log($(this).closest(".panel").attr('id') + " onColor callback")
+        },
+        resetButton: true,
+        resetButtonLabel: "Reset Panel",
+        onReset: function() {
+            if (myapp_config.debugState)
+                console.log( $(this).closest(".panel").attr('id') + " onReset callback" )
         }
     };
 

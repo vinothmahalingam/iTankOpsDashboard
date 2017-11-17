@@ -2,6 +2,7 @@
 node_modules
 bower_components
 dist
+dist-beta.1
 *.zip
 repo-backup
 dist-flex

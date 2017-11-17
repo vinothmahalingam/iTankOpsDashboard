@@ -785,22 +785,6 @@ var initApp = (function(app) {
 						break;
 
 					/**
-					 * panel 'color change' trigger
-					 **/	
-
-					case ( actiontype === 'panel-setstyle' ):
-
-						var selectedHdr = $(this).closest('.panel-hdr'),
-							val = $(this).data('panel-setstyle');
-
-							selectedHdr.removeClassPrefix('bg-')
-							.addClass(val)
-							.closest('.panel')
-							.attr('data-panel-attstyle', '' + val + '');
-
-						break;
-
-					/**
 					 * update header css, 'theme-update' trigger
 					 * eg:  data-action = "theme-update" 
 					 *      data-theme = "css/cust-theme-1.min.css"
@@ -861,7 +845,7 @@ var initApp = (function(app) {
 						if (!$.i18n) {
 						//jQuery.getScript('http://url/to/the/script');
 
-							initApp.loadScript("js/i18next-1.11.2.min.js", 
+							initApp.loadScript("js/i18next.min.js", 
 
 								function activateLang () {
 									

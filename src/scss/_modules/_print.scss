@@ -19,6 +19,18 @@
     	transition: none !important;
     }
 
+    table { font-size: 80%; }
+
+    .card,
+    .card-body,
+    .container {
+    	display: inline;
+    	padding: 0;
+    	margin: 0;
+    	border: 0;
+    }
+
+
 	a:link { 
 		font-weight: bold; 
 		text-decoration: underline; 

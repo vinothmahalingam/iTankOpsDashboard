@@ -7,23 +7,19 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     config = require('../config');
 
-gulp.task('compile-app-core-plugins', function(){
+gulp.task('compile-app-core-jquery-bundle', function(){
     return gulp.src([
-      config.paths.js_path_src_module + 'app.navigation.js', 
-      //config.paths.path_custom + 'plugins/panelwidget/panelwidget.js ',
-      config.paths.path_bower + 'jquery-lazy/jquery.lazy.js ',  
-      config.paths.path_bower + 'legitripple/js/ripple.js ',
-      config.paths.path_bower + 'jquery-throttle-debounce/jquery.ba-throttle-debounce.js ',
-      config.paths.path_custom + 'plugins/jquery-snippets/jquery-snippets.js'
+      config.paths.path_bower + '/jquery/dist/jquery.js',  
+      config.paths.path_custom + '/plugins/jquery-ui-cust/jquery-ui-cust.js'
     ])
     /* compile source maps */
     .pipe(sourcemaps.init())
     /* concatinate all crequired vendor and app core files */
-    .pipe(concat('app.core-plugins.js'))
+    .pipe(concat('app.core-jquery-jqueryui-bundle.js'))
     /* write to dist */
     .pipe(gulp.dest(config.paths.js_path_build))
     /* copy and rename file */
-    .pipe(rename('app.core-plugins.min.js'))
+    .pipe(rename('app.core-jquery-jqueryui-bundle.js.min.js'))
     /* minify concatinated file reducing filesize */
     .pipe(uglify())
     /* comple source maps */

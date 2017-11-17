@@ -225,7 +225,7 @@ $input-btn-focus-width:             2px;
 /* bootstrap tables */
 $table-border-color:                darken($gray-lighter, 5%);
 $table-hover-bg:									  rgba($fusion-300,.035);
-$table-accent-bg:               		rgba($black,.04);
+$table-accent-bg:               		rgba($fusion-500,.02);
 
 $table-dark-bg:                     $fusion-600;
 $table-dark-accent-bg:              rgba($white, .05);
@@ -441,8 +441,8 @@ $header-dropdown-menu-border-color:	 #ccc !default;
 /* dropdown: app list */
 $header-applist-link-block-height:	 75px;
 $header-applist-link-block-width:		 72px;
-$header-applist-rows-width:					 340px;
-$header-applist-rows-height:				 305px; 
+$header-applist-rows-width:					 280px;
+$header-applist-rows-height:				 400px; 
 $header-applist-box-padding-x:			 $p-2;
 $header-applist-box-padding-y:			 $p-3;
 
