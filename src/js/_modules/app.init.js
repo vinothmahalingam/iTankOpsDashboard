@@ -422,16 +422,24 @@ var initApp = (function(app) {
 		 * start left nav
 		 * app.navigation.js
 		 **/
-		$(id).navigation({ 
+		if ($.fn.navigation) {
 
-			accordion : $(id).data('nav-accordion'),
-			speed : myapp_config.navSpeed,
-			closedSign : '<em class="' + myapp_config.navClosedSign + '"></em>',
-			openedSign : '<em class="' + myapp_config.navOpenedSign + '"></em>'
+			$(id).navigation({ 
 
-		});
+				accordion : $(id).data('nav-accordion'),
+				speed : myapp_config.navSpeed,
+				closedSign : '<em class="' + myapp_config.navClosedSign + '"></em>',
+				openedSign : '<em class="' + myapp_config.navOpenedSign + '"></em>'
 
-		return (id);
+			});
+
+			return (id);
+		} else {
+
+			if (myapp_config.debugState)
+			console.log( "WARN: navigation plugin missing" );
+
+		}
 	};
 	
 	/**
@@ -639,9 +647,9 @@ var initApp = (function(app) {
 		 * Note: 'window.atob' detects if IE9+ 
 		 * ref: http://tanalin.com/en/articles/ie-version-js/
 		 **/
-		if ($.fn.ripple && !myapp_config.disableRippleEffect && window.atob &&  !myapp_config.isMobile) {
+		if ($.fn.ripple && !myapp_config.disableRippleEffect /*&& window.atob &&  !myapp_config.isMobile*/) {
 
-			$('.navigation a:not(.no-ripple)').ripple({
+			$('.nav-menu a:not(.no-ripple)').ripple({
 				scaleMode: false
 			});
 

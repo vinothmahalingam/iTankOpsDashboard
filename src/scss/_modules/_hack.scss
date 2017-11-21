@@ -155,7 +155,7 @@ body.desktop-detected {
 		z-index: $depth-nav + 1;
 		opacity: 1;
 
-		box-shadow: -4px 4px 20px 0px rgba(0, 0, 0, 0.22);
+		//box-shadow: -4px 4px 20px 0px rgba(0, 0, 0, 0.22);
 
 		&:hover {
 			background: $fusion-500;
@@ -263,7 +263,8 @@ a[target="_blank"]{
 	margin-right: $p-2 !important;
 	margin-left:  -8px !important;
 }
-/* code 
-code {
-	font-size: 100%;
-}*/
+/* forms */
+/* fix alignment for custom controls */
+.custom-control {
+    align-items: center;
+}

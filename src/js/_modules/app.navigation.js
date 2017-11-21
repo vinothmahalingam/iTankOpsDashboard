@@ -33,19 +33,19 @@ $.fn.extend({
             /**
              * assign current element to variable, in this case is UL element
              **/
-            $this = $(this);
+            self = $(this);
 
-        if (!$this.hasClass(myapp_config.navInitalized)) {
+        if (!self.hasClass(myapp_config.navInitalized)) {
 
             /**
              * confirm build to prevent rebuild error
              **/
-            $this.addClass(myapp_config.navInitalized);
+            self.addClass(myapp_config.navInitalized);
 
             /**
              * add a mark [+] to a multilevel menu
              **/
-            $this.find("li").each(function() {
+            self.find("li").each(function() {
                 if ($(this).find("ul").length !== 0) {
 
                     /**
@@ -67,7 +67,7 @@ $.fn.extend({
             /**
              * add open sign to all active lists
              **/
-            $this.find("li.active").each(function() {
+            self.find("li.active").each(function() {
                 $(this).parents("ul")
                 	.parent("li")
                 	.find("a:first")
@@ -79,7 +79,7 @@ $.fn.extend({
             /**
              * click events
              **/
-            $this.find("li a").on('mousedown', function(e) {
+            self.find("li a").on('mousedown', function(e) {
 
                 if ($(this).parent().find("ul").length !== 0) {
 
@@ -91,7 +91,7 @@ $.fn.extend({
                         if (!$(this).parent().find("ul").is(':visible')) {
 
                             parents = $(this).parent().parents("ul");
-                            visible = $this.find("ul:visible");
+                            visible = self.find("ul:visible");
                             visible.each(function(visibleIndex) {
                                 var close = true;
                                 parents.each(function(parentIndex) {
@@ -113,6 +113,9 @@ $.fn.extend({
                                             	.attr('aria-expanded', false)
                                             	.find("b:first")
                                             	.html(opts.closedSign);
+
+                                            if (myapp_config.debugState)
+                                                console.log("nav item closed")    
                                         });
                                     }
                                 }
@@ -132,6 +135,9 @@ $.fn.extend({
                             	.attr('aria-expanded', false)
                             	.find("b:first").delay(opts.speed)
                             	.html(opts.closedSign);
+
+                            if (myapp_config.debugState)
+                                console.log("nav item closed")
                         });
                     } else {
                         $(this).parent().find("ul:first").slideDown(opts.speed, opts.animate, function() {
@@ -142,6 +148,10 @@ $.fn.extend({
                             	.attr('aria-expanded', true)
                             	.find("b:first").delay(opts.speed)
                             	.html(opts.openedSign);
+
+                            if (myapp_config.debugState)
+                                console.log("nav item opened");
+
 
                             /* bug fixed: addresses the .mod-main-boxed class bug, when nav exceeds content height */
                             if (myapp_config.root_.hasClass("mod-main-boxed")) {
@@ -164,11 +174,11 @@ $.fn.extend({
      * DOC: $(id).destroy();
      **/
     destroy: function() {
-        $this = $(this);
-        if ($this.hasClass(myapp_config.navInitalized)) {
-            $this.find("li").removeClass("active open");
-            $this.find("li a").off('mousedown').removeClass("active").removeAttr("aria-expanded").find(".collapse-sign").remove();
-            $this.removeClass(myapp_config.navInitalized).find("ul").removeAttr("style");
+        self = $(this);
+        if (self.hasClass(myapp_config.navInitalized)) {
+            self.find("li").removeClass("active open");
+            self.find("li a").off('mousedown').removeClass("active").removeAttr("aria-expanded").find(".collapse-sign").remove();
+            self.removeClass(myapp_config.navInitalized).find("ul").removeAttr("style");
         }
     }
 }); 

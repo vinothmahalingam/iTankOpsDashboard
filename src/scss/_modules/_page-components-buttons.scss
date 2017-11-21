@@ -177,3 +177,8 @@
 .btn-pills {
 	@include rounded(15px);
 }
+
+/* new btn size */
+.btn-xs {
+	padding: 1px $input-btn-padding-x-sm;
+}

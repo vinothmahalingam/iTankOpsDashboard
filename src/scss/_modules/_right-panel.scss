@@ -17,7 +17,7 @@
 
 
     
-	&:before {
+	/*&:before {
 		content: "";
 		width: 1px;
 		height: 100%;
@@ -25,7 +25,19 @@
 		border-left: 1px dotted rgba($black,.4);
 		z-index: inherit;
 		right:0;
-	}
+	}*/
+
+	/*&:after {
+		content: "";
+		position: inherit;
+		top:0;
+		bottom:0;
+		left: 0;
+		right: 0;
+		@include box-shadow( 0 2px 30px 2px rgba(0,0,0,0.22) );
+		opacity: 0;
+		z-index: -1;
+	}*/
 
 	.right-panel-content {
 		height: unquote("calc(100% - #{$header-height - 25})");
@@ -164,7 +176,11 @@
 
 	.right-panel {
 		right:0;
-		@include box-shadow( 0 2px 30px 2px rgba(0,0,0,0.22) );
+		//@include box-shadow( 0 2px 30px 2px rgba(0,0,0,0.22) );
+
+		/*&:after {
+			opacity: 1;
+		}*/
 	}
 
 	/*.aside-close {
@@ -172,7 +188,7 @@
 	}*/
 
 	/* hide dropdowns */
-	.dropdown-menu {
+	.page-header .dropdown-menu {
 		display:none;
 	}
 

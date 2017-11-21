@@ -45,7 +45,11 @@
 				</h4>
 
 				<div class="frame-wrap bg-faded mb-3">
-
+					<label class="custom-control custom-checkbox">
+			          <input type="checkbox" class="custom-control-input">
+			          <span class="custom-control-indicator"></span>
+			          <span class="custom-control-description">Check this custom checkbox</span>
+			        </label>
 					<label class="custom-control custom-checkbox mb-0">
 					  <input type="checkbox" checked="checked" class="custom-control-input" id="bordered" data-class="table-bordered">
 					  <span class="custom-control-indicator"></span>
@@ -88,16 +92,6 @@
 					<table class="table m-0 table-bordered" id="table-example">
 
 					  <thead>
-					  	<tr>
-					  		<th colspan="5">
-
-								<div class="input-group">
-								  <span class="input-group-addon" id="basic-addon1"><i class="fal fa-search"></i></span>
-								  <input type="text" class="form-control" placeholder="Search Client" aria-label="client" aria-describedby="client-name"id="myInput" onkeyup="myFunction()">
-								</div>
-
-					  		</th>
-					  	</tr>
 					    <tr>
 					      <th>Client</th>
 					      <th>Email</th>
@@ -106,24 +100,6 @@
 					      <th>City</th>
 					    </tr>
 					  </thead>
-						<tfoot>
-							<tr>
-						      <td colspan="5">
-
-								<div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
-								  <div class="btn-group" role="group" aria-label="First group">
-								    <button type="button" class="btn btn-default active">1</button>
-								    <button type="button" class="btn btn-default">2</button>
-								    <button type="button" class="btn btn-default">3</button>
-								    <button type="button" class="btn btn-default">4</button>
-								    <button type="button" class="btn btn-default">5</button>
-								    <button type="button" class="btn btn-default">6</button>
-								  </div>
-								</div>
-
-						      </td>
-							</tr>
-						</tfoot>
 						<tbody>
 							<tr>
 							  <td>Inga</td>
@@ -178,6 +154,7 @@
 
 					</table>
 
+					<button class="btn btn-primary mt-3 float-right">Get Table Style</button>
 				</div>
 
 			</div>
@@ -200,28 +177,6 @@
 	        $('#table-example').removeClass( $(this).attr("data-class") );
 	    }
 	});
-
-	/* simple table search script */
-	function myFunction() {
-	  // Declare variables 
-	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myInput");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("table-example");
-	  tr = table.getElementsByTagName("tr");
-
-	  // Loop through all table rows, and hide those who don't match the search query
-	  for (i = 0; i < tr.length; i++) {
-	    td = tr[i].getElementsByTagName("td")[0];
-	    if (td) {
-	      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-	        tr[i].style.display = "";
-	      } else {
-	        tr[i].style.display = "none";
-	      }
-	    } 
-	  }
-	}
 
 </script>
 {{/inline}}

@@ -260,16 +260,6 @@
                     }
 
                     /**
-                     * Hide/show panel.
-                     **/
-                    /*if (jsonSettings.panel[key].hidden == 1) {
-                        panelId.hide(1);
-                    } else {
-                        panelId.show(1)
-                            .removeAttr('data-panel-hidden');
-                    }*/
-
-                    /**
                      * Toggle content panel.
                      **/
                     if (jsonSettings.panel[key].collapsed == 1) {
@@ -285,6 +275,18 @@
 
                 }
             }
+
+            /**
+             * Format colors
+             **/
+
+            if (self.o.panelColors && self.o.colorButton) {
+                var formatedPanelColors = [];
+                for (var key in self.o.panelColors) {
+                    formatedPanelColors.push('<a href="#" class="btn btn-m-l d-inline-block '+ self.o.panelColors[key] +' width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="'+ self.o.panelColors[key] +'"></a>');
+                }
+            }
+
 
             /**
              * LOOP ALL PANELS
@@ -373,17 +375,7 @@
                         colorButton = ' <div class="dropdown-item d-flex align-items-center pt-2 pr-3 pb-2 pl-3">\
                                             <span data-i18n="drpdwn.panelcolor">' + self.o.colorButtonLabel + '</span>\
                                             <i class="ni ni-chevron-right ml-auto"></i>\
-                                            <div class="dropdown-item-menu float-sm-left p-2 d-flex flex-wrap" style="width: 6.938rem;">\
-                                                <a href="#" class="btn btn-m-l d-inline-block btn-secondary width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-secondary"></a>\
-                                                <a href="#" class="btn btn-m-l d-inline-block btn-warning width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-warning-500"></a>\
-                                                <a href="#" class="btn btn-m-l d-inline-block btn-danger width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-danger-500"></a>\
-                                                <a href="#" class="btn btn-m-l d-inline-block btn-info width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-info-500"></a>\
-                                                <a href="#" class="btn btn-m-l d-inline-block btn-primary width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-primary-500"></a>\
-                                                <a href="#" class="btn btn-m-l d-inline-block btn-success width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-success-500"></a>\
-                                                <a href="#" class="btn btn-m-l d-inline-block bg-fusion-500 width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="bg-fusion-500"></a>\
-                                                <a href="#" class="btn btn-m-l d-inline-block width-1 height-1 rounded-0 bg-faded js-panel-color" data-panel-setstyle=""></a>\
-                                                <a href="#" class="btn btn-m-l d-inline-block width-1 height-1 rounded-0 bg-white js-panel-color" data-panel-setstyle="bg-white"></a>\
-                                            </div>\
+                                            <div class="dropdown-item-menu float-sm-left p-2 d-flex flex-wrap" style="width: 7rem;">' + formatedPanelColors.join(" ") + '</div>\
                                         </div>'
                     } else {
                         colorButton = '';
@@ -477,7 +469,7 @@
                     cursor: 'move',
                     revert: true,
                     opacity: self.o.opacity,
-                    delay: 50,
+                    delay: 0,
                     revert: 250,
                     cancel: '.btn-panel, .panel-fullscreen .panel-fullscreen, .mod-panel-disable .panel-sortable, .panel-locked.panel-sortable',
                     zIndex: 10000,
@@ -930,6 +922,7 @@
             if (myapp_config.debugState)
                 console.log($(this).closest(".panel").attr('id') + " onColor callback")
         },
+        panelColors: ['bg-primary-500','bg-info-500','bg-warning-500','bg-danger-500','bg-success-500','bg-fusion-500', 'bg-faded'],
         resetButton: true,
         resetButtonLabel: "Reset Panel",
         onReset: function() {

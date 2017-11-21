@@ -133,22 +133,6 @@ $panel-edge-radius: $border-radius;
 
 			}
 
-			/* alternative style to button-panel*/
-			/*.btn-panel-flat {
-				min-width: $panel-hdr-height - 8px;
-				height: $panel-hdr-height - 2px;
-				font-size: rem($fs-base);
-				padding: 5px;
-				border-radius: 0px;
-				background: transparent;
-				color: inherit;
-								border-left: 1px solid rgba(0,0,0,.09);
-
-				&:hover {
-					background-color: rgba(0,0,0,.05);
-				}
-			}*/
-
 			.btn-toolbar-master {
 				height: $panel-hdr-height - 2;
 				border-radius: 0;
@@ -224,7 +208,7 @@ $panel-edge-radius: $border-radius;
 			align-items: center;
 			justify-content: center;
 			background: rgba(255,255,255,0.5);
-			font-size: 40px;
+
 			color: #1d96f4;
 		}
 
@@ -324,7 +308,38 @@ $panel-edge-radius: $border-radius;
 	margin-bottom: $grid-gutter-width - 2px;
 	border-radius: $border-radius + 1;
 	position: relative;
+	box-shadow: inset 2px 2px 3px rgba(0,0,0,0.1), inset 0 0 0 1px rgba(0,0,0,0.02)
 }
+
+/*.panel-placeholder {
+	background-color: #FFC;
+	box-sizing: border-box;
+	margin-bottom: $grid-gutter-width;
+	border-radius: $border-radius + 1;
+	position: relative;
+	overflow: hidden;
+
+	&:before,
+	&:after {
+		content:" ";
+		background-image: url(data:image/gif;base64,R0lGODlhCAAIAJAAAAAAAP///yH/C05FVFNDQVBFMi4wAwEAAAAh+QQECgD/ACwAAAAACAAIAAACD4SDYZB6udpiaMJYsXuoAAAh+QQECgD/ACwAAAAACAAIAAACDYQRGadrzVRMB9FZ5SwAIfkEBAoA/wAsAAAAAAgACAAAAg8MDqGYaudeW9ChyOyltQAAIfkEBAoA/wAsAAAAAAgACAAAAg9MgGCXm+rQYtC0WGl9oQAAIfkEBAoA/wAsAAAAAAgACAAAAg+MgWCRernaYmjCWLF7qAAAIfkEBAoA/wAsAAAAAAgACAAAAg2MAwmna81UTAfRWeUsACH5BAQKAP8ALAAAAAAIAAgAAAIPRB6gmGrnXlvQocjspbUAACH5BAQKAP8ALAAAAAAIAAgAAAIPBIJhl5vq0GLQtFhpfaAAADs=);
+		border-radius: $border-radius + 1;
+		position: absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		opacity: 0.5;
+	}
+
+	&:before {
+		background: #FFC;
+		margin: 1px;
+		box-sizing: border-box;
+		opacity: 1;
+		z-index: 1;
+	}
+}*/
 
 .mod-panel-clean {
 

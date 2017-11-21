@@ -62,10 +62,11 @@
 }
 
 #app-eventlog {
-	width:100%;
-	height:290px;
-    max-height:453px; 
+	height:260px;
+	min-height:260px;
+    max-height:300px; 
 	overflow: auto;
+	display: block;
 
     > div:not(:last-child) {
         border-bottom: 1px solid #eaeaea;
@@ -84,14 +85,18 @@
 
 
 	   &:before {
-			text-align: center;
-			content: "User Generated Event logs";
-			display: block;
-			width: 100%;
-			padding-top: 115px;
-			font-size: 25px;
+			content: "Event Logs";
+			font-size: $fs-xxl;
 			font-weight: 300;
 			color: #c7c7c7;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: -20px;
+			bottom: 0;
+			left: 0;
+			right: 0;
 	   }
 	}
 

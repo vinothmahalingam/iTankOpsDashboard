@@ -161,8 +161,8 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 					@extend %header-btn;
 
 					&[data-class='mobile-nav-on'] {
-						border-color: $danger-300;
-						@include gradient-img($start: $danger-400,$stop: $danger-500);
+						border-color: $danger-700;
+						@include gradient-img($start: $danger-600,$stop: $danger-800);
 						color:$white;
 						width: $header-btn-width + 10px;
 					}

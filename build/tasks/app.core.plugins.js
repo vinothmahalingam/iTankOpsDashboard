@@ -11,6 +11,7 @@ gulp.task('compile-app-core-plugins', function(){
     return gulp.src([
       config.paths.js_path_src_module + 'app.navigation.js', 
       //config.paths.path_custom + 'plugins/panelwidget/panelwidget.js ',
+      //config.paths.path_bower + 'metisMenu/dist/metisMenu.js ',
       config.paths.path_bower + 'jquery-lazy/jquery.lazy.js ',  
       config.paths.path_bower + 'legitripple/js/ripple.js ',
       config.paths.path_bower + 'jquery-throttle-debounce/jquery.ba-throttle-debounce.js ',

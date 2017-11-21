@@ -17,8 +17,41 @@
 
 <div class="row">
 
+    <div class="col-lg-12 col-xl-6">
 
-    <div class="col-lg-6 col-xl-6">
+        <div class="card mb-g">
+
+            <div class="card-body">
+
+                <h3 class="mb-4">
+                    Debugging <span class="fw-300">console.log</span> 
+                    <small>
+                        view the app.core.js debugger in realtime; assists in the detection and correction of errors
+                    </small>
+                </h3>
+
+                <div id="app-eventlog" class="card bg-faded p-1 h-auto"></div>
+
+                <div class="d-flex mt-2">
+                    <div>
+                        <label class="custom-control custom-checkbox m-0">
+                            <input id="eventlog-switch" type="checkbox" class="custom-control-input" checked="checked">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description fw-500">Debugger Switch</span>
+                        </label>
+                    </div>
+                    <div class="flex-1 text-right">
+                        <a href="javascript:void(0);" class="btn btn-xs btn-outline-primary mr-1" data-action="toggle" data-class="display-right-panel">
+                            Toggle Settings
+                        </a>
+                        <a href="javascript:void(0);" class="btn btn-xs btn-outline-danger" onclick="clearlogText();">
+                            Clear Log
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
         <div class="card mb-g">
 
@@ -35,9 +68,6 @@
                     <thead class="thead-themed">
                         <tr>
                             <th>
-                                Try
-                            </th>
-                            <th>
                                 Usage
                             </th>
                             <th>
@@ -51,9 +81,6 @@
                     <tbody>
                         <tr>
                             <td>
-                                <a href="javascript:void(0);" onclick="initApp.buildNavigation($('.nav-menu'));" class="btn btn-sm btn-default fs-nano">test</a>
-                            </td>
-                            <td>
                                 <code>initApp.saveSettings()</code>
                             </td>
                             <td>
@@ -64,9 +91,6 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                <a href="javascript:void(0);" onclick="initApp.buildNavigation($('.nav-menu'));" class="btn btn-sm btn-default fs-nano">test</a>
-                            </td>
                             <td>
                                 <code>initApp.resetSettings()</code>
                             </td>
@@ -79,9 +103,6 @@
                         </tr>
                         <tr>
                             <td>
-                                <a href="#" class="btn btn-sm btn-default fs-nano">test</a>
-                            </td>
-                            <td>
                                 <code>initApp.accessIndicator()</code>
                             </td>
                             <td>
@@ -92,9 +113,6 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                <a href="javascript:void(0);" onclick="initApp.buildNavigation($('.nav-menu'));" class="btn btn-sm btn-default fs-nano">test</a>
-                            </td>
                             <td>
                                 <code>initApp.pushSettings()</code>
                             </td>
@@ -107,9 +125,6 @@
                         </tr>
                         <tr>
                             <td>
-                                <a href="javascript:void(0);" onclick="initApp.buildNavigation($('.nav-menu'));" class="btn btn-sm btn-default fs-nano">test</a>
-                            </td>
-                            <td>
                                 <code>initApp.getSettings()</code>
                             </td>
                             <td>
@@ -120,9 +135,6 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                <a href="javascript:void(0);" onclick="initApp.buildNavigation($('.nav-menu'));" class="btn btn-sm btn-default fs-nano">test</a>
-                            </td>
                             <td>
                                 <code>initApp.getNewWindowHeight()</code>
                             </td>
@@ -135,9 +147,6 @@
                         </tr>
                         <tr>
                             <td>
-                                <a href="javascript:void(0);" onclick="initApp.buildNavigation($('.nav-menu'));" class="btn btn-sm btn-default fs-nano">test</a>
-                            </td>
-                            <td>
                                 <code>initApp.detectBrowserType()</code>
                             </td>
                             <td>
@@ -148,9 +157,6 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                <a href="javascript:void(0);" onclick="initApp.buildNavigation($('.nav-menu'));" class="btn btn-sm btn-default fs-nano">test</a>
-                            </td>
                             <td>
                                 <code>initApp.addDeviceType()</code>
                             </td>
@@ -163,9 +169,6 @@
                         </tr>
                         <tr>
                             <td>
-                                <a href="javascript:void(0);" onclick="initApp.buildNavigation($('.nav-menu'));" class="btn btn-sm btn-default fs-nano">test</a>
-                            </td>
-                            <td>
                                 <code>initApp.fixAppHeight()</code>
                             </td>
                             <td>
@@ -176,9 +179,6 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                <a href="javascript:void(0);" onclick="initApp.buildNavigation($('.nav-menu'));" class="btn btn-sm btn-default fs-nano">test</a>
-                            </td>
                             <td>
                                 <code>initApp.windowScrollEvents()</code>
                             </td>
@@ -191,9 +191,6 @@
                         </tr>
                         <tr>
                             <td>
-                                -
-                            </td>
-                            <td>
                                 <code>initApp.checkSettingConditions()</code>
                             </td>
                             <td>
@@ -204,9 +201,6 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                <a href="javascript:void(0);" onclick="initApp.buildNavigation($('.nav-menu'));" class="btn btn-sm btn-default fs-nano">test</a>
-                            </td>
                             <td>
                                 <code>initApp.buildNavigation(id)</code>
                             </td>
@@ -219,9 +213,6 @@
                         </tr>
                         <tr>
                             <td>
-                                -
-                            </td>
-                            <td>
                                 <code>initApp.mobileCheckActivation()</code>
                             </td>
                             <td>
@@ -232,9 +223,6 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                -
-                            </td>
                             <td>
                                 <code>initApp.toggleVisibility()</code>
                             </td>
@@ -247,9 +235,6 @@
                         </tr>
                         <tr>
                             <td>
-                                -
-                            </td>
-                            <td>
                                 <code>initApp.domReadyMisc()</code>
                             </td>
                             <td>
@@ -261,23 +246,6 @@
                         </tr>                
                     </tbody>
                 </table>
-
-            </div>
-
-        </div>
-
-        <div class="card mb-g">
-
-            <div class="card-body">
-
-                <h3 class="mb-4">
-                    Debugging <span class="fw-300">console.log</span> 
-                    <small>
-                        view the app.core.js debugger in realtime; assists in the detection and correction of errors
-                    </small>
-                </h3>
-
-                <div id="app-eventlog" class="card bg-faded p-1 h-auto"></div>
 
             </div>
 
@@ -366,6 +334,7 @@
                             </td>
                         </tr>           
                     </tbody>
+
                 </table>
 
             </div>
@@ -374,7 +343,7 @@
 
     </div>
 
-    <div class="col-lg-6 col-xl-6">
+    <div class="col-lg-12 col-xl-6">
 
         <div class="card mb-g">
 
@@ -515,22 +484,24 @@ jQuery(document).ready(function() {
 
 {{#*inline "scripts-block"}}
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
 <script>
 
-    // state debug state for debug msg
+    
+    /* state debug state for debug msg */
     myapp_config.debugState = true;
 
-    // variables
+    /* variables */
     var lastMsg = "",
         repeatCount = 0,
-        // get new time date on page load
+        /* get new time date on page load */
         getTime = function () {
             var dt = new Date(),
                 time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
             return time;
         };
 
-    //define type    
+    /* define type */    
     if (typeof console  != "undefined") 
         if (typeof console.log != 'undefined') {
             console.nglog = console.log;
@@ -539,7 +510,7 @@ jQuery(document).ready(function() {
             console.nglog = function() {};
         }
 
-    // push console messages to #div 
+    /* push console messages to #div */
     console.log = function(message) {
         console.nglog(message); 
         if (lastMsg != message) {
@@ -556,10 +527,26 @@ jQuery(document).ready(function() {
         }
     };
 
-    // compile messages to one log
+    /* compile messages to one log */
     console.error = console.debug = console.info =  console.log
 
+
+    $('#eventlog-switch').click(function(){
+        if ($('input[type=checkbox]').prop('checked')) {
+            console.log("debugState ON")
+            myapp_config.debugState = true;
+        } else {
+            console.log("debugState OFF");
+            myapp_config.debugState = false;
+        }
+    });
+
+    var clearlogText = function (){
+        $('#app-eventlog').empty();
+    }
+
 </script>
+
 {{/inline}}
 
 {{/layouts/main}}
