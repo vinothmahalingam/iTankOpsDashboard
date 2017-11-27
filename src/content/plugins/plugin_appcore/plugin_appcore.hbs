@@ -3,7 +3,7 @@
     title="App.Core" 
     pagename="plugin_appcore" 
     category_1="Core Plugins" 
-    heading="<i class='subheader-icon fal fa-shield-alt'></i> App.core.js" 
+    heading="<i class='subheader-icon fal fa-shield-alt'></i> App.core.js <sup class='badge badge-danger fw-500'>CORE</sup>" 
     pagedescription="The heart and soul of NextGen Responsive WebApp"
 }}
 
@@ -37,7 +37,7 @@
                         <label class="custom-control custom-checkbox m-0">
                             <input id="eventlog-switch" type="checkbox" class="custom-control-input" checked="checked">
                             <span class="custom-control-indicator"></span>
-                            <span class="custom-control-description fw-500">Debugger Switch</span>
+                            <span class="custom-control-description fw-500">Debugger Active</span>
                         </label>
                     </div>
                     <div class="flex-1 text-right">
@@ -258,7 +258,7 @@
                 <h3 class="mb-4">
                     Action <span class="fw-300">buttons</span> 
                     <small>
-                        Allows you to
+                        Allows you to add action to any HTML element on 'mouseUp' event.
                     </small>
                 </h3>
 
@@ -280,7 +280,8 @@
                             </td>
                             <td class="fs-sm">
                                 Push data-class to <code>body</code> element 
-                                usage: <pre class="m-0 prettyprint border-0 fs-base">data-action="toggle" data-class="class-a class-b" data-target="#target"</pre>
+                                <br>
+                                <code>data-action="toggle" data-class="class-a class-b" data-target="#ID"</code>
                             </td>
                         </tr>
                         <tr>
@@ -288,7 +289,7 @@
                                 <code>data-toggle-swap</code>
                             </td>
                             <td class="fs-sm">
-                                <pre class="m-0 prettyprint border-0 fs-base">data-action="toggle-swap" data-class="class-a class-b" data-target="#target"</pre>
+                                <code>data-action="toggle-swap" data-class="class-a class-b" data-target="#ID"</code>
                             </td>
                         </tr>
                         <tr>
@@ -304,7 +305,7 @@
                                 <code>data-theme-update</code>
                             </td>
                             <td class="fs-sm">
-                                <pre class="m-0 prettyprint border-0 fs-base">data-action="theme-update" data-theme="path_to_css/css.css"</pre>
+                                <code>data-action="theme-update" data-theme="path_to_css/css.css"</code>
                             </td>
                         </tr>
                         <tr>
@@ -312,7 +313,7 @@
                                 <code>data-app-reset</code>
                             </td>
                             <td class="fs-sm">
-                                <pre class="m-0 prettyprint border-0 fs-base">data-action="app-reset"</pre>
+                                <code>data-action="app-reset"</code>
                             </td>
                         </tr>  
                         <tr>
@@ -321,7 +322,7 @@
                             </td>
                             <td class="fs-sm">
                                 Print page (similar to pressing CTRL/CMD + P)
-                                <pre class="m-0 prettyprint border-0 fs-base">data-action="app-print"</pre>
+                                <code>data-action="app-print"</code>
                             </td>
                         </tr> 
                         <tr>
@@ -330,7 +331,7 @@
                             </td>
                             <td class="fs-sm">
                                 Activates broswer's fullscreen command (may not work in all browsers)
-                                <pre class="m-0 prettyprint border-0 fs-base">data-action="app-fullscreen"</pre>
+                                <code>data-action="app-fullscreen"</code>
                             </td>
                         </tr>           
                     </tbody>
@@ -514,7 +515,7 @@ jQuery(document).ready(function() {
     console.log = function(message) {
         console.nglog(message); 
         if (lastMsg != message) {
-            $('#app-eventlog').append('<div class="highlight p-1"><span class="d-flex align-items-center">' + '<span class="badge badge-primary mr-2">' + getTime() + '</span>' + message + '</span></div>');
+            $('#app-eventlog').append('<div class="highlight p-1"><span class="d-flex align-items-center">' + '<span class="badge badge-primary mr-2 p-1 width-6">' + getTime() + '</span>' + message + '</span></div>');
             lastMsg = message;
             repeatCount = 0;
              $('#app-eventlog').animate({ scrollTop: $('#app-eventlog').prop("scrollHeight")}, 200);
@@ -522,7 +523,7 @@ jQuery(document).ready(function() {
             lastMsg = message;
             repeatCount = repeatCount + 1;
             $('#app-eventlog >:last-child').remove();
-            $('#app-eventlog').append('<div class="highlight p-1"><span class="d-flex align-items-center">'+ '<span class="badge badge-primary mr-2">' + getTime() + '</span>' + '<span class="badge badge-primary mr-1">' + repeatCount + '</span>' + message + '</span></div>');
+            $('#app-eventlog').append('<div class="highlight p-1"><span class="d-flex align-items-center">'+ '<span class="badge badge-primary mr-2 p-1 width-6">' + getTime() + '</span>' + '<span class="badge badge-success mr-1">' + repeatCount + '</span>' + message + '</span></div>');
             $('#app-eventlog').animate({ scrollTop: $('#app-eventlog').prop("scrollHeight")}, 200);
         }
     };

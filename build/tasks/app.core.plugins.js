@@ -9,9 +9,8 @@ var gulp = require('gulp'),
 
 gulp.task('compile-app-core-plugins', function(){
     return gulp.src([
-      config.paths.js_path_src_module + 'app.navigation.js', 
-      //config.paths.path_custom + 'plugins/panelwidget/panelwidget.js ',
-      //config.paths.path_bower + 'metisMenu/dist/metisMenu.js ',
+      config.paths.path_bower + 'jquery-slimscroll/jquery.slimscroll.js',    
+      config.paths.path_bower + 'nextgen-navigation/jquery.nextgen-navigation.js', 
       config.paths.path_bower + 'jquery-lazy/jquery.lazy.js ',  
       config.paths.path_bower + 'legitripple/js/ripple.js ',
       config.paths.path_bower + 'jquery-throttle-debounce/jquery.ba-throttle-debounce.js ',
@@ -19,12 +18,12 @@ gulp.task('compile-app-core-plugins', function(){
     ])
     /* compile source maps */
     .pipe(sourcemaps.init())
-    /* concatinate all crequired vendor and app core files */
-    .pipe(concat('app.core-plugins.js'))
+    /* concatinate all required vendor and app core files */
+    .pipe(concat('app.core.plugins.js'))
     /* write to dist */
     .pipe(gulp.dest(config.paths.js_path_build))
     /* copy and rename file */
-    .pipe(rename('app.core-plugins.min.js'))
+    .pipe(rename('app.core.plugins.min.js'))
     /* minify concatinated file reducing filesize */
     .pipe(uglify())
     /* comple source maps */

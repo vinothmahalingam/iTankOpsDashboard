@@ -533,10 +533,9 @@
          **/
         _initStorage: function (storage) {
 
-            //*****************************************************************//
-            //////////////////////// LOCALSTORAGE CHECK /////////////////////////
-            //*****************************************************************//
-
+            /**
+             * LOCALSTORAGE CHECK
+             **/
             storage.enabled = storage.enabled && !! function () {
                 var result, uid = +new Date();
                 try {
@@ -774,8 +773,10 @@
                  * Run function for the indicator image.
                  **/
                 pPanel.addClass('panel-refresh')
+                    .stop(true, true)
                     .delay(dTimer).queue(function(){
                         pPanel.removeClass('panel-refresh').dequeue();
+                        console.log(pPanel.attr('id') + " refresh complete")
                     }); 
 
 

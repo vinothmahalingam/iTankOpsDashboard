@@ -37,4 +37,4 @@ gulp.task('watch', function() {
  */
 gulp.task('default', ['compile-sass', 'cssnano', 'compile-app-core', 'connect', 'watch']);
 gulp.task('build-sass', ['compile-sass', 'cssnano', 'connect', 'compile-html', 'watch']);
-gulp.task('build', ['compile-sass', 'cssnano', 'compile-app-core', 'compile-app-core-jquery-bundle','compile-app-core-plugins', 'connect', 'compile-html', 'img-min', 'copy-cust-fonts', 'copy-cust-plugins', 'copy-bower-files', 'copy-favicon', 'copy-video', 'copy-lang', 'watch']);
+gulp.task('build', ['compile-sass', 'cssnano', 'compile-app-jquery-bundle', 'compile-bootstrap-bundle', 'compile-app-core-plugins', 'compile-app-core', 'connect', 'compile-html', 'img-min', 'copy-cust-fonts', 'copy-cust-plugins', 'copy-bower-files', 'copy-favicon', 'copy-video', 'copy-lang', 'watch']);

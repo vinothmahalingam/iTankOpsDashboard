@@ -548,7 +548,7 @@ var initApp = (function(app) {
 				console.log( 'slimscroll plugin active' );
 
 		} else {
-			console.log("warning: $.fn.slimScroll not or user is on desktop");
+			console.log("WARN! $.fn.slimScroll not loaded or user is on desktop");
 			myapp_config.root_.addClass("no-slimscroll");
 		}
 
@@ -573,7 +573,7 @@ var initApp = (function(app) {
 		if( typeof($.fn.tooltip) !== 'undefined' && myapp_config.thisDevice === 'desktop' && $('[data-toggle="tooltip"]').length ){
 			$('[data-toggle="tooltip"]').tooltip()
 		} else {
-			console.log("bs.tooltip is not loaded");
+			console.log("ERROR! bs.tooltip is not loaded");
 		}
 
 		/**
@@ -582,7 +582,7 @@ var initApp = (function(app) {
 		if( typeof($.fn.popover) !== 'undefined' && $('[data-toggle="popover"]').length ){
 			$('[data-toggle="popover"]').popover();
 		} else {
-			console.log("bs.popover is not loaded");
+			console.log("ERROR! bs.popover is not loaded");
 		}
 
 		/* 
@@ -928,8 +928,6 @@ var initApp = (function(app) {
 				}
 
 				/* hide tooltip if any present */
-				/*  Note: was added with tether.js, but looks like popper.js fixed the issue(?) 
-				 ** needs to run more tests... */
 				$(this).tooltip('hide');
 
 				if (myapp_config.debugState)

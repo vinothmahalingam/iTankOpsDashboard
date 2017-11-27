@@ -23,9 +23,11 @@
 	sup.badge {
 		text-shadow: none;
 		position: absolute;
-		margin-top: 12px;
+		margin-top: 10px;
 		margin-left: $p-1;
-		font-size: rem($fs-xs - 0.5) !important;
+		font-size: 40%;
+    	padding: 2px 5px;
+    	line-height: normal;
 	}
 
 	small {

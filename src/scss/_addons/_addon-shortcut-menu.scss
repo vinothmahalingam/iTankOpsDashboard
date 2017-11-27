@@ -10,7 +10,7 @@ $menu-item-direction: 'top'; //top or left
   border-radius:50%;
   width:$menu-item-size;
   height:$menu-item-size;
-  position:absolute;
+  position:absolute !important;
   padding:0;
   right:0;
   bottom:0;

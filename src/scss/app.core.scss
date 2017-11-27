@@ -57,9 +57,17 @@
 @import '_modules/_settings-*';
 @import '_modules/_demo-only';
 
-/* #_addons - Plugins imported in random order (remove if not needed)
+/* #_addons - Components imported in alphabetical order (remove addons from directory if not needed)
 ========================================================================== */ 
 @import '_addons/_addon-*.scss';
+
+/* #_extensions - Components imported in alphabetical order (remove extensions from directory if not needed)
+========================================================================== */ 
+@import '_extensions/_extension-*.scss';
+
+/* #_plugins - Components imported in alphabetical order (remove plugins from directory if not needed)
+========================================================================== */ 
+@import '_plugins/_plugin-*.scss';
 
 /* #ANIMATION - CSS animations and keyframes
 ========================================================================== */ 

@@ -232,11 +232,14 @@ $table-dark-accent-bg:              rgba($white, .05);
 $table-dark-hover-bg:               $primary-500;
 
 /* tooltip */
-$tooltip-bg:                        $primary-600;
+$tooltip-color:                     #333 !default;
+$tooltip-bg:                        #f3f3f3;
 $tooltip-arrow-color:               $tooltip-bg;
 $tooltip-opacity:                   1;
-$tooltip-padding-x:                 10px; 
-$tooltip-padding-y:                 5px;
+$tooltip-padding-x:                 8px; 
+$tooltip-padding-y:                 2px;
+$tooltip-arrow-width:               5px !default;
+$tooltip-arrow-height:              5px !default;
 
 /* reference guide
 http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/

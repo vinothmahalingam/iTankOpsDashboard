@@ -7,19 +7,19 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     config = require('../config');
 
-gulp.task('compile-app-jquery-bundle', function(){
+gulp.task('compile-bootstrap-bundle', function(){
     return gulp.src([
-      config.paths.path_bower + '/jquery/dist/jquery.js',  
-      config.paths.path_custom + '/plugins/jquery-ui-cust/jquery-ui-cust.js'
+      config.paths.path_bower + '/popper.js/dist/umd/popper.js',  
+      config.paths.path_bower + '/bootstrap/dist/js/bootstrap.js'
     ])
     /* compile source maps */
     .pipe(sourcemaps.init())
     /* concatinate all crequired vendor and app core files */
-    .pipe(concat('app.jquery.bundle.js'))
+    .pipe(concat('app.bootstrap.bundle.js'))
     /* write to dist */
     .pipe(gulp.dest(config.paths.js_path_build))
     /* copy and rename file */
-    .pipe(rename('app.jquery.bundle.min.js'))
+    .pipe(rename('app.bootstrap.bundle.min.js'))
     /* minify concatinated file reducing filesize */
     .pipe(uglify())
     /* comple source maps */

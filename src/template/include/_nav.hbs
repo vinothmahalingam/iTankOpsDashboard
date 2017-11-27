@@ -113,7 +113,7 @@
 	Components
 </p>
 <ul class="nav-menu">
-	<li {{#is pagename "in" "ui_alerts,ui_breadcrumbs,ui_buttons,ui_cards_wells,ui_carousel,ui_helpers,ui_icons_fontawesome,ui_icons_ng,ui_labels_badges,ui_navbars,ui_pagination,ui_tabs_accordions,ui_progress_bars,ui_scrollspy,ui_tooltips_popovers,ui_borders,ui_clearfix,ui_close_icon,ui_colors,ui_fonts,ui_flexbox,ui_display_property,ui_image_replacement,ui_invisible_content,ui_position,ui_responsive_helpers,ui_sizing,ui_spacing,ui_typography,ui_alignments,ui_icons_fontawesome,ui_icons_ng"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "ui_alerts,ui_breadcrumbs,ui_buttons,ui_cards_wells,ui_carousel,ui_helpers,ui_icons_fontawesome,ui_icons_ng,ui_labels_badges,ui_list_filter,ui_navbars,ui_panels,ui_pagination,ui_tabs_accordions,ui_progress_bars,ui_scrollspy,ui_tooltips_popovers,ui_borders,ui_clearfix,ui_close_icon,ui_colors,ui_fonts,ui_flexbox,ui_display_property,ui_image_replacement,ui_invisible_content,ui_position,ui_responsive_helpers,ui_sizing,ui_spacing,ui_typography,ui_alignments,ui_icons_fontawesome,ui_icons_ng"}}class="active open"{{/is}}>
 		<a href="#" title="UI Components" data-filter-tags="ui components"> 
 			<i class="fal fa-window"></i>
 			<span class="nav-link-text" data-i18n="nav.ui_components">UI Components</span> 
@@ -154,9 +154,21 @@
 					<span class="nav-link-text" data-i18n="nav.ui_labels_badges">Labels & Badges</span> 
 				</a>
 			</li>
+			<li {{#is pagename "===" "ui_list_filter"}}class="active"{{/is}}>
+				<a href="ui_list_filter.html" data-filter-tags="ui components list filter"> 
+					<span class="nav-link-text">
+						<span data-i18n="nav.ui_list_filter">List Filter</span>
+					</span>
+				</a>
+			</li>
 			<li {{#is pagename "===" "ui_navbars"}}class="active"{{/is}}>
 				<a href="ui_navbars.html" data-filter-tags="ui components navbars"> 
 					<span class="nav-link-text" data-i18n="nav.ui_navbars">Navbars</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "ui_panels"}}class="active"{{/is}}>
+				<a href="ui_panels.html" data-filter-tags="ui components panels"> 
+					<span class="nav-link-text" data-i18n="nav.ui_panels">Panels</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "ui_pagination"}}class="active"{{/is}}>
@@ -414,25 +426,17 @@
 			</li>																															
 		</ul>
 	</li>
-	<li {{#is pagename "in" "plugin_panels,plugin_appcore,plugin_lazyload,plugin_ripplejs,plugin_list_filter,plugin_throttle,plugin_navigation"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "plugin_faq,plugin_lazyload,plugin_ripplejs,plugin_pacejs,plugin_smartpanels,plugin_slimscroll,plugin_throttle,plugin_navigation,plugin_i18next,plugin_appcore"}}class="active open"{{/is}}>
 		<a href="#" title="Plugins" data-filter-tags="core plugins"> 
 			<i class="fal fa-shield-alt"></i>
 			<span class="nav-link-text" data-i18n="nav.plugin">Core Plugins </span> 
-			<span class="dl-ref bg-info-200 hidden-nav-function-minify hidden-nav-function-top">&nbsp;47 KB&nbsp;</span>
+			<span class="dl-ref bg-info-200 hidden-nav-function-minify hidden-nav-function-top">&nbsp;45 KB&nbsp;</span>
 		</a>
 		<ul>
-			{{!-- <li {{#is pagename "===" "plugin_faq"}}class="active"{{/is}}>
-				<a href="plugin_panels.html" data-filter-tags="plugins panels"> 
+			<li {{#is pagename "===" "plugin_faq"}}class="active"{{/is}}>
+				<a href="plugin_faq.html" data-filter-tags="plugins faq info"> 
 					<span class="nav-link-text">
-						<span data-i18n="nav.plugin_panels">What are Core Plugins?</span>
-					</span>
-				</a>
-			</li> --}}
-			<li {{#is pagename "===" "plugin_panels"}}class="active"{{/is}}>
-				<a href="plugin_panels.html" data-filter-tags="plugins panels"> 
-					<span class="nav-link-text">
-						<span data-i18n="nav.plugin_panels">Panels</span>
-						<span class="dl-ref label bg-fusion-500 ml-1">3 KB</span>
+						<span data-i18n="nav.plugin_faq">Plugins FAQ</span>
 					</span>
 				</a>
 			</li>
@@ -452,11 +456,27 @@
 					</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "plugin_list_filter"}}class="active"{{/is}}>
-				<a href="plugin_list_filter.html" data-filter-tags="plugins list filter"> 
+			<li {{#is pagename "===" "plugin_pacejs"}}class="active"{{/is}}>
+				<a href="plugin_pacejs.html" data-filter-tags="plugin pacejs"> 
 					<span class="nav-link-text">
-						<span data-i18n="nav.plugin_list_filter">ListFilter</span>
-						<span class="dl-ref label bg-fusion-500 ml-1">0.2 KB</span>
+						<span data-i18n="nav.plugin_pacejs">PaceJS</span>
+						<span class="dl-ref label bg-fusion-500 ml-1">13 KB</span> 
+					</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "plugin_smartpanels"}}class="active"{{/is}}>
+				<a href="plugin_smartpanels.html" data-filter-tags="plugin smart panels"> 
+					<span class="nav-link-text">
+						<span data-i18n="nav.plugin_smartpanels">SmartPanels</span>
+						<span class="dl-ref label bg-fusion-500 ml-1">9 KB</span>
+					</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "plugin_slimscroll"}}class="active"{{/is}}>
+				<a href="plugin_slimscroll.html" data-filter-tags="plugins slim scroll slimscroll"> 
+					<span class="nav-link-text">
+						<span data-i18n="nav.plugin_slimscroll">Slimscroll</span>
+						<span class="dl-ref label bg-fusion-500 ml-1">5 KB</span>
 					</span>
 				</a>
 			</li>
@@ -475,6 +495,14 @@
 						<span class="dl-ref label bg-fusion-500 ml-1">2 KB</span>
 					</span>
 				</a>
+			</li>
+			<li {{#is pagename "===" "plugin_i18next"}}class="active"{{/is}}>
+				<a href="plugin_i18next.html" data-filter-tags="plugins i18next"> 
+					<span class="nav-link-text">
+						<span data-i18n="nav.plugin_i18next">i18next</span>
+						<span class="dl-ref label bg-fusion-500 ml-1">10 KB</span>
+					</span>
+				</a>
 			</li>	
 			<li {{#is pagename "===" "plugin_appcore"}}class="active"{{/is}}>
 				<a href="plugin_appcore.html" data-filter-tags="plugins app core"> 
@@ -484,53 +512,6 @@
 					</span>
 				</a>
 			</li>							
-		</ul>	
-	</li>
-	<li {{#is pagename "in" "extensions_faq,extensions_smartpanels,extensions_slimscroll,extensions_i18next,extensions_pacejs"}}class="active open"{{/is}}>
-		<a href="#" title="Plugins" data-filter-tags="core extensions"> 
-			<i class="fal fa-shield-check"></i>
-			<span class="nav-link-text" data-i18n="nav.plugin">Extensions</span> 
-		</a>
-		<ul>
-			<li {{#is pagename "===" "extensions_faq"}}class="active"{{/is}}>
-				<a href="enhancement_faq.html" data-filter-tags="extensions info"> 
-					<span class="nav-link-text">
-						<span data-i18n="nav.what_are_enhancements">Extensions FAQ</span>
-					</span>
-				</a>
-			</li>
-			<li {{#is pagename "===" "extensions_smartpanels"}}class="active"{{/is}}>
-				<a href="extensions_smartpanels.html" data-filter-tags="extensions plugins smart panels"> 
-					<span class="nav-link-text">
-						<span data-i18n="nav.extensions_smartpanels">SmartPanels</span>
-						<span class="dl-ref label bg-fusion-500 ml-1">9 KB</span>
-					</span>
-				</a>
-			</li>	
-			<li {{#is pagename "===" "extensions_slimscroll"}}class="active"{{/is}}>
-				<a href="extensions_slimscroll.html" data-filter-tags="extensions plugins slim scroll slimscroll"> 
-					<span class="nav-link-text">
-						<span data-i18n="nav.extensions_slimscroll">Slimscroll</span>
-						<span class="dl-ref label bg-fusion-500 ml-1">5 KB</span>
-					</span>
-				</a>
-			</li>	
-			<li {{#is pagename "===" "extensions_i18next"}}class="active"{{/is}}>
-				<a href="extensions_i18next.html" data-filter-tags="extensions plugins i18next"> 
-					<span class="nav-link-text">
-						<span data-i18n="nav.extensions_i18next">i18next</span>
-						<span class="dl-ref label bg-fusion-500 ml-1">10 KB</span>
-					</span>
-				</a>
-			</li>
-			<li {{#is pagename "===" "extensions_pacejs"}}class="active"{{/is}}>
-				<a href="extensions_pacejs.html" data-filter-tags="extensions pacejs"> 
-					<span class="nav-link-text">
-						<span data-i18n="nav.extensions_pacejs">PaceJS</span>
-						<span class="dl-ref label bg-fusion-500 ml-1">13 KB</span> 
-					</span>
-				</a>
-			</li>
 		</ul>	
 	</li>
 	<li {{#is pagename "in" "page_blank,page_search,page_error,page_error_404"}}class="active open"{{/is}}>
