@@ -11,265 +11,297 @@
 
 {{#*inline "content-block"}}
 
-<div class="container">
+<div class="card mb-g">
 
-	<div class="card mb-g">
+	<div class="card-body">
 
-		<div class="card-body">
+		<!-- row -->
+		<div class="row">
 
-			<!-- row -->
-			<div class="row">
+			<div class="col-sm-12">
+				<h3 class="mb-4">
+				    NextGen <span class="fw-300">Core Plugins</span> 
+				    <small>
+				    	Classification list of all core jquery plugins used with this WebApp. 
+				    </small>
+				</h3>
 
-				<div class="col-sm-12">
-					<h3 class="mb-4">
-					    NextGen <span class="fw-300">Core Plugins</span> 
-					    <small>
-					    	Classification list of all core jquery plugins used with this WebApp. 
-					    </small>
-					</h3>
+				{{!-- <h4 class="frame-heading">
+					The plugins in NextGen can be divided into several categories and can be unpluged based on your needs:
+				</h4>
 
-					<h4 class="frame-heading">
-						The plugins in NextGen can be divided into several categories and can be unpluged based on your needs:
-					</h4>
+				
+				<table class="mt-4 mb-1">
+					<tr>
+						<td class="text-right p-2 align-top">
+							<span class="badge bg-fusion-500 fs-nano">
+								DEPENDENCY
+							</span>
+						</td>
+						<td class="pl-2 pt-2 pb-1">
+							<strong>SHOULD NOT</strong> be removed.
+						</td>
+					</tr>
+					<tr>
+						<td class="text-right p-2 align-top">
+							<span class="badge badge-danger fs-nano">
+								CORE
+							</span>
+						</td>
+						<td class="pl-2 pt-2 pb-1">
+							<strong>SHOULD NOT</strong> be removed. This is a dependency file where other foundation plugins are built and depend on.
+						</td>
+					</tr>
+					<tr>
+						<td class="text-right p-2 align-top">
+							<span class="badge badge-warning fs-nano">
+								RECOMMENDED
+							</span>
+						</td>
+						<td class="pl-2 pt-2 pb-1">
+							<strong>CAN BE</strong> be removed. However it may impact the theme's performance.
+						</td>
+					</tr>
+					<tr>
+						<td class="text-right p-2 align-top">
+							<span class="badge badge-success fs-nano">
+								EXTENSION
+							</span>
+						</td>
+						<td class="pl-2 pt-2 pb-1">
+							<strong>CAN BE</strong> be removed if you do not plan on using it. But leaving it in will enhance some features of the webapp. 
+						</td>
+					</tr>
+					<tr>
+						<td class="text-right p-2 align-top">
+							<span class="badge badge-primary fs-nano">
+								PLUGINS
+							</span>
+						</td>
+						<td class="pl-2 pt-2 pb-1">
+							These files are not part of the actual webapp. They normally come with their own JS and CSS files that needs to be integrated. 
+						</td>
+					</tr>
+				</table> --}}
 
-					
-					<table class="mt-4 mb-1">
+			</div>
+		
+
+			<!-- row left -->
+			<div class="col-sm-12">
+
+
+				<table class="mb-0 table-hover">
+					<tbody>
 						<tr>
-							<td class="text-right p-2 align-top">
+							<td class="p-2 align-top text-right">
 								<span class="badge bg-fusion-500 fs-nano">
 									DEPENDENCY
 								</span>
 							</td>
-							<td class="pl-2 pt-2 pb-1">
-								<strong>SHOULD NOT</strong> be removed.
+							<td class="pl-2 pt-2 pb-1 align-top" style="width:180px">
+								<code>jquery.js</code>
+							</td>
+							<td class="p-2 align-top">
+								
+									jQuery is a lightweight, "write less, do more", JavaScript library. The purpose of jQuery is to make it much easier to use JavaScript on your website. jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.
+								
 							</td>
 						</tr>
 						<tr>
-							<td class="text-right p-2 align-top">
-								<span class="badge badge-danger fs-nano">
-									CORE
+							<td class="p-2 align-top text-right">
+								<span class="badge bg-fusion-500 fs-nano">
+									DEPENDENCY
 								</span>
 							</td>
-							<td class="pl-2 pt-2 pb-1">
-								<strong>SHOULD NOT</strong> be removed. This is a dependency file where other foundation plugins are built and depend on.
+							<td class="p-2 align-top">
+								<code>jquery-ui-cust.js</code>
+							</td>
+							<td class="p-2 align-top">
+								
+									jQuery UI is a widget and interaction library built on top of the jQuery JavaScript Library that you can use to build highly interactive web applications.
+								
 							</td>
 						</tr>
 						<tr>
-							<td class="text-right p-2 align-top">
-								<span class="badge badge-warning fs-nano">
-									RECOMMENDED
+							<td class="p-2 align-top text-right">
+								<span class="badge bg-fusion-500 fs-nano">
+									DEPENDENCY
 								</span>
 							</td>
-							<td class="pl-2 pt-2 pb-1">
-								<strong>CAN BE</strong> be removed. However it may impact the theme's performance.
+							<td class="p-2 align-top">
+								<code>popper.js</code>
+							</td>
+							<td class="p-2 align-top">
+								
+									Dependency for Bootstrap.js to relay and position popovers and tooltips.
+								
 							</td>
 						</tr>
 						<tr>
-							<td class="text-right p-2 align-top">
+							<td class="p-2 align-top text-right">
+								<span class="badge bg-fusion-500 fs-nano">
+									DEPENDENCY
+								</span>
+							</td>
+							<td class="p-2 align-top">
+								<code>bootstrap.js</code>
+							</td>
+							<td class="p-2 align-top">
+								
+									Bootstrap module dependency for Alert, Button, Carousel, Collapse, Dropdown, Modal, Popover, Scrollspy, Tab, Tooltip, and Transitions. 
+								
+							</td>
+						</tr>
+						<tr>
+							<td class="p-2 align-top text-right">
 								<span class="badge badge-success fs-nano">
 									EXTENSION
 								</span>
 							</td>
-							<td class="pl-2 pt-2 pb-1">
-								<strong>CAN BE</strong> be removed if you do not plan on using it. But leaving it in will enhance some features of the webapp. 
+							<td class="p-2 align-top">
+								<code>slimscroll.js</code>
+							</td>
+							<td class="p-2 align-top">
+								
+									slimScroll is a small jQuery plugin that transforms any div into a scrollable area. slimScroll doesn't occupy any visual space as it only appears on a user initiated mouse-over.
+								
 							</td>
 						</tr>
 						<tr>
-							<td class="text-right p-2 align-top">
-								<span class="badge badge-primary fs-nano">
-									PLUGINS
+							<td class="p-2 align-top text-right">
+								<span class="badge badge-success fs-nano">
+									EXTENSION
 								</span>
 							</td>
-							<td class="pl-2 pt-2 pb-1">
-								These files are not part of the actual webapp. They normally come with their own JS and CSS files that needs to be integrated. 
-							</td>
-						</tr>
-					</table>
-
-				</div>
-			
-
-				<!-- row left -->
-				<div class="col-sm-12">
-
-<p>
-  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Link with href
-  </a>
-  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Button with data-target
-  </button>
-</p>
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-  </div>
-</div>
-
-					<table class="mt-4 mb-0">
-
-						<tr>
-							<td class="p-1 align-top">
-								<i class="ni base-7 color-fusion-500"></i>
-							</td>
-							<td class="p-1 align-top">
-								<code>jquery.js</code>
-							</td>
-							<td class="p-1 align-top">
-								<div class="font-italic fs-xs p-1 collapse" id="jq-info">
-									jQuery is a lightweight, "write less, do more", JavaScript library. The purpose of jQuery is to make it much easier to use JavaScript on your website. jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.
-								</div>
-								<a class="btn btn-xs btn-default" data-toggle="collapse" href="#jq-info" aria-expanded="false" aria-controls="jq-info">
-									More info
-								</a>
-							</td>
-						</tr>
-						<tr>
-							<td class="p-1 align-top">
-								<i class="ni base-7 color-fusion-500"></i>
-							</td>
-							<td class="p-1 align-top">
-								<code>jquery-ui-cust.js</code>
-							</td>
-							<td class="p-1 align-top">
-								jQuery UI is a widget and interaction library built on top of the jQuery JavaScript Library that you can use to build highly interactive web applications.
-							</td>
-						</tr>
-						<tr>
-							<td class="p-1 align-top">
-								<i class="ni base-7 color-fusion-500"></i>
-							</td>
-							<td class="p-1 align-top">
-								<code>popper.js</code>
-							</td>
-							<td class="p-1 align-top">
-								Dependency for Bootstrap.js to relay and position popovers and tooltips.
-							</td>
-						</tr>
-						<tr>
-							<td class="p-1 align-top">
-								<i class="ni base-7 color-fusion-500"></i>
-							</td>
-							<td class="p-1 align-top">
-								<code>bootstrap.js</code>
-							</td>
-							<td class="p-1 align-top">
-								Show the progress bar and start updating. Called automatically if you don't use AMD or CommonJS.
-							</td>
-						</tr>
-
-						<tr>
-							<td class="p-1 align-top">
-								<i class="ni base-7 color-success-500"></i>
-							</td>
-							<td class="p-1 align-top">
-								<code>jquery.slimscroll.js</code>
-							</td>
-							<td class="p-1 align-top">
-								Show the progress bar and start updating. Called automatically if you don't use AMD or CommonJS.
-							</td>
-						</tr>
-
-						<tr>
-							<td class="p-1 align-top">
-								<i class="ni base-7 color-success-500"></i>
-							</td>
-							<td class="p-1 align-top">
+							<td class="p-2 align-top">
 								<code>smartpanels.js</code>
 							</td>
-							<td class="p-1 align-top">
-								Show the progress bar and start updating. Called automatically if you don't use AMD or CommonJS.
+							<td class="p-2 align-top">
+								
+									Transforms your panel component into draggable, localstorage based component. Remembering position, collapse state, and color changes.
+								
 							</td>
 						</tr>
 						<tr>
-							<td class="p-1 align-top">
-								<i class="ni base-7 color-danger-500"></i>
+							<td class="p-2 align-top text-right">
+								<span class="badge badge-danger fs-nano">
+									CORE
+								</span>
 							</td>
-							<td class="p-1 align-top">
-								<code>jquery.nextgen-navigation.js</code>
+							<td class="p-2 align-top">
+								<code>nextgen-navigation.js</code>
 							</td>
-							<td class="p-1 align-top">
-								Show the progress bar and start updating. Called automatically if you don't use AMD or CommonJS.
-							</td>
-						</tr>
-						<tr>
-							<td class="p-1 align-top">
-								<i class="ni base-7 color-danger-500"></i>
-							</td>
-							<td class="p-1 align-top">
-								<code>jquery.lazyload.js</code>
-							</td>
-							<td class="p-1 align-top">
-								Show the progress bar and start updating. Called automatically if you don't use AMD or CommonJS.
+							<td class="p-2 align-top">
+								
+									Is a simple jQuery plugin for creating accordion like menus for NextGen WebApp.
+								
 							</td>
 						</tr>
 						<tr>
-							<td class="p-1 align-top">
-								<i class="ni base-7 color-danger-500"></i>
+							<td class="p-2 align-top text-right">
+								<span class="badge badge-warning fs-nano">
+									RECOMMENDED
+								</span>
 							</td>
-							<td class="p-1 align-top">
-								<code>jquery.ba-throttle-debounce.js</code>
+							<td class="p-2 align-top">
+								<code>lazyload.js</code>
 							</td>
-							<td class="p-1 align-top">
-								Show the progress bar and start updating. Called automatically if you don't use AMD or CommonJS.
+							<td class="p-2 align-top">
+								
+									A fast, lightweight and flexible script that speeds up your web application by loading images only as they enter the viewport. LazyLoad is written in plain (vanilla) Javascript featuring the Intersection Observer API, it supports responsive images, it's SEO friendly and it has some other notable features.
+								
 							</td>
 						</tr>
 						<tr>
-							<td class="p-1 align-top">
-								<i class="ni base-7 color-danger-500"></i>
+							<td class="p-2 align-top text-right">
+								<span class="badge badge-danger fs-nano">
+									CORE
+								</span>
 							</td>
-							<td class="p-1 align-top">
+							<td class="p-2 align-top">
+								<code>ba-throttle-debounce.js</code>
+							</td>
+							<td class="p-2 align-top">
+								
+									Using jQuery throttle / debounce, you can pass a delay and function to $.debounce to get a new function, that when called repetitively, executes the original function just once per “bunch” of calls, effectively coalescing multiple sequential calls into a single execution at either the beginning or end.
+								
+							</td>
+						</tr>
+						<tr>
+							<td class="p-2 align-top text-right">
+								<span class="badge badge-success fs-nano">
+									EXTENSION
+								</span>
+							</td>
+							<td class="p-2 align-top">
 								<code>ripple.js</code>
 							</td>
-							<td class="p-1 align-top">
-								Show the progress bar and start updating. Called automatically if you don't use AMD or CommonJS.
+							<td class="p-2 align-top">
+								
+									A tiny foundation for creating reactive components with interpolation, data-binding, and plugins.
+								
 							</td>
 						</tr>
 						<tr>
-							<td class="p-1 align-top">
-								<i class="ni base-7 color-danger-500"></i>
+							<td class="p-2 align-top text-right">
+								<span class="badge badge-danger fs-nano">
+									CORE
+								</span>
 							</td>
-							<td class="p-1 align-top">
+							<td class="p-2 align-top">
 								<code>jquery-snippets.js</code>
 							</td>
-							<td class="p-1 align-top">
-								Show the progress bar and start updating. Called automatically if you don't use AMD or CommonJS.
+							<td class="p-2 align-top">
+								
+									Show the progress bar and start updating. Called automatically if you don't use AMD or CommonJS.
+								
 							</td>
 						</tr>
-
 						<tr>
-							<td class="p-1 align-top">
-								<i class="ni base-7 color-danger-500"></i>
+							<td class="p-2 align-top text-right">
+								<span class="badge badge-danger fs-nano">
+									CORE
+								</span>
 							</td>
-							<td class="p-1 align-top">
+							<td class="p-2 align-top">
 								<code>app.core.js</code>
 							</td>
-							<td class="p-1 align-top">
-								Show the progress bar and start updating. Called automatically if you don't use AMD or CommonJS.
+							<td class="p-2 align-top">
+								
+									Show the progress bar and start updating. Called automatically if you don't use AMD or CommonJS.
+								
 							</td>
 						</tr>
 						<tr>
-							<td class="p-1 align-top">
-								<i class="ni base-7 color-warning-500"></i>
+							<td class="p-2 align-top text-right">
+								<span class="badge badge-warning fs-nano">
+									RECOMMENDED
+								</span>
 							</td>
-							<td class="p-1 align-top">
+							<td class="p-2 align-top">
 								<code>pace.js</code>
 							</td>
-							<td class="p-1 align-top">
-								Show the progress bar and start updating. Called automatically if you don't use AMD or CommonJS.
+							<td class="p-2 align-top">
+								
+									An automatic web page progress bar. Created using standalone javascript library.
+								
 							</td>
 						</tr>
-						
-					</table>			
+						<tr>
+							<td class="p-2 align-top text-right" colspan="3">
+								a
+							</td>
+						</tr>
+					</tbody>
+				</table>			
 
-				</div>				
-				<!-- / row left -->
+			</div>				
+			<!-- / row left -->
 
-
-			</div>
-			<!-- /row -->
 
 		</div>
+		<!-- /row -->
 
 	</div>
 

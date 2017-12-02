@@ -487,7 +487,7 @@ var initApp = (function(app) {
 		
 		/* Add app date to breadcrumb-right-placeholder */
 		if ( myapp_config.appDateHook.length ) {
-			var months = ['January', 'February', 'March', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+			var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
 				day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
 				now = new Date(),
 				formatted = day[now.getDay()] + ', ' +  

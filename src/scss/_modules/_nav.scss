@@ -86,17 +86,16 @@
 
 			/* arrow that appears next to active/selected items */
 			&:not(.open) > a:before {
-				content: "\f0d9";
-				font-family: FontAwesome;
-				display: block;
-				height: 20px;
-				line-height: normal;
-				width: auto;
+				content: '';
 				position: absolute;
+				top: calc(50% - 8px);
 				right: -1px;
-				font-size: 20px;
-				color: #f1f1f1;
-				top: calc(50% - 10px);
+				width: 0;
+				height: 0;
+				border-left: 8px solid transparent;
+				border-right: 8px solid $page-bg;
+				border-bottom: 8px solid transparent;
+				border-top: 8px solid transparent;
 			}
 		}
 
