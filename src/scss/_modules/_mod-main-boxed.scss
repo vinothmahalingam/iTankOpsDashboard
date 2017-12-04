@@ -154,7 +154,7 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 			overflow: hidden;
 		}
 
-		&:not(.header-function-fixed):not(.nav-function-top) {
+		&:not(.header-function-fixed):not(.nav-function-top):not(.modal-open) {
 			.page-wrapper{
 				transform: translateX(0) !important;
 			}

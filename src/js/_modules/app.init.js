@@ -301,7 +301,7 @@ var initApp = (function(app) {
 				case ( primaryNavHeight < myapp_config.windowHeight ):
 
 					/* nav is higher than wrapper */
-					myapp_config.root_.css("min-height",  newHeight + "px");
+					myapp_config.root_wrapper.css("min-height",  newHeight + "px");
 
 					if (myapp_config.debugState)
 						console.log("nav height : " +  newHeight);
@@ -311,7 +311,7 @@ var initApp = (function(app) {
 				case ( primaryNavHeight > myapp_config.windowHeight ):
 
 					/* wrapper is higher than nav */
-					myapp_config.root_.css("min-height",  newHeight + "px");
+					myapp_config.root_wrapper.css("min-height",  newHeight + "px");
 
 					if (myapp_config.debugState)
 						console.log("body height : " +  newHeight);
@@ -321,7 +321,7 @@ var initApp = (function(app) {
 				case ( myapp_config.root_.hasClass('nav-function-fixed') ):
 
 					/* if navigation is fixed */
-					myapp_config.root_.css("min-height",  primaryNavHeight + "px");
+					myapp_config.root_wrapper.css("min-height",  primaryNavHeight + "px");
 
 					if (myapp_config.debugState)
 						console.log("nav-function-fixed new height : " +  primaryNavHeight);

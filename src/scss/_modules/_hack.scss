@@ -277,3 +277,11 @@ select {
 select::-ms-expand {
     display: none;
 }
+/* bootstrap modal remove padding */
+/* you need to disable this if you do not plan on using _addon-custom-scrollbar.scss */
+body:not(.mod-main-boxed):not(.mobile-view-activated).chrome.modal-open {
+	padding-right: 8px !important;
+}
+body:not(.mobile-view-activated).mod-main-boxed.modal-open {
+	padding-right: 0px !important;
+}

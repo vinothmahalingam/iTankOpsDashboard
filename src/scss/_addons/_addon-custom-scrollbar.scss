@@ -4,11 +4,13 @@
 $trackPieceColor:                #efefef;
 $handleBar:                      $fusion-100;
 $handleBarHover:                 darken($handleBar, 10%);
+$modalScrollSize:                8px;
 
-body:not(.mobile-detected) {
+body:not(.mobile-detected),
+body:not(.mobile-detected).modal-open .modal {
     &::-webkit-scrollbar {
-        height: 8px;
-        width: 8px;
+        height: $modalScrollSize;
+        width: $modalScrollSize;
     }
 
     &::-webkit-scrollbar:hover{
@@ -45,8 +47,8 @@ body:not(.mobile-detected) {
 }
 
 .left-panel .primary-nav::-webkit-scrollbar {
-    height: 4px;
-    width: 4px;
+    height: $modalScrollSize/2;
+    width: $modalScrollSize/2;
 }
 
 .left-panel .primary-nav:hover::-webkit-scrollbar-corner {

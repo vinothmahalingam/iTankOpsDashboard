@@ -12,6 +12,7 @@ var myapp_config = {
        Save a reference to the global object (window in the browser)
      */
     root_: $('body'), // used for core app reference
+    root_wrapper: $('.page-wrapper'),
     root_logo: $('#left_panel > .logo'), // used for core app reference
     /*
        REFERENCE OBJ FOR WINDOW HEIGHT
