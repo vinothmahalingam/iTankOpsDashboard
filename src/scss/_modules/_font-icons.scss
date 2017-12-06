@@ -1,11 +1,11 @@
 @font-face {
 	font-family: 'nextgen-icons';
-	src:url('../fonts/nextgen-icons.eot');
-	src:url('../fonts/nextgen-icons.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/nextgen-icons.woff2') format('woff2'), 					//read more info here: https://gist.github.com/sergejmueller/cf6b4f2133bcb3e2f64a
-		url('../fonts/nextgen-icons.woff') format('woff'),
-		url('../fonts/nextgen-icons.ttf') format('truetype'),
-		url('../fonts/nextgen-icons.svg#nextgen-icons') format('svg');
+	src: url('#{$webfontsURL}/nextgen-icons.eot');
+	src: url('#{$webfontsURL}/nextgen-icons.eot?#iefix') format('embedded-opentype'),
+		 url('#{$webfontsURL}/nextgen-icons.woff2') format('woff2'), 					//read more info here: https://gist.github.com/sergejmueller/cf6b4f2133bcb3e2f64a
+		 url('#{$webfontsURL}/webfonts/nextgen-icons.woff') format('woff'),
+		 url('#{$webfontsURL}/webfonts/nextgen-icons.ttf') format('truetype'),
+		 url('#{$webfontsURL}/webfonts/nextgen-icons.svg#nextgen-icons') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }

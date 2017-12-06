@@ -1,4 +1,5 @@
-$fa-font-path:                "../fonts";
+@import "./src/scss/_modules/variables";
 
-@import './src/custom/fonts/fontawesome-pro-master/scss/fa-light.scss';
-@import './src/custom/fonts/fontawesome-pro-master/scss/fontawesome.scss';
+$fa-font-path:   $webfontsURL;
+@import './src/custom/webfonts/fontawesome-pro-master/scss/fa-light.scss';
+@import './src/custom/webfonts/fontawesome-pro-master/scss/fontawesome.scss';

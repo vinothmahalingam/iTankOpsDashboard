@@ -335,6 +335,7 @@ $p-5:												         3rem;
 // usage: background-image: url("#{$baseURL}img/bg.png"); 
 
 $baseURL:											       "../" !default;
+$webfontsURL:                        "../webfonts" !default;
 $base-text-color:							       darken($white,60%) !default;
 
 /* font vars below will auto change to rem values using function rem($value)*/

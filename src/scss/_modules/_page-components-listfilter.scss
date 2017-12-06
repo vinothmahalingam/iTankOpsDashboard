@@ -19,11 +19,11 @@
 
 	/* these classes are triggered by JS */
 	.js-filter-hide {
-		display:none;
+		display:none !important;
 	}
 
 	.js-filter-show {
-		display:block;
+		display:block !important;
 	}
 
 }
