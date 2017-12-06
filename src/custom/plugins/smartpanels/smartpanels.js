@@ -804,7 +804,7 @@
                  **/
                 selectedHdr.removeClassPrefix('bg-')
                     .closest('.panel')
-                    .removeClass('panel-collapse panel-fullscreen panel-collapse panel-locked')
+                    .removeClass('panel-collapse panel-collapse panel-locked')
                     .attr('data-panel-attstyle', ''); 
 
                 /**
