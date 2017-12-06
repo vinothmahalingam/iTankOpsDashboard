@@ -15,7 +15,7 @@ module.exports = {
         path_node_modules      : "./node_modules/",
         path_vendor            : "./dist/",
         path_custom            : "./src/custom/",
-        fonts_path_dist        : "./dist/fonts/",
+        fonts_path_dist        : "./dist/webfonts/",
         video_path_dist        : "./dist/video/",
         lang_path_dist         : "./dist/lang/",
         template: {
