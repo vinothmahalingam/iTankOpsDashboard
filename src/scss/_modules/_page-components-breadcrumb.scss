@@ -14,8 +14,7 @@
 		}
 
 		&.breadcrumb-item {
-			//font-size: rem($page-breadcrumb-font-size);
-			max-width: 130px;
+			max-width: $page-breadcrumb-maxwidth - 70px;
 			text-overflow: ellipsis;
 			white-space: nowrap;
 			overflow: hidden;
@@ -23,7 +22,7 @@
 			@extend %common-animation-slow;
 
 			&:hover {
-				max-width: 200px !important;
+				max-width: $page-breadcrumb-maxwidth !important;
 				cursor: default;
 			}
 		}

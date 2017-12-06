@@ -120,7 +120,7 @@ $grid-breakpoints: (
 			min-height: calc(100vh - #{$header-height + $footer-height});
 
 			.breadcrumb > .breadcrumb-item {
-				max-width: 80px;
+				max-width: $page-breadcrumb-maxwidth/2 - 20px;
 			}
 
 			.subheader {
