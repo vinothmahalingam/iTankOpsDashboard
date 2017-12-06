@@ -224,7 +224,7 @@ $input-btn-focus-width:             2px;
 
 /* bootstrap tables */
 $table-border-color:                darken($gray-lighter, 5%);
-$table-hover-bg:									  rgba($fusion-300,.035);
+$table-hover-bg:									  adjust-hue(lighten($primary-500, 40%), -10); //rgba($fusion-300,.035);
 $table-accent-bg:               		rgba($fusion-500,.02);
 
 $table-dark-bg:                     $fusion-600;
@@ -306,7 +306,7 @@ $grid-breakpoints: (
 );
 
 $mobile-breakpoint:									 lg !default; 											        /* define when mobile menu activates, here we are declearing (lg) so it targets the one after it */
-$mobile-breakpoint-size:						 map-get($grid-breakpoints, lg) !default;	/* bootstrap reference xs: 0,  sm: 544px, md: 768px, lg: 992px, xl: 1200px*/
+$mobile-breakpoint-size:						 map-get($grid-breakpoints, lg) !default;	  /* bootstrap reference xs: 0,  sm: 544px, md: 768px, lg: 992px, xl: 1200px*/
 $grid-gutter-width-base:             30px;
 $grid-gutter-width:                  $grid-gutter-width-base / 1.5; //20px
 
@@ -567,7 +567,6 @@ $settings-incompat-title:         #d58100 !default;
 $settings-incompat-desc:          #ec9f28 !default;
 $settings-incompat-bg:            $warning-50 !default;
 $settings-incompat-border:        $warning-700 !default;
-
 $nav-tabs-panel-link-height:      35px !default;
 
 /*   PAGE BREADCRUMB 
