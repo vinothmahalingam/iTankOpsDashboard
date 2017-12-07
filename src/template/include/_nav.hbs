@@ -113,7 +113,7 @@
 	Components
 </p>
 <ul class="nav-menu">
-	<li {{#is pagename "in" "ui_alerts,ui_breadcrumbs,ui_buttons,ui_cards_wells,ui_carousel,ui_helpers,ui_icons_fontawesome,ui_icons_ng,ui_labels_badges,ui_list_filter,ui_navbars,ui_panels,ui_pagination,ui_tabs_accordions,ui_progress_bars,ui_scrollspy,ui_tooltips_popovers,ui_borders,ui_clearfix,ui_close_icon,ui_colors,ui_fonts,ui_flexbox,ui_display_property,ui_image_replacement,ui_invisible_content,ui_position,ui_responsive_helpers,ui_sizing,ui_spacing,ui_typography,ui_alignments,ui_icons_fontawesome,ui_icons_ng"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "ui_alerts,ui_breadcrumbs,ui_buttons,ui_cards_wells,ui_carousel,ui_helpers,ui_icons_ng,ui_labels_badges,ui_list_filter,ui_navbars,ui_panels,ui_pagination,ui_tabs_accordions,ui_progress_bars,ui_scrollspy,ui_tooltips_popovers,ui_borders,ui_clearfix,ui_close_icon,ui_colors,ui_fonts,ui_flexbox,ui_display_property,ui_image_replacement,ui_invisible_content,ui_position,ui_responsive_helpers,ui_sizing,ui_spacing,ui_typography,ui_alignments,ui_icons_ng"}}class="active open"{{/is}}>
 		<a href="#" title="UI Components" data-filter-tags="ui components"> 
 			<i class="fal fa-window"></i>
 			<span class="nav-link-text" data-i18n="nav.ui_components">UI Components</span> 
@@ -311,31 +311,6 @@
 					</li>
 				</ul>
 			</li>	
-			<li {{#is pagename "in" "ui_icons_fontawesome,ui_icons_ng"}}class="active open"{{/is}}>
-				<a href="#" data-filter-tags="ui components font icons"> 
-					<i class="fal fa-mouse-pointer"></i>
-					<span class="nav-link-text" data-i18n="nav.ui_icons">
-						Icons
-					</span> 
-				</a>
-				<ul>
-					<li {{#is pagename "===" "ui_icons_fontawesome"}}class="active"{{/is}}>
-						<a href="ui_icons_fontawesome.html" data-filter-tags="ui components font icons fontawesome pro"> 
-							<span class="nav-link-text" data-i18n="nav.ui_icons_fontawesome">
-								Fontawesome Pro
-							</span>
-						</a>
-					</li>
-					<li {{#is pagename "===" "ui_icons_ng"}}class="active"{{/is}}>
-						<a href="ui_icons_ng.html" data-filter-tags="ui components font icons nextgen icons"> 
-							<span class="nav-link-text" data-i18n="nav.ui_icons_ng">
-								NextGen Icons
-							</span>
-						</a>
-					</li>
-				</ul>		
-
-			</li>
 			<li>
 				<a href="#" data-filter-tags="menu child"> 
 					<span class="dl-ref bg-success-500">L1</span>
@@ -380,6 +355,64 @@
 			</li>
 		</ul>
 	</li>
+	<li {{#is pagename "in" "icons_webfonts_faq,icons_fontawesome_free,icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_ng,ui_icons_ng,icons_stack"}}class="active open"{{/is}}>
+		<a href="#" title="Icons" data-filter-tags="icons"> 
+			<i class="fal fa-map-marker-alt"></i>
+			<span class="nav-link-text" data-i18n="nav.infterface.icons">Icons</span>
+			<span class="dl-ref bg-info-200 hidden-nav-function-minify hidden-nav-function-top">&nbsp;2,500+&nbsp;</span>
+		</a>
+		<ul>
+			<li {{#is pagename "===" "icons_webfonts_faq"}}class="active"{{/is}}>
+				<a href="icons_webfonts_faq.html" data-filter-tags="ui components font icons fontawesome free icons"> 
+					<span class="nav-link-text" data-i18n="nav.icons_wf">
+						Webfonts FAQ
+					</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "icons_fontawesome_free"}}class="active"{{/is}}>
+				<a href="icons_fontawesome_free.html" data-filter-tags="ui components font icons fontawesome free icons"> 
+					<span class="nav-link-text" data-i18n="nav.ui_icons_ng">
+						Fontawesome Free
+					</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "icons_fontawesome_light"}}class="active"{{/is}}>
+				<a href="icons_fontawesome_light.html" data-filter-tags="ui components font icons fontawesome pro light"> 
+					<span class="nav-link-text" data-i18n="nav.icons_fontawesome_light">
+						FA Pro Light
+					</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "icons_fontawesome_regular"}}class="active"{{/is}}>
+				<a href="icons_fontawesome_regular.html" data-filter-tags="ui components font icons fontawesome pro regular"> 
+					<span class="nav-link-text" data-i18n="nav.icons_far">
+						FA Pro Regular
+					</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "icons_fontawesome_solid"}}class="active"{{/is}}>
+				<a href="icons_fontawesome_solid.html" data-filter-tags="ui components font icons fontawesome pro solid"> 
+					<span class="nav-link-text" data-i18n="nav.icons_fas">
+						FA Pro Solid
+					</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "icons_ng"}}class="active"{{/is}}>
+				<a href="icons_ng.html" data-filter-tags="ui components font icons nextgen icons"> 
+					<span class="nav-link-text" data-i18n="nav.icons_ng">
+						NextGen Icons
+					</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "icons_stack"}}class="active"{{/is}}>
+				<a href="icons_stack.html" data-filter-tags="ui components font icons stacking icons"> 
+					<span class="nav-link-text" data-i18n="nav.icons_stack">
+						Stacking Icons
+					</span>
+				</a>
+			</li>
+		</ul>
+	</li>	
 	<li {{#is pagename "in" "datagrid_basic_tables,datagrid_generate_table_style"}}class="active open"{{/is}}>
 		<a href="#" title="Datagrid" data-filter-tags="datagrid"> 
 			<i class="fal fa-th-list"></i>
