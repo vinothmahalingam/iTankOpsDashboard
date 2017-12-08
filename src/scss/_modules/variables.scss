@@ -141,7 +141,7 @@ $colors: (
   green: $success-500,
   white: $white,
   gray: $gray-600,
-  gray-dark: $gray-800
+  gray-dark: $gray-700
 );
 
 /* usage: theme-color("primary"); */
@@ -153,7 +153,7 @@ $theme-colors: (
   warning: $warning-500,
   danger: $danger-500,
   light: $white,
-  dark: $gray-800
+  dark: $gray-700
 );
 
 /*$grays: ();
@@ -290,7 +290,7 @@ $navbar-toggler-font-size:				  21px;
 $navbar-toggler-padding-y:				  7.5px; 
 $navbar-toggler-padding-x:				  18px;
 
-/*  MOBILE BREAKPOINT & GUTTERS (contains some bootstrap overrides)
+/*  MOBILE BREAKPOINT & GUTTERS (contains some bootstrap responsive overrides)
 ========================================================================== */
 $grid-breakpoints: (
   // Extra small screen / phone
@@ -302,7 +302,9 @@ $grid-breakpoints: (
   // Large screen / desktop
   lg: 992px,
   // Extra large screen / wide desktop
-  xl: 1340px
+  xl: 1340px/*,
+  // Gigantic screen /wide desktop
+  xxl: 1920px*/
 );
 
 $mobile-breakpoint:									 lg !default; 											        /* define when mobile menu activates, here we are declearing (lg) so it targets the one after it */
