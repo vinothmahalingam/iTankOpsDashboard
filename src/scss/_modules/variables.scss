@@ -302,9 +302,7 @@ $grid-breakpoints: (
   // Large screen / desktop
   lg: 992px,
   // Extra large screen / wide desktop
-  xl: 1340px/*,
-  // Gigantic screen /wide desktop
-  xxl: 1920px*/
+  xl: 1340px
 );
 
 $mobile-breakpoint:									 lg !default; 											        /* define when mobile menu activates, here we are declearing (lg) so it targets the one after it */
