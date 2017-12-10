@@ -295,14 +295,24 @@ $navbar-toggler-padding-x:				  18px;
 $grid-breakpoints: (
   // Extra small screen / phone
   xs: 0,
+
   // Small screen / phone
   sm: 576px,
+
   // Medium screen / tablet
   md: 768px,
+
   // Large screen / desktop
   lg: 992px,
+
+  // Decently size screen / wide laptop
+  xl: 1200px,
+
   // Extra large screen / wide desktop
-  xl: 1340px
+  xxl: 1400px,
+
+  // Extra large screen / wide desktop
+  xxxl: 1600px  
 );
 
 $mobile-breakpoint:									 lg !default; 											        /* define when mobile menu activates, here we are declearing (lg) so it targets the one after it */

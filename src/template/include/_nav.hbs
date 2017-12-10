@@ -355,10 +355,10 @@
 			</li>
 		</ul>
 	</li>
-	<li {{#is pagename "in" "icons_webfonts_faq,icons_fontawesome_free,icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_ng,ui_icons_ng,icons_stack"}}class="active open"{{/is}}>
-		<a href="#" title="Icons" data-filter-tags="icons"> 
+	<li {{#is pagename "in" "icons_webfonts_faq,icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_ng,ui_icons_ng,icons_stack"}}class="active open"{{/is}}>
+		<a href="#" title="Icons" data-filter-tags="icons">
 			<i class="fal fa-map-marker-alt"></i>
-			<span class="nav-link-text" data-i18n="nav.infterface.icons">Icons</span>
+			<span class="nav-link-text" data-i18n="nav.infterface.icons">Font Icons</span>
 			<span class="dl-ref bg-info-200 hidden-nav-function-minify hidden-nav-function-top">&nbsp;2,500+&nbsp;</span>
 		</a>
 		<ul>
@@ -369,33 +369,40 @@
 					</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "icons_fontawesome_free"}}class="active"{{/is}}>
-				<a href="icons_fontawesome_free.html" data-filter-tags="ui components font icons fontawesome free icons"> 
-					<span class="nav-link-text" data-i18n="nav.ui_icons_ng">
-						Fontawesome Free
-					</span>
+			<li {{#is pagename "in" "icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_fontawesome_brand"}}class="active open"{{/is}}>
+				<a href="#" title="Icons" data-filter-tags="icons">
+					<span class="nav-link-text" data-i18n="nav.infterface.icons">FontAwesome Pro 5</span>
 				</a>
-			</li>
-			<li {{#is pagename "===" "icons_fontawesome_light"}}class="active"{{/is}}>
-				<a href="icons_fontawesome_light.html" data-filter-tags="ui components font icons fontawesome pro light"> 
-					<span class="nav-link-text" data-i18n="nav.icons_fontawesome_light">
-						FA Pro Light
-					</span>
-				</a>
-			</li>
-			<li {{#is pagename "===" "icons_fontawesome_regular"}}class="active"{{/is}}>
-				<a href="icons_fontawesome_regular.html" data-filter-tags="ui components font icons fontawesome pro regular"> 
-					<span class="nav-link-text" data-i18n="nav.icons_far">
-						FA Pro Regular
-					</span>
-				</a>
-			</li>
-			<li {{#is pagename "===" "icons_fontawesome_solid"}}class="active"{{/is}}>
-				<a href="icons_fontawesome_solid.html" data-filter-tags="ui components font icons fontawesome pro solid"> 
-					<span class="nav-link-text" data-i18n="nav.icons_fas">
-						FA Pro Solid
-					</span>
-				</a>
+				<ul>
+					<li {{#is pagename "===" "icons_fontawesome_light"}}class="active"{{/is}}>
+						<a href="icons_fontawesome_light.html" data-filter-tags="ui components font icons fontawesome pro light"> 
+							<span class="nav-link-text" data-i18n="nav.icons_fontawesome_light">
+								Light
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "icons_fontawesome_regular"}}class="active"{{/is}}>
+						<a href="icons_fontawesome_regular.html" data-filter-tags="ui components font icons fontawesome pro regular"> 
+							<span class="nav-link-text" data-i18n="nav.icons_far">
+								Regular
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "icons_fontawesome_solid"}}class="active"{{/is}}>
+						<a href="icons_fontawesome_solid.html" data-filter-tags="ui components font icons fontawesome pro solid"> 
+							<span class="nav-link-text" data-i18n="nav.icons_fas">
+								Solid
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "icons_fontawesome_brand"}}class="active"{{/is}}>
+						<a href="icons_fontawesome_brand.html" data-filter-tags="ui components font icons fontawesome pro solid"> 
+							<span class="nav-link-text" data-i18n="nav.icons_fas">
+								Brand
+							</span>
+						</a>
+					</li>
+				</ul>
 			</li>
 			<li {{#is pagename "===" "icons_ng"}}class="active"{{/is}}>
 				<a href="icons_ng.html" data-filter-tags="ui components font icons nextgen icons"> 

@@ -323,7 +323,7 @@
 
 						a {
 							color: $nav-link-color;
-							padding: 9px $nav-padding-right 9px $nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.5;
+							padding: 9px $nav-padding-right 9px $nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.5 + 10;
 							font-size: rem($nav-font-link-size - 1);
 
 							.dl-ref {
