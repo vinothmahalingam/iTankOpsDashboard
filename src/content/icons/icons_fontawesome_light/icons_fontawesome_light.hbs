@@ -18,7 +18,9 @@ pagedescription="Font Awesome 5 Pro Light 619 icons"
 		</div>
 	</div>
 
-	<div id="fontawesome-pro" class="row">
+	<div id="fontawesome-pro" class="row"></div>
+
+	{{!-- <div id="fontawesome-pro" class="row">
 
 		<div class="col-sm-12">
 			<h4 class="frame-heading text-right">
@@ -6216,7 +6218,7 @@ pagedescription="Font Awesome 5 Pro Light 619 icons"
 				</div>
 			</a>
 		</div>
-	</div>
+	</div> --}}
 
 
 	<!-- Modal -->
@@ -6363,7 +6365,7 @@ pagedescription="Font Awesome 5 Pro Light 619 icons"
 		</div>
 */
 
-	$.getJSON( "ajax/test.json", function( data ) {
+	/*$.getJSON( "ajax/test.json", function( data ) {
 		var items = [];
 		$.each( data, function( icon ) {
 			items.push( "<li id='" + icon + "'>" + icon + "</li>" );
@@ -6373,7 +6375,31 @@ pagedescription="Font Awesome 5 Pro Light 619 icons"
 			"class": "my-new-list",
 			html: items.join( "" )
 		}).appendTo( "#fontawesome-pro" );
-	});
+	});*/
+
+	$.get('./css/fontawesome.min.css', function(data) {
+		initIconRender(data.match(/.fa-[^:]*/g, ''));
+	}, 'text');
+
+	var initIconRender = function(data){
+
+		var arr = data;
+		var removeStr = [".fa-lg{font-size", ".fa-xs{font-size", ".fa-sm{font-size", ".fa-1x{font-size", ".fa-2x{font-size", ".fa-3x{font-size", ".fa-4x{font-size", ".fa-5x{font-size", ".fa-6x{font-size", ".fa-7x{font-size", ".fa-8x{font-size", ".fa-9x{font-size", ".fa-10x{font-size", ".fa-fw{text-align", ".fa-ul{list-style-type", ".fa-ul>li{position", ".fa-li{left", ".fa-border{border", ".fa-pull-left{float", ".fa-pull-right{float", ".fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right", ".fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left", ".fa-spin{animation", ".fa-pulse{animation", ".fa-rotate-90{-ms-filter", ".fa-rotate-180{-ms-filter", ".fa-rotate-270{-ms-filter", ".fa-flip-horizontal{-ms-filter", ".fa-flip-vertical{transform", ".fa-flip-horizontal.fa-flip-vertical,.fa-flip-vertical{-ms-filter", ".fa-flip-horizontal.fa-flip-vertical{transform", ".fa-flip-horizontal,", ".fa-flip-vertical,", ".fa-rotate-90,", ".fa-rotate-180,", ".fa-rotate-270{filter", ".fa-stack{display", ".fa-stack-1x,.fa-stack-2x{left", ".fa-stack-1x{line-height", ".fa-stack-2x{font-size", ".fa-inverse{color"]
+
+
+			arr = arr.filter(function(val){
+			  return (removeStr.indexOf(val) == -1 ? true : false)
+			})
+		
+
+			jQuery.each(arr, function(index, item) {
+			    
+				console.log(item)
+
+			});
+
+		//console.log(arr);
+	}
 
 </script>
 
