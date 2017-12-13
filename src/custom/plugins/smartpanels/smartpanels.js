@@ -400,7 +400,7 @@
                     }
 
                     /**
-                     * Prepend the image to the panel header.
+                     * Append the image to the panel header.
                      **/
                     thisHeader.append(
                         '<div class="panel-saving mr-2" style="display:none"><i class="fal fa-spinner-third fa-spin-4x fs-xl"></i></div>'

@@ -1,13 +1,13 @@
 {{#> 
 layouts/main 
-title="FA Pro Regular" 
-pagename="icons_fontawesome_regular" 
+title="FA Pro Brand" 
+pagename="icons_fontawesome_brand" 
 category_1="Icons" 
-heading="Fontawesome Pro Regular" 
-pagedescription="Font Awesome 5 Pro Regular"
+heading="Fontawesome Pro Brand" 
+pagedescription="Font Awesome 5 Pro Brand"
 }}
 
-{{#*inline "head-block"}}<link rel="stylesheet" media="screen, print" href="css/fa-regular.min.css">{{/inline}}
+{{#*inline "head-block"}}<link rel="stylesheet" media="screen, print" href="css/fa-brands.min.css">{{/inline}}
 
 {{#*inline "content-block"}}
 
@@ -131,10 +131,10 @@ pagedescription="Font Awesome 5 Pro Regular"
 <script>
 
     // webfont prefix
-    var prefix = "far";
+    var prefix = "fab";
 
     // file that will be filtered
-    var filename = "fa-icon-list.json";
+    var filename = "fa-brand-list.json";
 
     $.getJSON(filename).then(function(data) {
         
