@@ -79,15 +79,15 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 			   			}
 			   		}
 
-			   		&.active {
+			   		/*&.active {
 			   			@include text-contrast($header-btn-active-bg);
-			   			background:$header-btn-active-bg !important;
+			   			background:$header-btn-active-bg;
 
 			   			&>[class*='fa-']:only-child,
 			   			&>.#{$cust-icon-prefix}:only-child {
 							@include text-contrast($header-btn-active-bg);
 			   			}
-			   		}
+			   		}*/
 
 					&[data-toggle="dropdown"] {
 
@@ -128,7 +128,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 						}
 
 						/* header dropdowns */
-
+						/* note: important rules to override popper's inline classes */
 						& + .dropdown-menu {
 
 							@extend %header-dropdown;

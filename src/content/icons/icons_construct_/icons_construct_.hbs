@@ -7,7 +7,11 @@ heading="Fontawesome Pro Solid"
 pagedescription="Font Awesome 5 Pro Solid"
 }}
 
-{{#*inline "head-block"}}<link rel="stylesheet" media="screen, print" href="css/fa-solid.min.css">{{/inline}}
+{{#*inline "head-block"}}
+<link rel="stylesheet" media="screen, print" href="css/fa-regular.min.css">
+<link rel="stylesheet" media="screen, print" href="css/fa-solid.min.css">
+<link rel="stylesheet" media="screen, print" href="css/fa-brands.min.css">
+{{/inline}}
 
 {{#*inline "content-block"}}
 
@@ -144,9 +148,11 @@ pagedescription="Font Awesome 5 Pro Solid"
             //
             jQuery.each(data, function(index, item) {
                 formatedDOMElms.push('<div class="col-4 col-sm-3 col-lg-2 col-xl-2 col-xxl-2 col-xxxl-1 d-flex justify-content-center align-items-center mb-g">\
-                                            <a href="#" class="text-dark rounded bg-white p-0 m-0 d-flex flex-column align-items-center justify-content-center w-100 h-100 js-showcase-icon"\ data-toggle="modal" data-target="#exampleModal" data-filter-tags=' + item + '>\
-                                                <div class="rounded-top d-flex flex-column align-items-center justify-content-center fa-3x w-100 pt-3 pb-3 pr-2 pl-2 bg-hover">\
-                                                    <i class="'+ prefix + ' ' + 'fa' + item + '"></i>\
+                                            <a href="#" class="rounded bg-white p-0 m-0 d-flex flex-column w-100 h-100 js-showcase-icon" data-toggle="modal" data-target="#exampleModal" data-filter-tags=' + item.substring(1) + '>\
+                                                <div class="rounded-top color-fusion-300 w-100 bg-primary-300">\
+                                                    <div class="rounded-top d-flex align-items-center justify-content-center w-100 pt-3 pb-3 pr-2 pl-2 fa-3x hover-bg">\
+                                                        <i class="'+ prefix + ' ' + 'fa' + item + '"></i>\
+                                                    </div>\
                                                 </div>\
                                                 <div class="rounded-bottom p-1 w-100 d-flex justify-content-center align-items-center text-center">\
                                                     <span class="d-block text-truncate text-muted">' + item.substring(1) + '</span>\

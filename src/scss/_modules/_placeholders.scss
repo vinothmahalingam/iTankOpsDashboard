@@ -222,7 +222,7 @@ RESULT:
   @extend %btn-default;
   @include rounded($header-btn-border-radius);
 
-  height: $header-btn-height !important;
+  height: $header-btn-height;
   width: $header-btn-width;
   vertical-align: middle;
   line-height: $header-btn-height - 2;
@@ -247,13 +247,10 @@ RESULT:
 }
 
 %header-btn-active {
-  background: $header-btn-active-bg !important;
+  background: $header-btn-active-bg;
   border-color: darken($header-btn-active-bg, 10%) !important;
   @include box-shadow(inset 0 0 3px 1px rgba(0,0,0,.37));
   color:$header-btn-active-color !important;
-  path {
-    fill:$header-btn-active-color;
-  }
 }
 
 %header-dropdown {

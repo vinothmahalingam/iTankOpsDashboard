@@ -62,7 +62,7 @@ h6 small,
 
 /* contrast text */
 .text-contrast {
-	color: lighten($black, 20%) !important;
+	color: lighten($black, 20%);
 }
 
 /* looking for font size? Check _helpers.scss */

@@ -315,10 +315,9 @@ Color brightness is determined by the following formula:
 @mixin paint($paint:#333333,$make:bg-blue-grey-50) {
 
     .#{$make} {
-      background-color: $paint !important;
+      background-color: $paint;
       @include text-contrast($paint)
-      &:hover,
-      &:focus{
+      &:hover {
         @include text-contrast($paint)
       }
     }
@@ -326,7 +325,7 @@ Color brightness is determined by the following formula:
 
 @mixin brush($brush: #333,$make: red-50) {
     .#{$make} {
-      color: $brush !important;
+      color: $brush;
     }
 }
 
