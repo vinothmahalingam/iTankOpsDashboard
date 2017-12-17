@@ -217,7 +217,8 @@ $alert-padding-y:                   0.75rem;
 $alert-padding-x:                   1.2rem;
 
 /* breadcrumb */
-$breadcrumb-bg:                     lighten($fusion-50, 43%);          
+$breadcrumb-bg:                     lighten($fusion-50, 43%);    
+$breadcrumb-divider-color:          inherit;      
 
 /* button */
 $input-btn-focus-width:             2px;

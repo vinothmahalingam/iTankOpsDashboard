@@ -11,166 +11,12 @@ $panel-edge-radius: $border-radius;
 	max-width: 100%;
 }
 
-.panel,
-.panel-placeholder {
-	margin-bottom: $grid-gutter-width;
-	border-radius: $border-radius;
-}
-
-.panel-hdr,
-.panel-toolbar {
-	display: flex;
-	align-items:center;
-}
-
-.panel-sortable:not(.panel-fullscreen):not(.panel-locked) h2 {
-	cursor: move;
-}
-
 .panel {
-
 	position: relative;
 	background-color: $white;
 	box-shadow: 0 1px 1px rgba(0,0,0,.05);
-
-	/* panel header */
-	.panel-hdr {
-		min-height: $panel-hdr-height;
-
-		@extend %common-animation-easeout;
-		@include box-sizing(border-box); 
-
-		border: 1px solid;
-    	border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.17);
-		background: $panel-hdr-background;
-		border-radius: $panel-edge-radius $panel-edge-radius 0 0;
-
-
-		/* add padding to first and last child */
-		> :first-child {
-			padding-left: $panel-hdr-padding;
-		}
-		> :last-child {
-			padding-right: $panel-hdr-padding;
-		}
-
-		/* adjusts title */
-		h2 {
-			flex: 1;
-			font-size: rem($panel-hdr-font-size);
-			margin: 0;
-			display: flex;
-			align-items:center;
-			line-height: $panel-hdr-height - 2;
-			color: inherit;
-			position: relative;
-
-			&:not(:only-child) {
-				margin-right: $panel-padding / 1.5;
-			}
-
-			> [class*='fw-'] {
-				margin-left: 4px;
-			}
-
-			small {
-				display: inline-block;
-				margin:0;
-				opacity: 0.8;
-				font-weight: 400;
-				font-size: rem($panel-hdr-font-size - 2);
-				margin-left: $spacer * 0.5;
-			}
-
-			/* panel header icon */
-			.panel-icon {
-				margin-right: $p-2;
-			}
-
-		}
-
-		/* panel toolbar (sits inside panel header) */
-		.panel-toolbar {
-
-			border-color: inherit;
-
-			.btn-panel {
-				margin-left: $panel-padding / 3;
-
-				padding: 0;
-				width: $panel-btn-size;
-				height: $panel-btn-size;
-				border-color: transparent;
-
-				@include box-sizing(border-box);
-
-				border-radius: 50%;
-				opacity: 0.8;
-				border: 1px solid rgba(0,0,0,0.2);
-
-				@extend %common-animation;
-
-				&:hover {
-					opacity: 1;
-					color: $white !important;
-				}
-
-				/* add default colors for action buttons */
-				&[data-action="panel-collapse"],
-				&.js-panel-collapse {
-					background: $fusion-50;
-				}
-
-				&[data-action="panel-fullscreen"],
-				&.js-panel-fullscreen {
-					background: $warning-500;
-				}
-
-				&[data-action="panel-close"],
-				&.js-panel-close {
-					background: $danger-500;
-				}
-
-			}
-
-			.btn-toolbar-master {
-				height: $panel-hdr-height - 2;
-				border-radius: 0;
-				margin-right: -$panel-padding;
-				border-top-right-radius: 3px;
-				margin-left: 10px;
-				padding: 0 11px;
-				background: transparent;
-				border: 0;
-				border-left: 1px solid;
-				border-left-color: inherit;
-				font-size: 23px;
-				color: inherit;
-				display: flex;
-    			align-items: center;
-
-				& + .dropdown-menu {
-					right: 0;
-					top: $panel-hdr-height - 1 !important;
-					left: auto !important;
-					border-color: inherit;
-					margin:0;
-					border-radius:0;
-					min-width: 150px;
-					border-color: rgba($fusion-500, 0.08);
-					border-top-color: transparent;
-					border-right-color: transparent;
-				}
-			}
-
-			/* we curve the last button to make it seamless with panel's border radius */
-			.btn-panel-flat:last-child {
-				border-top-right-radius: $border-radius - 1px;
-			}
-
-		}
-
-	}	
+	margin-bottom: $grid-gutter-width;
+	border-radius: $border-radius;
 
 	/* panel container */
 	.panel-container {
@@ -216,7 +62,7 @@ $panel-edge-radius: $border-radius;
 
 	/* panel fullscreen */
 	&.panel-fullscreen {
-		position: fixed !important;
+		position: fixed;
 		z-index: 9999;
 		top: 0;
 		left: 0;
@@ -239,8 +85,7 @@ $panel-edge-radius: $border-radius;
 		/* make panel header bigger */
 		.panel-hdr {
 			height: $header-height;
-			background: #fafafa;
-			border-radius: 0 !important;
+			border-radius: 0;
 			box-shadow: 0 0.125rem 0.125rem -0.0625rem rgba(0, 0, 0, 0.1);
 
 			/* make panel header bigger */
@@ -252,8 +97,8 @@ $panel-edge-radius: $border-radius;
 
 		[data-action="panel-fullscreen"],
 		.js-panel-fullscreen {
-			width:$panel-hdr-height/2 !important;
-			height:$panel-hdr-height/2 !important;
+			width:$panel-hdr-height/2;
+			height:$panel-hdr-height/2;
 		}
 
 		.panel-container {
@@ -300,8 +145,151 @@ $panel-edge-radius: $border-radius;
 	}
 }
 
+/* panel header */
+.panel-hdr {
+	display: flex;
+	align-items:center;
+	background: $panel-hdr-background;
+	min-height: $panel-hdr-height;
+	@extend %common-animation-easeout;
+	@include box-sizing(border-box); 
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.17);
+	border-radius: $panel-edge-radius $panel-edge-radius 0 0;
+
+	
+	/* add padding to first and last child */
+	> :first-child {
+		padding-left: $panel-hdr-padding;
+	}
+	> :last-child {
+		padding-right: $panel-hdr-padding;
+	}
+
+	/* adjusts title */
+	h2 {
+		flex: 1;
+		font-size: rem($panel-hdr-font-size);
+		margin: 0;
+		display: flex;
+		align-items:center;
+		line-height: $panel-hdr-height - 2;
+		color: inherit;
+		position: relative;
+
+		&:not(:only-child) {
+			margin-right: $panel-padding / 1.5;
+		}
+
+		> [class*='fw-'] {
+			margin-left: 4px;
+		}
+
+		small {
+			display: inline-block;
+			margin:0;
+			opacity: 0.8;
+			font-weight: 400;
+			font-size: rem($panel-hdr-font-size - 2);
+			margin-left: $spacer * 0.5;
+		}
+
+		/* panel header icon */
+		.panel-icon {
+			margin-right: $p-2;
+		}
+
+	}
+
+}	
+
+/* panel toolbar (sits inside panel header) */
+.panel-toolbar {
+	display: flex;
+	align-items:center;
+	border-color: inherit;
+
+	.btn-panel {
+		margin-left: $panel-padding / 3;
+
+		padding: 0;
+		width: $panel-btn-size;
+		height: $panel-btn-size;
+		border-color: transparent;
+
+		@include box-sizing(border-box);
+
+		border-radius: 50%;
+		opacity: 0.8;
+		border: 1px solid rgba(0,0,0,0.2);
+
+		@extend %common-animation;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		/* add default colors for action buttons */
+		&[data-action="panel-collapse"],
+		&.js-panel-collapse {
+			background: $fusion-50;
+		}
+
+		&[data-action="panel-fullscreen"],
+		&.js-panel-fullscreen {
+			background: $warning-500;
+		}
+
+		&[data-action="panel-close"],
+		&.js-panel-close {
+			background: $danger-500;
+		}
+
+	}
+
+	.btn-toolbar-master {
+		height: $panel-hdr-height - 2;
+		border-radius: 0;
+		margin-right: -$panel-padding;
+		border-top-right-radius: 3px;
+		margin-left: 10px;
+		padding: 0 11px;
+		background: transparent;
+		border: 0;
+		border-left: 1px solid;
+		border-left-color: inherit;
+		font-size: 23px;
+		color: inherit;
+		display: flex;
+		align-items: center;
+
+		& + .dropdown-menu {
+			right: 0;
+			top: $panel-hdr-height - 1 !important;
+			left: auto !important;
+			border-color: inherit;
+			margin:0;
+			border-radius:0;
+			min-width: 150px;
+			border-color: rgba($fusion-500, 0.08);
+			border-top-color: transparent;
+			border-right-color: transparent;
+		}
+	}
+
+	/* we curve the last button to make it seamless with panel's border radius */
+	.btn-panel-flat:last-child {
+		border-top-right-radius: $border-radius - 1px;
+	}
+
+}
+
+.panel-sortable:not(.panel-fullscreen):not(.panel-locked) h2 {
+	cursor: move;
+}
+
 /* panel placeholder */
-.panel-placeholder {
+/*.panel-placeholder {
 	background-color: #FFC;
     border: 1px dashed #A7A7A7;
 	box-sizing: border-box;
@@ -309,9 +297,9 @@ $panel-edge-radius: $border-radius;
 	border-radius: $border-radius + 1;
 	position: relative;
 	box-shadow: inset 2px 2px 3px rgba(0,0,0,0.1), inset 0 0 0 1px rgba(0,0,0,0.02)
-}
+}*/
 
-/*.panel-placeholder {
+.panel-placeholder {
 	background-color: #FFC;
 	box-sizing: border-box;
 	margin-bottom: $grid-gutter-width;
@@ -329,7 +317,7 @@ $panel-edge-radius: $border-radius;
 		right:0;
 		bottom:0;
 		left:0;
-		opacity: 0.5;
+		opacity: 0.3;
 	}
 
 	&:before {
@@ -339,28 +327,26 @@ $panel-edge-radius: $border-radius;
 		opacity: 1;
 		z-index: 1;
 	}
-}*/
+}
 
 .mod-panel-clean {
 
-	.panel {
-
-		.panel-hdr {
-			background: $white;
-			background-image: linear-gradient(to bottom,#f7f7f7, $white);
-			border-bottom: 0;
-			
-			h2 {
-				color: #333;
-				font-weight: 500;
-			}
-
+	.panel-hdr {
+		background: $white;
+		background-image: linear-gradient(to bottom,#f7f7f7, $white);
+		border-bottom: 0;
+		
+		h2 {
+			color: #333;
+			font-weight: 500;
 		}
 
-		.panel-container {
-			padding-top: $p-1;
-		}
 	}
+
+	.panel-container {
+		padding-top: $p-1;
+	}
+	
 }	
 
 @media only screen and ( max-width: 420px ){
