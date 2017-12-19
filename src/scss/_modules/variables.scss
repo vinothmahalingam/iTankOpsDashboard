@@ -320,6 +320,7 @@ $mobile-breakpoint:									 lg !default; 											        /* define when mobi
 $mobile-breakpoint-size:						 map-get($grid-breakpoints, lg) !default;	  /* bootstrap reference xs: 0,  sm: 544px, md: 768px, lg: 992px, xl: 1200px*/
 $grid-gutter-width-base:             30px;
 $grid-gutter-width:                  $grid-gutter-width-base / 1.5; //20px
+//$grid-columns:                       12;
 
 $grid-gutter-widths: (
   xs: $grid-gutter-width-base / 2,          //15

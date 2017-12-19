@@ -13,7 +13,7 @@
 		<div class="card-body p-2">
 			
 			<h1>
-				Extract Icons
+				Extract Text Color class
 			</h1>
 
 			<textarea id="extracted" class="w-100" style="height:500px"></textarea>
@@ -30,12 +30,12 @@
 <script>
 	var eContainer = $('#extracted');
 	// file that will be filtered
-	var keepStrURL = "../scss/ng-icons.scss";
+	var keepStrURL = "../../../../../dist/css/app.core.css";
 	var keepStr, arr;
 
 	$.when(
 	    $.get(keepStrURL, function(data) {
-	        keepStr = data.match(/(?<=})-.*?(?=:)/g);
+	        keepStr = data.match(/color-[^-]*-[0-9][0-9]*/g);
 	        console.log(keepStr)
 	    }, 'text'),
 	).then(function() {

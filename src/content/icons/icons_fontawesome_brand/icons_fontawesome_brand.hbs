@@ -18,7 +18,7 @@ pagedescription="Font Awesome 5 Pro Brand"
         </div>
     </div>
 
-    <div id="fontawesome-pro" class="row"></div>
+    <div id="icon-list" class="row"></div>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -157,10 +157,10 @@ pagedescription="Font Awesome 5 Pro Brand"
             });
 
             // append to HTML dom
-            $('#fontawesome-pro').append(formatedDOMElms.join(" "));
+            $('#icon-list').append(formatedDOMElms.join(" "));
 
             // initialize filter
-            initApp.listFilter($('#fontawesome-pro'), $('#filter-icon'));
+            initApp.listFilter($('#icon-list'), $('#filter-icon'));
 
             // client event for each icon
             $('.js-showcase-icon').click(function(){

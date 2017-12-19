@@ -13,7 +13,7 @@
 		<div class="card-body p-2">
 			
 			<h1>
-				Extract Icons
+				Extract Base Icons
 			</h1>
 
 			<textarea id="extracted" class="w-100" style="height:500px"></textarea>
@@ -35,13 +35,13 @@
 
 	$.when(
 	    $.get(keepStrURL, function(data) {
-	        keepStr = data.match(/(?<=})-.*?(?=:)/g);
+	        keepStr = data.match(/base-[0-9][^:]*/g);
 	        console.log(keepStr)
 	    }, 'text'),
 	).then(function() {
 	    if (keepStr) {
 	    	// both data loaded
-			var arr = keepStr.sort();
+			var arr = keepStr;
 			eContainer.text(JSON.stringify(arr));	
 			console.log(JSON.stringify(arr));
 			$('.card-body').prepend("<div class='alert alert-success'><strong>Success!</strong> All icons sorted to array.</div>");			

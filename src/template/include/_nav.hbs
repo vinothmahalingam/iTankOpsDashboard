@@ -355,7 +355,7 @@
 			</li>
 		</ul>
 	</li>
-	<li {{#is pagename "in" "icons_webfonts_faq,icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_ng,ui_icons_ng,icons_stack"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "icons_webfonts_faq,icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_fontawesome_brand,icons_fontawesome_svg,icons_ng,icons_generate_stack"}}class="active open"{{/is}}>
 		<a href="#" title="Icons" data-filter-tags="icons">
 			<i class="fal fa-map-marker-alt"></i>
 			<span class="nav-link-text" data-i18n="nav.infterface.icons">Font Icons</span>
@@ -369,22 +369,26 @@
 					</span>
 				</a>
 			</li>
-			<li {{#is pagename "in" "icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_fontawesome_brand"}}class="active open"{{/is}}>
+			<li {{#is pagename "in" "icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_fontawesome_brand, icons_fontawesome_svg"}}class="active open"{{/is}}>
 				<a href="#" title="Icons" data-filter-tags="icons">
-					<span class="nav-link-text" data-i18n="nav.infterface.icons">FontAwesome Pro 5</span>
+					<span class="nav-link-text">
+						<span data-i18n="nav.infterface.icons">FontAwesome 5</span>
+					</span>
 				</a>
 				<ul>
 					<li {{#is pagename "===" "icons_fontawesome_light"}}class="active"{{/is}}>
 						<a href="icons_fontawesome_light.html" data-filter-tags="ui components font icons fontawesome pro light"> 
 							<span class="nav-link-text" data-i18n="nav.icons_fontawesome_light">
 								Light
+								<span class="dl-ref label bg-success-700 ml-1">PRO</span>
 							</span>
 						</a>
 					</li>
 					<li {{#is pagename "===" "icons_fontawesome_regular"}}class="active"{{/is}}>
 						<a href="icons_fontawesome_regular.html" data-filter-tags="ui components font icons fontawesome pro regular"> 
 							<span class="nav-link-text" data-i18n="nav.icons_far">
-								Regular
+								Regular 
+								<span class="dl-ref label bg-success-800 ml-1">PRO</span>
 							</span>
 						</a>
 					</li>
@@ -392,6 +396,7 @@
 						<a href="icons_fontawesome_solid.html" data-filter-tags="ui components font icons fontawesome pro solid"> 
 							<span class="nav-link-text" data-i18n="nav.icons_fas">
 								Solid
+								<span class="dl-ref label bg-success-900 ml-1">PRO</span>
 							</span>
 						</a>
 					</li>
@@ -399,6 +404,13 @@
 						<a href="icons_fontawesome_brand.html" data-filter-tags="ui components font icons fontawesome pro solid"> 
 							<span class="nav-link-text" data-i18n="nav.icons_fas">
 								Brand
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "icons_fontawesome_svg"}}class="active"{{/is}}>
+						<a href="icons_fontawesome_brand.html" data-filter-tags="ui components font icons fontawesome pro solid"> 
+							<span class="nav-link-text" data-i18n="nav.icons_fas">
+								Render as SVG
 							</span>
 						</a>
 					</li>
@@ -411,10 +423,10 @@
 					</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "icons_stack"}}class="active"{{/is}}>
-				<a href="icons_stack.html" data-filter-tags="ui components font icons stacking icons"> 
-					<span class="nav-link-text" data-i18n="nav.icons_stack">
-						Stacking Icons
+			<li {{#is pagename "===" "icons_generate_stack"}}class="active"{{/is}}>
+				<a href="icons_generate_stack.html" data-filter-tags="ui components font icons stacking icons generate stack"> 
+					<span class="nav-link-text" data-i18n="nav.icons_generate_stack">
+						Generate Stack Icon
 					</span>
 				</a>
 			</li>
