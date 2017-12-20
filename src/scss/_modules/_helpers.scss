@@ -110,8 +110,8 @@
 
 /* backgrounds */
 .bg-transparent { background: transparent !important; }
-.bg-white { background: $white !important; }
-.bg-faded {	background: $frame-border-color; }
+.bg-white { background-color: $white; color: $base-text-color;}
+.bg-faded {	background-color: $frame-border-color; }
 .bg-offwhite-fade {	@include gradient-img($white, lighten($color-fusion, 66%)) }
 .bg-subtlelight { background-color: lighten($color-primary, 44%) }
 .bg-subtlelight-fade { @include gradient-img($white, lighten($color-primary, 44%));	}
