@@ -113,7 +113,7 @@
 	Components
 </p>
 <ul class="nav-menu">
-	<li {{#is pagename "in" "ui_alerts,ui_breadcrumbs,ui_buttons,ui_cards_wells,ui_carousel,ui_helpers,ui_icons_ng,ui_labels_badges,ui_list_filter,ui_navbars,ui_panels,ui_pagination,ui_tabs_accordions,ui_progress_bars,ui_scrollspy,ui_tooltips_popovers,ui_borders,ui_clearfix,ui_close_icon,ui_colors,ui_fonts,ui_flexbox,ui_display_property,ui_image_replacement,ui_invisible_content,ui_position,ui_responsive_helpers,ui_sizing,ui_spacing,ui_typography,ui_alignments,ui_icons_ng"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "ui_alerts,ui_breadcrumbs,ui_buttons,ui_cards_wells,ui_carousel,ui_helpers,ui_labels_badges,ui_list_filter,ui_navbars,ui_panels,ui_pagination,ui_tabs_accordions,ui_progress_bars,ui_scrollspy,ui_tooltips_popovers,ui_borders,ui_clearfix,ui_close_icon,ui_colors,ui_fonts,ui_flexbox,ui_display_property,ui_image_replacement,ui_invisible_content,ui_position,ui_responsive_helpers,ui_sizing,ui_spacing,ui_typography,ui_alignments"}}class="active open"{{/is}}>
 		<a href="#" title="UI Components" data-filter-tags="ui components"> 
 			<i class="fal fa-window"></i>
 			<span class="nav-link-text" data-i18n="nav.ui_components">UI Components</span> 
@@ -355,7 +355,7 @@
 			</li>
 		</ul>
 	</li>
-	<li {{#is pagename "in" "icons_webfonts_faq,icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_fontawesome_brand,icons_fontawesome_svg,icons_ng,icons_generate_stack"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "icons_webfonts_faq,icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_fontawesome_brand,icons_fontawesome_svg,icons_nextgen_general,icons_nextgen_base,icons_stack_gallery,icons_stack_generate"}}class="active open"{{/is}}>
 		<a href="#" title="Icons" data-filter-tags="icons">
 			<i class="fal fa-map-marker-alt"></i>
 			<span class="nav-link-text" data-i18n="nav.infterface.icons">Font Icons</span>
@@ -416,19 +416,53 @@
 					</li>
 				</ul>
 			</li>
-			<li {{#is pagename "===" "icons_ng"}}class="active"{{/is}}>
-				<a href="icons_ng.html" data-filter-tags="ui components font icons nextgen icons"> 
-					<span class="nav-link-text" data-i18n="nav.icons_ng">
-						NextGen Icons
+			<li {{#is pagename "in" "icons_nextgen_general,icons_nextgen_base"}}class="active open"{{/is}}>
+				<a href="#" title="NextGen Icons" data-filter-tags="ui components font icons nextgen icons">
+					<span class="nav-link-text">
+						<span data-i18n="nav.nextgen_icons">NextGen Icons</span>
 					</span>
 				</a>
-			</li>
-			<li {{#is pagename "===" "icons_generate_stack"}}class="active"{{/is}}>
-				<a href="icons_generate_stack.html" data-filter-tags="ui components font icons stacking icons generate stack"> 
-					<span class="nav-link-text" data-i18n="nav.icons_generate_stack">
-						Generate Stack Icon
+				<ul>
+					<li {{#is pagename "===" "icons_nextgen_general"}}class="active"{{/is}}>
+						<a href="icons_nextgen_general.html" data-filter-tags="ui components font icons nextgen icons"> 
+							<span class="nav-link-text" data-i18n="nav.icons_nextgen_general">
+								General
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "icons_nextgen_base"}}class="active"{{/is}}>
+						<a href="icons_nextgen_base.html" data-filter-tags="ui components font icons nextgen icons base"> 
+							<span class="nav-link-text" data-i18n="nav.icons_nextgen_base">
+								Base
+							</span>
+						</a>
+					</li>
+				</ul>
+			</li>						
+			<li {{#is pagename "in" "icons_stack_gallery,icons_stack_generate"}}class="active open"{{/is}}>
+				<a href="#" title="Stack Icons" data-filter-tags="stack icons">
+					<span class="nav-link-text">
+						<span data-i18n="nav.icons_stack_icons">
+							Stack Icons
+						</span>
 					</span>
 				</a>
+				<ul>
+					<li {{#is pagename "===" "icons_stack_gallery"}}class="active"{{/is}}>
+						<a href="icons_stack_gallery.html" data-filter-tags="stack icons stack showcase"> 
+							<span class="nav-link-text" data-i18n="nav.icons_fontawesome_light">
+								Showcase
+							</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "icons_stack_generate"}}class="active"{{/is}}>
+						<a href="icons_stack_generate.html" data-filter-tags="stack icons stack genearte"> 
+							<span class="nav-link-text" data-i18n="nav.icons_stack_generate">
+								Generate Stack
+							</span>
+						</a>
+					</li>
+				</ul>					
 			</li>
 		</ul>
 	</li>	
@@ -609,11 +643,6 @@
 					<span class="nav-link-text" data-i18n="nav.page_error_eg">Error Pages</span>
 				</a>
 				<ul>
-					<li {{#is pagename "===" "page_error_announced"}}class="active"{{/is}}>
-						<a href="page_error_announced.html" data-filter-tags="page layouts error announced big"> 
-							<span class="nav-link-text" data-i18n="nav.page_error_announced">Announced Error</span>
-						</a>
-					</li>
 					<li {{#is pagename "===" "page_error"}}class="active"{{/is}}>
 						<a href="page_error.html" data-filter-tags="page layouts error general small"> 
 							<span class="nav-link-text" data-i18n="nav.page_error">General Error</span>
@@ -622,6 +651,11 @@
 					<li {{#is pagename "===" "page_error_404"}}class="active"{{/is}}>
 						<a href="page_error_404.html" data-filter-tags="page layouts error server"> 
 							<span class="nav-link-text" data-i18n="nav.page_error_404">Server Error</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "page_error_announced"}}class="active"{{/is}}>
+						<a href="page_error_announced.html" data-filter-tags="page layouts error announced big"> 
+							<span class="nav-link-text" data-i18n="nav.page_error_announced">Announced Error</span>
 						</a>
 					</li>
 				</ul>
