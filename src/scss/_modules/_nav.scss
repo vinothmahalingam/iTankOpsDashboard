@@ -309,8 +309,8 @@
 				// Sub nav level 2
 				> ul {
 
-					background-color: darken($nav-base-color, 11%);
-					padding-bottom: 5px;
+					//background-color: darken($nav-base-color, 11%);
+					padding-bottom: 0px !important;
 
 					li {
 						//border-top: 1px solid darken($color-fusion, 3%);
@@ -323,8 +323,8 @@
 
 						a {
 							color: $nav-link-color;
-							padding: 9px $nav-padding-right 9px $nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.5 + 10;
-							font-size: rem($nav-font-link-size - 1);
+							padding: 10px $nav-padding-right 10px $nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.5 + 10 + 10;
+							//font-size: rem($nav-font-link-size - 1);
 
 							.dl-ref {
 								margin-left: 0;
@@ -339,7 +339,7 @@
 							
 							&:hover {
 								
-								background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (20/100));
+								//background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (20/100));
 								@include text-contrast( rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)) )
 							}
 

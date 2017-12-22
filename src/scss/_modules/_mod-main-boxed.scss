@@ -6,7 +6,7 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 	.mod-main-boxed {
 		max-width: $mod-main-boxed-width;
 		margin: 0 auto;
-		box-shadow: 5px 0 20px 0px rgba(0, 0, 0, 0.1), -5px 0 20px 0px rgba(0, 0, 0, 0.1);
+		//box-shadow: 5px 0 20px 0px rgba(0, 0, 0, 0.1), -5px 0 20px 0px rgba(0, 0, 0, 0.1); //moved to page wrapper
 
 		&:not(.nav-function-top) {
 			.right-panel {
@@ -151,6 +151,7 @@ $mod-main-boxed-width: map-get($grid-breakpoints, xl);
 		.page-wrapper{
 			border-left:1px solid rgba($black, .15);
 			border-right:1px solid rgba($black, .15);
+			box-shadow: 5px 0 20px 0px rgba(0, 0, 0, 0.1), -5px 0 20px 0px rgba(0, 0, 0, 0.1);
 			overflow: hidden;
 		}
 
