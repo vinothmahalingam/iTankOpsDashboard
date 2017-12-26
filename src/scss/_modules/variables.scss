@@ -14,7 +14,6 @@ $color-info:                        #8781d2;
 $color-warning:                     #ffc241;
 $color-danger:                      #f55f78;
 
-//$color-fusion: 								    light(desaturate(adjust-hue($color-primary, 5), 70%), 10%) !default;  
 $color-fusion: 									    darken(desaturate(adjust-hue($color-primary, 5), 80%), 25%) !default; 
 
 $white:												      #fff !default;
@@ -155,43 +154,6 @@ $theme-colors: (
   light: $white,
   dark: $gray-700
 );
-
-/*$grays: ();
-$grays: map-merge((
-  "100":        $gray-100,
-  "200":        $gray-200,
-  "300":        $gray-300,
-  "400":        $gray-400,
-  "500":        $gray-500,
-  "600":        $gray-600,
-  "700":        $gray-700,
-  "800":        $gray-800,
-  "900":        $gray-900
-), $grays);
-
-$colors: ();
-$colors: map-merge((
-  "blue":       $primary-500,
-  "red":        $danger-500,
-  "orange":     $warning-500,
-  "yellow":     $warning-500,
-  "green":      $success-500,
-  "white":      $white,
-  "gray":       $gray-600,
-  "gray-dark":  $gray-800
-), $colors);
-
-$theme-colors: ();
-$theme-colors: map-merge((
-  "primary":    $primary-500,
-  "secondary":  $gray-600,
-  "success":    $success-500,
-  "info":       $info-500,
-  "warning":    $warning-500,
-  "danger":     $danger-500,
-  "light":      $white,
-  "dark":       $gray-800
-), $theme-colors);*/
 
 /* forms */
 $input-focus-border-color:					$primary-500;

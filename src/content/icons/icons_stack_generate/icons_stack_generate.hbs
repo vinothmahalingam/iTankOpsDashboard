@@ -34,11 +34,11 @@ pagedescription="Generate icons"
                 <div class="d-flex align-items-center justify-content-center position-relative" style="font-size: 250px; width: 351px; height: 351px; background: url(img/backgrounds/bg-5.png) #fff; border-left:0; border-top:0; ">
 
                     <h6 class="fw-300 position-absolute pos-top pos-left m-2 bg-fusion-100 p-2 rounded fs-sm opacity-70">Preview</h6>
-                    <div id="icon-construct" class="icon-stack"></div>
+                    <div id="icon-construct" class="icon-stack m-0 p-0"></div>
 
                 </div>
                 <div class="flex-1 pl-3">
-                    <div class="frame-wrap mb-2 pt-2 pb-0" id="construct-wrap"></div>
+                    <ul class="mb-2 p-0" id="construct-wrap"></ul>
 
                     <div class="row">
                         <div class="col-12 text-right">
@@ -75,7 +75,7 @@ var fa_icon,
     prefix = ["base", "fal", "fas", "far", "fab", "ni"],
     opacity = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100],
     iconSize = ["icon-stack-3x", "icon-stack-2x", "icon-stack-1x"],
-    layers = 3,
+    layers =  getUrlParameter('layers') || 3,
     constructWrap = $('#construct-wrap'),
     constructIcon = $('#icon-construct'),
     formatedDOMElms = [],
@@ -113,9 +113,9 @@ $.when(
             formatPrefix.push($('<option></option>').attr("value", item).text(item))
         });
         //formatOpacityValue
-        jQuery.each(opacity, function(index, item) {
+        /*jQuery.each(opacity, function(index, item) {
             formatOpacityValue.push($('<option></option>').attr("value", 'opacity-' + item).text(item))
-        });
+        });*/
         //formatIconSize
         jQuery.each(iconSize, function(index, item) {
             formatIconSize.push($('<option></option>').attr("value", item).text("size-" + item.slice(11)))
@@ -148,12 +148,12 @@ $.when(
             formattedDOMIcon.push('<i data-icon-select="' + i + '" class=""></i>')
 
             /* pushing controls */
-            formatedDOMElms.push('<div id="layer-' + i + '" class="row no-gutters" data-layer-target="' + i + '">\
+            formatedDOMElms.push('<li id="' + i + '" class="row no-gutters p-3 bg-faded mb-3 rounded" data-layer-target="' + i + '">\
                                     <div class="col-12">\
-                                        <h4 class="frame-heading mt-2">Layer ' + i + '</h4>\
+                                        <h4 class="frame-heading m-0 mb-1">Layer ' + i + '</h4>\
                                     </div>\
                                     <div class="col-sm-2">\
-                                        <div class="form-group mr-2">\
+                                        <div class="form-group mr-2 mb-0">\
                                             <select class="js-icon-prefix js-select-trigger custom-select w-100"></select>\
                                             <small class="form-text">\
                                                 <span class="text-muted fw-300">Icon prefix</span>\
@@ -161,23 +161,15 @@ $.when(
                                         </div>\
                                     </div>\
                                     <div class="col-sm-3">\
-                                        <div class="form-group mr-2">\
+                                        <div class="form-group mr-2 mb-0">\
                                             <select data-icon-target="' + i + '" class="js-icon-class js-select-trigger custom-select w-100"></select>\
                                             <small class="form-text">\
                                                 <span class="text-muted fw-300">Choose icon type</span>\
                                             </small>\
                                         </div>\
                                     </div>\
-                                    <div class="col-sm-2">\
-                                        <div class="form-group mr-2">\
-                                            <select class="js-icon-size js-select-trigger custom-select w-100"></select>\
-                                            <small class="form-text">\
-                                                <span class="text-muted fw-300">Icon size</span>\
-                                            </small>\
-                                        </div>\
-                                    </div>\
                                     <div class="col-sm-3">\
-                                        <div class="form-group mr-2">\
+                                        <div class="form-group mr-2 mb-0">\
                                             <select class="js-icon-color js-select-trigger custom-select w-100"></select>\
                                             <small class="form-text">\
                                                 <span class="text-muted fw-300">Select icon color</span>\
@@ -185,14 +177,22 @@ $.when(
                                         </div>\
                                     </div>\
                                     <div class="col-sm-2">\
-                                        <div class="form-group">\
-                                            <select class="js-icon-opacity js-select-trigger custom-select w-100"></select>\
+                                        <div class="form-group mr-2 mb-0">\
+                                            <select class="js-icon-size js-select-trigger custom-select w-100"></select>\
                                             <small class="form-text">\
+                                                <span class="text-muted fw-300">Icon size</span>\
+                                            </small>\
+                                        </div>\
+                                    </div>\
+                                    <div class="col-sm-2">\
+                                        <div class="form-group mb-0">\
+                                            <input type="range" min="5" max="100" step="5" value="100" class="w-100 js-icon-opacity js-select-trigger">\
+                                            <small class="form-text m-0">\
                                                <span class="text-muted fw-300">Opacity level</span>\
                                             </small>\
                                         </div>\
                                     </div>\
-                                </div>');
+                                </li>');
 
         }
 
@@ -200,7 +200,7 @@ $.when(
         constructIcon.append(formattedDOMIcon.join(" "));
         $("select.js-icon-prefix").append(formatPrefix);
         $("select.js-icon-size").empty().append(formatIconSize.reverse());
-        $("select.js-icon-opacity").empty().append(formatOpacityValue.reverse());
+        //$("select.js-icon-opacity").empty().append(formatOpacityValue.reverse());
         $("select.js-icon-class").empty().append(format_ni_base.reverse());
         $("select.js-icon-color").empty().append(formatTextColors);
 
@@ -230,20 +230,25 @@ $.when(
             var iconPrefix = uID.find('select.js-icon-prefix').val();
             var iconClass = uID.find('select.js-icon-class').val();
             var iconSize = uID.find('select.js-icon-size').val();
-            var iconOpacity = uID.find('select.js-icon-opacity').val();
+            var iconOpacity = uID.find('input.js-icon-opacity').val();
             var iconColor = uID.find('select.js-icon-color').val();
 
-            $('#icon-construct').find('[data-icon-select="' + id + '"]').removeClass().addClass(iconPrefix + " " + iconClass + " " + iconSize + " " + iconOpacity + " " + iconColor);
+            console.log(iconOpacity)
+
+            constructIcon.find('[data-icon-select="' + id + '"]').removeClass().addClass(iconPrefix + " " + iconClass + " " + iconSize + " " + "opacity-" + iconOpacity + " " + iconColor);
 
             uID.find('select.js-icon-color').removeClassPrefix('bg-').addClass('bg' + iconColor.slice(5));
-
         };
 
         //select trigger function
-        $(document).on('change', 'select.js-select-trigger', function() {
+        $(document).on('change', '.js-select-trigger', function() {
             var uniqueID = $(this).closest('[data-layer-target]').attr('data-layer-target');
             runIconGenerator(uniqueID);
         })
+
+        /*$('input[type=range]').on('input', function () {
+            $(this).trigger('change');
+        })*/
 
         //sample
 
@@ -251,7 +256,20 @@ $.when(
         $('[data-layer-target="1"] .js-icon-class').val('base-7').trigger('change');
         //$('[data-layer-target="2"] .js-icon-class').val('base-2').trigger('change');
         $('[data-layer-target="2"] .js-icon-prefix').val('fal').trigger('change');
-        $('[data-layer-target="2"] .js-icon-class').val('fa-car').trigger('change');        
+        $('[data-layer-target="2"] .js-icon-class').val('fa-car').trigger('change');
+
+        constructWrap.sortable({
+            handle: '.frame-heading',
+            /*connectWith: ".todo",
+            update: countTasks*/
+        }).disableSelection();
+
+        //
+        /*constructWrap.sortable({
+            update : function(event, ui) {
+                    
+            }
+        });*/        
 
     } else {
         console.log("somethign went wrong!")

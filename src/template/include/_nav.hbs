@@ -113,7 +113,7 @@
 	Components
 </p>
 <ul class="nav-menu">
-	<li {{#is pagename "in" "ui_alerts,ui_breadcrumbs,ui_buttons,ui_cards_wells,ui_carousel,ui_helpers,ui_labels_badges,ui_list_filter,ui_navbars,ui_panels,ui_pagination,ui_tabs_accordions,ui_progress_bars,ui_scrollspy,ui_tooltips_popovers,ui_borders,ui_clearfix,ui_close_icon,ui_colors,ui_fonts,ui_flexbox,ui_display_property,ui_image_replacement,ui_invisible_content,ui_position,ui_responsive_helpers,ui_sizing,ui_spacing,ui_typography,ui_alignments"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "ui_alerts,ui_breadcrumbs,ui_buttons,ui_button_group,ui_cards,ui_carousel,ui_collapse,ui_dropdowns,ui_helpers,ui_labels_badges,ui_list_filter,ui_navbars,ui_panels,ui_pagination,ui_tabs_accordions,ui_progress_bars,ui_scrollspy,ui_tooltips_popovers,ui_borders,ui_clearfix,ui_close_icon,ui_colors,ui_fonts,ui_flexbox,ui_display_property,ui_image_replacement,ui_invisible_content,ui_position,ui_responsive_helpers,ui_sizing,ui_spacing,ui_typography,ui_alignments"}}class="active open"{{/is}}>
 		<a href="#" title="UI Components" data-filter-tags="ui components"> 
 			<i class="fal fa-window"></i>
 			<span class="nav-link-text" data-i18n="nav.ui_components">UI Components</span> 
@@ -134,14 +134,29 @@
 					<span class="nav-link-text" data-i18n="nav.ui_buttons">Buttons</span> 
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_cards_wells"}}class="active"{{/is}}>
-				<a href="ui_cards_wells.html" data-filter-tags="ui components cards & wells"> 
-					<span class="nav-link-text" data-i18n="nav.ui_cards_wells">Cards & Wells</span> 
+			<li {{#is pagename "===" "ui_button_group"}}class="active"{{/is}}>
+				<a href="ui_button_group.html" data-filter-tags="ui components button group"> 
+					<span class="nav-link-text" data-i18n="nav.ui_button_group">Button Group</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "ui_cards"}}class="active"{{/is}}>
+				<a href="ui_cards.html" data-filter-tags="ui components cards"> 
+					<span class="nav-link-text" data-i18n="nav.ui_cards">Cards</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "ui_carousel"}}class="active"{{/is}}>
 				<a href="ui_carousel.html" data-filter-tags="ui components carousel"> 
 					<span class="nav-link-text" data-i18n="nav.ui_carousel">Carousel</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "ui_collapse"}}class="active"{{/is}}>
+				<a href="ui_collapse.html" data-filter-tags="ui components carousel"> 
+					<span class="nav-link-text" data-i18n="nav.ui_collapse">Collapse</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "ui_dropdowns"}}class="active"{{/is}}>
+				<a href="ui_dropdowns.html" data-filter-tags="ui components dropdowns"> 
+					<span class="nav-link-text" data-i18n="nav.ui_dropdowns">Dropdowns</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "ui_helpers"}}class="active"{{/is}}>
@@ -355,7 +370,7 @@
 			</li>
 		</ul>
 	</li>
-	<li {{#is pagename "in" "icons_webfonts_faq,icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_fontawesome_brand,icons_fontawesome_svg,icons_nextgen_general,icons_nextgen_base,icons_stack_gallery,icons_stack_generate"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "icons_webfonts_faq,icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_fontawesome_brand,icons_fontawesome_svg,icons_nextgen_general,icons_nextgen_base,icons_stack_showcase,icons_stack_generate"}}class="active open"{{/is}}>
 		<a href="#" title="Icons" data-filter-tags="icons">
 			<i class="fal fa-map-marker-alt"></i>
 			<span class="nav-link-text" data-i18n="nav.infterface.icons">Font Icons</span>
@@ -439,7 +454,7 @@
 					</li>
 				</ul>
 			</li>						
-			<li {{#is pagename "in" "icons_stack_gallery,icons_stack_generate"}}class="active open"{{/is}}>
+			<li {{#is pagename "in" "icons_stack_showcase,icons_stack_generate"}}class="active open"{{/is}}>
 				<a href="#" title="Stack Icons" data-filter-tags="stack icons">
 					<span class="nav-link-text">
 						<span data-i18n="nav.icons_stack_icons">
@@ -448,15 +463,15 @@
 					</span>
 				</a>
 				<ul>
-					<li {{#is pagename "===" "icons_stack_gallery"}}class="active"{{/is}}>
-						<a href="icons_stack_gallery.html" data-filter-tags="stack icons stack showcase"> 
+					<li {{#is pagename "===" "icons_stack_showcase"}}class="active"{{/is}}>
+						<a href="icons_stack_showcase.html" data-filter-tags="stack icons stack showcase"> 
 							<span class="nav-link-text" data-i18n="nav.icons_fontawesome_light">
 								Showcase
 							</span>
 						</a>
 					</li>
 					<li {{#is pagename "===" "icons_stack_generate"}}class="active"{{/is}}>
-						<a href="icons_stack_generate.html" data-filter-tags="stack icons stack genearte"> 
+						<a href="icons_stack_generate.html?layers=3" data-filter-tags="stack icons stack genearte"> 
 							<span class="nav-link-text" data-i18n="nav.icons_stack_generate">
 								Generate Stack
 							</span>
