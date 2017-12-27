@@ -73,7 +73,7 @@ var fa_icon,
     ni_base_URL = "ng-icon-base.json",
     ng_textColors_URL = "ng-text-colors.json",
     prefix = ["base", "fal", "fas", "far", "fab", "ni"],
-    opacity = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100],
+    //opacity = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100],
     iconSize = ["icon-stack-3x", "icon-stack-2x", "icon-stack-1x"],
     layers =  getUrlParameter('layers') || 3,
     constructWrap = $('#construct-wrap'),
@@ -112,10 +112,6 @@ $.when(
         jQuery.each(prefix, function(index, item) {
             formatPrefix.push($('<option></option>').attr("value", item).text(item))
         });
-        //formatOpacityValue
-        /*jQuery.each(opacity, function(index, item) {
-            formatOpacityValue.push($('<option></option>').attr("value", 'opacity-' + item).text(item))
-        });*/
         //formatIconSize
         jQuery.each(iconSize, function(index, item) {
             formatIconSize.push($('<option></option>').attr("value", item).text("size-" + item.slice(11)))
@@ -200,7 +196,6 @@ $.when(
         constructIcon.append(formattedDOMIcon.join(" "));
         $("select.js-icon-prefix").append(formatPrefix);
         $("select.js-icon-size").empty().append(formatIconSize.reverse());
-        //$("select.js-icon-opacity").empty().append(formatOpacityValue.reverse());
         $("select.js-icon-class").empty().append(format_ni_base.reverse());
         $("select.js-icon-color").empty().append(formatTextColors);
 
@@ -233,7 +228,7 @@ $.when(
             var iconOpacity = uID.find('input.js-icon-opacity').val();
             var iconColor = uID.find('select.js-icon-color').val();
 
-            console.log(iconOpacity)
+            //console.log(iconOpacity)
 
             constructIcon.find('[data-icon-select="' + id + '"]').removeClass().addClass(iconPrefix + " " + iconClass + " " + iconSize + " " + "opacity-" + iconOpacity + " " + iconColor);
 
@@ -246,30 +241,44 @@ $.when(
             runIconGenerator(uniqueID);
         })
 
-        /*$('input[type=range]').on('input', function () {
-            $(this).trigger('change');
-        })*/
 
         //sample
 
         $('[data-layer-target="0"] .js-icon-class').val('base-7').trigger('change');
         $('[data-layer-target="1"] .js-icon-class').val('base-7').trigger('change');
-        //$('[data-layer-target="2"] .js-icon-class').val('base-2').trigger('change');
         $('[data-layer-target="2"] .js-icon-prefix').val('fal').trigger('change');
         $('[data-layer-target="2"] .js-icon-class').val('fa-car').trigger('change');
 
+
+        var changeOrder = function (){
+
+            var bundleNewElms = [];
+
+            $('#construct-wrap li').each(function() {
+                $this = $(this)
+                var uID = $this.attr('data-layer-target');
+                var iconPrefix = $this.find('select.js-icon-prefix').val();
+                var iconClass = $this.find('select.js-icon-class').val();
+                var iconSize = $this.find('select.js-icon-size').val();
+                var iconOpacity = $this.find('input.js-icon-opacity').val();
+                var iconColor = $this.find('select.js-icon-color').val();
+
+                bundleNewElms.push('<i data-icon-select="' + uID + '" class="'+ iconPrefix + " " + iconClass + " " + iconSize + " " + "opacity-" + iconOpacity + " " + iconColor + '"></i>')
+
+            });   
+
+            console.log(bundleNewElms);
+
+            $('#icon-construct').empty().append(bundleNewElms.reverse().join(" "))    
+
+        }; 
+
         constructWrap.sortable({
             handle: '.frame-heading',
-            /*connectWith: ".todo",
-            update: countTasks*/
+            update: changeOrder
         }).disableSelection();
 
-        //
-        /*constructWrap.sortable({
-            update : function(event, ui) {
-                    
-            }
-        });*/        
+     
 
     } else {
         console.log("somethign went wrong!")
