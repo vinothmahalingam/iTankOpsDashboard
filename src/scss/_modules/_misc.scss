@@ -22,13 +22,12 @@
 .disabled:not(.btn) > * {	
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
-	opacity: 0.45 !important;
+	opacity: 0.60;
 	cursor: not-allowed;
-	text-decoration: line-through !important;
 
 	ul,
 	.collapse-sign {
-		display: none !important;
+		display: none;
 	}
 }
 

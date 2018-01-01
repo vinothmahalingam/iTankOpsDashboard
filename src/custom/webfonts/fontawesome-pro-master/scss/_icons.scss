@@ -17,6 +17,7 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-align-left:before { content: fa-content($fa-var-align-left); }
 .#{$fa-css-prefix}-align-right:before { content: fa-content($fa-var-align-right); }
 .#{$fa-css-prefix}-amazon:before { content: fa-content($fa-var-amazon); }
+.#{$fa-css-prefix}-amazon-pay:before { content: fa-content($fa-var-amazon-pay); }
 .#{$fa-css-prefix}-ambulance:before { content: fa-content($fa-var-ambulance); }
 .#{$fa-css-prefix}-american-sign-language-interpreting:before { content: fa-content($fa-var-american-sign-language-interpreting); }
 .#{$fa-css-prefix}-amilia:before { content: fa-content($fa-var-amilia); }
@@ -174,6 +175,7 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-caret-up:before { content: fa-content($fa-var-caret-up); }
 .#{$fa-css-prefix}-cart-arrow-down:before { content: fa-content($fa-var-cart-arrow-down); }
 .#{$fa-css-prefix}-cart-plus:before { content: fa-content($fa-var-cart-plus); }
+.#{$fa-css-prefix}-cc-amazon-pay:before { content: fa-content($fa-var-cc-amazon-pay); }
 .#{$fa-css-prefix}-cc-amex:before { content: fa-content($fa-var-cc-amex); }
 .#{$fa-css-prefix}-cc-apple-pay:before { content: fa-content($fa-var-cc-apple-pay); }
 .#{$fa-css-prefix}-cc-diners-club:before { content: fa-content($fa-var-cc-diners-club); }
@@ -283,7 +285,6 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-dribbble:before { content: fa-content($fa-var-dribbble); }
 .#{$fa-css-prefix}-dribbble-square:before { content: fa-content($fa-var-dribbble-square); }
 .#{$fa-css-prefix}-dropbox:before { content: fa-content($fa-var-dropbox); }
-.#{$fa-css-prefix}-dropbox-alt:before { content: fa-content($fa-var-dropbox-alt); }
 .#{$fa-css-prefix}-drupal:before { content: fa-content($fa-var-drupal); }
 .#{$fa-css-prefix}-dyalog:before { content: fa-content($fa-var-dyalog); }
 .#{$fa-css-prefix}-earlybirds:before { content: fa-content($fa-var-earlybirds); }
@@ -302,6 +303,7 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-envira:before { content: fa-content($fa-var-envira); }
 .#{$fa-css-prefix}-eraser:before { content: fa-content($fa-var-eraser); }
 .#{$fa-css-prefix}-erlang:before { content: fa-content($fa-var-erlang); }
+.#{$fa-css-prefix}-ethereum:before { content: fa-content($fa-var-ethereum); }
 .#{$fa-css-prefix}-etsy:before { content: fa-content($fa-var-etsy); }
 .#{$fa-css-prefix}-euro-sign:before { content: fa-content($fa-var-euro-sign); }
 .#{$fa-css-prefix}-exchange:before { content: fa-content($fa-var-exchange); }
@@ -486,6 +488,7 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-keycdn:before { content: fa-content($fa-var-keycdn); }
 .#{$fa-css-prefix}-kickstarter:before { content: fa-content($fa-var-kickstarter); }
 .#{$fa-css-prefix}-kickstarter-k:before { content: fa-content($fa-var-kickstarter-k); }
+.#{$fa-css-prefix}-korvue:before { content: fa-content($fa-var-korvue); }
 .#{$fa-css-prefix}-language:before { content: fa-content($fa-var-language); }
 .#{$fa-css-prefix}-laptop:before { content: fa-content($fa-var-laptop); }
 .#{$fa-css-prefix}-laravel:before { content: fa-content($fa-var-laravel); }
@@ -781,6 +784,7 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-street-view:before { content: fa-content($fa-var-street-view); }
 .#{$fa-css-prefix}-strikethrough:before { content: fa-content($fa-var-strikethrough); }
 .#{$fa-css-prefix}-stripe:before { content: fa-content($fa-var-stripe); }
+.#{$fa-css-prefix}-stripe-s:before { content: fa-content($fa-var-stripe-s); }
 .#{$fa-css-prefix}-studiovinari:before { content: fa-content($fa-var-studiovinari); }
 .#{$fa-css-prefix}-stumbleupon:before { content: fa-content($fa-var-stumbleupon); }
 .#{$fa-css-prefix}-stumbleupon-circle:before { content: fa-content($fa-var-stumbleupon-circle); }
@@ -854,6 +858,7 @@ readers do not read off random characters that represent icons */
 .#{$fa-css-prefix}-twitch:before { content: fa-content($fa-var-twitch); }
 .#{$fa-css-prefix}-twitter:before { content: fa-content($fa-var-twitter); }
 .#{$fa-css-prefix}-twitter-square:before { content: fa-content($fa-var-twitter-square); }
+.#{$fa-css-prefix}-typo3:before { content: fa-content($fa-var-typo3); }
 .#{$fa-css-prefix}-uber:before { content: fa-content($fa-var-uber); }
 .#{$fa-css-prefix}-uikit:before { content: fa-content($fa-var-uikit); }
 .#{$fa-css-prefix}-umbrella:before { content: fa-content($fa-var-umbrella); }

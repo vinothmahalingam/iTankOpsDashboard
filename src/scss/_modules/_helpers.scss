@@ -116,6 +116,9 @@
 .bg-subtlelight { background-color: lighten($color-primary, 44%) }
 .bg-subtlelight-fade { @include gradient-img($white, lighten($color-primary, 44%));	}
 
+/* borders */
+.border-faded { border: 1px solid darken($frame-border-color, 5%);}
+
 /* border radius */
 .border-radius-0 { border-radius:0 !important; }
 
@@ -189,4 +192,32 @@
         background: inherit;
         color: inherit;
     }
+}
+
+/* cursor */
+$cursor: (
+    auto,
+    crosshair,
+    default,
+    e-resize,
+    help,
+    move,
+    n-resize,
+    ne-resize,
+    nw-resize,
+    pointer,
+    progress,
+    s-resize,
+    se-resize,
+    sw-resize,
+    text,
+    w-resize,
+    wait,
+    inherit
+);
+
+@each $i in $cursor {
+  .cursor.#{nth($i, 1)} {
+    cursor: nth($i, 1);
+  }
 }

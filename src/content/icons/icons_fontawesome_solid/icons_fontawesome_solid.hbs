@@ -12,13 +12,16 @@ pagedescription="Font Awesome 5 Pro Solid"
 
 {{#*inline "content-block"}}
 
+    <!-- input group search box -->
     <div class="input-group input-group-lg mb-3">
-        <input type="text" class="form-control shadow-inset-2" id="filter-icon" placeholder="Search 619 icons for">
-        <div class="input-group-addon">
-            <i class="fal fa-search"></i>
+        <input type="text" class="form-control shadow-inset-2" id="filter-icon" placeholder="Search 619 icons for" aria-label="type 2 or more letters">
+        <div class="input-group-append">
+            <span class="input-group-text"><i class="fal fa-search"></i></span>
         </div>
     </div>
+    <!-- end input group search box -->
 
+    <!-- icon list -->
     <div id="icon-list" class="row">
         <div class="col-4 col-sm-3 col-lg-2 col-xl-2 col-xxl-2 col-xxxl-1 d-flex justify-content-center align-items-center mb-g">
             <a href="#" class="rounded bg-white p-0 m-0 d-flex flex-column w-100 h-100 js-showcase-icon" data-toggle="modal" data-target="#exampleModal" data-filter-tags="address-book">
@@ -4973,8 +4976,9 @@ pagedescription="Font Awesome 5 Pro Solid"
             </a>
         </div>
     </div>
+    <!-- end icon list -->
 
-    <!-- Modal -->
+    <!-- modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -5077,6 +5081,7 @@ pagedescription="Font Awesome 5 Pro Solid"
             </div>
         </div>
     </div>
+    <!-- end modal -->
 
 {{/inline}}
 
@@ -5084,27 +5089,23 @@ pagedescription="Font Awesome 5 Pro Solid"
 
 <script>
 
-    // initialize filter
+    /*initialize filter*/
     initApp.listFilter($('#icon-list'), $('#filter-icon'));
 
-    // client event for each icon
+    /*client event for each icon*/
     $('.js-showcase-icon').click(function(){
-
         var iconClass = $(this).find('i').attr('class');
-        
-            $('#exampleModal .modal-body i').removeClass().addClass(iconClass);
-            $('#exampleModal .modal-body .js-icon-class').empty().text(iconClass);
-            $('#js-icon-class').val('<i class="' + iconClass + '"></i>')
-            $('#exampleModalLabel strong').empty().text(iconClass)
-        
+        $('#exampleModal .modal-body i').removeClass().addClass(iconClass);
+        $('#exampleModal .modal-body .js-icon-class').empty().text(iconClass);
+        $('#js-icon-class').val('<i class="' + iconClass + '"></i>')
+        $('#exampleModalLabel strong').empty().text(iconClass);
     });
 
-    // copy icon button
+    /*copy icon button*/
     $('.js-icon-copy').click(function(){
         $('#js-icon-class').select();
         document.execCommand('copy');
     });
-
 
 </script>
 

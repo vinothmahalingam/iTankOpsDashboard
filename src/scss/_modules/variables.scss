@@ -159,7 +159,7 @@ $theme-colors: (
 $input-focus-border-color:					$primary-500;
 $link-color:            						$primary-800;
 $input-btn-focus-color:             transparent;
-$input-border-color:                rgba(0,0,0,.15);
+$input-border-color:                #cdcdcd;
 
 /* cards */
 $card-spacer-y:                     20px;
@@ -457,9 +457,10 @@ aside.left-panel ($nav-width, $nav-background)
 ========================================================================== */
 
 /* main navigation */
+/* left-panel */
 $nav-background:									darken($color-fusion, 7%) !default;
 $nav-base-color:									lighten($nav-background, 7%) !default;
-$nav-width:											  250px !default;
+$nav-width:											  250px !default; 
 
 /* nav parent level-0 */
 $nav-link-color: 									lighten($nav-base-color, 45%) !default;

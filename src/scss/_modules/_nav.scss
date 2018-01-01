@@ -224,7 +224,7 @@
 
 		// Sub nav level 1
 		> ul {
-			background-color: darken($nav-base-color, 9%);
+			background-color: darken($nav-base-color, 10%);
 			padding-bottom: 8px;
 
 			li {
@@ -233,7 +233,7 @@
 					color: $nav-link-color;
 
 					padding: 10px $nav-padding-right 10px $nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.5px;
-					font-size: rem($nav-font-link-size);
+					//font-size: rem($nav-font-link-size);
 
 					b.collapse-sign {
 						>[class*='fa-'],

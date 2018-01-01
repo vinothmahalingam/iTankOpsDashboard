@@ -83,7 +83,9 @@
 											<label for="nav_speed">Speed</label>
 											<div class="input-group mb-2 mr-sm-2 mb-sm-0">
 												<input type="text" class="form-control" id="nav_speed" placeholder="Speed" value="400">
-												<div class="input-group-addon">miliseconds</div>
+												<div class="input-group-append">
+													 <span class="input-group-text">miliseconds</span>
+												</div>
 											</div>
 										</div>
 										<div class="form-group col-sm-6">
@@ -99,16 +101,17 @@
 
 								<div class="d-flex align-items-center">
 									<div class="flex-1">
-										<label for="nav_accordion" class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
-											<input type="checkbox" class="custom-control-input" id="nav_accordion" checked="checked">
-											<span class="custom-control-indicator"></span>
-											<span class="custom-control-description">Accordion menu</span>
-										</label>
-										<label for="nav_syndicate" class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
-											<input type="checkbox" class="custom-control-input" id="nav_syndicate">
-											<span class="custom-control-indicator"></span>
-											<span class="custom-control-description">Syndicated structure</span>
-										</label>
+
+										<div class="custom-control d-inline-flex custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+											<input id="nav_accordion" type="checkbox" class="custom-control-input" checked="checked">
+											<label class="custom-control-label" for="nav_accordion">Accordion menu</label>
+										</div>
+
+										<div class="custom-control d-inline-flex custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+											<input id="nav_syndicate" type="checkbox" class="custom-control-input" checked="checked">
+											<label class="custom-control-label" for="nav_syndicate">Syndicated structure</label>
+										</div>
+
 									</div>
 
 									<button id="destroy" class="btn btn-danger btn-w-m"> Destroy Menu </button>
@@ -281,7 +284,7 @@
 					<!-- default settings -->
 					<div class="col-sm-6">
 
-						<h4 class="frame-heading">
+						<h4 class="frame-heading mt-4 mt-sm-0">
 							Clean & Bordered
 						</h4>
 
