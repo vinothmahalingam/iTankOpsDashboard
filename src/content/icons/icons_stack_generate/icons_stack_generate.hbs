@@ -17,7 +17,7 @@ pagedescription="Generate icons"
 
 {{#*inline "content-block"}}
 
-<div class="">
+<div class="container">
     
 
     <div class="card">
@@ -147,67 +147,62 @@ $.when(
                                             <a href="#" class="h-100 w-100 d-flex align-items-center justify-content-center text-dark opacity-40 cursor move"><i class="fal fa-arrows-v fa-2x"></i></a>\
                                         </div>\
                                         <div class="flex-1 row no-gutters">\
-                                            <div class="col-12">\
-                                                <h4 class="frame-heading m-0 mb-1">Layer ' + i + '</h4>\
-                                            </div>\
-                                            <div class="col-sm-2">\
-                                                <div class="form-group mr-2 mb-0">\
+                                            <div class="col-sm-6 col-md-4 col-lg-2">\
+                                                <div class="form-group mr-2 mb-md-2">\
+                                                    <label>Icon prefix</label>\
                                                     <select class="js-icon-prefix js-select-trigger custom-select w-100"></select>\
-                                                    <small class="form-text">\
-                                                        <span class="text-muted fw-300">Icon prefix</span>\
-                                                    </small>\
                                                 </div>\
                                             </div>\
-                                            <div class="col-sm-3">\
-                                                <div class="form-group mr-2 mb-0">\
+                                            <div class="col-sm-6 col-md-4 col-lg-3">\
+                                                <div class="form-group mr-2 mb-md-2">\
+                                                    <label>Choose Icon</label>\
                                                     <select data-icon-target="' + i + '" class="js-icon-class js-select-trigger custom-select w-100"></select>\
-                                                    <small class="form-text">\
-                                                        <span class="text-muted fw-300">Choose icon type</span>\
-                                                    </small>\
                                                 </div>\
                                             </div>\
-                                            <div class="col-sm-3">\
-                                                <div class="form-group mr-2 mb-0">\
+                                            <div class="col-sm-6 col-md-4 col-lg-3">\
+                                                <div class="form-group mr-2 mb-md-2">\
+                                                    <label>Select Color</label>\
                                                     <select class="js-icon-color js-select-trigger custom-select w-100"></select>\
-                                                    <small class="form-text">\
-                                                        <span class="text-muted fw-300">Select icon color</span>\
-                                                    </small>\
                                                 </div>\
                                             </div>\
-                                            <div class="col-sm-2">\
-                                                <div class="form-group mr-2 mb-0">\
+                                            <div class="col-sm-6 col-md-6 col-lg-2">\
+                                                <div class="form-group mr-2 mb-md-2">\
+                                                    <label>Stack Size</label>\
                                                     <select class="js-icon-size js-select-trigger custom-select w-100"></select>\
-                                                    <small class="form-text">\
-                                                        <span class="text-muted fw-300">Icon size</span>\
-                                                    </small>\
                                                 </div>\
                                             </div>\
-                                            <div class="col-sm-2">\
-                                                <div class="form-group mb-0">\
+                                            <div class="col-sm-12 col-md-6 col-lg-2">\
+                                                <div class="form-group mb-md-2">\
+                                                    <label>Opacity</label>\
                                                     <input type="range" min="5" max="100" step="5" value="100" class="w-100 js-icon-opacity js-select-trigger">\
-                                                    <small class="form-text m-0">\
-                                                       <span class="text-muted fw-300">Opacity level</span>\
-                                                    </small>\
                                                 </div>\
                                             </div>\
-                                            <div class="col-sm-12 mt-2">\
+                                            <div class="col-12">\
                                                 <a class="" data-toggle="collapse" href="#advance-' + i + '" role="button" aria-expanded="false" aria-controls="advance-' + i + '">\
-                                                    Advance controls\
+                                                    More Options\
                                                 </a>\
                                             </div>\
-                                            <div class="collapse" id="advance-' + i + '">\
-                                                <div class="form-group mb-0 mr-2">\
-                                                    <div class="custom-control d-inline-flex custom-checkbox m-0 mr-4">\
-                                                        <input id="js-animate-' + i + '" type="checkbox" class="custom-control-input">\
-                                                        <label class="custom-control-label" for="js-animate-' + i + '">Animate</label>\
+                                            <div class="collapse col-12" id="advance-' + i + '">\
+                                                <div class="row no-gutters">\
+                                                    <div class="col-sm-3">\
+                                                        <div class="form-group mr-2 mb-0">\
+                                                             <select class="js-icon-animate js-select-trigger custom-select w-100">\
+                                                                <option value="">Un-animated</option>\
+                                                                <option value="fa-spin">Animated</option>\
+                                                             </select>\
+                                                        </div>\
                                                     </div>\
-                                                    <div class="custom-control d-inline-flex custom-checkbox m-0 mr-4">\
-                                                        <input id="js-flip-horizontal' + i + '" type="checkbox" class="custom-control-input">\
-                                                        <label class="custom-control-label" for="js-flip-horizontal' + i + '">Flip Horizontal</label>\
-                                                    </div>\
-                                                    <div class="custom-control d-inline-flex custom-checkbox m-0 mr-4">\
-                                                        <input id="js-flip-vertical' + i + '" type="checkbox" class="custom-control-input">\
-                                                        <label class="custom-control-label" for="js-flip-vertical' + i + '">Flip Vertical</label>\
+                                                    <div class="col-sm-3">\
+                                                        <div class="form-group mr-2 mb-0">\
+                                                             <select class="js-icon-rotate js-select-trigger custom-select w-100">\
+                                                                <option value="">No rotation</option>\
+                                                                <option value="fa-rotate-90">Rotate 90</option>\
+                                                                <option value="fa-rotate-180">Rotate 180</option>\
+                                                                <option value="fa-rotate-270">Rotate 270</option>\
+                                                                <option value="fa-flip-horizontal">Flip horizontal</option>\
+                                                                <option value="fa-flip-vertical">Flip vertical</option>\
+                                                             </select>\
+                                                        </div>\
                                                     </div>\
                                                 </div>\
                                             </div>\
@@ -252,10 +247,13 @@ $.when(
             var iconSize = uID.find('select.js-icon-size').val();
             var iconOpacity = uID.find('input.js-icon-opacity').val();
             var iconColor = uID.find('select.js-icon-color').val();
+            var iconAnimate = uID.find('select.js-icon-animate').val();
+            var iconRotate = uID.find('select.js-icon-rotate').val();
 
-            //console.log(iconOpacity)
 
-            $('#icon-construct').find('[data-icon-select="' + id + '"]').removeClass().addClass(iconPrefix + " " + iconClass + " " + iconSize + " " + "opacity-" + iconOpacity + " " + iconColor);
+            console.log(iconAnimate)
+
+            $('#icon-construct').find('[data-icon-select="' + id + '"]').removeClass().addClass(iconPrefix + " " + iconClass + " " + iconSize + " " + "opacity-" + iconOpacity + " " + iconColor + " " + iconAnimate + " " + iconRotate);
 
             uID.find('select.js-icon-color').removeClassPrefix('bg-').addClass('bg' + iconColor.slice(5));
         };
@@ -287,8 +285,10 @@ $.when(
                 var iconSize = $this.find('select.js-icon-size').val();
                 var iconOpacity = $this.find('input.js-icon-opacity').val();
                 var iconColor = $this.find('select.js-icon-color').val();
+                var iconAnimate = $this.find('select.js-icon-animate').val();
+                var iconRotate = uID.find('select.js-icon-rotate').val();
 
-                bundleNewElms.push('<i data-icon-select="' + uID + '" class="'+ iconPrefix + " " + iconClass + " " + iconSize + " " + "opacity-" + iconOpacity + " " + iconColor + '"></i>')
+                bundleNewElms.push('<i data-icon-select="' + uID + '" class="'+ iconPrefix + " " + iconClass + " " + iconSize + " " + "opacity-" + iconOpacity + " " + iconColor + " " + iconAnimate + " " + iconRotate + '"></i>')
 
             });   
 

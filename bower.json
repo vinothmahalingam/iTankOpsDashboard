@@ -27,8 +27,9 @@
     "jquery-lazy": "^1.7.5",
     "siriwavejs": "git://github.com/caffeinalab/siriwavejs.git#^2.0.2",
     "nextgen-navigation": "git://github.com/myorangeca/nextgen-navigation.git",
-    "bootstrap": "git://github.com/twbs/bootstrap#^4.0.0-beta.2",
+    "bootstrap": "git://github.com/twbs/bootstrap#^4.0.0-beta.3",
     "annyang": "git://github.com/TalAter/annyang.git#^2.6.0",
+    "input-range-scss": "git://github.com/darlanrod/input-range-scss",
     "i18next": "1.9.0",
     "popper.js": "^1.12.9"
   },
