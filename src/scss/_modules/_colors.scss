@@ -138,3 +138,4 @@
 
 //white
 @include brush($white, color-white);
+@include brush(lighten($black, 13.5%), color-black);

@@ -1,6 +1,5 @@
 .tab-notification {
 	height: 385px;
-	//border-top: 1px solid rgba(0,0,0,0.1);
 
 	.tab-pane {
 		height: 100%;
@@ -29,13 +28,6 @@
 			padding: $p-2+$p-1 $p-3;
 			border-bottom: 1px solid #dddfe2;
 
-			/*img {
-
-				&.profile-image {
-					margin-right: $p-2 + $p-1;
-				}
-			}*/		
-
 			&:hover {
 				text-decoration: none;
 				background-image: linear-gradient(rgba(29, 33, 41, .03), rgba(29, 33, 41, .04));
@@ -63,14 +55,14 @@
 	}
 
 	.name {
-		color: $gray-darker;
+		color: lighten($black, 13.5%);
 		font-weight: 400;
 		font-size: rem($fs-base);
 	}
 
 	.msg-a,
 	.msg-b {
-		color: $gray;
+		color: lighten($black, 33.5%);
 	}
 
 }

@@ -166,7 +166,7 @@ body.desktop-detected {
 /* nav tabs panel */
 .nav-tabs-panel {
 
-	height: $header-height - 15;
+	height: $header-height - 10;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
 	.nav-item {
@@ -175,7 +175,7 @@ body.desktop-detected {
 			border-radius: 0;
 			border: 0;
 			padding: 0 $p-3;
-			height: $header-height - 15;
+			height: $header-height - 10;
 
 			font-size: rem($fs-md);
 			font-weight: 500;

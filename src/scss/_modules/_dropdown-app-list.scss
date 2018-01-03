@@ -28,7 +28,7 @@
 	padding-top: rem(8px);
 
 	&:hover {
-		border: 1px solid lighten($gray-mid-light, 14%);
+		border: 1px solid lighten(lighten($black, 75%), 14%);
 		padding-top: rem(6px);
 
 		> .icon-stack {

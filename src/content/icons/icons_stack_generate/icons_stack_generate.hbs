@@ -50,6 +50,7 @@ pagedescription="Generate icons"
                     </div>
 
                 </div>
+                <textarea id="js-icon-class"></textarea>
             </div>
         </div>
     </div>
@@ -141,12 +142,10 @@ $.when(
             formattedDOMIcon.push('<i data-icon-select="' + i + '" class=""></i>')
 
             /* pushing controls */
-            formatedDOMElms.push('<li id="' + i + '" class="pt-2 pb-2 pl-0 pr-3 bg-subtlelight-fade mb-3 rounded border-faded" data-layer-target="' + i + '">\
-                                    <div class="d-flex flex-row">\
-                                        <div class="width-5 js-move-trigger">\
-                                            <a href="#" class="h-100 w-100 d-flex align-items-center justify-content-center text-dark opacity-40 cursor move"><i class="fal fa-arrows-v fa-2x"></i></a>\
-                                        </div>\
-                                        <div class="flex-1 row no-gutters">\
+            formatedDOMElms.push('<li id="' + i + '" class="pl-4 pr-0 bg-subtlelight-fade mb-3 rounded border-faded shadow-1" data-layer-target="' + i + '">\
+                                    <div class="d-flex flex-row position-relative">\
+                                        <div class="badge badge-header" style="left: -33px; top: -5px; background: #fff; color: #333; border-color: #c9d9e0;">' + i + '</div>\
+                                        <div class="flex-1 row no-gutters pb-2 pt-2">\
                                             <div class="col-sm-6 col-md-4 col-lg-2">\
                                                 <div class="form-group mr-2 mb-md-2">\
                                                     <label>Icon prefix</label>\
@@ -177,8 +176,8 @@ $.when(
                                                     <input type="range" min="5" max="100" step="5" value="100" class="w-100 js-icon-opacity js-select-trigger">\
                                                 </div>\
                                             </div>\
-                                            <div class="col-12">\
-                                                <a class="" data-toggle="collapse" href="#advance-' + i + '" role="button" aria-expanded="false" aria-controls="advance-' + i + '">\
+                                            <div class="col-12 position-relative">\
+                                                <a class="fs-nano" data-toggle="collapse" href="#advance-' + i + '" role="button" aria-expanded="false" aria-controls="advance-' + i + '">\
                                                     More Options\
                                                 </a>\
                                             </div>\
@@ -206,6 +205,9 @@ $.when(
                                                     </div>\
                                                 </div>\
                                             </div>\
+                                        </div>\
+                                        <div class="width-5 js-move-trigger ml-2">\
+                                            <a href="#" class="h-100 w-100 d-flex align-items-center justify-content-center text-dark opacity-60 cursor move bg-faded"><i class="fal fa-arrows-v fa-2x"></i></a>\
                                         </div>\
                                     </div>\
                                 </li>');
@@ -251,10 +253,10 @@ $.when(
             var iconRotate = uID.find('select.js-icon-rotate').val();
 
 
-            console.log(iconAnimate)
+            //console.log(iconAnimate)
 
             $('#icon-construct').find('[data-icon-select="' + id + '"]').removeClass().addClass(iconPrefix + " " + iconClass + " " + iconSize + " " + "opacity-" + iconOpacity + " " + iconColor + " " + iconAnimate + " " + iconRotate);
-
+            
             uID.find('select.js-icon-color').removeClassPrefix('bg-').addClass('bg' + iconColor.slice(5));
         };
 
@@ -286,7 +288,7 @@ $.when(
                 var iconOpacity = $this.find('input.js-icon-opacity').val();
                 var iconColor = $this.find('select.js-icon-color').val();
                 var iconAnimate = $this.find('select.js-icon-animate').val();
-                var iconRotate = uID.find('select.js-icon-rotate').val();
+                var iconRotate = $this.find('select.js-icon-rotate').val();
 
                 bundleNewElms.push('<i data-icon-select="' + uID + '" class="'+ iconPrefix + " " + iconClass + " " + iconSize + " " + "opacity-" + iconOpacity + " " + iconColor + " " + iconAnimate + " " + iconRotate + '"></i>')
 
@@ -294,7 +296,7 @@ $.when(
 
             console.log(bundleNewElms);
 
-            $('#icon-construct').empty().append(bundleNewElms.reverse().join(" "))    
+            $('#icon-construct').empty().append(bundleNewElms.reverse().join(" "));    
 
         }; 
 

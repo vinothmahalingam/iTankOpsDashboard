@@ -38,9 +38,9 @@
 
 .hover-white {
 	&:hover {
-		background: $gray-lightest;
+		background: lighten($black, 95.5%);
 	}
 	&:active {
-		background: darken($gray-lightest, 5%);
+		background: darken(lighten($black, 95.5%), 5%);
 	}
 }

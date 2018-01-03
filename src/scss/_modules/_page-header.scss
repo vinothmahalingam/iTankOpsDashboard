@@ -4,6 +4,34 @@ $header-badge-padding-y: 							2px !default;
 $header-badge-left: 								23px !default;
 $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !default; 
 
+.badge.badge-header {
+	@extend %ping-badge;
+	@include box-shadow(0 0 0 1px $header-bg);
+	cursor: default;
+	border-color: transparent;
+	left: $header-badge-left;
+	top: $header-badge-top;
+	font-size: rem(10px);
+	font-weight: 500;
+	height: ($header-badge-min-width); 
+	min-width: ($header-badge-min-width);
+	max-width: ($header-badge-min-width + 7);
+	padding: ($header-badge-padding-y) ($header-badge-padding-x);
+	line-height: ($header-badge-min-width - 7);
+	border-radius: $header-badge-min-width;
+
+	&:only-child {
+		position: relative;
+		left: auto;
+		right: auto;
+		font-size: $fs-md;
+		height: 26px;
+		width: 26px;
+		line-height: 21px;
+		top: 17px;
+	}
+}
+
 .page-header {
 	background-color: $header-bg;
 	border-bottom: 1px solid $header-border-bottom-color;
@@ -41,34 +69,6 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 			   		}
 			   		>.#{$cust-icon-prefix}:first-child {
 			   			font-size: rem($header-icon-size - 4);
-			   		}
-
-			   		>.badge {
-			   			@extend %ping-badge;
-			   			@include box-shadow(0 0 0 1px $header-bg);
-			   			cursor: default;
-						border-color: transparent;
-						left: $header-badge-left;
-						top: $header-badge-top;
-						font-size: rem(10px);
-						font-weight: 500;
-						height: ($header-badge-min-width); 
-						min-width: ($header-badge-min-width);
-						max-width: ($header-badge-min-width + 7);
-						padding: ($header-badge-padding-y) ($header-badge-padding-x);
-						line-height: ($header-badge-min-width - 7);
-						border-radius: $header-badge-min-width;
-
-						&:only-child {
-							position: relative;
-							left: auto;
-							right: auto;
-							font-size: $fs-md;
-							height: 26px;
-							width: 26px;
-							line-height: 21px;
-							top: 17px;
-						}
 			   		}
 
 			   		&:hover {
