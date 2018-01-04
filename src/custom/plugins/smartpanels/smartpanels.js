@@ -923,7 +923,7 @@
             if (myapp_config.debugState)
                 console.log($(this).closest(".panel").attr('id') + " onColor callback")
         },
-        panelColors: ['bg-primary-500','bg-info-500','bg-warning-500','bg-danger-500','bg-success-500','bg-fusion-500', 'bg-faded'],
+        panelColors: ['bg-primary','bg-info','bg-warning','bg-danger','bg-success','bg-fusion', 'bg-faded'],
         resetButton: true,
         resetButtonLabel: "Reset Panel",
         onReset: function() {
