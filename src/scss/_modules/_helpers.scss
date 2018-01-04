@@ -218,6 +218,6 @@ $cursor: (
 
 @each $i in $cursor {
   .cursor.#{nth($i, 1)} {
-    cursor: nth($i, 1);
+    cursor: nth($i, 1) !important; /* had to insert important since bootstrap has some peculiar classes */
   }
 }
