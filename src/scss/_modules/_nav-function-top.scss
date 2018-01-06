@@ -29,10 +29,10 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 		&:not(.nav-function-fixed) {
 
 			.right-panel {
-				position:absolute;
+				//position:absolute;
 				
-				.list {
-					&#fh {
+				//.list {
+					#fh {
 						position:relative;
 
 						.onoffswitch-title {
@@ -58,7 +58,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 							color:$fusion-900;
 						}
 					}
-				}
+				//}
 			}
 
 		}
