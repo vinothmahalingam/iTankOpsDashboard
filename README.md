@@ -31,4 +31,3 @@ This README would normally document whatever steps are necessary to get your app
 ### Who do I talk to? ###
 
 * Sunny A. (support@myorange.ca) 
-* Jos K. (---)
