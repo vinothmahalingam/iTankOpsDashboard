@@ -16,7 +16,7 @@ var gulp = require('gulp'),
       advanced: false
     };  
 
-gulp.task('cssnano', ['compile-sass'], function () {
+gulp.task('cssnano', ['compile-vendor-style-bundle'], function () {
   return gulp.src([config.paths.scss_path_build + '/*.css', '!' + config.paths.scss_path_build + '/*.min.css'])
     /* rename with '.min' suffix */
     .pipe(rename({suffix: '.min'}))
