@@ -1,8 +1,8 @@
 $header-badge-min-width: 							20px !default;
 $header-badge-padding-x: 							3px !default;
 $header-badge-padding-y: 							2px !default;
-$header-badge-left: 								23px !default;
-$header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !default; 
+$header-badge-left: 								25px !default;
+$header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5 !default; 
 
 .badge.badge-header {
 	@extend %ping-badge;
@@ -65,10 +65,10 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 3 !
 					    vertical-align: middle;
 			   		}
 			   		>[class*='fa-']:first-child {
-			   			font-size: rem($header-icon-size - 3);
+			   			font-size: rem($header-icon-size);
 			   		}
 			   		>.#{$cust-icon-prefix}:first-child {
-			   			font-size: rem($header-icon-size - 4);
+			   			font-size: rem($header-icon-size);
 			   		}
 
 			   		&:hover {

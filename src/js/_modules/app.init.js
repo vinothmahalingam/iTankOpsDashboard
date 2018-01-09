@@ -240,21 +240,26 @@ var initApp = (function(app) {
 	}
 
 	/**
-	 * Add browser type
+	 * detect browser type
 	 * DOC: detect if browser supports webkit CSS
 	 **/	
 	app.detectBrowserType = function () {
 
-		/* safari or chrome detect */	
+		/* safari, chrome or IE detect */	
 		if(myapp_config.isChrome){
 
 			myapp_config.root_.addClass('chrome webkit');
-			return "chrome webkit";
+			return 'chrome webkit';
 
 		} else if (myapp_config.isWebkit) {
 
 			myapp_config.root_.addClass('webkit');
-			return "webkit";
+			return 'webkit';
+
+		} else if (myapp_config.isIE) {
+
+			myapp_config.root_.addClass('ie');
+			return 'ie';
 		}
 
 	};

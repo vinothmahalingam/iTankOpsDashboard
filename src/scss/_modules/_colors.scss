@@ -139,3 +139,25 @@
 //white
 @include brush($white, color-white);
 @include brush(lighten($black, 13.5%), color-black);
+
+//text-gradient
+.text-gradient {
+	background: -webkit-linear-gradient(180deg, $primary-700 25%, $primary-800 50%, $info-700 75%, $info-900 100%);
+	background: linear-gradient(180deg, $primary-700 25%, $primary-800 50%, $info-700 75%, $info-900 100%);
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     /* IE10+ CSS styles go here */
+     .text-gradient {
+     	background: transparent;
+     }
+}
+
+@supports (-ms-accelerator:true) {
+  /* IE Edge 12+ CSS styles go here */ 
+}

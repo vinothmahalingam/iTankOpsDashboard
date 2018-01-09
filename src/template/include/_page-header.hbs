@@ -3,17 +3,17 @@
 	<ul id="hdr-l" class="list-table">
 		<!-- DOC: dropdown / shortcuts -->
 		<li class="hidden-md-down dropdown-icon-menu">
-			<a href="#" class="btn no-ripple" data-action="toggle" data-class="nav-function-hidden" data-toggle="tooltip" data-placement="right" title="Hide Navigation">
+			<a href="#" class="btn no-ripple cursor default" data-action="toggle" data-class="nav-function-hidden" data-toggle="tooltip" data-placement="right" title="Hide Navigation">
 				<i class="ni ni-menu"></i>
 			</a>
 			<ul>
 				<li>
-					<a href="#" class="btn no-ripple" data-action="toggle" data-class="nav-function-minify" data-toggle="tooltip" data-placement="right" title="Minify Navigation">
+					<a href="#" class="btn no-ripple cursor default" data-action="toggle" data-class="nav-function-minify" data-toggle="tooltip" data-placement="right" title="Minify Navigation">
 						<i class="ni ni-minify-nav"></i>
 					</a>
 				</li>
 				<li>
-					<a href="#" class="btn no-ripple" data-action="toggle" data-class="nav-function-fixed" data-toggle="tooltip" data-placement="right" title="Lock Navigation">
+					<a href="#" class="btn no-ripple cursor default" data-action="toggle" data-class="nav-function-fixed" data-toggle="tooltip" data-placement="right" title="Lock Navigation">
 						<i class="ni ni-lock-nav"></i>
 					</a>
 				</li>
@@ -30,7 +30,7 @@
 			<form class="app-forms hidden-xs-down" role="search" action="search-results.html" autocomplete="off">
 				<i class="fa fa-search d-none"></i>
 				<input type="text" id="search-field" placeholder="Search for anything" class="form-control" tabindex="1">
-				<a href="javascript:void(0);" class="btn-primary btn-search-close no-ripple d-none" data-action="toggle" data-class="mobile-search-on">
+				<a href="#" onclick="return false;" class="btn-primary btn-search-close no-ripple d-none" data-action="toggle" data-class="mobile-search-on">
 					<i class="fa fa-close"></i>
 				</a>
 			</form>
@@ -47,13 +47,13 @@
 		<!-- app settings -->
 		<li class="hidden-md-down">
 			<a href="#" data-action="toggle" data-class="display-right-panel">
-				<i class="fal fa-adjust"></i>
+				<i class="fal fa-adjust text-gradient"></i>
 			</a>
 		</li>
 		<!-- app shortcuts -->
 		<li>
 			<a href="#" data-toggle="dropdown" title="My Apps" class="no-ripple">
-				<i class="fal fa-cube"></i>
+				<i class="fal fa-cube text-gradient"></i>
 			</a>
 			<div class="dropdown-menu dropdown-menu-custom w-auto h-auto">
 				{{> include/_dropdown-app}}
@@ -62,7 +62,7 @@
 		<!-- app notification -->
 		<li>
 			<a href="#" data-toggle="dropdown" title="You got 11 notifications" class="no-ripple">
-				<i class="fal fa-bell"></i>
+				<i class="fal fa-bell text-gradient"></i>
 				<span class="badge badge-header">11</span>
 			</a>
 			<div class="dropdown-menu dropdown-menu-custom dropdown-xl p-0 h-auto">

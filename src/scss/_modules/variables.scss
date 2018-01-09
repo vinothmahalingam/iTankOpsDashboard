@@ -378,7 +378,7 @@ $fs-xxl: 											       $fs-base + 15;  /* 28px   */
 
 /*  Font Family
 ========================================================================== */
-$font-import:									      "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" !default;
+//$font-import:									      "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" !default;
 $page-font:										      "Roboto", 'Helvetica Neue', Helvetica, Arial !default;
 $nav-font:										      $page-font !default;
 $heading-font-family:					      $page-font !default; 
@@ -435,8 +435,8 @@ $header-height:									     60px !default;
 
 /* logo */
 $header-logo-border-bottom:			     rgba($black, .4) !default;
-$header-logo-width:							     154px !default; 										  /* try not to go beywond the width of $main_nav_width value */
-$header-logo-height:						     24.45px !default 										/* you may need to change this depending on your logo design */
+$header-logo-width:							     170px !default; 										  /* try not to go beywond the width of $main_nav_width value */
+$header-logo-height:						     27px !default 										/* you may need to change this depending on your logo design */
 $header-logo-text-align:				     center; 												      /* adjust this as you see fit : left, right, center */
 
 /* icon font size (not button) */
@@ -461,7 +461,7 @@ $header-btn-height: 						     $header-height/2 + 6 !default;
 $header-btn-width: 							     52px !default;
 $header-btn-font-size:					     21px !default; //works only for font icons
 $header-btn-border-radius:			     $border-radius !default;
-$header-non-btn-width:					     48px;
+$header-non-btn-width:					     54px;
 
 /* dropdowns */
 $header-dropdown-menu-large-width:	 350px !default

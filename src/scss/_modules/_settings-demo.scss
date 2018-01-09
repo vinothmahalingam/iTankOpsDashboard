@@ -26,10 +26,9 @@
 	}
 
 	.list {
-		font-weight:400;
-		min-height:45px;
+		font-weight: 400;
+		min-height: 45px;
 		padding: 4.75px $p-3 4.75px $p-3 + $p-4;
-		//margin: 0 $p-3 0 $p-4;
 		color:darken($right-panel-bg, 60%);
 		position: relative;
 

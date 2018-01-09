@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <title>
 {{#if title}}
 	{{title}}
@@ -5,23 +6,25 @@
 	NextGen Modular WebApp
 {{/if}}
 </title>
-<meta charset="utf-8">
+<meta name="description" content="{{title}}">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-<!-- Required: Bootstrap & App CSS -->
-<link rel="stylesheet" media="screen, print" href="css/bootstrap.min.css">
-<link rel="stylesheet" media="screen, print" href="css/fontawesome.min.css">
-<link rel="stylesheet" media="screen, print" href="css/fa-light.min.css">
-<link rel="stylesheet" media="screen, print" href="css/ng-icons.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- load webfont -->
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {"families":["Roboto:300,400,500,700,900"]},
+    active: function() {
+        sessionStorage.fonts = true;
+    }
+  });
+</script>
+<!-- base css -->
+<link rel="stylesheet" media="screen, print" href="css/app.vendor.bundle.min.css">
 <link rel="stylesheet" media="screen, print" href="css/app.core.css">
 
 {{!-- <script src="js/fa-light.js"></script>
 <script src="js/fontawesome.min.js"></script> --}}
 
 <!-- Place favicon.ico in the root directory -->
-<link rel="shortcut icon" href="favicon.ico?v=3" />
-<!-- Progressive WebApp  -->
-<link rel="manifest" href="./manifest.json">
-<link rel="icon" sizes="192x192" href="./launcher-icon-8x.png">
+<link rel="shortcut icon" href="favicon.ico" />

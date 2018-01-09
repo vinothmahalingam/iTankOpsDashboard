@@ -1,21 +1,15 @@
-<!-- CORE FILE (RECOMMENDED): pace.js loading bar 
-	 DOC: if you remove this from core please note on Internet Explorer some CSS animations may execute before a page is fully loaded. Resulting 'jump' animations -->
-<script src="js/pace.min.js"></script>
-
-<!-- DEPENDENCY: jquery.js + src/../jquery-ui-cust.js -->
-<script src="js/app.jquery.bundle.min.js"></script>
-
-<!-- DEPENDENCY: umd/popper.js + bootstrap.js  -->
-<script src="js/app.bootstrap.bundle.min.js"></script> 
-
-<!-- CORE FILE (SOME PLUGINS CAN BE REMOVED SEE DOCS):  
-				  jquery.slimscroll.js (extension)
+<!-- base vendor bundle: 
+     DOC: if you remove pace.js from core please note on Internet Explorer some CSS animations may execute before a page is fully loaded, resulting 'jump' animations 
+                + pace.js (recommended)
+				+ jquery.js (core)
+				+ jquery-ui-cust.js (core)
+				+ popper.js (core)
+				+ bootstrap.js (core)
+				+ jquery.slimscroll.js (extension)
 				+ jquery.nextgen-navigation.js (core)
 				+ jquery.lazyload.js (core)
 				+ jquery.ba-throttle-debounce.js (core)
 				+ ripple.js (extension)
 				+ src/../jquery-snippets.js (core) -->
-<script src="js/app.core.plugins.min.js"></script>
-
-<!-- CORE FILE -->
+<script src="js/app.vendor.bundle.min.js"></script>
 <script src="js/app.core.js"></script>

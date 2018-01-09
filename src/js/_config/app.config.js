@@ -54,6 +54,11 @@ var myapp_config = {
     */
     isChrome: (/chrom(e|ium)/.test(navigator.userAgent.toLowerCase())),
     /*
+      DETECT IE (it only detects the newer versions of IE)
+      Description: this variable is used to fire the custom CSS hacks
+    */
+    isIE: ( (window.navigator.userAgent.indexOf('Trident/') ) > 0 === true ),
+    /*
        DEBUGGING MODE
        debugState = true; will spit all debuging message inside browser console.
      */
