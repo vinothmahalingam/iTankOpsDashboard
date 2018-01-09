@@ -15,12 +15,12 @@ requireDir('./build/tasks/');
  */
 gulp.task('watch', function() {
     // watch `.scss` changes
-    gulp.watch(['./src/**/*.scss'], ['compile-sass','cssnano'])
+    gulp.watch(['./src/**/*.scss'], ['cssnano'])
     .on('change', function(event) {
       console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
     // watch `.js` changes & avoiding `.min.js`
-    gulp.watch(['./src/js/**/*.js', '!./src/js/**/*.min.js', '!./src/js/build/myapp.core.js'], ['compile-app-core', 'compile-app-core-plugins'])
+    gulp.watch(['./src/js/**/*.js', '!./src/js/**/*.min.js'], ['compile-app-core'])
     .on('change', function(event) {
       console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
@@ -31,10 +31,22 @@ gulp.task('watch', function() {
     });
 });
 
-// 
+
 /**
  * task registery
  */
-gulp.task('default', ['compile-sass', 'cssnano', 'compile-app-core', 'connect', 'watch']);
-gulp.task('build-sass', ['compile-sass', 'cssnano', 'connect', 'compile-html', 'watch']);
-gulp.task('build', ['compile-sass', 'cssnano', 'compile-app-jquery-bundle', 'compile-bootstrap-bundle', 'compile-app-core-plugins', 'compile-app-core', 'connect', 'compile-html', 'img-min', 'copy-cust-fonts', 'copy-cust-plugins', 'copy-bower-files', 'copy-favicon', 'copy-video', 'copy-lang', 'watch']);
+gulp.task('build', [ 'compile-sass', 
+                     'compile-vendor-style-bundle',
+                     'cssnano',
+                     'compile-html', 
+                     'compile-vendor-script-bundle', 
+                     'compile-app-core', 
+                     'img-min', 
+                     'copy-cust-fonts', 
+                     'copy-cust-plugins', 
+                     'copy-bower-files', 
+                     'copy-favicon', 
+                     'copy-video', 
+                     'copy-lang',
+                     'connect', 
+                     'watch']);
