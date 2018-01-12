@@ -5,31 +5,59 @@
 /* #FRAMEWORK - Structure and layout files. (**DO NOT** change order)
                 DOC: you can disable unused _modules
 ========================================================================== */
+/* contains root variables to be used with css (see docs) */
 @import '_modules/_root';
+/* resets DOM elements to its natural state */
 @import '_modules/_reset';
+/* html and body base styles */
 @import '_modules/_body';
+/* app header */
 @import '_modules/_page-header';
+/* app logo */
 @import '_modules/_page-logo';
+/* app search */
 @import '_modules/_page-search';
+/* icon menu with user options */
 @import '_modules/_dropdown-icon-menu';
+/* dropdown notification in the app header */
 @import '_modules/_dropdown-notification';
+/* icon menu with stacked icons located in the app header */
 @import '_modules/_dropdown-app-list';
+/* app header stays fixed */
 @import '_modules/_header-function-fixed';
+/* app far left panel */
 @import '_modules/_left-panel';
+/* app far right panel */
 @import '_modules/_right-panel';
+/* app navigation */
 @import '_modules/_nav';
+/* app navigation filter */
+@import '_modules/_nav-listfilter';
+/* app info card inside navigation */
 @import '_modules/_nav-info-card';
+/* app navigation made horizontal */
 @import '_modules/_nav-function-top';
+/* app navgation stays hidden */
 @import '_modules/_nav-function-hidden';
+/* app navigation stays fixed */
 @import '_modules/_nav-function-fixed';
+/* app navigation stays minified */
 @import '_modules/_nav-function-minify';
+/* app navigation triggers on hover */
 @import '_modules/_nav-function-hover';
+/* app navigation footer */
 @import '_modules/_nav-footer';
+/* app wrapper */
 @import '_modules/_page-wrapper';
+/* app content heading */
 @import '_modules/_page-heading';
+/* app content */
 @import '_modules/_page-content';
+/* app footer */
 @import '_modules/_page-footer';
+/* app error page */
 @import '_modules/_page-error';
+/* various app components (see docs for the full list) */
 @import '_modules/_page-components-*';
 
 /* #MISC - misc styles, helpers, effects and hacks
@@ -41,7 +69,9 @@
 
 /* #MOBILE - mobile media related styles
 ========================================================================== */ 
+/* contains most of the responsive styles for the app */
 @import '_modules/_responsive';
+/* changes content colors based on ambience light source of the user (experimental) */
 @import '_modules/_light-levels';
 
 /* #FORMS (customized bootstrap form elems)
@@ -82,13 +112,9 @@
 ========================================================================== */ 
 @import '_modules/_colors';
 
-/* #FONT ICONS - customized icons
+/* #APP related modules (print, fullscreen, etc)
 ========================================================================== */ 
-/*@import './src/custom/webfonts/nextgen-fonts-master/scss/ng-icons';*/
-
-/* #PRINT - print related styles
-========================================================================== */ 
-@import '_modules/_print';
+@import '_modules/_app-*';
 
 /* #OVERRIDE - You can override any of the variables through this file
 ========================================================================== */ 

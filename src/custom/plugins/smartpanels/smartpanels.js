@@ -46,7 +46,7 @@
                 .find('.panel-saving')
                 .stop(true, true)
                 .fadeIn(100)
-                .delay(500)
+                .delay(600)
                 .fadeOut(100);
             }
 
@@ -361,7 +361,7 @@
                     if (self.o.refreshButton === true && tPanel.data('panel-refresh') === undefined) {
                         refreshButton = '<a href="#" class="dropdown-item js-panel-refresh"><span data-i18n="drpdwn.refreshpanel">' + self.o.refreshButtonLabel + '</span></a>';
                         thisContainer.append(
-                            '<div class="panel-refresh-animation" style="display:none"><i class="fal fa-spinner-third fa-spin-4x fs-xxl"></i></div>'
+                            '<div class="loader"><i class="fal fa-spinner-third fa-spin-4x fs-xxl"></i></div>'
                         );
                         
                     } else {
@@ -767,16 +767,18 @@
 
                 var tPanel = $(this),
                     pPanel = tPanel.closest(self.o.panels),
-                    dTimer = pPanel.attr('data-refresh-timer') || 1000;
+                    //pContainer = pPanel.children('.panel-container'),
+                    dTimer = pPanel.attr('data-refresh-timer') || 1500;
 
                 /**
                  * Run function for the indicator image.
                  **/
-                pPanel.addClass('panel-refresh')
+                pPanel.addClass('panel-refresh').children('.panel-container').addClass('enable-loader')
                     .stop(true, true)
                     .delay(dTimer).queue(function(){
-                        pPanel.removeClass('panel-refresh').dequeue();
-                        console.log(pPanel.attr('id') + " refresh complete")
+                        //pContainer.removeClass('enable-spinner').dequeue();
+                        pPanel.removeClass('panel-refresh').children('.panel-container').removeClass('enable-loader').dequeue();
+                        console.log(pPanel.attr('id') + " refresh complete");
                     }); 
 
 
