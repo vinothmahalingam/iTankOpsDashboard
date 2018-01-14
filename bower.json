@@ -31,7 +31,8 @@
     "annyang": "git://github.com/TalAter/annyang.git#^2.6.0",
     "input-range-scss": "git://github.com/darlanrod/input-range-scss",
     "i18next": "1.9.0",
-    "popper.js": "^1.12.9"
+    "popper.js": "^1.12.9",
+    "SpinKit": "spinkit#^1.2.5"
   },
   "overrides": {
     "jquery": {
@@ -59,6 +60,12 @@
     },
     "annyang": {
       "main": "dist/annyang.js"
+    },
+    "SpinKit": {
+      "main": "css/spinkit.css"
+    },
+    "legitripple": {
+      "main": "css/ripple.css"
     }
   }
 }
