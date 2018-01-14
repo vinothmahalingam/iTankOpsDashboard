@@ -134,7 +134,7 @@ $.fn.extend({
                             	.find("a:first")
                             	.attr('aria-expanded', false)
                             	.find("b:first").delay(opts.speed)
-                            	.html(opts.closedSign);
+                            	.html(opts.closedSign);  
 
                             if (myapp_config.debugState)
                                 console.log("nav item closed")
@@ -151,7 +151,6 @@ $.fn.extend({
 
                             if (myapp_config.debugState)
                                 console.log("nav item opened");
-
 
                             /* bug fixed: addresses the .mod-main-boxed class bug, when nav exceeds content height */
                             if (myapp_config.root_.hasClass("mod-main-boxed")) {
