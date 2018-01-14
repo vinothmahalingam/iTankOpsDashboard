@@ -19,6 +19,14 @@
 	/*-webkit-transform: translate3d(0, 0, 0);
 	-webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000;	*/
+
+}
+
+
+:not(.enable-loader) .loader {
+	> * {
+		animation: pause;
+	}
 }
 
 .enable-loader {
@@ -35,5 +43,11 @@
 	.loader {
 		display: flex;
 		/* nested spinner component will go here */
+
+		> * {
+			animation: inherit;
+		}
 	}
 }
+
+
