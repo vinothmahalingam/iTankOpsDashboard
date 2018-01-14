@@ -19,7 +19,7 @@ gulp.task('compile-vendor-script-bundle', function(){
       config.paths.path_bower + '/bootstrap/dist/js/bootstrap.js',
       /* app core */
       config.paths.path_bower + 'jquery-slimscroll/jquery.slimscroll.js',    
-      config.paths.path_bower + 'nextgen-navigation/jquery.nextgen-navigation.js', 
+      //config.paths.path_bower + 'nextgen-navigation/jquery.nextgen-navigation.js', 
       config.paths.path_bower + 'jquery-lazy/jquery.lazy.js ',  
       config.paths.path_bower + 'legitripple/js/ripple.js ',
       config.paths.path_bower + 'jquery-throttle-debounce/jquery.ba-throttle-debounce.js ',
