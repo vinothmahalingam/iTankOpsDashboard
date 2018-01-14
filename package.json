@@ -35,41 +35,18 @@
     "require-dir": "0.3.2"
   },
   "dependencies": {
-    "animate.css": "^3.5.2",
-    "bootstrap": "^4.0.0-beta.2",
-    "font-awesome": "^4.7.0",
+    "bootstrap": "^4.0.0-beta.3",
+    "i18next": "^1.9.0",
+    "input-range-scss": "^1.4.1",
     "jquery": "^3.2.1",
-    "jquery-lazy": "^1.7.5",
+    "jquery-lazy": "^1.7.7",
     "jquery-slimscroll": "^1.3.8",
     "jquery-ui": "^1.12.1",
     "legit-ripple": "^1.1.0",
     "pace-js": "^1.0.2",
-    "popper.js": "^1.12.5",
+    "popper.js": "^1.12.9",
+    "spinkit": "^1.2.5",
     "throttle-debounce": "^1.0.1"
-  },
-  "overrides": {
-    "bootstrap": {
-      "main": [
-        "dist/js/bootstrap.js"
-      ]
-    },
-    "animate.css": {
-      "main": "animate.css"
-    },
-    "font-awesome": {
-      "main": [
-        "fonts/*"
-      ]
-    },
-    "jquery-slimscroll": {
-      "main": "jquery.slimscroll.js"
-    },
-    "siriwavejs": {
-      "main": "siriwave.js"
-    },
-    "annyang": {
-      "main": "dist/annyang.js"
-    }
   },
   "scripts": {
     "gulp": "gulp",
