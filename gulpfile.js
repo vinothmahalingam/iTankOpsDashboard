@@ -31,7 +31,6 @@ gulp.task('watch', function() {
     });
 });
 
-
 /**
  * task registery
  */
@@ -42,6 +41,7 @@ gulp.task('build', [ 'compile-sass',
                      'compile-vendor-script-bundle', 
                      'compile-app-core', 
                      'img-min', 
+                     'copy-json',
                      'copy-cust-fonts', 
                      'copy-cust-plugins', 
                      'copy-favicon', 
