@@ -1,8 +1,8 @@
 /* #BOOTSTRAP AND MIXINS - Base Unmodified Bootstrap file with theme mixins
 ========================================================================== */
-@import './bower_components/bootstrap/scss/functions';
-@import './bower_components/bootstrap/scss/variables'; 
-@import './bower_components/bootstrap/scss/mixins';
+@import './node_modules/bootstrap/scss/functions';
+@import './node_modules/bootstrap/scss/variables'; 
+@import './node_modules/bootstrap/scss/mixins';
 @import './src/scss/_mixins/mixins'; 
 @import './src/scss/_mixins/flex'; 
 
