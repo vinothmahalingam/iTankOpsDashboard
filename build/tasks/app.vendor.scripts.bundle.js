@@ -9,21 +9,18 @@ var gulp = require('gulp'),
 
 gulp.task('compile-vendor-script-bundle', function(){
     return gulp.src([
-      /* pace.js */  
-      config.paths.path_bower + '/pace/pace.js',  
-      /* jquery bundle */
-      config.paths.path_bower + '/jquery/dist/jquery.js',  
+      config.paths.path_node_modules + '/pace/pace.js',  
+      config.paths.path_node_modules + '/jquery/dist/jquery.js',  
       config.paths.path_custom + '/plugins/jquery-ui-cust/jquery-ui-cust.js',
-      /* bootstrap bundle */  
-      config.paths.path_bower + '/popper.js/dist/umd/popper.js',  
-      config.paths.path_bower + '/bootstrap/dist/js/bootstrap.js',
-      /* app core */
-      config.paths.path_bower + 'jquery-slimscroll/jquery.slimscroll.js',    
-      //config.paths.path_bower + 'nextgen-navigation/jquery.nextgen-navigation.js', 
-      config.paths.path_bower + 'jquery-lazy/jquery.lazy.js ',  
-      config.paths.path_bower + 'legitripple/js/ripple.js ',
-      config.paths.path_bower + 'jquery-throttle-debounce/jquery.ba-throttle-debounce.js ',
-      config.paths.path_custom + 'plugins/jquery-snippets/jquery-snippets.js'
+      config.paths.path_node_modules + '/popper.js/dist/umd/popper.js',  
+      config.paths.path_node_modules + '/bootstrap/dist/js/bootstrap.js',
+      config.paths.path_node_modules + 'jquery-slimscroll/jquery.slimscroll.js',    
+      config.paths.path_node_modules + 'jquery-lazy/jquery.lazy.js ',  
+      config.paths.path_node_modules + 'legit-ripple/js/ripple.js ',
+      config.paths.path_node_modules + 'jquery-throttle-debounce/jquery.ba-throttle-debounce.js ',
+      config.paths.path_custom + 'plugins/smartpanels/smartpanels.js',
+      //config.paths.path_custom + 'plugins/material-forms/material-forms.js',
+      config.paths.path_node_modules + 'jquery-snippets.js/js/jquery-snippets.js'
     ])
     /* compile source maps */
     .pipe(sourcemaps.init())

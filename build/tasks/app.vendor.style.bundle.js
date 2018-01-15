@@ -11,8 +11,8 @@ gulp.task('compile-vendor-style-bundle', ['compile-sass'], function () {
       config.paths.scss_path_build + '/fontawesome.css',  
       config.paths.scss_path_build + '/fa-light.css', 
       config.paths.scss_path_build + '/ng-icons.css',
-      config.paths.scss_path_build + '/spinkit.css',
-      config.paths.scss_path_build + '/ripple.css'
+      config.paths.path_node_modules + '/spinkit/css/spinkit.css',
+      config.paths.path_node_modules + '/legit-ripple/css/ripple.css'
     ])
     /* concatinate all required vendor and app core files */
     .pipe(concat('app.vendor.bundle.css'))

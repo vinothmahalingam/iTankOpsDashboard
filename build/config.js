@@ -11,7 +11,6 @@ module.exports = {
         js_path_src_config     : "./src/js/_config/",
         js_path_dist           : "./dist/js",
         js_path_build          : "./dist/js/",
-        path_bower             : "./bower_components/",
         path_node_modules      : "./node_modules/",
         path_vendor            : "./dist/",
         path_custom            : "./src/custom/",
