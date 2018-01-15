@@ -14,13 +14,13 @@ gulp.task('compile-vendor-script-bundle', function(){
       config.paths.path_custom + '/plugins/jquery-ui-cust/jquery-ui-cust.js',
       config.paths.path_node_modules + '/popper.js/dist/umd/popper.js',  
       config.paths.path_node_modules + '/bootstrap/dist/js/bootstrap.js',
-      config.paths.path_node_modules + 'jquery-slimscroll/jquery.slimscroll.js',    
-      config.paths.path_node_modules + 'jquery-lazy/jquery.lazy.js ',  
-      config.paths.path_node_modules + 'legit-ripple/js/ripple.js ',
-      config.paths.path_node_modules + 'jquery-throttle-debounce/jquery.ba-throttle-debounce.js ',
-      config.paths.path_custom + 'plugins/smartpanels/smartpanels.js',
+      config.paths.path_node_modules + '/jquery-slimscroll/jquery.slimscroll.js',    
+      config.paths.path_node_modules + '/jquery-lazy/jquery.lazy.js ',  
+      config.paths.path_node_modules + '/legit-ripple/js/ripple.js ',
+      config.paths.path_node_modules + '/jquery-throttle-debounce/jquery.ba-throttle-debounce.js ',
+      config.paths.path_custom + '/plugins/smartpanels/smartpanels.js',
       //config.paths.path_custom + 'plugins/material-forms/material-forms.js',
-      config.paths.path_node_modules + 'jquery-snippets.js/js/jquery-snippets.js'
+      config.paths.path_node_modules + '/jquery-snippets/js/jquery-snippets.js'
     ])
     /* compile source maps */
     .pipe(sourcemaps.init())
