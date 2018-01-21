@@ -1,0 +1,239 @@
+{
+	"config": {
+		"debug": false,
+		"data" : {
+			"app": "NextGen WebApp",
+			"user": "Dr. Codex Lantern",
+			"email": "codexlantern",
+			"avatar": "avatar-sunny.png",
+			"logo": "logo-white.png",
+			"logo-m": "logo-minify.png",
+			"version": "1.0.0",
+			"copyright": "2017 © NextGen theme by&nbsp;<a href='http://myorange.ca' class='text-primary fw-500' title='MyOrange Inc.' target='_blank'>MyOrange</a>"
+		},
+		"compile": {
+			"jsUglify": false,
+			"cssMinify": true,
+			"jsSourcemaps": false,
+			"cssSourcemaps": true
+		},
+		"path": {
+			"src": "./src",
+			"node_modules": "./node_modules"
+		},
+		"dist": {
+			"theme": {
+				"path": "./dist"
+			}
+		}
+	},
+	"build": {
+		"vendors": {
+			"base": {
+				"src": {
+					"mandatory": {	
+						"pace-js": {
+							"scripts": [
+								"{$config.path.node_modules}/pace-js/pace.js"
+							]
+						},			
+						"jquery": {
+							"scripts": [
+								"{$config.path.node_modules}/jquery/dist/jquery.js"
+							]
+						},
+						"jquery-ui": {
+							"scripts": [
+								"{$config.path.src}/custom/plugins/jquery-ui-cust/jquery-ui-cust.js"
+							]
+						},	
+						"bootstrap": {
+							"styles": [
+								"{$config.path.src}/scss/bootstrap.scss"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/popper.js/dist/umd/popper.js",
+								"{$config.path.node_modules}/bootstrap/dist/js/bootstrap.js"
+							]
+						},
+						"jquery-lazy": {
+							"scripts": [
+								"{$config.path.node_modules}/jquery-lazy/jquery.lazy.js"
+							]
+						},
+						"jquery-snippets": {
+							"scripts": [
+								"{$config.path.node_modules}/jquery-snippets/js/jquery-snippets.js"
+							]
+						},
+						"throttle-debounce": {
+							"scripts": [
+								"{$config.path.node_modules}/jquery-throttle-debounce/jquery.ba-throttle-debounce.js"
+							]
+						},
+						"webfonts": {
+							"styles": [
+								"{$config.path.src}/scss/app.icons.scss"
+							],
+							"fonts": [
+								"{$config.path.src}/custom/webfonts/fontawesome-pro-master/webfonts/**",
+								"{$config.path.src}/custom/webfonts/nextgen-fonts-master/webfonts/**"
+							]
+						}							
+					},
+					"optional": {
+						"jquery-slimscroll": {
+							"styles": [
+								"{$config.path.src}/scss/_extensions/_extension-slimscroll.scss"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/jquery-slimscroll/jquery.slimscroll.js"
+							]
+						},
+						"ripple": {
+							"styles": [
+								"{$config.path.src}/legitripple/css/ripple.css"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/legitripple/js/ripple.js"
+							]
+						},
+						"smartpanels": {
+							"scripts": [
+								"{$config.path.node_modules}/custom/plugins/smartpanels/smartpanels.js"
+							]
+						},
+						"spinkit": {
+							"styles": [
+								"{$config.path.node_modules}/spinkit/css/spinkit.css"
+							]
+						},
+						"app-images" : {
+							"images" : [
+								"{$config.path.src}/img/**"
+							]
+						},
+						"app-data": {
+							"json" : [
+								"{$config.path.src}/custom/webfonts/fontawesome-pro-master/used-for-demo-pages/*.json",
+								"{$config.path.src}/custom/webfonts/nextgen-fonts-master/used-for-demo-pages/*.json"
+							]
+						},
+						"app-media": {
+							"media" : [
+								"{$config.path.src}/custom/video/*.mp4",
+								"{$config.path.src}/custom/video/*.webm"
+							]
+						}
+					}
+				},
+				"bundle": {
+					"styles": "{$config.output}/css/vendors.bundle.css",
+					"scripts": "{$config.output}/js/vendors.bundle.js",
+					"images": "{$config.output}/img",
+					"fonts": "{$config.output}/webfonts",
+					"json": "{$config.output}/",
+					"media": "{$config.output}/media"
+				}
+			}
+		},
+		"app": {
+			"base": {
+				"src": {
+					"styles": [
+						"{$config.path.src}/scss/app.core.scss"
+					],
+					"scripts": [
+						"{$config.path.src}/js/_config/app.config.js",
+						"{$config.path.src}/js/_modules/app.navigation.js",
+						"{$config.path.src}/js/_modules/app.init.js",
+						"{$config.path.src}/js/_modules/app.resize.trigger.js",
+						"{$config.path.src}/js/_modules/app.scroll.trigger.js",
+						"{$config.path.src}/js/_modules/app.domReady.js",
+						"{$config.path.src}/js/_modules/app.orientationchange.js",
+						"{$config.path.src}/js/_modules/app.window.load.js"
+					]
+				},
+				"bundle": {
+					"styles": "{$config.output}/css/app.bundle.css",
+					"scripts": "{$config.output}/js/app.bundle.js"
+				}
+			},
+			"pages": {
+				"auth" : {
+					"login" : {
+						"src": {
+							"styles":[
+								"{$config.path.src}/content/pages/page_login/page-login.scss"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/page-login.css"
+						}
+					}
+				},
+				"forms" : {
+					"material" : {
+						"src": {
+							"styles":[
+								"{$config.path.src}/content/forms/form_material/form-material.scss"
+							],
+							"scripts":[
+								"{$config.path.src}/content/forms/form_material/form-material.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/form-material.css",
+							"scripts": "{$config.output}/js/form-material.js"
+						}
+					}
+				},
+				"fontawesome": {
+					"regular" : {
+						"src": {
+							"styles":[
+								"{$config.path.src}/custom/webfonts/fontawesome-pro-master/scss/fa-regular.scss"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/fa-regular.scss"
+						}
+					},
+					"solid" : {
+						"src": {
+							"styles":[
+								"{$config.path.src}/custom/webfonts/fontawesome-pro-master/scss/fa-solid.scss"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/fa-solid.scss"
+						}
+					},
+					"brand" : {
+						"src": {
+							"styles":[
+								"{$config.path.src}/custom/webfonts/fontawesome-pro-master/scss/fa-brands.scss"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/fa-brands.scss"
+						}
+					}
+				}
+			},
+			"demo": {
+				"theme": {
+					"src": {
+						"styles": [
+							"{$config.path.src}/scss/theme-demo.scss"
+						]
+					},
+					"bundle": {
+						"styles": "{$config.output}/css/theme-demo.css"
+						
+					}
+				}
+			}			
+		}			
+	}
+}
