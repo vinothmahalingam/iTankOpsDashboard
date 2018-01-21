@@ -397,7 +397,7 @@ $water:												       -99 !default;
 
 /*  CUSTOM ICON PREFIX 
 ========================================================================== */
-$cust-icon-prefix:						       ni !default;
+$cust-icon-prefix:						       ni;
 
 /*  PRINT CSS (landscape or portrait)
 ========================================================================== */
@@ -436,7 +436,7 @@ $header-height:									     60px !default;
 /* logo */
 $header-logo-border-bottom:			     rgba($black, .4) !default;
 $header-logo-width:							     170px !default; 										  /* try not to go beywond the width of $main_nav_width value */
-$header-logo-height:						     27px !default 										/* you may need to change this depending on your logo design */
+$header-logo-height:						     27px !default 										    /* you may need to change this depending on your logo design */
 $header-logo-text-align:				     center; 												      /* adjust this as you see fit : left, right, center */
 
 /* icon font size (not button) */

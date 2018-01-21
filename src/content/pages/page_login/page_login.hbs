@@ -5,15 +5,15 @@
 }}
 
 {{#*inline "head-block"}}
-	<link rel="stylesheet" media="screen, print" href="css/material-forms.min.css">
-	<link rel="stylesheet" media="screen, print" href="css/page_login.css">
+	<link rel="stylesheet" media="screen, print" href="css/form-material.css">
+	<link rel="stylesheet" media="screen, print" href="css/page-login.css">
 {{/inline}}
 
 {{#*inline "content-block"}}
 <div class="blankpage-form-field">
 
 	<div class="text-center">
-		<img src="img/logo.png" class="blankpage-logo" alt="NextGen Logo">
+		<img src="img/logo.png" class="blankpage-logo" alt="{{app}}">
 	</div>
 
 	<div class="card container">
@@ -22,7 +22,7 @@
 
 			<div class="form-group app-forms">
 				<label for="username">Username</label>
-				<input id="username" type="email" class="form-control" value="drcodex@nextgen.com">
+				<input id="username" type="email" class="form-control" value="{{email}}@nextgen.com">
 			</div>
 
 			<span class="help-block">Your unique username to app</span>
@@ -62,15 +62,14 @@
 </div>
 
 <video poster="img/backgrounds/clouds.png" id="bgvid" playsinline autoplay muted loop>
-	<source src="video/cc.webm" type="video/webm">
-	<source src="video/cc.mp4" type="video/mp4">
+	<source src="media/cc.webm" type="video/webm">
+	<source src="media/cc.mp4" type="video/mp4">
 </video>
 {{/inline}}
 
 {{#*inline "scripts-block"}}
-
-		<!-- Page related scripts -->
-		<script src="js/material-forms.min.js"></script>
+<!-- Page related scripts -->
+<script src="js/form-material.js"></script>
 {{/inline}}
 
 {{/layouts/auth}}

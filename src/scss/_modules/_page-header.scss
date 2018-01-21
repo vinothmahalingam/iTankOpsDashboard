@@ -142,12 +142,12 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 						
 					}
 
-					> img.profile-image {
-						display: inline-block;
+					.profile-image {
+						//display: inline-block;
 						width: $profile-image-width-md;
 						height:auto;
-						float:left;
-						vertical-align: text-bottom;
+						//float:left;
+						//vertical-align: text-bottom;
 					}
 
 				}

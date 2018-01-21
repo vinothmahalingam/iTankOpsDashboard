@@ -800,7 +800,7 @@ var initApp = (function(app) {
 					/**
 					 * update header css, 'theme-update' trigger
 					 * eg:  data-action = "theme-update" 
-					 *      data-theme = "css/cust-theme-1.min.css"
+					 *      data-theme = "css/cust-theme-1.css"
 					 **/
 					case ( actiontype === 'theme-update' ):
 

@@ -23,11 +23,11 @@
 }
 
 
-:not(.enable-loader) .loader {
+/*:not(.enable-loader) .loader {
 	> * {
 		animation: pause;
 	}
-}
+}*/
 
 .enable-loader {
 	&:before {
@@ -44,9 +44,9 @@
 		display: flex;
 		/* nested spinner component will go here */
 
-		> * {
+		/*> * {
 			animation: inherit;
-		}
+		}*/
 	}
 }
 
