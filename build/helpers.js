@@ -196,9 +196,9 @@ module.exports = {
 						}
 
 						var file = module.exports.baseName(ctx.targetFile);
-						var extension = 'webfonts/';
+						var extension = 'fonts/';
 						if (imgRegex.test(file)) {
-							extension = 'img/';
+							extension = 'images/';
 						}
 
 						return path.join(extension, file);
@@ -229,7 +229,7 @@ module.exports = {
 		if (typeof bundle.src !== 'undefined' && typeof bundle.bundle !== 'undefined') {
 
 			// for images & fonts as per vendor
-			if ('mandatory' in bundle.src && 'optional' in bundle.src) {
+			if ('required' in bundle.src && 'optional' in bundle.src) {
 				var vendors = {};
 
 				for (var key in bundle.src) {
@@ -296,7 +296,7 @@ module.exports = {
 				switch (type) {
 					case 'styles':
 						gulp.src(bundle.src[type])
-							.pipe(_self.cssRewriter(bundle.bundle[type])())
+							//.pipe(_self.cssRewriter(bundle.bundle[type])())
 							.pipe(concat(outputFile))
 							.pipe(sourcemaps.init())
 							.pipe(sassGlob())

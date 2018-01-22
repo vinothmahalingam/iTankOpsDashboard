@@ -13,8 +13,8 @@
 		},
 		"compile": {
 			"jsUglify": false,
-			"cssMinify": true,
-			"jsSourcemaps": false,
+			"cssMinify": false,
+			"jsSourcemaps": true,
 			"cssSourcemaps": true
 		},
 		"path": {
@@ -31,7 +31,7 @@
 		"vendors": {
 			"base": {
 				"src": {
-					"mandatory": {	
+					"required": {	
 						"pace-js": {
 							"scripts": [
 								"{$config.path.node_modules}/pace-js/pace.js"
@@ -135,59 +135,8 @@
 					"json": "{$config.output}/",
 					"media": "{$config.output}/media"
 				}
-			}
-		},
-		"app": {
-			"base": {
-				"src": {
-					"styles": [
-						"{$config.path.src}/scss/app.core.scss"
-					],
-					"scripts": [
-						"{$config.path.src}/js/_config/app.config.js",
-						"{$config.path.src}/js/_modules/app.navigation.js",
-						"{$config.path.src}/js/_modules/app.init.js",
-						"{$config.path.src}/js/_modules/app.resize.trigger.js",
-						"{$config.path.src}/js/_modules/app.scroll.trigger.js",
-						"{$config.path.src}/js/_modules/app.domReady.js",
-						"{$config.path.src}/js/_modules/app.orientationchange.js",
-						"{$config.path.src}/js/_modules/app.window.load.js"
-					]
-				},
-				"bundle": {
-					"styles": "{$config.output}/css/app.bundle.css",
-					"scripts": "{$config.output}/js/app.bundle.js"
-				}
 			},
-			"pages": {
-				"auth" : {
-					"login" : {
-						"src": {
-							"styles":[
-								"{$config.path.src}/content/pages/page_login/page-login.scss"
-							]
-						},
-						"bundle": {
-							"styles": "{$config.output}/css/page-login.css"
-						}
-					}
-				},
-				"forms" : {
-					"material" : {
-						"src": {
-							"styles":[
-								"{$config.path.src}/content/forms/form_material/form-material.scss"
-							],
-							"scripts":[
-								"{$config.path.src}/content/forms/form_material/form-material.js"
-							]
-						},
-						"bundle": {
-							"styles": "{$config.output}/css/form-material.css",
-							"scripts": "{$config.output}/js/form-material.js"
-						}
-					}
-				},
+			"custom": {
 				"fontawesome": {
 					"regular" : {
 						"src": {
@@ -217,6 +166,59 @@
 						},
 						"bundle": {
 							"styles": "{$config.output}/css/fa-brands.scss"
+						}
+					}
+				}
+			}
+		},
+		"app": {
+			"base": {
+				"src": {
+					"styles": [
+						"{$config.path.src}/scss/app.core.scss"
+					],
+					"scripts": [
+						"{$config.path.src}/js/_config/app.config.js",
+						"{$config.path.src}/js/_modules/app.navigation.js",
+						"{$config.path.src}/js/_modules/app.init.js",
+						"{$config.path.src}/js/_modules/app.resize.trigger.js",
+						"{$config.path.src}/js/_modules/app.scroll.trigger.js",
+						"{$config.path.src}/js/_modules/app.domReady.js",
+						"{$config.path.src}/js/_modules/app.orientationchange.js",
+						"{$config.path.src}/js/_modules/app.window.load.js"
+					]
+				},
+				"bundle": {
+					"styles": "{$config.output}/css/app.bundle.css",
+					"scripts": "{$config.output}/js/app.bundle.js"
+				}
+			},
+			"custom": {
+				"auth" : {
+					"login" : {
+						"src": {
+							"styles":[
+								"{$config.path.src}/content/pages/page_login/page-login.scss"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/page-login.css"
+						}
+					}
+				},
+				"forms" : {
+					"material" : {
+						"src": {
+							"styles":[
+								"{$config.path.src}/content/forms/form_material/form-material.scss"
+							],
+							"scripts":[
+								"{$config.path.src}/content/forms/form_material/form-material.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/form-material.css",
+							"scripts": "{$config.output}/js/form-material.js"
 						}
 					}
 				}
