@@ -488,7 +488,7 @@
                             self.o.onChange.call(this, ui.item);
                         }
                     }
-                });
+                }); //you can add  }).disableSelection() if you don't want text to be selected accidently.
             }
 
             /**
