@@ -137,6 +137,16 @@
 				}
 			},
 			"custom": {
+				"holderjs": {
+					"src": {
+						"scripts": [
+							"{$config.path.node_modules}/holderjs/holder.js"
+						]
+					},
+					"bundle": {
+						"scripts": "{$config.output}/js/holder.js"
+					}
+				},
 				"fontawesome": {
 					"regular" : {
 						"src": {

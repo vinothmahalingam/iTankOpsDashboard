@@ -24,7 +24,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.1",
     "gulp-rewrite-css": "^1.1.1",
-    "gulp-sass": "3.1.0",
+    "gulp-sass": "^3.1.0",
     "gulp-sass-glob": "^1.0.8",
     "gulp-sourcemaps": "^2.6.3",
     "gulp-uglify": "^3.0.0",
@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
+    "holderjs": "^2.9.4",
     "i18next": "^1.9.0",
     "input-range-scss": "^1.4.1",
     "jquery": "^3.3.1",
