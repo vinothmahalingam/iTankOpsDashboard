@@ -213,7 +213,7 @@ $theme-colors: (
 $input-focus-border-color:					$color-primary;
 $link-color:            						$primary-800;
 $input-btn-focus-color:             transparent;
-$input-border-color:                #cdcdcd;
+$input-border-color:                rgba(0,0,0,0.2); //#cdcdcd;
 
 /* cards */
 $card-spacer-y:                     20px;
@@ -287,25 +287,29 @@ http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/
 */
 
 /* Fonts */
-$font-size-base:             			  0.8125rem; //13px
-$font-size-lg:                      1.25rem;   //20px
-$font-size-sm:   									  0.75rem;   //12px
+$font-size-base:             			  0.8125rem;
+$font-size-lg:                      1.25rem;
+$font-size-sm:   									  0.75rem;
 
-$h1-font-size: 										  1.5rem;    //24px;
-$h2-font-size: 										  1.375rem;  //22px;
-$h3-font-size: 										  1.1875rem; //19px;
-$h4-font-size: 										  1.0625rem; //17px;
-$h5-font-size: 										  0.9375rem; //15px;
-$h6-font-size: 										  0.875rem;  //14px;
+$h1-font-size: 										  1.5rem;
+$h2-font-size: 										  1.375rem;
+$h3-font-size: 										  1.1875rem;
+$h4-font-size: 										  1.0625rem;
+$h5-font-size: 										  0.9375rem;
+$h6-font-size: 										  0.875rem;
 
-$display1-size:                     5rem !default;
-$display2-size:                     4.5rem !default;
-$display3-size:                     3.5rem !default;
-$display4-size:                     2.5rem !default;
+$display1-size:                     5rem;
+$display2-size:                     4.5rem;
+$display3-size:                     3.5rem;
+$display4-size:                     2.5rem;
 
 $navbar-toggler-font-size:				  21px;
 $navbar-toggler-padding-y:				  7.5px; 
 $navbar-toggler-padding-x:				  18px;
+
+/* carousel */
+$carousel-indicator-height:         13px;
+$carousel-indicator-width:          13px;
 
 /*  MOBILE BREAKPOINT & GUTTERS (contains some bootstrap responsive overrides)
 ========================================================================== */
@@ -440,7 +444,7 @@ $header-logo-height:						     27px !default 										    /* you may need to ch
 $header-logo-text-align:				     center; 												      /* adjust this as you see fit : left, right, center */
 
 /* icon font size (not button) */
-$header-icon-size:							     $fs-base + 9;                        /* 22px */
+$header-icon-size:							     21px;
 
 /* search input box */
 $header-search-border-color:		     transparent !default;								/* suggestion: #ccced0*/
@@ -461,7 +465,7 @@ $header-btn-height: 						     $header-height/2 + 6 !default;
 $header-btn-width: 							     52px !default;
 $header-btn-font-size:					     21px !default; //works only for font icons
 $header-btn-border-radius:			     $border-radius !default;
-$header-non-btn-width:					     54px;
+$header-non-btn-width:					     50px;
 
 /* dropdowns */
 $header-dropdown-menu-large-width:	 350px !default
@@ -514,7 +518,7 @@ aside.left-panel ($nav-width, $nav-background)
 /* left panel */
 $nav-background:									darken($color-fusion, 7%) !default;
 $nav-base-color:									lighten($nav-background, 7%) !default;
-$nav-width:											  270px !default; 
+$nav-width:											  260px !default; 
 
 /* nav parent level-0 */
 $nav-link-color: 									lighten($nav-base-color, 45%) !default;

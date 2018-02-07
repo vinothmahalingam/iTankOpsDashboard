@@ -1,6 +1,6 @@
 $header-badge-min-width: 							20px !default;
-$header-badge-padding-x: 							3px !default;
-$header-badge-padding-y: 							2px !default;
+/*$header-badge-padding-x: 							3px !default;
+$header-badge-padding-y: 							2px !default;*/
 $header-badge-left: 								25px !default;
 $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5 !default; 
 
@@ -16,8 +16,8 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 	height: ($header-badge-min-width); 
 	min-width: ($header-badge-min-width);
 	max-width: ($header-badge-min-width + 7);
-	padding: ($header-badge-padding-y) ($header-badge-padding-x);
-	line-height: ($header-badge-min-width - 7);
+	padding: 0 3px;
+	line-height: ($header-badge-min-width - 2);
 	border-radius: $header-badge-min-width;
 
 	&:only-child {
