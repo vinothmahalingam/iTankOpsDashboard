@@ -73,7 +73,7 @@ var initApp = (function(app) {
 
 	/**
 	 * Load scripts using lazyload method 
-	 * usage: initApp.loadScript("js/my_lovely_script.js", myPrettyCode);
+	 * usage: initApp.loadScript("js/my_lovely_script.js", myFunction);
 	 **/
 	app.loadScript = function (scriptName, callback) {
 
@@ -652,13 +652,9 @@ var initApp = (function(app) {
 		 * Note: 'window.atob' detects if IE9+ 
 		 * ref: http://tanalin.com/en/articles/ie-version-js/
 		 **/
-		if ($.fn.ripple && !myapp_config.disableRippleEffect /*&& window.atob &&  !myapp_config.isMobile*/) {
+		if ($.fn.ripple && myapp_config.rippleEffect /*&& window.atob &&  !myapp_config.isMobile*/) {
 
-			$('.nav-menu a:not(.no-ripple)').ripple({
-				scaleMode: false
-			});
-
-			$('.btn:not(.no-ripple)').ripple({
+			$('.nav-menu a:not(.no-ripple), .btn:not(.no-ripple)').ripple({
 				scaleMode: false
 			});
 
@@ -667,7 +663,8 @@ var initApp = (function(app) {
 			
 		} else {
 			if (myapp_config.debugState)
-				console.log("rippler inactive");
+				console.log("%crippler inactive! ", "color: #ed1c24");
+
 		}
 
 		/**
@@ -926,7 +923,7 @@ var initApp = (function(app) {
 							}
 
 							if (myapp_config.debugState)
-								console.log( "app fullscreen toggle inactive" );
+								console.log("%capp fullscreen toggle inactive! ", "color: #ed1c24");
 						}
 
 						break; 
@@ -978,7 +975,7 @@ var initApp = (function(app) {
 		 * DOC: only show this if debug state tree
 		 **/
 		 if (myapp_config.debugState)
-			console.log("✔ Finished app.init() v" + myapp_config.VERSION + '\n' + "---------------------------");		
+		 	console.log("%c✔ Finished app.init() v" + myapp_config.VERSION + '\n' + "---------------------------", "color: #148f32");	
 	};
 
 	return app;

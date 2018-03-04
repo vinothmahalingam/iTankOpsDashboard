@@ -34,6 +34,10 @@
 	var removeStrURL = "fa-brand-list.json";
 	var keepStr, removeStr, arr;
 
+	$.ajaxSetup({
+		cache:false
+	});
+
 	$.when(
 	    $.get(keepStrURL, function(data) {
 	        keepStr = data.match(/(?<=})-.*?(?=:)/g);

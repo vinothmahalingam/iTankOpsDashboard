@@ -42,14 +42,14 @@ pagedescription="Generate icons"
 
                     <div class="row">
                         <div class="col-12 text-right">
-                            <a href="#" class="btn btn-success">
+                            <button class="btn btn-success" onclick="copyIcon();">
                                 Copy Icon
-                            </a>
+                            </button>
                         </div>
                     </div>
 
                 </div>
-                <textarea id="js-icon-class"></textarea>
+                <textarea id="js-icon-class" class="position-absolute" style="height:0px; width:0px; opacity:0;"></textarea>
             </div>
         </div>
     </div>
@@ -271,7 +271,6 @@ $.when(
 
 
         //sample
-
         $('[data-layer-target="0"] .js-icon-class').val('base-7').trigger('change');
         $('[data-layer-target="1"] .js-icon-class').val('base-7').trigger('change');
         $('[data-layer-target="2"] .js-icon-prefix').val('fal').trigger('change');
@@ -297,7 +296,7 @@ $.when(
 
             });   
 
-            console.log(bundleNewElms);
+            //console.log(bundleNewElms);
 
             $('#icon-construct').empty().append(bundleNewElms.reverse().join(" "));    
 
@@ -308,12 +307,18 @@ $.when(
             update: changeOrder
         }).disableSelection();
 
-     
+        
 
     } else {
         console.log("somethign went wrong!")
     }
 });
+
+var copyIcon = function (){
+    $('#js-icon-class').text("<div class='icon-stack'>\n"+ $('#icon-construct').html().replace(/data-icon-select="[^]"/g, ' ').replace(/\s\s+/g, ' ') +"\n</div>");
+    $('#js-icon-class').select();
+    document.execCommand('copy');
+};
 
 </script>
 

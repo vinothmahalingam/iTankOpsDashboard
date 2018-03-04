@@ -382,7 +382,7 @@ $fs-xxl: 											       $fs-base + 15;  /* 28px   */
 
 /*  Font Family
 ========================================================================== */
-//$font-import:									      "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" !default;
+$font-import:									      "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" !default;
 $page-font:										      "Roboto", 'Helvetica Neue', Helvetica, Arial !default;
 $nav-font:										      $page-font !default;
 $heading-font-family:					      $page-font !default; 
@@ -616,3 +616,4 @@ $footer-zindex:										$cloud - 20 !default;
 
 /*   GLOBALS
 ========================================================================== */
+$mod-main-boxed-width:            map-get($grid-breakpoints, xxl);

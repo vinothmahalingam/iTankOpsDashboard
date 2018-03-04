@@ -1,4 +1,4 @@
-//@import url($font-import);
+@import url($font-import);
 
 body {
 	font-family: $page-font;
@@ -62,6 +62,18 @@ h6 small,
 /* contrast text */
 .text-contrast {
 	color: lighten($black, 20%);
+}
+
+/* text-gradient */
+.text-gradient {
+	background: -webkit-linear-gradient(180deg, $primary-700 25%, $primary-800 50%, $info-700 75%, $info-900 100%);
+	background: linear-gradient(180deg, $primary-700 25%, $primary-800 50%, $info-700 75%, $info-900 100%);
+	color: $primary-500;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
 }
 
 /* looking for font size? Check _helpers.scss */

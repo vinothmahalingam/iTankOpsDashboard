@@ -1,12 +1,17 @@
 
-$mod-main-boxed-width: map-get($grid-breakpoints, xl);
+//$mod-main-boxed-width: map-get($grid-breakpoints, xxl);
 
 @include media-breakpoint-up(xl) {
 
 	.mod-main-boxed {
-		max-width: $mod-main-boxed-width;
-		margin: 0 auto;
+		//max-width: $mod-main-boxed-width;
+		//margin: 0 auto;
 		//box-shadow: 5px 0 20px 0px rgba(0, 0, 0, 0.1), -5px 0 20px 0px rgba(0, 0, 0, 0.1); //moved to page wrapper
+
+		.page-wrapper {
+			max-width: $mod-main-boxed-width;
+			margin: 0 auto;		
+		}
 
 		&:not(.nav-function-top) {
 			.right-panel {

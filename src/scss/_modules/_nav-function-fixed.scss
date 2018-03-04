@@ -65,7 +65,7 @@
 					left: 0;
 					margin-right: auto;
 					margin-left: auto;
-					max-width: map-get($grid-breakpoints, xl) - 2;
+					max-width: $mod-main-boxed-width - 2;
 				}
 			}
 		}

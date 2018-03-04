@@ -67,7 +67,7 @@ var myapp_config = {
        Turn on ripple effect for buttons and touch events
        Dependency: 
      */
-    disableRippleEffect: false, // material design effect that appears on all buttons
+    rippleEffect: false, // material design effect that appears on all buttons
     /*
        Primary theme anchor point ID
        This anchor is created dynamically and CSS is loaded as an override theme

@@ -1,0 +1,14 @@
+.modal-shortcut {
+	padding: 0px !important;
+	
+	.modal-dialog {
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+
+		.modal-content {
+			border-radius: 0px;
+			border:0;
+		}
+	}
+}
