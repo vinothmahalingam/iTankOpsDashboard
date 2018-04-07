@@ -1,3 +1,13 @@
+ /*!
+ * jQuery SmartPanels v1.0.0
+ * nextgenwebapp@gmail.com
+ *
+ * Copyright 2018, 2019 @myplaneticket "Sunny"
+ * Released under the Marketplace License (see your license details for usage)
+ *
+ * Date: 2018-01-01T17:42Z
+ */
+
 (function ($, window, document, undefined) {
 
     //"use strict"; 
