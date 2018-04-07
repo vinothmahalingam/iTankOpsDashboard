@@ -12,8 +12,8 @@
 			"copyright": "2017 © NextGen theme by&nbsp;<a href='http://myorange.ca' class='text-primary fw-500' title='MyOrange Inc.' target='_blank'>MyOrange</a>"
 		},
 		"compile": {
-			"jsUglify": false,
-			"cssMinify": false,
+			"jsUglify": true,
+			"cssMinify": true,
 			"jsSourcemaps": true,
 			"cssSourcemaps": true
 		},
@@ -92,10 +92,10 @@
 						},
 						"ripple": {
 							"styles": [
-								"{$config.path.src}/legitripple/css/ripple.css"
+								"{$config.path.src}/legit-ripple/css/ripple.css"
 							],
 							"scripts": [
-								"{$config.path.node_modules}/legitripple/js/ripple.js"
+								"{$config.path.node_modules}/legit-ripple/js/ripple.js"
 							]
 						},
 						"smartpanels": {
