@@ -1,6 +1,6 @@
 /*  THEME COLORs
 ========================================================================== */
-$color-primary:         				    #2196F3;
+$color-primary:         			      #2196F3;
 $color-success:                     #1abc42;
 $color-info:                        #8781d2;
 $color-warning:                     #ffc241;
@@ -16,15 +16,6 @@ $disabled:											    darken($white, 20%) !default;
 /*  PAINTBUCKET MIXER
 ========================================================================== */
 /* the grays */ 
-//$gray-darkest:           				    lighten($black, 5.5%) !default;  // #111
-//$gray-darker:            				    lighten($black, 13.5%) !default; // #222
-//$gray-dark:              				    lighten($black, 20%) !default;   // #333
-//$gray:                   				    lighten($black, 33.5%) !default; // #555
-//$gray-light:             				    lighten($black, 60%) !default;   // #999
-//$gray-mid-light:         				    lighten($black, 75%) !default;   // #ccc
-//$gray-lighter:           				    lighten($black, 93.5%) !default; // #eee
-//$gray-lightest:          				    lighten($black, 95.5%) !default; // #fafafa~
-
 $gray-100:                          #f8f9fa;
 $gray-200:                          #e9ecef;
 $gray-300:                          #dee2e6;
@@ -287,25 +278,26 @@ http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/
 */
 
 /* Fonts */
-$font-size-base:             			  0.8125rem;
+$font-size-base:             		    0.8125rem;
 $font-size-lg:                      1.25rem;
-$font-size-sm:   									  0.75rem;
+$font-size-sm:   					          0.75rem;
+$line-height-base:                  1.6;
 
-$h1-font-size: 										  1.5rem;
-$h2-font-size: 										  1.375rem;
-$h3-font-size: 										  1.1875rem;
-$h4-font-size: 										  1.0625rem;
-$h5-font-size: 										  0.9375rem;
-$h6-font-size: 										  0.875rem;
+$h1-font-size: 						          1.5rem;
+$h2-font-size: 						          1.375rem;
+$h3-font-size: 						          1.1875rem;
+$h4-font-size: 						          1.0625rem;
+$h5-font-size: 						          0.9375rem;
+$h6-font-size: 						          0.875rem;
 
 $display1-size:                     5rem;
 $display2-size:                     4.5rem;
 $display3-size:                     3.5rem;
 $display4-size:                     2.5rem;
 
-$navbar-toggler-font-size:				  21px;
-$navbar-toggler-padding-y:				  7.5px; 
-$navbar-toggler-padding-x:				  18px;
+$navbar-toggler-font-size:			    21px;
+$navbar-toggler-padding-y:			    7.5px; 
+$navbar-toggler-padding-x:			    18px;
 
 /* carousel */
 $carousel-indicator-height:         13px;
@@ -316,31 +308,25 @@ $carousel-indicator-width:          13px;
 $grid-breakpoints: (
   // Extra small screen / phone
   xs: 0,
-
   // Small screen / phone
   sm: 576px,
-
   // Medium screen / tablet
   md: 768px,
-
   // Large screen / desktop
   lg: 992px,
-
   // Decently size screen / wide laptop
   xl: 1200px,
-
   // Extra large screen / wide desktop
   xxl: 1400px,
-
   // Extra large screen / wide desktop
   xxxl: 1600px  
 );
 
-$mobile-breakpoint:									 lg !default; 											        /* define when mobile menu activates, here we are declearing (lg) so it targets the one after it */
-$mobile-breakpoint-size:						 map-get($grid-breakpoints, lg) !default;	  /* bootstrap reference xs: 0,  sm: 544px, md: 768px, lg: 992px, xl: 1200px*/
-$grid-gutter-width-base:             30px;
-$grid-gutter-width:                  $grid-gutter-width-base / 1.5; //20px
-//$grid-columns:                       12;
+$mobile-breakpoint:					 lg !default; 								  /* define when mobile menu activates, here we are declearing (lg) so it targets the one after it */
+$mobile-breakpoint-size:		 map-get($grid-breakpoints, lg) !default;	  /* bootstrap reference xs: 0,  sm: 544px, md: 768px, lg: 992px, xl: 1200px*/
+$grid-gutter-width-base:     30px;
+$grid-gutter-width:          $grid-gutter-width-base / 1.5; //20px
+//$grid-columns:             12;
 
 $grid-gutter-widths: (
   xs: $grid-gutter-width-base / 2,          //15
@@ -352,41 +338,41 @@ $grid-gutter-widths: (
 
 
 /* global var used for spacing*/
-$spacer:   										       1rem;
+$spacer:   							  1rem;
 
 /* Uniform Padding variable */
 /* Heads up! This is a global scoped variable - changing may impact the whole template */
-$p-1:												         0.25rem;
-$p-2:												         0.5rem;
-$p-3:												         1rem;
-$p-4:												         1.5rem;
-$p-5:												         3rem;
+$p-1:								  0.25rem;
+$p-2:								  0.5rem;
+$p-3:								  1rem;
+$p-4:								  1.5rem;
+$p-5:								  3rem;
 
 /*  BASE VARS
 ========================================================================== */
 // usage: background-image: url("#{$baseURL}img/bg.png"); 
 
-$baseURL:											       "../" !default;
+$baseURL:							 "../" !default;
 $webfontsURL:                        "../webfonts" !default;
-$base-text-color:							       darken($white,60%) !default;
+$base-text-color:					 darken($white,60%) !default;
 
 /* font vars below will auto change to rem values using function rem($value)*/
 $fs-base:                            13px !default;
-$fs-nano:											       $fs-base - 2;   /* 11px   */
-$fs-xs: 											       $fs-base - 1;   /* 12px   */
-$fs-sm: 											       $fs-base - 0.5; /* 12.5px */
-$fs-md: 											       $fs-base + 1;   /* 14px   */
-$fs-lg: 											       $fs-base + 2;   /* 15px   */
-$fs-xl: 											       $fs-base + 3;   /* 16px   */
-$fs-xxl: 											       $fs-base + 15;  /* 28px   */
+$fs-nano:							 $fs-base - 2;   /* 11px   */
+$fs-xs: 							 $fs-base - 1;   /* 12px   */
+$fs-sm: 							 $fs-base - 0.5; /* 12.5px */
+$fs-md: 							 $fs-base + 1;   /* 14px   */
+$fs-lg: 							 $fs-base + 2;   /* 15px   */
+$fs-xl: 							 $fs-base + 3;   /* 16px   */
+$fs-xxl: 							 $fs-base + 15;  /* 28px   */
 
 /*  Font Family
 ========================================================================== */
-$font-import:									      "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" !default;
-$page-font:										      "Roboto", 'Helvetica Neue', Helvetica, Arial !default;
-$nav-font:										      $page-font !default;
-$heading-font-family:					      $page-font !default; 
-$mobile-page-font:						      'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,sans-serif;
+$font-import:								       "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" !default;
+$page-font:									       "Roboto", 'Helvetica Neue', Helvetica, Arial !default;
+$nav-font:									       $page-font !default;
+$heading-font-family:					     $page-font !default; 
+$mobile-page-font:						     'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,sans-serif;
 
 /*  ANIMATIONS
 ========================================================================== */
@@ -518,7 +504,7 @@ aside.left-panel ($nav-width, $nav-background)
 /* left panel */
 $nav-background:									darken($color-fusion, 7%) !default;
 $nav-base-color:									lighten($nav-background, 7%) !default;
-$nav-width:											  260px !default; 
+$nav-width:											  270px !default; 
 
 /* nav parent level-0 */
 $nav-link-color: 									lighten($nav-base-color, 45%) !default;
