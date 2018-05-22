@@ -5,6 +5,7 @@ $panel-hdr-height: 45px;
 $panel-btn-size: 17px;
 $panel-hdr-background: #fafafa;
 $panel-edge-radius: $border-radius;
+$panel-placeholder-color: #ffccff;
 
 .panel-fullscreen {
 	overflow:hidden;
@@ -14,7 +15,10 @@ $panel-edge-radius: $border-radius;
 .panel {
 	position: relative;
 	background-color: $white;
-	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	//box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	box-shadow: 0 1px 15px 1px rgba(darken($primary-800, 10%), (8/100));
+ 
+
 	margin-bottom: $grid-gutter-width;
 	border-radius: $border-radius;
 
@@ -26,9 +30,9 @@ $panel-edge-radius: $border-radius;
 
 		position: relative;
 
-		border: 1px solid transparent;
-    	border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.17) rgba(0, 0, 0, 0.2);
-    	border-top-width: 0px;
+		//border: 1px solid transparent;
+    	//border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.17) rgba(0, 0, 0, 0.2);
+    	//border-top-width: 0px;
 
     	border-radius: 0 0 $panel-edge-radius $panel-edge-radius;
 
@@ -139,8 +143,8 @@ $panel-edge-radius: $border-radius;
 	min-height: $panel-hdr-height;
 	@extend %common-animation-easeout;
 	@include box-sizing(border-box); 
-	border: 1px solid;
-	border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.17);
+	/*border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.17);*/
 	border-radius: $panel-edge-radius $panel-edge-radius 0 0;
 
 	
@@ -193,7 +197,7 @@ $panel-edge-radius: $border-radius;
 .panel-toolbar {
 	display: flex;
 	align-items:center;
-	border-color: inherit;
+	//border-color: inherit;
 
 	.btn-panel {
 		margin-left: $panel-padding / 3;
@@ -201,13 +205,13 @@ $panel-edge-radius: $border-radius;
 		padding: 0;
 		width: $panel-btn-size;
 		height: $panel-btn-size;
-		border-color: transparent;
+		//border-color: transparent;
 
 		@include box-sizing(border-box);
 
 		border-radius: 50%;
 		opacity: 0.8;
-		border: 1px solid rgba(0,0,0,0.2);
+		//border: 1px solid rgba(0,0,0,0.2);
 
 		@extend %common-animation;
 
@@ -242,8 +246,8 @@ $panel-edge-radius: $border-radius;
 		padding: 0 11px;
 		background: transparent;
 		border: 0;
-		border-left: 1px solid;
-		border-left-color: inherit;
+		//border-left: 1px solid;
+		//border-left-color: inherit;
 		font-size: 23px;
 		color: inherit;
 		display: flex;
@@ -253,13 +257,13 @@ $panel-edge-radius: $border-radius;
 			right: 0;
 			top: $panel-hdr-height - 1 !important;
 			left: auto !important;
-			border-color: inherit;
+			//border-color: inherit;
 			margin:0;
 			border-radius:0;
 			min-width: 150px;
-			border-color: rgba($fusion-500, 0.08);
-			border-top-color: transparent;
-			border-right-color: transparent;
+			//border-color: rgba($fusion-500, 0.08);
+			//border-top-color: transparent;
+			//border-right-color: transparent;
 		}
 	}
 
@@ -286,7 +290,7 @@ $panel-edge-radius: $border-radius;
 }*/
 
 .panel-placeholder {
-	background-color: #FFC;
+	background-color: $panel-placeholder-color;
 	box-sizing: border-box;
 	margin-bottom: $grid-gutter-width;
 	border-radius: $border-radius + 1;
@@ -307,7 +311,7 @@ $panel-edge-radius: $border-radius;
 	}
 
 	&:before {
-		background: #FFC;
+		background: $panel-placeholder-color;
 		margin: 1px;
 		box-sizing: border-box;
 		opacity: 1;

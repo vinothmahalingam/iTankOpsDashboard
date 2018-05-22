@@ -12,8 +12,8 @@
 }
 
 .subheader-title {
-	font-size: rem($fs-xxl); //unquote("calc(16px + 5 * ((100vw - 320px) / 680))") //$fs-xxl;
-	font-weight: 400;
+	font-size: 1.375rem; //unquote("calc(16px + 5 * ((100vw - 320px) / 680))") //$fs-xxl;
+	font-weight: 500;
 	color: $fusion-500;
 	text-shadow: $white 0 1px;
 	margin: 0;
@@ -33,7 +33,7 @@
 	small {
 		font-weight: 400;
 		color: $fusion-100; //$fusion-100;
-		margin-bottom: 0;
+		margin-bottom: 10px;
 		font-size: rem($fs-sm);
 	}
 }

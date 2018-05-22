@@ -219,9 +219,9 @@ RESULT:
 }
 
 %header-btn {
-  @extend %btn-default;
+  //@extend %btn-default;
   @include rounded($header-btn-border-radius);
-
+  border: 1px solid darken($header-border-bottom-color, 20);
   height: $header-btn-height;
   width: $header-btn-width;
   vertical-align: middle;
@@ -234,6 +234,12 @@ RESULT:
 
   &.active {
     @extend %header-btn-active;
+  }
+
+  &:hover {
+    box-shadow: none;
+    border: 1px solid #c6c6c6;
+    color: #333;
   }
 
 }
@@ -255,25 +261,29 @@ RESULT:
 
 %header-dropdown {
   margin: 0;
-  border-radius: 2px;
-  width: rem($header-dropdown-menu-normal-width);
-  height: rem($header-dropdown-menu-normal-height + 120);
+  width: rem($dropdown-sm-width);
+  height: rem($dropdown-sm-height);
   position:absolute;
 
   &.dropdown-sm {
-    width: rem($header-dropdown-menu-normal-width - 75);
+    width: rem($dropdown-sm-width);
     height: auto;
   }
 
+  &.dropdown-lg {
+    width: rem($dropdown-lg-width);
+    height: auto;
+  }  
+
   &.dropdown-xl {
-    width: rem($header-dropdown-menu-large-width);
-    height: rem($header-dropdown-menu-long-height);
+    width: rem($dropdown-xl-width);
+    height: rem($dropdown-xl-height);
   }
 
   right: 0;
   left: auto;
   top:$header-height;
-  border: 1px solid $header-dropdown-menu-border-color;
+  border: $theme-border-utility-size solid $header-border-color;
 
   /*outline: none;
   overflow: auto;*/

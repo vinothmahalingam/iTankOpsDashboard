@@ -3,17 +3,17 @@
 	<ul id="hdr-l" class="list-table">
 		<!-- DOC: dropdown / shortcuts -->
 		<li class="hidden-md-down dropdown-icon-menu">
-			<a href="#" class="btn no-ripple cursor default" data-action="toggle" data-class="nav-function-hidden" data-toggle="tooltip" data-placement="right" title="Hide Navigation">
+			<a href="#" class="btn no-ripple cursor default" data-action="toggle" data-class="nav-function-hidden" title="Hide Navigation">
 				<i class="ni ni-menu"></i>
 			</a>
 			<ul>
 				<li>
-					<a href="#" class="btn no-ripple cursor default" data-action="toggle" data-class="nav-function-minify" data-toggle="tooltip" data-placement="right" title="Minify Navigation">
+					<a href="#" class="btn no-ripple cursor default" data-action="toggle" data-class="nav-function-minify" title="Minify Navigation">
 						<i class="ni ni-minify-nav"></i>
 					</a>
 				</li>
 				<li>
-					<a href="#" class="btn no-ripple cursor default" data-action="toggle" data-class="nav-function-fixed" data-toggle="tooltip" data-placement="right" title="Lock Navigation">
+					<a href="#" class="btn no-ripple cursor default" data-action="toggle" data-class="nav-function-fixed" title="Lock Navigation">
 						<i class="ni ni-lock-nav"></i>
 					</a>
 				</li>
@@ -71,13 +71,13 @@
 		</li>
 		<!-- app user menu -->
 		<li>
-			<a href="#" data-toggle="dropdown" title="{{email}}@nextgenadmin.com" class="no-ripple d-flex align-items-center justify-content-center">
+			<a href="#" data-toggle="dropdown" title="{{email}}" class="no-ripple d-flex align-items-center justify-content-center">
 				<img src="img/{{avatar}}" class="profile-image rounded-circle" alt="{{user}}"> 
-				<!-- you can also add username next to the avatar with the codes below: -->
+				<!-- you can also add username next to the avatar with the codes below:
 				<span class="ml-1 mr-1 text-truncate text-truncate-header hidden-xs-down">Me</span>
-				<i class="ni ni-chevron-down hidden-xs-down"></i>
+				<i class="ni ni-chevron-down hidden-xs-down"></i> -->
 			</a>
-			<div class="dropdown-menu dropdown-menu-custom dropdown-sm p-0">
+			<div class="dropdown-menu dropdown-menu-custom dropdown-lg p-0">
 				{{> include/_dropdown-menu}}
 			</div>
 		</li>

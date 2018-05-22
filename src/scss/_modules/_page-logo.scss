@@ -2,7 +2,8 @@
 	height:$header-height;
 	width: $nav-width;
 	background: lighten($nav-background, 5%);
-	border-bottom: 1px solid $header-logo-border-bottom;
+	//border-bottom: 1px solid $header-logo-border-bottom;
+	
 	overflow: hidden; 
 	text-align: center;
 	display: flex;

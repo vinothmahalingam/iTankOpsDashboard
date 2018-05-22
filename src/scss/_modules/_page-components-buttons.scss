@@ -106,9 +106,9 @@
 	right: 0;
 	margin-left: auto;
 	margin-right: auto;
-	background: $header-logo-border-bottom;
+	background: rgba($black, .4);
 	padding: 0px 9px;
-	border: 1px solid $header-logo-border-bottom;
+	border: 1px solid rgba($black, .4);
 	border-radius: 0 0 20px 20px;
 	text-decoration: none;
 	font-size: 17px;

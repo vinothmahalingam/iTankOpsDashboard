@@ -7,6 +7,10 @@
 
 	.nav-menu:last-of-type {
 		margin: 0;
+	}
+
+	.nav-menu:first-of-type {
+		margin-top: 10px;
 	}	
 }
 
@@ -14,8 +18,9 @@
 	text-transform: uppercase;
 	margin:0;
 	color: $nav-title-color;
-	border-bottom: 1px solid rgba($nav-title-border-bottom-color, 0.2);
-	padding: 8px $nav-padding-left;
+	//border-top: 1px solid rgba($nav-title-border-bottom-color, 0.4);
+	padding: 1rem $nav-padding-left;
+	margin-top:0.5rem;
 	font-size: rem($nav-title-font-size);
 	letter-spacing: 1px;
 	font-weight: 500;
@@ -25,6 +30,7 @@
 	padding: 0;
 	list-style: none;
 	background: $nav-background;
+	margin: 0;
 
 	a,
 	a > [class*='fa-'],
@@ -81,21 +87,21 @@
 
 			> ul {
 				display: block;
-				padding-bottom: 10px;
+				//padding-bottom: 10px;
 			}
 
 			/* arrow that appears next to active/selected items */
 			&:not(.open) > a:before {
 				content: '';
 				position: absolute;
-				top: calc(50% - 8px);
+				top: calc(50% - 11px);
 				right: -1px;
 				width: 0;
 				height: 0;
 				border-left: 8px solid transparent;
 				border-right: 8px solid $page-bg;
-				border-bottom: 8px solid transparent;
-				border-top: 8px solid transparent;
+				border-bottom: 11px solid transparent;
+				border-top: 11px solid transparent;
 			}
 		}
 
@@ -159,7 +165,7 @@
 			}*/
 
 			> img {
-				background: #2196F3;
+				background: $primary-500;
 				padding: 0.125rem;
 				width: 20px;
 				height: 20px;
@@ -225,6 +231,7 @@
 		// Sub nav level 1
 		> ul {
 			background-color: darken($nav-base-color, 10%);
+			padding-top: 8px;
 			padding-bottom: 8px;
 
 			li {
@@ -232,7 +239,7 @@
 				a {
 					color: $nav-link-color;
 
-					padding: 11px $nav-padding-right 11px $nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.5px;
+					padding: 12px $nav-padding-right 12px $nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.5px;
 					//font-size: rem($nav-font-link-size);
 
 					b.collapse-sign {
@@ -323,7 +330,7 @@
 
 						a {
 							color: $nav-link-color;
-							padding: 10px $nav-padding-right 10px $nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.5 + 10 + 10;
+							padding: 12px $nav-padding-right 12px $nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.5 + 10 + 10;
 							//font-size: rem($nav-font-link-size - 1);
 
 							.dl-ref {

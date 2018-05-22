@@ -34,7 +34,8 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 
 .page-header {
 	background-color: $header-bg;
-	border-bottom: 1px solid $header-border-bottom-color;
+	//border-bottom: 1px solid $header-border-bottom-color;
+	box-shadow: 0 1px 15px 1px $header-border-bottom-color;
 	display: block;
 	height: $header-height;
 	position: relative;
@@ -105,18 +106,18 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 							&:after {
 								content:" ";
 								border-color: transparent;
-								border-bottom-color: $white;
+								border-bottom-color: $primary-500;
 								border-style: dashed dashed solid;
-								border-width: 0 8.5px 8.5px;
+								border-width: 0 10.5px 7.5px;
 								position: absolute;
-								right: $header-non-btn-width/3;
+								right: $header-non-btn-width/4;
 								bottom: 0;
 								z-index: 1;
 								height: 0;
 								width: 0;
 							}
 							&:before {
-								border-bottom-color: darken($header-dropdown-menu-border-color, 8%);
+								border-bottom-color: $primary-500; //darken($header-border-color, 8%);
 								bottom: 1px;
 							}
 

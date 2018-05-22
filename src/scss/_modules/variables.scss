@@ -163,6 +163,56 @@ $theme-colors-extended: map-merge((
 
 ), $theme-colors-extended);
 
+/*  Define universal border difition (div outlines, etc)
+========================================================================== */
+$theme-border-utility-size:         0px;
+
+/*  MOBILE BREAKPOINT & GUTTERS (contains some bootstrap responsive overrides)
+========================================================================== */
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Decently size screen / wide laptop
+  xl: 1200px,
+  // Extra large screen / wide desktop
+  xxl: 1400px,
+  // Extra large screen / wide desktop
+  xxxl: 1600px  
+);
+
+$mobile-breakpoint:          lg !default;                   /* define when mobile menu activates, here we are declearing (lg) so it targets the one after it */
+$mobile-breakpoint-size:     map-get($grid-breakpoints, lg) !default;   /* bootstrap reference xs: 0,  sm: 544px, md: 768px, lg: 992px, xl: 1200px*/
+$grid-gutter-width-base:     30px;
+$grid-gutter-width:          $grid-gutter-width-base / 1.2; //25px
+//$grid-columns:             12;
+
+$grid-gutter-widths: (
+  xs: $grid-gutter-width-base / 2,          //15
+  sm: $grid-gutter-width-base / 2,          //
+  md: $grid-gutter-width-base / 2,          //
+  lg: $grid-gutter-width-base / 1.2,        //25
+  xl: $grid-gutter-width-base / 1.2         //
+);
+
+
+/* global var used for spacing*/
+$spacer:                  1rem;
+
+/* Uniform Padding variable */
+/* Heads up! This is a global scoped variable - changing may impact the whole template */
+$p-1:                 0.25rem;
+$p-2:                 0.5rem;
+$p-3:                 1rem;
+$p-4:                 1.5rem;
+$p-5:                 3rem;
+
+
 /*   BOOTSTRAP OVERRIDES (bootstrap variables)
 ========================================================================== */ 
 $grays: (
@@ -204,7 +254,9 @@ $theme-colors: (
 $input-focus-border-color:					$color-primary;
 $link-color:            						$primary-800;
 $input-btn-focus-color:             transparent;
-$input-border-color:                rgba(0,0,0,0.2); //#cdcdcd;
+$input-border-color:                rgba(0,0,0,0.1); //#cdcdcd;
+$input-padding-y:                   .45rem;  
+$input-padding-x:                   1rem;
 
 /* cards */
 $card-spacer-y:                     20px;
@@ -222,13 +274,14 @@ $border-radius-sm:									$border-radius;
 /* alert */
 $alert-padding-y:                   0.75rem;
 $alert-padding-x:                   1.2rem;
+$alert-margin-bottom:               $grid-gutter-width;
 
 /* breadcrumb */
 $breadcrumb-bg:                     lighten($fusion-50, 43%);    
 $breadcrumb-divider-color:          inherit;      
 
 /* button */
-$input-btn-focus-width:             2px;
+//$input-btn-focus-width:             2px;
 
 /* bootstrap tables */
 $table-border-color:                darken(lighten($black, 93.5%), 5%);
@@ -240,14 +293,17 @@ $table-dark-accent-bg:              rgba($white, .05);
 $table-dark-hover-bg:               $color-primary;
 
 /* tooltip */
-$tooltip-color:                     #333 !default;
+$tooltip-color:                     #333;
 $tooltip-bg:                        #f3f3f3;
 $tooltip-arrow-color:               $tooltip-bg;
 $tooltip-opacity:                   1;
 $tooltip-padding-x:                 8px; 
 $tooltip-padding-y:                 2px;
-$tooltip-arrow-width:               5px !default;
-$tooltip-arrow-height:              5px !default;
+$tooltip-arrow-width:               5px;
+$tooltip-arrow-height:              5px;
+
+/* dropdowns */
+$dropdown-border-width:             $theme-border-utility-size;         
 
 /* reference guide
 http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/
@@ -303,80 +359,35 @@ $navbar-toggler-padding-x:			    18px;
 $carousel-indicator-height:         13px;
 $carousel-indicator-width:          13px;
 
-/*  MOBILE BREAKPOINT & GUTTERS (contains some bootstrap responsive overrides)
-========================================================================== */
-$grid-breakpoints: (
-  // Extra small screen / phone
-  xs: 0,
-  // Small screen / phone
-  sm: 576px,
-  // Medium screen / tablet
-  md: 768px,
-  // Large screen / desktop
-  lg: 992px,
-  // Decently size screen / wide laptop
-  xl: 1200px,
-  // Extra large screen / wide desktop
-  xxl: 1400px,
-  // Extra large screen / wide desktop
-  xxxl: 1600px  
-);
-
-$mobile-breakpoint:					 lg !default; 								  /* define when mobile menu activates, here we are declearing (lg) so it targets the one after it */
-$mobile-breakpoint-size:		 map-get($grid-breakpoints, lg) !default;	  /* bootstrap reference xs: 0,  sm: 544px, md: 768px, lg: 992px, xl: 1200px*/
-$grid-gutter-width-base:     30px;
-$grid-gutter-width:          $grid-gutter-width-base / 1.5; //20px
-//$grid-columns:             12;
-
-$grid-gutter-widths: (
-  xs: $grid-gutter-width-base / 2,          //15
-  sm: $grid-gutter-width-base / 2,          //
-  md: $grid-gutter-width-base / 2,          //
-  lg: $grid-gutter-width-base / 1.5,        //20
-  xl: $grid-gutter-width-base / 1.5         //
-);
-
-
-/* global var used for spacing*/
-$spacer:   							  1rem;
-
-/* Uniform Padding variable */
-/* Heads up! This is a global scoped variable - changing may impact the whole template */
-$p-1:								  0.25rem;
-$p-2:								  0.5rem;
-$p-3:								  1rem;
-$p-4:								  1.5rem;
-$p-5:								  3rem;
-
 /*  BASE VARS
 ========================================================================== */
 // usage: background-image: url("#{$baseURL}img/bg.png"); 
 
-$baseURL:							 "../" !default;
-$webfontsURL:                        "../webfonts" !default;
-$base-text-color:					 darken($white,60%) !default;
+$baseURL:							              "../" !default;
+$webfontsURL:                       "../webfonts" !default;
+$base-text-color:					          darken($white,60%) !default;
 
 /* font vars below will auto change to rem values using function rem($value)*/
 $fs-base:                            13px !default;
-$fs-nano:							 $fs-base - 2;   /* 11px   */
-$fs-xs: 							 $fs-base - 1;   /* 12px   */
-$fs-sm: 							 $fs-base - 0.5; /* 12.5px */
-$fs-md: 							 $fs-base + 1;   /* 14px   */
-$fs-lg: 							 $fs-base + 2;   /* 15px   */
-$fs-xl: 							 $fs-base + 3;   /* 16px   */
-$fs-xxl: 							 $fs-base + 15;  /* 28px   */
+$fs-nano:							               $fs-base - 2;   /* 11px   */
+$fs-xs: 							               $fs-base - 1;   /* 12px   */
+$fs-sm: 							               $fs-base - 0.5; /* 12.5px */
+$fs-md: 							               $fs-base + 1;   /* 14px   */
+$fs-lg: 							               $fs-base + 2;   /* 15px   */
+$fs-xl: 							               $fs-base + 3;   /* 16px   */
+$fs-xxl: 							               $fs-base + 15;  /* 28px   */
 
 /*  Font Family
 ========================================================================== */
-$font-import:								       "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" !default;
-$page-font:									       "Roboto", 'Helvetica Neue', Helvetica, Arial !default;
-$nav-font:									       $page-font !default;
-$heading-font-family:					     $page-font !default; 
-$mobile-page-font:						     'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,sans-serif;
+$font-import:								        "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" !default;
+$page-font:									        "Roboto", 'Helvetica Neue', Helvetica, Arial !default;
+$nav-font:									        $page-font !default;
+$heading-font-family:					      $page-font !default; 
+$mobile-page-font:						      'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,sans-serif;
 
 /*  ANIMATIONS
 ========================================================================== */
-$nav-hide-animate: 						      470ms cubic-bezier(0.34, 1.25, 0.3, 1) !default;		/* this addresses all animation related to nav hide to nav minify */
+$nav-hide-animate: 						       470ms cubic-bezier(0.34, 1.25, 0.3, 1) !default;		/* this addresses all animation related to nav hide to nav minify */
 
 /*  Z-INDEX declearation
 ========================================================================== */
@@ -398,7 +409,7 @@ $print-page-margin:						       1.0cm;
 /*  Common Element Variables
 ========================================================================== */
 $body-background-color:				       $white !default; //darken($color-fusion, 7%) !default;	
-$page-bg:											       desaturate(lighten($color-fusion, 65.5%),20%) !default;
+$page-bg:											       desaturate(lighten($primary-700, 52%), 50%)  !default; //desaturate(lighten($color-fusion, 65.5%),20%) !default;
 
 /* Z-index decleartion "birds eye view"
 ========================================================================== */
@@ -416,17 +427,18 @@ $frame-border-color:                 #f7f9fa !default;
 
 /* colors */
 $header-bg:											     $white !default;
-$header-border-bottom-color:		     rgba($color-fusion, (17/100));		
-$header-link-color:							     darken($header-bg, 50%) !default;
+$header-border-color:                #ccc !default;
+$header-border-bottom-color:		     rgba(darken($primary-700, 10%), (10/100)) !default;		
+$header-link-color:							     darken($header-bg, 35%) !default;
 $header-link-hover-color:				     darken($header-bg, 75%) !default;
 
 /* height */
-$header-height:									     60px !default;
+$header-height:									     66px !default;
 
 /* logo */
-$header-logo-border-bottom:			     rgba($black, .4) !default;
-$header-logo-width:							     170px !default; 										  /* try not to go beywond the width of $main_nav_width value */
-$header-logo-height:						     27px !default 										    /* you may need to change this depending on your logo design */
+$header-logo-border-bottom:			     rgba(darken($primary-700, 10%), (30/100)) !default;
+$header-logo-width:							     auto !default; 										  /* try not to go beywond the width of $main_nav_width value */
+$header-logo-height:						     auto !default 										    /* you may need to change this depending on your logo design */
 $header-logo-text-align:				     center; 												      /* adjust this as you see fit : left, right, center */
 
 /* icon font size (not button) */
@@ -443,30 +455,31 @@ $header-search-padding:					     $spacer * 0.38;
 /* btn */
 //$header-btn-background:				     darken($page-bg, 5%) !default; 
 $header-btn-active-bg:					     $fusion-500 !default;
-$header-btn-color:							     darken($page-bg, 40%) !default;
-$header-btn-hover-color:				     darken($header-btn-color, 20%) !default;
+$header-btn-color:							     $header-link-color !default;
+$header-btn-hover-color:				     $header-link-hover-color !default;
 $header-btn-active-color:				     $white !default;
-
-$header-btn-height: 						     $header-height/2 + 6 !default;
+$header-btn-height: 						     $header-height/2 + 3 !default;
 $header-btn-width: 							     52px !default;
 $header-btn-font-size:					     21px !default; //works only for font icons
 $header-btn-border-radius:			     $border-radius !default;
 $header-non-btn-width:					     50px;
 
 /* dropdowns */
-$header-dropdown-menu-large-width:	 350px !default
-$header-dropdown-menu-normal-width:	 300px !default
-$header-dropdown-menu-long-height:	 428px !default
-$header-dropdown-menu-normal-height: 300px !default
-$header-dropdown-menu-border-color:	 #ccc !default;
+$dropdown-xl-width:	                 380px !default
+$dropdown-xl-height:                 428px !default
+$dropdown-lg-width:                  280px !default
+$dropdown-sm-width:	                 225px !default
+$dropdown-sm-height:                 300px !default
+$dropdown-shadow:                    0 0 15px 1px rgba(desaturate($primary-900, 20%), (20/100));   
 
 /* dropdown: app list */
-$header-applist-link-block-height:	 75px;
-$header-applist-link-block-width:		 72px;
-$header-applist-rows-width:					 280px;
-$header-applist-rows-height:				 400px; 
+$header-applist-link-block-height:	 95px;
+$header-applist-link-block-width:		 100px;
+$header-applist-rows-width:					 370px;
+$header-applist-rows-height:				 360px; 
 $header-applist-box-padding-x:			 $p-2;
 $header-applist-box-padding-y:			 $p-3;
+$header-applist-icon-size:           50px;
 
 
 /*  NAVIGATION STUFF
@@ -504,18 +517,18 @@ aside.left-panel ($nav-width, $nav-background)
 /* left panel */
 $nav-background:									darken($color-fusion, 7%) !default;
 $nav-base-color:									lighten($nav-background, 7%) !default;
-$nav-width:											  270px !default; 
+$nav-width:											  260px !default; 
 
 /* nav parent level-0 */
 $nav-link-color: 									lighten($nav-base-color, 45%) !default;
 $nav-font-link-size: 							$fs-base + 1 !default;
 $nav-collapse-sign-font-size:			$nav-font-link-size + 3 !default;	
-$nav-padding-left:								20px !default; //$p-2
-$nav-padding-right:								20px !default; //$p-2
+$nav-padding-left:								25px !default; //$p-2
+$nav-padding-right:								30px !default; //$p-2
 
 /* nav icon sizes */
-$nav-font-icon-size:							20px !default; //23px for Fontawesome & 20px for NextGen icons
-$nav-font-icon-size-sub:					19px !default;
+$nav-font-icon-size:							19px !default; //23px for Fontawesome & 20px for NextGen icons
+$nav-font-icon-size-sub:					18px !default;
 
 $nav-icon-width:									28px !default;
 $nav-icon-margin-right:						12px !default;
@@ -525,13 +538,13 @@ $nav-badge-color: 								$white !default;
 $nav-badge-bg-color: 							$danger-500 !default;
 
 /* all child */
-$nav-icon-color:									lighten(darken($nav-base-color, 11%),27%) !default;
+$nav-icon-color:									lighten(darken($nav-base-color, 18%),27%) !default;
 $nav-icon-hover-color:						lighten(desaturate($color-primary, 30%), 10%) !default;
 
 /* nav title */
 $nav-title-color: 								lighten($nav-base-color, 10%) !default;
 $nav-title-border-bottom-color: 	lighten($nav-base-color, 3%) !default;
-$nav-title-font-size: 						$fs-base - 2.8;
+$nav-title-font-size: 						$fs-base - 1.8;
 
 /* nav Minify */
 $nav-minify-hover-bg:							darken($nav-base-color, 3%) !default;
@@ -554,7 +567,7 @@ $nav-top-minify-height:						$nav-top-height/2 !default;
 
 /* nav Info Card (appears below the logo) */
 $nav-infocard-height:							130px !default;
-$profile-image-width:							45px !default; 
+$profile-image-width:							50px !default; 
 $profile-image-width-md:          35px !default;
 $profile-image-width-sm:          25px !default;
 $image-share-height:              45px !default; /* width is auto */

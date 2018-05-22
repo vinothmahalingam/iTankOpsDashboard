@@ -1,17 +1,17 @@
-<div class="p-3 d-flex flex-row pt-4" data-toggle="buttons">
+<div class="d-flex flex-row p-g pl-3 pr-3 bg-primary-500 rounded-top" {{!-- style="background: url(./img/sidebar.jpg); background-size: cover;" --}}>
 	<!--<label class="btn btn-default active mb-0 flex-1 fw-500">
 		<input type="radio" name="options" id="online" checked=""> Online
 	</label>
 	<label class="btn btn-default mb-0 flex-1 fw-500">
 		<input type="radio" name="options" id="invisible"> Invisible
 	</label>-->
-	<div class="d-flex flex-row align-items-center">
-		<span class="status status-success mr-2">
+	<div class="d-flex flex-row align-items-center mt-1 mb-1">
+		<span class="mr-2">
 			<img src="img/{{avatar}}" class="rounded-circle profile-image" alt="{{user}}">
 		</span>
 		<div class="info-card-text">
-			<div class="fs-md text-truncate text-truncate-sm">{{user}}</div>
-			<span><a href="#">View profile</a></span>
+			<div class="fs-lg text-truncate text-truncate-lg">{{user}}</div>
+			<span class="text-truncate text-truncate-md opacity-80">{{email}}</span>
 		</div>
 	</div>
 </div>
@@ -48,5 +48,5 @@
 <div class="dropdown-divider m-0"></div>
 <a class="dropdown-item fw-500 pt-3 pb-3" href="page_login.html">
 	<span data-i18n="drpdwn.logout">Logout</span> 
-	<span class="float-right fw-n">@{{email}}</span>
+	<span class="float-right fw-n">@{{twitter}}</span>
 </a>

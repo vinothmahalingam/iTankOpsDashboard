@@ -38,7 +38,7 @@
 
 .hover-white {
 	&:hover {
-		background: lighten($black, 95.5%);
+		background-image: linear-gradient(rgba(29,33,41,.03),rgba(29,33,41,.04));
 	}
 	&:active {
 		background: darken(lighten($black, 95.5%), 5%);

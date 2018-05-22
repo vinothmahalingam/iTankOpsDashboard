@@ -32,15 +32,12 @@
 .flex-1 { flex:1 }
 
 /* margins */
-.m-g     { margin: $grid-gutter-width-base }
-.m-g-h   { margin: $grid-gutter-width-base/2 }
+.m-g     { margin: map-get($grid-gutter-widths, xl) }
 .mb-g    { margin-bottom: map-get($grid-gutter-widths, xl) !important }
 .mb-gb   { margin-bottom:$grid-gutter-width-base }
 
 /* paddings */
-.p-g    { padding:$grid-gutter-width-base }
-.p-g-h  { padding:$grid-gutter-width-base/2 }
-.p-g-2t { padding: $grid-gutter-width-base/1.5 !important }
+.p-g    { padding: map-get($grid-gutter-widths, xl) }
 
 /* text turncaters */
 .text-truncate-header {	max-width:  map-get($grid-gutter-widths, xl) + 73px }
