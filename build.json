@@ -4,12 +4,13 @@
 		"data" : {
 			"app": "NextGen WebApp",
 			"user": "Dr. Codex Lantern",
-			"email": "codexlantern",
+			"email": "drlantern@nextgen.com",
+			"twitter": "codexlantern",
 			"avatar": "avatar-sunny.png",
 			"logo": "logo-white.png",
 			"logo-m": "logo-minify.png",
 			"version": "1.0.0",
-			"copyright": "2017 © NextGen theme by&nbsp;<a href='http://myorange.ca' class='text-primary fw-500' title='MyOrange Inc.' target='_blank'>MyOrange</a>"
+			"copyright": "2018 © NextGen theme by&nbsp;<a href='http://myorange.ca' class='text-primary fw-500' title='MyOrange Inc.' target='_blank'>MyOrange</a>"
 		},
 		"compile": {
 			"jsUglify": true,
