@@ -213,7 +213,6 @@ RESULT:
   -moz-osx-font-smoothing: grayscale;
 }
 
-//this one
 %fixed-header-shadow {
   @include box-shadow(0 2px 2px -1px rgba(0,0,0,.1));
 }
@@ -221,7 +220,7 @@ RESULT:
 %header-btn {
   //@extend %btn-default;
   @include rounded($header-btn-border-radius);
-  border: 1px solid darken($header-border-bottom-color, 20);
+  border: 1px solid lighten($fusion-50, 30%);
   height: $header-btn-height;
   width: $header-btn-width;
   vertical-align: middle;
@@ -231,15 +230,19 @@ RESULT:
   padding: $list-table-padding-y $list-table-padding-x;
   cursor: default;
   color:$header-btn-color;
-
+    //background: $primary-200;
+    //color:$primary-200;
+/*
   &.active {
     @extend %header-btn-active;
-  }
+  }*/
 
   &:hover {
     box-shadow: none;
-    border: 1px solid #c6c6c6;
-    color: #333;
+    border-color: $primary-500;
+    background: $primary-300;
+    color:$white;
+
   }
 
 }

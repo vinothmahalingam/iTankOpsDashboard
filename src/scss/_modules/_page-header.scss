@@ -106,7 +106,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 							&:after {
 								content:" ";
 								border-color: transparent;
-								border-bottom-color: $primary-500;
+								border-bottom-color: $header-dropdown-arrow-color;
 								border-style: dashed dashed solid;
 								border-width: 0 10.5px 7.5px;
 								position: absolute;
@@ -117,7 +117,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 								width: 0;
 							}
 							&:before {
-								border-bottom-color: $primary-500; //darken($header-border-color, 8%);
+								border-bottom-color: $header-dropdown-arrow-color; //darken($header-border-color, 8%);
 								bottom: 1px;
 							}
 

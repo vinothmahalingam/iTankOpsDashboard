@@ -2,7 +2,7 @@
 ========================================================================== */
 $color-primary:         			      #2196F3;
 $color-success:                     #1abc42;
-$color-info:                        #8781d2;
+$color-info:                        #6760c0;
 $color-warning:                     #ffc241;
 $color-danger:                      #f55f78;
 $color-fusion:                      darken(desaturate(adjust-hue($color-primary, 5), 80%), 25%); 
@@ -284,11 +284,12 @@ $breadcrumb-divider-color:          inherit;
 //$input-btn-focus-width:             2px;
 
 /* bootstrap tables */
-$table-border-color:                darken(lighten($black, 93.5%), 5%);
-$table-hover-bg:									  adjust-hue(lighten($color-primary, 40%), -10); //rgba($fusion-300,.035);
+$table-border-color:                lighten(desaturate($primary-500, 60%), 40%);
+$table-hover-bg:									  lighten(desaturate($primary-900, 70%), 63%);
 $table-accent-bg:               		rgba($fusion-500,.02);
 
-$table-dark-bg:                     $fusion-600;
+$table-dark-bg:                     $fusion-300;
+$table-dark-border-color:           $fusion-400;
 $table-dark-accent-bg:              rgba($white, .05);
 $table-dark-hover-bg:               $color-primary;
 
@@ -409,7 +410,7 @@ $print-page-margin:						       1.0cm;
 /*  Common Element Variables
 ========================================================================== */
 $body-background-color:				       $white !default; //darken($color-fusion, 7%) !default;	
-$page-bg:											       desaturate(lighten($primary-700, 52%), 50%)  !default; //desaturate(lighten($color-fusion, 65.5%),20%) !default;
+$page-bg:											       desaturate(lighten($primary-700, 52%), 60%)  !default; //desaturate(lighten($color-fusion, 65.5%),20%) !default;
 
 /* Z-index decleartion "birds eye view"
 ========================================================================== */
@@ -462,25 +463,30 @@ $header-btn-height: 						     $header-height/2 + 3 !default;
 $header-btn-width: 							     52px !default;
 $header-btn-font-size:					     21px !default; //works only for font icons
 $header-btn-border-radius:			     $border-radius !default;
-$header-non-btn-width:					     50px;
-
-/* dropdowns */
-$dropdown-xl-width:	                 380px !default
-$dropdown-xl-height:                 428px !default
-$dropdown-lg-width:                  280px !default
-$dropdown-sm-width:	                 225px !default
-$dropdown-sm-height:                 300px !default
-$dropdown-shadow:                    0 0 15px 1px rgba(desaturate($primary-900, 20%), (20/100));   
+$header-non-btn-width:					     50px !default;
+$header-dropdown-arrow-color:        $primary-700 !default;
 
 /* dropdown: app list */
 $header-applist-link-block-height:	 95px;
 $header-applist-link-block-width:		 100px;
-$header-applist-rows-width:					 370px;
+$header-applist-rows-width:					 350px;
 $header-applist-rows-height:				 360px; 
 $header-applist-box-padding-x:			 $p-2;
 $header-applist-box-padding-y:			 $p-3;
 $header-applist-icon-size:           50px;
 
+
+/* COMPONENTS & MODS */
+$nav-tabs-panel-link-height:         45px !default;
+
+
+/* dropdowns */
+$dropdown-xl-width:                  350px !default
+$dropdown-xl-height:                 328px !default
+$dropdown-lg-width:                  280px !default
+$dropdown-sm-width:                  225px !default
+$dropdown-sm-height:                 300px !default
+$dropdown-shadow:                    0 0 15px 1px rgba(desaturate($primary-900, 20%), (20/100));   
 
 /*  NAVIGATION STUFF
 
@@ -599,7 +605,6 @@ $settings-incompat-title:         #d58100 !default;
 $settings-incompat-desc:          #ec9f28 !default;
 $settings-incompat-bg:            $warning-50 !default;
 $settings-incompat-border:        $warning-700 !default;
-$nav-tabs-panel-link-height:      35px !default;
 
 /*   PAGE BREADCRUMB 
 ========================================================================== */

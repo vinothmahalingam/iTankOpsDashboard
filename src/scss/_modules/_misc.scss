@@ -104,6 +104,12 @@ ul.list-verticle {
 	font-weight: 500;
 }*/
 
+
+.dropdown-header {
+	background: -webkit-linear-gradient(250deg, $primary-700, $primary-500);
+	background: linear-gradient(250deg, $primary-700, $primary-500);
+}
+
 .dropdown-item {
 	position:relative;
 
@@ -115,7 +121,7 @@ ul.list-verticle {
 		top: -1px;
 		left: 100%;
 		background:$white;
-		border: 1px solid $dropdown-border-color;
+		//border: 1px solid $dropdown-border-color;
 		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 		//visibility: hidden;
 
@@ -391,4 +397,11 @@ ul.list-verticle {
 		font-weight: 500;
 		font-size: inherit;
 	}
+}
+
+/* code */
+code {
+	background: lighten(desaturate($primary-800, 60%), 56%);
+    padding: 4px 7px;
+    border-radius: 4px;
 }

@@ -1,9 +1,9 @@
 $panel-padding: 15px;
 $panel-hdr-padding: $panel-padding;
 $panel-hdr-font-size: $fs-xl;
-$panel-hdr-height: 45px;
+$panel-hdr-height: 48px;
 $panel-btn-size: 17px;
-$panel-hdr-background: #fafafa;
+$panel-hdr-background: #fafafa; //#fafafa;
 $panel-edge-radius: $border-radius;
 $panel-placeholder-color: #ffccff;
 
@@ -145,6 +145,7 @@ $panel-placeholder-color: #ffccff;
 	@include box-sizing(border-box); 
 	/*border: 1px solid;
 	border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.17);*/
+	border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 	border-radius: $panel-edge-radius $panel-edge-radius 0 0;
 
 	

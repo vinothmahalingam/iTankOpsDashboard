@@ -4,7 +4,7 @@
 	pagename="settings_layout_options" 
 	category_1="Theme Settings" 
 	heading="Theme Settings: <span class='fw-300'>Layout Options</span>" 
-	pagedescription="Over 36 layout possibilities and over <span class='fw-500 color-info-700'>285</span> different <span class='fw-500 color-info-700'>combinations</span>"
+	pagedescription="Over 36 layout possibilities and over <span class='fw-500 color-info-700'>285 combinations</span>"
 }}
 
 {{#*inline "head-block"}}
@@ -12,6 +12,619 @@
 {{/inline}}
 
 {{#*inline "content-block"}}
+
+<div class="alert alert-primary">
+	<div class="d-table w-100">
+		<div class="d-table-cell align-middle width-6">
+			<span class="icon-stack icon-stack-lg">
+				<i class="base-14 icon-stack-3x color-primary-400"></i>
+				<i class="base-14 icon-stack-2x color-primary-600 opacity-70"></i>
+				<i class="fal fa-cog icon-stack-1x text-white opacity-90"></i>
+			</span>
+		</div>
+		<div class="d-table-cell align-middle pl-1">
+			<span class="h5">Heads up!</span>
+			<br> 
+			You can reset the changes at anytime by clicking the reset button found in the <a href="#" class="fw-500" data-action="toggle" data-class="display-right-panel">settings panel</a>. To enable these settings through scripts, see the <a href="settings_saving_db.html" class="fw-500">saving to database</a> page.
+		</div>
+	</div>
+</div>
+
+
+<div class="row">
+
+	<div class="col-lg-12 col-xl-6">
+		<div class="card mb-g">
+			<div class="card-body">
+				<h4 class="mb-4">
+					Fixed
+					<span class="fw-300">Header</span>
+					<span class="badge badge-primary float-right fw-300 ml-1">GLOBAL</span>
+					<small>
+						header is in a fixed position at all times, effecting mobile & desktop view
+					</small>
+				</h4>
+
+				<div class="row">
+					<div class="col-12 mb-g">
+						<strong>Class to body</strong>
+						<br>
+						<code>.header-function-fixed</code>
+					</div>
+					<div class="col-12 mb-g">
+						<strong>App Usage</strong>
+						<br>
+						<code>data-action="toggle" data-class="header-function-fixed"</code>
+					</div>
+
+				</div>
+				<a href="#" onclick="return false;" class="btn btn-switch m-0" data-action="toggle" data-class="header-function-fixed"></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-12 col-xl-6">
+		<div class="card mb-g">
+			<div class="card-body">
+				<h4 class="mb-4">
+					Fixed
+					<span class="fw-300">Navigation</span>
+					<span class="badge badge-warning float-right fw-300 ml-1">DESKTOP</span>
+					<span class="badge bg-info-800 float-right fw-300 ml-1">TABLETS</span>
+					<small>
+						Left panel position becomes fixed, activates custom scroll plugin
+					</small>
+				</h4>
+
+				<div class="row">
+					<div class="col-12 mb-g">
+						<strong>Class to body</strong>
+						<br>
+						<code>.nav-function-fixed</code>
+					</div>
+					<div class="col-12 mb-g">
+						<strong>App Usage</strong>
+						<br>
+						<code>data-action="toggle" data-class="nav-function-fixed"</code>
+					</div>
+				</div>
+				<a href="#" onclick="return false;" class="btn btn-switch m-0" data-action="toggle" data-class="nav-function-fixed"></a>
+				
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-lg-12 col-xl-6">
+		<div class="card mb-g">
+			<div class="card-body">
+				<h4 class="mb-4">
+					Minify
+					<span class="fw-300">Navigation</span>
+					<span class="badge badge-warning float-right fw-300 ml-1">DESKTOP</span>
+					<span class="badge bg-info-800 float-right fw-300 ml-1">TABLETS</span>
+					<small>
+						Navigation text are collapsed. Only visible portion are the icons. Hover the icons to reveal any child elements.
+					</small>
+				</h4>
+
+				<div class="row">
+					<div class="col-12 mb-g">
+						<strong>Class to body</strong>
+						<br>
+						<code>.nav-function-minify</code>
+					</div>
+					<div class="col-12 mb-g">
+						<strong>App Usage</strong>
+						<br>
+						<code>data-action="toggle" data-class="nav-function-minify"</code>
+					</div>
+				</div>
+				<a href="#" onclick="return false;" class="btn btn-switch m-0" data-action="toggle" data-class="nav-function-minify"></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-12 col-xl-6">
+		<div class="card mb-g">
+			<div class="card-body">
+				<h4 class="mb-4">
+					Hide
+					<span class="fw-300">Navigation</span>
+					<span class="badge badge-warning float-right fw-300 ml-1">DESKTOP</span>
+					<span class="badge bg-info-800 float-right fw-300 ml-1">TABLETS</span>
+					<small>
+						Entire navigation pane shifts off screen, navigation is revealed upon user hovering the visible portion of the navigation.
+					</small>
+				</h4>
+
+				<div class="row">
+					<div class="col-12 mb-g">
+						<strong>Class to body</strong>
+						<br>
+						<code>.nav-function-hidden</code>
+					</div>
+					<div class="col-12 mb-g">
+						<strong>App Usage</strong>
+						<br>
+						<code>data-action="toggle" data-class="nav-function-hidden"</code>
+					</div>
+				</div>
+				<a href="#" onclick="return false;" class="btn btn-switch m-0" data-action="toggle" data-class="nav-function-hidden"></a>
+				
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-lg-12 col-xl-6">
+		<div class="card mb-g">
+			<div class="card-body">
+				<h4 class="mb-4">
+					Top
+					<span class="fw-300">Navigation</span>
+					<span class="badge badge-warning float-right fw-300 ml-1">DESKTOP</span>
+					<span class="badge bg-info-800 float-right fw-300 ml-1">TABLETS</span>
+					<small>
+						Otherwise known as horizontal navigation. The entire navigation pane shifts to the top. No DOM changes required! :)
+					</small>
+				</h4>
+
+				<div class="row">
+					<div class="col-12 mb-g">
+						<strong>Class to body</strong>
+						<br>
+						<code>.nav-function-top</code>
+					</div>
+					<div class="col-12 mb-g">
+						<strong>App Usage</strong>
+						<br>
+						<code>data-action="toggle" data-class="nav-function-top"</code>
+					</div>
+
+				</div>
+				<a href="#" onclick="return false;" class="btn btn-switch m-0" data-action="toggle" data-class="nav-function-top"></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-12 col-xl-6">
+		<div class="card mb-g">
+			<div class="card-body">
+				<h4 class="mb-4">
+					Boxed
+					<span class="fw-300">Layout</span>
+					<span class="badge badge-warning float-right fw-300 ml-1">DESKTOP</span>
+					<small>
+						Minimize layout by inserting into a container. Some classes are not compatible with this setting.
+					</small>
+				</h4>
+
+				<div class="row">
+					<div class="col-12 mb-g">
+						<strong>Class to body</strong>
+						<br>
+						<code>.mod-main-boxed</code>
+					</div>
+					<div class="col-12 mb-g">
+						<strong>App Usage</strong>
+						<br>
+						<code>data-action="toggle" data-class="mod-main-boxed"</code>
+					</div>
+
+				</div>
+				<a href="#" onclick="return false;" class="btn btn-switch m-0" data-action="toggle" data-class="mod-main-boxed"></a>
+				
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-lg-12 col-xl-6">
+		<div class="card mb-g">
+			<div class="card-body">
+				<h4 class="mb-4">
+					Push 
+					<span class="fw-300">Content</span>
+					<span class="badge badge-success float-right fw-300 ml-1">MOBILE</span>
+					<small>
+						Content pushed on menu reveal. Menu will be treated as a 'physical object' that will push the content aside.
+					</small>
+				</h4>
+
+				<div class="row">
+					<div class="col-12 mb-g">
+						<strong>Class to body</strong>
+						<br>
+						<code>.nav-mobile-push</code>
+					</div>
+					<div class="col-12 mb-g">
+						<strong>App Usage</strong>
+						<br>
+						<code>data-action="toggle" data-class="nav-mobile-push"</code>
+					</div>
+
+				</div>
+				<a href="#" onclick="return false;" class="btn btn-switch m-0" data-action="toggle" data-class="nav-mobile-push"></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-12 col-xl-6">
+		<div class="card mb-g">
+			<div class="card-body">
+				<h4 class="mb-4">
+					No
+					<span class="fw-300">Overlay</span>
+					<span class="badge badge-success float-right fw-300 ml-1">MOBILE</span>
+					<small>
+						Removes mesh on menu reveal
+					</small>
+				</h4>
+
+				<div class="row">
+					<div class="col-12 mb-g">
+						<strong>Class to body</strong>
+						<br>
+						<code>.nav-mobile-no-overlay</code>
+					</div>
+					<div class="col-12 mb-g">
+						<strong>App Usage</strong>
+						<br>
+						<code>data-action="toggle" data-class="nav-mobile-no-overlay"</code>
+					</div>
+
+				</div>
+				<a href="#" onclick="return false;" class="btn btn-switch m-0" data-action="toggle" data-class="nav-mobile-no-overlay"></a>
+				
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-lg-12 col-xl-6">
+		<div class="card mb-g">
+			<div class="card-body">
+				<h4 class="mb-4">
+					Off
+					<span class="fw-300">Off-Canvas <sup>beta</sup></span>
+					<span class="badge badge-success float-right fw-300 ml-1">MOBILE</span>
+					<small>
+						Content overlaps menu
+					</small>
+				</h4>
+
+				<div class="row">
+					<div class="col-12 mb-g">
+						<strong>Class to body</strong>
+						<br>
+						<code>.nav-mobile-slide-out</code>
+					</div>
+					<div class="col-12 mb-g">
+						<strong>App Usage</strong>
+						<br>
+						<code>data-action="toggle" data-class="nav-mobile-slide-out"</code>
+					</div>
+
+				</div>
+				<a href="#" onclick="return false;" class="btn btn-switch m-0" data-action="toggle" data-class="nav-mobile-slide-out"></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-12 col-xl-6">
+		<div class="card mb-g">
+			<div class="card-body">
+				<h4 class="mb-4">
+					Fixed
+					<span class="fw-300">Header</span>
+					<span class="badge badge-primary float-right fw-300 ml-1">GLOBAL</span>
+					<small>
+						header is in a fixed position at all times, effecting mobile & desktop view
+					</small>
+				</h4>
+
+				<div class="row">
+					<div class="col-12 mb-g">
+						<strong>Class to body</strong>
+						<br>
+						<code>.header-function-fixed</code>
+					</div>
+					<div class="col-12 mb-g">
+						<strong>App Usage</strong>
+						<br>
+						<code>data-action="toggle" data-class="header-function-fixed"</code>
+					</div>
+
+				</div>
+				<a href="#" onclick="return false;" class="btn btn-switch m-0" data-action="toggle" data-class="header-function-fixed"></a>
+				
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-lg-12 col-xl-6">
+		<div class="card mb-g">
+			<div class="card-body">
+				<h4 class="mb-4">
+					Fixed
+					<span class="fw-300">Header</span>
+					<span class="badge badge-primary float-right fw-300 ml-1">GLOBAL</span>
+					<small>
+						header is in a fixed position at all times, effecting mobile & desktop view
+					</small>
+				</h4>
+
+				<div class="row">
+					<div class="col-12 mb-g">
+						<strong>Class to body</strong>
+						<br>
+						<code>.header-function-fixed</code>
+					</div>
+					<div class="col-12 mb-g">
+						<strong>App Usage</strong>
+						<br>
+						<code>data-action="toggle" data-class="header-function-fixed"</code>
+					</div>
+
+				</div>
+				<a href="#" onclick="return false;" class="btn btn-switch m-0" data-action="toggle" data-class="header-function-fixed"></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-12 col-xl-6">
+		<div class="card mb-g">
+			<div class="card-body">
+				<h4 class="mb-4">
+					Fixed
+					<span class="fw-300">Header</span>
+					<span class="badge badge-primary float-right fw-300 ml-1">GLOBAL</span>
+					<small>
+						header is in a fixed position at all times, effecting mobile & desktop view
+					</small>
+				</h4>
+
+				<div class="row">
+					<div class="col-12 mb-g">
+						<strong>Class to body</strong>
+						<br>
+						<code>.header-function-fixed</code>
+					</div>
+					<div class="col-12 mb-g">
+						<strong>App Usage</strong>
+						<br>
+						<code>data-action="toggle" data-class="header-function-fixed"</code>
+					</div>
+
+				</div>
+				<a href="#" onclick="return false;" class="btn btn-switch m-0" data-action="toggle" data-class="header-function-fixed"></a>
+				
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-lg-12 col-xl-6">
+		<div class="card mb-g">
+			<div class="card-body">
+				<h4 class="mb-4">
+					Fixed
+					<span class="fw-300">Header</span>
+					<span class="badge badge-primary float-right fw-300 ml-1">GLOBAL</span>
+					<small>
+						header is in a fixed position at all times, effecting mobile & desktop view
+					</small>
+				</h4>
+
+				<div class="row">
+					<div class="col-12 mb-g">
+						<strong>Class to body</strong>
+						<br>
+						<code>.header-function-fixed</code>
+					</div>
+					<div class="col-12 mb-g">
+						<strong>App Usage</strong>
+						<br>
+						<code>data-action="toggle" data-class="header-function-fixed"</code>
+					</div>
+
+				</div>
+				<a href="#" onclick="return false;" class="btn btn-switch m-0" data-action="toggle" data-class="header-function-fixed"></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-12 col-xl-6">
+		<div class="card mb-g">
+			<div class="card-body">
+				<h4 class="mb-4">
+					Fixed
+					<span class="fw-300">Header</span>
+					<span class="badge badge-primary float-right fw-300 ml-1">GLOBAL</span>
+					<small>
+						header is in a fixed position at all times, effecting mobile & desktop view
+					</small>
+				</h4>
+
+				<div class="row">
+					<div class="col-12 mb-g">
+						<strong>Class to body</strong>
+						<br>
+						<code>.header-function-fixed</code>
+					</div>
+					<div class="col-12 mb-g">
+						<strong>App Usage</strong>
+						<br>
+						<code>data-action="toggle" data-class="header-function-fixed"</code>
+					</div>
+
+				</div>
+				<a href="#" onclick="return false;" class="btn btn-switch m-0" data-action="toggle" data-class="header-function-fixed"></a>
+				
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-lg-12 col-xl-6">
+		<div class="card mb-g">
+			<div class="card-body">
+				<h4 class="mb-4">
+					Fixed
+					<span class="fw-300">Header</span>
+					<span class="badge badge-primary float-right fw-300 ml-1">GLOBAL</span>
+					<small>
+						header is in a fixed position at all times, effecting mobile & desktop view
+					</small>
+				</h4>
+
+				<div class="row">
+					<div class="col-12 mb-g">
+						<strong>Class to body</strong>
+						<br>
+						<code>.header-function-fixed</code>
+					</div>
+					<div class="col-12 mb-g">
+						<strong>App Usage</strong>
+						<br>
+						<code>data-action="toggle" data-class="header-function-fixed"</code>
+					</div>
+
+				</div>
+				<a href="#" onclick="return false;" class="btn btn-switch m-0" data-action="toggle" data-class="header-function-fixed"></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-12 col-xl-6">
+		<div class="card mb-g">
+			<div class="card-body">
+				<h4 class="mb-4">
+					Fixed
+					<span class="fw-300">Header</span>
+					<span class="badge badge-primary float-right fw-300 ml-1">GLOBAL</span>
+					<small>
+						header is in a fixed position at all times, effecting mobile & desktop view
+					</small>
+				</h4>
+
+				<div class="row">
+					<div class="col-12 mb-g">
+						<strong>Class to body</strong>
+						<br>
+						<code>.header-function-fixed</code>
+					</div>
+					<div class="col-12 mb-g">
+						<strong>App Usage</strong>
+						<br>
+						<code>data-action="toggle" data-class="header-function-fixed"</code>
+					</div>
+
+				</div>
+				<a href="#" onclick="return false;" class="btn btn-switch m-0" data-action="toggle" data-class="header-function-fixed"></a>
+				
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-lg-12 col-xl-6">
+		<div class="card mb-g">
+			<div class="card-body">
+				<h4 class="mb-4">
+					Fixed
+					<span class="fw-300">Header</span>
+					<span class="badge badge-primary float-right fw-300 ml-1">GLOBAL</span>
+					<small>
+						header is in a fixed position at all times, effecting mobile & desktop view
+					</small>
+				</h4>
+
+				<div class="row">
+					<div class="col-12 mb-g">
+						<strong>Class to body</strong>
+						<br>
+						<code>.header-function-fixed</code>
+					</div>
+					<div class="col-12 mb-g">
+						<strong>App Usage</strong>
+						<br>
+						<code>data-action="toggle" data-class="header-function-fixed"</code>
+					</div>
+
+				</div>
+				<a href="#" onclick="return false;" class="btn btn-switch m-0" data-action="toggle" data-class="header-function-fixed"></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-12 col-xl-6">
+		<div class="card mb-g">
+			<div class="card-body">
+				<h4 class="mb-4">
+					Fixed
+					<span class="fw-300">Header</span>
+					<span class="badge badge-primary float-right fw-300 ml-1">GLOBAL</span>
+					<small>
+						header is in a fixed position at all times, effecting mobile & desktop view
+					</small>
+				</h4>
+
+				<div class="row">
+					<div class="col-12 mb-g">
+						<strong>Class to body</strong>
+						<br>
+						<code>.header-function-fixed</code>
+					</div>
+					<div class="col-12 mb-g">
+						<strong>App Usage</strong>
+						<br>
+						<code>data-action="toggle" data-class="header-function-fixed"</code>
+					</div>
+
+				</div>
+				<a href="#" onclick="return false;" class="btn btn-switch m-0" data-action="toggle" data-class="header-function-fixed"></a>
+				
+			</div>
+		</div>
+	</div>
+
+</div>
 
 <div class="card rounded-0 p-0 border-top-0">
 	
