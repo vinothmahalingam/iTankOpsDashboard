@@ -131,12 +131,13 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 						/* header dropdowns */
 						/* note: important rules to override popper's inline classes */
 						& + .dropdown-menu {
-
-							@extend %header-dropdown;
+							position:absolute;
+							border: $theme-border-utility-size solid $header-border-color;
 							right: $grid-gutter-width-base/2 !important;
 							top: $header-height - 1 !important;
 							left: auto !important;
 							padding: 0;
+							margin: 0;
 						}
 
 						/* end header dropdowns */

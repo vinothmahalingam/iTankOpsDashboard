@@ -18,16 +18,13 @@
 
 			.logo {
 
-				background:$nav-minify-logo-bg;
+				//background:$nav-minify-logo-bg;
 				width:$nav-minify-width;
+				padding: 0;
+				justify-content: center;
 							
-				>img {
+				.logo-text {
 					display: none;
-				}
-
-				.minify-logo {
-					display:block;
-					width:auto;
 				}
 			}
 

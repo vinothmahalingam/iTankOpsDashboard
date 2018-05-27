@@ -8,7 +8,9 @@
 	text-align: center;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	//justify-content: center;
+
+	padding: 0 $nav-padding-left;
 
 	@extend %general-animation;
 
@@ -17,9 +19,18 @@
 		height: $header-logo-height;
 	}
 
-	>.minify-logo {
-		display: none;
+	.logo-text {
+		margin-left: $nav-icon-margin-right;
+		font-weight: 300;
+		font-size: 1.125rem;
+		color: $white;
+
+		display: block;
 	}
+
+	/*>.minify-logo {
+		display: none;
+	}*/
 
 }
 

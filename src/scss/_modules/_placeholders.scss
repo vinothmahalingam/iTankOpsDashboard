@@ -262,37 +262,6 @@ RESULT:
   color:$header-btn-active-color !important;
 }
 
-%header-dropdown {
-  margin: 0;
-  width: rem($dropdown-sm-width);
-  height: rem($dropdown-sm-height);
-  position:absolute;
-
-  &.dropdown-sm {
-    width: rem($dropdown-sm-width);
-    height: auto;
-  }
-
-  &.dropdown-lg {
-    width: rem($dropdown-lg-width);
-    height: auto;
-  }  
-
-  &.dropdown-xl {
-    width: rem($dropdown-xl-width);
-    height: rem($dropdown-xl-height);
-  }
-
-  right: 0;
-  left: auto;
-  top:$header-height;
-  border: $theme-border-utility-size solid $header-border-color;
-
-  /*outline: none;
-  overflow: auto;*/
-  -webkit-user-select: text;
-}
-
 @include media-breakpoint-up($mobile-breakpoint) {
   %selected-dot {
     &:before {

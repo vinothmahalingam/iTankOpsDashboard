@@ -1,6 +1,6 @@
 $nav-function-top-item-padding: 8px;
-$nav-function-top-logo-width-sm: 97px;
-$nav-function-top-logo-width-lg: 129px;
+$nav-function-top-logo-width-sm: 28px;
+$nav-function-top-logo-width-lg: 28px;
 $nav-function-top-menu-item-bg: darken($nav-base-color, 15%);
 $nav-function-top-menu-item-width-md: ( map-get($grid-breakpoints, md) - $nav-function-top-logo-width-sm ) / $nav-top-menu-count - 1;
 $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-function-top-logo-width-lg ) / $nav-top-menu-count - 2;
@@ -31,34 +31,34 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 			.right-panel {
 				//position:absolute;
 				
-				//.list {
-					#fh {
-						position:relative;
+				
+				#fh {
+					position:relative;
 
-						.onoffswitch-title {
-							color: $settings-incompat-title;
-						}
-						.onoffswitch-title-desc {
-							color: $settings-incompat-desc;
-						}
-						&:after {
-							content: "DISABLED";
-							display: block;
-							position: absolute;
-							background: $settings-incompat-bg;
-							font-size: 10px;
-							width: 65px;
-							text-align: center;
-							border: 1px solid $settings-incompat-border;
-							height: 22px;
-							line-height: 20px;
-							border-radius: 10px;
-							right: 13px;
-							top: 26%;
-							color:$fusion-900;
-						}
+					.onoffswitch-title {
+						color: $settings-incompat-title;
 					}
-				//}
+					.onoffswitch-title-desc {
+						color: $settings-incompat-desc;
+					}
+					&:after {
+						content: "DISABLED";
+						display: block;
+						position: absolute;
+						background: $settings-incompat-bg;
+						font-size: 10px;
+						width: 65px;
+						text-align: center;
+						border: 1px solid $settings-incompat-border;
+						height: 22px;
+						line-height: 20px;
+						border-radius: 10px;
+						right: 13px;
+						top: 26%;
+						color:$fusion-900;
+					}
+				}
+			
 			}
 
 		}
@@ -99,8 +99,8 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 			.logo {
 				float: left;
-				width: $nav-function-top-logo-width-sm;
-				padding: 0;
+				//width: $nav-function-top-logo-width-sm;
+				//padding: 0;
 				background: transparent;
 				border: 0;
 				height: $nav-top-height;
@@ -109,11 +109,10 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 				& > img {
 					display:block;
 					height: auto;
-					width: 85%;
+				}
 
-					&.minify-logo {
-						display: none;
-					}
+				.logo-text {
+					display: none;
 				}
 
 				&:after {
@@ -347,17 +346,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 				.logo {
 					width: auto !important;
 					height: $nav-top-minify-height;
-					padding: 0 5px;			
-
-					> img {
-						display: none;
-						width: auto !important; 
-
-						&.minify-logo {
-							display: block;
-							width: auto;
-						}
-					}
+					padding: 0 1rem;			
 				}
 
 				.primary-nav {
@@ -430,7 +419,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 		.left-panel {
 
 			.logo {
-				width: 143px;
+				width: auto;
 			}
 
 			.primary-nav {
