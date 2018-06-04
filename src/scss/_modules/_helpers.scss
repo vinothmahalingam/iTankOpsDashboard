@@ -3,7 +3,7 @@
 .w-auto    { width: auto !important  }
 
 /* width preset */
-.width-1   { width: $p-4 }
+.width-1   { width: $p-4 / 1.2 }
 .width-2   { width: $p-4 + $p-1 }
 .width-3   { width: $p-4 + $p-2 }
 .width-4   { width: $p-4 + $p-2 + $p-1 }
@@ -14,7 +14,7 @@
 .width-9   { width: $p-5 + $p-2 + $p-1 }
 .width-10  { width: $p-5 + $p-3 }
 
-.height-1  { height: $p-4 }
+.height-1  { height: $p-4 / 1.2 }
 .height-2  { height: $p-4 + $p-1 }
 .height-3  { height: $p-4 + $p-2 }
 .height-4  { height: $p-4 + $p-2 + $p-1 }
