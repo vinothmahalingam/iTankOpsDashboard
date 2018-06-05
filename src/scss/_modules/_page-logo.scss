@@ -19,19 +19,14 @@
 		height: $header-logo-height;
 	}
 
-	.logo-text {
-		margin-left: $nav-icon-margin-right;
-		font-weight: 300;
-		font-size: 1.125rem;
-		color: $white;
+}
 
-		display: block;
-	}
-
-	/*>.minify-logo {
-		display: none;
-	}*/
-
+.logo-text {
+	margin-left: $nav-icon-margin-right;
+	font-weight: 300;
+	font-size: 1.125rem;
+	color: $white;
+	display: block;
 }
 
 body:not(.header-function-fixed) {

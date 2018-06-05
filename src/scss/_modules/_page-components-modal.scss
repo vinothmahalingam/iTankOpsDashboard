@@ -1,14 +1,31 @@
-.modal-shortcut {
+.modal-shotcut {
 	padding: 0px !important;
 	
 	.modal-dialog {
 		width: 100%;
 		max-width: 100%;
 		margin: 0;
-
-		.modal-content {
-			border-radius: 0px;
-			border:0;
-		}
 	}
+
+	.modal-content {
+		border-radius: 0px;
+		border:0;
+	}
+}
+
+.modal-transparent {
+
+	.modal-dialog {
+		box-shadow: 0 1px 15px 1px rgba(9,96,165,.4);
+	}
+
+	.modal-content {
+		background: rgba(desaturate(darken($primary-900, 25%), 23%), 0.85); 
+
+	}
+
+}
+
+.modal-backdrop-transparent {
+	background: transparent;
 }

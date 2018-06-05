@@ -489,6 +489,13 @@ var initApp = (function(app) {
 	 * DOC: start jQuery(document).ready calls
 	 **/
 	app.domReadyMisc = function() {
+
+		/* Give modal backdrop an extra class to make it customizable */
+		$('.modal-backdrop-transparent').on('show.bs.modal', function (e) {
+			setTimeout(function(){
+				$('.modal-backdrop').addClass('modal-backdrop-transparent');
+			});
+		});
 		
 		/* Add app date to breadcrumb-right-placeholder */
 		if ( myapp_config.appDateHook.length ) {

@@ -242,7 +242,7 @@ a { text-decoration: none !important }
 a, area, button, [role="button"], input, label, select, summary, textarea {
     touch-action: manipulation;
 }
-a[target="_blank"]{
+a[target]{
 	font-weight:500;
 	border-bottom: 1px dashed $primary-300;
 }
