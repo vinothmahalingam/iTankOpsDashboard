@@ -8,7 +8,7 @@
 			right:0;
 			top:0;
 
-			@extend %fixed-header-shadow;		
+			//@extend %fixed-header-shadow;		
 			@extend %general-animation;
 		}
 
@@ -31,7 +31,7 @@
 				top:0;
 				z-index: $cloud;
 
-				@extend %fixed-header-shadow;
+				//@extend %fixed-header-shadow;
 			}
 
 			.left-panel {
@@ -82,14 +82,14 @@
 					padding-top: $header-height + $nav-top-height;
 				}
 
-				&.nav-function-minify {
+				/*&.nav-function-minify {
 					.page-header {
 						top: $nav-top-minify-height;
 					}
 					.page-wrapper {
 						padding-top: $header-height + $nav-top-minify-height;
 					}
-				}
+				}*/
 			}
 		}
 	}

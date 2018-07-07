@@ -48,7 +48,25 @@
 				}
 
 				.nav-title {
-					display: none;
+					//display: none;
+
+					position: relative;
+					font-size: 0;
+					margin: 10px 0;
+
+					&:before {
+						content: "";
+						position: absolute;
+						top: 20%;
+						bottom: 0;
+						left: 25%;
+						right: 25%;
+						display: block;
+						width: 50%;
+						height: 50%;
+						background-color: rgba(255, 255, 255, 0.06);
+						border-radius: 4px;
+					}
 				}
 				.nav-menu {
 					margin:0;
@@ -68,6 +86,8 @@
 							text-align: center;
 							justify-content: center;
 							align-items: center;
+							padding-left: 0;
+							padding-right: 0;
 
 							>[class*='fa-'],
 							>.#{$cust-icon-prefix},

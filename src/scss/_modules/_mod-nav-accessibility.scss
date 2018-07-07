@@ -18,10 +18,10 @@
 					display: block;
 					position: absolute;
 					z-index: 1;
-					left: $nav-padding-left + 14px;
+					left: $nav-padding-left + 9px;
 					top: 45px;
 					bottom: 0;
-					border-left: 1px solid darken($nav-icon-color, 15%);
+					border-left: 1px solid darken($nav-icon-color, 5%);
 				}
 
 				/* addressing all second, third children */
@@ -32,9 +32,9 @@
 							display: block;
 							position: absolute;
 							width: 10px;
-							left: $nav-padding-left + 14px;
+							left: $nav-padding-left + 9px;
 							top: unquote("calc(50% - 1px)");
-							border-top: 1px solid darken($nav-icon-color, 15%);
+							border-top: 1px solid darken($nav-icon-color, 5%);
 							z-index: 1;
 						}
 					}

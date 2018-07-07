@@ -213,9 +213,9 @@ RESULT:
   -moz-osx-font-smoothing: grayscale;
 }
 
-%fixed-header-shadow {
+/*%fixed-header-shadow {
   @include box-shadow(0 2px 2px -1px rgba(0,0,0,.1));
-}
+}*/
 
 %header-btn {
   //@extend %btn-default;

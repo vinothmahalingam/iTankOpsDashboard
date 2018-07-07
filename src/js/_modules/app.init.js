@@ -381,6 +381,9 @@ var initApp = (function(app) {
 				if ( typeof $.fn.slimScroll !== 'undefined' ) {
 					myapp_config.navAnchor.slimScroll({
 						height: '100%',
+						color: '#fff',
+						size: '4px',
+						distance: '4px',
 						railOpacity: 0.4,
 						wheelStep: 10
 					});
@@ -453,12 +456,12 @@ var initApp = (function(app) {
 	 */
 	app.mobileCheckActivation = function(){
 		
-		if ( $(window).width() < 993 ) {
+		if ( window.innerWidth < 992 ) {
 
 			myapp_config.root_.addClass('mobile-view-activated');
 			myapp_config.mobileMenuTrigger = true;
 
-		} else if ( myapp_config.root_.hasClass('mobile-view-activated') ) {
+		} else {
 
 			myapp_config.root_.removeClass('mobile-view-activated');
 			myapp_config.mobileMenuTrigger = false;
@@ -545,11 +548,11 @@ var initApp = (function(app) {
 
 			$('.custom-scroll >:first-child').slimscroll({
 				height: $(this).data('scrollHeight') || '100%',
-				size: $(this).data('scrollSize') || '7px',
+				size: $(this).data('scrollSize') || '4px',
 				position: $(this).data('scrollPosition') || 'right',
 				color: $(this).data('scrollColor') || '#b3b3b3',
 				alwaysVisible: $(this).data('scrollAlwaysVisible') || false,
-				distance: $(this).data('scrollDistance') || '0',
+				distance: $(this).data('scrollDistance') || '4px',
 				railVisible: $(this).data('scrollRailVisible') || false,
 				railColor: $(this).data('scrollRailColor') || '#fafafa',
 				allowPageScroll: false,

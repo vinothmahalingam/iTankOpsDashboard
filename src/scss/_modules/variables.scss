@@ -571,16 +571,16 @@ $nav-minify-width:								75px !default;
 $nav-minify-sub-width:						$nav-width - ($nav-minify-width - 25px) !default; 				
 //$nav-minify-logo-bg:							$nav-background !default;
 
-$nav-top-minify-height:						54px !default;
+//$nav-top-minify-height:						54px !default;
 
 /* navigation Width */
 /* partial visibility of the menu */
 $nav-hidden-visiblity:						10px !default; 											
 
 /* top navigation */
-$nav-top-height:									63px !default;
+$nav-top-height:									52px !default;
 $nav-top-menu-count:							9 !default;	/* number of parent items on the main menu (adjust this if you have more or less items) */
-$nav-top-minify-height:						$nav-top-height/2 !default;
+//$nav-top-minify-height:						$nav-top-height/2 !default;
 
 /* nav Info Card (appears below the logo) */
 $nav-infocard-height:							130px !default;
