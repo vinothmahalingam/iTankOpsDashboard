@@ -18,6 +18,11 @@
 		width: ($nav-width - 20px) ;
 		background: rgba($black, 0.4); 
 		color: $white;
+
+		&:not(:focus) {
+			border-color: rgba(0, 0, 0, 0.1);
+		}
+		
 	}
 }
 

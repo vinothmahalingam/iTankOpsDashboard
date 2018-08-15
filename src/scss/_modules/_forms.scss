@@ -29,6 +29,16 @@ textarea {
 	}
 }
 
+.form-control:not(.form-control-sm),
+.custom-select {
+  min-height: calc(2.25rem + 2px);
+}
+
+.form-label {
+  font-weight: 500;
+  color: lighten($gray-700, 20%);
+}
+
 
 /*
 	Styling Cross-Browser Compatible Range Inputs with Sass
@@ -82,13 +92,14 @@ $contrast: 3% !default;
   width: $thumb-width;
 }
 
-[type='range'] {
+[type='range']:not(.unstyled) {
   -webkit-appearance: none;
   margin: 0;
   width: $track-width;
   padding: 0;
   height: 32px;
   background: transparent;
+  border: 0;
 
   &:focus {
     outline: 0;
@@ -158,4 +169,42 @@ $contrast: 3% !default;
     @include thumb;
     margin-top: 0;
   }
+}
+
+
+
+
+//material
+/*.form-control {
+  border-radius: 0px;
+  border-width: 0 0 1px 0;
+  padding-left: 0;
+  padding-right: 0;
+}*/
+
+
+.form-control:focus ~ .input-group-prepend {
+  background: $primary-500;
+}
+
+.has-length {
+  .input-group-text {
+    background: $primary-500;
+    border-color: $primary-500;
+    color: $white;
+  }
+}
+
+.input-group-text {
+  transition: all 0.15s ease-in-out, 
+}
+
+.custom-control-label:hover {
+  font-weight: 500;
+}
+
+input[type="radio"]:checked + .custom-control-label, 
+input[type="checkbox"]:checked + .custom-control-label {
+  //color: $primary-500;
+  font-weight: 500;
 }

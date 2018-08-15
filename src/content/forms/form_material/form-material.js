@@ -2,7 +2,8 @@
  * Material Forms effects activation
  * DOC: starts listeners
  **/
-var parentClass 	= '.app-forms',
+
+var parentClass 	= '.form-group',
 	focusClass 		= 'has-length',
 	disabledClass	= 'has-disabled';
 

@@ -5,7 +5,7 @@ $panel-hdr-height: 48px;
 $panel-btn-size: 17px;
 $panel-hdr-background: #fafafa; //#fafafa;
 $panel-edge-radius: $border-radius;
-$panel-placeholder-color: #ffccff;
+$panel-placeholder-color: lighten(desaturate($primary-50, 20%), 10%);
 
 .panel-fullscreen {
 	overflow:hidden;
@@ -30,7 +30,9 @@ $panel-placeholder-color: #ffccff;
 
 		position: relative;
 
-		//border: 1px solid transparent;
+		border: 1px solid transparent;
+		border-top-width: 0;
+
     	//border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.17) rgba(0, 0, 0, 0.2);
     	//border-top-width: 0px;
 
@@ -52,7 +54,7 @@ $panel-placeholder-color: #ffccff;
 
 	/* panel fullscreen */
 	&.panel-fullscreen {
-		position: fixed;
+		position: fixed !important; /* there is a bug with jquery ui, so we have to add !important rule here */
 		z-index: 9999;
 		top: 0;
 		left: 0;
@@ -83,6 +85,10 @@ $panel-placeholder-color: #ffccff;
 				font-size: rem($panel-hdr-font-size + 4);
 				font-weight:400;
 			}
+		}
+
+		.js-panel-locked {
+			display: none;
 		}
 
 		[data-action="panel-fullscreen"],
@@ -145,6 +151,7 @@ $panel-placeholder-color: #ffccff;
 	@include box-sizing(border-box); 
 	/*border: 1px solid;
 	border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.17);*/
+	border: 1px solid transparent;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 	border-radius: $panel-edge-radius $panel-edge-radius 0 0;
 
@@ -192,6 +199,19 @@ $panel-placeholder-color: #ffccff;
 
 	}
 
+}
+
+/* panel tap highlight */
+.panel-sortable {
+	.panel-hdr {
+		&:active {
+			border-color: $primary-300 $primary rgba(0, 0, 0, 0.04);
+
+			& + .panel-container {
+				border-color: transparent $primary $primary;
+			}
+		}
+	}
 }	
 
 /* panel toolbar (sits inside panel header) */

@@ -29,7 +29,7 @@
 		font-weight: 400;
 		min-height: 45px;
 		padding: 4.75px $p-3 4.75px $p-3 + $p-4;
-		color:darken($right-panel-bg, 60%);
+		color:darken($white, 60%);
 		position: relative;
 
 		display: flex;
@@ -39,7 +39,7 @@
 		@extend %common-animation;
 
 		&:hover{
-			color:darken($right-panel-bg, 80%);
+			color:darken($white, 80%);
 			background:rgba( $white, .7 );
 
 			.onoffswitch {
@@ -127,7 +127,29 @@
 	}
 }
 
-@include set-settings(display-right-panel);
+#saving {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: -40px;
+	display: none;
+}
+
+/* localstorage success fade animation */
+.saving {
+
+	#saving {
+		@extend %spin-loader;
+		display: block;
+	}
+
+	[data-action="app-reset"] {
+		opacity: 0.5;
+		cursor: not-allowed !important;
+	}
+
+}
+
 @include set-settings(header-function-fixed);
 @include set-settings(nav-function-fixed);
 @include set-settings(nav-function-minify);

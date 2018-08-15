@@ -13,11 +13,11 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 	top: $header-badge-top;
 	font-size: rem(10px);
 	font-weight: 500;
-	height: ($header-badge-min-width); 
-	min-width: ($header-badge-min-width);
+	//height: ($header-badge-min-width); 
+	//min-width: ($header-badge-min-width);
 	max-width: ($header-badge-min-width + 7);
 	padding: 0 3px;
-	line-height: ($header-badge-min-width - 2);
+	//line-height: ($header-badge-min-width - 2);
 	border-radius: $header-badge-min-width;
 
 	&:only-child {
@@ -53,6 +53,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 			    line-height: $header-height;
 			    padding: $list-table-padding-y $list-table-padding-x;
 			    text-decoration: none;
+			    position: relative;
 
 				&:not(.btn) {
 					min-width: $header-non-btn-width;

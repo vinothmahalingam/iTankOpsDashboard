@@ -45,4 +45,9 @@ jQuery(document).ready(function() {
 	 **/
 	initApp.domReadyMisc();
 
+ 	/**
+	 * g. run app forms class detectors [parentClass,focusClass,disabledClass]
+	 **/
+	initApp.appForms('.form-group, .input-group', 'has-length', 'has-disabled');
+
 }); 

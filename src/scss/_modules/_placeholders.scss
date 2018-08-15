@@ -262,8 +262,8 @@ RESULT:
   color:$header-btn-active-color !important;
 }
 
-@include media-breakpoint-up($mobile-breakpoint) {
-  %selected-dot {
+//@include media-breakpoint-up($mobile-breakpoint) {
+/*  %selected-dot {
     &:before {
       content: " ";
       display: block;
@@ -287,8 +287,8 @@ RESULT:
       top: 0;
       border-radius: 50%;
     } 
-  }
-}
+  }*/
+//}
 
 %spin-loader {
   margin: 5px;

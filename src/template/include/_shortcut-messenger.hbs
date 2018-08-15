@@ -1,0 +1,25 @@
+<div class="modal fade js-modal-messenger modal-backdrop-transparent" tabindex="-1" role="dialog" aria-labelledby="chat-panel" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-right-side">
+      <div class="modal-content m-h-reset h-100">
+         <div class="bg-fusion-400 d-flex align-items-center p-3 w-100">
+            
+            <h4 class="d-flex flex-row align-items-center mt-1 mb-1 color-white">
+               <span class="mr-2">
+                   <img src="img/avatars/avatar-i.png" class="rounded-circle profile-image" alt="Chin Chang">
+               </span>
+               <div class="info-card-text">
+                   <div class="fs-lg text-truncate text-truncate-lg">Chin Chang</div>
+                   <span class="text-truncate text-truncate-md opacity-80">IT Director</span>
+               </div>
+            </h4>
+
+            <button type="button" class="close text-white position-absolute pos-top pos-right p-2 m-1 mr-2" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body p-0 h-100 d-flex">
+			{{> include/_tab-msgr }}
+         </div>
+      </div>
+   </div>
+</div>

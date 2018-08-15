@@ -254,9 +254,11 @@ $theme-colors: (
 $input-focus-border-color:					$color-primary;
 $link-color:            						$primary-800;
 $input-btn-focus-color:             transparent;
-$input-border-color:                rgba(0,0,0,0.1); //#cdcdcd;
-$input-padding-y:                   .45rem;  
-$input-padding-x:                   1rem;
+$input-border-color:                #E5E5E5;
+$input-padding-y:                   .438rem;  
+$input-padding-x:                   .875rem;
+$label-margin-bottom:               .3rem;
+$form-group-margin-bottom:          1.5rem;
 
 /* cards */
 $card-spacer-y:                     20px;
@@ -281,7 +283,15 @@ $breadcrumb-bg:                     lighten($fusion-50, 43%);
 $breadcrumb-divider-color:          inherit;      
 
 /* button */
-//$input-btn-focus-width:             2px;
+
+$input-btn-padding-y:               .438rem;
+$input-btn-padding-x:               1.125rem;
+
+$input-btn-padding-y-sm:            .188rem;
+$input-btn-padding-x-sm:            .6875rem;
+
+$input-btn-padding-y-lg:            .75rem;
+$input-btn-padding-x-lg:            1.5rem;
 
 /* bootstrap tables */
 $table-border-color:                lighten(desaturate($primary-500, 60%), 40%);
@@ -307,6 +317,10 @@ $tooltip-arrow-height:              5px;
 $dropdown-border-width:             $theme-border-utility-size; 
 $dropdown-item-padding-y:           .75rem;
 $dropdown-item-padding-x:           1rem;      
+
+/* modal */
+$modal-header-padding:              1.21rem;
+$modal-backdrop-opacity:            0.2;
 
 /* reference guide
 http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/
@@ -338,7 +352,7 @@ http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/
 
 /* Fonts */
 $font-size-base:             		    0.8125rem;
-$font-size-lg:                      1.25rem;
+$font-size-lg:                      1rem;
 $font-size-sm:   					          0.75rem;
 $line-height-base:                  1.6;
 
@@ -428,7 +442,6 @@ $page-bg:											       desaturate(lighten($primary-700, 52%), 60%)  !default
 $depth:												       999 !default;
 $depth-header:								       $depth + 1 !default;
 $depth-nav:										       $depth-header + 2 !default;
-$depth-right-panel:							     $depth-header + 2 !default;
 
 /*  Components
 ========================================================================== */
@@ -544,8 +557,8 @@ $nav-padding-left:								25px !default; //$p-2
 $nav-padding-right:								30px !default; //$p-2
 
 /* nav icon sizes */
-$nav-font-icon-size:							19px !default; //23px for Fontawesome & 20px for NextGen icons
-$nav-font-icon-size-sub:					18px !default;
+$nav-font-icon-size:							17px !default; //23px for Fontawesome & 20px for NextGen icons
+$nav-font-icon-size-sub:					17px !default;
 
 $nav-icon-width:									28px !default;
 $nav-icon-margin-right:						8px !default;
@@ -607,11 +620,8 @@ $nav-dl-margin-left:							$nav-dl-width + $nav-dl-margin-right !default; 	/* wi
 $list-table-padding-x:						11px !default;
 $list-table-padding-y:						0 !default;
 
-/*   RIGHT Aside (.right-panel)
+/*   Settings Panel
 ========================================================================== */
-$right-panel-bg:								  $white !default;
-$right-panel-width:								350px !default;
-$right-panel-width-mobile:        calc(100vw - 11%) !default
 $settings-incompat-title:         #d58100 !default;
 $settings-incompat-desc:          #ec9f28 !default;
 $settings-incompat-bg:            $warning-50 !default;

@@ -14,36 +14,34 @@
 		}
 
 		&:not(.nav-function-top) {
-			.right-panel {
-				.list {
-					&#nff {
-						position:relative;
+			
+			#nff {
+				position:relative;
 
-						.onoffswitch-title {
-							color: $settings-incompat-title;
-						}
-						.onoffswitch-title-desc {
-							color: $settings-incompat-desc;
-						}
-						&:after {
-							content: "DISABLED";
-							display: block;
-							position: absolute;
-							background: $settings-incompat-bg;
-							font-size: rem($fs-base - 3);
-							width: 65px;
-							text-align: center;
-							border: 1px solid $settings-incompat-border;
-							height: 22px;
-							line-height: 20px;
-							border-radius: 10px;
-							right: 13px;
-							top: 26%;
-							color:$fusion-900;
-						}
-					}
+				.onoffswitch-title {
+					color: $settings-incompat-title;
+				}
+				.onoffswitch-title-desc {
+					color: $settings-incompat-desc;
+				}
+				&:after {
+					content: "DISABLED";
+					display: block;
+					position: absolute;
+					background: $settings-incompat-bg;
+					font-size: rem($fs-base - 3);
+					width: 65px;
+					text-align: center;
+					border: 1px solid $settings-incompat-border;
+					height: 22px;
+					line-height: 20px;
+					border-radius: 10px;
+					right: 13px;
+					top: 26%;
+					color:$fusion-900;
 				}
 			}
+			
 		}
 
 		&.header-function-fixed {

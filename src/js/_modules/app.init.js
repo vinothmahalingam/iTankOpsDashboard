@@ -449,6 +449,55 @@ var initApp = (function(app) {
 
 		}
 	};
+
+	/**
+	 * App Forms
+	 * DOC: detects if input is selected or blured
+	 **/
+	app.appForms = function(parentClass,focusClass,disabledClass){
+
+		/* go through each .form-control */
+		/*$('.form-control').each(function () {
+			checkLength(this);
+		});*/
+
+		/* if input has 'some value' add class .has-length to .form-group */
+		/*function checkLength(e) {
+			if (e.value.length > 0 ) {
+				$(e).parents(parentClass).addClass(focusClass);
+				if($(e).is('[readonly]') || $(e).is('[disabled]')) {
+					$(e).parents(parentClass).addClass(disabledClass);
+				}
+			} else {
+				$(e).parents(parentClass).removeClass(focusClass);
+				if($(e).is('[readonly]') || $(e).is('[disabled]')) {
+					$(e).parents(parentClass).removeClass(disabledClass);
+				}
+			}
+		}*/
+
+		function setClass(e, parentClass, focusClass) {
+			$(e).parents(parentClass).addClass(focusClass);
+		}
+
+		function deleteClass(e, parentClass, focusClass) {
+			/*if(e.value.length) {
+
+			} else {*/
+				$(e).parents(parentClass).removeClass(focusClass);
+			/*}*/
+		}
+
+		$(parentClass).each(function () {
+			var input = $(this).find('.form-control');
+			input.on('focus', function(){
+				setClass(this, parentClass, focusClass);
+			});
+			input.on('blur', function(){
+				deleteClass(this, parentClass, focusClass);
+			});
+		});
+	} 
 	
 	/**
 	 * Mobile Check Activate

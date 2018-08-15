@@ -160,21 +160,6 @@ $grid-breakpoints: (
 
 	}
 
-	.display-right-panel:not(.mobile-nav-on) {
-
-		overflow: hidden;
-
-		.page-header,
-		#content,
-		.page-footer {
-			-webkit-filter: blur(2px);
-			-moz-filter: blur(2px);
-			-o-filter: blur(2px);
-			-ms-filter: blur(2px);
-			filter: blur(2px);
-		}
-	}
-
 
 	&.header-function-fixed {
 
@@ -261,14 +246,6 @@ $grid-breakpoints: (
 
 		touch-action: none;
 		
-		&.display-right-panel {
-
-			.right-panel {
-				transition: $nav-hide-animate;
-				@include translate3d ($right-panel-width-mobile, 0, 0);
-			}
-		}
-
 		overflow: hidden;
 		height: 100vh;
 

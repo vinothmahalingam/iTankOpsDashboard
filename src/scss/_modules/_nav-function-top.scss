@@ -14,51 +14,33 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 			display: none !important;
 		}
 
-		/*&.display-right-panel {
-			[data-class=display-right-panel] {
-				top: $nav-top-height;
-				transition: $nav-hide-animate;
-			}
-			&.nav-function-minify {
-				[data-class=display-right-panel] {
-					top: $nav-top-minify-height;
-				}
-			}
-		}*/
-
 		&:not(.nav-function-fixed) {
-
-			.right-panel {
-				//position:absolute;
 				
-				
-				#fh {
-					position:relative;
+			#fh {
+				position:relative;
 
-					.onoffswitch-title {
-						color: $settings-incompat-title;
-					}
-					.onoffswitch-title-desc {
-						color: $settings-incompat-desc;
-					}
-					&:after {
-						content: "DISABLED";
-						display: block;
-						position: absolute;
-						background: $settings-incompat-bg;
-						font-size: 10px;
-						width: 65px;
-						text-align: center;
-						border: 1px solid $settings-incompat-border;
-						height: 22px;
-						line-height: 20px;
-						border-radius: 10px;
-						right: 13px;
-						top: 26%;
-						color:$fusion-900;
-					}
+				.onoffswitch-title {
+					color: $settings-incompat-title;
 				}
-			
+				.onoffswitch-title-desc {
+					color: $settings-incompat-desc;
+				}
+				&:after {
+					content: "DISABLED";
+					display: block;
+					position: absolute;
+					background: $settings-incompat-bg;
+					font-size: 10px;
+					width: 65px;
+					text-align: center;
+					border: 1px solid $settings-incompat-border;
+					height: 22px;
+					line-height: 20px;
+					border-radius: 10px;
+					right: 13px;
+					top: 26%;
+					color:$fusion-900;
+				}
 			}
 
 		}
@@ -403,12 +385,6 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 		}
 
 		&.nav-function-minify {
-
-			/*&.display-right-panel:not(.mod-main-boxed) {
-				[data-class=display-right-panel] {
-					top:$nav-top-minify-height;
-				}
-			}*/
 
 			.left-panel {
 				//height: $nav-top-minify-height;

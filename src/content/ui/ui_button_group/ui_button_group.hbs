@@ -29,127 +29,117 @@
 				<div class="d-table-cell pl-1">
 					<span class="h5">Ensure correct <code>role</code> and provide a label</span>
 					<br>
-					In order for assistive technologies (such as screen readers) to convey that a series of buttons is grouped, an appropriate role attribute needs to be provided. For button groups, this would be <code>role="group"</code>, while toolbars should have a <code>role="toolbar"</code>.						
+					NextGen <code>.btn</code> styles can be applied to other elements, such as <code>&lt;label></code>s, to provide checkbox or radio style button toggling. Add <code>data-toggle="buttons"</code> to a <code>.btn-group</code> containing those modified buttons to enable toggling in their respective styles.
+					
+					The checked state for these buttons is <strong>only updated via</strong> click <strong>event</strong> on the button. If you use another method to update the input—e.g., with <code>&lt;input type="reset"></code> or by manually applying the input’s checked property—you’ll need to toggle <code>.active</code> on the <code>&lt;label></code> manually.					
 				</div>
 			</div>
 		</div>
 
     </div>
 
-	<div class="col-md-12 col-xl-6">
-
+	<div class="col-md-12">
+		
 		<div class="card mb-g">
 
 			<div class="card-body">
 
 				<h4 class="mb-g">
-					Basic <span class="fw-300">Example</span> 
-					<small>
-						The most basic example
-					</small>
+					Checkbox & Radio <span class="fw-300">Buttons</span>
 				</h4>
 
-				<h5 class="frame-heading">
-					Wrap a series of buttons with <code>.btn</code> in <code>.btn-group</code>.
-				</h5>
+				<div class="row">
 
-				<div class="frame-wrap text-center">
-					<div class="btn-group" role="group" aria-label="Basic example">
-						<button type="button" class="btn btn-secondary">Left</button>
-						<button type="button" class="btn btn-secondary">Middle</button>
-						<button type="button" class="btn btn-secondary">Right</button>
+					<div class="col-md-6 col-xl-6">
+
+						<h5 class="frame-heading">
+							Checkbox
+						</h5>						
+
+						<div class="frame-wrap text-center m-0">
+
+							<div class="btn-group btn-group-toggle  btn-m-s" data-toggle="buttons">
+								<label class="btn btn-success active">
+									<input type="checkbox" checked> Options 1
+								</label>
+								<label class="btn btn-success">
+									<input type="checkbox"> Options 2
+								</label>
+								<label class="btn btn-success">
+									<input type="checkbox"> Options 3
+								</label>
+								<label class="btn btn-success disabled">
+									<input type="checkbox" disabled> Disabled
+								</label>
+							</div>
+
+							<br>
+							<div class="btn-group btn-group-toggle btn-m-s" data-toggle="buttons">
+								<label class="btn btn-outline-warning  btn-sm active">
+									<input type="checkbox" checked> Options 1
+								</label>
+								<label class="btn btn-outline-warning btn-sm">
+									<input type="checkbox"> Options 2
+								</label>
+								<label class="btn btn-outline-warning btn-sm">
+									<input type="checkbox"> Options 3
+								</label>
+								<label class="btn btn-outline-warning btn-sm disabled">
+									<input type="checkbox" disabled> Disabled
+								</label>
+							</div>
+
+						</div>
+
 					</div>
+					<div class="col-md-6 col-xl-6">
+
+						<h5 class="frame-heading">
+							Radio
+						</h5>
+
+						<div class="frame-wrap text-center m-0">
+
+							<div class="btn-group btn-group-toggle btn-m-s" data-toggle="buttons">
+								<label class="btn btn-secondary active">
+									<input type="radio" name="options" id="option1" checked> Option 1
+								</label>
+								<label class="btn btn-secondary">
+									<input type="radio" name="options" id="option2"> Option 2
+								</label>
+								<label class="btn btn-secondary">
+									<input type="radio" name="options" id="option3"> Option 3
+								</label>
+								<label class="btn btn-secondary disabled">
+									<input type="radio" name="options" id="option4" disabled> Disabled
+								</label>
+							</div>
+							<br>
+							<div class="btn-group btn-group-toggle btn-m-s" data-toggle="buttons">
+								<label class="btn btn-outline-primary btn-sm active">
+									<input type="radio" name="options" id="option-sm-1" checked> Option 1
+								</label>
+								<label class="btn btn-outline-primary btn-sm">
+									<input type="radio" name="options" id="option-sm-2"> Option 2
+								</label>
+								<label class="btn btn-outline-primary btn-sm">
+									<input type="radio" name="options" id="option-sm-3"> Option 3
+								</label>
+								<label class="btn btn-outline-primary btn-sm disabled">
+									<input type="radio" name="options" id="option-sm-4" disabled> Disabled
+								</label>
+							</div>
+
+						</div>
+
+					</div>
+
 				</div>
 
 			</div>
-			
+
 		</div>
 
-		<div class="card mb-g">
-
-			<div class="card-body">
-
-				<h4 class="mb-g">
-					Basic <span class="fw-300">Alerts</span> 
-					<small>
-						Contextual minimalistic alerts
-					</small>
-				</h4>
-
-
-
-			</div>
-			
-		</div>
-
-		<div class="card mb-g">
-
-			<div class="card-body">
-
-				<h4 class="mb-g">
-					Basic <span class="fw-300">Alerts</span> 
-					<small>
-						Contextual minimalistic alerts
-					</small>
-				</h4>
-
-			</div>
-			
-		</div>		
-	
-	</div>
-
-	<div class="col-md-12 col-xl-6">
-
-		<div class="card mb-g">
-
-			<div class="card-body">
-
-				<h4 class="mb-g">
-					Basic <span class="fw-300">Alerts</span> 
-					<small>
-						Contextual minimalistic alerts
-					</small>
-				</h4>
-
-
-
-			</div>
-			
-		</div>
-
-		<div class="card mb-g">
-
-			<div class="card-body">
-
-				<h4 class="mb-g">
-					Basic <span class="fw-300">Alerts</span> 
-					<small>
-						Contextual minimalistic alerts
-					</small>
-				</h4>
-
-
-
-			</div>
-			
-		</div>
-
-		<div class="card mb-g">
-
-			<div class="card-body">
-
-				<h4 class="mb-g">
-					Basic <span class="fw-300">Alerts</span> 
-					<small>
-						Contextual minimalistic alerts
-					</small>
-				</h4>
-
-			</div>
-			
-		</div>		
-	
 	</div>
 
 </div>

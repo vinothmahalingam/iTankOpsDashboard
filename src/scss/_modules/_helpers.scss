@@ -1,6 +1,7 @@
 /* height & width auto */
 .h-auto    { height: auto !important }
 .w-auto    { width: auto !important  }
+.m-h-reset { min-height: initial !important}
 
 /* width preset */
 .width-1   { width: $p-4 }
@@ -120,7 +121,7 @@
 .rotate-270 { @include rotate (270) }
 
 /* shadows */
-.shadow-0, .shadow-hover-0:hover { box-shadow: none }
+.shadow-0, .shadow-hover-0:hover { box-shadow: none !important}
 .shadow-1, .shadow-hover-1:hover { box-shadow: 0 2px 3px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.10) }
 .shadow-2, .shadow-hover-2:hover { box-shadow: 0 2px 3px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.20) }
 .shadow-3, .shadow-hover-3:hover { box-shadow: 0 2px 3px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.30) }
