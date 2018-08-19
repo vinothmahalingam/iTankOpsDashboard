@@ -51,7 +51,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 				height: $header-height;
 			    display: block;
 			    line-height: $header-height;
-			    padding: $list-table-padding-y $list-table-padding-x;
+			    //padding: $list-table-padding-y $list-table-padding-x;
 			    text-decoration: none;
 			    position: relative;
 
@@ -93,6 +93,23 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 
 					&[data-toggle="dropdown"] {
 
+						&[data-toggle="dropdown"] {
+							&:after {
+								content: " ";
+								width: $header-height - 45;
+								height: $header-height - 45;
+								position: absolute;
+								background: #dae1e8;
+								border-radius: 50%;
+								top: ($header-height - ($header-height - 45) ) /2;
+								z-index: -1;
+								left: 15px;
+								opacity: 0;
+								transition: all 100ms ease-in;
+							}	
+						}
+
+
 						&[aria-expanded="true"] {
 							color: $header-link-hover-color;
 							/* new lines for arrow visibility */
@@ -103,10 +120,17 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 							font-weight: 500;
 							
 
-							&:before,
+							//&:before,
 							&:after {
-								content:" ";
-								border-color: transparent;
+								content: " ";
+								width: $header-height - 25;
+								height: $header-height - 25;
+								top: ($header-height - ($header-height - 25) ) /2;
+								z-index: -1;
+								left: 5px;
+								opacity: 1;
+
+								/*border-color: transparent;
 								border-bottom-color: $header-dropdown-arrow-color;
 								border-style: dashed dashed solid;
 								border-width: 0 10.5px 7.5px;
@@ -115,16 +139,19 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 								bottom: 0;
 								z-index: 1;
 								height: 0;
-								width: 0;
+								width: 0;*/
 							}
-							&:before {
+							/*&:before {
 								border-bottom-color: $header-dropdown-arrow-color; //darken($header-border-color, 8%);
 								bottom: 1px;
-							}
+							}*/
 
 							>[class*='fa-']:first-child,
 							>.#{$cust-icon-prefix}:first-child {
 								color: $header-link-hover-color !important;
+								-webkit-background-clip: initial;
+    							-webkit-text-fill-color: initial;
+    							background: none;
 							}
 
 						}
