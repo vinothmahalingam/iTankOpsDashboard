@@ -1,4 +1,4 @@
-.modal-shotcut {
+/*.modal-shotcut {
 	padding: 0px !important;
 	
 	.modal-dialog {
@@ -11,9 +11,9 @@
 		border-radius: 0px;
 		border:0;
 	}
-}
+}*/
 
-.modal-transparent {
+.modal-bg-transparent {
 
 	.modal-dialog {
 		box-shadow: 0 1px 15px 1px rgba(9,96,165,.4);
@@ -47,14 +47,34 @@
 	
 }
 
-/* left right */
+
 .modal-dialog {
 	.modal.show & {		
 		transform: none;		
 	}
 }
 
-.modal-dialog-left-side {
+/* top */
+.modal-dialog-top {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    min-width: 100%;
+	
+	.modal-dialog {
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+	}
+
+	.modal-content {
+		border-radius: 0px;
+		border:0;
+	}
+}
+
+/* left */
+.modal-dialog-left {
   position: absolute;
   top: 0;
   left: 0;
@@ -75,7 +95,8 @@
   }
 }
 
-.modal-dialog-right-side {
+/* right */
+.modal-dialog-right {
   position: absolute;
   top: 0;
   right: 0;
