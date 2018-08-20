@@ -1,12 +1,3 @@
-$panel-padding: 20px;
-$panel-hdr-padding: $panel-padding;
-$panel-hdr-font-size: $fs-xl;
-$panel-hdr-height: 48px;
-$panel-btn-size: 17px;
-$panel-hdr-background: #fafafa; //#fafafa;
-$panel-edge-radius: $border-radius;
-$panel-placeholder-color: lighten(desaturate($primary-50, 20%), 10%);
-
 .panel-fullscreen {
 	overflow:hidden;
 	max-width: 100%;
