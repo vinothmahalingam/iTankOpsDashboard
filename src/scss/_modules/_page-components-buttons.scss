@@ -185,3 +185,14 @@
     line-height: 1.5;
     border-radius: .25rem;
 }
+
+
+/* btn shadows */
+@mixin button-shadow($value) {
+  box-shadow: 0 2px 6px 0 rgba($value, .5);
+}
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-shadow($value);
+  }
+}
