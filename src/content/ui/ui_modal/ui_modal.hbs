@@ -15,112 +15,251 @@
 
 <div class="row">
    <div class="col">
+
       <div class="card mb-g">
+
          <div class="card-body">
+
             <h4 class="mb-g">
-               Text
-               <span class="fw-300">Second</span>
+               Basic
+               <span class="fw-300">Modals</span>
+               <small>
+                  Below is a static modal example (meaning its position and display have been overridden). Included are the modal header, modal body (required for padding), and modal footer (optional). We ask that you include modal headers with dismiss actions whenever possible, or provide another explicit dismiss action.
+               </small>
             </h4>
-            <div class="container p-5">
-               <h2>Side modals</h2>
-               <p>
-                  Modals can also be positioned to the side of the page. Therefore the modifier classes <code>.modal-dialog-left-side</code> or <code>.modal-dialog-right-side</code> can be placed on a <code>.modal-dialog</code>. These side modals are compatible with the sizes classes.
-               </p>
-               <div class="bd-example">
-                  <div class="m-n1 d-flex flex-wrap">
-                     <button type="button" class="btn btn-primary m-1" data-toggle="modal" data-target=".bd-example-modal-left-side">Left side modal</button>
-                     <button type="button" class="btn btn-primary m-1" data-toggle="modal" data-target=".bd-example-modal-right-side">Right side modal</button>
-                     <button type="button" class="btn btn-primary m-1" data-toggle="modal" data-target=".bd-example-modal-left-side-sm">Small left side modal</button>
-                     <button type="button" class="btn btn-primary m-1" data-toggle="modal" data-target=".bd-example-modal-right-side-lg">Large right side modal</button>
-                  </div>
-               </div>
-               <div class="modal fade bd-example-modal-left-side" tabindex="-1" role="dialog" aria-labelledby="myLeftSideModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-left-side">
-                     <div class="modal-content">
-                        <div class="modal-header">
-                           <h5 class="modal-title h4" id="myLeftSideModalLabel">Left side modal</h5>
-                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                           <span aria-hidden="true">&times;</span>
-                           </button>
-                        </div>
-                        <div class="modal-body">
-                           <p>
-                              Modal footers are pushed to the bottom of side modals.
-                           </p>
-                        </div>
-                        <div class="modal-footer">
-                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                           <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+
+               <!-- Modal -->
+               <div class="modal fade" id="default-example-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                 <div class="modal-dialog" role="document">
+                   <div class="modal-content">
+                     <div class="modal-header">
+                        <h4 class="modal-title">
+
+                           Basic Modals
+                           <small class="m-0 text-muted">
+                               Below is a static modal example
+                           </small>
+
+                        </h4>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                       </button>
                      </div>
-                  </div>
-               </div>
-               <div class="modal fade bd-example-modal-right-side" tabindex="-1" role="dialog" aria-labelledby="myRightSideModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-right-side">
-                     <div class="modal-content">
-                        <div class="modal-header">
-                           <h5 class="modal-title h4" id="myRightSideModalLabel">Right side modal</h5>
-                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                           <span aria-hidden="true">&times;</span>
-                           </button>
-                        </div>
-                        <div class="modal-body">
-                           ...
-                        </div>
+                     <div class="modal-body">
+                       ...
                      </div>
-                  </div>
-               </div>
-               <div class="modal fade bd-example-modal-left-side-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallLeftSideModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-left-side modal-sm">
-                     <div class="modal-content">
-                        <div class="modal-header">
-                           <h5 class="modal-title h4" id="mySmallLeftSideModalLabel">Small modal</h5>
-                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                           <span aria-hidden="true">&times;</span>
-                           </button>
-                        </div>
-                        <div class="modal-body">
-                           <p>
-                              This is an example of a small modal on the left side. 
-                           </p>
-                           <p>
-                              Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-                           </p>
-                           <p>
-                              Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.
-                           </p>
-                           <p>
-                              Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                           </p>
-                           <p>
-                              Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.
-                           </p>
-                        </div>
-                        <div class="modal-footer">
-                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                           <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+                     <div class="modal-footer">
+                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                       <button type="button" class="btn btn-primary">Save changes</button>
                      </div>
-                  </div>
+                   </div>
+                 </div>
                </div>
 
-               <div class="modal fade bd-example-modal-right-side-lg modal-backdrop-transparent" tabindex="-1" role="dialog" aria-labelledby="settings-panel" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-right-side modal-sm">
-                     <div class="modal-content">
-                        <div class="modal-header">
-                           <h5 class="modal-title h4" id="settings-panel">Large right side modal</h5>
-                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                           <span aria-hidden="true">&times;</span>
-                           </button>
-                        </div>
-                        <div class="modal-body">
-                           ...
-                        </div>
+               <!-- Modal Large -->
+               <div class="modal fade" id="default-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                 <div class="modal-dialog modal-lg" role="document">
+                   <div class="modal-content">
+                     <div class="modal-header">
+                       <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                       </button>
                      </div>
-                  </div>
+                     <div class="modal-body">
+                       ...
+                     </div>
+                     <div class="modal-footer">
+                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                       <button type="button" class="btn btn-primary">Save changes</button>
+                     </div>
+                   </div>
+                 </div>
                </div>
-               
-            </div>
+
+            <p class="demo mb-g">
+               <!-- Button trigger modal -->
+               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#default-example-modal">Default Modal</button>
+
+               <!-- Large modal -->
+               <button type="button" class="btn btn-info" data-toggle="modal" data-target="#default-example-modal-lg">Default Modal Large</button>
+
+               <!-- Small modal -->
+               <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bs-example-modal-sm">Default Modal Small</button>
+            </p>
+
+            <h5>
+               Centered Modals
+            </h5>
+
+            <p class="demo mb-g">
+               <!-- Button trigger modal -->
+               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Centered Modal</button>
+               <!-- Large modal -->
+               <button type="button" class="btn btn-info" data-toggle="modal" data-target="#bs-example-modal-lg">Centered Modal Large</button>
+               <!-- Small modal -->
+               <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bs-example-modal-sm">Centered Modal Small</button>
+            </p>
+
+         </div>
+
+      </div>
+
+      <div class="card mb-g">
+
+         <div class="card-body">
+
+            <h4 class="mb-g">
+               Side
+               <span class="fw-300">Modals</span>
+               <small>
+                  Modals can also be positioned to the side of the page. Therefore the modifier classes <code>.modal-dialog-left</code>, <code>.modal-dialog-right</code> or <code>.modal-dialog-top</code> can be placed on a <code>.modal-dialog</code>. These side modals are compatible with the sizes classes.
+               </small>
+            </h4>
+
+            <h5>
+               Modals right side
+            </h5>
+            <p class="demo mb-g">
+               <button type="button" class="btn btn-primary m-1" data-toggle="modal" data-target=".bd-example-modal-dialog-right-side">Modal Right Side</button>
+               <button type="button" class="btn btn-primary m-1" data-toggle="modal" data-target=".bd-example-modal-dialog-right-side">Modal Right Side Small</button>
+               <button type="button" class="btn btn-primary m-1" data-toggle="modal" data-target=".bd-example-modal-dialog-right-side-lg">Modal Right Side Large</button>
+            </p>   
+            <h5>
+               Modals left side
+            </h5>
+            <p class="demo mb-g">
+               <button type="button" class="btn btn-primary m-1" data-toggle="modal" data-target=".bd-example-modal-dialog-left-side">Modal Left Side</button>
+               <button type="button" class="btn btn-primary m-1" data-toggle="modal" data-target=".bd-example-modal-dialog-left-side">Modal Left Side Small</button>
+               <button type="button" class="btn btn-primary m-1" data-toggle="modal" data-target=".bd-example-modal-dialog-left-side-sm">Modal Left Side Large</button>
+            </p> 
+            <h5>
+               Modals Top
+            </h5>
+            <p class="demo">
+               <button type="button" class="btn btn-primary m-1" data-toggle="modal" data-target=".bd-example-modal-dialog-left-side">Modal Top Side (one size)</button>
+            </p>       
+
+         </div>
+
+      </div>
+
+      <div class="card mb-g">
+
+         <div class="card-body">
+
+            <h4 class="mb-g">
+               Modifications
+            </h4>
+            <h5>
+               FullScreen Modals
+            </h5>
+            <p class="demo mb-g">
+               <button type="button" class="btn btn-lg btn-primary m-1" data-toggle="modal" data-target=".bd-example-modal-dialog-left-side">Modal Fullscreen (one size)</button>
+            </p>
+            <h5>
+               Transparent Modals
+            </h5>
+            <p class="demo mb-g">
+               <button type="button" class="btn btn-dark m-1" data-toggle="modal" data-target=".bd-example-modal-dialog-left-side">Transparent Modal</button>
+            </p>
+            <h5>
+               Backdrop Transparent
+            </h5>
+            <p class="demo">
+               <button type="button" class="btn btn-outline-dark m-1" data-toggle="modal" data-target=".bd-example-modal-dialog-left-side">No Backdrop</button>
+            </p>
+
+         </div>
+
+      </div>
+
+   </div>
+</div>
+
+<div class="modal fade bd-example-modal-dialog-left-side" tabindex="-1" role="dialog" aria-labelledby="myLeftSideModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-left">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title h4" id="myLeftSideModalLabel">Left side modal</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            <p>
+               Modal footers are pushed to the bottom of side modals.
+            </p>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="modal fade bd-example-modal-dialog-right-side" tabindex="-1" role="dialog" aria-labelledby="myRightSideModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-right">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title h4" id="myRightSideModalLabel">Right side modal</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            ...
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="modal fade bd-example-modal-dialog-left-side-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallLeftSideModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-left modal-sm">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title h4" id="mySmallLeftSideModalLabel">Small modal</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            <p>
+               This is an example of a small modal on the left side. 
+            </p>
+            <p>
+               Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+            </p>
+            <p>
+               Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.
+            </p>
+            <p>
+               Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            </p>
+            <p>
+               Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.
+            </p>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="modal fade bd-example-modal-dialog-right-side-lg modal-backdrop-transparent" tabindex="-1" role="dialog" aria-labelledby="settings-panel" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-right modal-sm">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title h4" id="settings-panel">Large right side modal</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            ...
          </div>
       </div>
    </div>
