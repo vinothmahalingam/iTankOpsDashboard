@@ -1,14 +1,21 @@
-<div class="modal fade js-modal-messenger" tabindex="-1" role="dialog" aria-labelledby="chat-panel" aria-hidden="true">
+<div class="modal fade js-modal-messenger modal-backdrop-transparent" tabindex="-1" role="dialog" aria-labelledby="chat-panel" aria-hidden="true">
    <div class="modal-dialog modal-dialog-right">
       <div class="modal-content h-100">
-         <div class="dropdown-header d-flex align-items-center p-3 w-100">
+         <div class="dropdown-header d-flex align-items-center w-100">
             
             <h4 class="d-flex flex-row align-items-center mt-1 mb-1 color-white">
                <span class="mr-2">
                    <img src="img/avatars/avatar-i.png" class="rounded-circle profile-image" alt="Chin Chang">
                </span>
                <div class="info-card-text">
-                  <div class="h4 text-truncate text-truncate-lg m-0">Chin Chang</div>
+                  <a href="#" class="h4 text-truncate text-truncate-lg m-0 text-white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Chin Chang 
+                     <i class="fal fa-angle-down d-inline-block ml-1 text-white fs-md"></i>
+                  </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Send Email</a>
+                      <a class="dropdown-item" href="#">Create Appointment</a>
+                      <a class="dropdown-item" href="#">Block User</a>
+                    </div>
                   <small class="fw-300 text-truncate text-truncate-md opacity-80 m-0">IT Director</small>
                </div>
             </h4>
@@ -18,7 +25,7 @@
             </button>
          </div>
          <div class="modal-body p-0 h-100 d-flex">
-			{{> include/_tab-msgr }}
+			     {{> include/_tab-msgr }}
          </div>
       </div>
    </div>

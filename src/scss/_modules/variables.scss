@@ -283,7 +283,6 @@ $breadcrumb-bg:                     lighten($fusion-50, 43%);
 $breadcrumb-divider-color:          inherit;      
 
 /* button */
-
 $input-btn-padding-y:               .438rem;
 $input-btn-padding-x:               1.125rem;
 
@@ -322,6 +321,7 @@ $dropdown-item-padding-x:           1rem;
 $modal-header-padding:              20px;
 $modal-inner-padding:               20px;
 $modal-backdrop-opacity:            0.2;
+$modal-content-border-color:        transparent;
 
 /* reference guide
 http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/

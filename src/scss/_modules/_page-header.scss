@@ -100,6 +100,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 								height: $header-height - 45;
 								position: absolute;
 								background: #dae1e8;
+								//background-image: radial-gradient(white, #f9f9f9, #c8cbce);
 								border-radius: 50%;
 								top: ($header-height - ($header-height - 45) ) /2;
 								z-index: -1;

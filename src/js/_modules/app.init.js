@@ -8,7 +8,7 @@ var initApp = (function(app) {
 	 * List filter 
 	 * DOC: searches list items, it could be UL or DIV elements
 	 * usage: initApp.listFilter($('.list'), $('#intput-id'));
-	 *        inside the .list you will need to insert 'data-filter-tags'
+	 *        inside the .list you will need to insert 'data-filter-tags' inside <a>
 	 **/
 	app.listFilter = function (list, input, anchor) {
 
