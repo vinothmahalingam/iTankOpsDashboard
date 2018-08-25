@@ -48,7 +48,8 @@
 
 
 /* top */
-.modal-dialog-top {
+.modal-dialog-top,
+.modal-dialog-bottom {
     position: absolute;
     top: 0;
     margin: 0;
@@ -64,6 +65,15 @@
 		border-radius: 0px;
 		border:0;
 	}
+}
+
+.modal-dialog-bottom {
+  top: auto;
+  bottom: 0;
+
+  .modal.fade & {
+    transform: translate(0,25%);
+  }
 }
 
 /* left */

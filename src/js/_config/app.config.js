@@ -96,7 +96,7 @@ var myapp_config = {
        App date ID
        found inside the breadcrumb unit, displays current date to the app on pageload
     */
-    appDateHook: $('#app-date'),
+    appDateHook: $('.js-get-date'),
     /*
        Collapse current menu item as other menu items are expanded
        Careful when using this option, if you have a long menu it will
