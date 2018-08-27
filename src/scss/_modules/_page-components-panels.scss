@@ -120,7 +120,7 @@
 			position: absolute;
 			top: -2px;
 			right: -10px;
-			font-size: 17px;
+			font-size: 1.1rem;
 			color: inherit;
 			border-radius: 50%;
 			padding: 1px 5px 2px;
@@ -143,7 +143,9 @@
 	/*border: 1px solid;
 	border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.17);*/
 	border: 1px solid transparent;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+	//border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+	border-bottom: 0px;
+	box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.07);
 	border-radius: $panel-edge-radius $panel-edge-radius 0 0;
 
 	
@@ -193,17 +195,47 @@
 }
 
 /* panel tap highlight */
-.panel-sortable {
+.panel-sortable:not(.panel-locked) {
 	.panel-hdr {
 		&:active {
-			border-color: $primary-300 $primary rgba(0, 0, 0, 0.04);
+			border-top-color: $primary-300;
+			border-left-color: $primary;
+			border-right-color: $primary;
 
 			& + .panel-container {
 				border-color: transparent $primary $primary;
 			}
 		}
 	}
-}	
+}
+
+/*.ui-sortable-helper.panel-sortable:not(.panel-locked) {
+	.panel-hdr {
+		&:active {
+			border-top-color: $success-300;
+			border-left-color: $success;
+			border-right-color: $success;
+
+			& + .panel-container {
+				border-color: transparent $success $success;
+			}
+		}
+	}
+}*/	
+
+.panel-sortable.panel-locked {
+	.panel-hdr {
+		&:active {
+			border-top-color: $danger-300;
+			border-left-color: $danger;
+			border-right-color: $danger;
+
+			& + .panel-container {
+				border-color: transparent $danger $danger;
+			}
+		}
+	}
+}
 
 /* panel toolbar (sits inside panel header) */
 .panel-toolbar {
@@ -336,7 +368,7 @@
 	.panel-hdr {
 		background: $white;
 		background-image: linear-gradient(to bottom,#f7f7f7, $white);
-		border-bottom: 0;
+		box-shadow: none;
 		
 		h2 {
 			color: #333;

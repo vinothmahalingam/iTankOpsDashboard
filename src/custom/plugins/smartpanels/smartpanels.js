@@ -1,11 +1,10 @@
  /*!
  * jQuery SmartPanels v1.0.0
- * nextgenwebapp@gmail.com
  *
- * Copyright 2018, 2019 @myplaneticket "Sunny"
+ * Copyright 2019, 2020 @myplaneticket
  * Released under the Marketplace License (see your license details for usage)
  *
- * Date: 2018-01-01T17:42Z
+ * Publish Date: 2018-01-01T17:42Z
  */
 
 (function ($, window, document, undefined) {
@@ -59,16 +58,6 @@
                 .delay(600)
                 .fadeOut(100);
             }
-
-            /*elm.closest(self.o.panels)
-                .addClass('panel-saving')
-                .delay(600).queue(function(){
-                    elm.closest(self.o.panels)
-                    .removeClass('panel-saving')
-                    .dequeue()
-                }); */   
-
-            //initApp.accessIndicator();
         },
 
         _loadKeys : function () {
@@ -293,7 +282,7 @@
             if (self.o.panelColors && self.o.colorButton) {
                 var formatedPanelColors = [];
                 for (var key in self.o.panelColors) {
-                    formatedPanelColors.push('<a href="#" class="btn btn-m-l d-inline-block '+ self.o.panelColors[key] +' width-1 height-1 rounded-0 js-panel-color" data-panel-setstyle="'+ self.o.panelColors[key] +'"></a>');
+                    formatedPanelColors.push('<a href="#" class="btn d-inline-block '+ self.o.panelColors[key] +' width-1 height-1 rounded-circle border p-0 m-1 js-panel-color" data-panel-setstyle="'+ self.o.panelColors[key] +'"></a>');
                 }
             }
 

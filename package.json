@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "description": "An Admin Toolkit Webapp",
-  "author": "Sunnyat Ahmmed <support@myorange.ca> (https://github.com/myorangeca)",
+  "author": "Sunnyat Ahmmed <gotbootstrap@gmail.com> (gotbootstrap.com)",
   "license": "Check website (http://support.wrapbootstrap.com/knowledge_base/topics/usage-licenses)",
   "bugs": {
-    "url": "https://wrapbootstrap.com/user/MyOrange"
+    "url": "https://wrapbootstrap.com/user/gotbootstrap"
   },
   "devDependencies": {
     "event-stream": "^3.3.4",

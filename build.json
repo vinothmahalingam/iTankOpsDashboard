@@ -10,7 +10,7 @@
 			"logo": "logo.png",
 			"logo-m": "logo.png",
 			"version": "1.0.0",
-			"copyright": "2018 © NextGen theme by&nbsp;<a href='http://myorange.ca' class='text-primary fw-500' title='MyOrange Inc.' target='_blank'>MyOrange</a>"
+			"copyright": "2019 © NextGen theme by&nbsp;<a href='http://gotbootstrap.com' class='text-primary fw-500' title='gotbootstrap.com' target='_blank'>Gotbootstrap.com</a>"
 		},
 		"compile": {
 			"jsUglify": false,
