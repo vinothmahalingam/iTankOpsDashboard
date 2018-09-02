@@ -179,7 +179,8 @@ $grid-breakpoints: (
 
 		} 
 		
-		&:not(.nav-function-fixed) {
+		/* this was conflicting with the new DOM change where we swtiched header with nav */
+		/*&:not(.nav-function-fixed) {
 
 			.left-panel {
 				.logo {
@@ -188,7 +189,7 @@ $grid-breakpoints: (
 				}
 			}
 
-		}
+		}*/
 
 		#content {
 			margin-top: $header-height;

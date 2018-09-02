@@ -1,8 +1,8 @@
  /*!
  * jQuery SmartPanels v1.0.0
  *
- * Copyright 2019, 2020 @myplaneticket
- * Released under the Marketplace License (see your license details for usage)
+ * Copyright 2019, 2020 NextGen WebApp
+ * Released under Marketplace License (see your license details for usage)
  *
  * Publish Date: 2018-01-01T17:42Z
  */
@@ -105,8 +105,8 @@
                 localStorage.setItem(storage.keySettings, storeSettingsObj);
                 storage.getKeySettings = storeSettingsObj;
 
-                if (myapp_config.debugState)
-                    console.log("storeSettingsObj:" + storeSettingsObj)
+                //if (myapp_config.debugState)
+                    //console.log("storeSettingsObj:" + storeSettingsObj)
             }
 
             /**
@@ -409,9 +409,9 @@
                      * Set the buttons order.
                      **/
                     var formatButtons = self.o.buttonOrder
-                        .replace(/%delete%/g, closeButton)
+                        .replace(/%close%/g, closeButton)
                         .replace(/%fullscreen%/g, fullscreenButton)
-                        .replace(/%toggle%/g, collapseButton);
+                        .replace(/%collapse%/g, collapseButton);
 
                     /**
                      * Add a button wrapper to the header.
@@ -649,7 +649,7 @@
             });
 
             /**
-             * Allow users to close the widget.
+             * Allow users to close the panel.
              **/
             headers.on(clickEvent, '.js-panel-close', function (e) {
 
@@ -674,8 +674,8 @@
                     /**
                      * Run the callback function.
                      **/
-                    if (typeof self.o.onClose == 'function') {
-                        self.o.onClose.call(this, pPanel);
+                    if (typeof self.o.onClosepanel == 'function') {
+                        self.o.onClosepanel.call(this, pPanel);
                     }
                 });  
 
@@ -886,7 +886,7 @@
         deletePositionKey: '',
         positionKeyLabel: 'Reset position?',
         sortable: true,
-        buttonOrder: '%toggle% %fullscreen% %delete%',
+        buttonOrder: '%collapse% %fullscreen% %close%',
         buttonOrderDropdown: '%refresh% %locked% %color% %custom% %reset%',
         customButton: false,
         customButtonLabel: "Custom Label",
@@ -894,35 +894,35 @@
         closeButton: true,
         onClosepanel: function() {
             if (myapp_config.debugState)
-                console.log($(this).closest(".panel").attr('id') + " onClosepanel callback")
+                console.log($(this).closest(".panel").attr('id') + " onClosepanel")
         },
         fullscreenButton: true,
         onFullscreen: function() {
             if (myapp_config.debugState)
-                console.log($(this).closest(".panel").attr('id') + " onFullscreen callback")
+                console.log($(this).closest(".panel").attr('id') + " onFullscreen")
         },
         collapseButton: true,
         onCollapse: function() {
             if (myapp_config.debugState)
-                console.log($(this).closest(".panel").attr('id') + " collapsed callback")
+                console.log($(this).closest(".panel").attr('id') + " onCollapse")
         },
         lockedButton: true,
         lockedButtonLabel: "Lock Position",
         onLocked: function() {
             if (myapp_config.debugState)
-                console.log($(this).closest(".panel").attr('id') + " onLocked callback")
+                console.log($(this).closest(".panel").attr('id') + " onLocked")
         },
         refreshButton: true,
         refreshButtonLabel: "Refresh Content",
         onRefresh: function() {
             if (myapp_config.debugState)
-                console.log($(this).closest(".panel").attr('id') + " onRefresh callback")
+                console.log($(this).closest(".panel").attr('id') + " onRefresh")
         },
         colorButton: true,
         colorButtonLabel: "Panel Style",
         onColor: function() {
             if (myapp_config.debugState)
-                console.log($(this).closest(".panel").attr('id') + " onColor callback")
+                console.log($(this).closest(".panel").attr('id') + " onColor")
         },
         panelColors: ['bg-primary-500','bg-info-500','bg-warning-500','bg-danger-500','bg-success-500','bg-fusion-500', 'bg-faded', 'bg-offwhite-fade'],
         resetButton: true,

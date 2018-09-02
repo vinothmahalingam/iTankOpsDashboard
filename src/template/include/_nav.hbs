@@ -512,25 +512,35 @@
 			</li>
 		</ul>
 	</li>			
-	<li {{#is pagename "in" "form_material,form_elements,form_validation,form_samples"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "form_elements,form_controls,form_custom_controls,form_input_groups,form_jquery_validation,form_samples"}}class="active open"{{/is}}>
 		<a href="#" title="Form Stuff" data-filter-tags="forms stuff"> 
 			<i class="fal fa-edit"></i>
 			<span class="nav-link-text" data-i18n="nav.form">Form Stuff</span>
 		</a>
 		<ul>
-			<li {{#is pagename "===" "form_material"}}class="active"{{/is}}>
-				<a href="form_material.html" data-filter-tags="forms material"> 
-					<span class="nav-link-text" data-i18n="nav.form_material">Material</span> 
-				</a>
-			</li>
 			<li {{#is pagename "===" "form_elements"}}class="active"{{/is}}>
 				<a href="form_elements.html" data-filter-tags="forms elements"> 
-					<span class="nav-link-text" data-i18n="nav.form_elements">Elements</span> 
+					<span class="nav-link-text" data-i18n="nav.form_elements">General Elements</span> 
 				</a>
 			</li>
-			<li {{#is pagename "===" "form_validation"}}class="active"{{/is}}>
-				<a href="form_validation.html" data-filter-tags="forms validation"> 
-					<span class="nav-link-text" data-i18n="nav.form_validation">Validation</span> 
+			<li {{#is pagename "===" "form_controls"}}class="active"{{/is}}>
+				<a href="form_controls.html" data-filter-tags="forms controls"> 
+					<span class="nav-link-text" data-i18n="nav.form_controls">Controls</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "form_custom_controls"}}class="active"{{/is}}>
+				<a href="form_custom_controls.html" data-filter-tags="forms controls"> 
+					<span class="nav-link-text" data-i18n="nav.form_custom_control">Custom Controls</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "form_input_groups"}}class="active"{{/is}}>
+				<a href="form_input_groups.html" data-filter-tags="forms input groups"> 
+					<span class="nav-link-text" data-i18n="nav.form_input_groups">Input Groups</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "form_jquery_validation"}}class="active"{{/is}}>
+				<a href="form_jquery_validation.html" data-filter-tags="forms jquery validation"> 
+					<span class="nav-link-text" data-i18n="nav.form_jquery_validation">Jquery Validation</span> 
 				</a>
 			</li>	
 			<li {{#is pagename "===" "form_samples"}}class="active"{{/is}}>

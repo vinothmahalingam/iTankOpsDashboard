@@ -22,34 +22,68 @@
 			<div class="card-body">
 
 				<h4 class="mb-g">
-					Basic <span class="fw-300">Alerts</span> 
+					Basic & Outline <span class="fw-300">Alerts</span> 
 					<small>
-						Contextual minimalistic alerts
+						Contextual minimalistic alerts. We remove the background using .alert-*-outline to give a cleaner look.
 					</small>
 				</h4>
 
-				<div class="alert alert-primary" role="alert">
-					<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-				</div>
+				<div class="row">
+					<div class="col-sm-6">
+	
+						<div class="alert alert-primary" role="alert">
+							<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+						</div>
 
-				<div class="alert alert-success" role="alert">
-					<strong>Well Done!</strong> You successfully read this important alert message.
-				</div>
+						<div class="alert alert-success" role="alert">
+							<strong>Well Done!</strong> You successfully read this important alert message.
+						</div>
 
-				<div class="alert alert-danger" role="alert">
-					<strong>Oh snap!</strong> Change a few things up and try submitting again.
-				</div>
+						<div class="alert alert-danger" role="alert">
+							<strong>Oh snap!</strong> Change a few things up and try submitting again.
+						</div>
 
-				<div class="alert alert-warning" role="alert">
-					<strong>Holy guacamole!</strong> You should check in on some of those fields below.
-				</div>
+						<div class="alert alert-warning" role="alert">
+							<strong>Holy guacamole!</strong> You should check in on some of those fields below.
+						</div>
 
-				<div class="alert alert-info" role="alert">
-					<strong>Info!</strong> Alert for passing information to user.
-				</div>
+						<div class="alert alert-info" role="alert">
+							<strong>Info!</strong> Alert for passing information to user.
+						</div>
 
-				<div class="alert alert-secondary" role="alert">
-					<strong>Hello World!</strong> This is default alert message box.
+						<div class="alert alert-secondary" role="alert">
+							<strong>Hello World!</strong> This is default alert message box.
+						</div>
+
+					</div>
+
+					<div class="col-sm-6">
+
+						<div class="alert alert-primary-outline alert-dismissible fade show" role="alert">
+							<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+						</div>
+
+						<div class="alert alert-success-outline alert-dismissible fade show" role="alert">
+							<strong>Well Done!</strong> You successfully read this important alert message.
+						</div>
+
+						<div class="alert alert-danger-outline alert-dismissible fade show" role="alert">
+							<strong>Oh snap!</strong> Change a few things up and try submitting again.
+						</div>
+
+						<div class="alert alert-warning-outline alert-dismissible fade show" role="alert">
+							<strong>Holy guacamole!</strong> You should check in on some of those fields below.
+						</div>
+
+						<div class="alert alert-info-outline alert-dismissible fade show" role="alert">
+							<strong>Info!</strong> Alert for passing information to user.
+						</div>
+
+						<div class="alert alert-secondary-outline alert-dismissible fade show" role="alert">
+							<strong>Hello World!</strong> This is default alert message box.
+						</div>
+
+					</div>
 				</div>
 
 			</div>
@@ -57,51 +91,65 @@
 		</div>
 
 	</div>
-	
-	<div class="col-md-12 col-xl-12">	
+
+	<div class="col-md-12 col-xl-12">
 
 		<div class="card mb-g">
 
 			<div class="card-body">
 
 				<h4 class="mb-g">
-					Alert <span class="fw-300">Outline</span> 
+					Alternative <span class="fw-300">Backgrounds</span> 
 					<small>
-						We remove the background using <code>.alert-*-outline</code> to give a cleaner look.
+						Use theme's color pallet to add over 54 background choices. See the <a href="intel_colors.html" target="_blank">full list</a>
 					</small>
 				</h4>
 
-				<div class="alert alert-primary-outline alert-dismissible fade show" role="alert">
-					<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-				</div>
-
-				<div class="alert alert-success-outline alert-dismissible fade show" role="alert">
-					<strong>Well Done!</strong> You successfully read this important alert message.
-				</div>
-
-				<div class="alert alert-danger-outline alert-dismissible fade show" role="alert">
-					<strong>Oh snap!</strong> Change a few things up and try submitting again.
-				</div>
-
-				<div class="alert alert-warning-outline alert-dismissible fade show" role="alert">
-					<strong>Holy guacamole!</strong> You should check in on some of those fields below.
-				</div>
-
-				<div class="alert alert-info-outline alert-dismissible fade show" role="alert">
+				<div class="alert bg-info-500 alert-dismissible fade show" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
 					<strong>Info!</strong> Alert for passing information to user.
 				</div>
 
-				<div class="alert alert-secondary-outline alert-dismissible fade show" role="alert">
+				<div class="alert bg-primary-200 alert-dismissible fade show text-white" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+				</div>
+
+				<div class="alert bg-danger-400 alert-dismissible fade show text-white" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<strong>Oh snap!</strong> Change a few things up and try submitting again.
+				</div>
+
+				<div class="alert bg-fusion-200 alert-dismissible fade show text-white" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
 					<strong>Hello World!</strong> This is default alert message box.
+				</div>
+
+				<div class="alert bg-warning-700 alert-dismissible fade show text-white" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<strong>Holy guacamole!</strong>  You should check in on some of those fields below.
+				</div>
+
+				<div class="alert bg-success-400 alert-dismissible fade show text-white" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<strong> Well Done!</strong> You successfully read this important alert message.
 				</div>
 
 			</div>
 
 		</div>	
-
-	</div>	
-
-	<div class="col-md-12 col-xl-12">
 
 		<div class="card mb-g">
 
@@ -159,63 +207,6 @@
 			</div>
 			
 		</div>
-
-		<div class="card mb-g">
-
-			<div class="card-body">
-
-				<h4 class="mb-g">
-					Alternative <span class="fw-300">Backgrounds</span> 
-					<small>
-						Use theme's color pallet to add over 54 background choices. See the <a href="intel_colors.html" target="_blank">full list</a>
-					</small>
-				</h4>
-
-				<div class="alert bg-info-500 alert-dismissible fade show" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-					<strong>Info!</strong> Alert for passing information to user.
-				</div>
-
-				<div class="alert bg-primary-200 alert-dismissible fade show text-white" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-					<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-				</div>
-
-				<div class="alert bg-danger-400 alert-dismissible fade show text-white" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-					<strong>Oh snap!</strong> Change a few things up and try submitting again.
-				</div>
-
-				<div class="alert bg-fusion-200 alert-dismissible fade show text-white" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-					<strong>Hello World!</strong> This is default alert message box.
-				</div>
-
-				<div class="alert bg-warning-700 alert-dismissible fade show text-white" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-					<strong>Holy guacamole!</strong>  You should check in on some of those fields below.
-				</div>
-
-				<div class="alert bg-success-400 alert-dismissible fade show text-white" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-					<strong> Well Done!</strong> You successfully read this important alert message.
-				</div>
-
-			</div>
-
-		</div>			
 
 		<div class="card mb-g">
 

@@ -44,6 +44,12 @@
 	
 	padding: 0 !important;
 
+  .modal-content {
+    border-radius: 0;
+    border-width: 0;
+  }
+
+
 	.modal-dialog {
 		max-width: unquote("calc(100vw - 40px)");
 		max-height: unquote("calc(100vh - 80px)");

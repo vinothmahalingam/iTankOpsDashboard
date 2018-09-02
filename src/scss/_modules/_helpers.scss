@@ -158,6 +158,12 @@
     }
 }
 
+/* z-indexes */
+.z-index-space {z-index: $space}
+.z-index-cloud {z-index: $cloud}
+.z-index-ground {z-index: $ground}
+.z-index-water {z-index: $water}
+
 /* cursor */
 $cursor: (
     auto,
