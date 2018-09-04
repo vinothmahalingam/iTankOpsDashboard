@@ -289,3 +289,8 @@ body:not(.mobile-view-activated).mod-main-boxed.modal-open {
 	padding-right: 0px !important;
 }
 
+/* hover adjustment for close buttons */
+.close:not(:disabled):not(.disabled):hover, 
+.close:not(:disabled):not(.disabled):focus {
+    color: inherit;
+}

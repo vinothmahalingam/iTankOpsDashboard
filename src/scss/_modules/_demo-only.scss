@@ -95,9 +95,19 @@
 
 //P
 
-p.demo {
+.demo {
 	margin: 0;
 	> * {
 		margin: 0 .375rem .9375rem 0 !important;
+	}
+
+}
+
+.demo-v-spacing > * {
+	margin: 0 0 .9375rem !important;
+
+	&:last-child,
+	&:only-child {
+		margin-bottom: 0 !important;
 	}
 }
