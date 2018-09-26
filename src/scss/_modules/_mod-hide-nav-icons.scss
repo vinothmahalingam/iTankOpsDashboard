@@ -29,9 +29,9 @@
 				}
 
 				li > ul > li > a {
-					padding-left: $nav-padding-left + 15;
+					padding-left: $nav-padding-left + 0.9375rem;
 					& + ul > li > a {
-						padding-left: $nav-padding-left + 35;
+						padding-left: $nav-padding-left + 2.1875rem;
 					}
 				}
 

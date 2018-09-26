@@ -21,26 +21,26 @@ $grid-breakpoints: (
 
 @include media-breakpoint-up(lg) {
 	.page-header {
-		padding: 0 $grid-gutter-width-base/1.2;
+		padding: 0 1.5rem;
 	}
 	#content {
-		padding: $grid-gutter-width-base/1.5 $grid-gutter-width-base/1.2;
+		padding: 1.25rem 1.5rem;
 
 		.card.panel {
-			margin-bottom: map-get($grid-gutter-widths, lg);
+			margin-bottom: 1.5rem;
 		}
 	}
 }
 
 @include media-breakpoint-up(xl) {
 	.page-header {
-		padding: 0 $grid-gutter-width-base/1.2;
+		padding: 0 1.5rem;
 	}
 	#content {
-		padding: $grid-gutter-width-base/1.5 $grid-gutter-width-base/1.2;
+		padding: 1.25rem 1.5rem;
 
 		.card.panel {
-			margin-bottom: map-get($grid-gutter-widths, xl);
+			margin-bottom: 1.5rem;
 		}
 	}
 }
@@ -116,7 +116,7 @@ $grid-breakpoints: (
 		}
 
 		#content {
-			padding:map-get($grid-gutter-widths, lg) $grid-gutter-width-base/2;
+			padding: map-get($grid-gutter-widths, lg) $grid-gutter-width-base/2;
 			color: #222;
 			font-size: $fs-base + 1;
 			line-height: 1.58;
@@ -128,7 +128,7 @@ $grid-breakpoints: (
 			}
 
 			.subheader {
-				margin-bottom: $grid-gutter-width-base / 1.2;
+				margin-bottom: 1.5rem;
 
 				.subheader-title {
 					line-height: 32px;

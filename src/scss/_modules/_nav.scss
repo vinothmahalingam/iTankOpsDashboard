@@ -94,14 +94,14 @@
 			&:not(.open) > a:before {
 				content: '';
 				position: absolute;
-				top: calc(50% - 11px);
+				top: calc(50% - 0.6875rem);
 				right: -1px;
 				width: 0;
 				height: 0;
-				border-left: 8px solid transparent;
-				border-right: 8px solid $page-bg;
-				border-bottom: 11px solid transparent;
-				border-top: 11px solid transparent;
+				border-left: 0.5rem solid transparent;
+				border-right: 0.5rem solid $page-bg;
+				border-bottom: 0.6875rem solid transparent;
+				border-top: 0.6875rem solid transparent;
 			}
 		}
 
@@ -109,7 +109,7 @@
 			display: flex; /*new*/
 			align-items:center; /*new*/
 			outline: 0;
-			padding: 14px $nav-padding-right 14px $nav-padding-left;
+			padding: 0.875rem $nav-padding-right 0.875rem $nav-padding-left;
 			font-size: rem($nav-font-link-size);
 			color: $nav-link-color;
 			font-weight: 400;
@@ -118,7 +118,7 @@
 			position: relative; /* needed for mod-nav-hiarchiy*/
 
 			.dl-ref {
-				font-size: rem($nav-dl-font-size);
+				font-size: $nav-dl-font-size;
 				text-align: center;
 				min-width: $nav-dl-width;
 				display: inline-block;
@@ -170,7 +170,7 @@
 				width: 20px;
 				height: 20px;
 				margin-left: 5px;
-				margin-right: $nav-icon-margin-right + 3px;
+				margin-right: $nav-icon-margin-right + 0.1875rem;
 			}
 
 			> .nav-link-text {
@@ -239,7 +239,7 @@
 				a {
 					color: $nav-link-color;
 
-					padding: 12px $nav-padding-right 12px $nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.5px;
+					padding: 0.75rem $nav-padding-right 0.75rem $nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.03125rem;
 					//font-size: rem($nav-font-link-size);
 
 					b.collapse-sign {
@@ -251,10 +251,10 @@
 
 					>[class*='fa-'],
 					>.#{$cust-icon-prefix} {
-						margin-left: -35px;
+						margin-left: -2.1875rem;
 						margin-right: $nav-dl-margin-right;
 						color: $nav-icon-color;
-						font-size: $nav-font-icon-size-sub - 4;
+						font-size: $nav-font-icon-size-sub - 0.25rem;
 						width: $nav-dl-width;
 						text-align: center;
 					}
@@ -330,8 +330,7 @@
 
 						a {
 							color: $nav-link-color;
-							padding: 12px $nav-padding-right 12px $nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.5 + 10 + 10;
-							//font-size: rem($nav-font-link-size - 1);
+							padding: 0.75rem $nav-padding-right 0.75rem ($nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.03125rem + 1.25rem);
 
 							.dl-ref {
 								margin-left: 0;

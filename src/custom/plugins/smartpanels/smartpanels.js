@@ -282,7 +282,7 @@
             if (self.o.panelColors && self.o.colorButton) {
                 var formatedPanelColors = [];
                 for (var key in self.o.panelColors) {
-                    formatedPanelColors.push('<a href="#" class="btn d-inline-block '+ self.o.panelColors[key] +' width-1 height-1 rounded-circle border p-0 m-1 js-panel-color" data-panel-setstyle="'+ self.o.panelColors[key] +'"></a>');
+                    formatedPanelColors.push('<a href="#" class="btn d-inline-block '+ self.o.panelColors[key] +' width-3 height-3 p-0 rounded-0 js-panel-color hover-effect-dot" data-panel-setstyle="'+ self.o.panelColors[key] +'"></a>');
                 }
             }
 
@@ -322,7 +322,7 @@
                     * Add a close button to the panel header (if set to true)
                     **/
                     if (self.o.closeButton === true && tPanel.data('panel-close') === undefined) {
-                        closeButton = '<a href="#" class="btn btn-panel js-panel-close" data-toggle="tooltip" data-original-title="Close"></a>';
+                        closeButton = '<a href="#" class="btn btn-panel hover-effect-dot js-panel-close" data-toggle="tooltip" data-original-title="Close"></a>';
                     } else {
                         closeButton = '';
                     }
@@ -331,7 +331,7 @@
                     * Add a fullscreen button to the panel header (if set to true).
                     **/
                     if (self.o.fullscreenButton === true && tPanel.data('panel-fullscreen') === undefined) {
-                        fullscreenButton = '<a href="#" class="btn btn-panel js-panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></a>';
+                        fullscreenButton = '<a href="#" class="btn btn-panel hover-effect-dot js-panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></a>';
                     } else {
                         fullscreenButton = '';
                     }
@@ -340,7 +340,7 @@
                     * Add a collapse button to the panel header (if set to true).
                     **/
                     if (self.o.collapseButton === true && tPanel.data('panel-collapse') === undefined) {
-                        collapseButton = '<a href="#" class="btn btn-panel js-panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></a>'
+                        collapseButton = '<a href="#" class="btn btn-panel hover-effect-dot js-panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></a>'
                     } else {
                         collapseButton = '';
                     }
@@ -371,10 +371,10 @@
                     * Add a color select button to the panel header (if set to true).
                     **/
                     if (self.o.colorButton === true && tPanel.data('panel-color') === undefined) {
-                        colorButton = ' <div class="dropdown-item d-flex align-items-center pt-2 pr-3 pb-2 pl-3">\
+                        colorButton = ' <div class="dropdown-item d-flex align-items-center">\
                                             <span data-i18n="drpdwn.panelcolor">' + self.o.colorButtonLabel + '</span>\
                                             <i class="ni ni-chevron-right ml-auto"></i>\
-                                            <div class="dropdown-item-menu float-sm-left p-2 d-flex flex-wrap" style="width: 7rem;">' + formatedPanelColors.join(" ") + '</div>\
+                                            <div class="dropdown-item-menu float-sm-left d-flex flex-wrap" style="width: 6rem;">' + formatedPanelColors.join(" ") + '</div>\
                                         </div>'
                     } else {
                         colorButton = '';

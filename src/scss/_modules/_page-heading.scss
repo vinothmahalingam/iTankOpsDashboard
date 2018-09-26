@@ -1,5 +1,5 @@
 .subheader {
-	margin-bottom: $grid-gutter-width-base - 5;
+	margin-bottom: 1.5rem;
 	position: relative;
 
 	display: flex;
@@ -23,7 +23,7 @@
 	sup.badge {
 		text-shadow: none;
 		position: absolute;
-		margin-top: 10px;
+		margin-top: 0.625rem;
 		margin-left: $p-1;
 		font-size: 40%;
     	padding: 2px 5px;
@@ -33,7 +33,7 @@
 	small {
 		font-weight: 400;
 		color: $fusion-100; //$fusion-100;
-		margin-bottom: 10px;
-		font-size: rem($fs-sm);
+		margin-bottom: 0.625rem;
+		font-size: 0.875rem;
 	}
 }

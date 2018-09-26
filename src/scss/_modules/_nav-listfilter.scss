@@ -15,12 +15,16 @@
 
 	input[type="text"] {
 		padding: 8px 40px 8px 14px; 
-		width: ($nav-width - 20px) ;
+		width: $nav-width - 1.25rem;
 		background: rgba($black, 0.4); 
 		color: $white;
 
 		&:not(:focus) {
 			border-color: rgba(0, 0, 0, 0.1);
+		}
+
+		&:focus {
+			border-color: lighten($nav-background, 13%);
 		}
 		
 	}

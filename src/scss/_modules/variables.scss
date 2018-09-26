@@ -1,10 +1,10 @@
 /*  THEME COLORs
 ========================================================================== */
-$color-primary:         			      #2196F3;
-$color-success:                     #1abc42;
-$color-info:                        #6760c0;
+$color-primary:         			      #6760c0;
+$color-success:                     #1dc9b7;
+$color-info:                        #2196F3;
 $color-warning:                     #ffc241;
-$color-danger:                      #f55f78;
+$color-danger:                      #fd3995;
 $color-fusion:                      darken(desaturate(adjust-hue($color-primary, 5), 80%), 25%); 
 
 /*  Color Polarity
@@ -186,18 +186,17 @@ $grid-breakpoints: (
   xxxl: 1600px  
 );
 
-$mobile-breakpoint:          lg !default;                   /* define when mobile menu activates, here we are declearing (lg) so it targets the one after it */
+$mobile-breakpoint:          lg !default;                               /* define when mobile menu activates, here we are declearing (lg) so it targets the one after it */
 $mobile-breakpoint-size:     map-get($grid-breakpoints, lg) !default;   /* bootstrap reference xs: 0,  sm: 544px, md: 768px, lg: 992px, xl: 1200px*/
-$grid-gutter-width-base:     30px;
-$grid-gutter-width:          $grid-gutter-width-base / 1.2; //25px
-//$grid-columns:             12;
+$grid-gutter-width-base:     3rem;
+$grid-gutter-width:          1.5rem; //24px~
 
 $grid-gutter-widths: (
-  xs: $grid-gutter-width-base / 2,          //15
-  sm: $grid-gutter-width-base / 2,          //
-  md: $grid-gutter-width-base / 2,          //
-  lg: $grid-gutter-width-base / 1.2,        //25
-  xl: $grid-gutter-width-base / 1.2         //
+  xs: $grid-gutter-width-base / 2,         
+  sm: $grid-gutter-width-base / 2,          
+  md: $grid-gutter-width-base / 2,        
+  lg: $grid-gutter-width-base / 2,        
+  xl: $grid-gutter-width-base / 2        
 );
 
 
@@ -247,7 +246,7 @@ $theme-colors: (
   "warning": $color-warning,
   "danger": $color-danger,
   "light": $white,
-  "dark": $color-fusion
+  "dark": $primary-800
 );
 
 /* forms */
@@ -261,8 +260,10 @@ $label-margin-bottom:               .3rem;
 $form-group-margin-bottom:          1.5rem;
 
 /* cards */
-$card-spacer-y:                     20px;
-$card-spacer-x:                     20px;
+$card-spacer-y:                     1.25rem;
+$card-spacer-x:                     1.5rem;
+$card-cap-bg:                       $white;
+$card-border-color:                 rgba(0, 0, 0, 0.055);
 
 /* nav link */
 $nav-link-padding-y:                0.25rem;
@@ -279,7 +280,7 @@ $alert-padding-x:                   1.25rem;
 $alert-margin-bottom:               $grid-gutter-width;
 
 /* breadcrumb */
-$breadcrumb-bg:                     lighten($fusion-50, 43%);    
+$breadcrumb-bg:                     lighten($fusion-50, 40%);    
 $breadcrumb-divider-color:          inherit;      
 
 /* button */
@@ -307,7 +308,7 @@ $tooltip-color:                     #333;
 $tooltip-bg:                        #f3f3f3;
 $tooltip-arrow-color:               $tooltip-bg;
 $tooltip-opacity:                   1;
-$tooltip-padding-x:                 8px; 
+$tooltip-padding-x:                 0.5rem; 
 $tooltip-padding-y:                 2px;
 $tooltip-arrow-width:               5px;
 $tooltip-arrow-height:              5px;
@@ -315,11 +316,11 @@ $tooltip-arrow-height:              5px;
 /* dropdowns */
 $dropdown-border-width:             $theme-border-utility-size; 
 $dropdown-item-padding-y:           .75rem;
-$dropdown-item-padding-x:           1rem;      
+$dropdown-item-padding-x:           1.5rem;      
 
 /* modal */
-$modal-header-padding:              20px;
-$modal-inner-padding:               20px;
+$modal-header-padding:              1.25rem;
+$modal-inner-padding:               1.25rem;
 $modal-backdrop-opacity:            0.2;
 $modal-content-border-color:        transparent;
 $modal-header-border-width:         0px;
@@ -438,8 +439,8 @@ $print-page-margin:						       1.0cm;
 
 /*  Common Element Variables
 ========================================================================== */
-$body-background-color:				       $white !default; //darken($color-fusion, 7%) !default;	
-$page-bg:											       desaturate(lighten($primary-700, 52%), 60%)  !default; //desaturate(lighten($color-fusion, 65.5%),20%) !default;
+$body-background-color:				       $white !default;
+$page-bg:											       desaturate(lighten($primary-500, 41.7%), 5%)  !default; //#f9f9fc
 
 /* Z-index decleartion "birds eye view"
 ========================================================================== */
@@ -457,12 +458,12 @@ $frame-border-color:                 #f7f9fa !default;
 /* colors */
 $header-bg:											     $white !default;
 $header-border-color:                #ccc !default;
-$header-border-bottom-color:		     rgba(darken($primary-700, 10%), (10/100)) !default;		
+$header-border-bottom-color:		     rgba(darken($primary-700, 10%), (13/100)) !default;		
 $header-link-color:							     darken($header-bg, 35%) !default;
 $header-link-hover-color:				     darken($header-bg, 75%) !default;
 
 /* height */
-$header-height:									     66px !default;
+$header-height:									     4.125rem !default;
 
 /* logo */
 $header-logo-border-bottom:			     rgba(darken($primary-700, 10%), (30/100)) !default;
@@ -476,8 +477,8 @@ $header-icon-size:							     21px;
 /* search input box */
 $header-search-border-color:		     transparent !default;								/* suggestion: #ccced0*/
 $header-search-bg:							     transparent !default;
-$header-search-width:						     400px !default;
-$header-search-height:					     $header-height - 24 !default; 
+$header-search-width:						     25rem !default;
+$header-search-height:					     $header-height - 1.5rem !default; 
 $header-search-font-size:				     $fs-base + 2;
 $header-search-padding:					     $spacer * 0.38;
 
@@ -487,21 +488,21 @@ $header-btn-active-bg:					     $fusion-500 !default;
 $header-btn-color:							     $header-link-color !default;
 $header-btn-hover-color:				     $header-link-hover-color !default;
 $header-btn-active-color:				     $white !default;
-$header-btn-height: 						     $header-height/2 + 3 !default;
-$header-btn-width: 							     52px !default;
+$header-btn-height: 						     $header-height/2 + 0.1875rem !default;
+$header-btn-width: 							     3.25rem !default;
 $header-btn-font-size:					     21px !default; //works only for font icons
 $header-btn-border-radius:			     $border-radius !default;
-$header-non-btn-width:					     50px !default;
+$header-non-btn-width:					     3.125rem !default;
 $header-dropdown-arrow-color:        $primary-700 !default;
 
 /* dropdown: app list */
-$header-applist-link-block-height:	 95px;
-$header-applist-link-block-width:		 100px;
-$header-applist-rows-width:					 350px;
-$header-applist-rows-height:				 360px; 
+$header-applist-link-block-height:	 5.9375rem;
+$header-applist-link-block-width:		 6.25rem;
+$header-applist-rows-width:					 21.875rem;
+$header-applist-rows-height:				 22.5rem; 
 $header-applist-box-padding-x:			 $p-2;
 $header-applist-box-padding-y:			 $p-3;
-$header-applist-icon-size:           50px;
+$header-applist-icon-size:           3.125rem;
 
 
 /* COMPONENTS & MODS */
@@ -509,11 +510,11 @@ $nav-tabs-panel-link-height:         45px !default;
 
 
 /* dropdowns */
-$dropdown-xl-width:                  350px !default
-$dropdown-xl-height:                 328px !default
-$dropdown-lg-width:                  280px !default
-$dropdown-sm-width:                  225px !default
-$dropdown-sm-height:                 300px !default
+$dropdown-xl-width:                  21.875rem !default;
+$dropdown-xl-height:                 20.5rem !default;
+$dropdown-lg-width:                  17.5rem !default;
+$dropdown-sm-width:                  14.0625rem !default;
+$dropdown-sm-height:                 18.75rem !default;
 $dropdown-shadow:                    0 0 15px 1px rgba(desaturate($primary-900, 20%), (20/100));   
 
 /*  NAVIGATION STUFF
@@ -551,21 +552,21 @@ aside.left-panel ($nav-width, $nav-background)
 /* left panel */
 $nav-background:									darken($color-fusion, 7%) !default;
 $nav-base-color:									lighten($nav-background, 7%) !default;
-$nav-width:											  260px !default; 
+$nav-width:											  16.25rem !default; 
 
 /* nav parent level-0 */
 $nav-link-color: 									lighten($nav-base-color, 45%) !default;
 $nav-font-link-size: 							$fs-base + 1 !default;
 $nav-collapse-sign-font-size:			$nav-font-link-size + 3 !default;	
-$nav-padding-left:								25px !default; //$p-2
-$nav-padding-right:								30px !default; //$p-2
+$nav-padding-left:								1.5rem !default; 
+$nav-padding-right:								1.875rem !default; 
 
 /* nav icon sizes */
-$nav-font-icon-size:							17px !default; //23px for Fontawesome & 20px for NextGen icons
-$nav-font-icon-size-sub:					17px !default;
+$nav-font-icon-size:							1.0625rem !default; //23px for Fontawesome & 20px for NextGen icons
+$nav-font-icon-size-sub:					1.0625rem !default;
 
-$nav-icon-width:									28px !default;
-$nav-icon-margin-right:						8px !default;
+$nav-icon-width:									1.75rem !default;
+$nav-icon-margin-right:						0.5rem !default;
 
 /* badge default */
 $nav-badge-color: 								$white !default;
@@ -578,44 +579,40 @@ $nav-icon-hover-color:						lighten(desaturate($color-primary, 30%), 10%) !defau
 /* nav title */
 $nav-title-color: 								lighten($nav-base-color, 10%) !default;
 $nav-title-border-bottom-color: 	lighten($nav-base-color, 3%) !default;
-$nav-title-font-size: 						$fs-base - 1.8;
+$nav-title-font-size: 						$fs-base - 1.8px;
 
 /* nav Minify */
 $nav-minify-hover-bg:							darken($nav-base-color, 3%) !default;
 $nav-minify-hover-text:						$white !default;
-$nav-minify-width:								75px !default;
+$nav-minify-width:								4.6875rem !default;
 /* when the menu pops on hover */
-$nav-minify-sub-width:						$nav-width - ($nav-minify-width - 25px) !default; 				
-//$nav-minify-logo-bg:						$nav-background !default;
-
-//$nav-top-minify-height:					54px !default;
+$nav-minify-sub-width:						$nav-width - ($nav-minify-width - 1.5625rem) !default; 				
 
 /* navigation Width */
 /* partial visibility of the menu */
-$nav-hidden-visiblity:						10px !default; 											
+$nav-hidden-visiblity:						0.625rem !default; 											
 
 /* top navigation */
-$nav-top-height:									52px !default;
+$nav-top-height:									3.25rem !default;
 $nav-top-menu-count:							9 !default;	/* number of parent items on the main menu (adjust this if you have more or less items) */
-//$nav-top-minify-height:					$nav-top-height/2 !default;
 
 /* nav Info Card (appears below the logo) */
-$nav-infocard-height:							130px !default;
-$profile-image-width:							50px !default; 
-$profile-image-width-md:          35px !default;
-$profile-image-width-sm:          25px !default;
-$image-share-height:              45px !default; /* width is auto */
+$nav-infocard-height:							8.125rem !default;
+$profile-image-width:							3.125rem !default; 
+$profile-image-width-md:          2.1875rem !default;
+$profile-image-width-sm:          1.5625rem !default;
+$image-share-height:              2.8125rem !default; /* width is auto */
 
 /*nav Badge Size */
-$nav-badge-height:								16px !default;
-$nav-badge-max-width:							24px !default;
-$nav-badge-left-px:								$nav-padding-left + 15.5px !default;
+$nav-badge-height:								1rem !default;
+$nav-badge-max-width:							1.5rem !default;
+$nav-badge-left-px:								$nav-padding-left + 0.96875rem !default;
 
 /* nav DL labels for all child */
-$nav-dl-font-size:								10px !default;
-$nav-dl-width:										20px !default;
-$nav-dl-height:										16px !default;
-$nav-dl-margin-right:							15px !default;
+$nav-dl-font-size:								0.625rem !default;
+$nav-dl-width:										1.25rem !default;
+$nav-dl-height:										1rem !default;
+$nav-dl-margin-right:							0.9375rem !default;
 $nav-dl-margin-left:							$nav-dl-width + $nav-dl-margin-right !default; 	/* will be pulled to left as a negative value */
 
 /*   MISC Settings
@@ -637,20 +634,21 @@ $page-breadcrumb-maxwidth:        200px;
 
 /*   PAGE COMPONENT PANELS 
 ========================================================================== */
-$panel-padding: 20px;
-$panel-hdr-padding: $panel-padding;
-$panel-hdr-font-size: $fs-xl;
-$panel-hdr-height: 48px;
-$panel-btn-size: 17px;
-$panel-hdr-background: #fafafa; //#fafafa;
-$panel-edge-radius: $border-radius;
-$panel-placeholder-color: lighten(desaturate($primary-50, 20%), 10%);
+$panel-spacer-y:                   1.25rem;
+$panel-spacer-x:                   1.5rem;
+$panel-hdr-font-size:              $fs-xl;
+$panel-hdr-height:                 3.125rem;
+$panel-btn-size:                   1.125rem;
+$panel-toolbar-icon:               1.5625rem;
+$panel-hdr-background:             $white; //#fafafa;
+$panel-edge-radius:                $border-radius;
+$panel-placeholder-color:          lighten(desaturate($primary-50, 20%), 10%);
 
 /*   FOOTER
 ========================================================================== */
 $footer-bg:											  #fff !default;
 $footer-text-color:								darken($base-text-color, 10%);
-$footer-height: 									45px !default;
+$footer-height: 									2.8125rem !default;
 $footer-font-size:								$fs-base !default;
 $footer-zindex:										$cloud - 20 !default;
 

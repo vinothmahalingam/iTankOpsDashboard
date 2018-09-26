@@ -175,7 +175,7 @@ $animation-delay: 100ms;
 	text-align: left;
 	position: relative;
 
-	margin: 0 $p-4 $p-2 $profile-image-width-sm + 5;
+	margin: 0 $p-4 $p-2 $profile-image-width-sm + 0.3125rem;
 
 	&.chat-start {
 
@@ -199,7 +199,7 @@ $animation-delay: 100ms;
 
 	.chat-img {
 		position: absolute;
-		left: - ($profile-image-width-sm + 5px);
+		left: - ($profile-image-width-sm + 0.3125rem);
 		bottom: $profile-image-width-sm;
 	}
 
@@ -216,7 +216,7 @@ $animation-delay: 100ms;
 	text-align: right;
 	position: relative;
 
-	margin: 0 0 $p-2 $p-4 + rem($profile-image-width-sm + 5px);
+	margin: 0 0 $p-2 $p-4 + $profile-image-width-sm + 0.3125rem;
 
 	&.chat-start {
 

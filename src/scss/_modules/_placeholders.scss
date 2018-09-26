@@ -224,8 +224,8 @@ RESULT:
   height: $header-btn-height;
   width: $header-btn-width;
   vertical-align: middle;
-  line-height: $header-btn-height - 2;
-  margin-right: $grid-gutter-width-base/4 + 3;
+  line-height: $header-btn-height - 0.125rem;
+  margin-right: $grid-gutter-width-base/4 + 0.1875rem;
   font-size: $header-btn-font-size;
   padding: $list-table-padding-y $list-table-padding-x;
   cursor: default;

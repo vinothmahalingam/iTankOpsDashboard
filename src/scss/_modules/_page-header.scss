@@ -1,8 +1,8 @@
-$header-badge-min-width: 							20px !default;
+$header-badge-min-width: 							1.25rem !default;
 /*$header-badge-padding-x: 							3px !default;
 $header-badge-padding-y: 							2px !default;*/
-$header-badge-left: 								25px !default;
-$header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5 !default; 
+$header-badge-left: 								1.5625rem !default;
+$header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 0.28125rem !default; 
 
 .badge.badge-header {
 	@extend %ping-badge;
@@ -13,11 +13,9 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 	top: $header-badge-top;
 	font-size: rem(10px);
 	font-weight: 500;
-	//height: ($header-badge-min-width); 
-	//min-width: ($header-badge-min-width);
-	max-width: ($header-badge-min-width + 7);
+	min-width: 1rem;
+	max-width: $header-badge-min-width + 0.4375rem;
 	padding: 0 3px;
-	//line-height: ($header-badge-min-width - 2);
 	border-radius: $header-badge-min-width;
 
 	&:only-child {
@@ -34,8 +32,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 
 .page-header {
 	background-color: $header-bg;
-	//border-bottom: 1px solid $header-border-bottom-color;
-	box-shadow: 0 1px 15px 1px $header-border-bottom-color;
+	box-shadow: 0px 0px 28px 0px $header-border-bottom-color;
 	display: block;
 	height: $header-height;
 	position: relative;
@@ -63,14 +60,13 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 					>[class*='fa-']:first-child,
 					>.#{$cust-icon-prefix}:first-child {
 						color:$header-link-color;
-				    	//font-size: rem($header-icon-size);
 					    vertical-align: middle;
 			   		}
 			   		>[class*='fa-']:first-child {
-			   			font-size: rem($header-icon-size);
+			   			font-size: $header-icon-size;
 			   		}
 			   		>.#{$cust-icon-prefix}:first-child {
-			   			font-size: rem($header-icon-size);
+			   			font-size: $header-icon-size;
 			   		}
 
 			   		&:hover {
@@ -96,15 +92,15 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 						&[data-toggle="dropdown"] {
 							&:after {
 								content: " ";
-								width: $header-height - 45;
-								height: $header-height - 45;
+								width: $header-height - 2.8125rem;
+								height: $header-height - 2.8125rem;
 								position: absolute;
 								background: #dae1e8;
 								//background-image: radial-gradient(white, #f9f9f9, #c8cbce);
 								border-radius: 50%;
-								top: ($header-height - ($header-height - 45) ) /2;
+								top: ($header-height - ($header-height - 2.8125rem) ) /2;
 								z-index: -1;
-								left: 15px;
+								left: 0.9375rem;
 								opacity: 0;
 								transition: all 100ms ease-in;
 							}	
@@ -124,11 +120,11 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 							//&:before,
 							&:after {
 								content: " ";
-								width: $header-height - 25;
-								height: $header-height - 25;
-								top: ($header-height - ($header-height - 25) ) /2;
+								width: $header-height - 1.5625rem;
+								height: $header-height - 1.5625rem;
+								top: ($header-height - ($header-height - 1.5625rem) ) /2;
 								z-index: -1;
-								left: 5px;
+								left: 0.3125rem;
 								opacity: 1;
 
 								/*border-color: transparent;
@@ -162,8 +158,8 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 						& + .dropdown-menu {
 							position:absolute;
 							border: $theme-border-utility-size solid $header-border-color;
-							right: $grid-gutter-width-base/2 !important;
-							top: $header-height - 1 !important;
+							right: 1rem !important;
+							top: $header-height - 0.0625rem !important;
 							left: auto !important;
 							padding: 0;
 							margin: 0;
@@ -195,7 +191,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 4.5
 						border-color: $danger-700;
 						@include gradient-img($start: $danger-600,$stop: $danger-800);
 						color:$white;
-						width: $header-btn-width + 10px;
+						width: $header-btn-width + 0.625rem;
 					}
 
 				}

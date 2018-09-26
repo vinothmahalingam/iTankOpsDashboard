@@ -32,7 +32,7 @@
 				overflow: hidden; 
 
 				.info-card {
-					height: $nav-width/3 + 5;
+					height: $nav-width/3 + 0.3125rem;
 					width:100%;
 					padding: $header-height/3.4 0;
 					text-align:center;
@@ -92,7 +92,7 @@
 							>[class*='fa-'],
 							>.#{$cust-icon-prefix},
 							> img {	
-								font-size: rem($nav-font-icon-size * 1.1);
+								font-size: $nav-font-icon-size * 1.1;
 								margin: 0;
 							}
 

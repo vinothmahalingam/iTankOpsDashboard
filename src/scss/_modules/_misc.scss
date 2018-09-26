@@ -56,18 +56,18 @@ ul.list-verticle {
 	}
 
 	&.dropdown-sm {
-		width: rem($dropdown-sm-width);
+		width: $dropdown-sm-width;
 		height: auto;
 	}
 
 	&.dropdown-lg {
-		width: rem($dropdown-lg-width);
+		width: $dropdown-lg-width;
 		height: auto;
 	}  
 
 	&.dropdown-xl {
-		width: rem($dropdown-xl-width);
-		height: rem($dropdown-xl-height);
+		width: $dropdown-xl-width;
+		height: $dropdown-xl-height;
 	}	
 }
 
@@ -125,7 +125,7 @@ ul.list-verticle {
 .dropdown-header {
 	background: -webkit-linear-gradient(250deg, $info-700, $primary-500);
 	background: linear-gradient(250deg, $info-700, $primary-500);
-	padding: 1rem;
+	padding: 1.25rem 1.5rem;
 }
 
 .dropdown-item {
@@ -361,18 +361,15 @@ ul.list-verticle {
 
 /* display frame */
 .frame-heading {
-	/*font-size: rem($fs-base);
-	font-weight: 700;
-	margin-bottom: $grid-gutter-width-base/3;*/
-
 	font-size: rem($fs-base);
-	font-weight: 700;
-    margin-bottom: 0;
-    color: lighten($fusion-50, 7%);
-    margin-top: $grid-gutter-width;
-    padding: $grid-gutter-width;
-    background: #f7f7f7;
+	//font-weight: 700;
+	margin-bottom: 0;
+	color: lighten($fusion-50, 7%);
+	//margin-top: $grid-gutter-width;
+	padding: 1.25rem;
+	background: #f7f7f7;
 
+	//border-radius: 10px 10px 0 0;
 
 	small {
 		font-size: rem($fs-base);
@@ -382,9 +379,9 @@ ul.list-verticle {
 .frame-wrap {
 	background: white;
 	border: 4px solid  darken($frame-border-color, 1%);
-	padding: $grid-gutter-width;
-	margin-bottom: 30px;
-	border-radius: 0 0 10px 10px;
+	padding: 1.25rem;
+	margin-bottom: 1.5rem;
+	//border-radius: 0 0 10px 10px;
 }
 .card-body > .frame-wrap:last-child {
 	margin-bottom:0 !important;

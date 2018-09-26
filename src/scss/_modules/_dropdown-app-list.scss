@@ -2,8 +2,8 @@
 	margin:0 auto;
 	padding:0;
 	display: block;
-	width: rem($header-applist-rows-width) !important;
-	height: rem($header-applist-rows-height) !important;
+	width: $header-applist-rows-width !important;
+	height: $header-applist-rows-height !important;
 	font-size:0; //removes wierd spacing
 	padding: $header-applist-box-padding-x $header-applist-box-padding-y;
 	text-align: center;
@@ -16,8 +16,8 @@
 }
 
 .app-list-item {
-	height: rem($header-applist-link-block-height);
-	width: rem($header-applist-link-block-width);
+	height: $header-applist-link-block-height;
+	width: $header-applist-link-block-width;
 	display: block;
 	text-decoration: none;
 	color:$base-text-color;
@@ -36,7 +36,7 @@
 		padding-top: 7px;
 
 		> .icon-stack {
-			font-size: $header-applist-icon-size + 2;
+			font-size: $header-applist-icon-size + 0.0625rem;
 		}
 
 	}

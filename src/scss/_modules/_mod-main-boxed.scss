@@ -63,7 +63,7 @@
 			&:not(.nav-function-top):not(.nav-function-hidden):not(.nav-function-minify) {
 				.page-wrapper {
 					.page-header {
-						padding-left:$nav-width + $grid-gutter-width-base/2;
+						padding-left:$nav-width + 1.5rem;
 					}
 				}
 			}
@@ -71,7 +71,7 @@
 			&.nav-function-minify:not(.nav-function-top):not(.nav-function-hidden) {
 				.page-wrapper {
 					.page-header {
-						padding-left:$nav-minify-width + $grid-gutter-width-base/2;
+						padding-left:$nav-minify-width + 1.5rem;
 					}
 				}
 			}

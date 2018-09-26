@@ -14,7 +14,7 @@
     z-index: $footer-zindex;
     color:$footer-text-color;
     font-size: rem($footer-font-size);
-    padding:0 $grid-gutter-width-base/2;
+    padding: 0 1.5rem;
 
 	& + .page-footer-push {
 		position:static;

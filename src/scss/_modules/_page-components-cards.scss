@@ -1,0 +1,12 @@
+.card-header {
+	color: inherit;
+	font-size: rem($panel-hdr-font-size);
+	//padding-bottom: $card-spacer-x/2;
+
+	small {
+		margin:0;
+		opacity: 0.8;
+		font-weight: 400;
+		font-size: rem($panel-hdr-font-size - 2);
+	}
+}

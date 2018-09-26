@@ -72,7 +72,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 		}
 
 		.page-wrapper {
-			padding-top:$nav-top-height;
+			padding-top: $nav-top-height;
 			padding-left:0;
 
 			.page-footer {
@@ -98,7 +98,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 			position: relative;
 			display: flex;	*/
 
-			padding: 0 $grid-gutter-width-base / 3;		
+			padding: 0 0.625rem;		
 
 			&:hover {
 				overflow:visible;
@@ -110,7 +110,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 				height: auto;
 				//float: left;
 				background: transparent;
-				padding-left: $grid-gutter-width-base/2;
+				padding-left: 0.9375rem;
 
 				/*float: left;
 				//width: $nav-function-top-logo-width-sm;
@@ -224,7 +224,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 						ul {
 							display: none !important;
-							width: $nav-width - 35; 
+							width: $nav-width - 2.1875rem; 
 							position: absolute;
 							box-shadow: 0 2px 3px rgba(0,0,0,0.15);
 
@@ -233,7 +233,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 								position: relative;
 
 								a {
-									padding: $grid-gutter-width-base/2 !important;
+									padding: 0.9375rem !important;
 									width: 100%;
 									max-height: none;
 									box-shadow: none;
@@ -309,7 +309,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 						}
 
 						> a {
-							padding: $grid-gutter-width-base/2 !important;
+							padding: 0.9375rem !important;
 							text-align: center;
 							//height: $nav-top-height;
 							//max-height: $nav-top-height;
