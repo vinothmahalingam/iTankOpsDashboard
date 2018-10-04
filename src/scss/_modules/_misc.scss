@@ -123,8 +123,8 @@ ul.list-verticle {
 
 
 .dropdown-header {
-	background: -webkit-linear-gradient(250deg, $info-700, $primary-500);
-	background: linear-gradient(250deg, $info-700, $primary-500);
+	background: -webkit-linear-gradient(250deg, desaturate($info-500, 25%), desaturate($primary-500, 10%));
+	background: linear-gradient(250deg, desaturate($info-500, 25%), desaturate($primary-500, 10%));
 	padding: 1.25rem 1.5rem;
 }
 

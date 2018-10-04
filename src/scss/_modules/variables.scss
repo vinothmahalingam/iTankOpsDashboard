@@ -483,7 +483,6 @@ $header-search-font-size:				     $fs-base + 2;
 $header-search-padding:					     $spacer * 0.38;
 
 /* btn */
-//$header-btn-background:				     darken($page-bg, 5%) !default; 
 $header-btn-active-bg:					     $fusion-500 !default;
 $header-btn-color:							     $header-link-color !default;
 $header-btn-hover-color:				     $header-link-hover-color !default;
@@ -643,6 +642,14 @@ $panel-toolbar-icon:               1.5625rem;
 $panel-hdr-background:             $white; //#fafafa;
 $panel-edge-radius:                $border-radius;
 $panel-placeholder-color:          lighten(desaturate($primary-50, 20%), 10%);
+
+/*   PAGE COMPONENT MESSENGER 
+========================================================================== */
+$msgr-list-width: 233px;
+$msgr-list-width-collapsed: 50px;
+$msgr-get-background: $page-bg;
+$msgr-sent-background: $success-500;
+$msgr-animation-delay: 100ms;
 
 /*   FOOTER
 ========================================================================== */

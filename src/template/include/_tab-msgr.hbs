@@ -1,8 +1,8 @@
 <!-- BEGIN msgr-list -->
 <div class="msgr-list d-flex flex-column bg-faded">
 	<div class="msgr-option-container">
-		<div class="msgr-list--item msgr-search">
-			<i class="fal fa-search msgr-list__icon"></i>
+		<div class="msgr-list-item msgr-search">
+			<i class="fal fa-search msgr-list-icon"></i>
 		</div>
 		<input type="text" class="form-control" id="msgr_listfilter_input" placeholder="Filter friends" aria-label="FriendSearch" data-listfilter="#js_msgr_listfilter">
 	</div>
@@ -13,11 +13,11 @@
 				<li>
 					<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-dark hover-white" data-filter-tags="miles k. miller online">
 						<div class="d-table-cell align-middle status status-success status-sm ">
-							<img src="img/avatar-m.png" data-src="img/avatars/avatar-i.png" class="profile-image-md rounded-circle" alt="aa">
+							<img src="img/avatar-m.png" data-src="img/avatars/avatar-d.png" class="profile-image-md rounded-circle" alt="aa">
 						</div>
 						<div class="d-table-cell w-100 align-middle pl-2 pr-2">
 							<div class="text-truncate text-truncate-md">
-								Miles K. Miller
+								Tracey Chang
 								<small class="d-block font-italic text-success fs-xs">
 									Online
 								</small>
@@ -150,8 +150,8 @@
 		</div>
 	</div>
 	<div class="msgr-option-container">
-		<a class="msgr-list--item" data-toggle="tab" href="#test--2" aria-expanded="false">
-			<i class="fa fa-gear msgr-list__icon"></i>
+		<a class="msgr-list-item" data-toggle="tab" href="#test--2" aria-expanded="false">
+			<i class="fa fa-gear msgr-list-icon"></i>
 		</a>
 	</div>
 </div>
@@ -183,7 +183,7 @@
 			<!--  end .chat-segment -->
 
 			<!-- start .chat-segment -->
-			<div class="chat-segment chat-segment--sent">
+			<div class="chat-segment chat-segment-sent">
 				<div class="chat-message">
 					<p>
 						Hey Ching, did you get my files?
@@ -196,8 +196,8 @@
 			<!--  end .chat-segment -->
 			
 			<!-- start .chat-segment -->
-			<div class="chat-segment chat-segment--rcvd">
-				<img src="img/avatar-m.png" data-src="img/avatars/avatar-i.png" class="profile-image-sm rounded-circle chat-img" alt="Ching Chan">
+			<div class="chat-segment chat-segment-rcvd">
+				<img src="img/avatar-m.png" data-src="img/avatars/avatar-d.png" class="profile-image-sm rounded-circle chat-img" alt="Ching Chan">
 				<div class="chat-message">
 					<p>
 						Hi
@@ -216,7 +216,7 @@
 			<!--  end .chat-segment -->
 
 			<!-- start .chat-segment -->
-			<div class="chat-segment chat-segment--sent chat-start">
+			<div class="chat-segment chat-segment-sent chat-start">
 				<div class="chat-message">
 					<p>
 						Okay
@@ -226,7 +226,7 @@
 			<!--  end .chat-segment -->
 
 			<!-- start .chat-segment -->
-			<div class="chat-segment chat-segment--sent chat-end">
+			<div class="chat-segment chat-segment-sent chat-end">
 				<div class="chat-message">
 					<p>
 						Sending you some dough today, you can allocate the resources to this project.
@@ -239,8 +239,8 @@
 			<!--  end .chat-segment -->
 
 			<!-- start .chat-segment -->
-			<div class="chat-segment chat-segment--rcvd chat-start">
-				<img src="img/avatar-m.png" data-src="img/avatars/avatar-i.png" class="profile-image-sm rounded-circle chat-img" alt="Ching Chan">	
+			<div class="chat-segment chat-segment-rcvd chat-start">
+				<img src="img/avatar-m.png" data-src="img/avatars/avatar-d.png" class="profile-image-sm rounded-circle chat-img" alt="Ching Chan">	
 				<div class="chat-message">
 					<p>
 						Perfect. Thanks a lot!
@@ -250,8 +250,8 @@
 			<!--  end .chat-segment -->
 
 			<!-- start .chat-segment -->
-			<div class="chat-segment chat-segment--rcvd">
-				<img src="img/avatar-m.png" data-src="img/avatars/avatar-i.png" class="profile-image-sm rounded-circle chat-img" alt="Ching Chan">
+			<div class="chat-segment chat-segment-rcvd">
+				<img src="img/avatar-m.png" data-src="img/avatars/avatar-d.png" class="profile-image-sm rounded-circle chat-img" alt="Ching Chan">
 				<div class="chat-message">
 					<p>
 						I will have them ready by tonight.
@@ -261,8 +261,8 @@
 			<!--  end .chat-segment -->
 
 			<!-- start .chat-segment -->
-			<div class="chat-segment chat-segment--rcvd chat-end">
-				<img src="img/avatar-m.png" data-src="img/avatars/avatar-i.png" class="profile-image-sm rounded-circle chat-img" alt="Ching Chan">
+			<div class="chat-segment chat-segment-rcvd chat-end">
+				<img src="img/avatar-m.png" data-src="img/avatars/avatar-d.png" class="profile-image-sm rounded-circle chat-img" alt="Ching Chan">
 				<div class="chat-message">
 					<p>
 						Cheers
@@ -286,12 +286,12 @@
 
 	<!-- BEGIN msgr__chatinput -->
 	<div class="msgr-chatinput d-flex flex-column">
-		<div class="msgr-chatinput__container flex-1 mr-3 ml-3 position-relative shadow-top">
+		<div class="msgr-chatinput-container flex-1 mr-3 ml-3 position-relative shadow-top">
 			<div class="pt-3 pb-1 pr-0 pl-0 rounded-0" tabindex="-1">
 				<div id="msgr_input" contenteditable="true" data-placeholder="Type your message here..."></div>
 			</div>
 		</div>
-		<div class="msgr-chatinput__icons d-flex align-items-center ml-2 mr-2">
+		<div class="msgr-chatinput-icons d-flex align-items-center ml-2 mr-2">
 			<div class="ml-1 p-1 h-100 d-flex align-items-center justify-content-center fs-xl text-secondary">
 				<label for="attach_picture" title="upload a picture" class="m-0">
 					<i class="fal fa-images"></i>
