@@ -1,9 +1,10 @@
 .nav-footer {
 	position: absolute;
-    background: $nav-background;
+    //background: $nav-background;
     width: 100%;
     height: $footer-height;
     bottom: 0;
+    display: flex;
 
     @include transition(0.3s,ease-in-out);
 

@@ -24,11 +24,11 @@
 .modal-bg-transparent {
 
 	.modal-content {
-		box-shadow: 0 1px 15px 1px rgba(9,96,165,.4);
+		box-shadow: 0 1px 15px 1px rgba($primary-900, 0.3);
 	}
 
 	.modal-content {
-		background: rgba(desaturate(darken($primary-900, 25%), 23%), 0.85); 
+		background: rgba(desaturate(darken($primary-800, 25%), 20%), 0.85); 
 
 	}
 

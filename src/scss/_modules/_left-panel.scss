@@ -5,6 +5,8 @@
 	position: absolute;
 	width: $nav-width;
 	z-index: $depth-nav;
-	background: $nav-background;
+	background-image: -webkit-linear-gradient(274deg, $nav-background-shade, transparent);
+	background-image: linear-gradient(274deg, $nav-background-shade, transparent); 
+	background-color: $nav-background;
 	will-change: left, right;
 }

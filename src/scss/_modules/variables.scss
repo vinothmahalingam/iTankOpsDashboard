@@ -1,6 +1,6 @@
 /*  THEME COLORs
 ========================================================================== */
-$color-primary:         			      #6760c0;
+$color-primary:         			      #886ab5;
 $color-success:                     #1dc9b7;
 $color-info:                        #2196F3;
 $color-warning:                     #ffc241;
@@ -549,7 +549,8 @@ aside.left-panel ($nav-width, $nav-background)
 
 /* main navigation */
 /* left panel */
-$nav-background:									darken($color-fusion, 7%) !default;
+$nav-background:									desaturate($primary-900, 7%) !default;
+$nav-background-shade:            rgba(desaturate($info-500, 15%), 0.2) !default;                  
 $nav-base-color:									lighten($nav-background, 7%) !default;
 $nav-width:											  16.25rem !default; 
 

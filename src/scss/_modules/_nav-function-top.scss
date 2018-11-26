@@ -259,6 +259,8 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 										display: block !important;
 										left: 100%;
     									top: 0;
+
+    									background: $nav-function-top-menu-item-bg;
 									}
 									&.top-menu-push-left {
 										ul {

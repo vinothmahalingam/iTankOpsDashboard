@@ -138,6 +138,10 @@
 								width: $nav-minify-sub-width;
 								left: $nav-minify-width;
 
+background-image: -webkit-linear-gradient(274deg, $nav-background-shade, transparent);
+											background-image: linear-gradient(274deg, $nav-background-shade, transparent); 
+											background-color: $nav-background;
+
 								> li {
 
 									> a {

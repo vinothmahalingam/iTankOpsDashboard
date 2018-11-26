@@ -1,6 +1,5 @@
 .app-list {
 	margin:0 auto;
-	padding:0;
 	display: block;
 	width: $header-applist-rows-width !important;
 	height: $header-applist-rows-height !important;
@@ -22,7 +21,7 @@
 	text-decoration: none;
 	color:$base-text-color;
 	margin: 10px 2px;
-	border: 1px solid transparent;
+	border: 1px solid transparent !important;
 	outline: none;
 	@include rounded($border-radius - 1);
 	padding-top: 8px;
