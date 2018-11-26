@@ -26,7 +26,7 @@ var myapp_config = {
        Lowering the variable makes faster response time but taxing on the CPU
        Reference: http://benalman.com/code/projects/jquery-throttle-debounce/examples/throttle/
      */
-    throttleDelay: 450, // for window.scrolling
+    throttleDelay: 450, // for window.scrolling refresh
     filterDelay: 150,   // for keyup.functions 
     /*
        DETECT MOBILE DEVICES
@@ -97,13 +97,6 @@ var myapp_config = {
        found inside the breadcrumb unit, displays current date to the app on pageload
     */
     appDateHook: $('.js-get-date'),
-    /*
-       Collapse current menu item as other menu items are expanded
-       Careful when using this option, if you have a long menu it will
-       keep expanding and may distrupt the user experience. This is best 
-       used with Fixed Navigation for a better experience
-     
-    navAccordion: true, //if one menu item is opened, the other will close*/
     /*
      * SaveSettings to localStorage
      * DOC: to store settings to a DB instead of LocalStorage see below:
