@@ -207,7 +207,7 @@ var initApp = (function(app) {
 
 	/*
 	 * Checks and sets active settings selections
-	 *DOC: ?
+	 * DOC: ?
 	 */
 	/*app.indicateSelections = function () {
 
