@@ -550,12 +550,12 @@ aside.left-panel ($nav-width, $nav-background)
 /* main navigation */
 /* left panel */
 $nav-background:									desaturate($primary-900, 7%) !default;
-$nav-background-shade:            rgba(desaturate($info-500, 15%), 0.2) !default;                  
+$nav-background-shade:            rgba(desaturate($info-500, 15%), 0.18) !default;                  
 $nav-base-color:									lighten($nav-background, 7%) !default;
 $nav-width:											  16.25rem !default; 
 
 /* nav parent level-0 */
-$nav-link-color: 									lighten($nav-base-color, 45%) !default;
+$nav-link-color: 									lighten($nav-base-color, 28%) !default;
 $nav-font-link-size: 							$fs-base + 1 !default;
 $nav-collapse-sign-font-size:			$nav-font-link-size + 3 !default;	
 $nav-padding-left:								1.5rem !default; 
@@ -573,7 +573,7 @@ $nav-badge-color: 								$white !default;
 $nav-badge-bg-color: 							$danger-500 !default;
 
 /* all child */
-$nav-icon-color:									lighten(darken($nav-base-color, 18%),27%) !default;
+$nav-icon-color:									lighten(darken($nav-base-color, 15%),27%) !default;
 $nav-icon-hover-color:						lighten(desaturate($color-primary, 30%), 10%) !default;
 
 /* nav title */

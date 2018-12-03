@@ -3,6 +3,7 @@
 	.nav-function-minify:not(.nav-function-top) {
 
 		/* hide elements when nav-function-minify */
+
 		.hidden-nav-function-minify {
 			display: none !important;
 		}
@@ -18,13 +19,20 @@
 
 			.logo {
 
-				//background:$nav-minify-logo-bg;
 				width:$nav-minify-width;
 				padding: 0;
 				justify-content: center;
+
+				.logo-link {
+					flex: none;
+				}
 							
 				.logo-text {
 					display: none;
+
+					& + * {
+						display: none !important;
+					}
 				}
 			}
 
@@ -37,6 +45,8 @@
 					padding: $header-height/3.4 0;
 					text-align:center;
 					overflow: hidden; 
+
+					justify-content: center;
 
 					.profile-image + div {
 						position: absolute;
@@ -72,6 +82,25 @@
 					margin:0;
 
 					li {
+						
+						&.active {
+							&.open > a:before {
+								content: '\f413';
+								font-family: 'nextgen-icons';
+								position: absolute;
+								top: calc(50% - 5px);
+								right: 11px;
+								font-size: 7px;
+								height: 10px;
+								width: auto;
+								color: #24b3a4;
+								display: flex;
+								align-content: center;
+								align-items: center;
+							}
+						}
+
+
 						ul {
 							.dl-ref {
 								display:none !important;

@@ -45,6 +45,8 @@
 		align-items: center;
 		justify-content: center;
 
+		color: $primary-400;
+
 		> [class*='fa-'],
 		>.#{$cust-icon-prefix} {
 			font-size: $nav-collapse-sign-font-size;
@@ -92,16 +94,24 @@
 
 			/* arrow that appears next to active/selected items */
 			&:not(.open) > a:before {
-				content: '';
+				content: '\f413';
+				font-family: 'nextgen-icons';
 				position: absolute;
-				top: calc(50% - 0.6875rem);
-				right: -1px;
-				width: 0;
+				top: calc(50% - 5px);
+				right: 11px;
+				font-size: 7px;
+				height: 10px;
+				width: auto;
+				color: #24b3a4;
+				display: flex;
+				align-content: center;
+				align-items: center;
+				/*width: 0;
 				height: 0;
 				border-left: 0.5rem solid transparent;
 				border-right: 0.5rem solid $page-bg;
 				border-bottom: 0.6875rem solid transparent;
-				border-top: 0.6875rem solid transparent;
+				border-top: 0.6875rem solid transparent;*/
 			}
 		}
 
@@ -237,7 +247,7 @@
 			li {
 
 				a {
-					color: $nav-link-color;
+					color: darken($nav-link-color, 5%);
 
 					padding: 0.75rem $nav-padding-right 0.75rem $nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.03125rem;
 					//font-size: rem($nav-font-link-size);
@@ -329,7 +339,7 @@
 						}
 
 						a {
-							color: $nav-link-color;
+							color: darken($nav-link-color, 7%);
 							padding: 0.75rem $nav-padding-right 0.75rem ($nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.03125rem + 1.25rem);
 
 							.dl-ref {
