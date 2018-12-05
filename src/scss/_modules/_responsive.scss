@@ -47,8 +47,18 @@ $grid-breakpoints: (
 
 @media only screen and ( max-width: $mobile-breakpoint-size ){
 
-	html {
+	//casuing some issues so disabled it.
+	/*html {
 		font-size: 18px;
+	}*/
+
+	.mobile.mobile-view-activated {
+		header {
+			.dropdown-item-menu.float-sm-left {
+				right:0px;
+				z-index: 1;
+			}
+		}
 	}
 
 	body {
