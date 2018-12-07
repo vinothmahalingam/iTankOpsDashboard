@@ -1,84 +1,87 @@
 <header class="page-header" role="banner">
-		
-	<ul id="hdr-l" class="list-table">
-		<!-- DOC: dropdown / shortcuts -->
-		<li class="hidden-md-down dropdown-icon-menu">
-			<a href="#" class="btn no-ripple cursor default" data-action="toggle" data-class="nav-function-hidden" title="Hide Navigation">
-				<i class="ni ni-menu"></i>
-			</a>
-			<ul>
-				<li>
-					<a href="#" class="btn no-ripple cursor default" data-action="toggle" data-class="nav-function-minify" title="Minify Navigation">
-						<i class="ni ni-minify-nav"></i>
-					</a>
-				</li>
-				<li>
-					<a href="#" class="btn no-ripple cursor default" data-action="toggle" data-class="nav-function-fixed" title="Lock Navigation">
-						<i class="ni ni-lock-nav"></i>
-					</a>
-				</li>
-			</ul>
-		</li>
-		<!-- DOC: mobile button appears during mobile width -->
-		<li class="hidden-lg-up">
-			<a href="#" class="btn press-scale-down" data-action="toggle" data-class="mobile-nav-on">
-				<i class="ni ni-menu"></i>
-			</a>
-		</li>
-		<!-- app search field -->
-		<li class="search">
-			<form class="app-forms hidden-xs-down" role="search" action="search-results.html" autocomplete="off">
-				<i class="fa fa-search d-none"></i>
-				<input type="text" id="search-field" placeholder="Search for anything" class="form-control" tabindex="1">
-				<a href="#" onclick="return false;" class="btn-primary btn-search-close no-ripple d-none" data-action="toggle" data-class="mobile-search-on">
-					<i class="fa fa-close"></i>
+
+	<!-- DOC: nav menu layout change shortcut -->
+	<div class="hidden-md-down dropdown-icon-menu position-relative">
+		<a href="#" class="header-btn btn no-ripple cursor default" data-action="toggle" data-class="nav-function-hidden" title="Hide Navigation">
+			<i class="ni ni-menu"></i>
+		</a>
+		<ul>
+			<li>
+				<a href="#" class="btn no-ripple cursor default" data-action="toggle" data-class="nav-function-minify" title="Minify Navigation">
+					<i class="ni ni-minify-nav"></i>
 				</a>
-			</form>
-		</li>
-	</ul>
-	
-	<ul id="hdr-r" class="list-table">
-		<!-- activate app search field (mobile) -->
-		<li class="hidden-sm-up">
-			<a href="#" data-action="toggle" data-class="mobile-search-on" data-focus="search-field" title="Search">
+			</li>
+			<li>
+				<a href="#" class="btn no-ripple cursor default" data-action="toggle" data-class="nav-function-fixed" title="Lock Navigation">
+					<i class="ni ni-lock-nav"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+		
+	<!-- DOC: mobile button appears during mobile width -->
+	<div class="hidden-lg-up">
+		<a href="#" class="header-btn btn press-scale-down" data-action="toggle" data-class="mobile-nav-on">
+			<i class="ni ni-menu"></i>
+		</a>
+	</div>
+
+	<div class="search">
+		<form class="app-forms hidden-xs-down" role="search" action="search-results.html" autocomplete="off">
+			<i class="fa fa-search d-none"></i>
+			<input type="text" id="search-field" placeholder="Search for anything" class="form-control" tabindex="1">
+			<a href="#" onclick="return false;" class="btn-danger btn-search-close no-ripple d-none" data-action="toggle" data-class="mobile-search-on">
+				<i class="fal fa-times"></i>
+			</a>
+		</form>
+	</div>
+
+	<div class="ml-auto d-flex">
+		
+		<!-- activate app search icon (mobile) -->
+		<div class="hidden-sm-up">
+			<a href="#" class="header-icon" data-action="toggle" data-class="mobile-search-on" data-focus="search-field" title="Search">
 				<i class="fal fa-search text-gradient"></i>
 			</a>
-		</li>
+		</div>
+
 		<!-- app settings -->
-		<li class="hidden-md-down">
-			<a href="#" data-toggle="modal" data-target=".js-modal-settings">
+		<div class="hidden-md-down">
+			<a href="#" class="header-icon" data-toggle="modal" data-target=".js-modal-settings">
 				<i class="fal fa-cog text-gradient"></i>
 			</a>
-		</li>
+		</div>	
+
 		<!-- app shortcuts -->
-		<li>
-			<a href="#" data-toggle="dropdown" title="My Apps" class="no-ripple">
+		<div>
+			<a href="#" class="header-icon" data-toggle="dropdown" title="My Apps" class="no-ripple">
 				<i class="fal fa-cube text-gradient"></i>
 			</a>
 			<div class="dropdown-menu dropdown-menu-animated w-auto h-auto">
 				{{> include/_dropdown-app}}
 			</div>
-		</li>
+		</div>
+
 		<!-- app message -->
-		<li>
-			<a href="#" data-toggle="modal" data-target=".js-modal-messenger">
-				<i class="fal fa-globe text-gradient"></i>
-				<span class="badge badge-header">!</span>
-			</a>
-		</li>		
+		<a href="#" class="header-icon" data-toggle="modal" data-target=".js-modal-messenger">
+			<i class="fal fa-globe text-gradient"></i>
+			<span class="badge badge-header">!</span>
+		</a>
+			
 		<!-- app notification -->
-		<li>
-			<a href="#" data-toggle="dropdown" title="You got 11 notifications" class="no-ripple">
+		<div>
+			<a href="#" class="header-icon" data-toggle="dropdown" title="You got 11 notifications">
 				<i class="fal fa-bell text-gradient"></i>
 				<span class="badge badge-header">11</span>
 			</a>
 			<div class="dropdown-menu dropdown-menu-animated dropdown-xl p-0 h-auto">
 				{{> include/_dropdown-notification}}
 			</div>
-		</li>
+		</div>
+
 		<!-- app user menu -->
-		<li>
-			<a href="#" data-toggle="dropdown" title="{{email}}" class="no-ripple d-flex align-items-center justify-content-center ml-2">
+		<div>
+			<a href="#" data-toggle="dropdown" title="{{email}}" class="header-icon d-flex align-items-center justify-content-center ml-2">
 				<img src="img/{{avatar}}" class="profile-image rounded-circle" alt="{{user}}"> 
 				<!-- you can also add username next to the avatar with the codes below:
 				<span class="ml-1 mr-1 text-truncate text-truncate-header hidden-xs-down">Me</span>
@@ -87,7 +90,8 @@
 			<div class="dropdown-menu dropdown-menu-animated dropdown-lg p-0">
 				{{> include/_dropdown-menu}}
 			</div>
-		</li>
-	</ul>
+		</div>
+
+	</div>
 
 </header>
