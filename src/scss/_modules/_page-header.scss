@@ -28,18 +28,6 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 0.2
 	}
 }
 
-.header-btn {
-	@extend %header-btn;
-
-	&[data-class='mobile-nav-on'] {
-		border-color: $danger-700;
-		@include gradient-img($start: $danger-600,$stop: $danger-800);
-		color:$white;
-		width: $header-btn-width + 0.625rem;
-	}
-
-}
-
 .header-icon {		
 	color: $base-text-color;
 	height: $header-height;
@@ -153,7 +141,6 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 0.2
 		color:$header-link-hover-color;
 	}
 }
-
 
 .page-header {
 	background-color: $header-bg;

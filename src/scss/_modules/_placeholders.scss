@@ -1,7 +1,7 @@
 /* PLACEHOLDER 
-============================================= */
+============================================= 
 
-/*
+EXAMPLE:
 
 %bg-image {
     width: 100%;
@@ -25,6 +25,12 @@ RESULT:
 }
 
 */
+
+%nav-bg {
+  background-image: -webkit-linear-gradient(270deg, $nav-background-shade, transparent);
+  background-image: linear-gradient(270deg, $nav-background-shade, transparent); 
+  background-color: $nav-background;
+}
 
 %shadow-hover {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 0 2px rgba(0,0,0,0.24);

@@ -83,6 +83,19 @@
 	height: 20px;
 }
 
+/* buttons used in the header section of the page */
+.header-btn {
+	@extend %header-btn;
+
+	&[data-class='mobile-nav-on'] {
+		border-color: $danger-700;
+		@include gradient-img($start: $danger-600,$stop: $danger-800);
+		color:$white;
+		width: $header-btn-width + 0.625rem;
+	}
+
+}
+
 /* btn widths */
 .btn-w-m {
 	min-width: 85px;

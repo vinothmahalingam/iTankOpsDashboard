@@ -16,13 +16,6 @@
 			margin-top: $header-height;
 		}
 
-
-		/*&.nav-function-fixed {
-			.logo {
-				border-bottom-width: 0;
-			}
-		}*/
-
 		&:not(.nav-function-fixed) {
 
 			.logo {
@@ -82,14 +75,6 @@
 					padding-top: $header-height + $nav-top-height;
 				}
 
-				/*&.nav-function-minify {
-					.page-header {
-						top: $nav-top-minify-height;
-					}
-					.page-wrapper {
-						padding-top: $header-height + $nav-top-minify-height;
-					}
-				}*/
 			}
 		}
 	}

@@ -1,4 +1,4 @@
-
+//why do we need this? we just changed to flex...
 .search{
 
 	.app-forms {
@@ -29,12 +29,8 @@
 
 @include media-breakpoint-up(xl) {
 
-	/*.search{
-		.app-forms {*/
-			#search-field {
-				width: $header-search-width;
-			}
-	/*	}
-	}*/
+	#search-field {
+		width: $header-search-width;
+	}
 
 }
