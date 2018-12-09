@@ -1,17 +1,7 @@
 /* modal shadow */
 .modal-content {
   box-shadow: 0 0 20px 0 rgba($black, 0.2); 
-  //box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2), 0px 24px 38px 3px rgba(0,0,0,0.14), 0px 9px 46px 8px rgba(0,0,0,0.12);
 }
-
-/*.modal-dialog-top,
-.modal-dialog-right,
-.modal-dialog-bottom,
-.modal-dialog-left {
-  .modal-content {
-    box-shadow: 0 0 20px 0 rgba($black, 0.2); 
-  }
-}*/
 
 /* adjustments */
 .modal-dialog {
@@ -22,16 +12,12 @@
 
 /* transparent modal */
 .modal-bg-transparent {
-
 	.modal-content {
 		box-shadow: 0 1px 15px 1px rgba($primary-900, 0.3);
 	}
-
 	.modal-content {
 		background: rgba(desaturate(darken($primary-800, 25%), 20%), 0.85); 
-
 	}
-
 }
 
 /* transparent backdrop */
@@ -49,7 +35,6 @@
     border-width: 0;
   }
 
-
 	.modal-dialog {
 		max-width: unquote("calc(100vw - 40px)");
 		max-height: unquote("calc(100vh - 80px)");
@@ -58,7 +43,7 @@
 			height: unquote("calc(100vh - 80px)");
 		}
 	}
-	
+
 }
 
 
@@ -98,12 +83,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  // stylelint-disable-next-line declaration-no-important
   margin: 0 !important;
 
   .modal-content {
     min-height: 100%;
-    //border-width: 0 $modal-content-border-width 0 0;
     border-width: 0;
     border-radius: 0;
   }
@@ -120,17 +103,13 @@
   right: 0;
   width: 100%;
   height: 100%;
-  // stylelint-disable-next-line declaration-no-important
   margin: 0 !important;
-
   border-width: 0px;
 
   .modal-content {
     min-height: 100%;
-    //border-width: 0 0 0 $modal-content-border-width;
     border-width: 0;
     border-radius: 0;
-    //box-shadow: 0 0 20px 0 rgba(0,0,0,.2);
   }
 
   .modal.fade & {
