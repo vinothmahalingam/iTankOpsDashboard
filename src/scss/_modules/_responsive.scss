@@ -79,14 +79,6 @@ $grid-breakpoints: (
 
 			background: #f1f1f1;
 			border-bottom: 1px solid #e5e5e5;
-
-			#hdr-l {
-				> .search {
-					#search-field {
-						width:100%;
-					}
-				}
-			}
 		}
 
 		.left-panel {
@@ -414,13 +406,9 @@ $grid-breakpoints: (
 
 	.page-header {
 
-		ul.list-table {
-			> li {
-				> a:not(.btn)[data-toggle="dropdown"] + .dropdown-menu {
-					width: calc(100% - #{$grid-gutter-width-base / 1.5}) !important;
-					right: $grid-gutter-width-base / 3 !important;
-				}
-			}
+		[data-toggle="dropdown"] + .dropdown-menu {
+			width: calc(100% - #{$grid-gutter-width-base / 1.5}) !important;
+			right: $grid-gutter-width-base / 3 !important;
 		}
 	}
 
