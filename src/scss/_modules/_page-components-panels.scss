@@ -23,9 +23,6 @@
 		border: 1px solid transparent;
 		border-top-width: 0;
 
-    	//border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.17) rgba(0, 0, 0, 0.2);
-    	//border-top-width: 0px;
-
     	border-radius: 0 0 $panel-edge-radius $panel-edge-radius;
 
 		&:only-child {
@@ -113,17 +110,23 @@
 			font-weight: bold;
 		}
 
-		h2:before {
-			font-family: 'nextgen-icons';
-			content: "\f2ae";
-			position: absolute;
-			top: -2px;
-			right: -10px;
-			font-size: 1.1rem;
-			color: inherit;
-			border-radius: 50%;
-			padding: 1px 5px 2px;
+		.panel-hdr {
+			&:active {
+
+				h2:before {
+					font-family: 'nextgen-icons';
+					content: "\f2ae";
+					position: absolute;
+					top: -2px;
+					right: -10px;
+					font-size: 1.1rem;
+					color: $danger-500;
+					border-radius: 50%;
+					padding: 1px 5px 2px;
+				}
+			}
 		}
+
 	}
 
 	&.ui-sortable-helper {
@@ -144,11 +147,14 @@
 	@extend %common-animation-easeout;
 	@include box-sizing(border-box); 
 	border: 1px solid transparent;
-	//border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 	border-bottom: 0px;
-	box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.07);
+	box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
 	border-radius: $panel-edge-radius $panel-edge-radius 0 0;
 
+
+	.panel-collapse & {
+		border-radius: $panel-edge-radius;
+	}
 	
 	/* add padding to first and last child */
 	> :first-child {
@@ -199,30 +205,16 @@
 .panel-sortable:not(.panel-locked) {
 	.panel-hdr {
 		&:active {
-			border-top-color: $primary-300;
-			border-left-color: $primary-500;
-			border-right-color: $primary-500;
+			border-top-color: rgba($primary-300, 0.7);
+			border-left-color: rgba($primary-500, 0.7);
+			border-right-color: rgba($primary-500, 0.7);
 
 			& + .panel-container {
-				border-color: transparent $primary-500 $primary-600;
+				border-color: transparent rgba($primary-500, 0.7) rgba($primary-600, 0.7);
 			}
 		}
 	}
 }
-
-/*.ui-sortable-helper.panel-sortable:not(.panel-locked) {
-	.panel-hdr {
-		&:active {
-			border-top-color: $success-300;
-			border-left-color: $success;
-			border-right-color: $success;
-
-			& + .panel-container {
-				border-color: transparent $success $success;
-			}
-		}
-	}
-}*/	
 
 .panel-sortable.panel-locked {
 	.panel-hdr {
@@ -264,7 +256,7 @@
 		/* add default colors for action buttons */
 		&[data-action="panel-collapse"],
 		&.js-panel-collapse {
-			background: $fusion-50;
+			background: $success-500;
 		}
 
 		&[data-action="panel-fullscreen"],
@@ -276,6 +268,17 @@
 		&.js-panel-close {
 			background: $danger-500;
 		}
+
+		/*&:after {
+			content: "";
+			position: absolute;
+			border: 1px solid rgba($white, 0.6);
+			border-radius: 50%;
+			width: calc(100% + 2px);
+			height: calc(100% + 2px);
+			right: -1px;
+			top: -1px;
+		}*/
 
 	}
 
@@ -314,17 +317,7 @@
 	cursor: move;
 }
 
-/* panel placeholder */
-/*.panel-placeholder {
-	background-color: #FFC;
-    border: 1px dashed #A7A7A7;
-	box-sizing: border-box;
-	margin-bottom: $grid-gutter-width - 2px;
-	border-radius: $border-radius + 1;
-	position: relative;
-	box-shadow: inset 2px 2px 3px rgba(0,0,0,0.1), inset 0 0 0 1px rgba(0,0,0,0.02)
-}*/
-
+/* placeholder */
 .panel-placeholder {
 	background-color: $panel-placeholder-color;
 	box-sizing: border-box;

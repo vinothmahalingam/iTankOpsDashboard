@@ -66,9 +66,9 @@
 }
 
 @mixin transition-duration($duration: 0.2s) {
-    //-moz-transition-duration:$duration;
-    //-webkit-transition-duration:$duration;
-    //-o-transition-duration:$duration;
+    -moz-transition-duration:$duration;
+    -webkit-transition-duration:$duration;
+    -o-transition-duration:$duration;
     transition-duration:$duration
 }
 
@@ -87,9 +87,9 @@
 }
 
 @mixin transition($duration:0.2s,$ease:ease-out) {
-    //-webkit-transition:all $duration $ease;
-    //-moz-transition:all $duration $ease;
-    //-o-transition:all $duration $ease;
+    -webkit-transition:all $duration $ease;
+    -moz-transition:all $duration $ease;
+    -o-transition:all $duration $ease;
     transition:all $duration $ease
 }
 
@@ -101,22 +101,22 @@
 }
 
 @mixin transition-background-color($duration:0.2s,$ease:ease) {
-    //-webkit-transition:background-color $duration $ease;
-    //-moz-transition:background-color $duration $ease;
-    //-o-transition:background-color $duration $ease;
+    -webkit-transition:background-color $duration $ease;
+    -moz-transition:background-color $duration $ease;
+    -o-transition:background-color $duration $ease;
     transition:background-color $duration $ease
 }
 
 @mixin transition-fill($duration:0.2s,$ease:ease) {
-    //-webkit-transition:fill $duration $ease;
-    //-moz-transition:fill $duration $ease;
-    //-o-transition:fill $duration $ease;
+    -webkit-transition:fill $duration $ease;
+    -moz-transition:fill $duration $ease;
+    -o-transition:fill $duration $ease;
     transition:fill $duration $ease
 }
 
 @mixin inner-shadow($horizontal:0,$vertical:1px,$blur:2px,$alpha: 0.4) {
-    //-webkit-box-shadow:inset $horizontal $vertical $blur rgba(0,0,0,$alpha);
-    //-moz-box-shadow:inset $horizontal $vertical $blur rgba(0,0,0,$alpha);
+    -webkit-box-shadow:inset $horizontal $vertical $blur rgba(0,0,0,$alpha);
+    -moz-box-shadow:inset $horizontal $vertical $blur rgba(0,0,0,$alpha);
     box-shadow:inset $horizontal $vertical $blur rgba(0,0,0,$alpha)
 }
 
@@ -334,6 +334,16 @@ Color brightness is determined by the following formula:
 
     .#{$class-element} .btn-switch[data-class="#{$class-element}"] {
       @extend %set-settings;
+    }
+
+}
+
+//mixen for settings side buttons
+@mixin paint-gradient($paint: $fusion-500, $make:bg-fusion-gradient) {
+
+    .#{$make} {
+      background-image: -webkit-linear-gradient(250deg, rgba($paint, 0.7), transparent);
+      background-image: linear-gradient(250deg, rgba($paint, 0.7), transparent);
     }
 
 }

@@ -374,7 +374,7 @@
                         colorButton = ' <div class="dropdown-item d-flex align-items-center">\
                                             <span data-i18n="drpdwn.panelcolor">' + self.o.colorButtonLabel + '</span>\
                                             <i class="ni ni-chevron-right ml-auto"></i>\
-                                            <div class="dropdown-item-menu float-sm-left d-flex flex-wrap" style="width: 6rem;">' + formatedPanelColors.join(" ") + '</div>\
+                                            <div class="dropdown-item-menu float-sm-left d-flex flex-wrap" style="width: 8rem;">' + formatedPanelColors.join(" ") + '</div>\
                                         </div>'
                     } else {
                         colorButton = '';
@@ -924,16 +924,22 @@
             if (myapp_config.debugState)
                 console.log($(this).closest(".panel").attr('id') + " onColor")
         },
-        panelColors: ['bg-primary-300',
-                      'bg-primary-500',
-                      'bg-primary-700',
-                      'bg-fusion-200',
-                      'bg-fusion-500',
-                      'bg-fusion-700',
-                      'dropdown-header-bg',
-                      'bg-faded',
-                      'bg-offwhite-fade',
-                      'bg-white'],
+        panelColors: ['bg-primary-200 bg-primary-gradient',
+                      'bg-primary-300 bg-primary-gradient',
+                      'bg-primary-500 bg-primary-gradient',
+                      'bg-primary-700 bg-success-gradient',
+                      'bg-info-200 bg-info-gradient',
+                      'bg-info-300 bg-info-gradient',                      
+                      'bg-info-500 bg-info-gradient',
+                      'bg-info-700 bg-primary-gradient',
+                      'bg-success-200 bg-success-gradient',
+                      'bg-success-300 bg-success-gradient',                      
+                      'bg-success-500 bg-success-gradient',
+                      'bg-success-700 bg-danger-gradient',
+                      'bg-fusion-200 bg-fusion-gradient',
+                      'bg-fusion-300 bg-fusion-gradient',                      
+                      'bg-fusion-500 bg-fusion-gradient',
+                      'bg-fusion-700 bg-fusion-gradient'],
         resetButton: true,
         resetButtonLabel: "Reset Panel",
         onReset: function() {

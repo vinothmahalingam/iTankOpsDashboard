@@ -122,10 +122,16 @@ ul.list-verticle {
 }*/
 
 
-.dropdown-header {
+.dropdown-header,
+.bg-dropdown-header {
 	background: -webkit-linear-gradient(250deg, desaturate($info-500, 25%), desaturate($primary-500, 10%));
 	background: linear-gradient(250deg, desaturate($info-500, 25%), desaturate($primary-500, 10%));
 	padding: 1.25rem 1.5rem;
+}
+
+.bg-dropdown-header {
+	padding: inherit;
+	color: $white;
 }
 
 .dropdown-item {

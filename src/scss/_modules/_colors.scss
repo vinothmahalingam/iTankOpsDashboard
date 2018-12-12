@@ -139,3 +139,11 @@
 //white
 @include brush($white, color-white);
 @include brush(lighten($black, 13.5%), color-black);
+
+
+@include paint-gradient($primary-900, bg-primary-gradient);
+@include paint-gradient($danger-900, bg-danger-gradient);
+@include paint-gradient($info-900, bg-info-gradient);
+@include paint-gradient($warning-900, bg-warning-gradient);
+@include paint-gradient($success-900, bg-success-gradient);
+@include paint-gradient($fusion-900, bg-fusion-gradient);
