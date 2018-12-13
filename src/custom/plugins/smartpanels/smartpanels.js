@@ -282,7 +282,7 @@
             if (self.o.panelColors && self.o.colorButton) {
                 var formatedPanelColors = [];
                 for (var key in self.o.panelColors) {
-                    formatedPanelColors.push('<a href="#" class="btn d-inline-block '+ self.o.panelColors[key] +' width-3 height-3 p-0 rounded-0 js-panel-color hover-effect-dot" data-panel-setstyle="'+ self.o.panelColors[key] +'"></a>');
+                    formatedPanelColors.push('<a href="#" class="btn d-inline-block '+ self.o.panelColors[key] +' width-3 height-3 p-0 rounded-0 js-panel-color hover-effect-dot" data-panel-setstyle="'+ self.o.panelColors[key] +'" style="margin:1px;"></a>');
                 }
             }
 
@@ -374,7 +374,7 @@
                         colorButton = ' <div class="dropdown-item d-flex align-items-center">\
                                             <span data-i18n="drpdwn.panelcolor">' + self.o.colorButtonLabel + '</span>\
                                             <i class="ni ni-chevron-right ml-auto"></i>\
-                                            <div class="dropdown-item-menu float-sm-left d-flex flex-wrap" style="width: 8rem;">' + formatedPanelColors.join(" ") + '</div>\
+                                            <div class="dropdown-item-menu float-sm-left d-flex flex-wrap" style="width: 9.5rem; padding: 0.5rem">' + formatedPanelColors.join(" ") + '</div>\
                                         </div>'
                     } else {
                         colorButton = '';
@@ -924,22 +924,18 @@
             if (myapp_config.debugState)
                 console.log($(this).closest(".panel").attr('id') + " onColor")
         },
-        panelColors: ['bg-primary-200 bg-primary-gradient',
-                      'bg-primary-300 bg-primary-gradient',
-                      'bg-primary-500 bg-primary-gradient',
-                      'bg-primary-700 bg-success-gradient',
-                      'bg-info-200 bg-info-gradient',
-                      'bg-info-300 bg-info-gradient',                      
-                      'bg-info-500 bg-info-gradient',
-                      'bg-info-700 bg-primary-gradient',
-                      'bg-success-200 bg-success-gradient',
-                      'bg-success-300 bg-success-gradient',                      
-                      'bg-success-500 bg-success-gradient',
-                      'bg-success-700 bg-danger-gradient',
-                      'bg-fusion-200 bg-fusion-gradient',
-                      'bg-fusion-300 bg-fusion-gradient',                      
-                      'bg-fusion-500 bg-fusion-gradient',
-                      'bg-fusion-700 bg-fusion-gradient'],
+        panelColors: ['bg-primary-700 bg-success-gradient',
+                      'bg-primary-500 bg-info-gradient',
+                      'bg-primary-600 bg-primary-gradient',
+                      'bg-info-600 bg-primray-gradient',                      
+                      'bg-info-600 bg-info-gradient',
+                      'bg-info-700 bg-success-gradient',
+                      'bg-success-900 bg-info-gradient',
+                      'bg-success-700 bg-primary-gradient', 
+                      'bg-success-600 bg-success-gradient',                                 
+                      'bg-danger-900 bg-info-gradient',
+                      'bg-fusion-400 bg-fusion-gradient', 
+                      'bg-faded'],
         resetButton: true,
         resetButtonLabel: "Reset Panel",
         onReset: function() {
