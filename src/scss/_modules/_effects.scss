@@ -29,7 +29,9 @@
 
 /* press animation */
 .press-scale-down {
-	transition: transform 0.2s ease;
+	//transition: transform 0.2s ease;
+
+	@include transition (0.2s,ease)
 
 	&:active {
 		@include scale(0.95);

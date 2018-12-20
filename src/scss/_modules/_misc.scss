@@ -69,6 +69,15 @@ ul.list-verticle {
 		width: $dropdown-xl-width;
 		height: $dropdown-xl-height;
 	}	
+
+	.dropdown-item {
+
+		&:first-child,
+		&:last-child {
+			@include border-radius(0px);
+		}
+
+	}
 }
 
 .show {

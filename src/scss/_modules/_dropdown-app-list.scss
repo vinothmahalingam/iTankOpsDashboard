@@ -25,9 +25,17 @@
 	outline: none;
 	@include rounded($border-radius - 1);
 	padding-top: 8px;
+
+	border-radius: 100%;
 	
+
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
 	.icon-stack {
 		font-size: $header-applist-icon-size;
+		margin-top:4px;
 	}
 
 	&:hover {
@@ -52,14 +60,9 @@
 
 .app-list-name {
 	text-align: center;
-	display: block;
 	font-size: rem($fs-base);
 	text-overflow: ellipsis;
-	display: inline-block;
+	display: block;
 	white-space: nowrap;
 	overflow: hidden;
-	position: absolute;
-	bottom:7px;
-	left:0;
-	right:0;
 }

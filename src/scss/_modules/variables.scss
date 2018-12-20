@@ -316,15 +316,27 @@ $tooltip-arrow-height:              5px;
 /* dropdowns */
 $dropdown-border-width:             $theme-border-utility-size; 
 $dropdown-item-padding-y:           .75rem;
-$dropdown-item-padding-x:           1.5rem;      
+$dropdown-item-padding-x:           1.5rem; 
+$dropdown-link-active-bg:           $primary-500;     
 
 /* modal */
-$modal-header-padding:              1.25rem;
+$modal-header-padding-y:            1.25rem;
+$modal-header-padding-x:            1.25rem;
+$modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
 $modal-inner-padding:               1.25rem;
 $modal-backdrop-opacity:            0.2;
 $modal-content-border-color:        transparent;
 $modal-header-border-width:         0px;
 $modal-footer-border-width:         0px;
+
+/*$modal-xl:                          1140px !default;
+$modal-lg:                          800px !default; 
+$modal-md:                          500px !default; 
+$modal-sm:                          300px !default;*/
+
+/*$modal-fade-transform:              translate(0, -50px) !default;
+$modal-show-transform:              none !default;
+$modal-transition:                  transform .3s ease-out !default;  */
 
 /* reference guide
 http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/
