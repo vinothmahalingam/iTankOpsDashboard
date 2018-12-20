@@ -15,52 +15,189 @@
 
 <div class="row">
 
-	<div class="col-md-12 col-xl-6">
+	<div class="col-lg-12">
 
 		<div class="card mb-g">
 
 			<div class="card-body">
 
 				<h4 class="mb-g">
-					Basic <span class="fw-300">Example</span> 
+					Enable <span class="fw-300">flex behaviors </span> 
 					<small>
-						The most basic example
+						Apply <code>display</code> utilities to create a flexbox container and transform <strong>direct children elements</strong> into flex items. Flex containers and items are able to be modified further with additional flex properties.
 					</small>
 				</h4>
 
 				<h5 class="frame-heading">
-					Wrap a series of buttons with <code>.btn</code> in <code>.btn-group</code>.
+					<code>div class="d-flex p-2 bd-highlight">I'm a flexbox container! /div></code>
 				</h5>
-
 				<div class="frame-wrap">
-					a
+					<div class="d-flex p-2 bd-highlight">I'm a flexbox container!</div>
+				</div>
+				
+				<h5 class="frame-heading">
+					<code>div class="d-flex p-2 bd-highlight">I'm a flexbox container! /div></code>
+				</h5>
+				<div class="frame-wrap">
+					<div class="d-inline-flex p-2 bd-highlight">I'm an inline flexbox container!</div>
 				</div>
 
 			</div>
 			
 		</div>
 	
-	
-	</div>
+		<div class="card mb-g">
 
-	<div class="col-md-12 col-xl-6">
+			<div class="card-body">
+
+				<h4 class="mb-g">
+					Direction
+					<small>
+						Set the direction of flex items in a flex container with direction utilities. In most cases you can omit the horizontal class here as the browser default is row. However, you may encounter situations where you needed to explicitly set this value (like responsive layouts).
+					</small>
+				</h4>
+
+
+				<h5 class="frame-heading">
+					Use .flex-row to set a horizontal direction (the browser default), or .flex-row-reverse to start the horizontal direction from the opposite side.
+
+				</h5>
+
+				<div class="frame-wrap">
+					<div class="d-flex flex-row bd-highlight mb-3">
+					  <div class="p-2 bd-highlight">Flex item 1</div>
+					  <div class="p-2 bd-highlight">Flex item 2</div>
+					  <div class="p-2 bd-highlight">Flex item 3</div>
+					</div>
+
+					<div class="d-flex flex-row-reverse bd-highlight">
+					  <div class="p-2 bd-highlight">Flex item 1</div>
+					  <div class="p-2 bd-highlight">Flex item 2</div>
+					  <div class="p-2 bd-highlight">Flex item 3</div>
+					</div>
+				</div>
+
+				<h5 class="frame-heading">
+					Use <code>.flex-column</code> to set a vertical direction, or <code>.flex-column-reverse</code>  to start the vertical direction from the opposite side.
+				</h5>
+
+				<div class="frame-wrap">
+					<div class="d-flex flex-column bd-highlight mb-3">
+					  <div class="p-2 bd-highlight">Flex item 1</div>
+					  <div class="p-2 bd-highlight">Flex item 2</div>
+					  <div class="p-2 bd-highlight">Flex item 3</div>
+					</div>
+					<div class="d-flex flex-column-reverse bd-highlight">
+					  <div class="p-2 bd-highlight">Flex item 1</div>
+					  <div class="p-2 bd-highlight">Flex item 2</div>
+					  <div class="p-2 bd-highlight">Flex item 3</div>
+					</div>
+				</div>
+
+			</div>
+			
+		</div>
 
 		<div class="card mb-g">
 
 			<div class="card-body">
 
 				<h4 class="mb-g">
-					Basic <span class="fw-300">Alerts</span> 
+					Justify <span class="fw-300">Content</span> 
 					<small>
-						Contextual minimalistic alerts
+						<code>justify-content</code> utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis to start, y-axis if <code>flex-direction: column</code>). Choose from <code>start</code> (browser default), <code>end</code>, <code>center</code>, <code>between</code>, or <code>around</code>.
 					</small>
 				</h4>
 
 
+				<h5 class="frame-heading">
+					Use .flex-row to set a horizontal direction (the browser default), or .flex-row-reverse to start the horizontal direction from the opposite side.
+
+				</h5>
+
+				<div class="frame-wrap">
+
+					  <div class="d-flex justify-content-start bd-highlight mb-3">
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					  </div>
+					  <div class="d-flex justify-content-end bd-highlight mb-3">
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					  </div>
+					  <div class="d-flex justify-content-center bd-highlight mb-3">
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					  </div>
+					  <div class="d-flex justify-content-between bd-highlight mb-3">
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					  </div>
+					  <div class="d-flex justify-content-around bd-highlight">
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					  </div>
+
+				</div>
 
 			</div>
 			
 		</div>
+
+		<div class="card mb-g">
+
+			<div class="card-body">
+
+				<h4 class="mb-g">
+					Align <span class="fw-300">items</span> 
+					<small>
+						Use <code>align-items</code> utilities on flexbox containers to change the alignment of flex items on the cross axis (the y-axis to start, x-axis if <code>flex-direction: column</code>).
+					</small>
+				</h4>
+
+				<h5 class="frame-heading">
+					 Choose from <code>start</code>, <code>end</code>, <code>center</code>, <code>baseline</code>, or <code>stretch</code> (browser default).
+				</h5>
+
+				<div class="frame-wrap">
+					  <div class="d-flex align-items-start bd-highlight mb-3" style="height: 100px">
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					  </div>
+					  <div class="d-flex align-items-end bd-highlight mb-3" style="height: 100px">
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					  </div>
+					  <div class="d-flex align-items-center bd-highlight mb-3" style="height: 100px">
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					  </div>
+					  <div class="d-flex align-items-baseline bd-highlight mb-3" style="height: 100px">
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					  </div>
+					  <div class="d-flex align-items-stretch bd-highlight" style="height: 100px">
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					    <div class="p-2 bd-highlight">Flex item</div>
+					  </div>
+				</div>
+
+			</div>
+			
+		</div>
+
+	</div>
+
 
 </div>
 
