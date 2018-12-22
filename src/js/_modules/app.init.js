@@ -710,9 +710,7 @@ var initApp = (function(app) {
 		 * Waves effect (plugin has issues with IE9)
 		 * DOC: http://fian.my.id/Waves/#start 
 		 **/
-		if (/*$.fn.Waves && */myapp_config.rippleEffect /*&& !myapp_config.isMobile*/) {
-
-			/*Waves.attach('.button', ['waves-button', 'waves-float']);*/
+		if (window.Waves && myapp_config.rippleEffect) {
 
 			Waves.attach('.nav-menu a:not(.no-ripple), .btn:not(.no-ripple):not(.btn-switch), .nav-link', ['waves-themed']);
     		Waves.init();

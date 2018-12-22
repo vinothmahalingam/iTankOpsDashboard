@@ -45,12 +45,11 @@
         margin-top:-50px;
         margin-left:-50px;
         opacity: 0;
-        background: rgba(0,0,0,0.2);
-        $gradient: rgba(0,0,0,0.2) 0,rgba(0,0,0,.3) 40%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.5) 60%,rgba(255,255,255,0) 70%;
-        background: -webkit-radial-gradient($gradient);
-        background: -o-radial-gradient($gradient);
-        background: -moz-radial-gradient($gradient);
-        background: radial-gradient($gradient);
+		$bgcolor: $white;
+		background: rgba($bgcolor,0.6);
+		$gradient: rgba($bgcolor,0.3) 0,rgba($bgcolor,.4) 40%,rgba($bgcolor,.5) 50%,rgba($bgcolor,.6) 60%,rgba($bgcolor,0) 70%;
+		background: -webkit-radial-gradient($gradient);
+		background: radial-gradient($gradient);
         @include waves-transition(all 0.5s ease-out);
         -webkit-transition-property: -webkit-transform, opacity;
         -moz-transition-property: -moz-transform, opacity;
@@ -70,56 +69,31 @@
 .waves-themed {
 
 	&.btn-warning,
-	&.btn-outline-warning {
+	&.btn-default, {
 		.waves-ripple {
-			$bgcolor: darken($warning-900, 15%);
+			$bgcolor: $black;
 			background: rgba($bgcolor,0.6);
-			$gradient: rgba($bgcolor,0.2) 0,rgba($bgcolor,.3) 40%,rgba($bgcolor,.4) 50%,rgba($bgcolor,.5) 60%,rgba($bgcolor,0) 70%;
+			$gradient: rgba($bgcolor,0.1) 0,rgba($bgcolor,.2) 40%,rgba($bgcolor,.3) 50%,rgba($bgcolor,.4) 60%,rgba($bgcolor,0) 70%;
 			background: -webkit-radial-gradient($gradient);
 			background: radial-gradient($gradient);
 		}
 	}
 
+	&.btn-primary,
+	&.btn-outline-primary,
 	&.btn-info,
-	&.btn-outline-info {
-		.waves-ripple {
-			$bgcolor: darken($info-900, 15%);
-			background: rgba($bgcolor,0.6);
-			$gradient: rgba($bgcolor,0.2) 0,rgba($bgcolor,.3) 40%,rgba($bgcolor,.4) 50%,rgba($bgcolor,.5) 60%,rgba($bgcolor,0) 70%;
-			background: -webkit-radial-gradient($gradient);
-			background: radial-gradient($gradient);
-		}
-	}
-
+	&.btn-outline-info,
 	&.btn-danger,
-	&.btn-outline-danger {
-		.waves-ripple {
-			$bgcolor: darken($danger-900, 20%);
-			background: rgba($bgcolor,0.6);
-			$gradient: rgba($bgcolor,0.2) 0,rgba($bgcolor,.3) 40%,rgba($bgcolor,.4) 50%,rgba($bgcolor,.5) 60%,rgba($bgcolor,0) 70%;
-			background: -webkit-radial-gradient($gradient);
-			background: radial-gradient($gradient);
-		}
-	}
-
+	&.btn-outline-danger,
 	&.btn-success,
-	&.btn-outline-success {
-		.waves-ripple {
-			$bgcolor: darken($success-800, 15%);
-			background: rgba($bgcolor,0.6);
-			$gradient: rgba($bgcolor,0.2) 0,rgba($bgcolor,.3) 40%,rgba($bgcolor,.4) 50%,rgba($bgcolor,.5) 60%,rgba($bgcolor,0) 70%;
-			background: -webkit-radial-gradient($gradient);
-			background: radial-gradient($gradient);
-		}
-	}
-
+	&.btn-outline-success,
 	&.btn-dark,
 	&.btn-outline-default,
 	&.btn-outline-dark {
 		.waves-ripple {
 			$bgcolor: $white;
 			background: rgba($bgcolor,0.6);
-			$gradient: rgba($bgcolor,0.2) 0,rgba($bgcolor,.3) 40%,rgba($bgcolor,.4) 50%,rgba($bgcolor,.5) 60%,rgba($bgcolor,0) 70%;
+			$gradient: rgba($bgcolor,0.3) 0,rgba($bgcolor,.4) 40%,rgba($bgcolor,.5) 50%,rgba($bgcolor,.6) 60%,rgba($bgcolor,0) 70%;
 			background: -webkit-radial-gradient($gradient);
 			background: radial-gradient($gradient);
 		}
@@ -128,18 +102,21 @@
 }
 
 
-.left-panel .primary-nav .nav-menu > li > a.waves-effect.waves-themed .waves-ripple {
-	$bgcolor: darken($primary-900, 25%);
+.left-panel .primary-nav .nav-menu li  a.waves-themed .waves-ripple {
+	$bgcolor: darken($primary-800, 25%);
 	background: rgba($bgcolor,0.6);
 	$gradient: rgba($bgcolor,0.2) 0,rgba($bgcolor,.3) 40%,rgba($bgcolor,.4) 50%,rgba($bgcolor,.5) 60%,rgba($bgcolor,0) 70%;
 	background: -webkit-radial-gradient($gradient);
 	background: radial-gradient($gradient);
 }
 
-.waves-themed.nav-link .waves-ripple {
-	$bgcolor: $primary-500;
-	background: rgba($bgcolor,0.6);
-	$gradient: rgba($bgcolor,0.2) 0,rgba($bgcolor,.3) 40%,rgba($bgcolor,.4) 50%,rgba($bgcolor,.5) 60%,rgba($bgcolor,0) 70%;
-	background: -webkit-radial-gradient($gradient);
-	background: radial-gradient($gradient);
+.panel-hdr:not([class^="bg-"]):not([class*=" bg-"]) .waves-themed.btn-toolbar-master,
+.waves-themed.nav-link {
+	.waves-ripple {
+		$bgcolor: $primary-500;
+		background: rgba($bgcolor,0.6);
+		$gradient: rgba($bgcolor,0.2) 0,rgba($bgcolor,.3) 40%,rgba($bgcolor,.4) 50%,rgba($bgcolor,.5) 60%,rgba($bgcolor,0) 70%;
+		background: -webkit-radial-gradient($gradient);
+		background: radial-gradient($gradient);
+	}
 }
