@@ -609,7 +609,7 @@ var initApp = (function(app) {
 			});
 
 			if (myapp_config.debugState)
-				console.log( 'slimscroll plugin active' );
+				console.log("%c✔ SlimScroll plugin active", "color: #148f32");	
 
 		} else {
 			console.log("WARN! $.fn.slimScroll not loaded or user is on desktop");
@@ -707,22 +707,22 @@ var initApp = (function(app) {
 		});
 
 		/**
-		 * Ripple effect (plugin has issues with IE9)
-		 * Note: 'window.atob' detects if IE9+ 
-		 * ref: http://tanalin.com/en/articles/ie-version-js/
+		 * Waves effect (plugin has issues with IE9)
+		 * DOC: http://fian.my.id/Waves/#start 
 		 **/
-		if ($.fn.ripple && myapp_config.rippleEffect /*&& window.atob &&  !myapp_config.isMobile*/) {
+		if (/*$.fn.Waves && */myapp_config.rippleEffect /*&& !myapp_config.isMobile*/) {
 
-			$('.nav-menu a:not(.no-ripple), .btn:not(.no-ripple)').ripple({
-				scaleMode: false
-			});
+			/*Waves.attach('.button', ['waves-button', 'waves-float']);*/
+
+			Waves.attach('.nav-menu a:not(.no-ripple), .btn:not(.no-ripple):not(.btn-switch), .nav-link', ['waves-themed']);
+    		Waves.init();
 
 			if (myapp_config.debugState)
-				console.log("rippler active");
+				console.log("%c✔ Waves plugin active", "color: #148f32");	
 			
 		} else {
 			if (myapp_config.debugState)
-				console.log("%crippler inactive! ", "color: #ed1c24");
+				console.log("%c✘ Waves plugin inactive! ", "color: #fd3995");
 
 		}
 

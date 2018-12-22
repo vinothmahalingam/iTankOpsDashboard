@@ -30,10 +30,18 @@
 
             <div class="card-body">
 
-                <div id="app-eventlog" class="alert alert-primary p-1 h-auto mb-g"></div>
+                <div id="app-eventlog" class="alert alert-primary p-1 h-auto mb-3"></div>
 
-                <div class="d-flex mt-2">
-                    <div class="flex-1 text-left">
+                <div class="d-flex">
+
+                    <div>
+                        <div class="custom-control d-flex custom-switch">
+                            <input id="eventlog-switch" type="checkbox" class="custom-control-input" checked="checked">
+                            <label class="custom-control-label fw-500" for="eventlog-switch">Debugger Active</label>
+                        </div>
+                    </div>
+                                   
+                    <div class="flex-1 text-right">
                         <a href="#" class="btn btn-sm btn-outline-primary mr-1 ml-0" data-toggle="modal" data-target=".js-modal-settings">
                             Toggle Settings
                         </a>
@@ -41,12 +49,7 @@
                             Clear Log
                         </a>
                     </div>
-                    <div>
-                        <div class="custom-control d-flex custom-checkbox m-0">
-                            <input id="eventlog-switch" type="checkbox" class="custom-control-input" checked="checked">
-                            <label class="custom-control-label fw-500" for="eventlog-switch">Debugger Active</label>
-                        </div>
-                    </div>
+
                 </div>
             </div>
 

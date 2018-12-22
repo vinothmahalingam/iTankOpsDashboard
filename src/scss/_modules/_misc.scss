@@ -89,6 +89,15 @@ ul.list-verticle {
 	}
 }
 
+hr {
+	border: none;
+    border-bottom: 1px dashed #eee;
+
+    &.hr-xl {
+    	margin: 3rem 0;
+    }
+}
+
 .dropdown-has-arrow {
 	&:before,
 	&:after {
