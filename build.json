@@ -84,24 +84,18 @@
 					},
 					"optional": {
 						"jquery-slimscroll": {
-							"styles": [
-								"{$config.path.src}/scss/_extensions/_extension-slimscroll.scss"
-							],
 							"scripts": [
 								"{$config.path.node_modules}/jquery-slimscroll/jquery.slimscroll.js"
 							]
 						},
-						"ripple": {
-							"styles": [
-								"{$config.path.src}/legit-ripple/css/ripple.css"
-							],
+						"waves": {
 							"scripts": [
-								"{$config.path.node_modules}/legit-ripple/js/ripple.js"
+								"{$config.path.node_modules}/node-waves/dist/waves.js"
 							]
 						},
 						"smartpanels": {
 							"scripts": [
-								"{$config.path.node_modules}/custom/plugins/smartpanels/smartpanels.js"
+								"{$config.path.src}/custom/plugins/smartpanels/smartpanels.js"
 							]
 						},
 						"spinkit": {
