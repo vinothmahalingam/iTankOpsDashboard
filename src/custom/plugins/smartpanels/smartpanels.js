@@ -92,7 +92,7 @@
                     storeSettingsStr.locked = ($(this)
                         .hasClass('panel-locked') ? 1 : 0);
                     storeSettingsStr.collapsed = ($(this)
-                        .hasClass('panel-collapse') ? 1 : 0);
+                        .hasClass('panel-collapsed') ? 1 : 0);
                     return storeSettingsStr;
                 }).get();
 
@@ -262,7 +262,8 @@
                      * Toggle content panel.
                      **/
                     if (jsonSettings.panel[key].collapsed == 1) {
-                        panelId.addClass('panel-collapse');
+                        panelId.addClass('panel-collapsed')
+                            .children('.panel-container').addClass('collapse').removeClass('show');
                     }
 
                     /**
@@ -339,7 +340,7 @@
                     /**
                     * Add a collapse button to the panel header (if set to true).
                     **/
-                    if (self.o.collapseButton === true && tPanel.data('panel-collapse') === undefined) {
+                    if (self.o.collapseButton === true && tPanel.data('panel-collapsed') === undefined) {
                         collapseButton = '<a href="#" class="btn btn-panel hover-effect-dot js-panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></a>'
                     } else {
                         collapseButton = '';
@@ -466,10 +467,10 @@
                     connectWith: sortItem,
                     placeholder: self.o.placeholderClass,
                     cursor: 'move',
-                    revert: true,
+                    //revert: true,
                     opacity: self.o.opacity,
                     delay: 0,
-                    revert: 250,
+                    revert: 350,
                     cancel: '.btn-panel, .panel-fullscreen .panel-fullscreen, .mod-panel-disable .panel-sortable, .panel-locked.panel-sortable',
                     zIndex: 10000,
                     handle: self.o.dragHandle,
@@ -586,7 +587,30 @@
                 /**
                  * Run function for the indicator image.
                  **/
-                pPanel.toggleClass("panel-collapse");
+               // pPanel.toggleClass("panel-collapsed");
+
+                pPanel.children('.panel-container').collapse('toggle')
+                    .on('shown.bs.collapse', function() {
+                        pPanel.removeClass('panel-collapsed');
+                        self._savePanelSettings(); 
+                     }).on('hidden.bs.collapse', function(){
+                        pPanel.addClass('panel-collapsed');
+                        self._savePanelSettings(); 
+                    });
+
+                /*if (pPanel.hasClass('panel-collapsed')) {
+                    pPanel.removeClass('panel-collapsed')
+                        .children('.panel-container')
+                        .slideDown(400, function () {
+                            self._savePanelSettings(); 
+                        });
+                } else {
+                    pPanel.addClass('panel-collapsed')
+                        .children('.panel-container')
+                        .slideUp(400, function () {
+                            self._savePanelSettings(); 
+                        });
+                }*/
 
                 /**
                  * Run function for the indicator image.
@@ -604,7 +628,7 @@
                 /**
                  * Lets save the setings.
                  **/
-                self._savePanelSettings();             
+               // self._savePanelSettings();             
                 
                 e.preventDefault();
             });
@@ -805,8 +829,10 @@
                  **/
                 selectedHdr.removeClassPrefix('bg-')
                     .closest('.panel')
-                    .removeClass('panel-collapse panel-collapse panel-locked')
-                    .attr('data-panel-attstyle', ''); 
+                    .removeClass('panel-collapsed panel-fullscreen panel-locked')
+                    .attr('data-panel-attstyle', '')
+                    .children('.panel-container').collapse('show');
+                      
 
                 /**
                  * Run function for the indicator image.

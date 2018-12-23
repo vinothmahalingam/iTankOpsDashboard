@@ -7,9 +7,11 @@
 	pagedescription="Panels can be used in almost any setuation, helping wrap everything in a slick & lightweight container"
 }}
 
-{{#*inline "head-block"}}{{/inline}}
+{{#*inline "head-block"}}
+<link rel="stylesheet" media="screen, print" href="css/theme-demo.css">
+{{/inline}}
 
-{{#*inline "header-space-block"}}
+{{!-- {{#*inline "header-space-block"}}
 <div class="btn-group m-0" data-toggle="buttons">
 	<label class="btn btn-secondary active m-0" aria-pressed="true" data-action="toggle" data-class="mod-panel-clean">
 		<input type="radio" name="options" id="option1" checked=""> Default Panel
@@ -18,35 +20,47 @@
 		<input type="radio" name="options" id="option2"> Clean Panel
 	</label>
 </div>
-{{/inline}}
+{{/inline}} --}}
 
 {{#*inline "content-block"}}
 
 <div class="row">
 	
-	<div class="col-sm">
+	<div class="col-sm-6">
 
 		<div id="panel-1" class="panel">
 			<div class="panel-hdr">	
 				<h2>
-					Button <span class="fw-300">Colors</span> 
+					Default <span class="fw-300"><i>Panel</i></span> 
 				</h2>
-
 				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
 					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
 					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
 				</div>
-
 			</div>
-			<div class="panel-container">
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
+			<div class="panel-container show">
+				<div class="panel-content">									
+
+<pre class="prettyprint mb-0">&lt;div id="[unique id]" class="<span class="color-info-500 fw-700">panel</span>"&gt;
+  &lt;div class="<span class="color-info-500 fw-700">panel-hdr</span>"&gt;	
+    &lt;h2&gt;
+      <span class="text-muted fw-700">[YOUR HEADER]</span>
+    &lt;/h2&gt;
+    &lt;div class="<span class="color-info-500 fw-700">panel-toolbar</span>"&gt;
+      &lt;button class="<span class="color-info-500 fw-700">btn btn-panel</span>" <span class="color-success-600 fw-700">data-action="panel-collapse"</span>&gt;&lt;/button&gt;
+      &lt;button class="<span class="color-info-500 fw-700">btn btn-panel</span>" <span class="color-warning-700 fw-700">data-action="panel-fullscreen"</span>&gt;&lt;/button&gt;
+      &lt;button class="<span class="color-info-500 fw-700">btn btn-panel</span>" <span class="color-danger-600 fw-700">data-action="panel-close"</span>&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="<span class="color-info-500 fw-700">panel-container show</span>"&gt;
+    &lt;div class="<span class="color-info-500 fw-700">panel-content</span>"&gt;
+      <span class="text-muted fw-700">[YOUR CONTENTS]</span>
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+				</div>
 			</div>
 		</div>
 
@@ -81,14 +95,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="panel-container">
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
+			<div class="panel-container show">
+				<div class="panel-content">
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+				</div>
 			</div>
 		</div>
 		
@@ -109,75 +125,7 @@
 					<button class="btn btn-toolbar-master" data-toggle="dropdown">
 						<i class="fal fa-ellipsis-v"></i>
 					</button>
-					{{!-- <div class="dropdown-menu dropdown-menu-right p-2">
-						<div class="d-flex flex-wrap" style="width: 230px">
-							<a href="#" class="btn btn-m-l d-inline-block bg-primary-500 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-primary-50 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-primary-100 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-primary-200 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-primary-300 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-primary-400 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-primary-600 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-primary-700 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-primary-800 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-primary-900 p-2"></a>
-
-							<a href="#" class="btn btn-m-l d-inline-block bg-fusion-500 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-fusion-50 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-fusion-100 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-fusion-200 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-fusion-300 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-fusion-400 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-fusion-600 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-fusion-700 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-fusion-800 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-fusion-900 p-2"></a>
-
-							<a href="#" class="btn btn-m-l d-inline-block bg-info-500 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-info-50 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-info-100 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-info-200 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-info-300 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-info-400 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-info-600 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-info-700 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-info-800 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-info-900 p-2"></a>
-
-							<a href="#" class="btn btn-m-l d-inline-block bg-warning-500 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-warning-50 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-warning-100 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-warning-200 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-warning-300 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-warning-400 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-warning-600 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-warning-700 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-warning-800 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-warning-900 p-2"></a>
-
-							<a href="#" class="btn btn-m-l d-inline-block bg-danger-500 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-danger-50 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-danger-100 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-danger-200 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-danger-300 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-danger-400 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-danger-600 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-danger-700 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-danger-800 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-danger-900 p-2"></a>
-
-							<a href="#" class="btn btn-m-l d-inline-block bg-success-500 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-success-50 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-success-100 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-success-200 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-success-300 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-success-400 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-success-600 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-success-700 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-success-800 p-2"></a>
-							<a href="#" class="btn btn-m-l d-inline-block bg-success-900 p-2"></a>
-						</div>
-					</div> --}}
+					
 					<div class="dropdown-menu dropdown-menu-animated dropdown-menu-right p-0">
 						<button class="dropdown-item pt-2 pr-3 pb-2 pl-3">
 							<i class="fal fa-tint width-1"></i> <span>Panel Color</span>
@@ -195,8 +143,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="panel-container">
-				My body text...
+			<div class="panel-container show">
+				<div class="panel-content">
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+				</div>
 			</div>
 		</div>
 
@@ -231,14 +187,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="panel-container">
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
+			<div class="panel-container show">
+				<div class="panel-content">
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+				</div>
 			</div>
 		</div>
 		
@@ -280,14 +238,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="panel-container">
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
+			<div class="panel-container show">
+				<div class="panel-content">
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+				</div>
 			</div>
 		</div>
 
@@ -329,14 +289,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="panel-container">
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
-				<p>tewst</p>
+			<div class="panel-container show">
+				<div class="panel-content">
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+				</div>
 			</div>
 		</div>
 

@@ -100,6 +100,13 @@
     transition:color $duration $ease
 }
 
+@mixin transition-border($duration:0.2s,$ease:ease-out) {
+    -webkit-transition:border $duration $ease;
+    -moz-transition:border $duration $ease;
+    -o-transition:border $duration $ease;
+    transition:border $duration $ease
+}
+
 @mixin transition-background-color($duration:0.2s,$ease:ease) {
     -webkit-transition:background-color $duration $ease;
     -moz-transition:background-color $duration $ease;

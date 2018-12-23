@@ -801,10 +801,23 @@ var initApp = (function(app) {
 
 						var selectedPanel = $(this).closest('.panel');
 
-						selectedPanel.toggleClass("panel-collapse");
+						selectedPanel.children('.panel-container').collapse('toggle')
+						.on('show.bs.collapse', function() {
+						  	selectedPanel.removeClass("panel-collapsed");
+
+						  	if (myapp_config.debugState)
+								console.log( "panel id:" + selectedPanel.attr('id') + " | action: uncollapsed" );
+
+						}).on('hidden.bs.collapse', function(){
+							selectedPanel.addClass("panel-collapsed");
+
+							if (myapp_config.debugState)
+								console.log( "panel id:" + selectedPanel.attr('id') + " | action: collapsed" );
+
+						});
+
 						
-						if (myapp_config.debugState)
-						console.log( "panel id:" + selectedPanel.attr('id') + " | action: collapse" );
+						
 
 						/* return ID of panel */
 						//return selectedPanel.attr('id');

@@ -8,15 +8,14 @@
 	background-color: $white;
 	box-shadow: 0px 0px 13px 0px rgba(darken($primary-800, 15%), (8/100));
  
-
 	margin-bottom: $grid-gutter-width;
 	border-radius: $border-radius;
 
 	/* panel container */
 	.panel-container {
 
-		padding: $panel-spacer-y $panel-spacer-x;
-		@extend %common-animation-easeout;
+		//this cosigns with header animation 'all'
+		//@include transition-border(0.4s, ease-out);
 
 		position: relative;
 
@@ -25,8 +24,12 @@
 
     	border-radius: 0 0 $panel-edge-radius $panel-edge-radius;
 
-		&:only-child {
-			padding: $panel-spacer-x $panel-spacer-y;
+		.panel-content {
+			padding: $panel-spacer-y $panel-spacer-x;
+
+			&:only-child {
+				padding: $panel-spacer-x $panel-spacer-y;
+			}
 		}
 	}
 
@@ -88,20 +91,18 @@
 			flex: 1;
 			overflow-y: auto;
 			border-radius: 0;
+			display: block !important; //incase user had it collapsed
 		}
 	}
 
 	/* panel collapse */
-	&.panel-collapse:not(.panel-fullscreen) {
+	/*&.panel-collapsed:not(.panel-fullscreen) {
 
 		.panel-container {
-			height: 0;
-			padding-top: 0;
-			padding-bottom: 0;
-			overflow: hidden;
+			display:none;
 		}
 
-	}
+	}*/
 
 	/* panel locked */
 	&.panel-locked:not(.panel-fullscreen) {
@@ -144,15 +145,17 @@
 	align-items:center;
 	background: $panel-hdr-background;
 	min-height: $panel-hdr-height;
-	@extend %common-animation-easeout;
 	@include box-sizing(border-box); 
 	border: 1px solid transparent;
 	border-bottom: 0px;
 	box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
 	border-radius: $panel-edge-radius $panel-edge-radius 0 0;
 
+	//@extend %common-animation-easeout;
 
-	.panel-collapse & {
+	@include transition-background-color(0.4s, ease-out)
+
+	.panel-collapsed & {
 		border-radius: $panel-edge-radius;
 	}
 	
@@ -210,11 +213,17 @@
 			border-right-color: rgba($primary-500, 0.7);
 
 			& + .panel-container {
+
 				border-color: transparent rgba($primary-500, 0.7) rgba($primary-600, 0.7);
 			}
 		}
 	}
 }
+
+/*.panel-sortable .panel-hdr:active,
+.panel-sortable .panel-hdr:active + .panel-container {
+	@include transition-border(0.4s, ease-out);
+}*/
 
 .panel-sortable.panel-locked {
 	.panel-hdr {
@@ -364,7 +373,9 @@
 	}
 
 	.panel-container {
-		padding-top: $p-1;
+		.panel-content:first-child {
+			padding-top: $p-1;
+		}
 	}
 	
 }	
@@ -380,7 +391,9 @@
 				min-height: $panel-hdr-height - 4;
 			}
 			.panel-container {
-				padding: 0 10px 10px;
+				.panel-content {
+					padding: 0 10px 10px;
+				}
 			}
 		}
 	}
@@ -398,6 +411,7 @@
 
 		.panel-hdr,
 		.panel-container,
+		.panel-content,
 		h2 {
 			border: none;
 			padding: 0 !important;
