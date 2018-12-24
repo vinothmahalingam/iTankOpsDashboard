@@ -164,7 +164,7 @@ $.fn.extend({
         } else {
             
             if (myapp_config.debugState)
-                console.log(" this menu already exists");       
+                console.log(self.get(0) + " this menu already exists");       
         }
 
     },
@@ -173,11 +173,21 @@ $.fn.extend({
      * DOC: $(id).destroy();
      **/
     destroy: function() {
+        
         self = $(this);
+
         if (self.hasClass(myapp_config.navInitalized)) {
             self.find("li").removeClass("active open");
             self.find("li a").off('mousedown').removeClass("active").removeAttr("aria-expanded").find(".collapse-sign").remove();
             self.removeClass(myapp_config.navInitalized).find("ul").removeAttr("style");
+
+            if (myapp_config.debugState)
+                console.log( self.get(0) + " destroyed");     
+
+        } else {
+            console.log("menu does not exist")
         }
+
+        
     }
 }); 

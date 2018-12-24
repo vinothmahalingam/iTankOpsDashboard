@@ -422,12 +422,12 @@ var initApp = (function(app) {
 	
 	/**
 	 * Activate Nav
-	 * DOC: activation will not take place if top navigation is on
+	 * DOC: activation should not take place if top navigation is on
 	 **/
 	app.buildNavigation = function(id) {
 		
 		/**
-		 * start left nav
+		 * build nav
 		 * app.navigation.js
 		 **/
 		if ($.fn.navigation) {
@@ -440,6 +440,25 @@ var initApp = (function(app) {
 				openedSign : '<em class="' + myapp_config.navOpenedSign + '"></em>'
 
 			});
+
+			return (id);
+		} else {
+
+			if (myapp_config.debugState)
+			console.log( "WARN: navigation plugin missing" );
+
+		}
+	};
+
+	app.destroyNavigation = function(id) {
+		
+		/**
+		 * destroy nav
+		 * app.navigation.js
+		 **/
+		if ($.fn.navigation) {
+
+			$(id).navHooks.destroy(); 
 
 			return (id);
 		} else {
