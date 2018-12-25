@@ -5,18 +5,30 @@ $nav-function-top-menu-item-bg: darken($nav-base-color, 15%);
 $nav-function-top-menu-item-width-md: ( map-get($grid-breakpoints, md) - $nav-function-top-logo-width-sm ) / $nav-top-menu-count - 1;
 $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-function-top-logo-width-lg ) / $nav-top-menu-count - 2;
 
+.navigation-horizontal-prev,
+.navigation-horizontal-next {
+	display: none;
+}
+
 @include media-breakpoint-up($mobile-breakpoint) {
 
 	.nav-function-top {
+
+		.navigation-horizontal-prev,
+		.navigation-horizontal-next {
+			display: block;
+			flex: 0 0 auto;
+		}
 
 		/* hide elements when nav-function-top */
 		.hidden-nav-function-top {
 			display: none !important;
 		}
 
-		&:not(.nav-function-fixed) {
+
+		&:not(.header-function-fixed) {
 				
-			#fh {
+			#nff {
 				position:relative;
 
 				.onoffswitch-title {
@@ -47,7 +59,6 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 		.page-header {
 			margin-top: 0;
-			//position: initial;
 
 			.dropdown-icon-menu {
 				display: none;
@@ -57,22 +68,20 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 				margin:0 !important;
 			}
 
-			/*.logo {
+			.logo {
 				display: flex;
 				width: auto;
-				float: left;
-				background: transparent;
 				padding-left: 0;
+				background: transparent;
+				box-shadow: none;
 
-				.logo-text,
-				.logo-text + i {
-					color: $fusion-500 !important;
+				.logo-text {
+					color: $base-text-color;
 				}
-			}*/
+			}
 		}
 
 		.page-wrapper {
-			padding-top: $nav-top-height;
 			padding-left:0;
 
 			.page-footer {
@@ -81,70 +90,23 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 		}
 
 		.left-panel {
-			left:0;
-			padding-bottom:0;
-			top: 0;
-			bottom: auto;
+			display: flex;
 			width: 100%;
 			height: $nav-top-height;
-			z-index: $depth-header + 1;
+			z-index: $depth-header - 1;
 			overflow:hidden;
+			padding: 0 0.625rem;
 
-			display: flex;
-
-			/*width: 100%;
-			//height: 63px;
-			z-index: 1001;
 			position: relative;
-			display: flex;	*/
 
-			padding: 0 0.625rem;		
+			order: 2;		
 
 			&:hover {
 				overflow:visible;
 			}
 
-			.logo {
-				display: flex;
-				width: auto;
-				height: auto;
-				//float: left;
-				background: transparent;
-				padding-left: 0.9375rem;
-
-				/*float: left;
-				//width: $nav-function-top-logo-width-sm;
-				//padding: 0;
-				background: transparent;
-				border: 0;
-				height: $nav-top-height;
-				position:relative;
-
-				& > img {
-					display:block;
-					height: auto;
-				}
-
-				.logo-text {
-					display: none;
-				}
-
-				&:after {
-					content: "";
-					position: absolute;
-					width: 1px;
-					right: 0;
-					top: 5px;
-					bottom: 5px;
-					background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
-					background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
-					background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
-					z-index: 1;
-						http://localhost/NextGen/developer/HTML_seed/dist/ui_alerts.html#
-				}
-				display:none;*/
-			}
-
+			.logo,
+			.nav-filter,
 			.info-card,
 			.nav-title {
 				display: none;
@@ -155,7 +117,6 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 				flex: 1;
 				display: flex;
-
 
 
 				/* Make this scrollable when needed */
@@ -172,13 +133,13 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 				/* Make an auto-hiding scroller for the 3 people using a IE */
 				-ms-overflow-style: -ms-autohiding-scrollbar;
 				/* Remove the default scrollbar for WebKit implementations */
+
 				&::-webkit-scrollbar {
 					display: none;
 				}
 
 
 				.nav-menu {
-					//float:left;
 					margin:0;
 					display: flex;
 
@@ -208,14 +169,11 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 					}
 
 					li {
-						//float:left;
 
 						position: static;
 
 						a {
-							//padding: 10px;
 	    					font-size: rem($fs-base);
-	    					//box-shadow:none;
 
 	    					&:before {
 								content: none !important;
@@ -331,7 +289,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 								font-size: 18px;
 							}*/
 							> .nav-link-text {
-								width: auto;
+								//width: auto;
 								max-width: $nav-function-top-menu-item-width-md;
 								overflow: hidden;
 								white-space: nowrap;
@@ -385,6 +343,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 				display: none;
 			}
 		}
+
 
 		&.nav-function-minify {
 
@@ -462,6 +421,33 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 			}
 		}
 
+		/* reorder */
+		.page-header {
+			order: 1;
+		}
+		.page-wrapper {
+			display: flex;
+			flex-direction: column;
+		}
+		.left-panel {
+			order: 2;
+		}
+		#content {
+			order: 3;
+			align-items: stretch;
+			flex: 1 1 auto;
+		}
+		.page-footer {
+			order: 4;
+			width: initial;
+
+			position: initial;
+
+			& + .page-footer-push {
+				display: none;
+			}
+		}
+ 
 	}
 	
 }
@@ -501,7 +487,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 								font-size: rem(18px);
 							}
 							> .nav-link-text {
-								width:auto;
+								//width:auto;
 								max-width: $nav-function-top-menu-item-width-lg;
 							}
 						}

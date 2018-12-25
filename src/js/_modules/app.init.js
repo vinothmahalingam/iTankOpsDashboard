@@ -23,7 +23,7 @@ var initApp = (function(app) {
 		$(input).change( function () {
 
 			var filter = $(this).val().toLowerCase(),
-				listPrev = $(list).next().filter('.js-filter-message');
+				listPrev = $(list).parent().next().filter('.js-filter-message');
 	
 			/* when user types more than 1 letter start search filter */
 			if(filter.length > 1) {

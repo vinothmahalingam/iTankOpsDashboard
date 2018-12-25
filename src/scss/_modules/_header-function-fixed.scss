@@ -64,18 +64,18 @@
 		}
 
 		&.nav-function-top {
-			&.nav-function-fixed {
-				.page-header {
-					position: fixed !important;
-					top: $nav-top-height;
-					right: 0;
-					left: 0;
-				}
-				.page-wrapper {
-					padding-top: $header-height + $nav-top-height;
-				}
+			.page-header {
+				position: fixed !important;
+				top: 0;
+				right: 0;
+				left: 0;
 
+				/*chrome flickering solution*/
+				-webkit-transform: translateZ(0);
 			}
+			.page-wrapper {
+				padding-top: $header-height;
+			}			
 		}
 	}
 }

@@ -36,26 +36,26 @@
 				}
 			}
 
-			.primary-nav {
+			.info-card {
+				height: $nav-width/3 + 0.3125rem;
+				width:100%;
+				padding: $header-height/3.4 0;
+				text-align:center;
 				overflow: hidden; 
 
-				.info-card {
-					height: $nav-width/3 + 0.3125rem;
-					width:100%;
-					padding: $header-height/3.4 0;
-					text-align:center;
-					overflow: hidden; 
+				justify-content: center;
 
-					justify-content: center;
-
-					.profile-image + div {
-						position: absolute;
-					    top: 0;
-					    width: $nav-width/1.2;
-					    text-align: left; 
-					    display: none;
-					}
+				.profile-image + div {
+					position: absolute;
+				    top: 0;
+				    width: $nav-width/1.2;
+				    text-align: left; 
+				    display: none;
 				}
+			}
+
+			.primary-nav {
+				overflow: hidden; 
 
 				.nav-title {
 					//display: none;
