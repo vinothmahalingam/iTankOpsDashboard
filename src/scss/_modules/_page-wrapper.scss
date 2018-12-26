@@ -1,7 +1,10 @@
 .page-wrapper {
 	padding-left: $nav-width;
-	position: relative;
+	position: relative; //sunny, why do we need this??
 	width: 100%;
 	min-height: 100%;
 	background-color: $page-bg;
+
+	display: flex;
+	flex-direction: column;
 }

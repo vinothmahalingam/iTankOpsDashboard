@@ -28,10 +28,11 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
 			<!-- BEGIN Left Aside -->
 			{{> include/_left-panel }}
+			{{> include/_page-content-overlay }}
 			<!-- END Left Aside -->
 			
 			<!-- BEGIN Page Content -->
-			<main id="content" role="main">
+			<main id="content" role="main" class="page-content">
 				{{> include/_page-breadcrumb }}
 				{{> include/_page-heading }}
 				{{#>content-block}}{{/content-block}}

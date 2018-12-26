@@ -437,7 +437,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 			align-items: stretch;
 			flex: 1 1 auto;
 		}
-		.page-footer {
+		/*.page-footer {
 			order: 4;
 			width: initial;
 
@@ -446,7 +446,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 			& + .page-footer-push {
 				display: none;
 			}
-		}
+		}*/
  
 	}
 	

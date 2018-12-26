@@ -152,6 +152,8 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 0.2
 	position: relative;
 	z-index: $depth-header;
 
+	order: 1;
+
 	.logo {
 		display: none;
 	}

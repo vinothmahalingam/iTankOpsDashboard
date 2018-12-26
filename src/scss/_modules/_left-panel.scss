@@ -5,11 +5,10 @@
 	position: absolute;
 	width: $nav-width;
 	z-index: $depth-nav;
-	/*background-image: -webkit-linear-gradient(270deg, $nav-background-shade, transparent);
-	background-image: linear-gradient(270deg, $nav-background-shade, transparent); 
-	background-color: $nav-background;*/
 
 	@extend %nav-bg;
+
+	order: 2;
 
 	will-change: left, right;
 }

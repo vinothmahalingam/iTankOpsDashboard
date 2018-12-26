@@ -41,7 +41,7 @@ var myapp_config = {
       The overlay mesh that appears on top of content 
       Description: users can touch the mesh to close the menu 
     */
-    mobileOverlayTrigger: '#content',
+    mobileOverlayTrigger: '.page-content-overlay',
     /*
       DETECT IF WEBKIT
       Description: this variable is used to fire the custom scroll plugin. 

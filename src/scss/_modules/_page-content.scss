@@ -1,5 +1,10 @@
-#content {
-	float:left; // needed with header-function-fixed does something wierd with the logo
-	width:100%; //needed with float
+.page-content {
+	//float:left; // needed with header-function-fixed does something wierd with the logo
+	//width:100%; //needed with float
 	//position: relative;
+
+	align-items: stretch;
+	
+    flex: 1 1 auto;
+    order: 3;
 }
