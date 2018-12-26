@@ -2,7 +2,7 @@
 	"config": {
 		"debug": false,
 		"data" : {
-			"app": "NextGen WebApp",
+			"app": "NextGen",
 			"user": "Dr. Codex Lantern",
 			"email": "drlantern@nextgen.com",
 			"twitter": "codexlantern",
