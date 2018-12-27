@@ -388,17 +388,26 @@ var initApp = (function(app) {
 						wheelStep: 10
 					});
 
+					if ($("#js-nav-menu-wrapper").length == true) {
+						$( "#js-primary-nav .nav-menu" ).unwrap("#js-nav-menu-wrapper");
+						
+						if (myapp_config.debugState)
+						console.log("----top controls destroyed");
+					}
+					
+
+					initApp.calculateAppHeight();
+
 					if (myapp_config.debugState)
-					console.log("slimScroll Enabled");
+					console.log("slimScroll created");
 
 				} else {
 					console.log("$.fn.slimScroll...NOT FOUND");
 				}
 
-				/* fix app height (only needs to be called once) */
-				initApp.calculateAppHeight();
+				/* fix app height (only needs to be called once) */				
 
-				break;
+				break;			
 
 			case ( myapp_config.navAnchor.parent().hasClass('slimScrollDiv') && myapp_config.thisDevice === 'desktop' && typeof $.fn.slimScroll !== 'undefined' ):
 
@@ -415,7 +424,55 @@ var initApp = (function(app) {
 				if (myapp_config.debugState)
 					console.log("slimScroll destroyed");
 
+				break;					
+
+		}
+
+		switch ( true ) {
+
+
+			/* fires when user switches to nav-function-top on desktop view */
+			case ( myapp_config.root_.hasClass('nav-function-top') && $("#js-nav-menu-wrapper").length == false && !myapp_config.root_.hasClass('mobile-view-activated') ):
+
+				/* wrap ul.nav-menu */
+				myapp_config.navHooks.wrap( "<div id='js-nav-menu-wrapper' class='nav-menu-wrapper'></div>" );
+
+				/* build horizontal nav */
+				if (myapp_config.debugState)
+				console.log("----top controls created -- case 1");
+
 				break;
+
+			/* fires when user resizes screen to mobile size or app is loaded on mobile resolution */
+			case ( myapp_config.root_.hasClass('nav-function-top') && $("#js-nav-menu-wrapper").length == true && myapp_config.root_.hasClass('mobile-view-activated') ):
+
+				/* remove ul.nav-menu wrapper */
+				myapp_config.navHooks.unwrap("#js-nav-menu-wrapper");
+
+				/* fix app height (only needs to be called once) */
+				initApp.calculateAppHeight();
+
+				/* build horizontal nav */
+				if (myapp_config.debugState)
+				console.log("----top controls destroyed -- case 2");
+
+				break;	
+
+			/* fires when users switch off nav-function-top class */
+			case ( !myapp_config.root_.hasClass('nav-function-top') && $("#js-nav-menu-wrapper").length == true ):
+
+				/* remove ul.nav-menu wrapper */
+				myapp_config.navHooks.unwrap("#js-nav-menu-wrapper");
+
+				/* fix app height (only needs to be called once) */
+				initApp.calculateAppHeight();
+
+				/* build horizontal nav */
+				if (myapp_config.debugState)
+				console.log("----top controls destroyed -- case 3");				
+
+				break;	
+
 		}
 
 	};
@@ -524,7 +581,7 @@ var initApp = (function(app) {
 	 */
 	app.mobileCheckActivation = function(){
 		
-		if ( window.innerWidth < 992 ) {
+		if ( window.innerWidth < myapp_config.mobileResolutionTrigger ) {
 
 			myapp_config.root_.addClass('mobile-view-activated');
 			myapp_config.mobileMenuTrigger = true;

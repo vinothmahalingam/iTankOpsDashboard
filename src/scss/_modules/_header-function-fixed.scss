@@ -11,13 +11,13 @@
 			@extend %general-animation;
 		}
 
-		#content {
+		.page-content {
 			margin-top: $header-height;
 		}
 
 		&:not(.nav-function-fixed) {
 
-			.logo {
+			.page-logo {
 				width:$nav-width;
 				position:fixed;
 				top:0;
@@ -26,7 +26,7 @@
 				//@extend %fixed-header-shadow;
 			}
 
-			.left-panel {
+			.page-left-panel {
 				.primary-nav {
 					margin-top:$header-height;
 				}
@@ -34,7 +34,7 @@
 
 			/* bug fix for nav hidden other than chrome...*/
 			&.desktop.nav-function-hidden {
-				.logo {
+				.page-logo {
 					position: absolute;
 					transition: none !important;
 				}
@@ -54,8 +54,8 @@
 			}
 
 			&.nav-function-minify {
-				.left-panel {
-					.logo {
+				.page-left-panel {
+					.page-logo {
 						width: $nav-minify-width;
 					}
 				}
@@ -69,11 +69,13 @@
 				right: 0;
 				left: 0;
 
+				box-shadow: 0px 0px 28px 2px $header-border-bottom-color;
+
 				/*chrome flickering solution*/
 				-webkit-transform: translateZ(0);
 			}
 			.page-wrapper {
-				padding-top: $header-height;
+				padding-top: $header-height-nav-top;
 			}			
 		}
 	}

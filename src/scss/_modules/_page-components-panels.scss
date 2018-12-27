@@ -405,7 +405,7 @@
 	.panel-fullscreen {
 		.subheader,
 		.page-breadcrumb,
-		#content .panel:not(.panel-fullscreen) {
+		.page-content .panel:not(.panel-fullscreen) {
 			display: none;
 		}
 

@@ -8,7 +8,7 @@
 			display: none !important;
 		}
 
-		.left-panel {
+		.page-left-panel {
 			
 			width: $nav-minify-width;
 			z-index: $depth-header + 1;
@@ -17,17 +17,17 @@
 			
 			transition: $nav-hide-animate;
 
-			.logo {
+			.page-logo {
 
 				width:$nav-minify-width;
 				padding: 0;
 				justify-content: center;
 
-				.logo-link {
+				.page-logo-link {
 					flex: none;
 				}
 							
-				.logo-text {
+				.page-logo-text {
 					display: none;
 
 					& + * {
@@ -260,7 +260,7 @@
 			.page-wrapper {
 				padding-left: $nav-hidden-visiblity;
 			}
-			.left-panel {
+			.page-left-panel {
 				left: $nav-hidden-visiblity - $nav-minify-width;
 				overflow: visible;
 				&:hover {

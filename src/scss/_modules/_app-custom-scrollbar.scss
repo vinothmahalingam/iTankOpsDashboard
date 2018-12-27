@@ -38,27 +38,27 @@ body:not(.mobile-detected).modal-open .modal {
  * Left Panel custom scroll 
  */
 
-.left-panel .primary-nav::-webkit-scrollbar-track-piece {
+.page-left-panel .primary-nav::-webkit-scrollbar-track-piece {
     background-color: $trackPieceColor;
 }
 
-.left-panel .primary-nav::-webkit-scrollbar-thumb:vertical {
+.page-left-panel .primary-nav::-webkit-scrollbar-thumb:vertical {
     background-color: #666;
 }
 
-.left-panel .primary-nav::-webkit-scrollbar {
+.page-left-panel .primary-nav::-webkit-scrollbar {
     height: $modalScrollSize/2;
     width: $modalScrollSize/2;
 }
 
-.left-panel .primary-nav:hover::-webkit-scrollbar-corner {
+.page-left-panel .primary-nav:hover::-webkit-scrollbar-corner {
     width: 40px;
 }
 
-.left-panel .primary-nav::-webkit-scrollbar-track-piece {
+.page-left-panel .primary-nav::-webkit-scrollbar-track-piece {
 	background-color: $trackPieceColor;
 }
 
-.left-panel .primary-nav::-webkit-scrollbar-thumb:vertical {
+.page-left-panel .primary-nav::-webkit-scrollbar-thumb:vertical {
 	background-color: #666;
 }

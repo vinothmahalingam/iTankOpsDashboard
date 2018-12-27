@@ -363,7 +363,7 @@
 var myapp_config = {
     root_: $('body'),
     windowHeight: $(window).height(),
-    navHeightGap: ($('#left_panel .nav-footer').height() || 0) + $('header').height() + 1,
+    navHeightGap: ($('.page-left-panel .nav-footer').height() || 0) + $('header').height() + 1,
     throttleDelay: 450, //ms
     thisDevice: null, 
     isMobile: (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i
@@ -376,8 +376,8 @@ var myapp_config = {
     debugState: true, 
     rippleEffect: true, 
     mythemeAnchor: '#mytheme',
-    navAnchor: '#primary_nav',
-    navHooks: '#primary_nav > ul.navigation'
+    navAnchor: '#js-primary-nav',
+    navHooks: '#js-primary-nav > ul.navigation'
     navSpeed: 500, 
     navClosedSign: 'ni ni-chevron-down',
     navOpenedSign: 'ni ni-chevron-up',

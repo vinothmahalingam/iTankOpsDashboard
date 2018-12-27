@@ -28,15 +28,16 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
 			<!-- BEGIN Left Aside -->
 			{{> include/_left-panel }}
-			{{> include/_page-content-overlay }}
 			<!-- END Left Aside -->
 			
 			<!-- BEGIN Page Content -->
-			<main id="content" role="main" class="page-content">
+			<!-- the #js-page-content id is needed for some plugins to initialize -->
+			<main id="js-page-content" role="main" class="page-content">
 				{{> include/_page-breadcrumb }}
 				{{> include/_page-heading }}
 				{{#>content-block}}{{/content-block}}
 			</main>
+			{{> include/_page-content-overlay }}
 			<!-- END Page Content -->
 
 			<!-- BEGIN Page Footer -->

@@ -14,6 +14,13 @@ $(window).resize(
 		  initApp.mobileCheckActivation();
 
 		 /**
+		  * (1b) CHECK NAVIGATION STATUS (IF HORIZONTAL OR VERTICAL)
+		  * Description: fires an event to check for navigation orientation.
+		  * Based on the condition, it will initliaze or destroy the slimscroll, or horizontal nav plugins
+		  **/
+		  initApp.checkSettingConditions();
+
+		 /**
 		  * (2a) FIX APP HEIGHT
 		  * Get and assign new height during page resize
 		  **/

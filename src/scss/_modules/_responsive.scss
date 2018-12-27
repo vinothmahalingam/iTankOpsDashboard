@@ -23,7 +23,7 @@ $grid-breakpoints: (
 	.page-header {
 		padding: 0 1.5rem;
 	}
-	#content {
+	.page-content {
 		padding: 1.25rem 1.5rem;
 
 		.card.panel {
@@ -36,7 +36,7 @@ $grid-breakpoints: (
 	.page-header {
 		padding: 0 1.5rem;
 	}
-	#content {
+	.page-content {
 		padding: 1.25rem 1.5rem;
 
 		.card.panel {
@@ -65,7 +65,7 @@ $grid-breakpoints: (
 		overflow-x: hidden;
 	}	
 
-	.logo-text {
+	.page-logo-text {
 		font-size: 1rem;
 	}
 
@@ -93,7 +93,7 @@ $grid-breakpoints: (
 			border-bottom: 1px solid #e5e5e5;
 		}
 
-		.left-panel {
+		.page-left-panel {
 			z-index: $space + 1000;
 			transition: $nav-hide-animate;
 			@include translate3d (-$nav-width, 0, 0);
@@ -129,7 +129,7 @@ $grid-breakpoints: (
 			}
 		}
 
-		#content {
+		.page-content {
 			padding: map-get($grid-gutter-widths, lg) $grid-gutter-width-base/2;
 			color: #222;
 			font-size: $fs-base + 1;
@@ -188,7 +188,7 @@ $grid-breakpoints: (
 		}
 
 		.page-header,
-		.logo {
+		.page-logo {
 			box-shadow: none !important;
 
 		} 
@@ -196,8 +196,8 @@ $grid-breakpoints: (
 		/* this was conflicting with the new DOM change where we swtiched header with nav */
 		/*&:not(.nav-function-fixed) {
 
-			.left-panel {
-				.logo {
+			.page-left-panel {
+				.page-logo {
 					position: absolute !important;
 					top:0px !important;
 				}
@@ -205,7 +205,7 @@ $grid-breakpoints: (
 
 		}*/
 
-		#content {
+		.page-content {
 			margin-top: $header-height;
 		}
 	}
@@ -214,11 +214,11 @@ $grid-breakpoints: (
 	&.nav-mobile-push:not(.nav-mobile-slide-out) {
 
 		.page-wrapper {
-			.left-panel {
+			.page-left-panel {
 				@include translate3d (-$nav-width, 0, 0);
 			}
 			.page-header,
-			#content,
+			.page-content,
 			.page-footer,
 			.page-footer-push {
 				transition: $nav-hide-animate;
@@ -234,21 +234,21 @@ $grid-breakpoints: (
 		min-height: 100vh !important; /*new*/
 
 		.page-wrapper {
-			.left-panel {
+			.page-left-panel {
 				z-index: 0;
 				transition:none;
 				@include translate3d (0px, 0, 0);	
 			}
 
 			.page-header,
-			#content,
+			.page-content,
 			.page-footer,
 			.page-footer-push {
                 transition: $nav-hide-animate;
 			    @include translate3d (0, 0, 0);        		      
 			}
 
-			#content {
+			.page-content {
 				/* min-height: calc(100vh - #{$header-height + $footer-height});  no longer needed here */
 				background: $page-bg;
 			}
@@ -264,12 +264,12 @@ $grid-breakpoints: (
 		overflow: hidden;
 		height: 100vh;
 
-		.left-panel {
+		.page-left-panel {
 			border-right:1px solid rgba(0,0,0,0.03);
 			@include box-shadow( 0 3px 35px 3px rgba(0,0,0,0.52) );
 		}
 
-		/*#content:before {
+		/*.page-content:before {
 			content:" ";
 			position:fixed;
 			z-index: $space;
@@ -287,7 +287,7 @@ $grid-breakpoints: (
 		
 		&:not(.nav-mobile-push) {
 
-			.left-panel {
+			.page-left-panel {
 
 		-webkit-transform: translate3d(0px, 0, 0) !important;
 		    -ms-transform: translate3d(0px, 0, 0) !important;
@@ -297,7 +297,7 @@ $grid-breakpoints: (
 
 			&.nav-function-fixed:not(.nav-function-top) {
 
-				.left-panel {
+				.page-left-panel {
 
 		-webkit-transform: translate3d(0px, 0, 0) !important;
 		    -ms-transform: translate3d(0px, 0, 0) !important;
@@ -312,13 +312,13 @@ $grid-breakpoints: (
 
 			.page-wrapper {
 
-				.left-panel {
+				.page-left-panel {
 					left:0;
 					@include translate3d (0px, 0, 0);
 				}
 
 				.page-header,
-				#content,
+				.page-content,
 				.page-footer,
 				.page-footer-push {
 					@include translate3d ($nav-width, 0, 0);
@@ -336,13 +336,13 @@ $grid-breakpoints: (
 				overflow: hidden;
 
 				.page-header,
-				#content,
+				.page-content,
 				.page-footer,
 				.page-footer-push {
 					@include translate3d ($nav-width, 0, 0);
 				}
 
-				/*#content:before {
+				/*.page-content:before {
 					background:transparent !important;
 				}*/
 
@@ -353,7 +353,7 @@ $grid-breakpoints: (
 				}
 
 				.page-header,
-				#content,
+				.page-content,
 				.page-footer,
 				.page-footer-push {
 					box-shadow: 0 9px 0px 0px $page-bg, 0 -9px 0px 0px $page-bg, 12px 0 15px -4px rgba(0, 0, 0, 0.32), -12px 0 15px -4px rgba(0, 0, 0, 0.32);       
@@ -367,7 +367,7 @@ $grid-breakpoints: (
 
 			.page-wrapper {
 
-				/*#content:before {
+				/*.page-content:before {
 					background:rgba(0,0,0,0.3);
 				}*/
 
@@ -442,7 +442,7 @@ $grid-breakpoints: (
 	}
 
 	.page-header,
-	#content {
+	.page-content {
 		padding-left: $grid-gutter-width-base/3 !important;
 		padding-right: $grid-gutter-width-base/3 !important;
 	}

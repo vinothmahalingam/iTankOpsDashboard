@@ -476,6 +476,7 @@ $header-link-hover-color:				     darken($header-bg, 75%) !default;
 
 /* height */
 $header-height:									     4.125rem !default;
+$header-height-nav-top:              5.3rem !default;
 
 /* logo */
 $header-logo-border-bottom:			     rgba(darken($primary-700, 10%), (30/100)) !default;
@@ -532,8 +533,8 @@ $dropdown-shadow:                    0 0 15px 1px rgba(desaturate($primary-900, 
 
 Guide:
 
-aside.left-panel ($nav-width, $nav-background)
-	.logo
+aside.page-left-panel ($nav-width, $nav-background)
+	.page-logo
 	.primary-nav
 		.info-card
 		ul.nav-menu
@@ -605,7 +606,7 @@ $nav-minify-sub-width:						$nav-width - ($nav-minify-width - 1.5625rem) !defaul
 $nav-hidden-visiblity:						0.625rem !default; 											
 
 /* top navigation */
-$nav-top-height:									3.25rem !default;
+$nav-top-height:									3.5rem !default;
 $nav-top-menu-count:							9 !default;	/* number of parent items on the main menu (adjust this if you have more or less items) */
 
 /* nav Info Card (appears below the logo) */

@@ -1,5 +1,5 @@
 .nav-function-fixed:not(.nav-function-top)  {
-	.left-panel{
+	.page-left-panel{
 		position: fixed !important;
 		
 		.primary-nav {
@@ -37,7 +37,7 @@
 		 */
 		&:not(.nav-function-top){
 			&.mod-main-boxed {
-				.left-panel{
+				.page-left-panel{
 					position: fixed !important;
 				}	
 			}
@@ -48,12 +48,15 @@
 		 */
 		&.nav-function-top {
 			&.header-function-fixed {
-				.left-panel {
+
+				.page-left-panel {
 					position: fixed !important;
-					top: $header-height;
+					top: $header-height-nav-top;
+
+					box-shadow: 0px 0px 28px 2px $header-border-bottom-color;
 				}
 				.page-wrapper {
-					padding-top: $header-height + $nav-top-height;
+					padding-top: $header-height-nav-top + $nav-top-height;
 				}
 			}
 		}
@@ -64,7 +67,7 @@
 		 */
 		&.nav-function-top {
 			&.mod-main-boxed {
-				.left-panel {
+				.page-left-panel {
 					right: 0;
 					left: 0;
 					margin-right: auto;
@@ -84,7 +87,7 @@
 		 */
 		&:not(.nav-function-top){
 			&.mod-main-boxed {
-				.left-panel{
+				.page-left-panel{
 					position: absolute !important;
 				}	
 			}

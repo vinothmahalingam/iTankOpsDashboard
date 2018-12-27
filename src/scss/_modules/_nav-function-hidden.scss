@@ -4,7 +4,7 @@
 		.page-wrapper {
 			padding-left: $nav-hidden-visiblity;
 		}
-		.left-panel {
+		.page-left-panel {
 			left: $nav-hidden-visiblity - $nav-width;
 			z-index: $depth-header + 1;
 			transition: $nav-hide-animate;

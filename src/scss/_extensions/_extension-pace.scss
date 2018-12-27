@@ -84,7 +84,7 @@ body.mod-pace-custom {
 	}
 
 	&.pace-running {
-		#content {
+		.page-content {
 			&:before {
 				content: '';
 			    position: fixed;
@@ -99,7 +99,7 @@ body.mod-pace-custom {
 	}
 	
 	/*&.pace-done {
-		#content{
+		.page-content {
 			&:before{
 				z-index:-2;
 				display: none;

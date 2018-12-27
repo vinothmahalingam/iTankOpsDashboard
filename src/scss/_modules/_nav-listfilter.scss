@@ -70,7 +70,7 @@
 }
 
 /* only show filter message if lister filter is active */
-.left-panel:not(.list-filter-active) {
+.page-left-panel:not(.list-filter-active) {
 	.filter-message {
 		display: none;
 	}	
@@ -79,7 +79,7 @@
 @include media-breakpoint-up(lg) {
 	.nav-function-top,
 	.nav-function-minify {
-		.left-panel {
+		.page-left-panel {
 			/*.js-filter-hide,
 			.js-filter-show {
 				display:block;

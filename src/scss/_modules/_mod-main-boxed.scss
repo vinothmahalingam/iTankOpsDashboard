@@ -54,7 +54,7 @@
 
 			&:not(.nav-function-top):not(.nav-function-fixed) {
 				.page-wrapper {
-					.left-panel {
+					.page-left-panel {
 						position: absolute !important;
 					}
 				}
@@ -83,8 +83,8 @@
 			.page-wrapper {
 				//background:#fff; //to balance contrast
 
-				.left-panel {
-					.logo {
+				.page-left-panel {
+					.page-logo {
 						width: 90px !important;
 					}
 		    	}
@@ -94,14 +94,14 @@
 		&.nav-function-hidden {
 
 			&:not(.nav-function-top) {
-				.left-panel:after {
+				.page-left-panel:after {
 					position:absolute;
 					left: $nav-width;
 				}
 			}
 
 			&.nav-function-minify {
-				.left-panel:after {
+				.page-left-panel:after {
 					position:absolute;
 					left: $nav-minify-width;
 				}
@@ -110,7 +110,7 @@
 		}
 
 		&.nav-function-fixed:not(.nav-function-top):not(.header-function-fixed) {
-			.left-panel {
+			.page-left-panel {
 				transform: translateX(0) !important;
 				box-shadow: none;
 			}
@@ -124,10 +124,10 @@
 		&.nav-function-fixed {
 			&:not(.nav-function-top) {
 				.page-wrapper {
-					.left-panel {
+					.page-left-panel {
 						position:absolute;
 
-						.logo {
+						.page-logo {
 							position:fixed;
 							top:0;
 							z-index: $cloud;
@@ -143,7 +143,7 @@
 
 				&.nav-function-hidden {
 
-					.logo {
+					.page-logo {
 						position: absolute !important;
 						transition: none;
 					}

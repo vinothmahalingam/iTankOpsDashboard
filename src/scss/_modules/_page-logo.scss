@@ -1,4 +1,4 @@
-.logo {
+.page-logo {
 	height:$header-height;
 	width: $nav-width;
 	/*background-image: -webkit-linear-gradient(270deg, $nav-background-shade, transparent);
@@ -23,13 +23,13 @@
 		height: $header-logo-height;
 	}
 
-	.logo-link {
+	.page-logo-link {
 		flex: 1;
 	}
 
 }
 
-.logo-text {
+.page-logo-text {
 	margin-left: $nav-icon-margin-right;
 	font-weight: 300;
 	font-size: 1.125rem;
@@ -40,7 +40,7 @@
 }
 
 body:not(.header-function-fixed) {
-	.logo {
+	.page-logo {
 		@extend %general-animation;
 	}
 }

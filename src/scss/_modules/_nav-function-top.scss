@@ -1,12 +1,12 @@
 $nav-function-top-item-padding: 8px;
 $nav-function-top-logo-width-sm: 28px;
 $nav-function-top-logo-width-lg: 28px;
-$nav-function-top-menu-item-bg: darken($nav-base-color, 15%);
+$nav-function-top-menu-item-bg: $primary-500;
 $nav-function-top-menu-item-width-md: ( map-get($grid-breakpoints, md) - $nav-function-top-logo-width-sm ) / $nav-top-menu-count - 1;
 $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-function-top-logo-width-lg ) / $nav-top-menu-count - 2;
 
-.navigation-horizontal-prev,
-.navigation-horizontal-next {
+.nav-menu-prev,
+.nav-menu-next {
 	display: none;
 }
 
@@ -14,8 +14,8 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 	.nav-function-top {
 
-		.navigation-horizontal-prev,
-		.navigation-horizontal-next {
+		.nav-menu-prev,
+		.nav-menu-next {
 			display: block;
 			flex: 0 0 auto;
 		}
@@ -59,6 +59,13 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 		.page-header {
 			margin-top: 0;
+			height: $header-height-nav-top;
+
+			background-image: -webkit-linear-gradient(270deg, $nav-background-shade, transparent);
+			background-image: linear-gradient(270deg, $nav-background-shade, transparent); 
+			background-color: $nav-background; 
+
+			box-shadow: 0px 0px 14px 0px $header-border-bottom-color;
 
 			.dropdown-icon-menu {
 				display: none;
@@ -68,16 +75,12 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 				margin:0 !important;
 			}
 
-			.logo {
+			.page-logo {
 				display: flex;
 				width: auto;
 				padding-left: 0;
 				background: transparent;
 				box-shadow: none;
-
-				.logo-text {
-					color: $base-text-color;
-				}
 			}
 		}
 
@@ -89,13 +92,16 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 			}
 		}
 
-		.left-panel {
+		.page-left-panel {
 			display: flex;
 			width: 100%;
 			height: $nav-top-height;
 			z-index: $depth-header - 1;
 			overflow:hidden;
 			padding: 0 0.625rem;
+			background: $white;
+
+			box-shadow: 0px 0px 14px 0px $header-border-bottom-color;
 
 			position: relative;
 
@@ -105,7 +111,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 				overflow:visible;
 			}
 
-			.logo,
+			.page-logo,
 			.nav-filter,
 			.info-card,
 			.nav-title {
@@ -117,7 +123,9 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 				flex: 1;
 				display: flex;
+				align-items: center;
 
+				align-items: stretch; 
 
 				/* Make this scrollable when needed */
 				overflow-x: auto;
@@ -138,13 +146,67 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 					display: none;
 				}
 
+				.nav-menu-wrapper {
+					display: flex;
+				}
 
 				.nav-menu {
 					margin:0;
 					display: flex;
+					align-items: stretch;
 
 					> li {
+
+						display: inline-flex;
+    					align-items: center;
+
+						&.nav-title {
+							display: none;
+						}
+
 						> a {
+
+							color: $nav-background;
+							padding: 0.75rem 1rem !important;
+							text-align: center;
+							font-size: .9rem !important;
+							border-radius: 5px;
+
+
+							>.#{$cust-icon-prefix},
+							>[class*='fa-'] {
+								font-size: $nav-font-icon-size;
+								width: inherit;
+								margin: 0 !important;
+								display: flex !important;					
+								align-items: center;
+								justify-content: left;
+								color: inherit;
+								margin-right: .5rem !important;
+							}
+
+							> .nav-link-text {
+								max-width: $nav-function-top-menu-item-width-md;
+								overflow: hidden;
+								white-space: nowrap;
+								text-overflow: ellipsis;
+								line-height: normal;
+								vertical-align: text-top;
+								font-weight: 400;
+
+								display: inline-block; /*override inline-flex*/
+							}
+
+							>.badge,
+							>.badge.clear-badge {
+								left: 53%;
+							}
+
+							>.collapse-sign {
+								margin-left: 0.75rem;
+								color: lighten($nav-background, 30%);
+							}
+
 							> .badge:first-child {
 								max-width: none;
 								width: 25px !important;
@@ -166,6 +228,46 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 							}
 
 						}
+
+
+						&:hover {
+
+							> a {
+								color: $primary-500;
+								background: $page-bg;
+
+								& + ul {
+									display:block !important;
+									box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+									a {
+										.collapse-sign {
+											@include rotate(270);
+										}
+									}
+
+									li {
+
+										&:hover {
+											> a {
+												background: $page-bg;
+												color: $primary-500;
+											}
+										}
+									} 
+								}
+							}						
+						}
+
+						&.active {
+							> a {
+								box-shadow: none;
+							}
+						}
+
+						> ul {
+							height: auto !important; //counters the click issue
+						}
 					}
 
 					li {
@@ -174,6 +276,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 						a {
 	    					font-size: rem($fs-base);
+	    					color: $nav-background;
 
 	    					&:before {
 								content: none !important;
@@ -181,17 +284,24 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 						}
 
 						ul {
+
+							padding: 0.75rem 0 !important;
 							display: none !important;
 							width: $nav-width - 2.1875rem; 
 							position: absolute;
+							top: $nav-top-height;
 							box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+
+							background: $white;
+
+							border-radius: 4px;
 
 							li {
 								width: 100%;
 								position: relative;
 
 								a {
-									padding: 0.9375rem !important;
+									padding: 0.9375rem 1.5rem !important;
 									width: 100%;
 									max-height: none;
 									box-shadow: none;
@@ -200,8 +310,8 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 										display: block;
 
 										> .dl-ref {
-											margin-left:0;
-											margin-right:5px;
+											margin-left: 0;
+											margin-right: 5px;
 											display: none;
 										}
 										> .#{$cust-icon-prefix}
@@ -210,6 +320,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 										}
 									}
 
+
 								}
 
 								&:hover {
@@ -217,8 +328,8 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 										display: block !important;
 										left: 100%;
     									top: 0;
-
-    									background: $nav-function-top-menu-item-bg;
+    									box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
+    									margin-left: 2px !important;
 									}
 									&.top-menu-push-left {
 										ul {
@@ -233,107 +344,6 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 						
 					}
 
-					> li {
-						&:hover {
-							> a {
-								background: $nav-function-top-menu-item-bg;
-								& + ul {
-									display:block !important;
-									background: $nav-function-top-menu-item-bg;
-
-									box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-
-									a {
-										.collapse-sign {
-											@include rotate(270);
-										}
-									}
-
-									li {
-
-										&:hover {
-											> a {
-												background: rgba( $primary-500, .9 );
-												color:$white;
-											}
-										}
-									} 
-								}
-							}						
-						}
-
-						&.active {
-							> a {
-								box-shadow: none;
-							}
-						}
-
-						> a {
-							padding: 0.9375rem !important;
-							text-align: center;
-							//height: $nav-top-height;
-							//max-height: $nav-top-height;
-
-							//display: block; /*override flex*/
-
-							>.#{$cust-icon-prefix},
-							>[class*='fa-'] {
-								font-size: $nav-font-icon-size;
-								margin: 0 !important;
-								display: flex !important;					
-								align-items: center;
-								justify-content: left;
-								color: inherit;
-							}
-							/*>[class*='fa-'] {
-								font-size: 18px;
-							}*/
-							> .nav-link-text {
-								//width: auto;
-								max-width: $nav-function-top-menu-item-width-md;
-								overflow: hidden;
-								white-space: nowrap;
-								text-overflow: ellipsis;
-								line-height: normal;
-								//font-size: rem($fs-nano);
-								vertical-align: text-top;
-								font-weight: bold;
-
-								display: inline-block; /*override inline-flex*/
-							}
-
-							>.badge,
-							>.badge.clear-badge {
-								left: 53%;
-							}
-
-							>.collapse-sign {
-								display: none
-								//margin-left: 10px;
-							}
-						}
-
-						> ul {
-
-							padding:10px 0;
-							height: auto !important; //counters the click issue
-
-						}
-
-						/*&:before {
-							content: "";
-							position: absolute;
-							width: 1px;
-							right: 0;
-							top: 5px;
-							bottom: 5px;
-							background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
-							background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
-							background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
-							z-index: 1;
-						}*/
-
-					}
 				}
 
 
@@ -347,10 +357,10 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 		&.nav-function-minify {
 
-			.left-panel {
+			.page-left-panel {
 				//height: $nav-top-minify-height;
 
-				/*.logo {
+				/*.page-logo {
 					width: auto !important;
 					height: $nav-top-minify-height;
 					padding: 0 1rem;			
@@ -398,7 +408,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 		}
 
 		&.mod-main-boxed {
-			.left-panel {
+			.page-left-panel {
 
 				.primary-nav {
 					.nav-menu:last-child,
@@ -429,10 +439,10 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 			display: flex;
 			flex-direction: column;
 		}
-		.left-panel {
+		.page-left-panel {
 			order: 2;
 		}
-		#content {
+		.page-content {
 			order: 3;
 			align-items: stretch;
 			flex: 1 1 auto;
@@ -456,9 +466,9 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 	.nav-function-top {
 		
-		.left-panel {
+		.page-left-panel {
 
-			/*.logo {
+			/*.page-logo {
 				width: auto;
 			}*/
 

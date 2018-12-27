@@ -13,14 +13,14 @@ var myapp_config = {
      */
     root_: $('body'), // used for core app reference
     root_wrapper: $('.page-wrapper'),
-    root_logo: $('#left_panel > .logo'), // used for core app reference
+    root_logo: $('.page-left-panel > .page-logo'), // used for core app reference
     /*
        REFERENCE OBJ FOR WINDOW HEIGHT
        we are saving some memory and repeated calls for window height
        window height is only updated during window resize
      */
     windowHeight: $(window).height(),
-    navHeightGap: ( $('#left_panel .nav-footer').height() || 0 ) + $('header').height() + 1,
+    navHeightGap: ( $('.page-left-panel .nav-footer').height() || 0 ) + $('header').height() + 1,
     /*
        DELAY VAR FOR FIRING REPEATED EVENTS (eg., scroll & resize events)
        Lowering the variable makes faster response time but taxing on the CPU
@@ -37,6 +37,7 @@ var myapp_config = {
     thisDevice: null, // desktop or mobile
     isMobile: (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase())), //popular device types available on the market
     mobileMenuTrigger: null, // used by pagescrolling and appHeight script, do not change!
+    mobileResolutionTrigger: 992, //the resolution when the mobile activation fires
     /*
       The overlay mesh that appears on top of content 
       Description: users can touch the mesh to close the menu 
@@ -74,11 +75,11 @@ var myapp_config = {
     */
     mythemeAnchor: '#mytheme',
     /*
-       Primary menu anchor point #primary_nav
+       Primary menu anchor point #js-primary-nav
        This is the root anchor point where the menu script will begin its build
     */
-    navAnchor: $('#primary_nav'), //changing this may implicate slimscroll plugin target
-    navHooks: $('#primary_nav > ul.nav-menu'), //changing this may implicate CSS targets
+    navAnchor: $('#js-primary-nav'), //changing this may implicate slimscroll plugin target
+    navHooks: $('#js-primary-nav > ul.nav-menu'), //changing this may implicate CSS targets
     navInitalized: 'js-nav-built', //nav finished class
     navFilterInput: $('#nav_filter_input'), //changing this may implicate CSS targets
     /*
