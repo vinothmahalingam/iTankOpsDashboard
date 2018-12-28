@@ -1,193 +1,200 @@
-/**
- * Menu Plugin
- **/
-$.fn.extend({
+(function($) {
 
-    /**
-     * pass the options variable to the function
-     *
-     *   $(id).navigation({ 
-     *       accordion: true,
-     *       animate: 'easeOutExpo',
-     *       speed: 200,
-     *       closedSign: '[+]',
-     *       openedSign: '[-]'
-     *   });
-     *
-     **/
-    navigation: function(options) {
+	/**
+	 * Menu Plugin
+	 **/
+	$.fn.extend({
 
-        var defaults = {
-                accordion: true,
-                animate: 'easeOutExpo',
-                speed: 200,
-                closedSign: '[+]',
-                openedSign: '[-]'
-            },
+	    /**
+	     * pass the options variable to the function
+	     *
+	     *   $(id).navigation({ 
+	     *       accordion: true,
+	     *       animate: 'easeOutExpo',
+	     *       speed: 200,
+	     *       closedSign: '[+]',
+	     *       openedSign: '[-]',
+	     *       initClass: 'js-nav-built'
+	     *   });
+	     *
+	     **/
+	     
+	    navigation: function(options) {
 
-            /**
-             * extend our default options with those provided.
-             **/
-            opts = $.extend(defaults, options),
+	        var defaults = {
+					accordion: true,
+					animate: 'easeOutExpo',
+					speed: 200,
+					closedSign: '[+]',
+					openedSign: '[-]',
+					initClass: 'js-nav-built'
+	            },
 
-            /**
-             * assign current element to variable, in this case is UL element
-             **/
-            self = $(this);
+	            /**
+	             * extend our default options with those provided.
+	             **/
+	            opts = $.extend(defaults, options),
 
-        if (!self.hasClass(myapp_config.navInitalized)) {
+	            /**
+	             * assign current element to variable, in this case is UL element
+	             **/
+	            self = $(this);
 
-            /**
-             * confirm build to prevent rebuild error
-             **/
-            self.addClass(myapp_config.navInitalized);
+				if (!self.hasClass(opts.initClass)) {
 
-            /**
-             * add a mark [+] to a multilevel menu
-             **/
-            self.find("li").each(function() {
-                if ($(this).find("ul").length !== 0) {
+				    /**
+				     * confirm build to prevent rebuild error
+				     **/
+				    self.addClass(opts.initClass);
 
-                    /**
-                     * add the multilevel sign next to the link
-                     **/
-                    $(this).find("a:first").append("<b class='collapse-sign'>" + opts.closedSign + "</b>");
+				    /**
+				     * add a mark [+] to a multilevel menu
+				     **/
+				    self.find("li").each(function() {
+				        if ($(this).find("ul").length !== 0) {
 
-                    /**
-                     * avoid jumping to the top of the page when the href is an #
-                     **/
-                    if ($(this).find("a:first").attr('href') == "#") {
-                        $(this).find("a:first").click(function() {
-                            return false;
-                        });
-                    }
-                }
-            });
+				            /**
+				             * add the multilevel sign next to the link
+				             **/
+				            $(this).find("a:first").append("<b class='collapse-sign'>" + opts.closedSign + "</b>");
 
-            /**
-             * add open sign to all active lists
-             **/
-            self.find("li.active").each(function() {
-                $(this).parents("ul")
-                	.parent("li")
-                	.find("a:first")
-                	.attr('aria-expanded', true)
-                	.find("b:first")
-                	.html(opts.openedSign);
-            });
+				            /**
+				             * avoid jumping to the top of the page when the href is an #
+				             **/
+				            if ($(this).find("a:first").attr('href') == "#") {
+				                $(this).find("a:first").click(function() {
+				                    return false;
+				                });
+				            }
+				        }
+				    });
 
-            /**
-             * click events
-             **/
-            self.find("li a").on('mousedown', function(e) {
+				    /**
+				     * add open sign to all active lists
+				     **/
+				    self.find("li.active").each(function() {
+				        $(this).parents("ul")
+				        	.parent("li")
+				        	.find("a:first")
+				        	.attr('aria-expanded', true)
+				        	.find("b:first")
+				        	.html(opts.openedSign);
+				    });
 
-                if ($(this).parent().find("ul").length !== 0) {
+				    /**
+				     * click events
+				     **/
+				    self.find("li a").on('mousedown', function(e) {
 
-                    if (opts.accordion) {
+				        if ($(this).parent().find("ul").length !== 0) {
 
-                        /**
-                         * do nothing when the list is open
-                         **/
-                        if (!$(this).parent().find("ul").is(':visible')) {
+				            if (opts.accordion) {
 
-                            parents = $(this).parent().parents("ul");
-                            visible = self.find("ul:visible");
-                            visible.each(function(visibleIndex) {
-                                var close = true;
-                                parents.each(function(parentIndex) {
+				                /**
+				                 * do nothing when the list is open
+				                 **/
+				                if (!$(this).parent().find("ul").is(':visible')) {
 
-                                    if (parents[parentIndex] == visible[visibleIndex]) {
+				                    parents = $(this).parent().parents("ul");
+				                    visible = self.find("ul:visible");
+				                    visible.each(function(visibleIndex) {
+				                        var close = true;
+				                        parents.each(function(parentIndex) {
 
-                                        close = false;
-                                        return false;
-                                    }
-                                });
-                                if (close) {
+				                            if (parents[parentIndex] == visible[visibleIndex]) {
 
-                                    if ($(this).parent().find("ul") != visible[visibleIndex]) {
+				                                close = false;
+				                                return false;
+				                            }
+				                        });
+				                        if (close) {
 
-                                        $(visible[visibleIndex]).slideUp(opts.speed + 300, opts.animate, function() {
-                                            $(this).parent("li")
-                                            	.removeClass("open")
-                                            	.find("a:first")
-                                            	.attr('aria-expanded', false)
-                                            	.find("b:first")
-                                            	.html(opts.closedSign);
+				                            if ($(this).parent().find("ul") != visible[visibleIndex]) {
 
-                                            if (myapp_config.debugState)
-                                                console.log("nav item closed")    
-                                        });
-                                    }
-                                }
-                            });
-                        }
-                    }
+				                                $(visible[visibleIndex]).slideUp(opts.speed + 300, opts.animate, function() {
+				                                    $(this).parent("li")
+				                                    	.removeClass("open")
+				                                    	.find("a:first")
+				                                    	.attr('aria-expanded', false)
+				                                    	.find("b:first")
+				                                    	.html(opts.closedSign);
 
-                    /**
-                     * Add active class to open element
-                     **/
-                    if ($(this).parent().find("ul:first").is(":visible") && !$(this).parent().find("ul:first").hasClass("active")) {
+				                                    if (myapp_config.debugState)
+				                                        console.log("nav item closed")    
+				                                });
+				                            }
+				                        }
+				                    });
+				                }
+				            }
 
-                        $(this).parent().find("ul:first").slideUp(opts.speed + 100, opts.animate, function() {
-                            $(this).parent("li")
-                            	.removeClass("open")
-                            	.find("a:first")
-                            	.attr('aria-expanded', false)
-                            	.find("b:first").delay(opts.speed)
-                            	.html(opts.closedSign);  
+				            /**
+				             * Add active class to open element
+				             **/
+				            if ($(this).parent().find("ul:first").is(":visible") && !$(this).parent().find("ul:first").hasClass("active")) {
 
-                            if (myapp_config.debugState)
-                                console.log("nav item closed")
-                        });
-                    } else {
-                        $(this).parent().find("ul:first").slideDown(opts.speed, opts.animate, function() {
+				                $(this).parent().find("ul:first").slideUp(opts.speed + 100, opts.animate, function() {
+				                    $(this).parent("li")
+				                    	.removeClass("open")
+				                    	.find("a:first")
+				                    	.attr('aria-expanded', false)
+				                    	.find("b:first").delay(opts.speed)
+				                    	.html(opts.closedSign);  
 
-                            $(this).parent("li")
-                            	.addClass("open")
-                            	.find("a:first")
-                            	.attr('aria-expanded', true)
-                            	.find("b:first").delay(opts.speed)
-                            	.html(opts.openedSign);
+				                    if (myapp_config.debugState)
+				                        console.log("nav item closed")
+				                });
+				            } else {
+				                $(this).parent().find("ul:first").slideDown(opts.speed, opts.animate, function() {
 
-                            if (myapp_config.debugState)
-                                console.log("nav item opened");
+				                    $(this).parent("li")
+				                    	.addClass("open")
+				                    	.find("a:first")
+				                    	.attr('aria-expanded', true)
+				                    	.find("b:first").delay(opts.speed)
+				                    	.html(opts.openedSign);
 
-                            /* bug fixed: addresses the .mod-main-boxed class bug, when nav exceeds content height */
-                            if (myapp_config.root_.hasClass("mod-main-boxed")) {
-                                initApp.fixAppHeight();
-                            }
-                        });
-                    }
-                }
-            });    
+				                    if (myapp_config.debugState)
+				                        console.log("nav item opened");
 
-        } else {
-            
-            if (myapp_config.debugState)
-                console.log(self.get(0) + " this menu already exists");       
-        }
+				                    /* bug fixed: addresses the .mod-main-boxed class bug, when nav exceeds content height */
+				                    if (myapp_config.root_.hasClass("mod-main-boxed")) {
+				                        initApp.fixAppHeight();
+				                    }
+				                });
+				            }
+				        }
+				    });    
 
-    },
+				} else {
+				    
+				    if (myapp_config.debugState)
+				        console.log(self.get(0) + " this menu already exists");       
+				}
 
-    /**
-     * DOC: $(id).destroy();
-     **/
-    destroy: function() {
-        
-        self = $(this);
+	    },
 
-        if (self.hasClass(myapp_config.navInitalized)) {
-            self.find("li").removeClass("active open");
-            self.find("li a").off('mousedown').removeClass("active").removeAttr("aria-expanded").find(".collapse-sign").remove();
-            self.removeClass(myapp_config.navInitalized).find("ul").removeAttr("style");
+	    /**
+	     * DOC: $(id).destroy();
+	     **/
+	    destroy: function() {
+	        
+	        self = $(this);
 
-            if (myapp_config.debugState)
-                console.log( self.get(0) + " destroyed");     
+	        if (self.hasClass(myapp_config.navInitalized)) {
+	            self.find("li").removeClass("active open");
+	            self.find("li a").off('mousedown').removeClass("active").removeAttr("aria-expanded").find(".collapse-sign").remove();
+	            self.removeClass(myapp_config.navInitalized).find("ul").removeAttr("style");
 
-        } else {
-            console.log("menu does not exist")
-        }
+	            if (myapp_config.debugState)
+	                console.log( self.get(0) + " destroyed");     
 
-        
-    }
-}); 
+	        } else {
+	            console.log("menu does not exist")
+	        }
+
+	        
+	    }
+	}); 
+
+}(jQuery));

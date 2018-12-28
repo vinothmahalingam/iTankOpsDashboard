@@ -2,11 +2,9 @@ $nav-function-top-item-padding: 8px;
 $nav-function-top-logo-width-sm: 28px;
 $nav-function-top-logo-width-lg: 28px;
 $nav-function-top-menu-item-bg: $primary-500;
-$nav-function-top-menu-item-width-md: ( map-get($grid-breakpoints, md) - $nav-function-top-logo-width-sm ) / $nav-top-menu-count - 1;
-$nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-function-top-logo-width-lg ) / $nav-top-menu-count - 2;
 
-.nav-menu-prev,
-.nav-menu-next {
+.nav-padel-left,
+.nav-padel-right {
 	display: none;
 }
 
@@ -14,10 +12,43 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 	.nav-function-top {
 
-		.nav-menu-prev,
-		.nav-menu-next {
-			display: block;
-			flex: 0 0 auto;
+		/* digitally created elements */
+
+		.nav-padel-left,
+		.nav-padel-right {
+			display: flex;
+			background: $white;
+			color: inherit;
+			min-width:50px;
+			box-shadow: 5px 0px 15px 0px rgba(90, 80, 105, 0.2)
+		}
+
+		.nav-padel-right {
+			box-shadow: -5px 0px 15px 0px rgba(90, 80, 105, 0.2)
+		}
+
+		.nav-menu-wrapper {
+			overflow: hidden;
+			-webkit-box-flex: 0;
+			-ms-flex: 0 1 100%;
+			display: flex;
+			flex: 0 1 100%;
+			width: 0;
+
+			.nav-menu {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: start;
+				-ms-flex-align: start;
+				align-items: flex-start;
+				-webkit-box-pack: start;
+				-ms-flex-pack: start;
+				justify-content: flex-start;
+				margin: 0;
+				padding: 0;
+
+			}
 		}
 
 		/* hide elements when nav-function-top */
@@ -123,8 +154,6 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 				flex: 1;
 				display: flex;
-				align-items: center;
-
 				align-items: stretch; 
 
 				/* Make this scrollable when needed */
@@ -146,10 +175,6 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 					display: none;
 				}
 
-				.nav-menu-wrapper {
-					display: flex;
-				}
-
 				.nav-menu {
 					margin:0;
 					display: flex;
@@ -167,11 +192,9 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 						> a {
 
 							color: $nav-background;
-							padding: 0.75rem 1rem !important;
+							padding: .75rem 1.5rem .75rem 1rem !important;
 							text-align: center;
 							font-size: .9rem !important;
-							border-radius: 5px;
-
 
 							>.#{$cust-icon-prefix},
 							>[class*='fa-'] {
@@ -186,7 +209,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 							}
 
 							> .nav-link-text {
-								max-width: $nav-function-top-menu-item-width-md;
+								//max-width: $nav-function-top-menu-item-width-md;
 								overflow: hidden;
 								white-space: nowrap;
 								text-overflow: ellipsis;
@@ -203,8 +226,10 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 							}
 
 							>.collapse-sign {
-								margin-left: 0.75rem;
+								margin-right: 0.5rem;
 								color: lighten($nav-background, 30%);
+								position: absolute;
+								right: 0;
 							}
 
 							> .badge:first-child {
@@ -234,11 +259,11 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 
 							> a {
 								color: $primary-500;
-								background: $page-bg;
+								background: transparent;
 
 								& + ul {
 									display:block !important;
-									box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+									box-shadow: 0px 0px 40px 0px rgba(82, 63, 105, 0.15);
 
 									a {
 										.collapse-sign {
@@ -275,7 +300,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 						position: static;
 
 						a {
-	    					font-size: rem($fs-base);
+	    					//font-size: rem($fs-base);
 	    					color: $nav-background;
 
 	    					&:before {
@@ -290,7 +315,7 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 							width: $nav-width - 2.1875rem; 
 							position: absolute;
 							top: $nav-top-height;
-							box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+							box-shadow: 0px 0px 40px 0px rgba(82, 63, 105, 0.15);
 
 							background: $white;
 
@@ -496,10 +521,10 @@ $nav-function-top-menu-item-width-lg: ( map-get($grid-breakpoints, lg) - $nav-fu
 							>[class*='fa-'] {
 								font-size: rem(18px);
 							}
-							> .nav-link-text {
+							/*> .nav-link-text {
 								//width:auto;
-								max-width: $nav-function-top-menu-item-width-lg;
-							}
+								//max-width: $nav-function-top-menu-item-width-lg;
+							}*/
 						}
 					}
 

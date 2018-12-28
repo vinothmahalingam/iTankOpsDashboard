@@ -18,7 +18,7 @@ $(window).resize(
 		  * Description: fires an event to check for navigation orientation.
 		  * Based on the condition, it will initliaze or destroy the slimscroll, or horizontal nav plugins
 		  **/
-		  initApp.checkSettingConditions();
+		  initApp.checkNavigationOrientation();
 
 		 /**
 		  * (2a) FIX APP HEIGHT

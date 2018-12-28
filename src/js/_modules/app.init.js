@@ -145,7 +145,7 @@ var initApp = (function(app) {
 		$(myapp_config.mythemeAnchor).attr('href', "");
 
 		/* check non-conflicting plugins */
-		initApp.checkSettingConditions();
+		initApp.checkNavigationOrientation();
 
 		/* adjust app height */
 		initApp.calculateAppHeight();
@@ -185,7 +185,7 @@ var initApp = (function(app) {
 		myapp_config.root_.removeClass().addClass(DB_string);
 
 		/* destroy or enable slimscroll */
-		initApp.checkSettingConditions();
+		initApp.checkNavigationOrientation();
 
 		/* save settings if "storeLocally == true" */
 		initApp.saveSettings();
@@ -362,12 +362,12 @@ var initApp = (function(app) {
 	 }
 
 	/**
-	 * checkSettingConditions by checking layout conditions
+	 * checkNavigationOrientation by checking layout conditions
 	 * DOC: sometimes settings can trigger certain plugins; so we check this condition and activate accordingly
 	 * E.g: the fixed navigation activates custom scroll plugin for the navigation, but this only happens when
 	 *		it detects desktop browser and destroys the plugin when navigation is on top or if its not fixed.
 	 **/
-	 app.checkSettingConditions = function() {
+	 app.checkNavigationOrientation = function() {
 
 	 	/**
 	 	 * DOC: add the plugin with the following rules: fixed navigation is selected, top navigation is not active, minify nav is not active, 
@@ -432,10 +432,14 @@ var initApp = (function(app) {
 
 
 			/* fires when user switches to nav-function-top on desktop view */
-			case ( myapp_config.root_.hasClass('nav-function-top') && $("#js-nav-menu-wrapper").length == false && !myapp_config.root_.hasClass('mobile-view-activated') ):
+			case ( $.fn.navigationHorizontal && myapp_config.root_.hasClass('nav-function-top') && $("#js-nav-menu-wrapper").length == false && !myapp_config.root_.hasClass('mobile-view-activated') ):
 
 				/* wrap ul.nav-menu */
 				myapp_config.navHooks.wrap( "<div id='js-nav-menu-wrapper' class='nav-menu-wrapper'></div>" );
+
+				/* build horizontal navigation */
+				//$('#js-nav-menu-wrapper').navigationHorizontal();
+			
 
 				/* build horizontal nav */
 				if (myapp_config.debugState)
@@ -448,6 +452,9 @@ var initApp = (function(app) {
 
 				/* remove ul.nav-menu wrapper */
 				myapp_config.navHooks.unwrap("#js-nav-menu-wrapper");
+
+				/* destroy horizontal nav */
+				//$('#js-nav-menu-wrapper').navigationHorizontal.destroy();
 
 				/* fix app height (only needs to be called once) */
 				initApp.calculateAppHeight();
@@ -463,6 +470,9 @@ var initApp = (function(app) {
 
 				/* remove ul.nav-menu wrapper */
 				myapp_config.navHooks.unwrap("#js-nav-menu-wrapper");
+
+				/* destroy horizontal nav */
+				//$('#js-nav-menu-wrapper').navigationHorizontal.destroy();
 
 				/* fix app height (only needs to be called once) */
 				initApp.calculateAppHeight();
@@ -494,7 +504,8 @@ var initApp = (function(app) {
 				accordion : $(id).data('nav-accordion'),
 				speed : myapp_config.navSpeed,
 				closedSign : '<em class="' + myapp_config.navClosedSign + '"></em>',
-				openedSign : '<em class="' + myapp_config.navOpenedSign + '"></em>'
+				openedSign : '<em class="' + myapp_config.navOpenedSign + '"></em>',
+				initClass: myapp_config.navInitalized
 
 			});
 
@@ -638,7 +649,7 @@ var initApp = (function(app) {
 		}
 
 		/* Check conflicting classes to build/destroy slimscroll */
-		initApp.checkSettingConditions();
+		initApp.checkNavigationOrientation();
 
 		/* Activate the last tab clicked using localStorage */
 		var lastTab = localStorage.getItem('lastTab');
@@ -842,7 +853,7 @@ var initApp = (function(app) {
 						if ( typeof classHolder != 'undefined' || classHolder != null ) {
 
 							/* NOTE: saveSettings function is located right after <body> tag */
-							initApp.checkSettingConditions();
+							initApp.checkNavigationOrientation();
 							initApp.saveSettings();
 						}
 
