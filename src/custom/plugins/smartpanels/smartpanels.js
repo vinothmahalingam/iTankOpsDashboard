@@ -1,7 +1,7 @@
  /*!
  * jQuery SmartPanels v1.0.0
  *
- * Copyright 2019, 2020 Sunnyat Ahmmed
+ * Copyright 2019, 2020 NextGen WebApp
  * Released under Marketplace License (see your license details for usage)
  *
  * Publish Date: 2018-01-01T17:42Z
