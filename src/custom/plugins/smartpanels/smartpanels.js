@@ -873,6 +873,7 @@
             $(self.o.deletePositionKey).off(namespace);
             $(window).off(namespace);
             self.obj.removeData(pluginName);
+            self.initialized = false;
         }
     };
 
