@@ -501,7 +501,7 @@ var initApp = (function(app) {
 
 			$(id).navigation({ 
 
-				accordion : $(id).data('nav-accordion'),
+				accordion : myapp_config.navAccordion,
 				speed : myapp_config.navSpeed,
 				closedSign : '<em class="' + myapp_config.navClosedSign + '"></em>',
 				openedSign : '<em class="' + myapp_config.navOpenedSign + '"></em>',
@@ -526,7 +526,7 @@ var initApp = (function(app) {
 		 **/
 		if ($.fn.navigation) {
 
-			$(id).navHooks.destroy(); 
+			$(id).navigationDestroy(); 
 
 			return (id);
 		} else {
