@@ -2,7 +2,7 @@
 // using "transform: translate3d(0, 0, 0);" will use the Graphic Processor (GPU) and avoid the CSS transition using CPU...
 
 @include media-breakpoint-up(xl) {
-	.page-left-panel {
+	.page-sidebar {
 		@include translate3d(0,0,0);
 	}
 
@@ -10,7 +10,7 @@
 	&.nav-function-fixed,
 	&.header-function-fixed.nav-function-fixed {
 		 .page-wrapper,
-		 .page-left-panel {
+		 .page-sidebar {
             transform: none;
     -webkit-transform: none;
         -ms-transform: none;

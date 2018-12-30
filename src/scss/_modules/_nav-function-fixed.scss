@@ -1,5 +1,5 @@
 .nav-function-fixed:not(.nav-function-top)  {
-	.page-left-panel{
+	.page-sidebar{
 		position: fixed !important;
 		
 		.primary-nav {
@@ -37,7 +37,7 @@
 		 */
 		&:not(.nav-function-top){
 			&.mod-main-boxed {
-				.page-left-panel{
+				.page-sidebar{
 					position: fixed !important;
 				}	
 			}
@@ -49,7 +49,7 @@
 		&.nav-function-top {
 			&.header-function-fixed {
 
-				.page-left-panel {
+				.page-sidebar {
 					position: fixed !important;
 					top: $header-height-nav-top;
 
@@ -67,7 +67,7 @@
 		 */
 		&.nav-function-top {
 			&.mod-main-boxed {
-				.page-left-panel {
+				.page-sidebar {
 					right: 0;
 					left: 0;
 					margin-right: auto;
@@ -87,7 +87,7 @@
 		 */
 		&:not(.nav-function-top){
 			&.mod-main-boxed {
-				.page-left-panel{
+				.page-sidebar{
 					position: absolute !important;
 				}	
 			}

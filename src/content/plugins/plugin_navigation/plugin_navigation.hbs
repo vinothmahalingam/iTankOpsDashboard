@@ -535,41 +535,45 @@ $("#mynav").navigation({
 <script type="text/javascript">
 
 $("#destroy").hide();
-//$('#pre-nav-1').hide()
-	
-	//$('#nav_accordion').val()
 
 	$("#build").on('click', function () {
 
 		if ( $("#nav_syndicate").is(':checked') ? true : false ) {
-			$("#nav-1, #nav-2").navigation({accordion: $("#nav_accordion").is(':checked') ? true : false, animate: $('#nav_animation').val(), speed: parseInt( $('#nav_speed').val(), 10 ), closedSign:$('#nav_closedSign').val(), openedSign:$('#nav_openedSign').val()}); 
-
-			//$("#app-eventlog").text('$("#nav-1, #nav-2").navigation({ accordion:' + true + ', ' + 'animate:' +  $('#nav_animation').val() + '})')
-
+			$("#nav-1, #nav-2").navigation({
+				accordion: $("#nav_accordion").is(':checked') ? true : false, 
+				animate: $('#nav_animation').val(), 
+				speed: parseInt( $('#nav_speed').val(), 10 ),
+				closedSign:$('#nav_closedSign').val(), 
+				openedSign:$('#nav_openedSign').val()
+			}); 
 		} else {
-			$("#nav-1").navigation({accordion: $("#nav_accordion").is(':checked') ? true : false, animate: $('#nav_animation').val(), speed: parseInt( $('#nav_speed').val(), 10 ), closedSign:$('#nav_closedSign').val(), openedSign:$('#nav_openedSign').val()}); 
-			$("#nav-2").navigation({accordion: $("#nav_accordion").is(':checked') ? true : false, animate: $('#nav_animation').val(), speed: parseInt( $('#nav_speed').val(), 10 ), closedSign:$('#nav_closedSign').val(), openedSign:$('#nav_openedSign').val()}); 
+			$("#nav-1").navigation({
+				accordion: $("#nav-1").data('nav-accordion'), 
+				animate: $('#nav_animation').val(), 
+				speed: parseInt( $('#nav_speed').val(), 10 ), 
+				closedSign:$('#nav_closedSign').val(), 
+				openedSign:$('#nav_openedSign').val()
+			}); 
+			$("#nav-2").navigation({
+				accordion: $("#nav-2").data('nav-accordion'), 
+				animate: $('#nav_animation').val(), 
+				speed: parseInt( $('#nav_speed').val(), 10 ), 
+				closedSign:$('#nav_closedSign').val(), 
+				openedSign:$('#nav_openedSign').val()
+			}); 
 		}
 
 		$("#build").hide();
 		$("#destroy").show();
 		$("#nav_accordion, #nav_animation, #nav_speed, #nav_closedSign, #nav_openedSign, #nav_syndicate").attr('disabled', true);
 
-		//$('#pre-nav-1').show().text( $('#nav-1')[0].innerHTML ).css('max-height', '400px');
-
-/*		$('#pre-nav-1').html(function() {
-			return this.innerHTML.replace(/\t/g, '&nbsp;');
-		});*/
-
 	});
 	$("#destroy").on('click', function () {
-		$("#nav-1").destroy(); 
-		$("#nav-2").destroy();
+		$("#nav-1").navigationDestroy(); 
+		$("#nav-2").navigationDestroy();
 		$("#destroy").hide();
 		$("#build").show();
 		$("#nav_accordion, #nav_animation, #nav_speed, #nav_closedSign, #nav_openedSign, #nav_syndicate").removeAttr('disabled');
-
-		//$('#pre-nav-1').text("").hide();
 	});
 
 </script>

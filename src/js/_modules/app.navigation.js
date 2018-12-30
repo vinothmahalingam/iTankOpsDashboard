@@ -1,3 +1,12 @@
+ /*!
+ * jQuery app.navigation v1.0.0
+ *
+ * Copyright 2019, 2020 NextGen WebApp
+ * Released under Marketplace License (see your license details for usage)
+ *
+ * Publish Date: 2018-01-01T17:42Z
+ */
+
 (function($) {
 
 	/**
@@ -5,19 +14,19 @@
 	 **/
 	$.fn.extend({
 
-	    /**
-	     * pass the options variable to the function
-	     *
-	     *   $(id).navigation({ 
-	     *       accordion: true,
-	     *       animate: 'easeOutExpo',
-	     *       speed: 200,
-	     *       closedSign: '[+]',
-	     *       openedSign: '[-]',
-	     *       initClass: 'js-nav-built'
-	     *   });
-	     *
-	     **/
+		/**
+		 * pass the options variable to the function
+		 *
+		 *   $(id).navigation({ 
+		 *       accordion: true,
+		 *       animate: 'easeOutExpo',
+		 *       speed: 200,
+		 *       closedSign: '[+]',
+		 *       openedSign: '[-]',
+		 *       initClass: 'js-nav-built'
+		 *   });
+		 *
+		 **/
 	     
 	    navigation: function(options) {
 
@@ -177,24 +186,24 @@
 	    /**
 	     * DOC: $(id).destroy();
 	     **/
-	    destroy: function() {
+	    navigationDestroy: function() {
 	        
-	        self = $(this);
+			self = $(this);
 
-	        if (self.hasClass(myapp_config.navInitalized)) {
-	            self.find("li").removeClass("active open");
-	            self.find("li a").off('mousedown').removeClass("active").removeAttr("aria-expanded").find(".collapse-sign").remove();
-	            self.removeClass(myapp_config.navInitalized).find("ul").removeAttr("style");
+			if (self.hasClass(myapp_config.navInitalized)) {
+			    self.find("li").removeClass("active open");
+			    self.find("li a").off('mousedown').removeClass("active").removeAttr("aria-expanded").find(".collapse-sign").remove();
+			    self.removeClass(myapp_config.navInitalized).find("ul").removeAttr("style");
 
-	            if (myapp_config.debugState)
-	                console.log( self.get(0) + " destroyed");     
+			    if (myapp_config.debugState)
+			        console.log( self.get(0) + " destroyed");     
 
-	        } else {
-	            console.log("menu does not exist")
-	        }
+			} else {
+			    console.log("menu does not exist")
+			}
 
 	        
 	    }
 	}); 
 
-}(jQuery));
+})(jQuery, window, document);

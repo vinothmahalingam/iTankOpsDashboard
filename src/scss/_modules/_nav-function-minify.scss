@@ -8,7 +8,7 @@
 			display: none !important;
 		}
 
-		.page-left-panel {
+		.page-sidebar {
 			
 			width: $nav-minify-width;
 			z-index: $depth-header + 1;
@@ -260,7 +260,7 @@
 			.page-wrapper {
 				padding-left: $nav-hidden-visiblity;
 			}
-			.page-left-panel {
+			.page-sidebar {
 				left: $nav-hidden-visiblity - $nav-minify-width;
 				overflow: visible;
 				&:hover {

@@ -102,7 +102,7 @@
 }
 
 
-.page-left-panel .primary-nav .nav-menu li  a.waves-themed .waves-ripple {
+.page-sidebar .primary-nav .nav-menu li  a.waves-themed .waves-ripple {
 	$bgcolor: darken($primary-800, 25%);
 	background: rgba($bgcolor,0.6);
 	$gradient: rgba($bgcolor,0.2) 0,rgba($bgcolor,.3) 40%,rgba($bgcolor,.4) 50%,rgba($bgcolor,.5) 60%,rgba($bgcolor,0) 70%;

@@ -68,7 +68,6 @@
             self.storage.keySettings = 'smartPanel_settings_' + panel_url + '_' + self.objId;
             self.storage.keyPosition = 'smartPanel_position_' + panel_url + '_' + self.objId;
         },
-
  
         /**
          * Save all settings to the localStorage.
@@ -863,7 +862,7 @@
          *
          * @param:
          **/
-        _initDestroy: function () {
+        destroy: function () {
             var self = this, 
                 namespace = '.' + pluginName, 
                 sortItem = self.obj.find(self.o.grid + '.sortable-grid').not('[data-panel-excludegrid]');

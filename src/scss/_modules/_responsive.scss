@@ -93,7 +93,7 @@ $grid-breakpoints: (
 			border-bottom: 1px solid #e5e5e5;
 		}
 
-		.page-left-panel {
+		.page-sidebar {
 			z-index: $space + 1000;
 			transition: $nav-hide-animate;
 			@include translate3d (-$nav-width, 0, 0);
@@ -196,7 +196,7 @@ $grid-breakpoints: (
 		/* this was conflicting with the new DOM change where we swtiched header with nav */
 		/*&:not(.nav-function-fixed) {
 
-			.page-left-panel {
+			.page-sidebar {
 				.page-logo {
 					position: absolute !important;
 					top:0px !important;
@@ -214,7 +214,7 @@ $grid-breakpoints: (
 	&.nav-mobile-push:not(.nav-mobile-slide-out) {
 
 		.page-wrapper {
-			.page-left-panel {
+			.page-sidebar {
 				@include translate3d (-$nav-width, 0, 0);
 			}
 			.page-header,
@@ -234,7 +234,7 @@ $grid-breakpoints: (
 		min-height: 100vh !important; /*new*/
 
 		.page-wrapper {
-			.page-left-panel {
+			.page-sidebar {
 				z-index: 0;
 				transition:none;
 				@include translate3d (0px, 0, 0);	
@@ -264,7 +264,7 @@ $grid-breakpoints: (
 		overflow: hidden;
 		height: 100vh;
 
-		.page-left-panel {
+		.page-sidebar {
 			border-right:1px solid rgba(0,0,0,0.03);
 			@include box-shadow( 0 3px 35px 3px rgba(0,0,0,0.52) );
 		}
@@ -287,7 +287,7 @@ $grid-breakpoints: (
 		
 		&:not(.nav-mobile-push) {
 
-			.page-left-panel {
+			.page-sidebar {
 
 		-webkit-transform: translate3d(0px, 0, 0) !important;
 		    -ms-transform: translate3d(0px, 0, 0) !important;
@@ -297,7 +297,7 @@ $grid-breakpoints: (
 
 			&.nav-function-fixed:not(.nav-function-top) {
 
-				.page-left-panel {
+				.page-sidebar {
 
 		-webkit-transform: translate3d(0px, 0, 0) !important;
 		    -ms-transform: translate3d(0px, 0, 0) !important;
@@ -312,7 +312,7 @@ $grid-breakpoints: (
 
 			.page-wrapper {
 
-				.page-left-panel {
+				.page-sidebar {
 					left:0;
 					@include translate3d (0px, 0, 0);
 				}

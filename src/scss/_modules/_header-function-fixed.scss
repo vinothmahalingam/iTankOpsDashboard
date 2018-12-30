@@ -26,7 +26,7 @@
 				//@extend %fixed-header-shadow;
 			}
 
-			.page-left-panel {
+			.page-sidebar {
 				.primary-nav {
 					margin-top:$header-height;
 				}
@@ -54,7 +54,7 @@
 			}
 
 			&.nav-function-minify {
-				.page-left-panel {
+				.page-sidebar {
 					.page-logo {
 						width: $nav-minify-width;
 					}

@@ -123,7 +123,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 			}
 		}
 
-		.page-left-panel {
+		.page-sidebar {
 			display: flex;
 			width: 100%;
 			height: $nav-top-height;
@@ -382,7 +382,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 
 		&.nav-function-minify {
 
-			.page-left-panel {
+			.page-sidebar {
 				//height: $nav-top-minify-height;
 
 				/*.page-logo {
@@ -433,7 +433,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 		}
 
 		&.mod-main-boxed {
-			.page-left-panel {
+			.page-sidebar {
 
 				.primary-nav {
 					.nav-menu:last-child,
@@ -464,7 +464,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 			display: flex;
 			flex-direction: column;
 		}
-		.page-left-panel {
+		.page-sidebar {
 			order: 2;
 		}
 		.page-content {
@@ -491,7 +491,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 
 	.nav-function-top {
 		
-		.page-left-panel {
+		.page-sidebar {
 
 			/*.page-logo {
 				width: auto;

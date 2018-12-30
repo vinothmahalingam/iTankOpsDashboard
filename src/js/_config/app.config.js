@@ -13,14 +13,14 @@ var myapp_config = {
      */
     root_: $('body'), // used for core app reference
     root_wrapper: $('.page-wrapper'),
-    root_logo: $('.page-left-panel > .page-logo'), // used for core app reference
+    root_logo: $('.page-sidebar > .page-logo'), // used for core app reference
     /*
        REFERENCE OBJ FOR WINDOW HEIGHT
        we are saving some memory and repeated calls for window height
        window height is only updated during window resize
      */
     windowHeight: $(window).height(),
-    navHeightGap: ( $('.page-left-panel .nav-footer').height() || 0 ) + $('header').height() + 1,
+    navHeightGap: ( $('.page-sidebar .nav-footer').height() || 0 ) + $('header').height() + 1,
     /*
        DELAY VAR FOR FIRING REPEATED EVENTS (eg., scroll & resize events)
        Lowering the variable makes faster response time but taxing on the CPU
@@ -80,6 +80,7 @@ var myapp_config = {
     */
     navAnchor: $('#js-primary-nav'), //changing this may implicate slimscroll plugin target
     navHooks: $('#js-primary-nav > ul.nav-menu'), //changing this may implicate CSS targets
+    navAccordion: true, //nav item when one is expanded the other closes
     navInitalized: 'js-nav-built', //nav finished class
     navFilterInput: $('#nav_filter_input'), //changing this may implicate CSS targets
     /*
