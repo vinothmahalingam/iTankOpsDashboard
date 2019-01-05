@@ -20,7 +20,10 @@ $nav-function-top-menu-item-bg: $primary-500;
 			background: $white;
 			color: inherit;
 			min-width:50px;
-			box-shadow: 5px 0px 15px 0px rgba(90, 80, 105, 0.2)
+			align-items: center;
+    		justify-content: center;
+			
+			box-shadow: 5px 0px 15px 0px rgba(90, 80, 105, 0.2);
 		}
 
 		.nav-padel-right {
@@ -28,27 +31,13 @@ $nav-function-top-menu-item-bg: $primary-500;
 		}
 
 		.nav-menu-wrapper {
-			overflow: hidden;
 			-webkit-box-flex: 0;
 			-ms-flex: 0 1 100%;
 			display: flex;
 			flex: 0 1 100%;
 			width: 0;
 
-			.nav-menu {
-				display: -webkit-box;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-box-align: start;
-				-ms-flex-align: start;
-				align-items: flex-start;
-				-webkit-box-pack: start;
-				-ms-flex-pack: start;
-				justify-content: flex-start;
-				margin: 0;
-				padding: 0;
-
-			}
+			overflow: hidden;
 		}
 
 		/* hide elements when nav-function-top */
@@ -128,7 +117,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 			width: 100%;
 			height: $nav-top-height;
 			z-index: $depth-header - 1;
-			overflow:hidden;
+			//overflow:hidden;
 			padding: 0 0.625rem;
 			background: $white;
 
@@ -138,9 +127,9 @@ $nav-function-top-menu-item-bg: $primary-500;
 
 			order: 2;		
 
-			&:hover {
+			/*&:hover {
 				overflow:visible;
-			}
+			}*/
 
 			.page-logo,
 			.nav-filter,
@@ -150,26 +139,30 @@ $nav-function-top-menu-item-bg: $primary-500;
 			}
 
 			.primary-nav {
-				overflow: hidden;
+				//overflow: hidden;
 
 				flex: 1;
 				display: flex;
 				align-items: stretch; 
 
+				overflow: initial;
+
 				/* Make this scrollable when needed */
-				overflow-x: auto;
+				//overflow-x: auto;
 				/* We don't want vertical scrolling */
-				overflow-y: hidden;
+				//overflow-y: hidden;
 				/* For WebKit implementations, provide inertia scrolling */
-				-webkit-overflow-scrolling: touch;
+				//-webkit-overflow-scrolling: touch;
 				/* We don't want internal inline elements to wrap */
-				white-space: nowrap;
+				//white-space: nowrap;
 				/* Crush the whitespace here */
-				font-size: 0;
+				//font-size: 0;
 
 				/* Make an auto-hiding scroller for the 3 people using a IE */
 				-ms-overflow-style: -ms-autohiding-scrollbar;
 				/* Remove the default scrollbar for WebKit implementations */
+
+				transition: 1s all;
 
 				&::-webkit-scrollbar {
 					display: none;
@@ -177,8 +170,16 @@ $nav-function-top-menu-item-bg: $primary-500;
 
 				.nav-menu {
 					margin:0;
+					padding: 0;
 					display: flex;
+					flex-direction: row;
 					align-items: stretch;
+
+					-ms-flex: 0 1 100%;
+					flex: 0 1 100%;
+
+					transition: margin 0.5s ease-out 0s;
+
 
 					> li {
 
@@ -297,7 +298,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 
 					li {
 
-						position: static;
+						position: initial;
 
 						a {
 	    					//font-size: rem($fs-base);
@@ -432,7 +433,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 
 		}
 
-		&.mod-main-boxed {
+		/*&.mod-main-boxed {
 			.page-sidebar {
 
 				.primary-nav {
@@ -454,7 +455,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 					}
 				}
 			}
-		}
+		}*/
 
 		/* reorder */
 		.page-header {
