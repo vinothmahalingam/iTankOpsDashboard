@@ -1,12 +1,17 @@
 /**
  * A jQuery plugin boilerplate.
  * Author: Sunnyat Ahmmed @myplaneticket
+ * $('#js-nav-menu-wrapper').navigationHorizontal();
  */
+
+
+
 ;
 (function($) {
     var pluginName = 'navigationHorizontal';
 
     function Plugin(element, options) {
+
         var el = element;
         var $el = $(element);
 
@@ -14,22 +19,23 @@
 
         function init() {
 
-            console.log($el );
+            console.log(options);
 
-            $(".nav-menu").css('margin-left', '0px');
+            $el.css('margin-left', '0px');
+            //$el.wrap( "<div id='js-nav-menu-wrapper' class='nav-menu-wrapper'></div>" );
 
-            var navWrapper = $("#js-nav-menu-wrapper"),
+            var navWrapper = $('#' + options.wrapperId),
                 sliderWidth = navWrapper.outerWidth(),
-                contentWidth = navWrapper.children('.nav-menu').outerWidth(),
-                currentMarginLeft = parseFloat(navWrapper.children('.nav-menu').css('margin-left')),
+                contentWidth = navWrapper.children(options.elementClass).outerWidth(),
+                currentMarginLeft = parseFloat(navWrapper.children(options.elementClass).css('margin-left')),
                 setMargin,
                 maxMargin,
 
 
                 _updateSlider = function() {
                     sliderWidth = navWrapper.outerWidth();
-                    contentWidth = navWrapper.children('.nav-menu').outerWidth();
-                    currentMarginLeft = parseFloat(navWrapper.children('.nav-menu').css('margin-left'));
+                    contentWidth = navWrapper.children(options.elementClass).outerWidth();
+                    currentMarginLeft = parseFloat(navWrapper.children(options.elementClass).css('margin-left'));
                 },
 
                 navMenuScrollRight = function() {
@@ -42,7 +48,7 @@
                         setMargin = currentMarginLeft;
                     }
 
-                    navWrapper.children('.nav-menu').css({
+                    navWrapper.children(options.elementClass).css({
                         marginLeft: setMargin
                     });
 
@@ -58,21 +64,21 @@
                         setMargin = currentMarginLeft;
                     }
 
-                    navWrapper.children('.nav-menu').css({
+                    navWrapper.children(options.elementClass).css({
                         marginLeft: setMargin
                     });
 
                 };
 
 
-            $('#js-scroll-right').click(function(e) {
+            $('#' + options.buttonRightId).click(function(e) {
 
                 navMenuScrollRight();
 
                 e.preventDefault();
             });
 
-            $('#js-scroll-left').click(function(e) {
+            $('#' + options.buttonLeftId).click(function(e) {
 
                 navMenuScrollLeft();
 
@@ -146,7 +152,13 @@
 
     $.fn[pluginName].defaults = {
         onInit: function() {},
-        onDestroy: function() {}
+        onDestroy: function() {},
+        element: $(".nav-menu"),
+        elementClass: '.nav-menu',
+        wrapperId: 'js-nav-menu-wrapper',
+        buttonLeftId: 'js-scroll-left',
+        buttonRightId: 'js-scroll-right'
     };
+
 
 })(jQuery);
