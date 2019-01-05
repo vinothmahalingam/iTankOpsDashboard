@@ -14,7 +14,7 @@ var initApp = (function(app) {
 
 		/* add class to filter hide/show */
 		if (anchor) {
-			$(anchor).addClass('js-list-filter')
+			$(anchor).addClass('js-list-filter');
 		} else {
 			$(list).addClass('js-list-filter');
 		}
@@ -49,7 +49,7 @@ var initApp = (function(app) {
 			} else {
 
 				/* when filter length is blank reset the classes */
-				$(list).find('[data-filter-tags]').parentsUntil(list).removeClass('js-filter-hide js-filter-show')	
+				$(list).find('[data-filter-tags]').parentsUntil(list).removeClass('js-filter-hide js-filter-show');
 
 				/* if element exists reset print results */
 				if (listPrev){
@@ -62,14 +62,14 @@ var initApp = (function(app) {
 		}).keyup( $.debounce( myapp_config.filterDelay, function (e) {
 
 			/* fire the above change event after every letter is typed with a delay of 250ms */
-		 	$(this).change()
+		 	$(this).change();
 
 		 	/*if(e.keyCode == 13) {
 				console.log( $(list).find(".filter-show:not(.filter-hide) > a") );
 			}*/
 
 		}));
-	}
+	};
 
 	/**
 	 * Load scripts using lazyload method 
@@ -105,7 +105,7 @@ var initApp = (function(app) {
 				callback();
 			}
 		});
-	}
+	};
 
 	/**
 	 * Javascript Animation for save settings 
@@ -125,10 +125,10 @@ var initApp = (function(app) {
 				console.log('Theme settings: ' + '\n' +localStorage.getItem('themeSettings'));
 
 		} else {
-			console.log("save function does not exist")
+			console.log("save function does not exist");
 		}
 		
-	}
+	};
 
 	/**
 	 * Reset settings 
@@ -155,7 +155,7 @@ var initApp = (function(app) {
 
 		if (myapp_config.debugState)
 			console.log("App reset successful");
-	}
+	};
 
 	/**
 	 * Access Indicator
@@ -169,7 +169,7 @@ var initApp = (function(app) {
 			return true;
 		});
 
-	}
+	};
 
 	/*
 	 * usage: initApp.pushSettings("className1 className2")
@@ -192,7 +192,7 @@ var initApp = (function(app) {
 
 		/* return string */
 		return DB_string;
-	}
+	};
 
 	/*
 	 * usage: var DB_string = initApp.getSettings();
@@ -203,7 +203,7 @@ var initApp = (function(app) {
 		return myapp_config.root_.attr('class').split(/[^\w-]+/).filter(function(item) {
 			return /^(nav|header|mod|display)-/i.test(item);
 		}).join(' ');
-	}
+	};
 
 	/*
 	 * Checks and sets active settings selections
@@ -237,7 +237,7 @@ var initApp = (function(app) {
 			console.log("app height updated: " + myapp_config.windowHeight);		
 
 		return myapp_config.windowHeight;
-	}
+	};
 
 	/**
 	 * detect browser type
@@ -334,7 +334,7 @@ var initApp = (function(app) {
 					break;
 
 			}	
-		}
+		};
 
 		/* HINT! alternative way to save ROM for mobile:
 		   if ( myapp_config.thisDevice === 'desktop' && !myapp_config.root_.is('.nav-function-top, .nav-function-fixed') ) { */
@@ -344,7 +344,7 @@ var initApp = (function(app) {
 				
 		}
 
-	}
+	};
 
 	/**
 	 * Fix logo position on .header-function-fixed & .nav-function-hidden
@@ -355,11 +355,11 @@ var initApp = (function(app) {
 		if ( myapp_config.root_.is('.nav-function-hidden.header-function-fixed:not(.nav-function-top)') &&  myapp_config.thisDevice === 'desktop') {
 			myapp_config.root_logo.css({
 				'top': $(window).scrollTop()
-			})
+			});
 		} else if ( myapp_config.root_.is('.header-function-fixed:not(.nav-function-top):not(.nav-function-hidden)') &&  myapp_config.thisDevice === 'desktop') {
 			myapp_config.root_logo.attr("style", "");
 		}
-	 }
+	 };
 
 	/**
 	 * checkNavigationOrientation by checking layout conditions
@@ -584,7 +584,7 @@ var initApp = (function(app) {
 				deleteClass(this, parentClass, focusClass);
 			});
 		});
-	} 
+	}; 
 	
 	/**
 	 * Mobile Check Activate
@@ -608,7 +608,7 @@ var initApp = (function(app) {
 			console.log( "mobileCheckActivation on " + $(window).width() + " | activated: " + myapp_config.mobileMenuTrigger);
 
 		return myapp_config.mobileMenuTrigger;
-	} 
+	}; 
 
 	/**
 	 *  Toggle visibility
@@ -621,7 +621,7 @@ var initApp = (function(app) {
 			e.style.display = 'none';
 		else
 			e.style.display = 'block';
-	}
+	};
 
 	/**
 	 * Miscelaneous DOM ready functions
@@ -722,7 +722,7 @@ var initApp = (function(app) {
 		 * doc: only fires for desktop
 		 **/
 		if( typeof($.fn.tooltip) !== 'undefined' && myapp_config.thisDevice === 'desktop' && $('[data-toggle="tooltip"]').length ){
-			$('[data-toggle="tooltip"]').tooltip()
+			$('[data-toggle="tooltip"]').tooltip();
 		} else {
 			console.log("ERROR! bs.tooltip is not loaded");
 		}
@@ -764,10 +764,10 @@ var initApp = (function(app) {
 			});
 			$('a[data-toggle="tab"]').on('shown.bs.tab', function () {
 				$('.slimScrollDiv > :first-child').trigger('scroll');
-			})
+			});
 			myapp_config.root_.on('show.bs.dropdown', function () {
 				$('.slimScrollDiv > :first-child').trigger('scroll');
-			})
+			});
 		} else {
 			$('.custom-scroll img').lazy({
 				effect: "fadeIn",
@@ -779,10 +779,10 @@ var initApp = (function(app) {
 			});
 			$('a[data-toggle="tab"]').on('shown.bs.tab', function () {
 				$('.custom-scroll').trigger('scroll');
-			})
+			});
 			myapp_config.root_.on('show.bs.dropdown', function () {
 				$('.custom-scroll').trigger('scroll');
-			})
+			});
 		}
 
 		/**
@@ -1026,7 +1026,7 @@ var initApp = (function(app) {
 									});								
 									
 								}
-							)
+							);
 
 						} else {
 
@@ -1118,14 +1118,14 @@ var initApp = (function(app) {
 		 * DOC: bootstrap related
 		 **/
 		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-			var msViewportStyle = document.createElement('style')
+			var msViewportStyle = document.createElement('style');
 			msViewportStyle.appendChild(
 				document.createTextNode(
 					'@-ms-viewport{width:auto!important}'
 				)
-			)
+			);
 			document.head.appendChild(msViewportStyle)
-		}
+		};
 
 		/**
 		 * Display APP version
