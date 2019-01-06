@@ -1,43 +1,52 @@
-/**
- * A jQuery plugin boilerplate.
- * Author: Sunnyat Ahmmed @myplaneticket
- * $('#js-nav-menu-wrapper').navigationHorizontal();
+ /*!
+ * jQuery menuSlider v1.0.0
+ *
+ * Copyright 2019, 2020 NextGen WebApp
+ * Released under Marketplace License (see your license details for usage)
+ *
+ * Publish Date: 2018-01-01T17:42Z
  */
-
 
 
 ;
 (function($) {
-    var pluginName = 'navigationHorizontal';
+    var pluginName = 'menuSlider';
 
     function Plugin(element, options) {
 
-        var el = element;
-        var $el = $(element);
-
+        var $el = $(element),
+             el = element;
         options = $.extend({}, $.fn[pluginName].defaults, options);
 
         function init() {
 
-            console.log(options);
-
+            /* reset margin */
             $el.css('margin-left', '0px');
-            //$el.wrap( "<div id='js-nav-menu-wrapper' class='nav-menu-wrapper'></div>" );
 
+            /* add wrapper around navigation */
+            $el.wrap( '<div id="'+options.wrapperId+'" class="nav-menu-wrapper"></div>' );
+
+            /* add buttons for scroller */
+            $('#' + options.wrapperId).before('<a id="'+options.buttonLeftId+'" href="#" class="nav-padel-left"></a>');
+            $('#' + options.wrapperId).after('<a id="'+options.buttonRightId+'" href="#" class="nav-padel-right"></a>');
+
+            /* define variables */
             var navWrapper = $('#' + options.wrapperId),
                 sliderWidth = navWrapper.outerWidth(),
-                contentWidth = navWrapper.children(options.elementClass).outerWidth(),
-                currentMarginLeft = parseFloat(navWrapper.children(options.elementClass).css('margin-left')),
+                contentWidth = navWrapper.children(options.element).outerWidth(),
+                currentMarginLeft = parseFloat(navWrapper.children(options.element).css('margin-left')),
                 setMargin,
                 maxMargin,
 
 
+                /* update variables for margin calculations */
                 _updateSlider = function() {
                     sliderWidth = navWrapper.outerWidth();
-                    contentWidth = navWrapper.children(options.elementClass).outerWidth();
-                    currentMarginLeft = parseFloat(navWrapper.children(options.elementClass).css('margin-left'));
+                    contentWidth = navWrapper.children(options.element).outerWidth();
+                    currentMarginLeft = parseFloat(navWrapper.children(options.element).css('margin-left'));
                 },
 
+                /* scroll right */
                 navMenuScrollRight = function() {
 
                     _updateSlider();
@@ -48,12 +57,13 @@
                         setMargin = currentMarginLeft;
                     }
 
-                    navWrapper.children(options.elementClass).css({
+                    navWrapper.children(options.element).css({
                         marginLeft: setMargin
                     });
 
                 },
 
+                /* scroll left */
                 navMenuScrollLeft = function() {
 
                     _updateSlider();
@@ -64,13 +74,13 @@
                         setMargin = currentMarginLeft;
                     }
 
-                    navWrapper.children(options.elementClass).css({
+                    navWrapper.children(options.element).css({
                         marginLeft: setMargin
                     });
 
                 };
 
-
+            /* assign buttons for right*/
             $('#' + options.buttonRightId).click(function(e) {
 
                 navMenuScrollRight();
@@ -78,6 +88,7 @@
                 e.preventDefault();
             });
 
+            /* assign buttons for left */
             $('#' + options.buttonLeftId).click(function(e) {
 
                 navMenuScrollLeft();
@@ -98,12 +109,17 @@
             }
         }
 
-        function destroy() {
+        function destroy(options) {
             $el.each(function() {
                 var el = this;
                 var $el = $(this);
 
                 // Add code to restore the element to its original state...
+
+                $el.css('margin-left', '0px');                           
+                $el.unwrap(parent);
+                $el.prev().off().remove();
+                $el.next().off().remove();
 
                 hook('onDestroy');
                 $el.removeData('plugin_' + pluginName);
@@ -153,8 +169,7 @@
     $.fn[pluginName].defaults = {
         onInit: function() {},
         onDestroy: function() {},
-        element: $(".nav-menu"),
-        elementClass: '.nav-menu',
+        element: $("#js-nav-menu"),
         wrapperId: 'js-nav-menu-wrapper',
         buttonLeftId: 'js-scroll-left',
         buttonRightId: 'js-scroll-right'

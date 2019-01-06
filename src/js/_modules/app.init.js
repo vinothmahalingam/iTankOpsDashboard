@@ -432,14 +432,10 @@ var initApp = (function(app) {
 
 
 			/* fires when user switches to nav-function-top on desktop view */
-			case ( $.fn.navigationHorizontal && myapp_config.root_.hasClass('nav-function-top') && $("#js-nav-menu-wrapper").length == false && !myapp_config.root_.hasClass('mobile-view-activated') ):
-
-				/* wrap ul.nav-menu */
-				myapp_config.navHooks.wrap( "<div id='js-nav-menu-wrapper' class='nav-menu-wrapper'></div>" );
+			case ( $.fn.menuSlider && myapp_config.root_.hasClass('nav-function-top') && $("#js-nav-menu-wrapper").length == false && !myapp_config.root_.hasClass('mobile-view-activated') ):
 
 				/* build horizontal navigation */
-				//$('#js-nav-menu-wrapper').navigationHorizontal();
-			
+				myapp_config.navHooks.menuSlider();
 
 				/* build horizontal nav */
 				if (myapp_config.debugState)
@@ -450,11 +446,8 @@ var initApp = (function(app) {
 			/* fires when user resizes screen to mobile size or app is loaded on mobile resolution */
 			case ( myapp_config.root_.hasClass('nav-function-top') && $("#js-nav-menu-wrapper").length == true && myapp_config.root_.hasClass('mobile-view-activated') ):
 
-				/* remove ul.nav-menu wrapper */
-				myapp_config.navHooks.unwrap("#js-nav-menu-wrapper");
-
 				/* destroy horizontal nav */
-				//$('#js-nav-menu-wrapper').navigationHorizontal.destroy();
+				myapp_config.navHooks.menuSlider('destroy');
 
 				/* fix app height (only needs to be called once) */
 				initApp.calculateAppHeight();
@@ -468,11 +461,8 @@ var initApp = (function(app) {
 			/* fires when users switch off nav-function-top class */
 			case ( !myapp_config.root_.hasClass('nav-function-top') && $("#js-nav-menu-wrapper").length == true ):
 
-				/* remove ul.nav-menu wrapper */
-				myapp_config.navHooks.unwrap("#js-nav-menu-wrapper");
-
 				/* destroy horizontal nav */
-				//$('#js-nav-menu-wrapper').navigationHorizontal.destroy();
+				myapp_config.navHooks.menuSlider('destroy');
 
 				/* fix app height (only needs to be called once) */
 				initApp.calculateAppHeight();

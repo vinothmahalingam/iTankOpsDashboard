@@ -79,7 +79,7 @@ var myapp_config = {
        This is the root anchor point where the menu script will begin its build
     */
     navAnchor: $('#js-primary-nav'), //changing this may implicate slimscroll plugin target
-    navHooks: $('#js-primary-nav > ul.nav-menu'), //changing this may implicate CSS targets
+    navHooks: $('#js-nav-menu'), //changing this may implicate CSS targets
     navAccordion: true, //nav item when one is expanded the other closes
     navInitalized: 'js-nav-built', //nav finished class
     navFilterInput: $('#nav_filter_input'), //changing this may implicate CSS targets
