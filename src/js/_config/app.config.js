@@ -83,6 +83,7 @@ var myapp_config = {
     navAccordion: true, //nav item when one is expanded the other closes
     navInitalized: 'js-nav-built', //nav finished class
     navFilterInput: $('#nav_filter_input'), //changing this may implicate CSS targets
+    navHorizontalWrapperId: 'js-nav-menu-wrapper',
     /*
        The rate at which the menu expands revealing child elements on click
        Lower rate reels faster expansion of nav childs

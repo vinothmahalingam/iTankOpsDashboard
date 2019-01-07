@@ -185,7 +185,7 @@
 					"scripts": [
 						"{$config.path.src}/js/_config/app.config.js",
 						"{$config.path.src}/js/_modules/app.navigation.js",
-						"{$config.path.src}/js/_modules/app.navigation.horizontal.js",
+						"{$config.path.src}/js/_modules/app.menu.slider.js",
 						"{$config.path.src}/js/_modules/app.init.js",
 						"{$config.path.src}/js/_modules/app.resize.trigger.js",
 						"{$config.path.src}/js/_modules/app.scroll.trigger.js",

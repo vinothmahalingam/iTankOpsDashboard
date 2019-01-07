@@ -4,7 +4,7 @@
  * Copyright 2019, 2020 NextGen WebApp
  * Released under Marketplace License (see your license details for usage)
  *
- * Publish Date: 2018-01-01T17:42Z
+ * Publish Date: 2019-01-01T17:42Z
  */
 
 
@@ -24,15 +24,15 @@
             $el.css('margin-left', '0px');
 
             /* add wrapper around navigation */
-            $el.wrap( '<div id="'+options.wrapperId+'" class="nav-menu-wrapper"></div>' );
+            $el.wrap( '<div id="'+options.wrapperId+'" class="nav-menu-wrapper d-flex flex-grow-1 flex-1 width-0 overflow-hidden"></div>' );
 
             /* add buttons for scroller */
-            $('#' + options.wrapperId).before('<a id="'+options.buttonLeftId+'" href="#" class="nav-padel-left"></a>');
-            $('#' + options.wrapperId).after('<a id="'+options.buttonRightId+'" href="#" class="nav-padel-right"></a>');
+            $('#' + options.wrapperId).before('<a href="#" class="d-flex align-items-center justify-content-center width-4 btn mt-1 mb-1 mr-2 ml-1 p-0 fs-xxl text-primary"><i class="fal fa-angle-left"></i></a>');
+            $('#' + options.wrapperId).after('<a href="#" class="d-flex align-items-center justify-content-center width-4 btn mt-1 mb-1 mr-1 ml-2 p-0 fs-xxl text-primary"><i class="fal fa-angle-right"></i></a>');
 
             /* define variables */
             var navWrapper = $('#' + options.wrapperId),
-                sliderWidth = navWrapper.outerWidth(),
+                navWidth = navWrapper.outerWidth(),
                 contentWidth = navWrapper.children(options.element).outerWidth(),
                 currentMarginLeft = parseFloat(navWrapper.children(options.element).css('margin-left')),
                 setMargin,
@@ -40,21 +40,38 @@
 
 
                 /* update variables for margin calculations */
-                _updateSlider = function() {
-                    sliderWidth = navWrapper.outerWidth();
+                _getValues = function() {
+                    navWidth = navWrapper.outerWidth();
                     contentWidth = navWrapper.children(options.element).outerWidth();
                     currentMarginLeft = parseFloat(navWrapper.children(options.element).css('margin-left'));
+                },
+
+                _updateScrollBtnStatus = function() {
+
+                    _getValues();
+
+                    if (currentMarginLeft !== 0) {
+                        console.log("disable left arrow");
+
+                    } else if ( currentMarginLeft > 0 ) {
+
+                    } else if ( currentMarginLeft > 0 ) {
+
+                    }
+
+
                 },
 
                 /* scroll right */
                 navMenuScrollRight = function() {
 
-                    _updateSlider();
+                    _getValues();
 
-                    if (-currentMarginLeft + sliderWidth < contentWidth) {
-                        setMargin = Math.max(currentMarginLeft - sliderWidth, -(contentWidth - sliderWidth) );
+                    if (-currentMarginLeft + navWidth < contentWidth) {
+                        setMargin = Math.max(currentMarginLeft - navWidth, -(contentWidth - navWidth) );
                     } else {
                         setMargin = currentMarginLeft;
+                        console.log("right end");
                     }
 
                     navWrapper.children(options.element).css({
@@ -66,12 +83,13 @@
                 /* scroll left */
                 navMenuScrollLeft = function() {
 
-                    _updateSlider();
+                    _getValues();
 
                     if (currentMarginLeft < 0) {
-                        setMargin = Math.min(currentMarginLeft + sliderWidth, 0);
+                        setMargin = Math.min(currentMarginLeft + navWidth, 0);
                     } else {
                         setMargin = currentMarginLeft;
+                        console.log("left end");
                     }
 
                     navWrapper.children(options.element).css({
@@ -81,7 +99,7 @@
                 };
 
             /* assign buttons for right*/
-            $('#' + options.buttonRightId).click(function(e) {
+            navWrapper.next().click(function(e) {
 
                 navMenuScrollRight();
 
@@ -89,14 +107,12 @@
             });
 
             /* assign buttons for left */
-            $('#' + options.buttonLeftId).click(function(e) {
+            navWrapper.prev().click(function(e) {
 
                 navMenuScrollLeft();
 
                 e.preventDefault();
             });
-
-
 
             hook('onInit');
         }
@@ -169,10 +185,10 @@
     $.fn[pluginName].defaults = {
         onInit: function() {},
         onDestroy: function() {},
-        element: $("#js-nav-menu"),
-        wrapperId: 'js-nav-menu-wrapper',
-        buttonLeftId: 'js-scroll-left',
-        buttonRightId: 'js-scroll-right'
+        element: myapp_config.navHooks,
+        wrapperId: myapp_config.navHorizontalWrapperId,
+        buttonLeftId: myapp_config.navHorizontalLeftArrow,
+        buttonRightId: myapp_config.navHorizontalRightArrow
     };
 
 

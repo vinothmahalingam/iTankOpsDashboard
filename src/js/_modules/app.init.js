@@ -1,7 +1,12 @@
-/**
- * App Initialize
- * DOC: initializes the app with intApp();
- **/	
+ /*!
+ * jQuery NextGen Application v1.0.0
+ *
+ * Copyright 2019, 2020 NextGen WebApp
+ * Released under Marketplace License (see your license details for usage)
+ *
+ * Publish Date: 2019-01-01T17:42Z
+ */
+	
 var initApp = (function(app) {
 
 	/**
@@ -388,8 +393,8 @@ var initApp = (function(app) {
 						wheelStep: 10
 					});
 
-					if ($("#js-nav-menu-wrapper").length == true) {
-						$( "#js-primary-nav .nav-menu" ).unwrap("#js-nav-menu-wrapper");
+					if ( document.getElementById(myapp_config.navHorizontalWrapperId) ) {
+						myapp_config.navHooks.menuSlider('destroy');
 						
 						if (myapp_config.debugState)
 						console.log("----top controls destroyed");

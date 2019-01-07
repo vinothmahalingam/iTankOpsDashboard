@@ -14,30 +14,9 @@ $nav-function-top-menu-item-bg: $primary-500;
 
 		/* digitally created elements */
 
-		.nav-padel-left,
-		.nav-padel-right {
-			display: flex;
-			background: $white;
-			color: inherit;
-			min-width:50px;
-			align-items: center;
-    		justify-content: center;
-			
-			box-shadow: 5px 0px 15px 0px rgba(90, 80, 105, 0.2);
-		}
-
-		.nav-padel-right {
-			box-shadow: -5px 0px 15px 0px rgba(90, 80, 105, 0.2)
-		}
-
 		.nav-menu-wrapper {
-			-webkit-box-flex: 0;
 			-ms-flex: 0 1 100%;
-			display: flex;
 			flex: 0 1 100%;
-			width: 0;
-
-			overflow: hidden;
 		}
 
 		/* hide elements when nav-function-top */
@@ -102,6 +81,20 @@ $nav-function-top-menu-item-bg: $primary-500;
 				background: transparent;
 				box-shadow: none;
 			}
+
+			.text-gradient {
+				background: -webkit-linear-gradient(180deg, $primary-100 25%, $primary-200 50%, $info-100 75%, $info-200 100%);
+				background: linear-gradient(180deg, $primary-100 25%, $primary-200 50%, $info-100 75%, $info-200 100%);
+				background-clip: text;
+				text-fill-color: transparent;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+
+			.badge.badge-header {
+				box-shadow: 0 0 0 1px $primary-600;
+			}
+			
 		}
 
 		.page-wrapper {
@@ -117,7 +110,6 @@ $nav-function-top-menu-item-bg: $primary-500;
 			width: 100%;
 			height: $nav-top-height;
 			z-index: $depth-header - 1;
-			//overflow:hidden;
 			padding: 0 0.625rem;
 			background: $white;
 
@@ -139,12 +131,9 @@ $nav-function-top-menu-item-bg: $primary-500;
 			}
 
 			.primary-nav {
-				//overflow: hidden;
-
 				flex: 1;
 				display: flex;
 				align-items: stretch; 
-
 				overflow: initial;
 
 				/* Make this scrollable when needed */
@@ -156,7 +145,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 				/* We don't want internal inline elements to wrap */
 				//white-space: nowrap;
 				/* Crush the whitespace here */
-				//font-size: 0;
+				font-size: 0;
 
 				/* Make an auto-hiding scroller for the 3 people using a IE */
 				-ms-overflow-style: -ms-autohiding-scrollbar;
@@ -170,6 +159,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 
 				.nav-menu {
 					margin:0;
+					margin-left: 2.90rem; /* this will get overriden with JS script, but we add it here as a counter weight for the flickering effect */
 					padding: 0;
 					display: flex;
 					flex-direction: row;
@@ -433,30 +423,6 @@ $nav-function-top-menu-item-bg: $primary-500;
 
 		}
 
-		/*&.mod-main-boxed {
-			.page-sidebar {
-
-				.primary-nav {
-					.nav-menu:last-child,
-					.nav-menu:only-child {
-						> li:last-child,
-						> li:nth-last-child(2),
-						> li:nth-last-child(3) {
-							&:hover {
-								>a {
-									& + ul {
-
-										right:0;
-
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}*/
-
 		/* reorder */
 		.page-header {
 			order: 1;
@@ -522,10 +488,6 @@ $nav-function-top-menu-item-bg: $primary-500;
 							>[class*='fa-'] {
 								font-size: rem(18px);
 							}
-							/*> .nav-link-text {
-								//width:auto;
-								//max-width: $nav-function-top-menu-item-width-lg;
-							}*/
 						}
 					}
 
