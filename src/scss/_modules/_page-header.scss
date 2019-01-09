@@ -15,6 +15,9 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 0.2
 	max-width: $header-badge-min-width + 0.4375rem;
 	padding: 0 3px;
 	border-radius: $header-badge-min-width;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 	&:only-child {
 		position: relative;
@@ -43,7 +46,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 0.2
 
 		>[class*='fa-']:first-child,
 		>.#{$cust-icon-prefix}:first-child {
-			color:$header-link-color;
+			color: $header-link-color;
 		    vertical-align: middle;
 			}
 			>[class*='fa-']:first-child {

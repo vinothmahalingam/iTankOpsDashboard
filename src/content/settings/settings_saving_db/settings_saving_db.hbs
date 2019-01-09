@@ -13,21 +13,28 @@
 
 {{#*inline "content-block"}}
 
-<div class="alert alert-primary">
-	<div class="d-table w-100">
-		<div class="d-table-cell align-middle width-6">
-			<span class="icon-stack icon-stack-lg">
+<div class="alert alert-primary alert-dismissible">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">
+            <i class="fal fa-times"></i>
+        </span>
+    </button>
+    <div class="d-flex flex-start w-100">
+        <div class="mr-2">
+            <span class="icon-stack icon-stack-lg">
 				<i class="base-2 icon-stack-3x color-primary-400"></i>
-				<i class="base-3 icon-stack-2x color-primary-600"></i>
+				<i class="base-3 icon-stack-2x color-primary-600 opacity-70"></i>
 				<i class="fal fa-lightbulb icon-stack-1x text-white opacity-90"></i>
-			</span>
-		</div>
-		<div class="d-table-cell align-middle pl-1">
-			<span class="h5">Heads Up!</span> 	
-			<br>
-			All changes are stored to localStorage by default. <strong>pushSettings()</strong> inherits this trait. Set <code>"storeLocally"</code> to <strong>false</strong> via <strong>app.config.js</strong> to disable this action.
-		</div>
-	</div>
+            </span>
+        </div>
+        <div class="d-flex flex-fill">
+            <div class="flex-fill">
+                <span class="h5">Heads Up!</span>
+                <br>
+                All changes are stored to localStorage by default. <strong>pushSettings()</strong> inherits this trait. Set <code>"storeLocally"</code> to <strong>false</strong> via <strong>app.config.js</strong> to disable this action.
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="card mb-g">

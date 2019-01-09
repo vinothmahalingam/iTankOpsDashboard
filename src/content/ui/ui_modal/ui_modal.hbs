@@ -13,19 +13,26 @@
 
 {{#*inline "content-block"}}
 
-<div class="alert alert-primary">
-    <div class="d-table w-100">
-        <div class="d-table-cell align-middle width-6">
+<div class="alert alert-primary alert-dismissible">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">
+            <i class="fal fa-times"></i>
+        </span>
+    </button>
+    <div class="d-flex flex-start w-100">
+        <div class="mr-2">
             <span class="icon-stack icon-stack-lg">
-                <i class="base-5 icon-stack-3x color-primary-400"></i>
-                <i class="base-7 icon-stack-2x color-primary-600 opacity-70"></i>
-                <i class="fal fa-check icon-stack-1x text-white opacity-90"></i>
+              <i class="base-5 icon-stack-3x color-primary-400"></i>
+              <i class="base-7 icon-stack-2x color-primary-600 opacity-70"></i>
+              <i class="fal fa-check icon-stack-1x text-white opacity-90"></i>
             </span>
         </div>
-        <div class="d-table-cell align-middle pl-1">
-            <span class="h5">Full Documentation</span>
-            <br> You can find the full detailed documentation for bootstrap modals by going to the
-            <a href="https://getbootstrap.com/docs/4.1/components/modal" class="fw-500" target="_blank">official bootstrap site</a>. 
+        <div class="d-flex flex-fill">
+            <div class="flex-fill">
+                <span class="h5">Full Documentation</span>
+                <br> You can find the full detailed documentation for bootstrap modals by going to the
+                <a href="https://getbootstrap.com/docs/4.2/components/modal" class="fw-500" target="_blank">official bootstrap site</a>. 
+            </div>
         </div>
     </div>
 </div>

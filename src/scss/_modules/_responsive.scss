@@ -21,10 +21,10 @@ $grid-breakpoints: (
 
 @include media-breakpoint-up(lg) {
 	.page-header {
-		padding: 0 1.5rem;
+		padding: 0 1.75rem;
 	}
 	.page-content {
-		padding: 1.25rem 1.5rem;
+		padding: 1.5rem 1.75rem;
 
 		.card.panel {
 			margin-bottom: 1.5rem;
@@ -34,10 +34,10 @@ $grid-breakpoints: (
 
 @include media-breakpoint-up(xl) {
 	.page-header {
-		padding: 0 1.5rem;
+		padding: 0 1.75rem;
 	}
 	.page-content {
-		padding: 1.25rem 1.5rem;
+		padding: 1.5rem 1.75rem;
 
 		.card.panel {
 			margin-bottom: 1.5rem;
