@@ -17,11 +17,19 @@
 }
 
 .h-alt-f {
-   height: unquote("calc(100vh - #{$footer-height + ( (map-get($grid-gutter-widths, xl) + 2.8125rem ) * 2) })");
+   height: calc(100vh - #{$footer-height + ( (map-get($grid-gutter-widths, xl) + 2.8125rem ) * 2) });
    width: 100%;
 }
 
 .h-alt-hf {
-   height: unquote("calc(100vh - #{ $footer-height + $header-height + ( (map-get($grid-gutter-widths, xl) + 2.8125rem ) * 2) })"); 
+   height: calc(100vh - #{ $footer-height + $header-height + ( (map-get($grid-gutter-widths, xl) + 2.8125rem ) * 2) }); 
    width: 100%;
+
+
+}
+
+.nav-function-top {
+    .h-alt-hf {
+      height: calc(100vh - #{ $footer-height + $header-height-nav-top + $nav-top-height + ( (map-get($grid-gutter-widths, xl) + 2.8125rem ) * 2) }); 
+    }
 }
