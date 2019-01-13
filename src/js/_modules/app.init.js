@@ -440,7 +440,10 @@ var initApp = (function(app) {
 			case ( $.fn.menuSlider && myapp_config.root_.hasClass('nav-function-top') && $("#js-nav-menu-wrapper").length == false && !myapp_config.root_.hasClass('mobile-view-activated') ):
 
 				/* build horizontal navigation */
-				myapp_config.navHooks.menuSlider();
+				myapp_config.navHooks.menuSlider({
+					element: myapp_config.navHooks,
+					wrapperId: myapp_config.navHorizontalWrapperId
+				});
 
 				/* build horizontal nav */
 				if (myapp_config.debugState)
@@ -794,7 +797,7 @@ var initApp = (function(app) {
 		 **/
 		if (window.Waves && myapp_config.rippleEffect) {
 
-			Waves.attach('.nav-menu a:not(.no-ripple), .btn:not(.no-ripple):not(.btn-switch), .nav-link', ['waves-themed']);
+			Waves.attach('.nav-menu:not(.js-waves-off) a, .btn:not(.js-waves-off):not(.btn-switch), .nav-link', ['waves-themed']);
     		Waves.init();
 
 			if (myapp_config.debugState)

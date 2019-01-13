@@ -27,39 +27,31 @@
             $el.wrap( '<div id="'+options.wrapperId+'" class="nav-menu-wrapper d-flex flex-grow-1 flex-1 width-0 overflow-hidden"></div>' );
 
             /* add buttons for scroller */
-            $('#' + options.wrapperId).before('<a href="#" class="d-flex align-items-center justify-content-center width-4 btn mt-1 mb-1 mr-2 ml-1 p-0 fs-xxl text-primary"><i class="fal fa-angle-left"></i></a>');
-            $('#' + options.wrapperId).after('<a href="#" class="d-flex align-items-center justify-content-center width-4 btn mt-1 mb-1 mr-1 ml-2 p-0 fs-xxl text-primary"><i class="fal fa-angle-right"></i></a>');
+            $('#' + options.wrapperId).before('<a href="#" id="' + options.wrapperId + '-left-btn" class="d-flex align-items-center justify-content-center width-4 btn mt-1 mb-1 mr-2 ml-1 p-0 fs-xxl text-primary"><i class="fal fa-angle-left"></i></a>');
+            $('#' + options.wrapperId).after('<a href="#" id="' + options.wrapperId + '-right-btn" class="d-flex align-items-center justify-content-center width-4 btn mt-1 mb-1 mr-1 ml-2 p-0 fs-xxl text-primary"><i class="fal fa-angle-right"></i></a>');
 
-            /* define variables */
-            var navWrapper = $('#' + options.wrapperId),
-                navWidth = navWrapper.outerWidth(),
-                contentWidth = navWrapper.children(options.element).outerWidth(),
-                currentMarginLeft = parseFloat(navWrapper.children(options.element).css('margin-left')),
-                setMargin,
-                maxMargin,
+            var getListWidth = $.map($el.children('li:not(.nav-title)'),function(val){
+                return $(val).outerWidth(true);
+            }),
+
+                /* define variables */
+                wrapper = $('#' + options.wrapperId),
+                wrapperWidth = wrapper.outerWidth(),
+                contentWidth = getListWidth.reduce(function(a, b) { return a + b; }, 0); //add all values in array
+                currentMarginLeft = parseFloat($el.css('margin-left')),
+                setMargin = null,
+                maxMargin = null,
 
 
                 /* update variables for margin calculations */
                 _getValues = function() {
-                    navWidth = navWrapper.outerWidth();
-                    contentWidth = navWrapper.children(options.element).outerWidth();
-                    currentMarginLeft = parseFloat(navWrapper.children(options.element).css('margin-left'));
-                },
+                    wrapperWidth = wrapper.outerWidth(); /* incase its changed we get it again */
+                    currentMarginLeft = parseFloat($el.css('margin-left'));
 
-                _updateScrollBtnStatus = function() {
-
-                    _getValues();
-
-                    if (currentMarginLeft !== 0) {
-                        console.log("disable left arrow");
-
-                    } else if ( currentMarginLeft > 0 ) {
-
-                    } else if ( currentMarginLeft > 0 ) {
-
-                    }
-
-
+                    console.log("got new values");
+                    console.log("wrapperWidth :" + wrapperWidth);
+                    console.log("contentWidth :" + contentWidth);
+                    console.log("currentMarginLeft :" + currentMarginLeft);
                 },
 
                 /* scroll right */
@@ -67,14 +59,14 @@
 
                     _getValues();
 
-                    if (-currentMarginLeft + navWidth < contentWidth) {
-                        setMargin = Math.max(currentMarginLeft - navWidth, -(contentWidth - navWidth) );
+                    if (-currentMarginLeft + wrapperWidth < contentWidth) {
+                        setMargin = Math.max(currentMarginLeft - wrapperWidth, -(contentWidth - wrapperWidth) );
                     } else {
                         setMargin = currentMarginLeft;
                         console.log("right end");
                     }
 
-                    navWrapper.children(options.element).css({
+                    $el.css({
                         marginLeft: setMargin
                     });
 
@@ -86,30 +78,30 @@
                     _getValues();
 
                     if (currentMarginLeft < 0) {
-                        setMargin = Math.min(currentMarginLeft + navWidth, 0);
+                        setMargin = Math.min(currentMarginLeft + wrapperWidth, 0);
                     } else {
                         setMargin = currentMarginLeft;
                         console.log("left end");
                     }
 
-                    navWrapper.children(options.element).css({
+                    $el.css({
                         marginLeft: setMargin
                     });
 
                 };
 
             /* assign buttons for right*/
-            navWrapper.next().click(function(e) {
+            $('#' + options.wrapperId + '-left-btn').click(function(e) {
 
-                navMenuScrollRight();
+                navMenuScrollLeft();
 
                 e.preventDefault();
             });
 
             /* assign buttons for left */
-            navWrapper.prev().click(function(e) {
+             $('#' + options.wrapperId + '-right-btn').click(function(e) {
 
-                navMenuScrollLeft();
+                navMenuScrollRight();
 
                 e.preventDefault();
             });
@@ -186,9 +178,7 @@
         onInit: function() {},
         onDestroy: function() {},
         element: myapp_config.navHooks,
-        wrapperId: myapp_config.navHorizontalWrapperId,
-        buttonLeftId: myapp_config.navHorizontalLeftArrow,
-        buttonRightId: myapp_config.navHorizontalRightArrow
+        wrapperId: myapp_config.navHorizontalWrapperId
     };
 
 
