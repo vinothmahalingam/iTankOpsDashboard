@@ -24,7 +24,7 @@
             $el.css('margin-left', '0px');
 
             /* add wrapper around navigation */
-            $el.wrap( '<div id="'+options.wrapperId+'" class="nav-menu-wrapper d-flex flex-grow-1 flex-1 width-0 overflow-hidden"></div>' );
+            $el.wrap( '<div id="'+options.wrapperId+'" class="nav-menu-wrapper d-flex flex-grow-1 width-0 overflow-hidden"></div>' );
 
             /* add buttons for scroller */
             $('#' + options.wrapperId).before('<a href="#" id="' + options.wrapperId + '-left-btn" class="d-flex align-items-center justify-content-center width-4 btn mt-1 mb-1 mr-2 ml-1 p-0 fs-xxl text-primary"><i class="fal fa-angle-left"></i></a>');
