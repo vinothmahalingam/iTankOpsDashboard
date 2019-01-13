@@ -109,6 +109,9 @@
 
 		}
 
+		/*
+		why did we add this again?
+		this was buggy when open modal with mod main boxed then click on logo for the dropdown, it won't close
 		&.nav-function-fixed:not(.nav-function-top):not(.header-function-fixed) {
 			.page-sidebar {
 				transform: translateX(0) !important;
@@ -119,7 +122,7 @@
 				transform: translateX(0) !important;
 			}
 
-		}
+		}*/
 
 		&.nav-function-fixed {
 			&:not(.nav-function-top) {

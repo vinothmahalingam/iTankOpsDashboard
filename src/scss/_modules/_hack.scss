@@ -43,13 +43,14 @@
 body.desktop-detected {
     -ms-overflow-style: scrollbar;
 }
-/* Reset elms pos when no-ripple is used */
-.no-ripple {
+
+/* Reset elms pos when js-waves-off is used */
+/*.js-waves-off {
 	position: relative;
     overflow: hidden;
     user-select: none;
     z-index: 0;
-}
+}*/
 
 /*.btn {
 	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05), 

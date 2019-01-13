@@ -24,7 +24,7 @@ $grid-breakpoints: (
 		padding: 0 1.75rem;
 	}
 	.page-content {
-		padding: 1.5rem 1.75rem;
+		padding: 1.5rem 2rem;
 
 		.card.panel {
 			margin-bottom: 1.5rem;
@@ -37,7 +37,7 @@ $grid-breakpoints: (
 		padding: 0 1.75rem;
 	}
 	.page-content {
-		padding: 1.5rem 1.75rem;
+		padding: 1.5rem 2rem;
 
 		.card.panel {
 			margin-bottom: 1.5rem;
@@ -91,6 +91,12 @@ $grid-breakpoints: (
 
 			background: #f1f1f1;
 			border-bottom: 1px solid #e5e5e5;
+
+	
+			[data-toggle="dropdown"] + .dropdown-menu {
+				right: 1.5rem;
+			}
+	
 		}
 
 		.page-sidebar {
@@ -417,8 +423,11 @@ $grid-breakpoints: (
 				#search-field {
 					border: 1px solid $primary-500;
 					padding-left: 1rem;
+					padding-right: 3rem;
 					width: 100%;
+					max-width: none;
 					background: $white;
+
 
 					&:focus {
 						border-color: $primary-500;

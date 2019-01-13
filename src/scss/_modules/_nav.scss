@@ -10,7 +10,8 @@
 	}
 
 	.nav-menu:first-of-type {
-		margin-top: 10px;
+		margin-top: 1rem;
+		margin-bottom: 2rem;
 	}	
 }
 
@@ -18,9 +19,8 @@
 	text-transform: uppercase;
 	margin:0;
 	color: $nav-title-color;
-	//border-top: 1px solid rgba($nav-title-border-bottom-color, 0.4);
-	padding: 1rem $nav-padding-left;
-	margin-top:0.5rem;
+	padding: 1rem $nav-padding-x;
+	margin-top: 1.5rem;
 	font-size: rem($nav-title-font-size);
 	letter-spacing: 1px;
 	font-weight: 500;
@@ -29,7 +29,6 @@
 .nav-menu {
 	padding: 0;
 	list-style: none;
-	//background: $nav-background;
 	margin: 0;
 
 	a,
@@ -89,7 +88,6 @@
 
 			> ul {
 				display: block;
-				//padding-bottom: 10px;
 			}
 
 			/* arrow that appears next to active/selected items */
@@ -106,12 +104,6 @@
 				display: flex;
 				align-content: center;
 				align-items: center;
-				/*width: 0;
-				height: 0;
-				border-left: 0.5rem solid transparent;
-				border-right: 0.5rem solid $page-bg;
-				border-bottom: 0.6875rem solid transparent;
-				border-top: 0.6875rem solid transparent;*/
 			}
 		}
 
@@ -119,7 +111,7 @@
 			display: flex; /*new*/
 			align-items:center; /*new*/
 			outline: 0;
-			padding: 0.875rem $nav-padding-right 0.875rem $nav-padding-left;
+			padding: $nav-padding-y $nav-padding-x;
 			font-size: rem($nav-font-link-size);
 			color: $nav-link-color;
 			font-weight: 400;
@@ -163,10 +155,9 @@
 
 			>[class*='fa-'],
 			>.#{$cust-icon-prefix} {
-				margin-right:$nav-icon-margin-right;
+				margin-right: $nav-icon-margin-right;
 				font-size: $nav-font-icon-size;
 				width: $nav-icon-width;
-				//text-align: center;
 			    color:$nav-icon-color;
 			} 
 
@@ -249,8 +240,7 @@
 				a {
 					color: darken($nav-link-color, 5%);
 
-					padding: 0.8125rem $nav-padding-right 0.8125rem $nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.03125rem;
-					//font-size: rem($nav-font-link-size);
+					padding: $nav-padding-y $nav-padding-x $nav-padding-y $nav-padding-x + $nav-icon-width + $nav-icon-margin-right + 0.03125rem;
 
 					b.collapse-sign {
 						>[class*='fa-'],
@@ -326,11 +316,8 @@
 				// Sub nav level 2
 				> ul {
 
-					//background-color: darken($nav-base-color, 11%);
-					//padding-bottom: 0px !important;
 
 					li {
-						//border-top: 1px solid darken($color-fusion, 3%);
 
 						&.active {
 							> a {
@@ -340,7 +327,7 @@
 
 						a {
 							color: darken($nav-link-color, 7%);
-							padding: 0.8125rem $nav-padding-right 0.8125rem ($nav-padding-left + $nav-icon-width + $nav-icon-margin-right + 0.03125rem + 1.25rem);
+							padding: $nav-padding-y $nav-padding-x $nav-padding-y ($nav-padding-x + $nav-icon-width + $nav-icon-margin-right + 0.03125rem + 1.25rem);
 
 							.dl-ref {
 								margin-left: 0;
@@ -355,7 +342,6 @@
 							
 							&:hover {
 								
-								//background-color: rgba(lighten(darken($nav-base-color, 11%), 5%), (20/100));
 								@include text-contrast( rgba(lighten(darken($nav-base-color, 11%), 5%), (45/100)) )
 							}
 
@@ -458,7 +444,7 @@
 .nav-menu-compact {
 	li > ul li a,
 	li > ul li > ul li a {
-		padding: $p-2 $nav-padding-right $p-2 $p-4;
+		padding: $p-2 $nav-padding-x $p-2 $p-4;
 	}
 	li > ul li > ul li a {
 		padding-left: $p-4 + $p-2;

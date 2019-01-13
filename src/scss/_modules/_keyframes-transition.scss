@@ -1,42 +1,134 @@
 $animateFadeInDown_distance: 5px;
 
-// animateFadeInDown
+
+/*=== Animations start here  ===*/
+
+/*=== FADE IN DOWN ===*/
 @-webkit-keyframes animateFadeInDown {
   from {
-    -webkit-transform: translate3d(0, $animateFadeInDown_distance, 0);
-    opacity:0;
+    opacity: 0;
+    -webkit-transform: translate3d(0, -$animateFadeInDown_distance, 0);
+    transform: translate3d(0, -$animateFadeInDown_distance, 0);
   }
 
   to {
+    opacity: 1;
     -webkit-transform: none;
-    opacity:1;
+    transform: none;
   }
 }
-
 @keyframes animateFadeInDown {
   from {
-    -webkit-transform: translate3d(0, $animateFadeInDown_distance, 0);
-    opacity:0;
+    opacity: 0;
+    -webkit-transform: translate3d(0, -$animateFadeInDown_distance, 0);
+    transform: translate3d(0, -$animateFadeInDown_distance, 0);
   }
 
   to {
+    opacity: 1;
     -webkit-transform: none;
-    opacity:1;
+    transform: none;
   }
 }
 
+/*==== FADE IN UP ===*/
+@-webkit-keyframes animateFadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, $animateFadeInDown_distance, 0);
+    transform: translate3d(0, $animateFadeInDown_distance, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes animateFadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, $animateFadeInDown_distance, 0);
+    transform: translate3d(0, $animateFadeInDown_distance, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/*=== FADE IN LEFT ===*/
+@-webkit-keyframes animateFadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-$animateFadeInDown_distance, 0, 0);
+    transform: translate3d(-$animateFadeInDown_distance, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes animateFadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-$animateFadeInDown_distance, 0, 0);
+    transform: translate3d(-$animateFadeInDown_distance, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+
+/*==== FADE IN RIGHT ===*/
+@-webkit-keyframes animateFadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d($animateFadeInDown_distance, 0, 0);
+    transform: translate3d($animateFadeInDown_distance, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes animateFadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d($animateFadeInDown_distance, 0, 0);
+    transform: translate3d($animateFadeInDown_distance, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+
 .page-content > .alert {
-  animation: animateFadeInDown 0.3s;
-  -webkit-animation: animateFadeInDown 0.3s;
+  animation: animateFadeInUp 0.3s;
+  -webkit-animation: animateFadeInUp 0.3s;
 }
 
 .page-content  > .card,
 .page-content > .row {
-  animation: animateFadeInDown 0.7s;
-  -webkit-animation: animateFadeInDown 0.7s;
+  animation: animateFadeInUp 0.7s;
+  -webkit-animation: animateFadeInUp 0.7s;
 }
 
-.tab-content >.active{
-  animation: animateFadeInDown 0.5s;
-  -webkit-animation: animateFadeInDown 0.5s;
+.tab-content >.active {
+  animation: animateFadeInUp 0.5s;
+  -webkit-animation: animateFadeInUp 0.5s;
 }

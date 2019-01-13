@@ -1,9 +1,10 @@
 //why do we need this? we just changed to flex...
 .search{
+	flex: 1;
 
 	.app-forms {
 		padding:0;
-		position: static;
+		//position: static; //why?
 
 		&.has-length {
 			position: relative;
@@ -16,7 +17,7 @@
 }
 
 #search-field {
-	width: $header-search-width - 3.125rem;
+	max-width: $header-search-width - 3.125rem;
 	height: $header-search-height;
 	line-height: normal;
 	border-radius: $header-btn-border-radius;
@@ -27,10 +28,10 @@
 	padding: $header-search-padding;
 }
 
-@include media-breakpoint-up(xl) {
+/*@include media-breakpoint-up(xl) {
 
 	#search-field {
 		width: $header-search-width;
 	}
 
-}
+}*/

@@ -124,19 +124,9 @@
 							padding-right: 0;
 
 							>[class*='fa-'],
-							>.#{$cust-icon-prefix},
-							> img {	
+							>.#{$cust-icon-prefix} {	
 								font-size: $nav-font-icon-size * 1.1;
 								margin: 0;
-							}
-
-							/*> [class*='fa-'] {
-								font-size: rem( ($nav-font-icon-size - 3) * 1.1);
-							}*/
-
-							> img {
-								width: $nav-icon-width;
-								height: $nav-icon-width;
 							}
 
 							> .badge {
@@ -151,7 +141,7 @@
 								display: none;	
 								position:absolute;
 								text-align: left;
-								background: $nav-background;
+								background: trasparent;
 								padding-left: $nav-minify-sub-width / 10;
 								color: $white;
 								top: 0;
@@ -159,21 +149,7 @@
 							    height: 100%;
 							    width: $nav-minify-sub-width;
 							    font-weight: 500;
-							    border-radius: 4px 10px 0 0;
-
-							    &:before {
-									content: "\f1c8";
-									font-family: 'nextgen-icons';
-									position: absolute;
-									font-size: 3.5rem;
-									left: -7px;
-									color: $nav-background;
-									z-index: -1;
-									transform: rotate(270deg);
-									overflow: hidden;
-									display: block;
-									top: -8px;
-							    }
+							    margin-top: -1.563rem;
 
 							}
 
@@ -188,7 +164,27 @@
 								left: $nav-minify-width + 1rem;
 								background-color: $nav-background;
 
-								border-radius: 0 0 10px 10px;
+								margin-top: -5rem;
+								padding-top: 3.75rem;
+
+								border-radius: 4px .5rem .5rem .5rem;
+
+								padding-bottom: 1rem;
+
+								//arrow
+							    &:before {
+									content: "\f1c8";
+									font-family: 'nextgen-icons';
+									position: absolute;
+									font-size: 3.5rem;
+									left: -0.4125rem;
+									color: $nav-background;
+									z-index: -1;
+									transform: rotate(270deg);
+									overflow: hidden;
+									display: block;
+									top: 1rem;
+							    }
 
 								> li {
 
@@ -240,12 +236,14 @@
 							color: $white;
 							overflow: visible;
 
+							z-index: 2;
+
 							>.nav-link-text {
 								display: flex;
-							}
+								overflow:hidden;
 
-							>.legitRipple-ripple {
-								display: none !important;
+								 animation: animateFadeInLeft 0.5s;
+  								-webkit-animation: animateFadeInLeft 0.5s;
 							}
 
 						}
@@ -254,15 +252,23 @@
 							display: block !important;
 							z-index: 1;
 
+							animation: animateFadeInLeft 0.5s;
+  							-webkit-animation: animateFadeInLeft 0.5s;
+
+  							box-shadow: 0px 0px 40px 0px rgba(82, 63, 105, 0.15);
+
+  							// increase hit area
+  							// decreases user error if mouse goes out of menu
 							&:after {
 								content: "";
 								display: block;
 								position: absolute;
-								height: calc(100% + 176px);
-								width: calc(100% + 40px);
+								height: calc(100% + 190px);
+								width: calc(100% + 60px);
 								top: -80px;
 								z-index: -1;
 								left:-1rem;
+
 							}
 						}
 					} 

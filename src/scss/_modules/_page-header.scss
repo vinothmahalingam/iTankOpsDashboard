@@ -121,7 +121,7 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 0.2
 			& + .dropdown-menu {
 				position:absolute;
 				border: $theme-border-utility-size solid $header-border-color;
-				right: 1rem !important;
+				right: 2rem; //same as page padding
 				top: $header-height - 0.0625rem !important;
 				left: auto !important;
 				padding: 0;

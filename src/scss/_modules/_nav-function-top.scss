@@ -15,7 +15,6 @@ $nav-function-top-menu-item-bg: $primary-500;
 		/* digitally created elements */
 
 		.nav-menu-wrapper {
-			-ms-flex: 0 1 100%;
 			flex: 0 1 100%;
 		}
 
@@ -77,22 +76,30 @@ $nav-function-top-menu-item-bg: $primary-500;
 			.page-logo {
 				display: flex;
 				width: auto;
+    			width: initial; //for IE, cause you know, they suck...
 				padding-left: 0;
 				background: transparent;
 				box-shadow: none;
 			}
 
-			.text-gradient {
-				background: -webkit-linear-gradient(180deg, $primary-100 25%, $primary-200 50%, $info-100 75%, $info-200 100%);
-				background: linear-gradient(180deg, $primary-100 25%, $primary-200 50%, $info-100 75%, $info-200 100%);
-				background-clip: text;
-				text-fill-color: transparent;
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
+
+			.header-icon:not(.btn) > [class*='fa-']:first-child, 
+			.header-icon:not(.btn) > .ni:first-child {
+				color:  lighten($header-link-color, 10%);
+
+				&:hover {
+					color:  lighten($header-link-color, 20%);
+				}
 			}
+
+
 
 			.badge.badge-header {
 				box-shadow: 0 0 0 1px $primary-600;
+			}
+
+			.header-icon:not(.btn)[data-toggle="dropdown"] + .dropdown-menu {
+				top: $header-height-nav-top !important;
 			}
 			
 		}
@@ -131,16 +138,11 @@ $nav-function-top-menu-item-bg: $primary-500;
 			}
 
 			.primary-nav {
-				flex: 1;
+				flex: 1 0 100%;
+				//width: 100%;
 				display: flex;
 				align-items: stretch; 
 
-				/* Make this scrollable when needed */
-				//overflow-x: auto;
-				/* We don't want vertical scrolling */
-				//overflow-y: hidden;
-				/* For WebKit implementations, provide inertia scrolling */
-				//-webkit-overflow-scrolling: touch;
 				/* We don't want internal inline elements to wrap */
 				//white-space: nowrap;
 				/* Crush the whitespace here */
@@ -163,8 +165,6 @@ $nav-function-top-menu-item-bg: $primary-500;
 					display: flex;
 					flex-direction: row;
 					align-items: stretch;
-
-					-ms-flex: 0 1 100%;
 					flex: 0 1 100%;
 
 					transition: margin 0.5s ease-out 0s;
@@ -172,34 +172,56 @@ $nav-function-top-menu-item-bg: $primary-500;
 
 					> li {
 
-						display: inline-flex;
-    					align-items: center;
+						display: inline-block;
+    					//align-items: stretch;
+
+    					position: static; //beacuse initial don't work in fking IE
+
+    					//flex: 0 0 auto;
 
 						&.nav-title {
 							display: none;
 						}
 
-						> a {
+						&.active {
+							> a {
+								box-shadow: none;
 
-							color: $nav-background;
-							padding: .75rem 1.5rem .75rem 1rem !important;
+								&:before {
+									content: '\f413';
+									font-family: 'nextgen-icons';
+									position: absolute;
+									top: calc(50% + 15px);
+									right: calc(50% - 5px);
+									font-size: 7px;
+									height: 10px;
+									width: auto;
+									color: #24b3a4;
+								}
+							}
+						}
+
+
+
+						> a {
+							padding: .75rem 1.5rem .75rem 1rem;
 							text-align: center;
-							font-size: .9rem !important;
+
+							height: 100%;
+							
 
 							>.#{$cust-icon-prefix},
 							>[class*='fa-'] {
-								font-size: $nav-font-icon-size;
 								width: inherit;
-								margin: 0 !important;
+								margin: 0 ;
+								margin-right: .5rem !important;
 								display: flex !important;					
 								align-items: center;
 								justify-content: left;
 								color: inherit;
-								margin-right: .5rem !important;
 							}
 
 							> .nav-link-text {
-								//max-width: $nav-function-top-menu-item-width-md;
 								overflow: hidden;
 								white-space: nowrap;
 								text-overflow: ellipsis;
@@ -208,6 +230,8 @@ $nav-function-top-menu-item-bg: $primary-500;
 								font-weight: 400;
 
 								display: inline-block; /*override inline-flex*/
+
+								flex: 0 1 auto;
 							}
 
 							>.badge,
@@ -216,10 +240,19 @@ $nav-function-top-menu-item-bg: $primary-500;
 							}
 
 							>.collapse-sign {
-								margin-right: 0.5rem;
+								margin-left: 0.5rem;
 								color: lighten($nav-background, 30%);
 								position: absolute;
-								right: 0;
+    							right: 0.5rem;
+								top: 0;
+								bottom: 0;
+
+								//force down arrow on all parent
+								> em {
+									&:before {
+										content: "\f107";
+									}
+								}
 							}
 
 							> .badge:first-child {
@@ -231,92 +264,36 @@ $nav-function-top-menu-item-bg: $primary-500;
 								display: block !important;
 								margin: 0 auto 4px !important;
 
-								// yes we do need the '!importants' here :(
+								// unfortunately we do need '!important' here :(
 							}
 
-							& + ul {
-								padding:0;
 
-								ul {
-									padding:0;
-								}
-							}
+						}	
 
-						}
-
-
-						&:hover {
-
-							> a {
-								color: $primary-500;
-								background: transparent;
-
-								& + ul {
-									display:block !important;
-									box-shadow: 0px 0px 40px 0px rgba(82, 63, 105, 0.15);
-
-									a {
-										.collapse-sign {
-											@include rotate(270);
-										}
-									}
-
-									li {
-
-										&:hover {
-											> a {
-												background: $page-bg;
-												color: $primary-500;
-											}
-										}
-									} 
-								}
-							}						
-						}
-
-						&.active {
-							> a {
-								box-shadow: none;
-							}
+						// all children
+						a {
+							font-size: .9rem;
+							color: $nav-background;
 						}
 
 						> ul {
+							display: none !important; //force invisibility to override plugin clicks
+							width: $nav-width - 2.1875rem;
 							height: auto !important; //counters the click issue
-						}
-					}
-
-					li {
-
-						position: initial;
-
-						a {
-	    					//font-size: rem($fs-base);
-	    					color: $nav-background;
-
-	    					&:before {
-								content: none !important;
-							}
-						}
-
-						ul {
-
-							padding: 0.75rem 0 !important;
-							display: none !important;
-							width: $nav-width - 2.1875rem; 
-							position: absolute;
 							top: $nav-top-height;
-							box-shadow: 0px 0px 40px 0px rgba(82, 63, 105, 0.15);
-
+							position: absolute;
 							background: $white;
-
-							border-radius: 4px;
+							border-radius: 10px;
+							box-shadow: 0px 0px 40px 0px rgba(82, 63, 105, 0.15);
+							padding: 1rem 0;
+							margin-top:1rem;
 
 							li {
 								width: 100%;
 								position: relative;
 
 								a {
-									padding: 0.9375rem 1.5rem !important;
+									padding: 0.9375rem 1.5rem;
 									width: 100%;
 									max-height: none;
 									box-shadow: none;
@@ -338,25 +315,67 @@ $nav-function-top-menu-item-bg: $primary-500;
 
 								}
 
-								&:hover {
-									ul {
-										display: block !important;
-										left: 100%;
-    									top: 0;
-    									box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
-    									margin-left: 2px !important;
-									}
-									&.top-menu-push-left {
-										ul {
-											right:100%;
-											left:auto;
+								ul {
+									background: $white;
+
+									li {
+										a {
+											padding-left: 2.5rem;
 										}
 									}
 								}
+
+								&:hover {
+									> a {
+										background: $page-bg;
+										color: $primary-500;
+									}
+								}
+							}
+
+							&:after {
+								content: "";
+								display: block;
+								width: calc(100% + 100px);
+								height: calc(100% + 120px);
+								position: absolute;
+								z-index: -1;
+								left: -50px;
+								top: -1rem;
+								background: transparent;
+
+							}
+
+							&:before {
+								content: "\f1c8";
+								font-family: 'nextgen-icons';
+								position: absolute;
+								font-size: 5rem;
+								color: #FFF;
+								overflow: hidden;
+								display: block;
+								top: -1.7rem;
+								left: 0;
 							}
 						}
 
-						
+						//first child hover
+						&:hover {
+
+							> a {
+								color: $primary-500;
+								background: transparent;
+
+								& + ul {
+
+									display:block !important;
+									animation: animateFadeInUp 0.5s;
+  									-webkit-animation: animateFadeInUp 0.5s;
+
+								}
+							}						
+						}
+
 					}
 
 				}
@@ -373,13 +392,6 @@ $nav-function-top-menu-item-bg: $primary-500;
 		&.nav-function-minify {
 
 			.page-sidebar {
-				//height: $nav-top-minify-height;
-
-				/*.page-logo {
-					width: auto !important;
-					height: $nav-top-minify-height;
-					padding: 0 1rem;			
-				}*/
 
 				.primary-nav {
 					 
@@ -388,10 +400,6 @@ $nav-function-top-menu-item-bg: $primary-500;
 						> li{
 
 							> a {
-
-								//min-width:$nav-top-minify-height;
-								//height: $nav-top-minify-height;
-								//padding-top:23% !important;
 
 								> .nav-link-text {
 									display: none;
@@ -416,10 +424,6 @@ $nav-function-top-menu-item-bg: $primary-500;
 				}
 			}
 
-			/*.page-wrapper {
-				padding-top:$nav-top-minify-height;
-			}*/
-
 		}
 
 		/* reorder */
@@ -438,16 +442,6 @@ $nav-function-top-menu-item-bg: $primary-500;
 			align-items: stretch;
 			flex: 1 1 auto;
 		}
-		/*.page-footer {
-			order: 4;
-			width: initial;
-
-			position: initial;
-
-			& + .page-footer-push {
-				display: none;
-			}
-		}*/
  
 	}
 	
@@ -458,10 +452,6 @@ $nav-function-top-menu-item-bg: $primary-500;
 	.nav-function-top {
 		
 		.page-sidebar {
-
-			/*.page-logo {
-				width: auto;
-			}*/
 
 			.primary-nav {
 
@@ -480,17 +470,13 @@ $nav-function-top-menu-item-bg: $primary-500;
 							>[class*='fa-'],
 							> img {
 								font-size: 22px;
-								margin: 3px auto 3px;
 								height: 22px;
-								display: block;
 							}
-							>[class*='fa-'] {
-								font-size: rem(18px);
-							}
+							
 						}
 					}
 
-					li {
+					/*li {
 						ul {
 							 li {
 							 	a {
@@ -498,7 +484,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 							 	}
 							 }
 						}
-					}
+					}*/
 
 				}
 

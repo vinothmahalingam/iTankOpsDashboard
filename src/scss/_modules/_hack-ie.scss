@@ -4,24 +4,11 @@
     	background: transparent;
     }
 
-/*	/* I hate IE! */
-	/*.page-content {
-		min-height: calc(100vh - 110px);
-	}
-
-	.nav-function-top .page-content {
-		min-height: calc(100vh - 165px);
-	}*/
+    .nav-function-minify:not(.nav-function-top) .primary-nav .nav-menu > li > a + ul:before {
+    	left: -0.25rem !important;
+    }
 }
 
 @supports (-ms-accelerator:true) {
-  /* IE Edge 12+ CSS styles go here */ 
-	/* I hate IE! */
-/*	.page-content {
-		min-height: calc(100vh - 110px);
-	}
 
-	.nav-function-top .page-content {
-		min-height: calc(100vh - 165px);
-	}*/
 }

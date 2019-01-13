@@ -370,3 +370,82 @@ Color brightness is determined by the following formula:
   background-image: -ms-linear-gradient(left, #{$theme-fusion}, #{$theme-fusion} 70%, #{$theme-primary} 70%, #{$theme-primary} 76%, #{$theme-info} 76%, #{$theme-info} 82%, #{$theme-success} 82%, #{$theme-success} 88%, #{$theme-warning} 88%, #{$theme-warning} 94%, #{$theme-danger} 94%, #{$theme-danger} 94%, #{$theme-danger} 100%);
   background-image: linear-gradient(to right, #{$theme-fusion}, #{$theme-fusion} 70%, #{$theme-primary} 70%, #{$theme-primary} 76%, #{$theme-info} 76%, #{$theme-info} 82%, #{$theme-success} 82%, #{$theme-success} 88%, #{$theme-warning} 88%, #{$theme-warning} 94%, #{$theme-danger} 94%, #{$theme-danger} 94%, #{$theme-danger} 100%);
 }
+
+// IE flexbox details:
+//
+// - Flexbox in IE 10:
+//   https://msdn.microsoft.com/en-us/library/hh673531(v=vs.85).aspx
+//
+// - IE 11 flexbox changes (includes property/value names for IE 10)
+//   https://msdn.microsoft.com/library/dn265027(v=vs.85).aspx
+
+@mixin flexbox ($important: false) {
+  display: unquote("-ms-flexbox #{if($important, '!important', null)}");
+  display: unquote("flex #{if($important, '!important', null)}");
+}
+
+@mixin inline-flexbox ($important: false) {
+  display: unquote("-ms-inline-flexbox #{if($important, '!important', null)}");
+  display: unquote("inline-flex #{if($important, '!important', null)}");
+}
+
+@mixin align-content ($value) {
+  $ms-map: (
+    flex-start: start,
+    flex-end: end
+  );
+  -ms-flex-line-pack: map-get($ms-map, $value) or $value;
+  align-content: $value;
+}
+
+@mixin align-items ($value) {
+  $ms-map: (
+    flex-start: start,
+    flex-end: end
+  );
+  -ms-flex-align: map-get($ms-map, $value) or $value;
+  align-items: $value;
+}
+
+@mixin align-self ($value) {
+  $ms-map: (
+    flex-start: start,
+    flex-end: end
+  );
+  -ms-flex-item-align: map-get($ms-map, $value) or $value;
+  align-self: $value;
+}
+
+@mixin flex ($value) {
+  -ms-flex: $value;
+  flex: $value;
+}
+
+@mixin flex-direction ($value) {
+  -ms-flex-direction: $value;
+  flex-direction: $value;
+}
+
+@mixin flex-wrap ($value) {
+  $ms-map: (
+    nowrap: none
+  );
+  -ms-flex-wrap: map-get($ms-map, $value) or $value;
+  flex-wrap: $value;
+}
+
+@mixin justify-content ($value) {
+  $ms-map: (
+    flex-start: start,
+    flex-end: end,
+    space-around: distribute,
+    space-between: justify
+  );
+  -ms-flex-pack: map-get($ms-map, $value) or $value;
+  justify-content: $value;
+}
+
+@mixin order ($value) {
+  -ms-flex-order: $value;
+  order: $value;
+}
