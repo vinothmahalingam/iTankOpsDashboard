@@ -139,13 +139,8 @@ $nav-function-top-menu-item-bg: $primary-500;
 
 			.primary-nav {
 				flex: 1 0 100%;
-				//width: 100%;
 				display: flex;
 				align-items: stretch; 
-
-				/* We don't want internal inline elements to wrap */
-				//white-space: nowrap;
-				/* Crush the whitespace here */
 				font-size: 0;
 
 				/* Make an auto-hiding scroller for the 3 people using a IE */
@@ -173,11 +168,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 					> li {
 
 						display: inline-block;
-    					//align-items: stretch;
-
     					position: static; //beacuse initial don't work in fking IE
-
-    					//flex: 0 0 auto;
 
 						&.nav-title {
 							display: none;
@@ -231,6 +222,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 
 								display: inline-block; /*override inline-flex*/
 
+								// this is needed
 								flex: 0 1 auto;
 							}
 
