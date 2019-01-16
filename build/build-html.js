@@ -2,10 +2,7 @@
 var gulp = require('gulp');
 var hb = require('gulp-hb');
 var prettify = require('gulp-prettify');
-/*var handlebars = require('handlebars');
-var gulpHandlebars = require('gulp-handlebars-html')(handlebars); //default to require('handlebars') if not provided*/
 var rename = require('gulp-rename');
-//var data = require('gulp-data');
 var path = require('path');
 var log = require('fancy-log');
 var build = require('./build');
@@ -31,11 +28,6 @@ gulp.task('build-html', function () {
     .pipe(rename({dirname: ''}))
     /* write html files */
     .pipe(prettify({
-/*        indent_inner_html: false,
-        preserve_newlines: true,
-        end_with_newline: true,
-        extra_liners: ['head', 'body']*/
-
         indent_handlebars: true,
         indent_inner_html: true,
         preserve_newlines: true,
