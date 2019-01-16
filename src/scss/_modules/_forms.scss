@@ -169,18 +169,35 @@ $contrast: 3% !default;
     @include thumb;
     margin-top: 0;
   }
+
+/*  &:disabled {
+    &::-webkit-slider-thumb {
+      @include disabled;
+    }
+
+    &::-moz-range-thumb {
+      @include disabled;
+    }
+
+    &::-ms-thumb {
+      @include disabled;
+    }
+
+    &::-webkit-slider-runnable-track {
+      @include disabled;
+    }
+
+    &::-ms-fill-lower {
+      @include disabled;
+    }
+
+    &::-ms-fill-upper {
+      @include disabled;
+    }
+  }*/
+  
 }
 
-
-
-
-//material
-/*.form-control {
-  border-radius: 0px;
-  border-width: 0 0 1px 0;
-  padding-left: 0;
-  padding-right: 0;
-}*/
 
 
 .form-control:focus ~ .input-group-prepend {
