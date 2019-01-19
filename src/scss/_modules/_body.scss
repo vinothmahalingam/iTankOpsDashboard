@@ -4,16 +4,25 @@ body {
 }
 
 html {
-	// width:100%; // needed for fullscreen in IE
-	//position:relative; //why do we need this?
-	body {
-		// width: 100%; // needed for fullscreen in IE
-		//position: relative; //is this needed?
-		
+
+	body {	
 		direction: ltr;
 		text-rendering: optimizeLegibility;
 		background-color: $body-background-color;
 		overflow-x: hidden; //safari issue fixed for bottom spacing 
 		@extend %font-smoothing;
 	}
+}
+
+.layout-composed {
+
+	.page-content {
+
+		.subheader {
+			display: none;
+		}
+
+		padding: 0px;
+	}
+
 }
