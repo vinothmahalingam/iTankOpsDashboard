@@ -1,10 +1,22 @@
 .page-content {
-	//float:left; // needed with header-function-fixed does something wierd with the logo
-	//width:100%; //needed with float
-	//position: relative;
-
-	align-items: stretch;
-	
+	//align-items: stretch;
     flex: 1 1 auto;
     order: 3;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    min-height: calc(100vh - #{$header-height + $footer-height}) //spoonfeeding IE
 }
+
+@include media-breakpoint-up($mobile-breakpoint) {
+
+	.nav-function-top {
+		.page-content {
+			min-height: calc(100vh - #{$header-height-nav-top + $nav-top-height + $footer-height})
+		}
+	}
+
+}
+
