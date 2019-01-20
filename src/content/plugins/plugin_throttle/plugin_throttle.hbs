@@ -147,13 +147,6 @@ jQuery('selector').unbind( 'someevent', throttled );
  **/
 $(window).scroll(
   $.throttle( myapp_config.throttleDelay, function (e) {
-	/**
-	* FIX APP HEIGHT
-	* Compare the height of nav and content;
-	* If one is longer/shorter than the other, measure them to be equal.
-	* This event is only fired on desktop.
-	**/
-	initApp.fixAppHeight();
 
 	/** -- insert your other scroll codes below this line -- **/
   })

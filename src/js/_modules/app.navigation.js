@@ -166,10 +166,6 @@
 				                    if (myapp_config.debugState)
 				                        console.log("nav item opened");
 
-				                    /* bug fixed: addresses the .mod-main-boxed class bug, when nav exceeds content height */
-				                    if (myapp_config.root_.hasClass("mod-main-boxed")) {
-				                        initApp.fixAppHeight();
-				                    }
 				                });
 				            }
 				        }

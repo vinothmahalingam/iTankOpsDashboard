@@ -65,18 +65,18 @@
 		&.nav-function-top {
 			.page-header {
 				position: fixed !important;
-				top: 0;
+				/*top: 0;
 				right: 0;
-				left: 0;
+				left: 0;*/
 
 				box-shadow: 0px 0px 28px 2px $header-border-bottom-color;
 
 				/*chrome flickering solution*/
 				-webkit-transform: translateZ(0);
 			}
-			.page-wrapper {
+			/*.page-wrapper {
 				padding-top: $header-height-nav-top;
-			}			
+			}*/			
 		}
 	}
 }

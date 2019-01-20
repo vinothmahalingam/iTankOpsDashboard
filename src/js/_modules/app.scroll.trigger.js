@@ -11,7 +11,7 @@ $(window).scroll(
 		  * If one is longer/shorter than the other, measure them to be equal.
 		  * This event is only fired on desktop.
 		  **/
-		  initApp.fixAppHeight();
+		  
 
 		  /** -- insert your other scroll codes below this line -- **/
 

@@ -152,9 +152,6 @@ var initApp = (function(app) {
 		/* check non-conflicting plugins */
 		initApp.checkNavigationOrientation();
 
-		/* adjust app height */
-		initApp.calculateAppHeight();
-
 		/* save settings if "storeLocally == true" */
 		initApp.saveSettings();
 
@@ -293,63 +290,6 @@ var initApp = (function(app) {
 		
 	};
 	
-	/**
-	 * Fix app height
-	 * DOC: Calculates a bunch of condition to fix the CSS height issue
-	 **/	
-	app.fixAppHeight = function () {
-
-		app.calculateAppHeight = function (){
-
-			var primaryNavHeight = myapp_config.navAnchor.height() + myapp_config.navHeightGap,
-
-				/* sort next new height, get max value */
-				newHeight =  Math.max(primaryNavHeight, myapp_config.windowHeight); 
-
-			switch ( true ) {
-
-				case ( primaryNavHeight < myapp_config.windowHeight ):
-
-					/* nav is higher than wrapper */
-					myapp_config.root_wrapper.css("min-height",  newHeight + "px");
-
-					if (myapp_config.debugState)
-						console.log("nav height : " +  newHeight);
-
-					break;
-
-				case ( primaryNavHeight > myapp_config.windowHeight ):
-
-					/* wrapper is higher than nav */
-					myapp_config.root_wrapper.css("min-height",  newHeight + "px");
-
-					if (myapp_config.debugState)
-						console.log("body height : " +  newHeight);
-
-					break;
-
-				case ( myapp_config.root_.hasClass('nav-function-fixed') ):
-
-					/* if navigation is fixed */
-					myapp_config.root_wrapper.css("min-height",  primaryNavHeight + "px");
-
-					if (myapp_config.debugState)
-						console.log("nav-function-fixed new height : " +  primaryNavHeight);
-
-					break;
-
-			}	
-		};
-
-		/* HINT! alternative way to save ROM for mobile:
-		   if ( myapp_config.thisDevice === 'desktop' && !myapp_config.root_.is('.nav-function-top, .nav-function-fixed') ) { */
-		if ( !myapp_config.root_.is('.nav-function-top, .nav-function-fixed') ) {
-
-			initApp.calculateAppHeight();
-				
-		}
-
-	};
 
 	/**
 	 * Fix logo position on .header-function-fixed & .nav-function-hidden
@@ -399,9 +339,6 @@ var initApp = (function(app) {
 						if (myapp_config.debugState)
 						console.log("----top controls destroyed");
 					}
-					
-
-					initApp.calculateAppHeight();
 
 					if (myapp_config.debugState)
 					console.log("slimScroll created");
@@ -457,9 +394,6 @@ var initApp = (function(app) {
 				/* destroy horizontal nav */
 				myapp_config.navHooks.menuSlider('destroy');
 
-				/* fix app height (only needs to be called once) */
-				initApp.calculateAppHeight();
-
 				/* build horizontal nav */
 				if (myapp_config.debugState)
 				console.log("----top controls destroyed -- case 2");
@@ -471,9 +405,6 @@ var initApp = (function(app) {
 
 				/* destroy horizontal nav */
 				myapp_config.navHooks.menuSlider('destroy');
-
-				/* fix app height (only needs to be called once) */
-				initApp.calculateAppHeight();
 
 				/* build horizontal nav */
 				if (myapp_config.debugState)
@@ -856,12 +787,12 @@ var initApp = (function(app) {
 						}
 
 						/* fix app height when switching nav from top, side, minify and takes care of some ipad bugs */
-						if ( dataClass === 'nav-function-top' || 
+						/*if ( dataClass === 'nav-function-top' || 
 							 dataClass === 'nav-function-minify' && myapp_config.root_.hasClass('mod-main-boxed') || 
 							 dataClass === 'nav-function-fixed' ) {
 
 							initApp.calculateAppHeight();
-						}
+						}*/
 
 						break;
 

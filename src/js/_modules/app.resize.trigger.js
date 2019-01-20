@@ -20,19 +20,6 @@ $(window).resize(
 		  **/
 		  initApp.checkNavigationOrientation();
 
-		 /**
-		  * (2a) FIX APP HEIGHT
-		  * Get and assign new height during page resize
-		  **/
-		  initApp.getNewWindowHeight();
-
-		 /**
-		  * (2b) FIX APP HEIGHT
-		  * Compare the height of nav and content;
-		  * If one is longer/shorter than the other, measure them to be equal.
-		  * This event is only fired on desktop.
-		  **/
-		  initApp.calculateAppHeight();
 
 		 /** -- insert your resize codes below this line -- **/
 	 

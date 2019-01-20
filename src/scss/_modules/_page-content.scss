@@ -7,10 +7,10 @@
     flex-direction: column;
     position: relative;
 
-    min-height: calc(100vh - #{$header-height + $footer-height}) //spoonfeeding IE
+    //min-height: calc(100vh - #{$header-height + $footer-height}) //spoonfeeding IE
 }
 
-@include media-breakpoint-up($mobile-breakpoint) {
+/*@include media-breakpoint-up($mobile-breakpoint) {
 
 	.nav-function-top {
 		.page-content {
@@ -20,3 +20,4 @@
 
 }
 
+*/
