@@ -171,17 +171,6 @@
                         </tr>
                         <tr>
                             <td>
-                                <button class="btn btn-outline-dark btn-sm mr-2" onclick="initApp.fixAppHeight()">initApp.fixAppHeight()</button>
-                            </td>
-                            <td>
-                                <i class="text-muted">-</i>
-                            </td>
-                            <td class="fs-sm">
-                                Saves app settings to localstorage
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
                                 <button class="btn btn-outline-dark btn-sm mr-2" onclick="initApp.windowScrollEvents()">initApp.windowScrollEvents()</button>
                             </td>
                             <td>
@@ -411,7 +400,6 @@ var initApp = (function(app) {
     app.getNewWindowHeight = function () { ... }
     app.detectBrowserType = function () { ... }
     app.addDeviceType = function() { ... }
-    app.fixAppHeight = function () { ... }
     app.windowScrollEvents = function () { ... }
     app.checkNavigationOrientation = function() { ... }
     app.buildNavigation = function() { ... }
@@ -437,11 +425,7 @@ var initApp = (function(app) {
 $(window).resize(
     $.throttle( myapp_config.throttleDelay, function (e) {
         /* (1a) ADD CLASS WHEN BELOW CERTAIN WIDTH (MOBILE MENU) */
-        initApp.mobileCheckActivation();
-        /* (2a) FIX APP HEIGHT */
-        initApp.getNewWindowHeight();
-        /* (2b) FIX APP HEIGHT */
-        initApp.calculateAppHeight();     
+        initApp.mobileCheckActivation(); 
     })
 ); 
 
@@ -449,7 +433,7 @@ $(window).resize(
 $(window).scroll(
     $.throttle( myapp_config.throttleDelay, function (e) {
         /* FIX APP HEIGHT */
-        initApp.fixAppHeight();
+        ...
     })
 );
 /* Initiate scroll events */
@@ -465,11 +449,9 @@ jQuery(document).ready(function() {
     initApp.mobileCheckActivation();
     /* b. assign window height on page load */    
     initApp.getNewWindowHeight();
-    /* c. fix application height */    
-    initApp.fixAppHeight(); 
-    /* d. build navigation */
+    /* c. build navigation */
     initApp.buildNavigation(myapp_config.navHooks);
-    /* e. run DOM misc functions */
+    /* d. run DOM misc functions */
     initApp.domReadyMisc();
 });</pre>
 

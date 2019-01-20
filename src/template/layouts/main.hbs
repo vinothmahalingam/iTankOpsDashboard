@@ -22,31 +22,39 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 		<!-- BEGIN Page Wrapper -->
 		<div class="page-wrapper">
 
-			<!-- BEGIN Page Header -->
-			{{> include/_page-header }}
-			<!-- END Page Header -->
+			<div class="page-inner">
 
-			<!-- BEGIN Left Aside -->
-			{{> include/_left-panel }}
-			<!-- END Left Aside -->
-			
-			<!-- BEGIN Page Content -->
-			<!-- the #js-page-content id is needed for some plugins to initialize -->
-			<main id="js-page-content" role="main" class="page-content">
-				{{> include/_page-breadcrumb }}
-				{{> include/_page-heading }}
-				{{#>content-block}}{{/content-block}}
-			</main>
-			{{> include/_page-content-overlay }}
-			<!-- END Page Content -->
+				<!-- BEGIN Left Aside -->
+				{{> include/_left-panel }}
+				<!-- END Left Aside -->
 
-			<!-- BEGIN Page Footer -->
-			{{> include/_page-footer }}
-			<!-- END Page Footer -->
+				<div class="page-content-wrapper">
+					
+					<!-- BEGIN Page Header -->
+					{{> include/_page-header }}
+					<!-- END Page Header -->
 
-			<!-- BEGIN Shortcuts -->
-			{{> include/_shortcut-modal }}
-			<!-- END Shortcuts -->
+					<!-- BEGIN Page Content -->
+					<!-- the #js-page-content id is needed for some plugins to initialize -->
+					<main id="js-page-content" role="main" class="page-content">
+						{{> include/_page-breadcrumb }}
+						{{> include/_page-heading }}
+						{{#>content-block}}{{/content-block}}
+					</main>
+					{{> include/_page-content-overlay }}
+					<!-- END Page Content -->
+
+					<!-- BEGIN Page Footer -->
+					{{> include/_page-footer }}
+					<!-- END Page Footer -->
+
+					<!-- BEGIN Shortcuts -->
+					{{> include/_shortcut-modal }}
+					<!-- END Shortcuts -->
+
+				</div>
+
+			</div>
 
 		</div>
 		<!-- END Page Wrapper -->

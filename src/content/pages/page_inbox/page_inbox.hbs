@@ -1,0 +1,35 @@
+{{#> 
+	layouts/main 
+	pagename="page_inbox" 
+	heading="inbox" 
+	pagedescription="inbox"
+}}
+
+{{#*inline "content-block"}}
+
+{{!-- <div class="test h-alt-f bg-primary-100">
+	test
+</div> --}}
+
+<div class="page-message d-flex flex-grow-1 p-0">
+	
+	<div class="page-message-wrapper position-absolute pos-top pos-bottom bg-primary-200" style="width: 250px;">
+		a
+	</div>
+	<div class="d-flex flex-column w-100" style="padding-left: 250px; background: #9b89b9;">
+		b
+	</div>
+
+</div>
+
+{{/inline}}
+
+{{#*inline "scripts-block"}}
+
+<script type="text/javascript">
+$('body').addClass('layout-composed')
+</script>
+
+{{/inline}}
+
+{{/layouts/main}}

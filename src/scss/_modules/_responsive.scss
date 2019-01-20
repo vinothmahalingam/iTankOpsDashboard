@@ -105,6 +105,8 @@ $grid-breakpoints: (
 			@include translate3d (-$nav-width, 0, 0);
 
 			position: fixed !important;
+			top:0;
+			bottom:0;
 
 			.primary-nav {
 				overflow: auto;

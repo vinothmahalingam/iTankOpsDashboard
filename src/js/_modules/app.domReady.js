@@ -26,27 +26,22 @@ jQuery(document).ready(function() {
  	initApp.getNewWindowHeight();
 
  	/**
-	 * c. fix application height
-	 **/	
-  	initApp.fixAppHeight();	
-
- 	/**
-	 * d. build navigation
+	 * c. build navigation
 	 **/
 	initApp.buildNavigation(myapp_config.navHooks);
 
  	/**
-	 * e. initialize nav filter
+	 * d. initialize nav filter
 	 **/
 	initApp.listFilter(myapp_config.navHooks, myapp_config.navFilterInput, myapp_config.navAnchor);
 
  	/**
-	 * f. run DOM misc functions
+	 * e. run DOM misc functions
 	 **/
 	initApp.domReadyMisc();
 
  	/**
-	 * g. run app forms class detectors [parentClass,focusClass,disabledClass]
+	 * f. run app forms class detectors [parentClass,focusClass,disabledClass]
 	 **/
 	initApp.appForms('.form-group, .input-group', 'has-length', 'has-disabled');
 

@@ -1,7 +1,9 @@
 .nav-function-fixed:not(.nav-function-top)  {
 	.page-sidebar{
 		position: fixed !important;
-		
+		top:0;
+		bottom:0;
+
 		.primary-nav {
 			overflow: auto;
 			overflow-x: hidden;
@@ -41,6 +43,10 @@
 					position: fixed !important;
 				}	
 			}
+
+			&:not(.nav-function-hidden):not(.nav-function-minify) .page-content-wrapper {
+				padding-left: $nav-width;
+			}
 		}
 
 		/*
@@ -51,12 +57,8 @@
 
 				.page-sidebar {
 					position: fixed !important;
-					top: $header-height-nav-top;
 
 					box-shadow: 0px 0px 28px 2px $header-border-bottom-color;
-				}
-				.page-wrapper {
-					padding-top: $header-height-nav-top + $nav-top-height;
 				}
 			}
 		}
@@ -72,7 +74,7 @@
 					left: 0;
 					margin-right: auto;
 					margin-left: auto;
-					max-width: $mod-main-boxed-width - 2;
+					max-width: $mod-main-boxed-width - 2px;
 				}
 			}
 		}

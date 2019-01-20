@@ -43,7 +43,8 @@
 		&.header-function-fixed {
 			.page-wrapper {
 				.page-header {
-					width: $mod-main-boxed-width - 2px; //targets borders
+					width: 100%; //IE bug.
+					max-width: $mod-main-boxed-width - 2px; //targets borders
 					margin: 0 auto !important;
 				}			
 			}
@@ -52,14 +53,23 @@
 				.page-wrapper {
 					.page-sidebar {
 						position: absolute !important;
+						top:0;
+						bottom:0;
 					}
+					
 				}
 			}
 
 			&:not(.nav-function-top):not(.nav-function-hidden):not(.nav-function-minify) {
 				.page-wrapper {
 					.page-header {
-						padding-left:$nav-width + 1.75rem; 
+						padding-left: $nav-width + 1.75rem; 
+					}
+				}
+
+				&:not(.nav-function-fixed) {
+					.page-content {
+						margin-left: $nav-width;
 					}
 				}
 			}
@@ -69,23 +79,13 @@
 					.page-header {
 						padding-left:$nav-minify-width + 1.75rem;
 					}
+					.page-content-wrapper {
+						margin-left: $nav-minify-width;
+					}
 				}
 			}
 
 		}
-
-		/*&.nav-function-top {
-
-			.page-wrapper {
-				//background:#fff; //to balance contrast
-
-				.page-sidebar {
-					.page-logo {
-						width: 90px !important;
-					}
-		    	}
-			}
-		}*/
 
 		&.nav-function-hidden {
 
@@ -155,6 +155,7 @@
 			border-right:1px solid rgba($black, .15);
 			box-shadow: 5px 0 20px 0px rgba(0, 0, 0, 0.1), -5px 0 20px 0px rgba(0, 0, 0, 0.1);
 			overflow: hidden;
+			position: relative;
 		}
 
 		&:not(.header-function-fixed):not(.nav-function-top):not(.modal-open) {

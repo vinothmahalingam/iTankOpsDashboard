@@ -1,15 +1,15 @@
-html,
+/*html,
 body {
 	height:100%;
 }
-
+*/
 html {
 
 	body {	
 		direction: ltr;
 		text-rendering: optimizeLegibility;
 		background-color: $body-background-color;
-		overflow-x: hidden; //safari issue fixed for bottom spacing 
+		//overflow-x: hidden; //safari issue fixed for bottom spacing 
 		@extend %font-smoothing;
 	}
 }
