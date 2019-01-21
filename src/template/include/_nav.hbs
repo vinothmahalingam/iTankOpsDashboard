@@ -632,7 +632,7 @@
 			</li>							
 		</ul>	
 	</li>
-	<li {{#is pagename "in" "page_blank,page_search,page_error,page_error_404"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "page_blank,page_search,page_error,page_error_404,page_inbox"}}class="active open"{{/is}}>
 		<a href="#" title="Pages" data-filter-tags="page layouts"> 
 			<i class="fal fa-plus-circle"></i>
 			<span class="nav-link-text" data-i18n="nav.page">Page Layouts</span> 
@@ -697,14 +697,9 @@
 					<span class="nav-link-text" data-i18n="nav.page_search">Search Results</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "page_blank"}}class="active"{{/is}}>
-				<a href="page_blank.html" data-filter-tags="---"> 
-					<span class="nav-link-text">---  <span class="label bg-warning-200 f-r">ADDON</span> </span>
-				</a>
-			</li>
-			<li {{#is pagename "===" "n"}}class="active"{{/is}}>
-				<a href="blank.html" data-filter-tags="---"> 
-					<span class="nav-link-text">---</span>
+			<li {{#is pagename "===" "page_inbox"}}class="active"{{/is}}>
+				<a href="page_inbox.html" data-filter-tags="page layouts inbox"> 
+					<span class="nav-link-text" data-i18n="nav.page_inbox">Inbox</span>
 				</a>
 			</li>
 			<li {{#is pagename "===" "n"}}class="active"{{/is}}>
