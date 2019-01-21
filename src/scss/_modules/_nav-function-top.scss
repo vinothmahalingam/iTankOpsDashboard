@@ -108,10 +108,12 @@ $nav-function-top-menu-item-bg: $primary-500;
 			
 		}
 
+		.page-content-wrapper {
+			margin-top: $nav-top-height + $header-height-nav-top;
+		}
+
 		.page-wrapper {
 			padding-left:0;
-
-    		padding-top: $nav-top-height + $header-height-nav-top;
 
 			.page-footer {
 				width: 100%;
@@ -141,7 +143,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 			}
 
 			.primary-nav {
-				flex: 1 0 100%;
+				flex: 1;
 				display: flex;
 				align-items: stretch; 
 				font-size: 0;
@@ -424,13 +426,16 @@ $nav-function-top-menu-item-bg: $primary-500;
 		.page-header {
 			order: 1;
 		}
+
 		.page-wrapper {
 			display: flex;
 			flex-direction: column;
 		}
+
 		.page-sidebar {
 			order: 2;
 		}
+
 		.page-content {
 			order: 3;
 			align-items: stretch;

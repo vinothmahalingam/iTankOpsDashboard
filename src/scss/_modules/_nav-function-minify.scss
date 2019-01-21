@@ -13,7 +13,7 @@
 			width: $nav-minify-width;
 			z-index: $depth-header + 1;
 
-			will-change: left, right;
+			will-change: width;
 			
 			transition: $nav-hide-animate;
 

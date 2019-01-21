@@ -611,7 +611,7 @@ var initApp = (function(app) {
 		 **/
 		if ( typeof $.fn.slimScroll !== 'undefined' && myapp_config.thisDevice === 'desktop') {
 
-			$('.custom-scroll >:first-child').slimscroll({
+			$('.custom-scroll:not(.disable-slimscroll) >:first-child').slimscroll({
 				height: $(this).data('scrollHeight') || '100%',
 				size: $(this).data('scrollSize') || '4px',
 				position: $(this).data('scrollPosition') || 'right',
