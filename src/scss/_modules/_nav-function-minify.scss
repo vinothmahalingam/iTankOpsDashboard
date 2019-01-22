@@ -59,29 +59,6 @@
 
 				.nav-title {
 					display: none;
-
-					/*
-
-					Has this wierd bug when hovering on chrome, so I disabled it..
-
-					position: relative;
-					font-size: 0;
-					margin: 10px 0;
-
-					&:after {
-						content: "";
-						position: absolute;
-						top: 20%;
-						bottom: 0;
-						left: 25%;
-						right: 25%;
-						display: block;
-						width: 50%;
-						height: 50%;
-						background-color: rgba(255, 255, 255, 0.06);
-						border-radius: 4px;
-						z-index: -1;
-					}*/
 				}
 				.nav-menu {
 					margin:0;
@@ -113,6 +90,7 @@
 						}
 					}
 
+					// first level
 					> li {
 
 						> a {
@@ -154,7 +132,7 @@
 							}
 
 							> b.collapse-sign {
-								display: none !important;
+								display: none;
 							}
 
 							// sub 1
@@ -236,7 +214,7 @@
 							color: $white;
 							overflow: visible;
 
-							z-index: 2;
+							z-index: 10;
 
 							>.nav-link-text {
 								display: flex;
@@ -245,6 +223,29 @@
 								 animation: animateFadeInLeft 0.5s;
   								-webkit-animation: animateFadeInLeft 0.5s;
 							}
+
+							>.nav-link-text:last-child {
+									top: 26px;
+									align-items: center;
+									background: $nav-background;
+									overflow: visible;
+									border-radius: 4px 10px 10px 4px;
+
+								&:before {
+									    content: "\f1c8";
+										font-family: 'nextgen-icons';
+										position: absolute;
+										font-size: 3.5rem;
+										left: -7px;
+										color: $nav-background;
+										z-index: -1;
+										transform: rotate(270deg);
+										overflow: hidden;
+										display: block;
+										top: -9px;
+							    }
+							}
+
 
 						}
 
