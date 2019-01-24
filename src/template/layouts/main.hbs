@@ -14,7 +14,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 		{{!-- Optional: page related CSS --}}
 		{{#>head-block}}{{/head-block}}
 	</head>
-	<body class="mod-bg-1">
+	<body class="mod-bg-1 {{preemptiveclass}}">
 		
 		{{!-- save-settings-script --}}
 		{{> include/_scripts-loading-saving}}
@@ -38,7 +38,11 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 					<!-- the #js-page-content id is needed for some plugins to initialize -->
 					<main id="js-page-content" role="main" class="page-content">
 						{{> include/_page-breadcrumb }}
-						{{> include/_page-heading }}
+						{{#if preemptiveclass}}
+							<!-- Page heading removed for layout composed layout -->
+						{{else}}
+							{{> include/_page-heading }}
+						{{/if}}
 						{{#>content-block}}{{/content-block}}
 					</main>
 					{{> include/_page-content-overlay }}

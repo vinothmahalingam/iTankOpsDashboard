@@ -17,7 +17,7 @@ $disabled:											    darken($white, 20%) !default;
 ========================================================================== */
 /* the grays */ 
 $gray-100:                          #f8f9fa;
-$gray-200:                          #e9ecef;
+$gray-200:                          #f3f3f3;
 $gray-300:                          #dee2e6;
 $gray-400:                          #ced4da;
 $gray-500:                          #adb5bd;
@@ -189,7 +189,7 @@ $grid-breakpoints: (
 $mobile-breakpoint:          lg !default;                               /* define when mobile menu activates, here we are declearing (lg) so it targets the one after it */
 $mobile-breakpoint-size:     map-get($grid-breakpoints, lg) !default;   /* bootstrap reference xs: 0,  sm: 544px, md: 768px, lg: 992px, xl: 1200px*/
 $grid-gutter-width-base:     3rem;
-$grid-gutter-width:          1.5rem; //24px~
+$grid-gutter-width:          1.5rem;
 
 $grid-gutter-widths: (
   xs: $grid-gutter-width-base / 2,         
@@ -202,6 +202,18 @@ $grid-gutter-widths: (
 
 /* global var used for spacing*/
 $spacer:                  1rem;
+$spacers: () ;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 2)
+  ),
+  $spacers
+);
 
 /* Uniform Padding variable */
 /* Heads up! This is a global scoped variable - changing may impact the whole template */
@@ -209,7 +221,8 @@ $p-1:                 0.25rem;
 $p-2:                 0.5rem;
 $p-3:                 1rem;
 $p-4:                 1.5rem;
-$p-5:                 3rem;
+$p-5:                 2rem;
+
 
 
 /*   BOOTSTRAP OVERRIDES (bootstrap variables)
@@ -245,7 +258,7 @@ $theme-colors: (
   "info": $color-info,
   "warning": $color-warning,
   "danger": $color-danger,
-  "light": $white,
+  "light": darken($white, 7%),
   "dark": $primary-800
 );
 
@@ -258,6 +271,10 @@ $input-padding-y:                   .438rem;
 $input-padding-x:                   .875rem;
 $label-margin-bottom:               .3rem;
 $form-group-margin-bottom:          1.5rem;
+
+$custom-control-indicator-size:     1.125rem;
+$custom-checkbox-indicator-border-radius: 2px;
+
 
 /* cards */
 $card-spacer-y:                     1.25rem;
@@ -371,7 +388,7 @@ http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/
 $font-size-base:             		    0.8125rem;
 $font-size-lg:                      1rem;
 $font-size-sm:   					          0.75rem;
-$line-height-base:                  1.5;
+$line-height-base:                  1.54;
 
 $h1-font-size: 						          1.5rem;
 $h2-font-size: 						          1.375rem;
@@ -464,7 +481,7 @@ $depth-nav:										       $depth-header + 2 !default;
 ========================================================================== */
 $frame-border-color:                 #f7f9fa !default;
 
-/*  HEADER STUFF
+/*  PAGE HEADER STUFF
 ========================================================================== */
 
 /* colors */
@@ -477,6 +494,8 @@ $header-link-hover-color:				     darken($header-bg, 75%) !default;
 /* height */
 $header-height:									     4.125rem !default;
 $header-height-nav-top:              4.125rem !default;
+$header-inner-padding-x:             2rem !default;
+$header-inner-padding-y:             0 !default;
 
 /* logo */
 $header-logo-border-bottom:			     rgba(darken($primary-700, 10%), (30/100)) !default;

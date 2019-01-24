@@ -63,7 +63,7 @@
 			&:not(.nav-function-top):not(.nav-function-hidden):not(.nav-function-minify) {
 				.page-wrapper {
 					.page-header {
-						padding-left: $nav-width + 1.75rem; 
+						padding-left: $nav-width + $header-inner-padding-x; 
 					}
 				}
 
@@ -77,7 +77,7 @@
 			&.nav-function-minify:not(.nav-function-top):not(.nav-function-hidden) {
 				.page-wrapper {
 					.page-header {
-						padding-left:$nav-minify-width + 1.75rem;
+						padding-left:$nav-minify-width + $header-inner-padding-x;
 					}
 					.page-content-wrapper {
 						margin-left: $nav-minify-width;

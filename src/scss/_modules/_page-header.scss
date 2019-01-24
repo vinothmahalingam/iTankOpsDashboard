@@ -149,6 +149,9 @@ $header-badge-top: 									($header-height / 2 - $header-badge-min-width) + 0.2
 	background-color: $header-bg;
 	box-shadow: 0px 0px 28px 0px $header-border-bottom-color;
 	display: flex;
+
+	flex: 0 0 auto;
+
 	align-items:center;
 
 	height: $header-height;

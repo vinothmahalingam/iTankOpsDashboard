@@ -175,10 +175,11 @@ var initApp = (function(app) {
 
 	/*
 	 * usage: initApp.pushSettings("className1 className2")
+	 * save settings to localstorage: initApp.pushSettings("className1 className2", true)
 	 * DOC: pushSettings will also auto save to localStorage if "storeLocally == true" 
 	 * we will use this "pushSettings" when loading settings from a database
 	 */
-	app.pushSettings = function (DB_string) {
+	app.pushSettings = function (DB_string, saveToLocal) {
 
 		/* clear localstorage variable 'themeSettings' */
 		localStorage.setItem("themeSettings", "");
@@ -189,7 +190,8 @@ var initApp = (function(app) {
 		/* destroy or enable slimscroll */
 		initApp.checkNavigationOrientation();
 
-		/* save settings if "storeLocally == true" */
+		/* save settings if "storeLocally == true" && "saveToLocal is true" */
+		if (saveToLocal != false)
 		initApp.saveSettings();
 
 		/* return string */

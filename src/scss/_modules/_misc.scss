@@ -335,8 +335,9 @@ hr {
 	}
 
 	&.status-sm:before {
-		width: 12px;
-		height: 12px;	
+		width: 10px;
+		height: 10px;	
+		border-width: 1px;
 	}
 
 	&.status-success:before {

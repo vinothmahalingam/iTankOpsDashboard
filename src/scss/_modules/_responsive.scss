@@ -21,7 +21,7 @@ $grid-breakpoints: (
 
 @include media-breakpoint-up(lg) {
 	.page-header {
-		padding: 0 1.75rem;
+		padding: 0 $header-inner-padding-x;
 	}
 	.page-content {
 		padding: 1.5rem 2rem;
@@ -34,7 +34,7 @@ $grid-breakpoints: (
 
 /*@include media-breakpoint-up(xl) {
 	.page-header {
-		padding: 0 1.75rem;
+		padding: 0 $header-inner-padding-x;
 	}
 	.page-content {
 		padding: 1.5rem 2rem;

@@ -99,6 +99,10 @@ RESULT:
   box-sizing: content-box;
 }
 
+%flex-0-0-auto {
+  flex: 0 0 auto;
+}
+
 %transform-3d {
   @include translate3d(0,0,0);
 }
