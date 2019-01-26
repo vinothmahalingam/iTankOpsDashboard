@@ -220,6 +220,14 @@ $contrast: 3% !default;
   font-weight: 500;
 }
 
+.custom-control-label.bolder:before {
+      border: $fusion-500 solid $custom-control-indicator-border-width;
+}
+
+.custom-control {
+  min-height: $custom-control-indicator-size;
+}
+
 input[type="radio"]:checked + .custom-control-label, 
 input[type="checkbox"]:checked + .custom-control-label {
   //color: $primary-500;

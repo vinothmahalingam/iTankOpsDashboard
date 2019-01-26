@@ -6,49 +6,53 @@
 	preemptiveclass="nav-function-minify layout-composed"
 }}
 
+{{#*inline "head-block"}}
+<link rel="stylesheet" media="screen, print" href="css/fa-solid.css">
+{{/inline}}
+
 {{#*inline "content-block"}}
 
 <div class="d-flex flex-grow-1 p-0">
 	
-	<div class="flex-wrap flex-grow-1 position-relative bg-gray-200 " style="width: 16rem;">
-		<div class="position-absolute pos-top pos-bottom custom-scroll w-100">
+	<div class="flex-wrap flex-grow-1 position-relative bg-white" style="width: 16rem;">
+		<div class="position-absolute pos-top pos-bottom w-100">
 			<div class="d-flex h-100 flex-column">
 
 				<div class="px-3 px-lg-5 py-4 align-items-center">
-					<button type="button" class="btn btn-danger btn-block fs-xl">Compose</button>
+					<button type="button" class="btn btn-danger btn-block fs-md">Compose</button>
 				</div>
 
 				<a href="javascript:void(0)" class="d-flex px-3 px-lg-5 py-2 fs-md justify-content-between align-items-center text-dark font-weight-bold">
 					<div>
-						<i class="fal fa-folder-open width-1"></i>Inbox
+						<i class="fas fa-folder-open width-1"></i>Inbox
 					</div>
-					<div class="badge badge-primary">12</div>
+					<div class="fw-400 fs-xs">4</div>
 				</a>
 				<a href="javascript:void(0)" class="d-flex px-3 px-lg-5 py-2 fs-md justify-content-between align-items-center text-dark">
 					<div>
-						<i class="fal fa-star width-1"></i>Starred
+						<i class="fas fa-star width-1"></i>Starred
 					</div>
+					<div class="fw-400 fs-xs">17</div>
 				</a>
 				<a href="javascript:void(0)" class="d-flex px-3 px-lg-5 py-2 fs-md justify-content-between align-items-center text-dark">
 					<div>
-						<i class="fal fa-edit width-1"></i>Draft
+						<i class="fas fa-edit width-1"></i>Draft
 					</div>
-					<div class="badge badge-fusion">75</div>
+					<div class="fw-400 fs-xs">5</div>
 				</a>
 				<a href="javascript:void(0)" class="d-flex px-3 px-lg-5 py-2 fs-md justify-content-between align-items-center text-dark">
 					<div>
-						<i class="fal fa-paper-plane width-1"></i>Sent
+						<i class="fas fa-paper-plane width-1"></i>Sent
 					</div>
 				</a>
 				<a href="javascript:void(0)" class="d-flex px-3 px-lg-5 py-2 fs-md justify-content-between align-items-center text-dark font-weight-bold">
 					<div>
-						<i class="fal fa-exclamation-triangle width-1"></i>Spam
+						<i class="fas fa-exclamation-triangle width-1"></i>Spam
 					</div>
-					<div class="badge badge-fusion">100+</div>
 				</a>
 				<a href="javascript:void(0)" class="d-flex px-3 px-lg-5 py-2 fs-md justify-content-between align-items-center text-dark font-weight-bold">
 					<div>
-						<i class="fal fa-trash-alt width-1"></i>Trash
+						<i class="fas fa-trash-alt width-1"></i>Trash
 					</div>
 				</a>
 
@@ -56,336 +60,401 @@
 		</div>
 	</div>	
 
-	<div class="d-flex flex-column w-100 flex-grow-1 bg-gray-100">
+	<div class="d-flex flex-column w-100 flex-grow-1 bg-white">
 		<div class="flex-grow-0">
-			<div class="d-flex align-items-center px-3 px-lg-5 py-4 border-faded border-top-0 border-left-0 border-right-0">
+			<div class="d-flex align-items-center px-1 py-4 px-lg-5  border-faded border-top-0 border-left-0 border-right-0">
 				<h1 class="m-0 fw-500 flex-1">
-					Inbox
+					<i class="fas fa-folder-open mr-2"></i> Inbox
 				</h1>
 				<div class="d-flex position-relative" style="width: 23rem;">
-					<i class="fal fa-search position-absolute pos-left fs-xl px-3 py-2 mt-1"></i>
-					<input type="text" class="form-control bg-subtlelight pl-5">
+					<i class="fas fa-search position-absolute pos-left fs-lg px-3 py-2 mt-1"></i>
+					<input type="text" class="form-control bg-subtlelight pl-6" placeholder="Filter emails">
 				</div>
 				
 			</div>
-			<div class="flex-wrap align-items-center px-3 px-lg-5 py-2 border-faded border-top-0 border-left-0 border-right-0">
-				aa
+			<div class="d-flex flex-wrap align-items-center px-1 py-1 px-lg-5 border-faded border-top-0 border-left-0 border-right-0">
+				
+				<div class="flex-1">
+					<div class="custom-control custom-checkbox mr-2 d-inline-block">
+						<input type="checkbox" class="custom-control-input" id="js-msg-select-all">
+						<label class="custom-control-label bolder" for="js-msg-select-all"></label>
+					</div>
+					<div class="d-inline-flex flex-wrap">
+						<a href="javascript:void(0);" class="btn btn-icon btn-default">
+							<i class="fas fa-redo fs-md"></i>
+						</a>
+						<a href="javascript:void(0);" class="btn btn-icon btn-default">
+							<i class="fas fa-exclamation-circle fs-md"></i>
+						</a>
+						<a href="javascript:void(0);" class="btn btn-icon btn-default">
+							<i class="fas fa-trash-alt fs-md"></i>
+						</a>
+					</div>
+				</div>
+				<div class="text-muted mr-4 ml-auto">
+					1 - 50 of 14,335
+				</div>
+				<div class="d-flex flex-wrap">
+					<button class="btn btn-icon btn-default"><i class="fal fa-chevron-left fs-md"></i></button>
+					<button class="btn btn-icon btn-default"><i class="fal fa-chevron-right fs-md"></i></button>
+				</div>
+
 			</div>
 		</div>
-		<div class="flex-wrap align-items-center flex-grow-1 position-relative">
+		<div class="flex-wrap align-items-center flex-grow-1 position-relative bg-gray-50">
 			<div class=" position-absolute pos-top pos-bottom w-100 custom-scroll">
 				<div class="d-flex h-100 flex-column">
 
-					<ul class="notification">
+					<ul class="notification notification-layout-2">
 						<li class="unread">
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg color-warning-500"><i class="fas fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg"><i class="fas fa-envelope"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Melissa Ayre</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">Re: New security codes (2)</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Melissa Ayre</a>
+									<a href="#" class="name d-flex align-items-center py-1">Re: New security codes (2)</a>
 								</div>
-								<div class="fs-nano text-muted">56 seconds ago</div>
+								<div class="fs-nano text-muted ml-auto">56 seconds ago</div>
 								<a href="javascript:void(0);" class="status status-sm ml-2">
 									<img src="img/avatars/avatar-c.png" class="profile-image-sm rounded-circle" alt="Melissa Ayre">
 								</a>
 							</div>
 						</li>
 						<li class="unread">
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg"><i class="fas fa-envelope"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Adison Le</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">Welcome to the new portal, here is what you need to do</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Adison Le</a>
+									<a href="#" class="name d-flex align-items-center py-1">Welcome to the new portal, here is what you need to do</a>
 								</div>
-								<div class="fs-nano text-muted">2 minutes ago</div>
+								<div class="fs-nano text-muted ml-auto">2 minutes ago</div>
 								<a href="javascript:void(0);" class="status status-sm ml-2">
 									<img src="img/avatars/avatar-a.png" class="profile-image-sm rounded-circle" alt="Adison Le">
 								</a>
 							</div>
 						</li>
 						<li>
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg color-warning-500"><i class="fas fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-envelope-open"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Oliver Kopyuv</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">Transformer Combustion Defuser is ready</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Oliver Kopyuv</a>
+									<a href="#" class="name d-flex align-items-center py-1">Transformer Combustion Defuser is ready</a>
 								</div>
-								<div class="fs-nano text-muted">3 days ago</div>
+								<div class="fs-nano text-muted ml-auto">3 days ago</div>
 								<a href="javascript:void(0);" class="status status-sm ml-2">
 									<img src="img/avatars/avatar-b.png" class="profile-image-sm rounded-circle" alt="Oliver Kopyuv">
 								</a>
 							</div>
 						</li>
 						<li>
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-envelope-open"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Dr. John Cook PhD</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">PWS facts for patient #3245</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Dr. John Cook PhD</a>
+									<a href="#" class="name d-flex align-items-center py-1">PWS facts for patient #3245</a>
 								</div>
-								<div class="fs-nano text-muted">3 days ago</div>
+								<div class="fs-nano text-muted ml-auto">3 days ago</div>
 								<a href="javascript:void(0);" class="status status-sm ml-2">
 									<img src="img/avatars/avatar-e.png" class="profile-image-sm rounded-circle" alt="Dr. John Cook PhD">
 								</a>
 							</div>
 						</li>
 						<li>
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-envelope-open"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Sarah McBrook</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">Are you coming to the after party?</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Sarah McBrook</a>
+									<a href="#" class="name d-flex align-items-center py-1">Are you coming to the after party?</a>
 								</div>
-								<div class="fs-nano text-muted">3 days ago</div>
+								<div class="fs-nano text-muted ml-auto">3 days ago</div>
 								<a href="javascript:void(0);" class="status status-sm ml-2">
 									<img src="img/avatars/avatar-h.png" class="profile-image-sm rounded-circle" alt="Dr. John Cook PhD">
 								</a>
 							</div>
 						</li>
 						<li>
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-envelope-open"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Lisa Hatchensen</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">The results for bloodwork</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Lisa Hatchensen</a>
+									<a href="#" class="name d-flex align-items-center py-1">The results for bloodwork</a>
 								</div>
-								<div class="fs-nano text-muted">3 days ago</div>
+								<div class="fs-nano text-muted ml-auto">3 days ago</div>
 								<a href="javascript:void(0);" class="status status-sm ml-2">
 									<img src="img/avatars/avatar-b.png" class="profile-image-sm rounded-circle" alt="Dr. John Cook PhD">
 								</a>
 							</div>
 						</li>
 						<li>
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-envelope-open"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Anothony Bezyeth</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">Questions regarding accesskey</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Anothony Bezyeth</a>
+									<a href="#" class="name d-flex align-items-center py-1">Questions regarding accesskey</a>
 								</div>
-								<div class="fs-nano text-muted">one month ago</div>
+								<div class="fs-nano text-muted ml-auto">one month ago</div>
 								<a href="javascript:void(0);" class="status status-sm ml-2">
 									<img src="img/avatars/avatar-b.png" class="profile-image-sm rounded-circle" alt="Dr. John Cook PhD">
 								</a>
 							</div>
 						</li>
-						<li class="unread">
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+						<li>
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-envelope-open"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Wrapbootstrap</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">Your registration is complete</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Wrapbootstrap</a>
+									<a href="#" class="name d-flex align-items-center py-1">Your registration is complete</a>
 								</div>
-								<div class="fs-nano text-muted">2 months ago</div>
+								<div class="fs-nano text-muted ml-auto">2 months ago</div>
 							</div>
 						</li>
 												<li>
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-envelope-open"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Oliver Kopyuv</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">Transformer Combustion Defuser is ready</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Oliver Kopyuv</a>
+									<a href="#" class="name d-flex align-items-center py-1">Transformer Combustion Defuser is ready</a>
 								</div>
-								<div class="fs-nano text-muted">3 days ago</div>
+								<div class="fs-nano text-muted ml-auto">3 days ago</div>
 								<a href="javascript:void(0);" class="status status-sm ml-2">
 									<img src="img/avatars/avatar-b.png" class="profile-image-sm rounded-circle" alt="Oliver Kopyuv">
 								</a>
 							</div>
 						</li>
 						<li>
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-envelope-open"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Dr. John Cook PhD</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">PWS facts for patient #3245</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Dr. John Cook PhD</a>
+									<a href="#" class="name d-flex align-items-center py-1">PWS facts for patient #3245</a>
 								</div>
-								<div class="fs-nano text-muted">3 days ago</div>
+								<div class="fs-nano text-muted ml-auto">3 days ago</div>
 								<a href="javascript:void(0);" class="status status-sm ml-2">
 									<img src="img/avatars/avatar-e.png" class="profile-image-sm rounded-circle" alt="Dr. John Cook PhD">
 								</a>
 							</div>
 						</li>
 						<li>
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-envelope-open"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Sarah McBrook</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">Are you coming to the after party?</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Sarah McBrook</a>
+									<a href="#" class="name d-flex align-items-center py-1">Are you coming to the after party?</a>
 								</div>
-								<div class="fs-nano text-muted">3 days ago</div>
+								<div class="fs-nano text-muted ml-auto">3 days ago</div>
 								<a href="javascript:void(0);" class="status status-sm ml-2">
 									<img src="img/avatars/avatar-h.png" class="profile-image-sm rounded-circle" alt="Dr. John Cook PhD">
 								</a>
 							</div>
 						</li>
 						<li>
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-envelope-open"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Lisa Hatchensen</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">The results for bloodwork</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Lisa Hatchensen</a>
+									<a href="#" class="name d-flex align-items-center py-1">The results for bloodwork</a>
 								</div>
-								<div class="fs-nano text-muted">3 days ago</div>
+								<div class="fs-nano text-muted ml-auto">3 days ago</div>
 								<a href="javascript:void(0);" class="status status-sm ml-2">
 									<img src="img/avatars/avatar-b.png" class="profile-image-sm rounded-circle" alt="Dr. John Cook PhD">
 								</a>
 							</div>
 						</li>
 						<li>
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-envelope-open"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Anothony Bezyeth</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">Questions regarding accesskey</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Anothony Bezyeth</a>
+									<a href="#" class="name d-flex align-items-center py-1">Questions regarding accesskey</a>
 								</div>
-								<div class="fs-nano text-muted">one month ago</div>
+								<div class="fs-nano text-muted ml-auto">one month ago</div>
 								<a href="javascript:void(0);" class="status status-sm ml-2">
 									<img src="img/avatars/avatar-b.png" class="profile-image-sm rounded-circle" alt="Dr. John Cook PhD">
 								</a>
 							</div>
 						</li>
 						<li class="unread">
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg color-warning-500"><i class="fas fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg"><i class="fas fa-envelope"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Wrapbootstrap</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">Your registration is complete</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Bloodworks Inc.</a>
+									<a href="#" class="name d-flex align-items-center py-1">Your results are here</a>
 								</div>
-								<div class="fs-nano text-muted">2 months ago</div>
+								<div class="fs-nano text-muted ml-auto">2 months ago</div>
 							</div>
 						</li>
 												<li>
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-envelope-open"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Oliver Kopyuv</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">Transformer Combustion Defuser is ready</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Oliver Kopyuv</a>
+									<a href="#" class="name d-flex align-items-center py-1">Transformer Combustion Defuser is ready</a>
 								</div>
-								<div class="fs-nano text-muted">3 days ago</div>
+								<div class="fs-nano text-muted ml-auto">3 days ago</div>
 								<a href="javascript:void(0);" class="status status-sm ml-2">
 									<img src="img/avatars/avatar-b.png" class="profile-image-sm rounded-circle" alt="Oliver Kopyuv">
 								</a>
 							</div>
 						</li>
 						<li>
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-envelope-open"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Dr. John Cook PhD</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">PWS facts for patient #3245</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Dr. John Cook PhD</a>
+									<a href="#" class="name d-flex align-items-center py-1">PWS facts for patient #3245</a>
 								</div>
-								<div class="fs-nano text-muted">3 days ago</div>
+								<div class="fs-nano text-muted ml-auto">3 days ago</div>
 								<a href="javascript:void(0);" class="status status-sm ml-2">
 									<img src="img/avatars/avatar-e.png" class="profile-image-sm rounded-circle" alt="Dr. John Cook PhD">
 								</a>
 							</div>
 						</li>
 						<li>
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-envelope-open"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Sarah McBrook</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">Are you coming to the after party?</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Sarah McBrook</a>
+									<a href="#" class="name d-flex align-items-center py-1">Are you coming to the after party?</a>
 								</div>
-								<div class="fs-nano text-muted">3 days ago</div>
+								<div class="fs-nano text-muted ml-auto">3 days ago</div>
 								<a href="javascript:void(0);" class="status status-sm ml-2">
 									<img src="img/avatars/avatar-h.png" class="profile-image-sm rounded-circle" alt="Dr. John Cook PhD">
 								</a>
 							</div>
 						</li>
 						<li>
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-envelope-open"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Lisa Hatchensen</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">The results for bloodwork</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Lisa Hatchensen</a>
+									<a href="#" class="name d-flex align-items-center py-1">The results for bloodwork</a>
 								</div>
-								<div class="fs-nano text-muted">3 days ago</div>
+								<div class="fs-nano text-muted ml-auto">3 days ago</div>
 								<a href="javascript:void(0);" class="status status-sm ml-2">
 									<img src="img/avatars/avatar-b.png" class="profile-image-sm rounded-circle" alt="Dr. John Cook PhD">
 								</a>
 							</div>
 						</li>
 						<li>
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-envelope-open"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Anothony Bezyeth</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">Questions regarding accesskey</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Anothony Bezyeth</a>
+									<a href="#" class="name d-flex align-items-center py-1">Questions regarding accesskey</a>
 								</div>
-								<div class="fs-nano text-muted">one month ago</div>
+								<div class="fs-nano text-muted ml-auto">one month ago</div>
 								<a href="javascript:void(0);" class="status status-sm ml-2">
 									<img src="img/avatars/avatar-b.png" class="profile-image-sm rounded-circle" alt="Dr. John Cook PhD">
 								</a>
 							</div>
 						</li>
 						<li class="unread">
-							<div class="d-flex align-items-center px-3 px-lg-5 py-2 height-8">
+							<div class="d-flex align-items-center px-3 px-lg-5 py-1 height-4">
 								<div class="custom-control custom-checkbox mr-3">
 									<input type="checkbox" class="custom-control-input" id="msg-1">
 									<label class="custom-control-label" for="msg-1"></label>
 								</div>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg text-muted"><i class="fal fa-star"></i></a>
+								<a href="#" class="d-flex align-items-center py-1 mr-4 fs-lg"><i class="fas fa-envelope"></i></a>
 								<div class="d-flex flex-row flex-wrap flex-1 align-items-center">
-									<a href="#" class="name d-flex width-sm align-items-center">Wrapbootstrap</a>
-									<a href="#" class="name d-flex flex-1 align-items-center">Your registration is complete</a>
+									<a href="#" class="name d-flex width-sm align-items-center py-1">Password reset</a>
+									<a href="#" class="name d-flex align-items-center py-1">Your password was changed</a>
 								</div>
-								<div class="fs-nano text-muted">2 months ago</div>
+								<div class="fs-nano text-muted ml-auto">2 months ago</div>
 							</div>
 						</li>
 					</ul>
