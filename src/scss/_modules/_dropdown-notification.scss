@@ -11,12 +11,15 @@
 	padding:0;
 	margin: 0;
 	list-style: none;
+	position: relative;
 
 	li {
+		position: relative;
+		background: $white;
 
 		&.unread {
 			
-			background: rgba($warning-500, .07);
+			background: lighten($warning-50, 9%);
 
 			.name {
 				font-weight:500;
@@ -67,7 +70,7 @@
 
 	&.notification-layout-2 {
 		li {
-			position: relative;
+			background: $gray-50;
 
 			&.unread {
 				background: $white;
@@ -99,6 +102,26 @@
 				font-size: rem($fs-base + 1px);
 			}
 		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	
+	&:not(.notification-loading) {
+
+		&:before {
+			content: "No new messages";
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 0;
+			padding: 1.5rem;
+			width: 100%;
+			display: block;
+		}
+
 	}
 
 }

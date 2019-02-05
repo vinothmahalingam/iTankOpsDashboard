@@ -7,13 +7,13 @@
 <!--alternate style "nav-table-cell" -->
 <ul class="nav nav-tabs-panel" role="tablist">
 	<li class="nav-item">
-		<a class="nav-link" data-toggle="tab" href="#messages" data-i18n="drpdwn.messages">Messages</a>
+		<a class="nav-link" data-toggle="tab" href="#tab-messages" data-i18n="drpdwn.messages">Messages</a>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link" data-toggle="tab" href="#feeds" data-i18n="drpdwn.feeds">Feeds</a>
+		<a class="nav-link" data-toggle="tab" href="#tab-feeds" data-i18n="drpdwn.feeds">Feeds</a>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link" data-toggle="tab" href="#events" data-i18n="drpdwn.events">Events</a>
+		<a class="nav-link" data-toggle="tab" href="#tab-events" data-i18n="drpdwn.events">Events</a>
 	</li>
 </ul>
 <div class="tab-content tab-notification">
@@ -28,7 +28,7 @@
 			</small>
 		</h5>
 	</div>
-	<div class="tab-pane" id="messages" role="tabpanel">
+	<div class="tab-pane" id="tab-messages" role="tabpanel">
 		<div class="custom-scroll h-100">
 			<ul class="notification">
 				<li class="unread">
@@ -119,11 +119,11 @@
 			</ul>
 		</div>
 	</div>
-	<div class="tab-pane" id="feeds" role="tabpanel">
+	<div class="tab-pane" id="tab-feeds" role="tabpanel">
 		<div class="custom-scroll h-100">
 			<ul class="notification">
 				<li class="unread">
-					<div class="d-flex align-items-center">
+					<div class="d-flex align-items-center show-child-on-hover">
 						<span class="d-flex flex-column flex-1">
 							<span class="name d-flex align-items-center">Administrator <span class="badge badge-success fw-n ml-1">UPDATE</span></span>
 							<span class="msg-a fs-sm">
@@ -131,10 +131,13 @@
 							</span>	
 							<span class="fs-nano text-muted mt-1">5 mins ago</span>
 						</span>
+						<div class="show-on-hover-parent position-absolute pos-right pos-bottom p-3">
+							<a href="#" class="text-muted" title="delete"><i class="fal fa-trash-alt"></i></a>
+						</div>
 					</div>
 				</li>
 				<li>
-					<div class="d-flex align-items-center">
+					<div class="d-flex align-items-center show-child-on-hover">
 						<span class="d-flex flex-column flex-1">
 							<span class="name">
 								Adison Lee <span class="fw-300 d-inline">replied to your video <a href="#" class="fw-400"> Cancer Drug</a> </span>
@@ -142,10 +145,13 @@
 							<span class="msg-a fs-sm mt-2">Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day...</span>	
 							<span class="fs-nano text-muted mt-1">10 minutes ago</span>
 						</span>
+						<div class="show-on-hover-parent position-absolute pos-right pos-bottom p-3">
+							<a href="#" class="text-muted" title="delete"><i class="fal fa-trash-alt"></i></a>
+						</div>
 					</div>
 				</li>
 				<li>
-					<div class="d-flex align-items-center">
+					<div class="d-flex align-items-center show-child-on-hover">
 						<!--<img src="img/avatar-m.png" data-src="img/avatars/avatar-k.png" class="profile-image rounded-circle" alt="k" />-->
 						<span class="d-flex flex-column flex-1">
 							<span class="name">
@@ -162,20 +168,26 @@
 							</span>
 							<span class="fs-nano text-muted mt-1">55 minutes ago</span>
 						</span>
+						<div class="show-on-hover-parent position-absolute pos-right pos-bottom p-3">
+							<a href="#" class="text-muted" title="delete"><i class="fal fa-trash-alt"></i></a>
+						</div>
 					</div>
 				</li>
 				<li>
-					<div class="d-flex align-items-center">
+					<div class="d-flex align-items-center show-child-on-hover">
 						<!--<img src="img/avatar-m.png" data-src="img/avatars/avatar-e.png" class="profile-image-sm rounded-circle align-self-start mt-1" alt="k" />-->
 						<span class="d-flex flex-column flex-1">
 							<span class="name">Dr John Cook <span class="fw-300">sent a <span class="text-danger">new signal</span></span></span>
 							<span class="msg-a fs-sm mt-2">Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</span>
 							<span class="fs-nano text-muted mt-1">10 minutes ago</span>
 						</span>
+						<div class="show-on-hover-parent position-absolute pos-right pos-bottom p-3">
+							<a href="#" class="text-muted" title="delete"><i class="fal fa-trash-alt"></i></a>
+						</div>
 					</div>
 				</li>
 				<li>
-					<div class="d-flex align-items-center">
+					<div class="d-flex align-items-center show-child-on-hover">
 						<!--<img src="img/avatar-m.png" data-src="img/avatars/avatar-h.png" class="profile-image rounded-circle align-self-start mt-1" alt="k" />-->
 						<span class="d-flex flex-column flex-1">
 							<span class="name">Lab Images <span class="fw-300">were updated!</span></span>
@@ -203,10 +215,13 @@
 							</span>
 							<span class="fs-nano text-muted mt-1">55 minutes ago</span>
 						</span>
+						<div class="show-on-hover-parent position-absolute pos-right pos-bottom p-3">
+							<a href="#" class="text-muted" title="delete"><i class="fal fa-trash-alt"></i></a>
+						</div>
 					</div>
 				</li>
 				<li>
-					<div class="d-flex align-items-center">
+					<div class="d-flex align-items-center show-child-on-hover">
 						<!--<img src="img/avatar-m.png" data-src="img/avatars/avatar-h.png" class="profile-image rounded-circle align-self-start mt-1" alt="k" />-->
 						<div class="d-flex flex-column flex-1">
 							<div class="name mb-2">
@@ -225,16 +240,17 @@
 							<div class="progress progress-sm d-flex mt-1">
 								<span class="progress-bar bg-primary-500 progress-bar-striped" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></span>
 							</div>
-			
 							<span class="fs-nano text-muted mt-1">2 hrs ago</span>
-										
+							<div class="show-on-hover-parent position-absolute pos-right pos-bottom p-3">
+								<a href="#" class="text-muted" title="delete"><i class="fal fa-trash-alt"></i></a>
+							</div>
 						</div>
 					</div>
 				</li>
 			</ul>	
 		</div>
 	</div>
-	<div class="tab-pane" id="events" role="tabpanel">
+	<div class="tab-pane" id="tab-events" role="tabpanel">
 		<div class="d-flex flex-column h-100">
 			<div class="h-auto">
 				<table class="table table-bordered table-calendar m-0 w-100 h-100 border-0">

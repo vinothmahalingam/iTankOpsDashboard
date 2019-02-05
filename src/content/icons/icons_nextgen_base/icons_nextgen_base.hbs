@@ -36,11 +36,11 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="iconModal" tabindex="-1" role="dialog" aria-labelledby="iconModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content border-0 shadow-3">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">
+                <h5 class="modal-title" id="iconModalLabel">
                     <strong></strong>
                 </h5>
 
@@ -160,7 +160,7 @@
             //
             jQuery.each(data, function(index, item) {
                 formatedDOMElms.push('<div class="col-4 col-sm-4 col-lg-3 col-xl-3 col-xxl-2 col-xxxl-2 d-flex justify-content-center align-items-center mb-g">\
-                                            <a href="#" class="rounded bg-white p-0 m-0 d-flex flex-column w-100 h-100 shadow-hover-2 js-showcase-icon" data-toggle="modal" data-target="#exampleModal" data-filter-tags=' + item + '>\
+                                            <a href="#" class="rounded bg-white p-0 m-0 d-flex flex-column w-100 h-100 shadow-hover-2 js-showcase-icon" data-toggle="modal" data-target="#iconModal" data-filter-tags=' + item + '>\
                                                 <div class="rounded-top color-fusion-300 w-100 bg-primary-300">\
                                                     <div class="rounded-top d-flex align-items-center justify-content-center w-100 pt-3 pb-3 pr-2 pl-2 fa-6x hover-bg">\
                                                         <i class="'+ item +'"></i>\
@@ -185,10 +185,10 @@
 
                 var iconClass = $(this).find('i').attr('class');
                 
-                    $('#exampleModal .modal-body i').removeClass().addClass(iconClass);
-                    $('#exampleModal .modal-body .js-icon-class').empty().text(iconClass);
+                    $('#iconModal .modal-body i').removeClass().addClass(iconClass);
+                    $('#iconModal .modal-body .js-icon-class').empty().text(iconClass);
                     $('#js-icon-class').val('<i class="' + iconClass + '"></i>')
-                    $('#exampleModalLabel strong').empty().text(iconClass)
+                    $('#iconModalLabel strong').empty().text(iconClass)
                 
             });
 

@@ -31,11 +31,11 @@ pagedescription="Font Awesome 5 Pro Solid"
     <!-- end icon list -->
 
     <!-- modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="iconModal" aria-hidden="true">
+    <div class="modal fade" id="iconModal" tabindex="-1" role="dialog" aria-labelledby="iconModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content border-0 shadow-3">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="iconModal">
+                    <h5 class="modal-title" id="iconModalLabel">
                         <strong></strong>
                     </h5>
 
@@ -157,7 +157,7 @@ pagedescription="Font Awesome 5 Pro Solid"
             /*compile DOM elements*/
             jQuery.each(data, function(index, item) {
                 formatedDOMElms.push('<div class="col-4 col-sm-3 col-lg-2 col-xl-2 col-xxl-2 col-xxxl-1 d-flex justify-content-center align-items-center mb-g">\
-                                            <a href="#" class="rounded bg-white p-0 m-0 d-flex flex-column w-100 h-100 js-showcase-icon shadow-hover-2" data-toggle="modal" data-target="#exampleModal" data-filter-tags=' + item.substring(1) + '>\
+                                            <a href="#" class="rounded bg-white p-0 m-0 d-flex flex-column w-100 h-100 js-showcase-icon shadow-hover-2" data-toggle="modal" data-target="#iconModal" data-filter-tags=' + item.substring(1) + '>\
                                                 <div class="rounded-top color-fusion-300 w-100 bg-primary-300">\
                                                     <div class="rounded-top d-flex align-items-center justify-content-center w-100 pt-3 pb-3 pr-2 pl-2 fa-3x hover-bg">\
                                                         <i class="'+ prefix + ' ' + prefix_extend + item + '"></i>\
@@ -179,10 +179,10 @@ pagedescription="Font Awesome 5 Pro Solid"
             /*client event for each icon*/
             $('.js-showcase-icon').click(function(){
                 var iconClass = $(this).find('i').attr('class');
-                $('#exampleModal .modal-body i').removeClass().addClass(iconClass);
-                $('#exampleModal .modal-body .js-icon-class').empty().text(iconClass);
+                $('#iconModal .modal-body i').removeClass().addClass(iconClass);
+                $('#iconModal .modal-body .js-icon-class').empty().text(iconClass);
                 $('#js-icon-class').val('<i class="' + iconClass + '"></i>')
-                $('#exampleModalLabel strong').empty().text(iconClass);
+                $('#iconModalLabel strong').empty().text(iconClass);
             });
 
             /*copy icon button*/

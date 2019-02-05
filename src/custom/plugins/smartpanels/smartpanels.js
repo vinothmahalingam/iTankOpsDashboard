@@ -282,7 +282,7 @@
             if (self.o.panelColors && self.o.colorButton) {
                 var formatedPanelColors = [];
                 for (var key in self.o.panelColors) {
-                    formatedPanelColors.push('<a href="#" class="btn d-inline-block '+ self.o.panelColors[key] +' width-3 height-3 p-0 rounded-0 js-panel-color hover-effect-dot" data-panel-setstyle="'+ self.o.panelColors[key] +'" style="margin:1px;"></a>');
+                    formatedPanelColors.push('<a href="#" class="btn d-inline-block '+ self.o.panelColors[key] +' width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot" data-panel-setstyle="'+ self.o.panelColors[key] +'" style="margin:1px;"></a>');
                 }
             }
 

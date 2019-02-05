@@ -216,13 +216,44 @@ $contrast: 3% !default;
   transition: all 0.15s ease-in-out, 
 }
 
-.custom-control-label:hover {
-  font-weight: 500;
+.custom-control-label {
+
+  /*&:hover {
+      font-weight: 500;
+  }
+*/
 }
 
-.custom-control-label.bolder:before {
-      border: $fusion-500 solid $custom-control-indicator-border-width;
+.custom-checkbox {
+
+  .custom-control-label {
+
+    &.bolder {
+      &:before {
+         border: $fusion-500 solid $custom-control-indicator-border-width;
+      }
+    }
+
+  }
+
+  &:hover,
+  &:focus {
+    .custom-control-label:not(.bolder) {
+      &:before {
+         border: $primary-500 solid $custom-control-indicator-border-width;
+      }
+    }
+  }
+
 }
+
+
+
+/* BS form hack for checkbox tick mark */
+.custom-checkbox .custom-control-label::after {
+  background-size: $custom-control-indicator-bg-size-checkbox;
+}
+
 
 .custom-control {
   min-height: $custom-control-indicator-size;
@@ -230,6 +261,5 @@ $contrast: 3% !default;
 
 input[type="radio"]:checked + .custom-control-label, 
 input[type="checkbox"]:checked + .custom-control-label {
-  //color: $primary-500;
   font-weight: 500;
 }

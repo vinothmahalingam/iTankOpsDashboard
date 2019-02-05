@@ -6,7 +6,7 @@
 /* width preset */
 .width-0   { width: 0}
 .width-1   { width: 1.5rem }
-.width-2   { width: 2.25rem }
+.width-2   { width: 2rem }
 .width-3   { width: 2.5rem }
 .width-4   { width: 2.75rem }
 .width-5   { width: 3rem }
@@ -23,7 +23,7 @@
 
 .height-0  { height: 0}
 .height-1  { min-height: 1.5rem }
-.height-2  { min-height: 2.25rem }
+.height-2  { min-height: 2rem }
 .height-3  { min-height: 2.5rem }
 .height-4  { min-height: 2.75rem }
 .height-5  { min-height: 3rem }
@@ -114,7 +114,7 @@
 .bg-subtlelight { background-color: lighten($color-primary, 44%) }
 .bg-subtlelight-fade { @include gradient-img($white, lighten($color-primary, 44%))	}
 
-.bg-gray-50  { background-color: #f9f9f9; }
+.bg-gray-50  { background-color: $gray-50; }
 .bg-gray-100 { background-color: $gray-100; }
 .bg-gray-200 { background-color: $gray-200; }
 .bg-gray-300 { background-color: $gray-300; }
@@ -182,6 +182,7 @@
 }
 
 /* hover alpha effect */
+/* example of use could be found inside panel buttons top right */
 .hover-effect-dot {
     position: relative;
     &:before {
@@ -203,6 +204,31 @@
             height: 75%;
             top: 12%;
             left: 12%;
+        }
+    }
+}
+
+/* hover and hide items on show */
+.show-child-on-hover {
+    .show-on-hover-parent {
+       display:none; 
+    }
+
+    &:hover {
+        .show-on-hover-parent {
+            display: flex;
+        }
+    }
+}
+
+.hide-child-on-hover {
+    .hide-on-hover-parent {
+       display:flex; 
+    }
+
+    &:hover {
+        .hide-on-hover-parent {
+            display: none;
         }
     }
 }
@@ -239,4 +265,31 @@ $cursor: (
   .cursor.#{nth($i, 1)} {
     cursor: nth($i, 1) !important; /* had to insert important since bootstrap has some peculiar classes */
   }
+}
+
+/* states */
+.state-selected {
+    background: lighten($info-500, 41%) !important;
+}
+
+
+@media only screen and ( max-width: $mobile-breakpoint-size ){
+
+    /* slide trays */
+
+    .slide-on-mobile {
+        @include translate3d(0,0,0);
+        position: absolute !important;
+        top:0;
+        bottom:0;
+    }
+
+    .slide-on-mobile-left {
+         @include translate3d(-100%,0,0);
+    }
+
+    .slide-on-mobile-right  {
+         @include translate3d(0,0,0);
+    }
+
 }
