@@ -45,6 +45,8 @@ $grid-breakpoints: (
 	}
 }*/
 
+
+
 @media only screen and ( max-width: $mobile-breakpoint-size ){
 
 	//casuing some issues so disabled it.
@@ -70,17 +72,12 @@ $grid-breakpoints: (
 	}
 
 	.page-content-overlay {
+		background: transparent;
+		transition: background 300ms;
 		position: fixed;
-		top: 0;
-		right: 0;
-		height: 100% !important;
-		left: 0;
-		display: none;
-		background: #181C21;
-		opacity: .2;
 		z-index: $depth-nav - 1;
-	}	
-
+	}
+	
 	.page-wrapper {
 		padding-left:0;
 		background: $white;
@@ -88,11 +85,8 @@ $grid-breakpoints: (
 		.page-header {
 			padding:0 $grid-gutter-width-base/2;
 			width:100%;
+			border-bottom: 1px solid rgba($black,0.09);
 
-			background: #f1f1f1;
-			border-bottom: 1px solid #e5e5e5;
-
-	
 			[data-toggle="dropdown"] + .dropdown-menu {
 				right: 1.5rem;
 			}
@@ -176,7 +170,7 @@ $grid-breakpoints: (
 		}
 
 		.page-footer {
-			border-top: 1px solid rgba(0,0,0,0.02);
+			border-top: 1px solid rgba($black,0.09);
 		}
 
 	}
@@ -288,7 +282,11 @@ $grid-breakpoints: (
 		}*/
 
 		.page-content-overlay {
-			display: block;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: rgba($black,0.09);
 		}		
 		
 		&:not(.nav-mobile-push) {
@@ -354,7 +352,10 @@ $grid-breakpoints: (
 
 				.page-content-overlay {
 					background: transparent !important;
-					display: block;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
 					left: $nav-width;
 				}
 
@@ -379,7 +380,10 @@ $grid-breakpoints: (
 
 				.page-content-overlay {
 					background: transparent;
-					display: block;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
 				}
 
 			}

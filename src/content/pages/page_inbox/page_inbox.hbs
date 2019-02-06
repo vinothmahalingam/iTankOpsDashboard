@@ -12,59 +12,84 @@ preemptiveclass="nav-function-minify layout-composed"
 {{#*inline "content-block"}}
 
 <div class="d-flex flex-grow-1 p-0">
-	<!-- left menu -->
-	<div class="flex-wrap flex-grow-1 position-relative bg-white slide-on-mobile slide-on-mobile-left" style="width: 16rem;">
+
+	<!-- left slider -->
+	<div id="js-inbox-menu" class="flex-wrap flex-grow-1 position-relative bg-white slide-on-mobile slide-on-mobile-left">
 		<div class="position-absolute pos-top pos-bottom w-100">
-			<div class="d-flex h-100 flex-column px-3 px-lg-5">
-				<div class="py-4 align-items-center">
-					<button type="button" class="btn btn-danger btn-block fs-md">Compose</button>
+			<div class="d-flex h-100 flex-column">
+				<div class="px-3 px-sm-4 px-lg-5 py-4 align-items-center">
+
+					<div class="btn-group btn-block" role="group" aria-label="Button group with nested dropdown ">
+						<button type="button" class="btn btn-danger btn-block fs-md">Compose</button>
+						<div class="btn-group" role="group">
+							<button id="btnGroupDrop1" type="button" class="btn btn-danger dropdown-toggle px-2 bg-danger-700 js-waves-off" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+							<div class="dropdown-menu p-0" aria-labelledby="btnGroupDrop1">
+								<a class="dropdown-item" href="#">Work group A</a>
+								<a class="dropdown-item" href="#">New page</a>
+								<a class="dropdown-item" href="#">Edit signature</a>
+								<div class="dropdown-divider m-0"></div>
+								<a class="dropdown-item" href="#"> <i class="fas fa-plus width-1"></i> Add more</a>
+							</div>
+						</div>
+					</div>
+
 				</div>
-				<a href="javascript:void(0)" class="d-flex py-2 fs-md justify-content-between align-items-center text-dark font-weight-bold">
-					<div>
-						<i class="fas fa-folder-open width-1"></i>Inbox
-					</div>
-					<div class="fw-400 fs-xs js-unread-emails-count"></div>
-				</a>
-				<a href="javascript:void(0)" class="d-flex py-2 fs-md justify-content-between align-items-center text-dark">
-					<div>
-						<i class="fas fa-star width-1"></i>Starred
-					</div>
-					<div class="fw-400 fs-xs">(6)</div>
-				</a>
-				<a href="javascript:void(0)" class="d-flex py-2 fs-md justify-content-between align-items-center text-dark">
-					<div>
-						<i class="fas fa-edit width-1"></i>Draft
-					</div>
-					<div class="fw-400 fs-xs">(5)</div>
-				</a>
-				<a href="javascript:void(0)" class="d-flex py-2 fs-md justify-content-between align-items-center text-dark">
-					<div>
-						<i class="fas fa-paper-plane width-1"></i>Sent
-					</div>
-				</a>
-				<a href="javascript:void(0)" class="d-flex py-2 fs-md justify-content-between align-items-center text-dark font-weight-bold">
-					<div>
-						<i class="fas fa-exclamation-triangle width-1"></i>Spam
-					</div>
-				</a>
-				<a href="javascript:void(0)" class="d-flex py-2 fs-md justify-content-between align-items-center text-dark font-weight-bold">
-					<div>
-						<i class="fas fa-trash-alt width-1"></i>Trash
-					</div>
-				</a>
+
+				<div class="pr-3">
+
+					<a href="javascript:void(0)" class="dropdown-item px-3 px-sm-4 pr-lg-3 pl-lg-5 py-lg-2 fs-md font-weight-bold d-flex justify-content-between rounded-pill border-top-left-radius-0 border-bottom-left-radius-0">
+						<div>
+							<i class="fas fa-folder-open width-1"></i>Inbox
+						</div>
+						<div class="fw-400 fs-xs js-unread-emails-count"></div>
+					</a>
+					<a href="javascript:void(0)" class="dropdown-item px-3 px-sm-4 pr-lg-3 pl-lg-5 py-lg-2 fs-md d-flex justify-content-between rounded-pill border-top-left-radius-0 border-bottom-left-radius-0">
+						<div>
+							<i class="fas fa-star width-1"></i>Starred
+						</div>
+						<div class="fw-400 fs-xs">(6)</div>
+					</a>
+					<a href="javascript:void(0)" class="dropdown-item px-3 px-sm-4 pr-lg-3 pl-lg-5 py-lg-2 fs-md d-flex justify-content-between rounded-pill border-top-left-radius-0 border-bottom-left-radius-0">
+						<div>
+							<i class="fas fa-edit width-1"></i>Draft
+						</div>
+						<div class="fw-400 fs-xs">(5)</div>
+					</a>
+					<a href="javascript:void(0)" class="dropdown-item px-3 px-sm-4 pr-lg-3 pl-lg-5 py-lg-2 fs-md d-flex justify-content-between rounded-pill border-top-left-radius-0 border-bottom-left-radius-0">
+						<div>
+							<i class="fas fa-paper-plane width-1"></i>Sent
+						</div>
+					</a>
+					<a href="javascript:void(0)" class="dropdown-item px-3 px-sm-4 pr-lg-3 pl-lg-5 py-lg-2 fs-md d-flex justify-content-between rounded-pill border-top-left-radius-0 border-bottom-left-radius-0">
+						<div>
+							<i class="fas fa-exclamation-triangle width-1"></i>Spam
+						</div>
+					</a>
+					<a href="javascript:void(0)" class="dropdown-item px-3 px-sm-4 pr-lg-3 pl-lg-5 py-lg-2 fs-md font-weight-bold d-flex justify-content-between rounded-pill border-top-left-radius-0 border-bottom-left-radius-0">
+						<div>
+							<i class="fas fa-trash-alt width-1"></i>Trash
+						</div>
+					</a>
+
+				</div>
+
 			</div>
 		</div>
 	</div>
-	<!-- end left menu -->
+	<div class="slide-backdrop" data-action="toggle" data-class="slide-on-mobile-left-show" data-target="#js-inbox-menu"></div>
+	<!-- end left slider -->
+
 	<!-- inbox container -->
 	<div class="d-flex flex-column w-100 flex-grow-1 bg-white">
 		<!-- inbox header -->
 		<div class="flex-grow-0">
 			<!-- inbox title -->
 			<div class="d-flex align-items-center pl-2 pr-3 py-3 pl-sm-3 pr-sm-4 py-sm-4 px-lg-5 py-lg-4  border-faded border-top-0 border-left-0 border-right-0">
-				<a href="javascript:void(0);" class="pl-3 pr-3 py-2 d-flex d-lg-none align-items-center justify-content-center mr-2 btn">
+				<!-- button for mobile -->
+				<a href="javascript:void(0);" class="pl-3 pr-3 py-2 d-flex d-lg-none align-items-center justify-content-center mr-2 btn" data-action="toggle" data-class="slide-on-mobile-left-show" data-target="#js-inbox-menu">
 				<i class="fal fa-ellipsis-v h1 mb-0 "></i>
 				</a>
+				<!-- end button for mobile -->
 				<h1 class="m-0 fw-500 flex-1">
 					<i class="fas fa-folder-open mr-2 hidden-lg-down"></i> 
 					Inbox

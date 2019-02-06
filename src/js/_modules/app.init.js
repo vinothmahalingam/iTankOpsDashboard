@@ -655,7 +655,7 @@ var initApp = (function(app) {
 		if( typeof($.fn.tooltip) !== 'undefined' && myapp_config.thisDevice === 'desktop' && $('[data-toggle="tooltip"]').length ){
 			$('[data-toggle="tooltip"]').tooltip();
 		} else {
-			console.log("ERROR! bs.tooltip is not loaded");
+			console.log("OOPS! bs.tooltip is not loaded");
 		}
 
 		/**
@@ -664,7 +664,7 @@ var initApp = (function(app) {
 		if( typeof($.fn.popover) !== 'undefined' && $('[data-toggle="popover"]').length ){
 			$('[data-toggle="popover"]').popover();
 		} else {
-			console.log("ERROR! bs.popover is not loaded");
+			console.log("OOPS! bs.popover is not loaded");
 		}
 
 		/* 
@@ -673,7 +673,7 @@ var initApp = (function(app) {
 		if( typeof($.fn.dropdown) !== 'undefined'){ 
 			Popper.Defaults.modifiers.computeStyle.gpuAcceleration = false;
 		} else {
-			console.log("bs.popover is not loaded");
+			console.log("OOPS! bs.popover is not loaded");
 		} 
 
 		/**
@@ -814,6 +814,7 @@ var initApp = (function(app) {
 
 					/**
 					 * panel 'collapse' trigger
+					 * ARE WE USING THIS ANYMORE? SORRY FOR CAPS!
 					 **/
 					case ( actiontype === 'panel-collapse' ):
 
@@ -833,10 +834,7 @@ var initApp = (function(app) {
 								console.log( "panel id:" + selectedPanel.attr('id') + " | action: collapsed" );
 
 						});
-
-						
-						
-
+				
 						/* return ID of panel */
 						//return selectedPanel.attr('id');
 
@@ -1027,22 +1025,6 @@ var initApp = (function(app) {
 				e.stopPropagation(); 
 				e.preventDefault();		
 		}); 
-
-
-		/**
-		 * Mobile menu action for screen tap or click to close menu (-)
-		 **/
-
-		$(document)
-			.on('touchend mousedown', '.mobile-nav-on' + ' ' + myapp_config.mobileOverlayTrigger, function(e) {
-				myapp_config.root_.removeClass('mobile-nav-on');
-
-				if (myapp_config.debugState)
-					console.log(JSON.stringify(myapp_config.mobileOverlayTrigger) + " : was clicked to close mobile menu");
-
-				/* stops default action */
-				e.preventDefault();
-		});
 
 		/**
 		 * Windows mobile 8 fix ~

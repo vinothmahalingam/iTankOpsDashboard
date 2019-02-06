@@ -39,11 +39,6 @@ var myapp_config = {
     mobileMenuTrigger: null, // used by pagescrolling and appHeight script, do not change!
     mobileResolutionTrigger: 992, //the resolution when the mobile activation fires
     /*
-      The overlay mesh that appears on top of content 
-      Description: users can touch the mesh to close the menu 
-    */
-    mobileOverlayTrigger: '.page-content-overlay',
-    /*
       DETECT IF WEBKIT
       Description: this variable is used to fire the custom scroll plugin. 
       If it is a non-webkit it will fire the plugin.
