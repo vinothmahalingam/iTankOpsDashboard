@@ -22,16 +22,16 @@
 .width-xl  { min-width: 20rem;}
 
 .height-0  { height: 0}
-.height-1  { min-height: 1.5rem }
-.height-2  { min-height: 2rem }
-.height-3  { min-height: 2.5rem }
-.height-4  { min-height: 2.75rem }
-.height-5  { min-height: 3rem }
-.height-6  { min-height: 3.25rem }
-.height-7  { min-height: 3.5rem }
-.height-8  { min-height: 3.75rem }
-.height-9  { min-height: 4rem }
-.height-10 { min-height: 4.25rem }
+.height-1  { height: 1.5rem }
+.height-2  { height: 2rem }
+.height-3  { height: 2.5rem }
+.height-4  { height: 2.75rem; }
+.height-5  { height: 3rem }
+.height-6  { height: 3.25rem }
+.height-7  { height: 3.5rem }
+.height-8  { height: 3.75rem }
+.height-9  { height: 4rem }
+.height-10 { height: 4.25rem }
 
 .height-xs  { min-height: 5rem;}
 .height-sm  { min-height: 10rem;}
@@ -282,9 +282,11 @@ $cursor: (
      width: $slider-width;
 }
 
+/* responsive helpers */
+
 @media only screen and ( max-width: $mobile-breakpoint-size ){
 
-    /* slide trays */
+    /* SLIDE TRAYS */
     .slide-on-mobile {
         @include translate3d(0,0,0);
         z-index: $cloud;
@@ -320,6 +322,7 @@ $cursor: (
         @include translate3d(calc(100vw - #{$slider-width}), 0, 0);
     }
 
+    /* place the backdrop right after these classes */
     .slide-on-mobile-right-show,
     .slide-on-mobile-left-show {
         & + .slide-backdrop {
@@ -331,6 +334,24 @@ $cursor: (
             bottom: 0;
             top: 0;
         }
+    }
+
+    /* positions on mobile view */
+    .position-on-mobile-absolute {
+        position: absolute !important;
+    }
+    .position-on-mobile-relative {
+        position: relative !important;
+    }
+    .position-on-mobile-static {
+        position: static !important;
+    }
+
+    /* RESET HEIGHTS */
+    .height-mobile-reset {
+        height: auto;
+        min-height: auto;
+        max-height: auto;
     }
 
 }

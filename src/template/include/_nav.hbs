@@ -632,7 +632,7 @@
 			</li>							
 		</ul>	
 	</li>
-	<li {{#is pagename "in" "page_blank,page_search,page_error,page_error_404,page_inbox"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "page_blank,page_search,page_error,page_error_404,page_inbox,page_inbox_write,page_inbox_read"}}class="active open"{{/is}}>
 		<a href="#" title="Pages" data-filter-tags="page layouts"> 
 			<i class="fal fa-plus-circle"></i>
 			<span class="nav-link-text" data-i18n="nav.page">Page Layouts</span> 
@@ -697,10 +697,27 @@
 					<span class="nav-link-text" data-i18n="nav.page_search">Search Results</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "page_inbox"}}class="active"{{/is}}>
-				<a href="page_inbox.html" data-filter-tags="page layouts inbox"> 
-					<span class="nav-link-text" data-i18n="nav.page_inbox">Inbox</span>
+			<li {{#is pagename "in" "page_inbox,page_inbox_write,page_inbox_read"}}class="active open"{{/is}}>
+				<a href="#" title="Inbox Layouts" data-filter-tags="page layouts inbox read write compose view"> 
+					<span class="nav-link-text" data-i18n="nav.page_error_eg">Inbox Layouts</span>
 				</a>
+				<ul>
+					<li {{#is pagename "===" "page_inbox"}}class="active"{{/is}}>
+						<a href="page_inbox.html" data-filter-tags="page layouts inbox general view"> 
+							<span class="nav-link-text" data-i18n="nav.page_inbox">General</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "page_inbox_read"}}class="active"{{/is}}>
+						<a href="page_inbox_read.html" data-filter-tags="page layouts inbox read email view"> 
+							<span class="nav-link-text" data-i18n="nav.page_inbox_read">Read</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "page_inbox_write"}}class="active"{{/is}}>
+						<a href="page_inbox_write.html" data-filter-tags="page layouts inbox reply email view compose new"> 
+							<span class="nav-link-text" data-i18n="nav.page_inbox_write">Write</span>
+						</a>
+					</li>
+				</ul>
 			</li>
 			<li {{#is pagename "===" "n"}}class="active"{{/is}}>
 				<a href="blank.html" data-filter-tags="---"> 

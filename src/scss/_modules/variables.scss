@@ -332,14 +332,27 @@ $table-dark-accent-bg:              rgba($white, .05);
 $table-dark-hover-bg:               $color-primary;
 
 /* tooltip */
-$tooltip-color:                     #333;
-$tooltip-bg:                        #f3f3f3;
+/*$tooltip-color:                     $white;
+$tooltip-bg:                        rgba($black, 0.8);
 $tooltip-arrow-color:               $tooltip-bg;
 $tooltip-opacity:                   1;
 $tooltip-padding-x:                 0.5rem; 
-$tooltip-padding-y:                 2px;
-$tooltip-arrow-width:               5px;
-$tooltip-arrow-height:              5px;
+$tooltip-padding-y:                 3px;
+$tooltip-arrow-width:               0px;
+$tooltip-arrow-height:              0px;
+*/
+
+$tooltip-max-width:                 200px;
+$tooltip-color:                     $white;
+$tooltip-bg:                        rgba($fusion-700, 0.9);
+$tooltip-border-radius:             5px;
+$tooltip-opacity:                   1;
+$tooltip-padding-y:                 .3rem;
+$tooltip-padding-x:                 .6rem;
+$tooltip-margin:                    8px;
+
+$tooltip-arrow-width:               0;
+$tooltip-arrow-height:              0;
 
 /* dropdowns */
 $dropdown-border-width:             $theme-border-utility-size; 
@@ -452,7 +465,7 @@ $mobile-page-font:						      'HelveticaNeue-Light','Helvetica Neue Light','Helv
 
 /*  ANIMATIONS
 ========================================================================== */
-$nav-hide-animate: 						      transform 470ms cubic-bezier(0.34, 1.25, 0.3, 1) !default;		/* this addresses all animation related to nav hide to nav minify */
+$nav-hide-animate: 						      all 470ms cubic-bezier(0.34, 1.25, 0.3, 1) !default;		/* this addresses all animation related to nav hide to nav minify */
 
 /*  Z-INDEX declearation
 ========================================================================== */
@@ -715,4 +728,4 @@ $footer-zindex:										$cloud - 20 !default;
 /*   GLOBALS
 ========================================================================== */
 $mod-main-boxed-width:            map-get($grid-breakpoints, xxl);
-$slider-width:                    16rem;
+$slider-width:                    15rem;

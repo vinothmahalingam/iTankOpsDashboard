@@ -215,17 +215,43 @@
 
 /* btn icon */
 .btn-icon {
-	width: calc(2.5rem + 2px);
-    padding: 0;
-    line-height: 2.5rem;
+	width: calc(2.1rem + 2px);
+	padding: 0;
+	line-height: 2.1rem;
+
+	&:hover {
+		background-color: rgba($black,0.05);
+		border-color: transparent;
+	}
 
     &:not(.active):not(:active):not(:hover):not(:focus) {
-		border-color: transparent !important;
 		background: transparent;
 		color: $fusion-600;
 	}
 
 	&:focus {
-		border-color: rgba($fusion-500, 0.4) !important;
+		border-color: rgba($fusion-500, 0.1) !important;
 	}
+}
+
+.btn-icon-sm {
+	width: calc(1.8rem + 2px);
+	line-height: 1.8rem;
+}
+
+
+.btn-icon-light {
+
+	color: rgba($white, 0.7);
+	border-color: transparent;
+
+	&:not(.active):not(:active):not(:hover):not(:focus) {
+		color: rgba($white, 0.7);
+	}
+
+	&:hover {
+		color: $white;
+		background-color: rgba($white,0.2);
+		
+	}	
 }
