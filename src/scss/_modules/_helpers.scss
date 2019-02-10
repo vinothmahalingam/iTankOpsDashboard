@@ -243,7 +243,9 @@
 .z-index-ground {z-index: $ground}
 .z-index-water {z-index: $water}
 
-/* cursor */
+/* cursor 
+    usage: cursor-default;
+*/
 $cursor: (
     auto,
     crosshair,
@@ -266,7 +268,7 @@ $cursor: (
 );
 
 @each $i in $cursor {
-  .cursor.#{nth($i, 1)} {
+  .cursor-#{nth($i, 1)} {
     cursor: nth($i, 1) !important; /* had to insert important since bootstrap has some peculiar classes */
   }
 }
@@ -348,10 +350,19 @@ $cursor: (
     }
 
     /* RESET HEIGHTS */
-    .height-mobile-reset {
+    .height-mobile-auto {
         height: auto;
         min-height: auto;
         max-height: auto;
+    }
+
+    /* FULL HEIGHT ON MOBILE */
+    .expand-full-height-on-mobile {
+        height: calc(100vh - #{$header-height}) !important;
+    }
+    .expand-full-width-on-mobile {
+        width: 100vw !important;
+        max-width: 100vw !important;
     }
 
 }

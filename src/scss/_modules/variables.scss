@@ -331,17 +331,6 @@ $table-dark-border-color:           $fusion-400;
 $table-dark-accent-bg:              rgba($white, .05);
 $table-dark-hover-bg:               $color-primary;
 
-/* tooltip */
-/*$tooltip-color:                     $white;
-$tooltip-bg:                        rgba($black, 0.8);
-$tooltip-arrow-color:               $tooltip-bg;
-$tooltip-opacity:                   1;
-$tooltip-padding-x:                 0.5rem; 
-$tooltip-padding-y:                 3px;
-$tooltip-arrow-width:               0px;
-$tooltip-arrow-height:              0px;
-*/
-
 $tooltip-max-width:                 200px;
 $tooltip-color:                     $white;
 $tooltip-bg:                        rgba($fusion-700, 0.9);
@@ -349,7 +338,7 @@ $tooltip-border-radius:             5px;
 $tooltip-opacity:                   1;
 $tooltip-padding-y:                 .3rem;
 $tooltip-padding-x:                 .6rem;
-$tooltip-margin:                    8px;
+$tooltip-margin:                    12px;
 
 $tooltip-arrow-width:               0;
 $tooltip-arrow-height:              0;
@@ -657,7 +646,7 @@ $nav-top-height:									3.5rem !default;
 /* nav Info Card (appears below the logo) */
 $nav-infocard-height:							9.530rem !default;
 $profile-image-width:							3.125rem !default; 
-$profile-image-width-md:          2.1875rem !default;
+$profile-image-width-md:          2rem !default;
 $profile-image-width-sm:          1.5625rem !default;
 $image-share-height:              2.8125rem !default; /* width is auto */
 

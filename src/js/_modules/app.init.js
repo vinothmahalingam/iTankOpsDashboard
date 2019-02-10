@@ -814,7 +814,6 @@ var initApp = (function(app) {
 
 					/**
 					 * panel 'collapse' trigger
-					 * ARE WE USING THIS ANYMORE? SORRY FOR CAPS!
 					 **/
 					case ( actiontype === 'panel-collapse' ):
 
