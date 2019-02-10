@@ -1,17 +1,16 @@
 <!-- BEGIN msgr-list -->
-<div class="msgr-list d-flex flex-column bg-faded">
-	<div class="msgr-option-container">
-		<div class="msgr-list-item msgr-search">
-			<i class="fal fa-search msgr-list-icon"></i>
+<div class="msgr-list d-flex flex-column bg-faded border-faded border-top-0 border-right-0 border-bottom-0 position-absolute pos-top pos-bottom">
+	<div>
+		<div class="height-4 h3 m-0 d-flex justify-content-center flex-column color-primary pl-3 mt-2">
+			<i class="fal fa-search"></i>
 		</div>
-		<input type="text" class="form-control" id="msgr_listfilter_input" placeholder="Filter friends" aria-label="FriendSearch" data-listfilter="#js_msgr_listfilter">
+		<input type="text" class="form-control" id="msgr_listfilter_input" placeholder="Filter friends" aria-label="FriendSearch" data-listfilter="#js-msgr-listfilter">
 	</div>
-	<div class="msgr-option-container flex-1 h-100 custom-scroll">
+	<div class="flex-1 h-100 custom-scroll">
 		<div class="w-100">
-
-			<ul id="js_msgr_listfilter" class="list-unstyled m-0">
+			<ul id="js-msgr-listfilter" class="list-unstyled m-0">
 				<li>
-					<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-dark hover-white" data-filter-tags="miles k. miller online">
+					<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-dark hover-white" data-filter-tags="tracey chang online">
 						<div class="d-table-cell align-middle status status-success status-sm ">
 							<img src="img/avatar-m.png" data-src="img/avatars/avatar-d.png" class="profile-image-md rounded-circle" alt="aa">
 						</div>
@@ -41,9 +40,9 @@
 					</a>
 				</li>
 				<li>
-					<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-dark hover-white" data-filter-tags="dr. john cook phd away">
+					<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-dark hover-white" data-filter-tags="dr john cook phd away">
 						<div class="d-table-cell align-middle status status-warning status-sm ">
-							<img src="img/avatar-m.png" data-src="img/avatars/avatar-e.png" class="profile-image-md rounded-circle" alt="aa">
+							<img src="img/avatar-m.png" data-src="img/avatars/avatar-e.png" class="profile-image-md rounded-circle" alt="Dr. John Cook PhD">
 						</div>
 						<div class="d-table-cell w-100 align-middle pl-2 pr-2">
 							<div class="text-truncate text-truncate-md">
@@ -58,7 +57,7 @@
 				<li>
 					<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-dark hover-white" data-filter-tags="ali amdaney online">
 						<div class="d-table-cell align-middle status status-success status-sm ">
-							<img src="img/avatar-m.png" data-src="img/avatars/avatar-g.png" class="profile-image-md rounded-circle" alt="aa">
+							<img src="img/avatar-m.png" data-src="img/avatars/avatar-g.png" class="profile-image-md rounded-circle" alt="Ali Amdaney">
 						</div>
 						<div class="d-table-cell w-100 align-middle pl-2 pr-2">
 							<div class="text-truncate text-truncate-md">
@@ -71,9 +70,9 @@
 					</a>
 				</li>
 				<li>
-					<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-dark hover-white" data-filter-tags="ali amdaney online">
+					<a href="#" class="d-table w-100 p-2 pl-2 pr-2 pb-1 pt-1 text-dark hover-white" data-filter-tags="sarah mcbrook online">
 						<div class="d-table-cell align-middle status status-success status-sm">
-							<img src="img/avatar-m.png" data-src="img/avatars/avatar-h.png" class="profile-image-md rounded-circle" alt="aa">
+							<img src="img/avatar-m.png" data-src="img/avatars/avatar-h.png" class="profile-image-md rounded-circle" alt="Sarah McBrook">
 						</div>
 						<div class="d-table-cell w-100 align-middle pl-2 pr-2">
 							<div class="text-truncate text-truncate-md">
@@ -149,9 +148,9 @@
 			<div class="filter-message js-filter-message"></div>
 		</div>
 	</div>
-	<div class="msgr-option-container">
-		<a class="msgr-list-item" data-toggle="tab" href="#test--2" aria-expanded="false">
-			<i class="fa fa-gear msgr-list-icon"></i>
+	<div>
+		<a class="fs-xl d-flex align-items-center p-3" data-toggle="tab" href="#test--2" aria-expanded="false">
+			<i class="fal fa-cogs"></i>
 		</a>
 	</div>
 </div>
@@ -159,15 +158,6 @@
 
 <!-- BEGIN msgr -->
 <div class="msgr d-flex h-100 flex-column">
-
-	<!-- BEGIN msgr-user 
-	<div class="msgr-user d-flex align-items-center justify-content-center mr-3 ml-3 position-relative shadow-bottom">
-		<div class="info-card-text text-center">
-			<span class="d-line-block text-truncate text-truncate-sm text-muted">IT Director</span>
-			<div class="text-truncate text-truncate-sm">Ching S. Chan <i class="ni ni-chevron-down hidden-xs-down"></i></div>
-		</div>
-	</div>-->
-	<!-- END msgr-user -->
 
 	<!-- BEGIN custom-scroll -->
 	<div class="custom-scroll flex-1 h-100">
@@ -196,7 +186,7 @@
 			<!--  end .chat-segment -->
 			
 			<!-- start .chat-segment -->
-			<div class="chat-segment chat-segment-rcvd">
+			<div class="chat-segment chat-segment-get">
 				<img src="img/avatar-m.png" data-src="img/avatars/avatar-d.png" class="profile-image-sm rounded-circle chat-img" alt="Ching Chan">
 				<div class="chat-message">
 					<p>
@@ -239,7 +229,7 @@
 			<!--  end .chat-segment -->
 
 			<!-- start .chat-segment -->
-			<div class="chat-segment chat-segment-rcvd chat-start">
+			<div class="chat-segment chat-segment-get chat-start">
 				<img src="img/avatar-m.png" data-src="img/avatars/avatar-d.png" class="profile-image-sm rounded-circle chat-img" alt="Ching Chan">	
 				<div class="chat-message">
 					<p>
@@ -250,7 +240,7 @@
 			<!--  end .chat-segment -->
 
 			<!-- start .chat-segment -->
-			<div class="chat-segment chat-segment-rcvd">
+			<div class="chat-segment chat-segment-get">
 				<img src="img/avatar-m.png" data-src="img/avatars/avatar-d.png" class="profile-image-sm rounded-circle chat-img" alt="Ching Chan">
 				<div class="chat-message">
 					<p>
@@ -261,7 +251,7 @@
 			<!--  end .chat-segment -->
 
 			<!-- start .chat-segment -->
-			<div class="chat-segment chat-segment-rcvd chat-end">
+			<div class="chat-segment chat-segment-get chat-end">
 				<img src="img/avatar-m.png" data-src="img/avatars/avatar-d.png" class="profile-image-sm rounded-circle chat-img" alt="Ching Chan">
 				<div class="chat-message">
 					<p>
@@ -285,35 +275,28 @@
 	<!-- END custom-scroll  -->
 
 	<!-- BEGIN msgr__chatinput -->
-	<div class="msgr-chatinput d-flex flex-column">
-		<div class="msgr-chatinput-container flex-1 mr-3 ml-3 position-relative shadow-top">
+	<div class="d-flex flex-column">
+		<div class="border-faded border-right-0 border-bottom-0 border-left-0 flex-1 mr-3 ml-3 position-relative shadow-top">
 			<div class="pt-3 pb-1 pr-0 pl-0 rounded-0" tabindex="-1">
-				<div id="msgr_input" contenteditable="true" data-placeholder="Type your message here..."></div>
+				<div id="msgr_input" contenteditable="true" data-placeholder="Type your message here..." class="height-10"></div>
 			</div>
 		</div>
-		<div class="msgr-chatinput-icons d-flex align-items-center ml-2 mr-2">
-			<div class="ml-1 p-1 h-100 d-flex align-items-center justify-content-center fs-xl text-secondary">
-				<label for="attach_picture" title="upload a picture" class="m-0">
-					<i class="fal fa-images"></i>
-				</label>
-				<input id="attach_picture" class="d-none" type="file">	
-			</div>
-			<a href="#" class="ml-1 p-1 h-100 d-flex align-items-center justify-content-center fs-xl text-secondary" title="add emoji">
-				<i class="fal fa-smile"></i>
+
+		<div class="height-8 px-3 d-flex flex-row align-items-center flex-wrap flex-shrink-0">
+			<a href="javascript:void(0);" class="btn btn-icon btn-icon-sm fs-xl width-1 mr-1" data-toggle="tooltip" data-original-title="More options" data-placement="top">
+				<i class="fal fa-ellipsis-v-alt color-fusion-300"></i>
 			</a>
-			<div class="ml-1 p-1 h-100 d-flex align-items-center justify-content-center fs-xl text-secondary">
-				<label for="attach_file" title="attach a file" class="m-0">
-					<i class="fal fa-paperclip"></i>
-				</label>
-				<input id="attach_file" class="d-none" type="file">	
-			</div>
-			<a href="#" class="ml-1 p-1 h-100 d-flex align-items-center justify-content-center fs-xl text-secondary" title="take a picture with webcam">
-				<i class="fal fa-camera"></i>
+			<a href="javascript:void(0);" class="btn btn-icon btn-icon-sm fs-xl mr-1" data-toggle="tooltip" data-original-title="Attach files" data-placement="top">
+				<i class="fal fa-paperclip color-fusion-300"></i>
 			</a>
-			<a href="#" class="ml-1 p-1 h-100 d-flex align-items-center justify-content-center fs-xl text-secondary" title="Thumbs up">
-				<i class="fal fa-thumbs-up"></i>
-			</a>	
+			<a href="javascript:void(0);" class="btn btn-icon btn-icon-sm fs-xl mr-1" data-toggle="tooltip" data-original-title="Insert photo" data-placement="top">
+				<i class="fal fa-camera color-fusion-300"></i>
+			</a>
+			<div class="ml-auto">
+				<a href="javascript:void(0);" class="btn btn-info">Send</a>
+			</div>
 		</div>
+
 	</div>
 	<!-- END msgr__chatinput -->
 

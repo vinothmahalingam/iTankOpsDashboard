@@ -1,5 +1,5 @@
 #msgr_listfilter_input {
-	width: unquote("calc(100% - #{$p-3})");
+	width: calc(100% - #{$p-3});
 	margin: 0 auto;
 	margin-top: -41px;
 	padding-left: 41px;
@@ -12,12 +12,7 @@
 
 .msgr-list {
 	width: $msgr-list-width;
-    position: absolute;
     right: $msgr-list-width-collapsed - $msgr-list-width;
-    top: 0;
-    bottom: 0;
-
-    border-left: 1px dashed rgba(0,0,0,0.1);
     z-index: 101;
 
     @extend %general-animation;
@@ -25,7 +20,7 @@
 
 	& + .msgr {
 
-		width: unquote("calc(100% - #{$msgr-list-width-collapsed})");
+		width: calc(100% - #{$msgr-list-width-collapsed});
 		height: 100%;
 
 		&:before {
@@ -62,32 +57,7 @@
     }
 }
 
-.msgr-list-item {
-	font-size: 21px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	height: 50px; 
-
-	color: $primary-500;
-}
-
-.msgr-list-icon {
-	width: $msgr-list-width-collapsed;
-	text-align: center;
-}
-
-.msgr-user {
-	height: 75px;
-	border-bottom: 1px solid rgba($black,0.07);
-}	
-
-.msgr-user-name {
-	font-size: 15px;
-	margin: 0;
-}
-
-.msgr-chatinput {
+/*.msgr-chatinput {
 
 	min-height: 110px;
 	max-height: 160px;
@@ -97,29 +67,29 @@
 		max-height:110px;
 	}
 
-}
+}*/
 
-.msgr-chatinput-icons {
+/*.msgr-chatinput-icons {
 	height: 40px;
-}
+}*/
 
-.msgr-chatinput-container {
+/*.msgr-chatinput-container {
 	> div {
 		border-top: 1px solid rgba($black,0.07);
 	}
-}
+}*/
 
 
 /* IE HACK */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+/*@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 	[contenteditable="true"] {
-		height: 50px;
+		height: 110px;
 	}
-}
+}*/
 
 .chat-message {
 	padding: 0.75rem 1rem;
-	border-radius: 10px;
+	border-radius: 0.625rem;
 
 	position: relative;
 
@@ -128,17 +98,11 @@
 	> p {
 		padding: $p-2 + $p-1 0 0;
 		margin:0;
-		font-size: 0.875rem;
-		line-height: 1.5;
 	}
 
 	> p:first-child {
 		padding-top: 0;
 	}
-}
-
-.chat-message-image-send {
-	border-radius: 0 0 $border-radius * 2 $border-radius * 2;
 }
 
 .chat-start {
@@ -162,7 +126,7 @@
 	}
 }
 
-.chat-segment-rcvd {
+.chat-segment-get {
 
 	text-align: left;
 	position: relative;

@@ -135,7 +135,7 @@ $grid-breakpoints: (
 			padding: map-get($grid-gutter-widths, lg) $grid-gutter-width-base/2;
 			color: #222;
 			font-size: $fs-base + 1;
-			line-height: 1.58;
+			//line-height: 1.58; /* this is messing up custom forms like checkboxes */
 
 			min-height: calc(100vh - #{$header-height + $footer-height});
 

@@ -86,7 +86,7 @@
 			display: none;
 		}
 
-		[data-action="panel-fullscreen"],
+		[data-action="panel-fullscreen"]:not(.btn-icon),
 		.js-panel-fullscreen {
 			width:$panel-hdr-height/2;
 			height:$panel-hdr-height/2;
