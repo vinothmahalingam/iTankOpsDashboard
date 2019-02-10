@@ -1,8 +1,4 @@
 /* text area */
-textarea {
-
-}
-
 [contenteditable="true"] {
 	overflow:auto;
 	-webkit-user-modify: read-write-plaintext-only;
@@ -36,7 +32,6 @@ textarea {
 
 .form-label {
   font-weight: 500;
-  //color: lighten($gray-700, 20%);
 }
 
 
@@ -216,14 +211,6 @@ $contrast: 3% !default;
   transition: all 0.15s ease-in-out, 
 }
 
-.custom-control-label {
-
-  /*&:hover {
-      font-weight: 500;
-  }
-*/
-}
-
 .custom-checkbox {
 
   .custom-control-label {
@@ -248,12 +235,10 @@ $contrast: 3% !default;
 }
 
 
-
 /* BS form hack for checkbox tick mark */
 .custom-checkbox .custom-control-label::after {
   background-size: $custom-control-indicator-bg-size-checkbox;
 }
-
 
 .custom-control {
   min-height: $custom-control-indicator-size;
@@ -262,4 +247,12 @@ $contrast: 3% !default;
 input[type="radio"]:checked + .custom-control-label, 
 input[type="checkbox"]:checked + .custom-control-label {
   font-weight: 500;
+}
+
+/* help block */
+.help-block {
+  font-size: rem($fs-nano);
+  color: $fusion-50;
+  margin-top: 0.125rem;
+  display: block
 }
