@@ -211,7 +211,7 @@ $contrast: 3% !default;
   transition: all 0.15s ease-in-out, 
 }
 
-.custom-checkbox {
+:not(.was-validated) .custom-checkbox {
 
   .custom-control-label {
 
@@ -249,10 +249,13 @@ input[type="checkbox"]:checked + .custom-control-label {
   font-weight: 500;
 }
 
-/* help block */
+/* help block and validation feedback texts*/
 .help-block {
-  font-size: rem($fs-nano);
   color: $fusion-50;
-  margin-top: 0.125rem;
-  display: block
 }
+
+.help-block, .invalid-feedback, .valid-feedback {
+  font-size: rem($fs-nano);
+  margin-top: 0.325rem;
+}
+

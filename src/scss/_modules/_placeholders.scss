@@ -321,7 +321,7 @@ RESULT:
   border: 1px solid $settings-incompat-border;
   height: 22px;
   line-height: 20px;
-  border-radius: 10px;
+  border-radius: $border-radius-plus;
   right: 13px;
   top: 26%;
   color:$fusion-900;

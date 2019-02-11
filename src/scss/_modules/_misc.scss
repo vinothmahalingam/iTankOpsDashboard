@@ -147,6 +147,10 @@ hr {
 	padding: 1.25rem 1.5rem;
 }
 
+.bg-brand-gradient {
+	@extend %nav-bg;
+}
+
 .bg-dropdown-header {
 	padding: inherit;
 	color: $white;
@@ -395,7 +399,7 @@ hr {
 	padding: 1.25rem;
 	background: #fbfbfb;
 
-	border-radius: 10px 10px 0 0;
+	border-radius: $border-radius-plus $border-radius-plus 0 0;
 	border: 2px solid darken($frame-border-color, 1%);
     border-bottom: 0;
     
@@ -409,7 +413,7 @@ hr {
 	border: 2px solid  darken($frame-border-color, 1%);
 	padding: 1.25rem;
 	margin-bottom: 1.5rem;
-	border-radius: 0 0 10px 10px;
+	border-radius: 0 0 $border-radius-plus $border-radius-plus;
 	border-top: 0;
 }
 .card-body > .frame-wrap:last-child {

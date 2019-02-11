@@ -132,11 +132,12 @@
 .border-faded { border: 1px solid rgba($fusion-900, 0.07) }
 
 /* border radius */
-.border-radius-0 { border-radius:0 !important }
+//.border-radius-0 { border-radius:0 !important }
 .border-top-left-radius-0  { border-top-left-radius: 0 !important;}
 .border-bottom-left-radius-0 { border-bottom-left-radius: 0 !important; }
 .border-top-right-radius-0 { border-top-right-radius: 0 !important; }
 .border-bottom-right-radius-0 { border-bottom-right-radius: 0 !important; }
+.rounded-plus { border-radius: $border-radius-plus }
 
 /* progressbars */
 .progress-xs { height: 5px }
@@ -357,6 +358,12 @@ $cursor: (
         height: auto;
         min-height: auto;
         max-height: auto;
+    }
+
+    .width-mobile-auto {
+        width: auto;
+        min-width: auto;
+        max-width: auto; 
     }
 
     /* FULL HEIGHT ON MOBILE */
