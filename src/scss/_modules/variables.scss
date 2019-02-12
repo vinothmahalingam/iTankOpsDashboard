@@ -607,7 +607,7 @@ $nav-width:											  16.25rem !default;
 /* nav parent level-0 */
 $nav-link-color: 									lighten($nav-base-color, 28%) !default;
 $nav-font-link-size: 							$fs-base + 1 !default;
-$nav-collapse-sign-font-size:			$nav-font-link-size + 3 !default;	
+$nav-collapse-sign-font-size:			inherit !default;	
 $nav-padding-x:								    2rem !default; 
 $nav-padding-y:                   0.8125rem !default;
 

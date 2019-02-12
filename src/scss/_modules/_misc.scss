@@ -394,27 +394,19 @@ hr {
 /* display frame */
 .frame-heading {
 	font-size: rem($fs-base);
-	margin-bottom: 0;
+	margin-bottom: 1rem;
 	color: lighten($fusion-50, 7%);
-	padding: 1.25rem;
-	background: #fbfbfb;
-
-	border-radius: $border-radius-plus $border-radius-plus 0 0;
-	border: 2px solid darken($frame-border-color, 1%);
-    border-bottom: 0;
+	font-weight: 500;
     
 	small {
 		font-size: rem($fs-base);
-		margin-bottom:0;
+		margin-bottom: 0.5rem;
 	}
 }
 .frame-wrap {
 	background: white;
-	border: 2px solid  darken($frame-border-color, 1%);
-	padding: 1.25rem;
-	margin-bottom: 1.5rem;
-	border-radius: 0 0 $border-radius-plus $border-radius-plus;
-	border-top: 0;
+	padding: 0;
+	margin-bottom: 3rem;
 }
 .card-body > .frame-wrap:last-child {
 	margin-bottom:0 !important;
