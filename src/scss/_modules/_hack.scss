@@ -210,6 +210,16 @@ body.desktop-detected {
 	}
 }
 
+/* remove wierd line height issue */
+.card-header-pills,
+.card-header-tabs {
+	font-size: 0;
+
+	.nav-link {
+		font-size: $font-size-base;
+	}
+}
+
 /* change the white to any color ;) */
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
@@ -296,7 +306,8 @@ body:not(.mobile-view-activated).mod-main-boxed.modal-open {
 }
 
 /* add borders to button groups */
-.btn-group .btn, .input-group-prepend .btn, 
+.btn-group .btn, 
+.input-group-prepend .btn, 
 .input-group-append .btn {
     border-right: 1px solid rgba($black, 0.1);
     border-left: 1px solid rgba($black, 0.1);
