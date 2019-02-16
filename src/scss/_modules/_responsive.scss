@@ -26,7 +26,7 @@ $grid-breakpoints: (
 	.page-content {
 		padding: 1.5rem 2rem;
 
-		.card.panel {
+		.panel {
 			margin-bottom: 1.5rem;
 		}
 	}
@@ -466,5 +466,12 @@ $grid-breakpoints: (
 
 	.frame-wrap {
 		padding: $p-2 $p-1;
+	}
+
+	.card {
+		.card-header,
+		.card-body {
+			padding: 1rem;
+		}
 	}
 }

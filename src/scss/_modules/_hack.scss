@@ -312,3 +312,34 @@ body:not(.mobile-view-activated).mod-main-boxed.modal-open {
     border-right: 1px solid rgba($black, 0.1);
     border-left: 1px solid rgba($black, 0.1);
 }
+
+/* collapse toggle to reveal and hide elements */
+[aria-expanded="false"] {
+	& ~ .collapsed-reveal {
+		display: none;
+	}
+	.collapsed-reveal {
+		display: none;
+	}
+	& ~ .collapsed-hidden {
+		display: block;
+	}
+	.collapsed-hidden {
+		display: block;
+	}
+
+}
+[aria-expanded="true"] {
+	& ~ .collapsed-reveal {
+		display: block;
+	}
+	.collapsed-reveal {
+		display: block;
+	}
+	& ~ .collapsed-hidden {
+		display: none;
+	}
+	.collapsed-hidden {
+		display: none;
+	}
+}

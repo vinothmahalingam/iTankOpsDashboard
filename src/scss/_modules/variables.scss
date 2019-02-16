@@ -180,11 +180,7 @@ $grid-breakpoints: (
   // Large screen / desktop
   lg: 992px,
   // Decently size screen / wide laptop
-  xl: 1200px,
-  // Extra large screen / wide desktop
-  xxl: 1400px,
-  // Extra large screen / wide desktop
-  xxxl: 1600px  
+  xl: 1200px 
 );
 
 $mobile-breakpoint:          lg !default;                               /* define when mobile menu activates, here we are declearing (lg) so it targets the one after it */
@@ -288,7 +284,7 @@ $badge-padding-x:                   0.5em;
 $badge-border-radius:               10rem;*/
 
 /* cards */
-$card-spacer-y:                     1.25rem;
+$card-spacer-y:                     1rem;
 $card-spacer-x:                     1.5rem;
 $card-cap-bg:                       $white;
 $card-border-color:                 rgba(0, 0, 0, 0.055);
@@ -719,5 +715,5 @@ $footer-zindex:										$cloud - 20 !default;
 
 /*   GLOBALS
 ========================================================================== */
-$mod-main-boxed-width:            map-get($grid-breakpoints, xxl);
+$mod-main-boxed-width:            map-get($grid-breakpoints, xl);
 $slider-width:                    15rem;

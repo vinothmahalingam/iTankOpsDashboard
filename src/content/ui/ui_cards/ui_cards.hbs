@@ -11,13 +11,37 @@
 
 {{#*inline "content-block"}}
 
+
+<div class="alert alert-primary alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">
+            <i class="fal fa-times"></i>
+        </span>
+    </button>
+    <div class="d-flex flex-start w-100">
+        <div class="mr-2">
+            <span class="icon-stack icon-stack-lg">
+                <i class="base base-6 icon-stack-3x opacity-100 color-primary-500"></i>
+                <i class="base base-10 icon-stack-2x opacity-100 color-primary-300 fa-flip-vertical"></i>
+                <i class="fal fa-info icon-stack-1x opacity-100 color-white"></i>
+            </span>
+        </div>
+        <div class="d-flex flex-fill">
+            <div class="flex-fill">
+                <span class="h5">About</span>
+                <br> Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization. Built with flexbox, they offer easy alignment and mix well with other Bootstrap components. They have no <code>margin</code> by default, so use spacing utilities as needed. Although cards are a lightweight solution for 'widget' or 'panel', we recommend you check out NextGen's <a href="ui_panels.html" title="Components Panels" target="_blank">panels page</a> for further flexible and an alternative option.
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="row">
     <div class="col-xl-6">
         <div class="card mb-g">
             <h4 class="card-header">
-                Toolbar
+                Basic <span class="fw-300">example</span>
                 <small>
-                Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization. Built with flexbox, they offer easy alignment and mix well with other Bootstrap components. They have no <code>margin</code> by default, so use spacing utilities as needed.
+                    The most basic example of cards with enforced width
                 </small>
             </h4>
             <div class="card-body">
@@ -62,6 +86,9 @@
         <div class="card mb-g">
             <h4 class="card-header">
                 Quote
+                <small>
+                    Here we adjust <code>card-header</code> padding using provided <a href="#" title="utility classes">utility classes</a>
+                </small>
             </h4>
             <div class="card-body">
                 
@@ -112,14 +139,14 @@
     <div class="col-xl-6">
         <div class="card mb-g">
             <h4 class="card-header">
-                Toolbar
+                Navigation
                 <small>
-                Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization. Built with flexbox, they offer easy alignment and mix well with other Bootstrap components. They have no <code>margin</code> by default, so use spacing utilities as needed.
+                Add some navigation to a card’s header (or block) with built-in nav components.
                 </small>
             </h4>
             <div class="card-body">
                
-                    <div class="frame-wrap mb-0 w-100">
+                    <div class="frame-wrap w-100">
                         <div class="card text-center border">
                             <div class="card-header bg-faded">
                                 <ul class="nav nav-tabs card-header-tabs">
@@ -141,29 +168,55 @@
                             </div>
                         </div>
                     </div>
-               
-            </div>
-        </div>
-        <div class="card mb-g">
-            <h4 class="card-header">
-                Toolbar
-            </h4>
-            <div class="card-body">
-               
+
+                    <h5 class="frame-heading">
+                        Nav pills with infinite menu
+                    </h5>
                     <div class="frame-wrap mb-0 w-100">
                         <div class="card text-center border">
-                            <div class="card-header bg-faded">
-                                <ul class="nav nav-pills card-header-pills">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" href="#">Active</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Link</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                                    </li>
-                                </ul>
+                            <div class="card-header bg-faded py-2 px-1">
+
+                                <div class="d-flex align-items-center">
+                                    <ul id="js-nav-pills-menu" class="nav nav-pills card-header-pills flex-nowrap" style="transition: margin 0.5s ease-out 0s;">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#">Active</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="javascript:void(0);">With</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="javascript:void(0);">This</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="javascript:void(0);">Menu</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="javascript:void(0);">You</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="javascript:void(0);">Can</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="javascript:void(0);">Add</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="javascript:void(0);">Infinite</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="javascript:void(0);">Items</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="javascript:void(0);">Cool</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="javascript:void(0);">Right?</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                        </li>
+                                    </ul>
+                               </div>
+
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Special title treatment</h5>
@@ -172,14 +225,114 @@
                             </div>
                         </div>
                     </div>
-                
+               
             </div>
         </div>
+
+        <div class="card mb-g">
+            <h4 class="card-header">
+                Collapse
+                <small>
+                    Utilizing bootstrap's collapse component with <code>.card</code>
+                </small>
+            </h4>
+            <div class="card-body">
+                <div class="frame-wrap mb-0 w-100">
+                    <div id="cp-1" class="card border">
+                        <div class="card-header bg-faded">
+                            <button class="btn btn-sm btn-default" data-toggle="collapse" data-target="#cp-1 > .card-body" aria-expanded="true">
+                                <span class="collapsed-hidden">Expand</span>
+                                <span class="collapsed-reveal">Collapse</span>
+                            </button>
+                        </div>
+                        <div class="card-body p-0 show">
+                            <div class="p-4 text-center">
+
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-g">
+            <h4 class="card-header">
+                Change background color
+                <small>
+                    <code>.card-header</code>, <code>.card-body</code>, and <code>.card-footer</code> background cam be changed using <code>.bg-color-*</code> <a href="#" target="_blank" title="BG Color Utility">color utility</a>
+                </small>
+            </h4>
+            <div class="card-body">
+                <div class="frame-wrap mb-0 w-100">
+                    <div id="cp-1" class="card border">
+                        <div class="card-header bg-faded">
+                            Different colors
+                        </div>
+                        <div class="card-body p-0 show">
+                            <div class="p-4">
+
+                                <form>
+                                    <div class="form-group mr-2 mb-md-2">
+                                        <select class="js-select-target custom-select"></select>
+                                    </div>
+                                    <div class="form-group mr-2 mb-md-2">
+                                        <select class="js-bg-color js-select-trigger custom-select"></select>
+                                    </div>
+                                </form>                             
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="card-footer text-muted py-2">
+                            2 days ago
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
     </div>
 </div>  
 
 {{/inline}}
 
-{{#*inline "scripts-block"}}{{/inline}}
+{{#*inline "scripts-block"}}
+ <script>
+$('#js-nav-pills-menu').menuSlider({
+        element: $('#js-nav-pills-menu'),
+        wrapperId: 'test-nav'
+});
+
+
+var ng_bgColors,
+    ng_bgColors_URL = "ng-bg-colors.json",
+    formatBgColors = [];
+
+$.when(
+    $.getJSON(ng_bgColors_URL, function(data) {
+        ng_bgColors = data;
+    })
+).then(function() {
+    if (ng_bgColors) {
+
+        //formatTextColors
+        jQuery.each(ng_bgColors, function(index, item) {
+            formatBgColors.push($('<option></option>').attr("value", item).addClass(item).text(item))
+        });
+
+        $("select.js-bg-color").empty().append(formatBgColors);
+      
+
+    } else {
+        console.log("somethign went wrong!")
+    }
+});
+
+</script>
+{{/inline}}
 
 {{/layouts/main}}
