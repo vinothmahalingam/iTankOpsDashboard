@@ -267,27 +267,48 @@
                 </small>
             </h4>
             <div class="card-body">
+
+                <div class="mb-2">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <select class="js-bg-target js-select-trigger  custom-select">
+                                    <option value="#cp-2 .card-header">card-header</option>
+                                    <option value="#cp-2 .card-body">card-body</option>
+                                    <option value="#cp-2 .card-footer">card-footer</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group mr-2 mb-md-2">
+                                <select class="js-bg-color js-select-trigger custom-select"></select>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+
                 <div class="frame-wrap mb-0 w-100">
-                    <div id="cp-1" class="card border">
+                    <div id="cp-2" class="card border">
                         <div class="card-header bg-faded">
                             Different colors
                         </div>
-                        <div class="card-body p-0 show">
-                            <div class="p-4">
+                        <div class="card-body p-0">
+                            <div class="custom-scroll" style="height: 190px">
 
-                                <form>
-                                    <div class="form-group mr-2 mb-md-2">
-                                        <select class="js-select-target custom-select"></select>
+                                <div class="px-4 py-3">
+                                    <div class="fs-xl fw-500 mb-3">
+                                        He system office. Of to wonder, windshield to seven. Whenever
+                                        <div class="fs-nano fw-300">SATURDAY, 27TH JANUARY 2018 15 minutes ago.</div>
                                     </div>
-                                    <div class="form-group mr-2 mb-md-2">
-                                        <select class="js-bg-color js-select-trigger custom-select"></select>
-                                    </div>
-                                </form>                             
-                                
-                                
+
+                                    <div class="fs-lg mb-3">Of totally to issues for to the decelerate city, the at how discharge than like…. It history; Their letters, away, the and stupid employees, divine them his a only live lobby, little regretting conduct, know out testimony the latest even and systematic be service, name of every accept bits turned.</div>
+
+                                    In the a soon in facilitate reflections, he more had from preceding think the lay low the where initial feedback dropped at be its to in little instruments, of himself found phase they poverty disappointment is her and to thought, that the by is really chime in the of we sovereignty. On which, office. The that he each been ago she from these is name much phase. Counter-productive towards far and transmitting offers in of the with between was and over since failing. Slowly cheating far with gone in, irregular refute. No success six way differences authentic destined pass pouring.
+                                                             
+                                </div>
                             </div>
                         </div>
-                        <div class="card-footer text-muted py-2">
+                        <div class="card-footer py-2">
                             2 days ago
                         </div>
                     </div>
@@ -325,12 +346,26 @@ $.when(
         });
 
         $("select.js-bg-color").empty().append(formatBgColors);
+
+
       
 
     } else {
         console.log("somethign went wrong!")
     }
 });
+
+ var changeBG = function() {
+    var setBgColor = $('select.js-bg-color').val();
+    var setValue = $('select.js-bg-target').val();
+    $('select.js-bg-color').removeClassPrefix('bg-').addClass(setBgColor);
+    $(setValue).removeClassPrefix('bg-').addClass(setBgColor);
+};
+
+
+$(document).on('change', '.js-select-trigger', function() {
+    changeBG();
+})
 
 </script>
 {{/inline}}
