@@ -28,7 +28,7 @@
     "gulp-sourcemaps": "^2.6.3",
     "gulp-uglify": "^3.0.1",
     "gulp-util": "^3.0.8",
-    "handlebars": "^4.0.12",
+    "handlebars": "^4.1.0",
     "handlebars-extend-block": "^1.0.0",
     "lazypipe": "^1.0.1",
     "require-dir": "^1.2.0",

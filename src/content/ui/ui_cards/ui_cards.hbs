@@ -10,53 +10,50 @@
 {{#*inline "head-block"}}{{/inline}}
 
 {{#*inline "content-block"}}
-
-
 <div class="alert alert-primary alert-dismissible">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">
-            <i class="fal fa-times"></i>
-        </span>
+    <span aria-hidden="true">
+    <i class="fal fa-times"></i>
+    </span>
     </button>
     <div class="d-flex flex-start w-100">
-        <div class="mr-2">
+        <div class="mr-2 d-sm-none d-md-block">
             <span class="icon-stack icon-stack-lg">
-                <i class="base base-6 icon-stack-3x opacity-100 color-primary-500"></i>
-                <i class="base base-10 icon-stack-2x opacity-100 color-primary-300 fa-flip-vertical"></i>
-                <i class="fal fa-info icon-stack-1x opacity-100 color-white"></i>
+            <i class="base base-6 icon-stack-3x opacity-100 color-primary-500"></i>
+            <i class="base base-10 icon-stack-2x opacity-100 color-primary-300 fa-flip-vertical"></i>
+            <i class="fal fa-info icon-stack-1x opacity-100 color-white"></i>
             </span>
         </div>
         <div class="d-flex flex-fill">
             <div class="flex-fill">
                 <span class="h5">About</span>
                 <br> Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization. Built with flexbox, they offer easy alignment and mix well with other Bootstrap components. They have no <code>margin</code> by default, so use spacing utilities as needed. Although cards are a lightweight solution for 'widget' or 'panel', we recommend you check out NextGen's <a href="ui_panels.html" title="Components Panels" target="_blank">panels page</a> for further flexible and an alternative option.
+                <br>
+                While we displayed some examples of cards here, you can learn more details of its usage at the official <a href="https://getbootstrap.com/docs/{{bs4v}}/components/card/" target="_blank">bootstrap documentation</a>.
             </div>
         </div>
     </div>
 </div>
-
 <div class="row">
     <div class="col-xl-6">
         <div class="card mb-g">
             <h4 class="card-header">
                 Basic <span class="fw-300">example</span>
                 <small>
-                    The most basic example of cards with enforced width
+                The most basic example of cards with enforced width
                 </small>
             </h4>
             <div class="card-body">
-                
-                    <div class="frame-wrap mb-0 w-100">
-                        <div class="card m-auto border" style="width: 18rem;">
-                            <img src="img/cover-5-lg.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
+                <div class="frame-wrap mb-0 w-100">
+                    <div class="card border ml-auto mr-auto" style="max-width: 18rem;">
+                        <img src="img/cover-5-lg.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
-               
+                </div>
             </div>
         </div>
         <div class="card mb-g">
@@ -67,45 +64,41 @@
                 </small>
             </h4>
             <div class="card-body">
-                
-                    <div class="frame-wrap mb-0 w-100">
-                        <div class="card m-auto border" style="width: 18rem;">
-                            <div class="card-header">
-                                Featured
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Cras justo odio</li>
-                                <li class="list-group-item">Dapibus ac facilisis in</li>
-                                <li class="list-group-item">Vestibulum at eros</li>
-                            </ul>
+                <div class="frame-wrap mb-0 w-100">
+                    <div class="card m-auto border" style="width: 18rem;">
+                        <div class="card-header">
+                            Featured
                         </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Cras justo odio</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
                     </div>
-                
+                </div>
             </div>
         </div>
         <div class="card mb-g">
             <h4 class="card-header">
                 Quote
                 <small>
-                    Here we adjust <code>card-header</code> padding using provided <a href="#" title="utility classes">utility classes</a>
+                Here we adjust <code>card-header</code> padding using provided <a href="#" title="utility classes">utility classes</a>
                 </small>
             </h4>
             <div class="card-body">
-                
-                    <div class="frame-wrap mb-0 w-100">
-                        <div class="card m-auto border">
-                            <div class="card-header bg-faded py-2">
-                                Quote
-                            </div>
-                            <div class="card-body">
-                                <blockquote class="blockquote mb-0">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                                </blockquote>
-                            </div>
+                <div class="frame-wrap mb-0 w-100">
+                    <div class="card m-auto border">
+                        <div class="card-header bg-faded py-2">
+                            Quote
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            </blockquote>
                         </div>
                     </div>
-               
+                </div>
             </div>
         </div>
         <div class="card mb-g">
@@ -116,23 +109,21 @@
                 </small>
             </h4>
             <div class="card-body">
-                
-                    <div class="frame-wrap mb-0 w-100">
-                        <div class="card m-auto border">
-                            <div class="card-header">
-                                Featured
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                            <div class="card-footer text-muted py-2">
-                                2 days ago
-                            </div>
+                <div class="frame-wrap mb-0 w-100">
+                    <div class="card m-auto border">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                        <div class="card-footer text-muted py-2">
+                            2 days ago
                         </div>
                     </div>
-                
+                </div>
             </div>
         </div>
     </div>
@@ -145,95 +136,85 @@
                 </small>
             </h4>
             <div class="card-body">
-               
-                    <div class="frame-wrap w-100">
-                        <div class="card text-center border">
-                            <div class="card-header bg-faded">
-                                <ul class="nav nav-tabs card-header-tabs">
+                <div class="frame-wrap w-100">
+                    <div class="card border">
+                        <div class="card-header bg-faded">
+                            <ul class="nav nav-tabs card-header-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Active</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+                <h5 class="frame-heading">
+                    Nav pills with infinite menu
+                </h5>
+                <div class="frame-wrap mb-0 w-100">
+                    <div class="card border">
+                        <div class="card-header bg-faded py-2 px-1">
+                            <div class="d-flex align-items-center">
+                                <ul id="js-nav-pills-menu" class="nav nav-pills card-header-pills flex-nowrap" style="transition: margin 0.5s ease-out 0s;">
                                     <li class="nav-item">
                                         <a class="nav-link active" href="#">Active</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Link</a>
+                                        <a class="nav-link" href="javascript:void(0);">With</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="javascript:void(0);">This</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="javascript:void(0);">Menu</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="javascript:void(0);">You</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="javascript:void(0);">Can</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="javascript:void(0);">Add</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="javascript:void(0);">Infinite</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="javascript:void(0);">Items</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="javascript:void(0);">Cool</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="javascript:void(0);">Right?</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                         </div>
                     </div>
-
-                    <h5 class="frame-heading">
-                        Nav pills with infinite menu
-                    </h5>
-                    <div class="frame-wrap mb-0 w-100">
-                        <div class="card text-center border">
-                            <div class="card-header bg-faded py-2 px-1">
-
-                                <div class="d-flex align-items-center">
-                                    <ul id="js-nav-pills-menu" class="nav nav-pills card-header-pills flex-nowrap" style="transition: margin 0.5s ease-out 0s;">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" href="#">Active</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);">With</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);">This</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);">Menu</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);">You</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);">Can</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);">Add</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);">Infinite</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);">Items</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);">Cool</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);">Right?</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                                        </li>
-                                    </ul>
-                               </div>
-
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-               
+                </div>
             </div>
         </div>
-
         <div class="card mb-g">
             <h4 class="card-header">
                 Collapse
                 <small>
-                    Utilizing bootstrap's collapse component with <code>.card</code>
+                Utilizing bootstrap's collapse component with <code>.card</code>
                 </small>
             </h4>
             <div class="card-body">
@@ -241,88 +222,419 @@
                     <div id="cp-1" class="card border">
                         <div class="card-header bg-faded">
                             <button class="btn btn-sm btn-default" data-toggle="collapse" data-target="#cp-1 > .card-body" aria-expanded="true">
-                                <span class="collapsed-hidden">Expand</span>
-                                <span class="collapsed-reveal">Collapse</span>
+                            <span class="collapsed-hidden">Expand</span>
+                            <span class="collapsed-reveal">Collapse</span>
                             </button>
                         </div>
                         <div class="card-body p-0 show">
-                            <div class="p-4 text-center">
-
-                                <h5 class="card-title">Special title treatment</h5>
+                            <!-- notice we place the padding inside another div and remove the padding from the card body -->
+                            <div class="p-4">
                                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="card mb-g">
             <h4 class="card-header">
-                Change background color
+                Background &amp; Borders
                 <small>
-                    <code>.card-header</code>, <code>.card-body</code>, and <code>.card-footer</code> background cam be changed using <code>.bg-color-*</code> <a href="#" target="_blank" title="BG Color Utility">color utility</a>
+                <code>.card-header</code>, <code>.card-body</code>, and <code>.card-footer</code> background cam be changed using <a href="intel_colors.html" target="_blank" title="BG Color Utility">color</a> and <a href="utilities_borders.html" target="_blank" title="border utilities">border</a> utilities
                 </small>
             </h4>
             <div class="card-body">
-
                 <div class="mb-2">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-sm-6 col-xl-4">
                             <div class="form-group">
-                                <select class="js-bg-target js-select-trigger  custom-select">
+                                <label>Select target</label>
+                                <select class="js-bg-target custom-select">
                                     <option value="#cp-2 .card-header">card-header</option>
                                     <option value="#cp-2 .card-body">card-body</option>
                                     <option value="#cp-2 .card-footer">card-footer</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="form-group mr-2 mb-md-2">
-                                <select class="js-bg-color js-select-trigger custom-select"></select>
+                        <div class="col-sm-6 col-xl-4">
+                            <div class="form-group">
+                                <label>Select background</label>
+                                <select class="js-bg-color custom-select"></select>
                             </div>
                         </div>
-                    </div>    
+                        <div class="col-sm-12 col-xl-4">
+                            <div class="form-group">
+                                <label>Card border</label>
+                                <select class="js-border-color custom-select">
+                                    <option value="border-primary">border-primary</option>
+                                    <option value="border-secondary">border-secondary</option>
+                                    <option value="border-info">border-info</option>
+                                    <option value="border-danger">border-danger</option>
+                                    <option value="border-warning">border-warning</option>
+                                    <option value="border-success">border-success</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
                 <div class="frame-wrap mb-0 w-100">
                     <div id="cp-2" class="card border">
-                        <div class="card-header bg-faded">
+                        <div class="card-header bg-info-600">
                             Different colors
                         </div>
-                        <div class="card-body p-0">
-                            <div class="custom-scroll" style="height: 190px">
-
+                        <div class="card-body p-0 bg-info-300">
+                            <div class="custom-scroll" style="height: 160px">
                                 <div class="px-4 py-3">
                                     <div class="fs-xl fw-500 mb-3">
                                         He system office. Of to wonder, windshield to seven. Whenever
                                         <div class="fs-nano fw-300">SATURDAY, 27TH JANUARY 2018 15 minutes ago.</div>
                                     </div>
-
                                     <div class="fs-lg mb-3">Of totally to issues for to the decelerate city, the at how discharge than like…. It history; Their letters, away, the and stupid employees, divine them his a only live lobby, little regretting conduct, know out testimony the latest even and systematic be service, name of every accept bits turned.</div>
-
                                     In the a soon in facilitate reflections, he more had from preceding think the lay low the where initial feedback dropped at be its to in little instruments, of himself found phase they poverty disappointment is her and to thought, that the by is really chime in the of we sovereignty. On which, office. The that he each been ago she from these is name much phase. Counter-productive towards far and transmitting offers in of the with between was and over since failing. Slowly cheating far with gone in, irregular refute. No success six way differences authentic destined pass pouring.
-                                                             
                                 </div>
                             </div>
                         </div>
-                        <div class="card-footer py-2">
+                        <div class="card-footer bg-info-800 py-2">
                             2 days ago
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
-
     </div>
-</div>  
+</div>
+<div class="alert alert-info alert-dismissible mt-2">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">
+    <i class="fal fa-times"></i>
+    </span>
+    </button>
+    <div class="d-flex flex-start w-100">
+        <div class="d-flex flex-fill">
+            <div class="flex-fill">
+                <span class="h5">Conveying meaning to assistive technologies</span>
+                <br> Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the <code>.sr-only</code> class.
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 col-xl-12">
+        <div class="card mb-g">
+            <h4 class="card-header">
+                Header <span class="fw-300">Options</span>
+                <small>
+                Display of some example optional "stuff" you can add to <code>.card-header</code>
+                </small>
+            </h4>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="card border mb-g">
+                            <!-- notice the additions of utility paddings and display properties on .card-header -->
+                            <div class="card-header py-2 d-flex align-items-center flex-wrap">
+                                <!-- we wrap header title inside a span tag with utility padding -->
+                                <div class="d-inline-block py-2 mr-2">Title</div>
+                                <span class="badge badge-info">15</span>
+                                <button class="btn btn-icon btn-sm btn-danger ml-auto fs-xl" data-toggle="dropdown">
+                                <i class="fal fa-ellipsis-v"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right">
+                                    <button class="dropdown-item">
+                                    Option 1
+                                    </button>
+                                    <button class="dropdown-item">
+                                    Option 2
+                                    </button>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <button class="dropdown-item">
+                                    Refresh
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card border mb-g">
+                            <!-- notice the additions of utility paddings and display properties on .card-header -->
+                            <div class="card-header py-2 d-flex align-items-center flex-wrap">
+                                <!-- we wrap header title inside a span tag with utility padding -->
+                                <div class="d-inline-block py-2 mr-2">Title</div>
+                                <button class="btn btn-sm btn-info">
+                                Add new
+                                </button>
+                                <button class="btn btn-sm btn-icon width-1 fs-xl btn-success ml-1">
+                                <i class="fal fa-arrow-down"></i>
+                                </button>
+                                <button class="btn btn-sm btn-info ml-auto">
+                                Add new
+                                </button>
+                                <button class="btn btn-sm btn-icon width-1 fs-xl btn-success ml-1">
+                                <i class="fal fa-arrow-down"></i>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card border mb-g">
+                            <!-- notice the additions of utility paddings and display properties on .card-header -->
+                            <div class="card-header py-2 d-flex align-items-center flex-wrap">
+                                <!-- we wrap header title inside a span tag with utility padding -->
+                                <div class="d-inline-block py-2 mr-2">Title</div>
+                                <div class="custom-control d-flex custom-switch">
+                                    <input id="demo-switch" type="checkbox" class="custom-control-input" checked="checked">
+                                    <label class="custom-control-label fw-500" for="demo-switch"></label>
+                                </div>
+                                <div class="d-flex position-relative ml-auto" style="max-width: 23rem;">
+                                    <i class="fal fa-search position-absolute pos-left fs-lg px-3 py-2 mt-1"></i>
+                                    <input type="text" class="form-control bg-subtlelight pl-6" placeholder="Search">
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card border mb-g">
+                            <!-- notice the additions of utility paddings and display properties on .card-header -->
+                            <div class="card-header py-2 d-flex align-items-center flex-wrap">
+                                <!-- we wrap header title inside a span tag with utility padding -->
+                                <div class="d-inline-block py-2 mr-2">Title</div>
+                                <div class="width-10">
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 67%;" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <nav class="ml-auto" aria-label="Page navigation example">
+                                    <ul class="pagination pagination-sm justify-content-end m-0">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-xl-12">
+        <div class="card mb-g">
+            <h4 class="card-header">
+                Card <span class="fw-300">Group</span>
+                <small>
+                Use card groups to render cards as a single, attached element with equal width and height columns. Card groups use <code>display: flex;</code> to achieve their uniform sizing.
+                </small>
+            </h4>
+            <div class="card-body">
+
+                <div class="card-group">
+                    <div class="card">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap">
+                            <title>Placeholder</title>
+                            <rect fill="#868e96" width="100%" height="100%"></rect>
+                        </svg>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap">
+                            <title>Placeholder</title>
+                            <rect fill="#868e96" width="100%" height="100%"></rect>
+                        </svg>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap">
+                            <title>Placeholder</title>
+                            <rect fill="#868e96" width="100%" height="100%"></rect>
+                        </svg>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-xl-12">
+        <div class="card mb-g">
+            <h4 class="card-header">
+                Card <span class="fw-300">Decks</span>
+                <small>
+                Need a set of equal width and height cards that aren’t attached to one another? Use card decks.
+                </small>
+            </h4>
+            <div class="card-body">
+
+                <div class="card-deck">
+                    <div class="card">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap">
+                            <title>Placeholder</title>
+                            <rect fill="#868e96" width="100%" height="100%"></rect>
+                        </svg>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap">
+                            <title>Placeholder</title>
+                            <rect fill="#868e96" width="100%" height="100%"></rect>
+                        </svg>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap">
+                            <title>Placeholder</title>
+                            <rect fill="#868e96" width="100%" height="100%"></rect>
+                        </svg>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-xl-12">
+        <div class="card mb-g">
+            <h4 class="card-header">
+                Card <span class="fw-300">Columns</span>
+                <small>
+               Cards can be organized into <a href="https://masonry.desandro.com/" target="_blank">Masonry</a>-like columns with just CSS by wrapping them in <code>.card-columns</code>. Cards are built with CSS <code>column</code> properties instead of flexbox for easier alignment. Cards are ordered from top to bottom and left to right.
+                </small>
+            </h4>
+            <div class="card-body">
+
+            <div class="alert alert-warning">
+                <strong>Heads up!</strong> Your mileage with card columns may vary. To prevent cards breaking across columns, we must set them to <code>display: inline-block</code> as <code>column-break-inside: avoid</code> isn’t a bulletproof solution yet.
+            </div>
+
+<div class="card-columns">
+  <div class="card">
+    <svg class="bd-placeholder-img card-img-top" width="100%" height="160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect fill="#868e96" width="100%" height="100%"></rect><text fill="#dee2e6" dy=".3em" x="50%" y="50%">Image cap</text></svg>
+    <div class="card-body">
+      <h5 class="card-title">Card title that wraps to a new line</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+  </div>
+  <div class="card p-3">
+    <blockquote class="blockquote mb-0 card-body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer class="blockquote-footer">
+        <small class="text-muted">
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  <div class="card">
+    <svg class="bd-placeholder-img card-img-top" width="100%" height="160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect fill="#868e96" width="100%" height="100%"></rect><text fill="#dee2e6" dy=".3em" x="50%" y="50%">Image cap</text></svg>
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card bg-primary text-white text-center p-3">
+    <blockquote class="blockquote mb-0">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+      <footer class="blockquote-footer text-white">
+        <small>
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Card image"><title>Placeholder</title><rect fill="#868e96" width="100%" height="100%"></rect><text fill="#dee2e6" dy=".3em" x="50%" y="50%">Card image</text></svg>
+  </div>
+  <div class="card p-3 text-right">
+    <blockquote class="blockquote mb-0">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer class="blockquote-footer">
+        <small class="text-muted">
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+  
+
+            </div>
+        </div>
+    </div>    
+</div>
 
 {{/inline}}
 
 {{#*inline "scripts-block"}}
- <script>
+<script>
+/* infinite nav pills */
 $('#js-nav-pills-menu').menuSlider({
         element: $('#js-nav-pills-menu'),
         wrapperId: 'test-nav'
@@ -340,6 +652,8 @@ $.when(
 ).then(function() {
     if (ng_bgColors) {
 
+        formatBgColors.push($('<option></option>').attr("value", null).text("select background"));
+
         //formatTextColors
         jQuery.each(ng_bgColors, function(index, item) {
             formatBgColors.push($('<option></option>').attr("value", item).addClass(item).text(item))
@@ -347,25 +661,34 @@ $.when(
 
         $("select.js-bg-color").empty().append(formatBgColors);
 
-
-      
-
     } else {
         console.log("somethign went wrong!")
     }
 });
 
- var changeBG = function() {
+/* change background */
+$(document).on('change', '.js-bg-color', function() {
     var setBgColor = $('select.js-bg-color').val();
     var setValue = $('select.js-bg-target').val();
+    
     $('select.js-bg-color').removeClassPrefix('bg-').addClass(setBgColor);
     $(setValue).removeClassPrefix('bg-').addClass(setBgColor);
-};
-
-
-$(document).on('change', '.js-select-trigger', function() {
-    changeBG();
 })
+
+/* change border */
+$(document).on('change', '.js-border-color', function() {
+    var setBorderColor = $('select.js-border-color').val();
+    $("#cp-2").removeClassPrefix('border-').addClass(setBorderColor);
+    $('select.js-border-color').removeClassPrefix('border-').addClass(setBorderColor);
+})
+
+/* change target */
+$(document).on('change', '.js-bg-target', function() {
+    //reset color selection
+    $('select.js-bg-color').prop('selectedIndex',0).removeClassPrefix('bg-');
+})
+
+
 
 </script>
 {{/inline}}

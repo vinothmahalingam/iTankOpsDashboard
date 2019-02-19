@@ -219,7 +219,7 @@
 	padding: 0;
 	line-height: 2.1rem;
 
-	&:not([class*="-primary"]):not([class*="-secondary"]):not([class*="-default"]):not([class*="-success"]):not([class*="-info"]):not([class*="-warning"]):not([class*="-danger"]):not([class*="-dark"]) {
+	&:not([class*="-primary"]):not([class*="-secondary"]):not([class*="-default"]):not([class*="-success"]):not([class*="-info"]):not([class*="-warning"]):not([class*="-danger"]):not([class*="-dark"]):not([class*="-light"]) {
 		&:hover {
 			background-color: rgba($black,0.05);
 			border-color: transparent;
@@ -236,13 +236,13 @@
 	}
 
 	&.btn-xs {
-		width: calc(1.5rem + 2px);
-		line-height: 1.5rem;
+		width: calc(1.15rem + 2px);
+		line-height: 1.15rem;
 	}
 
 	&.btn-sm {
-		width: calc(1.8rem + 2px);
-		line-height: 1.8rem;
+		width: calc(1.5rem + 2px);
+		line-height: 1.5rem;
 	}
 
 	&.btn-lg {

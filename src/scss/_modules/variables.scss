@@ -256,7 +256,7 @@ $theme-colors: (
   "warning": $color-warning,
   "danger": $color-danger,
   "light": darken($white, 7%),
-  "dark": $primary-800
+  "dark": $fusion-500
 );
 
 /* forms */
@@ -286,7 +286,7 @@ $badge-border-radius:               10rem;*/
 /* cards */
 $card-spacer-y:                     1rem;
 $card-spacer-x:                     1.5rem;
-$card-cap-bg:                       $white;
+$card-cap-bg:                       inherit;
 $card-border-color:                 rgba(0, 0, 0, 0.055);
 $list-group-border-color:           $card-border-color;
 

@@ -617,7 +617,7 @@ var initApp = (function(app) {
 				height: $(this).data('scrollHeight') || '100%',
 				size: $(this).data('scrollSize') || '4px',
 				position: $(this).data('scrollPosition') || 'right',
-				color: $(this).data('scrollColor') || '#b3b3b3',
+				color: $(this).data('scrollColor') || 'rgba(0,0,0,0.6)',
 				alwaysVisible: $(this).data('scrollAlwaysVisible') || false,
 				distance: $(this).data('scrollDistance') || '4px',
 				railVisible: $(this).data('scrollRailVisible') || false,
