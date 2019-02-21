@@ -54,6 +54,21 @@ $grid-breakpoints: (
 		font-size: 18px;
 	}*/
 
+	.dropdown-menu .dropdown-menu {
+		position: static;
+		display: block;
+		margin: 0;
+		padding: 0.5rem 0 0 0;
+		width: 100%;
+		border: 0;
+		box-shadow: none;
+
+		@include transform( scale(1) );
+		opacity: 1;
+		visibility: visible;
+		transition: none;
+	}
+
 	.mobile.mobile-view-activated {
 		header {
 			.dropdown-item-menu.float-sm-left {

@@ -230,20 +230,6 @@ var initApp = (function(app) {
 	}*/
 
 	/**
-	 * Assign new height to 'var'
-	 * DOC: this will be used later for other calculations, we only call this funtion during screen resize 
-	 **/
-	app.getNewWindowHeight = function () {
-
-		myapp_config.windowHeight = $(window).height();
-		
-		if (myapp_config.debugState)
-			console.log("app height updated: " + myapp_config.windowHeight);		
-
-		return myapp_config.windowHeight;
-	};
-
-	/**
 	 * detect browser type
 	 * DOC: detect if browser supports webkit CSS
 	 **/	

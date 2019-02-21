@@ -17,7 +17,7 @@
 
 <div class="row">
 
-    <div class="col-lg-12 col-xl-12">
+    <div class="col-lg-12 col-xl-6">
 
         <div class="card mb-g">
 
@@ -134,17 +134,6 @@
                             </td>
                             <td class="fs-sm">
                                 Fetch class names from <code>body</code> and convert them to JSON string. See <a href="intel_saving_db.html">saving to database</a> for more details
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button class="btn btn-outline-dark btn-sm mr-2" onclick="initApp.getNewWindowHeight()">initApp.getNewWindowHeight()</button>
-                            </td>
-                            <td>
-                                <i class="fw-500 text-success">int</i>
-                            </td>
-                            <td class="fs-sm">
-                                Returns window height for layout calculations
                             </td>
                         </tr>
                         <tr>
@@ -335,7 +324,7 @@
 
     </div>
 
-    <div class="col-lg-12 col-xl-12">
+    <div class="col-lg-12 col-xl-6">
 
         <div class="card mb-g">
 
@@ -397,7 +386,6 @@ var initApp = (function(app) {
     app.accessIndicator = function () { ... }
     app.pushSettings = function (DB_string) { ... }
     app.getSettings = function () { ... }
-    app.getNewWindowHeight = function () { ... }
     app.detectBrowserType = function () { ... }
     app.addDeviceType = function() { ... }
     app.windowScrollEvents = function () { ... }
@@ -432,7 +420,7 @@ $(window).resize(
 /* Bind the throttled handler to the scroll event */
 $(window).scroll(
     $.throttle( myapp_config.throttleDelay, function (e) {
-        /* FIX APP HEIGHT */
+        /* EVENTS */
         ...
     })
 );
@@ -447,11 +435,9 @@ jQuery(document).ready(function() {
     initApp.detectBrowserType();
     /* a. check for mobile view width and add class .mobile-view-activated */
     initApp.mobileCheckActivation();
-    /* b. assign window height on page load */    
-    initApp.getNewWindowHeight();
-    /* c. build navigation */
+    /* b. build navigation */
     initApp.buildNavigation(myapp_config.navHooks);
-    /* d. run DOM misc functions */
+    /* c. run DOM misc functions */
     initApp.domReadyMisc();
 });</pre>
 

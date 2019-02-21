@@ -123,3 +123,11 @@
 		margin-bottom: 0 !important;
 	}
 }
+
+.demo-h-spacing > *:not(last-child):not(only-child) {
+	margin: 0 1rem 0 0 !important;
+}
+
+.demo-h-spacing-sm > *:not(last-child):not(only-child) {
+	margin: 0 .375rem .9375rem 0 !important;
+}

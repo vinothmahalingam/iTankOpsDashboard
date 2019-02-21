@@ -20,28 +20,23 @@ jQuery(document).ready(function() {
 	 **/
 	initApp.mobileCheckActivation();
 
-	/**
-	 * b. assign window height on page load
-	 **/	
- 	initApp.getNewWindowHeight();
-
  	/**
-	 * c. build navigation
+	 * b. build navigation
 	 **/
 	initApp.buildNavigation(myapp_config.navHooks);
 
  	/**
-	 * d. initialize nav filter
+	 * c. initialize nav filter
 	 **/
 	initApp.listFilter(myapp_config.navHooks, myapp_config.navFilterInput, myapp_config.navAnchor);
 
  	/**
-	 * e. run DOM misc functions
+	 * d. run DOM misc functions
 	 **/
 	initApp.domReadyMisc();
 
  	/**
-	 * f. run app forms class detectors [parentClass,focusClass,disabledClass]
+	 * e. run app forms class detectors [parentClass,focusClass,disabledClass]
 	 **/
 	initApp.appForms('.form-group, .input-group', 'has-length', 'has-disabled');
 

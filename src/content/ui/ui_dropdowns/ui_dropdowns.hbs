@@ -4,7 +4,7 @@
 	pagename="ui_dropdowns" 
 	heading="<i class='subheader-icon fal fa-window'></i>  Dropdowns" 
 	category_1="UI Components" 
-	pagedescription="Toggle contextual overlays for displaying lists of links."
+	pagedescription="Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin."
 }}
 
 {{#*inline "head-block"}}
@@ -13,55 +13,452 @@
 
 {{#*inline "content-block"}}
 
-<div class="row">
-
-	<div class="col-md-12 col-xl-6">
-
-		<div class="card mb-g">
-
-			<div class="card-body">
-
-				<h4 class="mb-g">
-					Basic <span class="fw-300">Example</span> 
-					<small>
-						The most basic example
-					</small>
-				</h4>
-
-				<h5 class="frame-heading">
-					Wrap a series of buttons with <code>.btn</code> in <code>.btn-group</code>.
-				</h5>
-
-				<div class="frame-wrap">
-					a
-				</div>
-
-			</div>
-			
+<div class="alert alert-primary">
+	<div class="d-flex flex-start w-100">
+		<div class="mr-2 d-none d-sm-block">
+			<span class="icon-stack icon-stack-lg">
+			<i class="base base-6 icon-stack-3x opacity-100 color-primary-500"></i>
+			<i class="base base-10 icon-stack-2x opacity-100 color-primary-300 fa-flip-vertical"></i>
+			<i class="fal fa-info icon-stack-1x opacity-100 color-white"></i>
+			</span>
 		</div>
-	
-	
+		<div class="d-flex flex-fill">
+			<div class="flex-fill">
+				<span class="h5">Basic overview</span>
+				<br> Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They’re made interactive with the included Bootstrap dropdown JavaScript plugin. They’re toggled by clicking, not by hovering; this is an intentional design decision. Dropdowns are built on a third party library, Popper.js, which provides dynamic positioning and viewport detection. 
+				<br>
+				<br>
+				Find more facts and uses at the bootstrap <a href="https://getbootstrap.com/docs/{{bs4v}}/components/dropdowns/" target="_blank">official documentation</a>.
+			</div>
+		</div>
 	</div>
-
-	<div class="col-md-12 col-xl-6">
-
+</div>
+<div class="row">
+	<div class="col-xl-6">
 		<div class="card mb-g">
-
+			<h4 class="card-header">
+				Kitchen Sink <span class="fw-300">example</span>
+				<small>
+				A composition of all working elements
+				</small>
+			</h4>
 			<div class="card-body">
-
-				<h4 class="mb-g">
-					Basic <span class="fw-300">Alerts</span> 
-					<small>
-						Contextual minimalistic alerts
-					</small>
-				</h4>
-
-
-
+				<div class="dropdown-menu d-block position-static">
+					<a class="dropdown-item" href="javascript:void(0)">
+					<span class="badge badge-success float-right ml-3">17</span>Action</a>
+					<a class="dropdown-item" href="javascript:void(0)">
+					<span class="badge badge-pill badge-primary float-right ml-3">29</span>Another action</a>
+					<a class="dropdown-item disabled" href="javascript:void(0)">Disabled link</a>
+					<div class="dropdown-divider"></div>
+					<h6 class="dropdown-header">Dropdown header</h6>
+					<a class="dropdown-item active" href="javascript:void(0)">
+					<i class="ni ni-big-plus"></i> &nbsp;Has icon</a>
+					<div class="dropdown-multilevel">
+						<div class="dropdown-item">
+							Multilevel
+						</div>
+						<div class="dropdown-menu">
+							<a href="javascript:void(0);" class="dropdown-item">Menu Item</a>
+							<a href="javascript:void(0);" class="dropdown-item">Another Item</a>
+							<a href="javascript:void(0);" class="dropdown-item disabled">Disabled</a>
+							<div class="dropdown-multilevel">
+								<div class="dropdown-item">
+									Second Level
+								</div>
+								<div class="dropdown-menu">
+									<a href="javascript:void(0);" class="dropdown-item">Menu Item</a>
+									<a href="javascript:void(0);" class="dropdown-item">Another Item</a>
+									<div class="dropdown-multilevel">
+										<div class="dropdown-item">
+											Third Level
+										</div>
+										<div class="dropdown-menu dropdown-menu-left">
+											<a href="javascript:void(0);" class="dropdown-item">Menu Item</a>
+											<a href="javascript:void(0);" class="dropdown-item disabled">Disabled</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a class="dropdown-item" href="javascript:void(0)">Another action</a>
+				</div>
 			</div>
-			
 		</div>
-
+		<div class="card mb-g">
+			<h4 class="card-header">
+				Links and buttons
+				<small>
+				Wrap the dropdown’s toggle (your button or link) and the dropdown menu within <code>.dropdown</code>, or another element that declares <code>position: relative;</code>. Dropdowns can be triggered from <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> elements to better fit your potential needs.
+				</small>
+			</h4>
+			<div class="card-body">
+				<h5 class="frame-heading">
+					Button
+				</h5>
+				<div class="frame-wrap w-100">
+					<div class="demo-h-spacing d-flex">
+						<div class="dropdown">
+							<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Dropdown button
+							</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button type="button" class="btn btn-info rounded-circle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fal fa-plus"></i>
+							</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="javascript:void(0)">Action</a>
+								<a class="dropdown-item" href="javascript:void(0)">Another action</a>
+								<a class="dropdown-item" href="javascript:void(0)">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="javascript:void(0)">Separated link</a>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button type="button" class="btn btn-danger rounded-circle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fal fa-plus"></i>
+							</button>
+							<div class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="javascript:void(0)">Action</a>
+								<a class="dropdown-item" href="javascript:void(0)">Another action</a>
+								<a class="dropdown-item" href="javascript:void(0)">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="javascript:void(0)">Separated link</a>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button type="button" class="btn btn-success btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fal fa-plus"></i>
+							</button>
+							<div class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="javascript:void(0)">Action</a>
+								<a class="dropdown-item" href="javascript:void(0)">Another action</a>
+								<a class="dropdown-item" href="javascript:void(0)">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="javascript:void(0)">Separated link</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<h5 class="frame-heading">
+					Link
+				</h5>
+				<div class="frame-wrap w-100">
+					<div class="demo-h-spacing d-flex">
+						<div class="dropdown">
+							<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Dropdown link
+							</a>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						</div>
+						<div class="dropdown">
+							<a href="#" class="btn btn-warning rounded-circle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fal fa-plus"></i>
+							</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="javascript:void(0)">Action</a>
+								<a class="dropdown-item" href="javascript:void(0)">Another action</a>
+								<a class="dropdown-item" href="javascript:void(0)">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="javascript:void(0)">Separated link</a>
+							</div>
+						</div>
+						<div class="dropdown">
+							<a href="#" class="btn btn-primary rounded-circle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fal fa-plus"></i>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="javascript:void(0)">Action</a>
+								<a class="dropdown-item" href="javascript:void(0)">Another action</a>
+								<a class="dropdown-item" href="javascript:void(0)">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="javascript:void(0)">Separated link</a>
+							</div>
+						</div>
+						<div class="dropdown">
+							<a href="#" class="btn btn-default btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fal fa-plus"></i>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="javascript:void(0)">Action</a>
+								<a class="dropdown-item" href="javascript:void(0)">Another action</a>
+								<a class="dropdown-item" href="javascript:void(0)">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="javascript:void(0)">Separated link</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card mb-g">
+			<h4 class="card-header">
+				Dropdown buttons
+			</h4>
+			<div class="card-body">
+				<h5 class="frame-heading">
+					Variations
+				</h5>
+				<div class="frame-wrap w-100">
+					<div class="demo-h-spacing-sm">
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Primary</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Separated link</a>
+							</div>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Secondary</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Separated link</a>
+							</div>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Success</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Separated link</a>
+							</div>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Info</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Separated link</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<h5 class="frame-heading">
+					Split button
+				</h5>
+				<div class="frame-wrap w-100 mb-0">
+					<div class="demo-h-spacing-sm">
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary">Primary</button>
+							<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Separated link</a>
+							</div>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-secondary">Secondary</button>
+							<button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Separated link</a>
+							</div>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-success">Success</button>
+							<button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Separated link</a>
+							</div>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-info">Info</button>
+							<button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Separated link</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card mb-g">
+			<h4 class="card-header">
+				Sizing
+				<small>
+				Button dropdowns work with buttons of all sizes, including default and split dropdown buttons.
+				</small>
+			</h4>
+			<div class="card-body">
+				<div class="frame-wrap w-100">
+					<div class="demo-h-spacing-sm">
+						<div class="btn-toolbar" role="toolbar">
+							<div class="btn-group">
+								<button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Large button
+								</button>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#">Action</a>
+									<a class="dropdown-item" href="#">Another action</a>
+									<a class="dropdown-item" href="#">Something else here</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">Separated link</a>
+								</div>
+							</div>
+							<!-- /btn-group -->
+							<div class="btn-group ml-2">
+								<button type="button" class="btn btn-lg btn-secondary">Large split button</button>
+								<button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<span class="sr-only">Toggle Dropdown</span>
+								</button>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#">Action</a>
+									<a class="dropdown-item" href="#">Another action</a>
+									<a class="dropdown-item" href="#">Something else here</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">Separated link</a>
+								</div>
+							</div>
+							<!-- /btn-group -->
+						</div>
+						<!-- /btn-toolbar -->
+						<div class="btn-toolbar" role="toolbar">
+							<div class="btn-group">
+								<button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Small button
+								</button>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#">Action</a>
+									<a class="dropdown-item" href="#">Another action</a>
+									<a class="dropdown-item" href="#">Something else here</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">Separated link</a>
+								</div>
+							</div>
+							<!-- /btn-group -->
+							<div class="btn-group ml-2">
+								<button type="button" class="btn btn-sm btn-secondary">Small split button</button>
+								<button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<span class="sr-only">Toggle Dropdown</span>
+								</button>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#">Action</a>
+									<a class="dropdown-item" href="#">Another action</a>
+									<a class="dropdown-item" href="#">Something else here</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">Separated link</a>
+								</div>
+							</div>
+							<!-- /btn-group -->
+						</div>
+						<!-- /btn-toolbar -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-6">
+		<div class="card mb-g">
+			<h4 class="card-header">
+				Accordion example
+				<small>
+				Add some navigation to a card’s header (or block) with built-in nav components.
+				</small>
+			</h4>
+			<div class="card-body">
+				<div class="dropdown-menu d-block position-static p-0">
+					<div class="dropdown-header bg-trans-gradient d-flex flex-row pt-4 pb-4 rounded-top">
+						<div class="d-flex flex-row align-items-center mt-1 mb-1 color-white">
+							<span class="mr-2">
+							<img src="img/avatar-sunny.png" class="rounded-circle profile-image" alt="Dr. Codex Lantern">
+							</span>
+							<div class="info-card-text">
+								<div class="fs-lg text-truncate text-truncate-lg">Dr. Codex Lantern</div>
+								<span class="text-truncate text-truncate-md opacity-80">drlantern@nextgen.com</span>
+							</div>
+						</div>
+					</div>
+					<div class="dropdown-divider m-0"></div>
+					<a href="#" class="dropdown-item" data-action="app-reset">
+					<span data-i18n="drpdwn.reset_layout">Reset Layout</span>
+					</a>
+					<a href="#" class="dropdown-item" data-toggle="modal" data-target=".js-modal-settings">
+					<span data-i18n="drpdwn.settings">Settings</span>
+					</a>
+					<div class="dropdown-divider m-0"></div>
+					<a href="#" class="dropdown-item" data-action="app-fullscreen">
+					<span data-i18n="drpdwn.fullscreen">Fullscreen</span>
+					<i class="float-right text-muted fw-n">F11</i>
+					</a>
+					<a href="#" class="dropdown-item" data-action="app-print">
+					<span data-i18n="drpdwn.print">Print</span>
+					<i class="float-right text-muted fw-n">Ctrl + P</i>
+					</a>
+					<div class="dropdown-multilevel">
+						<div class="dropdown-item">
+							Language
+						</div>
+						<div class="dropdown-menu dropdown-menu-left">
+							<a href="#?lang=fr" class="dropdown-item" data-action="lang" data-lang="fr">Français</a>
+							<a href="#?lang=en" class="dropdown-item active" data-action="lang" data-lang="en">English (US)</a>
+							<a href="#?lang=es" class="dropdown-item" data-action="lang" data-lang="es">Español</a>
+							<a href="#?lang=ru" class="dropdown-item" data-action="lang" data-lang="ru">Русский язык</a>
+							<a href="#?lang=ch" class="dropdown-item" data-action="lang" data-lang="jp">日本語</a>
+							<a href="#?lang=ch" class="dropdown-item" data-action="lang" data-lang="ch">中文</a>
+						</div>
+					</div>
+					<div class="dropdown-divider m-0"></div>
+					<a class="dropdown-item fw-500 pt-3 pb-3" href="page_login-alt.html">
+					<span data-i18n="drpdwn.page-logout">Logout</span>
+					<span class="float-right fw-n">@codexlantern</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="card mb-g">
+			<h4 class="card-header">
+				Accordion example
+				<small>
+				Add some navigation to a card’s header (or block) with built-in nav components.
+				</small>
+			</h4>
+			<div class="card-body">
+				
+			</div>
+		</div>
+	</div>
 </div>
 
 {{/inline}}

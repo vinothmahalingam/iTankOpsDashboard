@@ -1,4 +1,4 @@
-<div class="dropdown-header d-flex flex-row pt-4 pb-4 rounded-top">
+<div class="dropdown-header bg-trans-gradient d-flex flex-row pt-4 pb-4 rounded-top">
 	<div class="d-flex flex-row align-items-center mt-1 mb-1 color-white">
 		<span class="mr-2">
 			<img src="img/{{avatar}}" class="rounded-circle profile-image" alt="{{user}}">
@@ -26,18 +26,18 @@
 	<span data-i18n="drpdwn.print">Print</span> 
 	<i class="float-right text-muted fw-n">Ctrl + P</i>
 </a>
-<div class="dropdown-item d-flex align-items-center">
-	<span data-i18n="drpdwn.language">Language</span> 
-	<i class="text-muted fs-sm">&nbsp;(demo only) </i> 
-	<i class="ni ni-chevron-right ml-auto"></i>
-	<ul class="dropdown-item-menu float-sm-left">
-		<li><a href="#?lang=fr" class="dropdown-item" data-action="lang" data-lang="fr">Français</a></li>
-		<li><a href="#?lang=en" class="dropdown-item active" data-action="lang" data-lang="en">English (US)</a></li>
-		<li><a href="#?lang=es" class="dropdown-item" data-action="lang" data-lang="es">Español</a></li>
-		<li><a href="#?lang=ru" class="dropdown-item" data-action="lang" data-lang="ru">Русский язык</a></li>
-		<li><a href="#?lang=ch" class="dropdown-item" data-action="lang" data-lang="jp">日本語</a></li>
-		<li><a href="#?lang=ch" class="dropdown-item" data-action="lang" data-lang="ch">中文</a></li>
-	</ul>
+<div class="dropdown-multilevel">
+	<div class="dropdown-item">
+		Language
+	</div>
+	<div class="dropdown-menu dropdown-menu-left">
+		<a href="#?lang=fr" class="dropdown-item" data-action="lang" data-lang="fr">Français</a>
+		<a href="#?lang=en" class="dropdown-item active" data-action="lang" data-lang="en">English (US)</a>
+		<a href="#?lang=es" class="dropdown-item" data-action="lang" data-lang="es">Español</a>
+		<a href="#?lang=ru" class="dropdown-item" data-action="lang" data-lang="ru">Русский язык</a>
+		<a href="#?lang=ch" class="dropdown-item" data-action="lang" data-lang="jp">日本語</a>
+		<a href="#?lang=ch" class="dropdown-item" data-action="lang" data-lang="ch">中文</a>
+	</div>
 </div>
 <div class="dropdown-divider m-0"></div>
 <a class="dropdown-item fw-500 pt-3 pb-3" href="page_login-alt.html">

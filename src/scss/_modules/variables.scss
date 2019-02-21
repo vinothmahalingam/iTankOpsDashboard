@@ -282,6 +282,8 @@ $custom-control-indicator-bg-size-checkbox:  50% 50% !default;
 $badge-padding-y:                   0.5em;
 $badge-padding-x:                   0.5em;
 $badge-border-radius:               10rem;*/
+$badge-font-size:                   85%;
+
 
 /* cards */
 $card-spacer-y:                     1rem;
@@ -343,6 +345,7 @@ $tooltip-arrow-height:              0;
 
 /* dropdowns */
 $dropdown-border-width:             $theme-border-utility-size; 
+$dropdown-padding-y:                .3125rem;
 $dropdown-item-padding-y:           .75rem;
 $dropdown-item-padding-x:           1.5rem; 
 $dropdown-link-active-bg:           lighten($primary-50, 13%);  
