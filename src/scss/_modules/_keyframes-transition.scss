@@ -87,7 +87,6 @@ $animateFadeInDown_distance: 5px;
   }
 }
 
-
 /*==== FADE IN RIGHT ===*/
 @-webkit-keyframes animateFadeInRight {
   from {
@@ -116,7 +115,6 @@ $animateFadeInDown_distance: 5px;
   }
 }
 
-
 .page-content > .alert {
   animation: animateFadeInUp 0.3s;
   -webkit-animation: animateFadeInUp 0.3s;
@@ -131,4 +129,21 @@ $animateFadeInDown_distance: 5px;
 .tab-content >.active {
   animation: animateFadeInUp 0.5s;
   -webkit-animation: animateFadeInUp 0.5s;
+}
+
+.fadeinup {
+  animation: animateFadeInUp 0.5s;
+  -webkit-animation: animateFadeInUp 0.5s;  
+}
+.fadeindown {
+  animation: animateFadeInDown 0.5s;
+  -webkit-animation: animateFadeInDown 0.5s;  
+}
+.fadeinleft {
+  animation: animateFadeInLeft 0.5s;
+  -webkit-animation: animateFadeInLeft 0.5s;  
+}
+.fadeinright {
+  animation: animateFadeInRight 0.5s;
+  -webkit-animation: animateFadeInRight 0.5s;  
 }

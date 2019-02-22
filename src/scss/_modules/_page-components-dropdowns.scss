@@ -2,39 +2,84 @@
 	padding: 1.25rem 1.5rem;
 }
 
-.dropdown-no-arrow {
-	&:after {
-		content:"";
+/* dropdown-item hover menu*/
+.dropdown-menu-animated {
+	@include transform( scale(0.8) !important);
+	transition: all 270ms cubic-bezier(0.34, 1.25, 0.3, 1);
+	opacity: 0;
+	visibility: hidden;
+	display: block;
+}
+
+/* various sizes */
+.dropdown-menu {
+	box-shadow: $dropdown-shadow;
+	-webkit-user-select: text;
+
+	.dropdown-item {
+		font-weight: 400;
+		cursor: pointer;
+	}
+
+	&.dropdown-sm {
+		width: $dropdown-sm-width;
+		height: auto;
+	}
+
+	&.dropdown-lg {
+		width: $dropdown-lg-width;
+		height: auto;
+	}  
+
+	&.dropdown-xl {
+		width: $dropdown-xl-width;
+		height: $dropdown-xl-height;
+	}	
+
+	.dropdown-item {
+
+		&:first-child,
+		&:last-child {
+			@include border-radius(0px);
+		}
+
 	}
 }
 
-/*.dropdown-toggle {
-	&:after {
-		content: "\f2fb";
-		font-family: 'nextgen-icons';
-		font-size: inherit;
-		position: absolute;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		display: flex;
-		align-items: center;
-		padding-right: 1.5rem;
-	}
-}*/
+/* replace bootstrap's default arrow */
+.dropdown-toggle:after,
+.dropleft .dropdown-toggle:before {
+	text-align: center;
+	display: inline;
+	border: 0 !important;
+	font-family: 'Font Awesome 5 Pro';
+	content: "\f107" !important;
+	//font-size: 0.8rem;
+	vertical-align: middle !important;
+	position: relative;	
+	//margin: 0 0.255rem;
+}
 
+.dropup .dropdown-toggle:after {
+	content: "\f106" !important;
+}
+
+.dropright .dropdown-toggle:after {
+	content: "\f105" !important;
+}
+
+.dropleft .dropdown-toggle:before {
+	content: "\f104" !important;
+}
+
+
+/* remove arrow */
 .dropdown-toggle {
-	&:after {
-		text-align: center;
-		display: inline;
-		border: 0;
-		font-family: 'Font Awesome 5 Pro';
-		content: "\f107";
-		font-size: 0.8rem;
-		vertical-align: middle;
-		position: relative;
-		//margin-left: 0.255rem;
-		//margin-right: 0.255rem;		
+	&.no-arrow {
+		&:before,
+		&:after {
+			display: none !important;
+		}
 	}
 }
 
@@ -62,17 +107,21 @@
 			padding-top: 0.5rem !important;
 			padding-bottom: 0.5rem !important;
 		}
-
-		/* it is displayed on right by default */
-		&.dropdown-menu-left {
-			right: 100%;
-			left: auto;
-		}
 	}
 
 	.dropdown-multilevel {
 		position: relative;
 
+		/* it is displayed on right by default */
+		&.dropdown-multilevel-left {
+
+			> .dropdown-menu {
+				right: 100%;
+				left: auto;
+			}
+		}
+
+		/* add arrow */
 		> .dropdown-item:first-child {
 			&:after {
 				content: "\f2fb";
