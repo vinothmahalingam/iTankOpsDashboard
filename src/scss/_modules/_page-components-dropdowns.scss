@@ -26,14 +26,19 @@
 		height: auto;
 	}
 
-	&.dropdown-lg {
-		width: $dropdown-lg-width;
+	&.dropdown-md {
+		width: $dropdown-md-width;
 		height: auto;
 	}  
 
+	&.dropdown-lg {
+		width: $dropdown-lg-width;
+		height: auto;
+	} 
+
 	&.dropdown-xl {
 		width: $dropdown-xl-width;
-		height: $dropdown-xl-height;
+		height: auto;
 	}	
 
 	.dropdown-item {

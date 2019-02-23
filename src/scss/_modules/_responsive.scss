@@ -58,7 +58,7 @@ $grid-breakpoints: (
 		position: static;
 		display: block;
 		margin: 0;
-		padding: 0.5rem 0 0 0;
+		padding: .5rem 0 0 .75rem;
 		width: 100%;
 		border: 0;
 		box-shadow: none;
@@ -67,6 +67,10 @@ $grid-breakpoints: (
 		opacity: 1;
 		visibility: visible;
 		transition: none;
+	}
+
+	.dropdown-menu .dropdown-multilevel > .dropdown-item:first-child:after {
+		display: none;
 	}
 
 	.mobile.mobile-view-activated {

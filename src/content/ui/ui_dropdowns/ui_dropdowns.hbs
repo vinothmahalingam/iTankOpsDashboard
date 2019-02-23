@@ -89,7 +89,7 @@
 		<!-- Links and buttons -->
 		<div class="card mb-g">
 			<h4 class="card-header">
-				Links and buttons
+				Links & buttons
 				<small>
 				Wrap the dropdown’s toggle (your button or link) and the dropdown menu within <code>.dropdown</code>, or another element that declares <code>position: relative;</code>. Dropdowns can be triggered from <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> elements to better fit your potential needs.
 				</small>
@@ -98,9 +98,9 @@
 				<h5 class="frame-heading">
 					Button
 				</h5>
-				<div class="frame-wrap w-100">
-					<div class="demo-h-spacing d-flex">
-						<div class="dropdown">
+				<div class="frame-wrap">
+					<div class="demo-h-spacing">
+						<div class="btn-group">
 							<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Dropdown button
 							</button>
@@ -110,7 +110,7 @@
 								<a class="dropdown-item" href="#">Something else here</a>
 							</div>
 						</div>
-						<div class="dropdown">
+						<div class="btn-group">
 							<button type="button" class="btn btn-info rounded-circle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<i class="fal fa-plus"></i>
 							</button>
@@ -122,11 +122,11 @@
 								<a class="dropdown-item" href="javascript:void(0)">Separated link</a>
 							</div>
 						</div>
-						<div class="dropdown">
+						<div class="btn-group">
 							<button type="button" class="btn btn-danger rounded-circle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<i class="fal fa-plus"></i>
 							</button>
-							<div class="dropdown-menu dropdown-menu-right">
+							<div class="dropdown-menu">
 								<a class="dropdown-item" href="javascript:void(0)">Action</a>
 								<a class="dropdown-item" href="javascript:void(0)">Another action</a>
 								<a class="dropdown-item" href="javascript:void(0)">Something else here</a>
@@ -134,11 +134,11 @@
 								<a class="dropdown-item" href="javascript:void(0)">Separated link</a>
 							</div>
 						</div>
-						<div class="dropdown">
-							<button type="button" class="btn btn-success btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<div class="btn-group">
+							<button type="button" class="btn btn-success btn-icon rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<i class="fal fa-plus"></i>
 							</button>
-							<div class="dropdown-menu dropdown-menu-right">
+							<div class="dropdown-menu">
 								<a class="dropdown-item" href="javascript:void(0)">Action</a>
 								<a class="dropdown-item" href="javascript:void(0)">Another action</a>
 								<a class="dropdown-item" href="javascript:void(0)">Something else here</a>
@@ -151,7 +151,7 @@
 				<h5 class="frame-heading">
 					Link
 				</h5>
-				<div class="frame-wrap w-100">
+				<div class="frame-wrap">
 					<div class="demo-h-spacing d-flex">
 						<div class="dropdown">
 							<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -179,7 +179,7 @@
 							<a href="#" class="btn btn-primary rounded-circle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<i class="fal fa-plus"></i>
 							</a>
-							<div class="dropdown-menu dropdown-menu-right">
+							<div class="dropdown-menu">
 								<a class="dropdown-item" href="javascript:void(0)">Action</a>
 								<a class="dropdown-item" href="javascript:void(0)">Another action</a>
 								<a class="dropdown-item" href="javascript:void(0)">Something else here</a>
@@ -191,7 +191,7 @@
 							<a href="#" class="btn btn-default btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<i class="fal fa-plus"></i>
 							</a>
-							<div class="dropdown-menu dropdown-menu-right">
+							<div class="dropdown-menu">
 								<a class="dropdown-item" href="javascript:void(0)">Action</a>
 								<a class="dropdown-item" href="javascript:void(0)">Another action</a>
 								<a class="dropdown-item" href="javascript:void(0)">Something else here</a>
@@ -213,19 +213,9 @@
 					Variations
 				</h5>
 				<div class="frame-wrap w-100">
-					<div class="demo-h-spacing-sm">
+					<div class="demo">
 						<div class="btn-group">
 							<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Primary</button>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="#">Action</a>
-								<a class="dropdown-item" href="#">Another action</a>
-								<a class="dropdown-item" href="#">Something else here</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#">Separated link</a>
-							</div>
-						</div>
-						<div class="btn-group">
-							<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Secondary</button>
 							<div class="dropdown-menu">
 								<a class="dropdown-item" href="#">Action</a>
 								<a class="dropdown-item" href="#">Another action</a>
@@ -254,18 +244,8 @@
 								<a class="dropdown-item" href="#">Separated link</a>
 							</div>
 						</div>
-					</div>
-				</div>
-				<h5 class="frame-heading">
-					Split button
-				</h5>
-				<div class="frame-wrap w-100 mb-0">
-					<div class="demo-h-spacing-sm">
 						<div class="btn-group">
-							<button type="button" class="btn btn-primary">Primary</button>
-							<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<span class="sr-only">Toggle Dropdown</span>
-							</button>
+							<button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Warning</button>
 							<div class="dropdown-menu">
 								<a class="dropdown-item" href="#">Action</a>
 								<a class="dropdown-item" href="#">Another action</a>
@@ -275,8 +255,35 @@
 							</div>
 						</div>
 						<div class="btn-group">
-							<button type="button" class="btn btn-secondary">Secondary</button>
-							<button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Danger</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Separated link</a>
+							</div>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dark</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Separated link</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<h5 class="frame-heading">
+					Split button
+				</h5>
+				<div class="frame-wrap w-100 mb-0">
+					<div class="demo">
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary">Primary</button>
+							<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<span class="sr-only">Toggle Dropdown</span>
 							</button>
 							<div class="dropdown-menu">
@@ -303,6 +310,45 @@
 						<div class="btn-group">
 							<button type="button" class="btn btn-info">Info</button>
 							<button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Separated link</a>
+							</div>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-warning">Warning</button>
+							<button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Separated link</a>
+							</div>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-danger">Danger</button>
+							<button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Separated link</a>
+							</div>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-dark">Dark</button>
+							<button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<span class="sr-only">Toggle Dropdown</span>
 							</button>
 							<div class="dropdown-menu">
@@ -364,6 +410,65 @@
 				</div>
 			</div>
 		</div>
+		<!-- Content -->
+		<div class="card mb-g">
+			<h4 class="card-header">
+				Content
+				<small>
+				Insert any content types!
+				</small>
+			</h4>
+			<div class="card-body">
+				<div class="frame-wrap w-100">
+					<div class="demo demo-no-mb">
+						<div class="btn-group">
+							<button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Text
+							</button>
+							<div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+								<p>
+								Some example text that's free-flowing within the dropdown menu.
+								</p>
+								<p class="mb-0">
+								And this is more example text.
+								</p>
+							</div>
+						</div>
+						<div class="btn-group">
+							<button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Forms
+							</button>
+							<div class="dropdown-menu dropdown-lg">
+										<form class="p-4" novalidate="" action="">
+                                            <div class="form-group">
+                                                <label class="form-label" for="username">Username</label>
+                                                <input type="email" id="username" class="form-control" placeholder="your id or email" value="drlantern@nextgen.com" required="">
+                                                <div class="invalid-feedback">No, you missed this one.</div>
+                                                <div class="help-block">Your unique username to app</div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label" for="password">Password</label>
+                                                <input type="password" id="password" class="form-control" placeholder="password" value="password123" required="">
+                                                <div class="invalid-feedback">Sorry, you missed this one.</div>
+                                                <div class="help-block">Your password</div>
+                                            </div>
+                                            <div class="form-group text-left">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="rememberme">
+                                                    <label class="custom-control-label" for="rememberme"> Remember me for the next 30 days</label>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-info btn-block">Sign in</button>
+                                        </form>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">New around here? Sign up</a>
+								<a class="dropdown-item" href="#">Forgot password?</a>
+</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>			
 		<!-- Sizing -->
 		<div class="card mb-g">
 			<h4 class="card-header">
@@ -374,7 +479,7 @@
 			</h4>
 			<div class="card-body">
 				<div class="frame-wrap w-100">
-					<div class="demo-h-spacing-sm mb-2">
+					<div class="demo mb-2">
 						<div class="btn-group">
 							<button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Large button
@@ -401,7 +506,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="demo-h-spacing-sm mb-2">
+					<div class="demo mb-2">
 						<div class="btn-group">
 							<button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Default size
@@ -428,7 +533,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="demo-h-spacing-sm mb-2">
+					<div class="demo mb-2">
 						<div class="btn-group">
 							<button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Small button
@@ -455,7 +560,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="demo-h-spacing-sm mb-0">
+					<div class="demo mb-0">
 						<div class="btn-group">
 							<button class="btn btn-secondary btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Extra small
@@ -484,7 +589,7 @@
 					</div>
 				</div>
 			</div>
-		</div>		
+		</div>			
 	</div>
 	<div class="col-xl-6">
 
@@ -570,7 +675,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- Directions -->
 		<!-- Animated -->
 		<div class="card mb-g">
 			<h4 class="card-header">
@@ -581,7 +685,7 @@
 			</h4>
 			<div class="card-body">
 				<div class="frame-wrap mb-0">
-					<div class="demo-h-spacing-sm">
+					<div class="demo">
 						<div class="btn-group">
 							<button type="button" class="btn btn-primary dropdown-toggle bg-trans-gradient" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Custom
@@ -653,7 +757,7 @@
 					Dropup
 				</h5>
 				<div class="frame-wrap">
-					<div class="demo-h-spacing-sm">
+					<div class="demo demo-no-mb">
 						<div class="btn-group dropup">
 							<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Dropup
@@ -687,7 +791,7 @@
 					Dropright
 				</h5>
 				<div class="frame-wrap">
-					<div class="demo-h-spacing-sm">
+					<div class="demo demo-no-mb">
 						<div class="btn-group dropright">
 							<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Dropright
@@ -721,7 +825,7 @@
 					Dropleft
 				</h5>
 				<div class="frame-wrap">
-					<div class="demo-h-spacing-sm">
+					<div class="demo demo-no-mb">
 
 						<div class="btn-group dropleft">
 							<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -757,6 +861,139 @@
 				</div>
 			</div>
 		</div>
+		<!-- Container -->
+		<div class="card mb-g">
+			<h4 class="card-header">
+				Container
+				<small>
+				You can add any content to dropdown containers and change its width by adding the class <code>.dropdown-sm</code>, <code>.dropdown-md</code>, <code>.dropdown-lg</code>, and <code>.dropdown-xl</code>
+				</small>
+			</h4>
+			<div class="card-body">
+				<div class="frame-wrap mb-0">
+					<div class="demo">
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								dropdown-sm
+							</button>
+							<div class="dropdown-menu dropdown-sm">
+								<button class="dropdown-item" type="button">Action</button>
+								<button class="dropdown-item" type="button">Another action</button>
+								<button class="dropdown-item" type="button">Something else</button>
+							</div>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								dropdown-md
+							</button>
+							<div class="dropdown-menu dropdown-md">
+								<button class="dropdown-item" type="button">Action</button>
+								<button class="dropdown-item" type="button">Another action</button>
+								<button class="dropdown-item" type="button">Something else here</button>
+							</div>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								dropdown-lg
+							</button>
+							<div class="dropdown-menu dropdown-lg">
+								<button class="dropdown-item" type="button">Action</button>
+								<button class="dropdown-item" type="button">Another action</button>
+								<button class="dropdown-item" type="button">Something else here</button>
+							</div>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								dropdown-xl
+							</button>
+							<div class="dropdown-menu dropdown-xl">
+								<button class="dropdown-item" type="button">Action</button>
+								<button class="dropdown-item" type="button">Another action</button>
+								<button class="dropdown-item" type="button">Something else here</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<!-- Headers -->
+		<div class="card mb-g">
+			<h4 class="card-header">
+				Headers
+				<small>
+				Customize <code>.dropdown-header</code> using utility classes. Change <a href="#" target="_blank">backgrounds</a>, <a href="#" target="_blank">colors</a>, and paddings using various <a href="#" target="_blank">helpers</a>.
+				</small>
+			</h4>
+			<div class="card-body">
+				<div class="frame-wrap mb-0">
+					<div class="demo">
+						<div class="btn-group">
+							<button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Custom header 1
+							</button>
+							<div class="dropdown-menu p-0">
+								<div class="dropdown-header bg-trans-gradient d-flex flex-row px-4 py-4 rounded-top text-white">
+									<div class="d-flex flex-row align-items-center mt-1 mb-1 color-white">
+										<span class="mr-2">
+											<img src="img/avatar-sunny.png" class="rounded-circle profile-image" alt="Dr. Codex Lantern">
+										</span>
+										<div class="info-card-text">
+											<div class="fs-lg text-truncate text-truncate-lg">Dr. Codex Lantern</div>
+											<span class="text-truncate text-truncate-md opacity-80">drlantern@nextgen.com</span>
+										</div>
+									</div>
+								</div>
+								<button class="dropdown-item" type="button">Action</button>
+								<button class="dropdown-item" type="button">Another action</button>
+								<button class="dropdown-item" type="button">Something else</button>
+							</div>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Custom header 2
+							</button>
+							<div class="dropdown-menu p-0">
+								<div class="dropdown-header bg-brand-gradient d-flex flex-row px-4 py-4 rounded-top text-white">
+									<div class="d-flex flex-row align-items-center mt-1 mb-1 color-white">
+										<span class="mr-2">
+											<img src="img/avatar-sunny.png" class="rounded-circle profile-image" alt="Dr. Codex Lantern">
+										</span>
+										<div class="info-card-text">
+											<div class="fs-lg text-truncate text-truncate-lg">Dr. Codex Lantern</div>
+											<span class="text-truncate text-truncate-md opacity-80">drlantern@nextgen.com</span>
+										</div>
+									</div>
+								</div>
+								<button class="dropdown-item" type="button">Action</button>
+								<button class="dropdown-item" type="button">Another action</button>
+								<button class="dropdown-item" type="button">Something else</button>
+							</div>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Custom header 3
+							</button>
+							<div class="dropdown-menu p-0">
+								<div class="dropdown-header bg-danger-900 bg-info-gradient d-flex flex-row px-4 py-4 rounded-top text-white">
+									<div class="d-flex flex-row align-items-center mt-1 mb-1 color-white">
+										<span class="mr-2">
+											<img src="img/avatar-sunny.png" class="rounded-circle profile-image" alt="Dr. Codex Lantern">
+										</span>
+										<div class="info-card-text">
+											<div class="fs-lg text-truncate text-truncate-lg">Dr. Codex Lantern</div>
+											<span class="text-truncate text-truncate-md opacity-80">drlantern@nextgen.com</span>
+										</div>
+									</div>
+								</div>
+								<button class="dropdown-item" type="button">Action</button>
+								<button class="dropdown-item" type="button">Another action</button>
+								<button class="dropdown-item" type="button">Something else</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>			
 		<!-- Alignment -->
 		<div class="card mb-g">
 			<h4 class="card-header">
@@ -790,12 +1027,12 @@
 			</h4>
 			<div class="card-body">
 				<h5 class="frame-heading">
-					Left-aligned
+					Left-aligned but right aligned when large screen
 				</h5>
 				<div class="frame-wrap">
 					<div class="btn-group">
 						<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
-							Left-aligned but right aligned when large screen
+							Left aligned large screens
 						</button>
 						<div class="dropdown-menu dropdown-menu-lg-right">
 							<button class="dropdown-item" type="button">Action</button>
@@ -805,12 +1042,12 @@
 					</div>
 				</div>
 				<h5 class="frame-heading">
-					Right-aligned
+					Right-aligned but left aligned when large screen
 				</h5>
 				<div class="frame-wrap mb-0">
 					<div class="btn-group">
 						<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
-							Right-aligned but left aligned when large screen
+							Right aligned large screens
 						</button>
 						<div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
 							<button class="dropdown-item" type="button">Action</button>
