@@ -312,11 +312,11 @@
 
 		& + .dropdown-menu {
 			right: 0;
-			top: $panel-hdr-height !important;
+			//top: $panel-hdr-height !important;
 			left: auto !important;
 			margin:0;
 			border-radius:0;
-			min-width: 150px;
+			//min-width: 150px;
 		}
 	}
 

@@ -73,14 +73,15 @@ $grid-breakpoints: (
 		display: none;
 	}
 
-	.mobile.mobile-view-activated {
+	// why was this used?
+	/*.mobile.mobile-view-activated {
 		header {
 			.dropdown-item-menu.float-sm-left {
 				right:0px;
 				z-index: 1;
 			}
 		}
-	}
+	}*/
 
 	body {
 		overflow-x: hidden;

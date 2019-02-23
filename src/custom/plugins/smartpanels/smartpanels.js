@@ -371,10 +371,11 @@
                     * Add a color select button to the panel header (if set to true).
                     **/
                     if (self.o.colorButton === true && tPanel.data('panel-color') === undefined) {
-                        colorButton = ' <div class="dropdown-item d-flex align-items-center">\
-                                            <span data-i18n="drpdwn.panelcolor">' + self.o.colorButtonLabel + '</span>\
-                                            <i class="ni ni-chevron-right ml-auto"></i>\
-                                            <div class="dropdown-item-menu float-sm-left d-flex flex-wrap" style="width: 9.5rem; padding: 0.5rem">' + formatedPanelColors.join(" ") + '</div>\
+                        colorButton = ' <div class="dropdown-multilevel dropdown-multilevel-left">\
+                                            <div class="dropdown-item">\
+                                                <span data-i18n="drpdwn.panelcolor">' + self.o.colorButtonLabel + '</span>\
+                                            </div>\
+                                            <div class="dropdown-menu d-flex flex-wrap" style="min-width: 9.5rem; width: 9.5rem; padding: 0.5rem">' + formatedPanelColors.join(" ") + '</div>\
                                         </div>'
                     } else {
                         colorButton = '';
