@@ -178,9 +178,9 @@ $grid-breakpoints: (
   // Medium screen / tablet
   md: 768px,
   // Large screen / desktop
-  lg: 992px,
+  lg: 992px, // also change 'mobileResolutionTrigger' in app.config.js
   // Decently size screen / wide laptop
-  xl: 1200px 
+  xl: 1399px 
 );
 
 $mobile-breakpoint:          lg !default;                               /* define when mobile menu activates, here we are declearing (lg) so it targets the one after it */
