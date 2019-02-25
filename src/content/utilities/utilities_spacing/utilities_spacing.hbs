@@ -1,0 +1,45 @@
+{{#> 
+	layouts/main 
+	title="Spacing" 
+	pagename="utilities_spacing" 
+	heading="<i class='subheader-icon fal fa-window'></i>  Spacing" 
+	category_1="Utilities" 
+	pagedescription="Quickly and easily clear floated content within a container by adding a clearfix utility."
+}}
+
+{{#*inline "head-block"}}
+<link rel="stylesheet" media="screen, print" href="css/theme-demo.css">
+{{/inline}}
+
+{{#*inline "content-block"}}
+
+<div class="row">
+	<div class="col-xl-12">
+		<div id="panel-1" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Default <span class="fw-300"><i>Panel</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{/inline}}
+
+{{#*inline "scripts-block"}}{{/inline}}
+
+{{/layouts/main}}
