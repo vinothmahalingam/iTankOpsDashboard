@@ -148,17 +148,24 @@
 			<div class="panel-container show">
 				<div class="panel-content">									
 					<div class="panel-tag">
-						Add some navigation to a card’s header (or block) with built-in nav components.
+						Add some navigation to a card’s header (or block) with built-in nav components. You can reveal or hide elements during <code>.collapse</code> state using the classes <code>.collapsed-reveal</code> and <code>.collapsed-hidden</code>
+						<br><br>
+						<strong>Make sure the <code>.collapsed-*</code> classes are inside the <code>data-toggle="collapse"</code> element or adjacent to it</strong>
 					</div>
 
 					<div class="frame-wrap w-100">
 						<div class="accordion" id="accordionExample">
 							<div class="card">
-								<div class="card-header p-0" id="headingOne">
+								<div class="card-header p-0 bg-faded" id="headingOne">
 									<a href="javascript:void(0);" class="mb-0 h4 px-4 py-3 d-flex" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 										Collapsible Group Item #1
 										<span class="ml-auto">
-											a
+											<span class="collapsed-reveal">
+												<i class="fal fa-minus-circle text-danger"></i>
+											</span>
+											<span class="collapsed-hidden">
+												<i class="fal fa-plus-circle text-success"></i>
+											</span>
 										</span>
 									</a>
 								</div>
@@ -169,9 +176,17 @@
 								</div>
 							</div>
 							<div class="card">
-								<div class="card-header p-0" id="headingTwo">
+								<div class="card-header p-0 bg-faded" id="headingTwo">
 									<a href="javascript:void(0);" class="mb-0 collapsed h4 px-4 py-3 d-flex" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 										Collapsible Group Item #2
+										<span class="ml-auto">
+											<span class="collapsed-reveal">
+												<i class="fal fa-minus-circle text-danger"></i>
+											</span>
+											<span class="collapsed-hidden">
+												<i class="fal fa-plus-circle text-success"></i>
+											</span>
+										</span>
 									</a>
 								</div>
 								<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
@@ -181,9 +196,17 @@
 								</div>
 							</div>
 							<div class="card">
-								<div class="card-header p-0" id="headingThree">
+								<div class="card-header p-0 bg-faded" id="headingThree">
 									<a href="javascript:void(0);" class="mb-0 collapsed h4 px-4 py-3 d-flex" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
 										Collapsible Group Item #3
+										<span class="ml-auto">
+											<span class="collapsed-reveal">
+												<i class="fal fa-minus-circle text-danger"></i>
+											</span>
+											<span class="collapsed-hidden">
+												<i class="fal fa-plus-circle text-success"></i>
+											</span>
+										</span>
 									</a>
 								</div>
 								<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
@@ -193,9 +216,17 @@
 								</div>
 							</div>
 							<div class="card">
-								<div class="card-header p-0" id="headingFour">
-									<a href="javascript:void(0);" class="mb-0 collapsed h4 px-4 py-3 d-block" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+								<div class="card-header p-0 bg-faded" id="headingFour">
+									<a href="javascript:void(0);" class="mb-0 collapsed h4 px-4 py-3 d-flex" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
 										Collapsible Group Item #4
+										<span class="ml-auto">
+											<span class="collapsed-reveal">
+												<i class="fal fa-minus-circle text-danger"></i>
+											</span>
+											<span class="collapsed-hidden">
+												<i class="fal fa-plus-circle text-success"></i>
+											</span>
+										</span>
 									</a>
 								</div>
 								<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
