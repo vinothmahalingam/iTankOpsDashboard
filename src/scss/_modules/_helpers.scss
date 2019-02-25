@@ -130,6 +130,7 @@
 
 /* borders */
 .border-faded { border: 1px solid rgba($fusion-900, 0.07) }
+.border-transparent: {border: 1px solid transparent !important;}
 
 /* border radius */
 //.border-radius-0 { border-radius:0 !important }
@@ -138,6 +139,7 @@
 .border-top-right-radius-0 { border-top-right-radius: 0 !important; }
 .border-bottom-right-radius-0 { border-bottom-right-radius: 0 !important; }
 .rounded-plus { border-radius: $border-radius-plus }
+
 
 /* progressbars */
 .progress-xs { height: 5px }
