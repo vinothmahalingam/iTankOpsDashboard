@@ -116,8 +116,7 @@
 .prettyprint {
     overflow:auto; 
     background: $frame-border-color; 
-    font-size:100%;
-    padding: $grid-gutter-width-base/1.5 !important;
+    font-size: 100%;
+    padding: $panel-spacer-y $panel-spacer-x !important;
     border: 0 !important;
-    margin-bottom: $grid-gutter-width-base;
 }

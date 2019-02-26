@@ -1,12 +1,11 @@
 .card-header {
 	color: inherit;
-	font-size: rem($panel-hdr-font-size);
-
+	background-color: $frame-border-color;
 	small {
 		margin:0;
 		opacity: 0.8;
 		font-weight: 400;
-		font-size: rem($panel-hdr-font-size - 2);
+		font-size: 85%;
 	}
 } 
 
@@ -36,4 +35,15 @@
 	.nav-link {
 		font-size: $font-size-base;
 	}
+}
+
+/* card title */
+.card-title {
+	font-size: $h5-font-size;	
+}
+
+.card-header .card-title {
+	display: inline-block;
+	padding: 0;
+	margin: 0 0.5rem 0 0;
 }

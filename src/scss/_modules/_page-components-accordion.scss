@@ -1,0 +1,25 @@
+.accordion {
+	.card {
+		.card-header {
+			cursor: pointer;
+			margin: 0;
+			padding: 0;
+			border-bottom: 0;
+			background-color: $frame-border-color;
+			.card-title {
+				padding: 1rem 1rem 1rem $card-spacer-x;
+				margin: 0;
+				font-size: $h6-font-size;	
+				font-weight: 500;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				color: $primary-500;
+
+				&.collapsed {
+					color: $fusion-100;
+				}
+			}
+		}
+	}
+}

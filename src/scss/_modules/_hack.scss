@@ -286,9 +286,12 @@ body:not(.mobile-view-activated).mod-main-boxed.modal-open {
 }
 
 /* add borders to button groups */
-.btn-group .btn:not([class*="btn-outline-"]):not(.btn-icon), 
-.input-group-prepend, 
-.input-group-append {
-    border-right: 1px solid rgba($black, 0.1);
-    border-left: 1px solid rgba($black, 0.1);
+.btn-group .btn:not([class*="btn-outline-"]):not(.btn-icon) {
+	border-right: 1px solid rgba($black, 0.1);
+	border-left: 1px solid rgba($black, 0.1);
+}
+
+.btn-group-vertical .btn:not([class*="btn-outline-"]):not(:first-child),
+.btn-group-vertical .btn-group {
+	border-top: 1px solid rgba($black, 0.1);
 }
