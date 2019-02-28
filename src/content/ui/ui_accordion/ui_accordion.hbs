@@ -13,30 +13,30 @@
 
 {{#*inline "content-block"}}
 <div class="alert alert-primary alert-dismissible">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">
-            <i class="fal fa-times"></i>
-        </span>
-    </button>
-    <div class="d-flex flex-start w-100">
-        <div class="mr-2 hidden-md-down">
-            <span class="icon-stack icon-stack-lg">
-                <i class="base base-6 icon-stack-3x opacity-100 color-primary-500"></i>
-                <i class="base base-10 icon-stack-2x opacity-100 color-primary-300 fa-flip-vertical"></i>
-                <i class="fal fa-info icon-stack-1x opacity-100 color-white"></i>
-            </span>
-        </div>
-        <div class="d-flex flex-fill">
-            <div class="flex-fill">
-                <span class="h5">How it works</span>
-                <br> 
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">
+			<i class="fal fa-times"></i>
+		</span>
+	</button>
+	<div class="d-flex flex-start w-100">
+		<div class="mr-2 hidden-md-down">
+			<span class="icon-stack icon-stack-lg">
+				<i class="base base-6 icon-stack-3x opacity-100 color-primary-500"></i>
+				<i class="base base-10 icon-stack-2x opacity-100 color-primary-300 fa-flip-vertical"></i>
+				<i class="fal fa-info icon-stack-1x opacity-100 color-white"></i>
+			</span>
+		</div>
+		<div class="d-flex flex-fill">
+			<div class="flex-fill">
+				<span class="h5">How it works</span>
+				<br> 
 				Be sure to add <code>aria-expanded</code> to the control element. This attribute explicitly conveys the current state of the collapsible element tied to the control to screen readers and similar assistive technologies. If the collapsible element is closed by default, the attribute on the control element should have a value of <code>aria-expanded="false"</code>. If you’ve set the collapsible element to be open by default using the <code>show</code> class, set <code>aria-expanded="true"</code> on the control instead.
 				<br> 
 				<br> 
 				Learn more about this plugin on bootstrap's <a href="https://getbootstrap.com/docs/{{bs4v}}/components/collapse/#accordion-example" target="_blank">official documentation</a>.
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>
+	</div>
 </div>
 <div class="row">
 	<div class="col-xl-6">
@@ -120,7 +120,8 @@
 						<div class="card">
 							<div class="card-header">
 								<a href="javascript:void(0);" class="card-title" data-toggle="collapse" data-target="#js_demo_accordion-3a" aria-expanded="true">
-									Collapsible Group Item #1
+									<i class="fal fa-file-medical-alt width-2 fs-xl"></i>
+									Medical Records
 									<span class="ml-auto">
 										<span class="collapsed-reveal">
 											<i class="fal fa-minus fs-xl"></i>
@@ -140,7 +141,8 @@
 						<div class="card">
 							<div class="card-header">
 								<a href="javascript:void(0);" class="card-title collapsed" data-toggle="collapse" data-target="#js_demo_accordion-3b" aria-expanded="false">
-									Collapsible Group Item #2
+									<i class="fal fa-video width-2 fs-xl"></i>
+									Video logs
 									<span class="ml-auto">
 										<span class="collapsed-reveal">
 											<i class="fal fa-minus fs-xl"></i>
@@ -160,7 +162,8 @@
 						<div class="card">
 							<div class="card-header">
 								<a href="javascript:void(0);" class="card-title collapsed" data-toggle="collapse" data-target="#js_demo_accordion-3c" aria-expanded="false">
-									Collapsible Group Item #3
+									<i class="fal fa-first-aid width-2 fs-xl"></i>
+									Medical history
 									<span class="ml-auto">
 										<span class="collapsed-reveal">
 											<i class="fal fa-minus fs-xl"></i>
@@ -209,7 +212,7 @@
 											<i class="fal fa-plus fs-xl"></i>
 										</span>
 									</span>
-									Collapsible Group Item #1
+									Application settings
 								</a>
 							</div>
 							<div id="js_demo_accordion-1a" class="collapse show" data-parent="#js_demo_accordion-1">
@@ -229,7 +232,7 @@
 											<i class="fal fa-plus fs-xl"></i>
 										</span>
 									</span>
-									Collapsible Group Item #2
+									User management
 								</a>
 							</div>
 							<div id="js_demo_accordion-1b" class="collapse" data-parent="#js_demo_accordion-1">
@@ -249,7 +252,7 @@
 											<i class="fal fa-plus fs-xl"></i>
 										</span>
 									</span>
-									Collapsible Group Item #3
+									User groups
 								</a>
 							</div>
 							<div id="js_demo_accordion-1c" class="collapse" data-parent="#js_demo_accordion-1">
@@ -288,7 +291,7 @@
 							<div class="card">
 								<div class="card-header">
 									<a href="javascript:void(0);" class="card-title" data-toggle="collapse" data-target="#js_demo_accordion-4a" aria-expanded="true">
-										Collapsible Group Item #1
+										Email marketing
 										<span class="ml-auto">
 											<span class="collapsed-reveal">
 												<i class="fal fa-minus-circle text-danger fs-xl"></i>
@@ -308,7 +311,7 @@
 							<div class="card">
 								<div class="card-header">
 									<a href="javascript:void(0);" class="card-title collapsed" data-toggle="collapse" data-target="#js_demo_accordion-4b" aria-expanded="false">
-										Collapsible Group Item #2
+										Online compaign
 										<span class="ml-auto">
 											<span class="collapsed-reveal">
 												<i class="fal fa-minus-circle text-danger fs-xl"></i>
@@ -328,7 +331,7 @@
 							<div class="card">
 								<div class="card-header">
 									<a href="javascript:void(0);" class="card-title collapsed" data-toggle="collapse" data-target="#js_demo_accordion-4c" aria-expanded="false">
-										Collapsible Group Item #3
+										Electronic Data Management
 										<span class="ml-auto">
 											<span class="collapsed-reveal">
 												<i class="fal fa-minus-circle text-danger fs-xl"></i>
@@ -371,7 +374,8 @@
 						<div class="card">
 							<div class="card-header">
 								<a href="javascript:void(0);" class="card-title" data-toggle="collapse" data-target="#js_demo_accordion-5a" aria-expanded="true">
-									Collapsible Group Item #1
+									<i class="fal fa-cog width-2 fs-xl"></i>
+									Report settings
 									<span class="ml-auto">
 										<span class="collapsed-reveal">
 											<i class="fal fa-chevron-up fs-xl"></i>
@@ -391,7 +395,8 @@
 						<div class="card">
 							<div class="card-header">
 								<a href="javascript:void(0);" class="card-title collapsed" data-toggle="collapse" data-target="#js_demo_accordion-5b" aria-expanded="false">
-									Collapsible Group Item #2
+									<i class="fal fa-code-merge width-2 fs-xl"></i>
+									Merge reports
 									<span class="ml-auto">
 										<span class="collapsed-reveal">
 											<i class="fal fa-chevron-up fs-xl"></i>
@@ -411,7 +416,8 @@
 						<div class="card">
 							<div class="card-header">
 								<a href="javascript:void(0);" class="card-title collapsed" data-toggle="collapse" data-target="#js_demo_accordion-5c" aria-expanded="false">
-									Collapsible Group Item #3
+									<i class="fal fa-cloud-upload-alt width-2 fs-xl"></i>
+									Backup reports
 									<span class="ml-auto">
 										<span class="collapsed-reveal">
 											<i class="fal fa-chevron-up fs-xl"></i>
@@ -435,7 +441,7 @@
 		<div id="panel-6" class="panel">
 			<div class="panel-hdr">	
 				<h2>
-					Nested <span class="fw-300"><i>accordion</i></span> 
+					Nested <span class="fw-300"><i>accordion and applied utilities</i></span> 
 				</h2>
 				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
@@ -451,9 +457,17 @@
 					<div class="accordion" id="js_demo_accordion-6">
 						<div class="card">
 							<div class="card-header">
-								<a href="javascript:void(0);" class="card-title" data-toggle="collapse" data-target="#js_demo_accordion-6a" aria-expanded="true">
-									Collapsible Group Item #1
-									<span class="ml-auto">
+								<div class="card-title" data-toggle="collapse" data-target="#js_demo_accordion-6a" aria-expanded="true">
+									<div class="d-flex flex-row align-items-center">
+										<span class="mr-2">
+											<img src="img/avatar-sunny.png" class="rounded-circle profile-image" alt="Dr. Codex Lantern">
+										</span>
+										<div class="info-card-text">
+											<div class="text-truncate text-truncate-lg">Dr. Codex Lantern</div>
+											<span class="text-truncate text-truncate-md">drlantern@nextgen.com</span>
+										</div>
+									</div>
+									<span class="ml-auto align-self-start">
 										<span class="collapsed-reveal">
 											<i class="fal fa-chevron-up fs-xl"></i>
 										</span>
@@ -461,7 +475,7 @@
 											<i class="fal fa-chevron-down fs-xl"></i>
 										</span>
 									</span>
-								</a>
+								</div>
 							</div>
 							<div id="js_demo_accordion-6a" class="collapse show" data-parent="#js_demo_accordion-6">
 								<div class="card-body bg-primary-50">
@@ -469,60 +483,60 @@
 									<div class="accordion" id="js_demo_accordion-7">
 										<div class="card">
 											<div class="card-header">
-												<a href="javascript:void(0);" class="card-title bg-success-600 text-white" data-toggle="collapse" data-target="#js_demo_accordion-7a" aria-expanded="true">
-													Collapsible Group Item #1
+												<a href="javascript:void(0);" class="card-title px-3 py-2 bg-success-600 text-white" data-toggle="collapse" data-target="#js_demo_accordion-7a" aria-expanded="true">
+													Bloodworks
 													<span class="ml-auto">
 														<span class="collapsed-reveal">
-															<i class="fal fa-chevron-up fs-xl"></i>
+															<i class="fal fa-minus fs-xl"></i>
 														</span>
 														<span class="collapsed-hidden">
-															<i class="fal fa-chevron-down fs-xl"></i>
+															<i class="fal fa-plus fs-xl"></i>
 														</span>
 													</span>
 												</a>
 											</div>
 											<div id="js_demo_accordion-7a" class="collapse show" data-parent="#js_demo_accordion-7">
-												<div class="card-body bg-success-50">
+												<div class="card-body bg-success-50 p-3">
 													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. 
 												</div>
 											</div>
 										</div>
 										<div class="card">
 											<div class="card-header">
-												<a href="javascript:void(0);" class="card-title collapsed bg-warning-500 text-dark" data-toggle="collapse" data-target="#js_demo_accordion-7b" aria-expanded="false">
-													Collapsible Group Item #2
+												<a href="javascript:void(0);" class="card-title px-3 py-2 collapsed bg-warning-500 text-dark" data-toggle="collapse" data-target="#js_demo_accordion-7b" aria-expanded="false">
+													Xray reports
 													<span class="ml-auto">
 														<span class="collapsed-reveal">
-															<i class="fal fa-chevron-up fs-xl"></i>
+															<i class="fal fa-minus fs-xl"></i>
 														</span>
 														<span class="collapsed-hidden">
-															<i class="fal fa-chevron-down fs-xl"></i>
+															<i class="fal fa-plus fs-xl"></i>
 														</span>
 													</span>
 												</a>
 											</div>
 											<div id="js_demo_accordion-7b" class="collapse" data-parent="#js_demo_accordion-7">
-												<div class="card-body bg-warning-50">
+												<div class="card-body bg-warning-50 p-3">
 													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. 
 												</div>
 											</div>
 										</div>
 										<div class="card">
 											<div class="card-header">
-												<a href="javascript:void(0);" class="card-title collapsed bg-info-700 text-white" data-toggle="collapse" data-target="#js_demo_accordion-7c" aria-expanded="false">
-													Collapsible Group Item #3
+												<a href="javascript:void(0);" class="card-title px-3 py-2 collapsed bg-info-700 text-white" data-toggle="collapse" data-target="#js_demo_accordion-7c" aria-expanded="false">
+													ECG
 													<span class="ml-auto">
 														<span class="collapsed-reveal">
-															<i class="fal fa-chevron-up fs-xl"></i>
+															<i class="fal fa-minus fs-xl"></i>
 														</span>
 														<span class="collapsed-hidden">
-															<i class="fal fa-chevron-down fs-xl"></i>
+															<i class="fal fa-plus fs-xl"></i>
 														</span>
 													</span>
 												</a>
 											</div>
 											<div id="js_demo_accordion-7c" class="collapse" data-parent="#js_demo_accordion-7">
-												<div class="card-body bg-info-50">
+												<div class="card-body bg-info-50 p-3">
 													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. 
 												</div>
 											</div>
@@ -533,9 +547,17 @@
 						</div>
 						<div class="card">
 							<div class="card-header">
-								<a href="javascript:void(0);" class="card-title collapsed" data-toggle="collapse" data-target="#js_demo_accordion-6b" aria-expanded="false">
-									Collapsible Group Item #2
-									<span class="ml-auto">
+								<div class="card-title collapsed" data-toggle="collapse" data-target="#js_demo_accordion-6b" aria-expanded="false">
+									<div class="d-flex flex-row align-items-center">
+										<span class="mr-2">
+											<img src="img/avatars/avatar-j.png" class="rounded-circle profile-image" alt="Jessica Milano">
+										</span>
+										<div class="info-card-text">
+											<div class="text-truncate text-truncate-lg">Jessica Milano</div>
+											<span class="text-truncate text-truncate-md">jmilano@nextgen.com</span>
+										</div>
+									</div>
+									<span class="ml-auto align-self-start">
 										<span class="collapsed-reveal">
 											<i class="fal fa-chevron-up fs-xl"></i>
 										</span>
@@ -543,34 +565,19 @@
 											<i class="fal fa-chevron-down fs-xl"></i>
 										</span>
 									</span>
-								</a>
+								</div>								
 							</div>
 							<div id="js_demo_accordion-6b" class="collapse" data-parent="#js_demo_accordion-6">
 								<div class="card-body">
-									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+									<div class="alert alert-danger mb-0">
+										<strong>
+											Oops!
+										</strong>
+										Looks like there are no reports available for this user
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="card">
-							<div class="card-header">
-								<a href="javascript:void(0);" class="card-title collapsed" data-toggle="collapse" data-target="#js_demo_accordion-6c" aria-expanded="false">
-									Collapsible Group Item #3
-									<span class="ml-auto">
-										<span class="collapsed-reveal">
-											<i class="fal fa-chevron-up fs-xl"></i>
-										</span>
-										<span class="collapsed-hidden">
-											<i class="fal fa-chevron-down fs-xl"></i>
-										</span>
-									</span>
-								</a>
-							</div>
-							<div id="js_demo_accordion-6c" class="collapse" data-parent="#js_demo_accordion-6">
-								<div class="card-body">
-									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-								</div>
-							</div>
-						</div>
+						</div>						
 					</div>
 				</div>
 			</div>

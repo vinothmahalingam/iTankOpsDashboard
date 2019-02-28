@@ -407,13 +407,19 @@
 			color: #060606;
 			min-height: $panel-hdr-height - 4;
 
-			 > :first-child {
-			 	padding-left: 10px;
-			 }
-			  > :last-child {
+			> :first-child {
+				padding-left: 10px;
+			}
+			> :last-child {
 			  	padding-right: 10px;
-			  }
+			}
+
+			.panel-toolbar .btn-toolbar-master {
+				margin-right: -10px;
+			}
 		}
+
+
 
 		.panel-container {
 			.panel-content:first-child {

@@ -484,10 +484,16 @@ $grid-breakpoints: (
 		font-size: 10px !important;
 	}
 
+
 	.card {
 		.card-header,
 		.card-body {
 			padding: 1rem;
 		}
+	}
+	.alert,
+	.panel .panel-tag,
+	.accordion .card .card-header .card-title {
+		padding: 1rem;
 	}
 }
