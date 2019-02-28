@@ -165,14 +165,14 @@
 				font-size: $nav-font-icon-size - 2;
 			}*/
 
-			> img {
+			/*> img {
 				background: $primary-500;
 				padding: 0.125rem;
 				width: 20px;
 				height: 20px;
 				margin-left: 5px;
 				margin-right: $nav-icon-margin-right + 0.1875rem;
-			}
+			}*/
 
 			> .nav-link-text {
 
@@ -240,7 +240,7 @@
 				a {
 					color: darken($nav-link-color, 5%);
 
-					padding: $nav-padding-y $nav-padding-x $nav-padding-y $nav-padding-x + $nav-icon-width + $nav-icon-margin-right + 0.03125rem;
+					padding: $nav-padding-y $nav-padding-x $nav-padding-y $nav-padding-x + $nav-icon-width + $nav-icon-margin-right;
 
 					b.collapse-sign {
 						>[class*='fa-'],
@@ -327,7 +327,7 @@
 
 						a {
 							color: darken($nav-link-color, 7%);
-							padding: $nav-padding-y $nav-padding-x $nav-padding-y ($nav-padding-x + $nav-icon-width + $nav-icon-margin-right + 0.03125rem + 1.25rem);
+							padding: $nav-padding-y $nav-padding-x $nav-padding-y ($nav-padding-x + $nav-icon-width + $nav-icon-margin-right + 0.75rem);
 
 							.dl-ref {
 								margin-left: 0;

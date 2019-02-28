@@ -13,89 +13,79 @@
 
 {{#*inline "content-block"}}
 
-<div class="alert alert-primary alert-dismissible">
-	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">
-            <i class="fal fa-times"></i>
-        </span>
-    </button>
-    <div class="d-flex flex-start w-100">
-        <div class="mr-2">
-            <span class="icon-stack icon-stack-lg">
-				<i class="base-2 icon-stack-3x color-primary-400"></i>
-				<i class="base-3 icon-stack-2x color-primary-600 opacity-70"></i>
-				<i class="fal fa-lightbulb icon-stack-1x text-white opacity-90"></i>
-            </span>
-        </div>
-        <div class="d-flex flex-fill">
-            <div class="flex-fill">
-                <span class="h5">Heads Up!</span>
-                <br>
-                All changes are stored to localStorage by default. <strong>pushSettings()</strong> inherits this trait. Set <code>"storeLocally"</code> to <strong>false</strong> via <strong>app.config.js</strong> to disable this action.
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="card mb-g">
-
-	<div class="card-body">
-
-		<div class="row">
-
-			<div class="col">
-
-				<label for="pushSettings_input">
-					<strong>"pushSettings" applies class[array] to App</strong> <br>
-					<strong>e.g.</strong> $.ajax({ .. success: function (data) {  var DataBase_str = data[i].appSettings } .. }); initApp.pushSettings( DataBase_str );
-				</label>
-				<div class="input-group mb-g">
-					<input type="text" id="pushSettings_input" list="css_list" name="pushSettings_input" class="form-control" placeholder="e.g. header-function-fixed nav-function-fixed" >
-					<datalist id="css_list">
-						<option value="header-function-fixed">
-						<option value="nav-function-fixed">
-						<option value="nav-function-minify">
-						<option value="nav-function-hidden">
-						<option value="nav-function-top">
-						<option value="mod-main-boxed">
-						<option value="nav-mobile-push">
-						<option value="nav-mobile-no-overlay">
-						<option value="nav-mobile-slide-out">
-						<option value="mod-bigger-font">
-					</datalist>
-					<div class="input-group-append">
-						<button class="btn btn-secondary btn-w-m" type="button" id="pushSettings_btn">push()</button>
+<div class="row">
+	<div class="col-xl-12">
+		<div id="panel-1" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Test <span class="fw-300"><i>it out!</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						 All changes are stored to localStorage by default. <strong>pushSettings()</strong> inherits this trait. Set <code>"storeLocally"</code> to <strong>false</strong> via <strong>app.config.js</strong> to disable this action.
+					</div>
+					<div class="row">
+						<div class="col-xl-6 order-2 order-xl-1">
+							<div class="form-group">
+								<label for="pushSettings_input">
+									<strong>Push Settings</strong>
+								</label>
+								<div class="input-group">
+									<input type="text" id="pushSettings_input" list="css_list" name="pushSettings_input" class="form-control" placeholder="e.g. header-function-fixed nav-function-fixed" >
+									<datalist id="css_list">
+										<option value="header-function-fixed">
+										<option value="nav-function-fixed">
+										<option value="nav-function-minify">
+										<option value="nav-function-hidden">
+										<option value="nav-function-top">
+										<option value="mod-main-boxed">
+										<option value="nav-mobile-push">
+										<option value="nav-mobile-no-overlay">
+										<option value="nav-mobile-slide-out">
+										<option value="mod-bigger-font">
+									</datalist>
+									<div class="input-group-append">
+										<button class="btn btn-secondary btn-w-m" type="button" id="pushSettings_btn">push()</button>
+									</div>
+								</div>
+								<div class="help-block">
+									$.ajax({ .. success: function (data) {  var DataBase_str = data[i].appSettings } .. }); initApp.pushSettings( DataBase_str );
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="getSettings_input">
+									<strong>Get Settings</strong>
+								</label>
+								<div class="input-group">
+									<input type="text" id="getSettings_input" name="getSettings_input" readonly="readonly" class="form-control" placeholder="filters and returns nav-*, header-*, mod-*, & display-*">
+									<div class="input-group-append">
+										<button class="btn btn-secondary btn-w-m" type="button" id="getSettings_btn">get()</button>
+									</div>
+								</div>
+								<div class="help-block">
+									var DataBase_str = initApp.getSettings(); $.ajax({ data: {DataBase_str}, dataType: "json" ... })
+								</div>
+							</div>
+							<hr class="my-5">
+							<button class="btn btn-outline-danger mr-1" type="button" data-action="app-reset"><u>R</u>eset Settings</button>
+							<button class="btn btn-outline-success" type="button" id="ng_eventlog_clear"><u>C</u>lear Events</button>
+						</div>
+						<div class="col-xl-6 order-1 order-xl-1">
+							<div id="app-eventlog" class="alert alert-primary p-1 h-auto mb-4 mb-xl-0"></div>
+						</div>
 					</div>
 				</div>
-
-				<label for="getSettings_input">
-					<strong>"getSettings" filters and returns current App settings for database storage</strong> <br>
-					<strong>e.g.</strong> var DataBase_str = initApp.getSettings(); $.ajax({ data: {DataBase_str}, dataType: "json" ... })
-				</label>
-				<div class="input-group">
-					<input type="text" id="getSettings_input" name="getSettings_input" readonly="readonly" class="form-control" placeholder="filters and returns nav-*, header-*, mod-*, & display-*">
-					<div class="input-group-append">
-						<button class="btn btn-secondary btn-w-m" type="button" id="getSettings_btn">get()</button>
-					</div>
-				</div>
-				<small class="form-text text-muted">filters and returns nav-*, header-*, mod-*, & display-*</small>
-
-				<hr>
-				
-				<button class="btn btn-outline-danger mr-1" type="button" data-action="app-reset"><u>R</u>eset Settings</button>
-				<button class="btn btn-outline-success" type="button" id="ng_eventlog_clear"><u>C</u>lear Events</button>
 			</div>
-
-			<div class="col">
-				<div id="app-eventlog" class="card p-1 d-block"></div>
-			</div>
-			
-		</div>
-
+		</div>		
 	</div>
-	
 </div>
-
 {{/inline}}
 
 {{#*inline "scripts-block"}}

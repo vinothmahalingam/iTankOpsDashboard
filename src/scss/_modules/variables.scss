@@ -289,7 +289,7 @@ $badge-font-size:                   85%;
 $card-spacer-y:                     1rem;
 $card-spacer-x:                     1.5rem;
 $card-cap-bg:                       inherit;
-$card-border-color:                 rgba(0, 0, 0, 0.055);
+$card-border-color:                 rgba(0, 0, 0, 0.08);
 $list-group-border-color:           $card-border-color;
 
 /*border radius*/
@@ -615,7 +615,7 @@ $nav-font-icon-size:							1.125rem !default; //23px for Fontawesome & 20px for 
 $nav-font-icon-size-sub:					1.125rem !default;
 
 $nav-icon-width:									1.75rem !default;
-$nav-icon-margin-right:						0.3rem !default;
+$nav-icon-margin-right:						0.25rem !default;
 
 /* badge default */
 $nav-badge-color: 								$white !default;
