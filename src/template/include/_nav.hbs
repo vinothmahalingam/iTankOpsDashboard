@@ -107,7 +107,7 @@
 		</ul>
 	</li>
 	<li class="nav-title">Tools &amp; Components </li>
-	<li {{#is pagename "in" "ui_alerts,ui_accordion,ui_breadcrumbs,ui_buttons,ui_button_group,ui_cards,ui_carousel,ui_collapse,ui_dropdowns,ui_labels_badges,ui_list_filter,ui_loaders,ui_modal,ui_navbars,ui_panels,ui_pagination,ui_tabs_accordions,ui_toasts,ui_progress_bars,ui_scrollspy,ui_tooltips_popovers"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "ui_alerts,ui_accordion,ui_badges,ui_breadcrumbs,ui_buttons,ui_button_group,ui_cards,ui_carousel,ui_collapse,ui_dropdowns,ui_list_filter,ui_loaders,ui_modal,ui_navbars,ui_panels,ui_pagination,ui_tabs_accordions,ui_toasts,ui_progress_bars,ui_scrollspy,ui_tooltips_popovers"}}class="active open"{{/is}}>
 		<a href="#" title="UI Components" data-filter-tags="ui components"> 
 			<i class="fal fa-window"></i>
 			<span class="nav-link-text" data-i18n="nav.ui_components">UI Components</span> 
@@ -121,6 +121,11 @@
 			<li {{#is pagename "===" "ui_accordion"}}class="active"{{/is}}>
 				<a href="ui_accordion.html" data-filter-tags="ui components accordion"> 
 					<span class="nav-link-text" data-i18n="nav.ui_accordion">Accordions</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "ui_badges"}}class="active"{{/is}}>
+				<a href="ui_badges.html" data-filter-tags="ui components badges"> 
+					<span class="nav-link-text" data-i18n="nav.ui_badges">Badges</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "ui_breadcrumbs"}}class="active"{{/is}}>
@@ -156,11 +161,6 @@
 			<li {{#is pagename "===" "ui_dropdowns"}}class="active"{{/is}}>
 				<a href="ui_dropdowns.html" data-filter-tags="ui components dropdowns"> 
 					<span class="nav-link-text" data-i18n="nav.ui_dropdowns">Dropdowns</span> 
-				</a>
-			</li>
-			<li {{#is pagename "===" "ui_labels_badges"}}class="active"{{/is}}>
-				<a href="ui_labels_badges.html" data-filter-tags="ui components labels & badges"> 
-					<span class="nav-link-text" data-i18n="nav.ui_labels_badges">Labels &amp; Badges</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "ui_list_filter"}}class="active"{{/is}}>

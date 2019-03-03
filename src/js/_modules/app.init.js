@@ -28,7 +28,7 @@ var initApp = (function(app) {
 		$(input).change( function () {
 
 			var filter = $(this).val().toLowerCase(),
-				listPrev = $(list).parent().next().filter('.js-filter-message');
+				listPrev = $(list).next().filter('.js-filter-message');
 	
 			/* when user types more than 1 letter start search filter */
 			if(filter.length > 1) {
@@ -37,7 +37,7 @@ var initApp = (function(app) {
 				   hiding the ones not containing the input while showing the ones that do */
 				
 				/* (1) hide all that does not match */   
-				$(list).find($("a:not([data-filter-tags*='" + filter + "'])"))
+				$(list).find($("[data-filter-tags]:not([data-filter-tags*='" + filter + "'])"))
 					.parentsUntil(list).removeClass('js-filter-show')
 					.addClass('js-filter-hide');
 

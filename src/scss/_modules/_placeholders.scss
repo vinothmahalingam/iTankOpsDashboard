@@ -198,30 +198,24 @@ RESULT:
 %ping-badge {
   position: absolute;
   display: block;
-  border-radius: $nav-badge-height + 1;
+  border-radius: 1rem;
   background-color: $nav-badge-bg-color;
   color: $nav-badge-color;
   text-align: center;
-  font-size: 8px;
   cursor: pointer;
-  //top: $nav-padding-top - 3.2;
-  right: auto;
-  left: $nav-badge-left-px;
   @include box-shadow(0 0 0 1px $nav-background);
   border: 1px solid $nav-background;
-  height: $nav-badge-height;
-  min-width: $nav-badge-height+1;
-  max-width: $nav-badge-max-width;
+  min-width: 2rem;
+  max-width: 1.5rem;
   padding: 2px;
   font-weight: 500;
   line-height: normal;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  vertical-align: text-bottom;
-  -webkit-font-smoothing: subpixel-antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
+
+
 
 /*%fixed-header-shadow {
   @include box-shadow(0 2px 2px -1px rgba(0,0,0,.1));

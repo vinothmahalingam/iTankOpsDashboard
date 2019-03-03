@@ -283,7 +283,7 @@ $badge-padding-y:                   0.5em;
 $badge-padding-x:                   0.5em;
 $badge-border-radius:               10rem;*/
 $badge-font-size:                   85%;
-
+$badge-font-weight:                 500;
 
 /* cards */
 $card-spacer-y:                     1rem;
@@ -553,6 +553,10 @@ $header-applist-box-padding-x:			 $p-2;
 $header-applist-box-padding-y:			 $p-3;
 $header-applist-icon-size:           3.125rem;
 
+/* badge */
+$header-badge-min-width:             1.25rem !default;
+$header-badge-left:                  1.5625rem !default;
+$header-badge-top:                   ($header-height / 2 - $header-badge-min-width) + 0.28125rem !default; 
 
 /* COMPONENTS & MODS */
 $nav-tabs-panel-link-height:         45px !default;
@@ -652,9 +656,9 @@ $profile-image-width-sm:          1.5625rem !default;
 $image-share-height:              2.8125rem !default; /* width is auto */
 
 /*nav Badge Size */
-$nav-badge-height:								1rem !default;
+/*$nav-badge-height:								1rem !default;
 $nav-badge-max-width:							1.5rem !default;
-$nav-badge-left-px:								$nav-padding-x + 0.96875rem !default;
+$nav-badge-left-px:								$nav-padding-x + 0.96875rem !default;*/
 
 /* nav DL labels for all child */
 $nav-dl-font-size:								0.625rem !default;
