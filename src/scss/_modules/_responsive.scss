@@ -56,8 +56,8 @@ $grid-breakpoints: (
 
 	.dropdown-menu .dropdown-menu {
 		position: static;
-		display: block;
-		margin: 0;
+		//display: block;
+		//margin: 0;
 		padding: .5rem 0 0 .75rem;
 		width: 100%;
 		border: 0;
@@ -65,8 +65,12 @@ $grid-breakpoints: (
 
 		@include transform( scale(1) );
 		opacity: 1;
-		visibility: visible;
+		//visibility: visible;
 		transition: none;
+	}
+
+	.show .dropdown-menu .dropdown-menu {
+		visibility: visible;
 	}
 
 	.dropdown-menu .dropdown-multilevel > .dropdown-item:first-child:after {

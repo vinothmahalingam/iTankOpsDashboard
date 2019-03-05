@@ -716,7 +716,7 @@ var initApp = (function(app) {
 		 **/
 		if (window.Waves && myapp_config.rippleEffect) {
 
-			Waves.attach('.nav-menu:not(.js-waves-off) a, .btn:not(.js-waves-off):not(.btn-switch), .nav-link', ['waves-themed']);
+			Waves.attach('.nav-menu:not(.js-waves-off) a, .btn:not(.js-waves-off):not(.btn-switch), .js-waves-on', ['waves-themed']);
     		Waves.init();
 
 			if (myapp_config.debugState)

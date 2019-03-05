@@ -1,0 +1,265 @@
+{{#> 
+	layouts/main 
+	title="Tabs & Pills" 
+	pagename="ui_tabs" 
+	heading="<i class='subheader-icon fal fa-window'></i> Tabs & Pills" 
+	category_1="UI Components" 
+	pagedescription="Takes the basic nav from above and adds the <code>.nav-tabs</code> class to generate a tabbed interface. Use them to create tabbable regions with our tab JavaScript plugin."
+}}
+
+{{#*inline "head-block"}}{{/inline}}
+
+{{#*inline "content-block"}}
+
+<div class="row">
+	<div class="col-xl-6">
+		<div id="panel-1" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Default <span class="fw-300"><i>Tabs</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						The most minimalistic approach to tabs. We add <code>.nav.nav-tabs</code> to an UL and <code.>tab-content</code> to adjacet element. Tabs are triggered by the data attribute <code>data-toggle="tab"</code> and <code>href="#tab_content"</code> you will link the tab you would like to display
+					</div>
+					<ul class="nav nav-tabs" role="tablist">
+						<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab_default-1" role="tab">Home</a></li>
+						<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab_default-2" role="tab">Profile</a></li>
+						<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab_default-3" role="tab">Contact</a></li>
+						<li class="nav-item"><a class="nav-link disabled" data-toggle="tab" href="#" role="tab">Disabled</a></li>
+					</ul>
+					<div class="tab-content p-3">
+						<div class="tab-pane fade show active" id="tab_default-1" role="tabpanel">
+							Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone.
+						</div>
+						<div class="tab-pane fade" id="tab_default-2" role="tabpanel">
+							Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic. 
+						</div>
+						<div class="tab-pane fade" id="tab_default-3" role="tabpanel">
+							Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="panel-2" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Directional <span class="fw-300"><i>tabs</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						Direction of the tabs can be changed by adding <code>.justify-content-end</code> and <code>justify-content-center</code> to <code>.nav.nav-tabs</code>
+						<br>
+						<br>
+						<div id="js_change_tab_direction" class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
+							<label class="btn btn-info">
+								<input type="radio" name="radioNameTabDirection" checked="" value="nav nav-tabs"> Left aligned
+							</label>
+							<label class="btn btn-info">
+								<input type="radio" name="radioNameTabDirection" value="nav nav-tabs justify-content-center"> Center aligned
+							</label>
+							<label class="btn btn-info active">
+								<input type="radio" name="radioNameTabDirection" value="nav nav-tabs justify-content-end"> Right aligned
+							</label>
+						</div>
+					</div>
+					<ul class="nav nav-tabs justify-content-end" role="tablist">
+						<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab_direction-1" role="tab">Home</a></li>
+						<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab_direction-2" role="tab">Profile</a></li>
+						<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab_direction-3" role="tab">Contact</a></li>
+					</ul>
+					<div class="tab-content p-3">
+						<div class="tab-pane fade show active" id="tab_direction-1" role="tabpanel">
+							Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone.
+						</div>
+						<div class="tab-pane fade" id="tab_direction-2" role="tabpanel">
+							Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic. 
+						</div>
+						<div class="tab-pane fade" id="tab_direction-3" role="tabpanel">
+							Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="panel-3" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Justified <span class="fw-300"><i>tabs</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						For equal-width elements, use <code>.nav-justified</code>. All horizontal space will be occupied by nav links
+					</div>
+					<ul class="nav nav-tabs nav-fill" role="tablist">
+						<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab_justified-1" role="tab">Home</a></li>
+						<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab_justified-2" role="tab">Profile</a></li>
+						<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab_justified-3" role="tab">Contact</a></li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="#" tabindex="-1">Disabled</a>
+						</li>
+					</ul>
+					<div class="tab-content p-3">
+						<div class="tab-pane fade show active" id="tab_justified-1" role="tabpanel">
+							Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone.
+						</div>
+						<div class="tab-pane fade" id="tab_justified-2" role="tabpanel">
+							Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic. 
+						</div>
+						<div class="tab-pane fade" id="tab_justified-3" role="tabpanel">
+							Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="panel-4" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Borders <span class="fw-300"><i>and icons</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						
+					</div>
+					<ul class="nav nav-tabs" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#tab_borders_icons-1" role="tab"><i class="fal fa-home mr-1"></i> Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#tab_borders_icons-2" role="tab"><i class="fal fa-home mr-1"></i> Profile</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#tab_borders_icons-3" role="tab"><i class="fal fa-home mr-1"></i> Contact</a>
+						</li>
+					</ul>
+					<div class="tab-content border border-top-0 p-3">
+						<div class="tab-pane fade show active" id="tab_borders_icons-1" role="tabpanel">
+							Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone.
+						</div>
+						<div class="tab-pane fade" id="tab_borders_icons-2" role="tabpanel">
+							Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic. 
+						</div>
+						<div class="tab-pane fade" id="tab_borders_icons-3" role="tabpanel">
+							Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="panel-5" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Default <span class="fw-300"><i>Panel</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						
+					</div>
+
+					<ul class="nav nav-tabs nav-tabs-panel" role="tablist">
+						<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab-home" role="tab">Home</a></li>
+						<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-profile" role="tab">Profile</a></li>
+						<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-contact" role="tab">Contact</a></li>
+					</ul>
+					<div class="tab-content p-3">
+						<div class="tab-pane fade show active" id="tab-home" role="tabpanel" aria-labelledby="home-tab">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone.</div>
+						<div class="tab-pane fade" id="tab-profile" role="tabpanel" aria-labelledby="profile-tab">Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic. </div>
+						<div class="tab-pane fade" id="tab-contact" role="tabpanel" aria-labelledby="contact-tab">Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="col-xl-6">
+
+		<div id="panel-6" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Default <span class="fw-300"><i>Pills</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						
+					</div>
+					<ul class="nav nav-pills" role="tablist">
+						<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#nav_pills_default-1">Home</a></li>
+						<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#nav_pills_default-2">Profile</a></li>
+						<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#nav_pills_default-3">Contact</a></li>
+						<li class="nav-item"><a class="nav-link disabled" data-toggle="tab" href="#">Contact</a></li>
+					</ul>
+					<div class="tab-content py-3">
+						<div class="tab-pane fade show active" id="nav_pills_default-1" role="tabpanel">
+							Raw denim you probably haven't heard of them jean shorts 	Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone.
+						</div>
+						<div class="tab-pane fade" id="nav_pills_default-2" role="tabpanel">
+							Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic. 
+						</div>
+						<div class="tab-pane fade" id="nav_pills_default-3" role="tabpanel">
+							Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+{{/inline}}
+
+{{#*inline "scripts-block"}}
+<script>
+	$('#js_change_tab_direction input').on('change', function() {
+		var newclass = $('input[name=radioNameTabDirection]:checked', '#js_change_tab_direction').val();
+		$('#js_change_tab_direction').parent('.panel-tag').next('.nav.nav-tabs').removeClass().addClass(newclass);
+	});
+</script>
+{{/inline}}
+
+{{/layouts/main}}

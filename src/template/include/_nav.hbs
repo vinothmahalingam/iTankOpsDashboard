@@ -107,7 +107,7 @@
 		</ul>
 	</li>
 	<li class="nav-title">Tools &amp; Components </li>
-	<li {{#is pagename "in" "ui_alerts,ui_accordion,ui_badges,ui_breadcrumbs,ui_buttons,ui_button_group,ui_cards,ui_carousel,ui_collapse,ui_dropdowns,ui_list_filter,ui_loaders,ui_modal,ui_navbars,ui_panels,ui_pagination,ui_tabs_accordions,ui_toasts,ui_progress_bars,ui_scrollspy,ui_tooltips_popovers"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "ui_alerts,ui_accordion,ui_badges,ui_breadcrumbs,ui_buttons,ui_button_group,ui_cards,ui_carousel,ui_collapse,ui_dropdowns,ui_list_filter,ui_loaders,ui_modal,ui_navbars,ui_panels,ui_pagination,ui_tabs,ui_toasts,ui_progress_bars,ui_scrollspy,ui_tooltips,ui_popovers"}}class="active open"{{/is}}>
 		<a href="#" title="UI Components" data-filter-tags="ui components"> 
 			<i class="fal fa-window"></i>
 			<span class="nav-link-text" data-i18n="nav.ui_components">UI Components</span> 
@@ -217,9 +217,14 @@
 					<span class="nav-link-text" data-i18n="nav.ui_toasts">Toasts</span> 
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_tooltips_popovers"}}class="active"{{/is}}>
-				<a href="ui_tooltips_popovers.html" data-filter-tags="ui components tooltips & popovers"> 
-					<span class="nav-link-text" data-i18n="nav.ui_tooltips_popovers">Tooltips &amp; Popovers</span> 
+			<li {{#is pagename "===" "ui_tooltips"}}class="active"{{/is}}>
+				<a href="ui_tooltips.html" data-filter-tags="ui components tooltips"> 
+					<span class="nav-link-text" data-i18n="nav.ui_tooltips">Tooltips</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "ui_popovers"}}class="active"{{/is}}>
+				<a href="ui_popovers.html" data-filter-tags="ui components popovers"> 
+					<span class="nav-link-text" data-i18n="nav.ui_popovers">Popovers</span> 
 				</a>
 			</li>
 			<li>
