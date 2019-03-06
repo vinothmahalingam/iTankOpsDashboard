@@ -219,7 +219,7 @@
 	padding: 0;
 	line-height: 2.1rem;
 
-	&:not([class*="-primary"]):not([class*="-secondary"]):not([class*="-default"]):not([class*="-success"]):not([class*="-info"]):not([class*="-warning"]):not([class*="-danger"]):not([class*="-dark"]):not([class*="-light"]) {
+	&:not([class*="-primary"]):not([class*="-secondary"]):not([class*="-default"]):not([class*="-success"]):not([class*="-info"]):not([class*="-warning"]):not([class*="-danger"]):not([class*="-dark"]):not([class*="-light"]):not(.nav-item) {
 		&:hover {
 			background-color: rgba($black,0.05);
 			border-color: transparent;

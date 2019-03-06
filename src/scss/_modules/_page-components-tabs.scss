@@ -1,7 +1,7 @@
 /* nav tabs panel */
-.nav-tabs-panel {
+.nav-tabs-clean {
 
-	height: $nav-tabs-panel-link-height;
+	height: $nav-tabs-clean-link-height;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
 	.nav-item {
@@ -9,7 +9,7 @@
 		.nav-link {
 			border-radius: 0;
 			border: 0;
-			height: $nav-tabs-panel-link-height;
+			height: $nav-tabs-clean-link-height;
 
 			/*font-size: rem($fs-md);
 			font-weight: 500;*/
