@@ -1,16 +1,290 @@
 {{#> 
 	layouts/main 
-	title="Tabs" 
+	title="Popovers" 
 	pagename="ui_popovers" 
 	heading="<i class='subheader-icon fal fa-window'></i> Popovers" 
 	category_1="UI Components" 
-	pagedescription="Examples for showing pagination to indicate a series of related content exists across multiple pages."
+	pagedescription="Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site."
 }}
 
 {{#*inline "head-block"}}{{/inline}}
 
 {{#*inline "content-block"}}
-ui_popovers
+<div class="row">
+	<div class="col-xl-6">
+		<div id="panel-1" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Basic <span class="fw-300"><i>Popover</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						
+					</div>
+					<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+				</div>
+			</div>
+		</div>
+		<div id="panel-2" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Popover <span class="fw-300"><i>Animation</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						Apply a CSS fade transition to the popover
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div id="panel-3" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Popover <span class="fw-300"><i>Container</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						Appends the popover to a specific element. Example: <code>container: 'body'</code>. This option is particularly useful in that it allows you to position the popover in the flow of the document near the triggering element -&nbsp;which will prevent the popover from floating away from the triggering element during a window resize
+					</div>
+
+				</div>
+			</div>
+		</div>		
+		<div id="panel-4" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Popover <span class="fw-300"><i>Content</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						<p>Default content value if <code>data-content</code> attribute isn't present.</p>
+        				<p>If a function is given, it will be called with its <code>this</code> reference set to the element that the popover is attached to.</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div id="panel-5" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Delayed <span class="fw-300"><i>Popover</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						<p>Delay showing and hiding the popover (ms) - does not apply to manual trigger type</p>
+						<p>If a number is supplied, delay is applied to both hide/show</p>
+						<p>Object structure is: <code>delay: { "show": 500, "hide": 100 }</code></p>						
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div id="panel-6" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Popover <span class="fw-300"><i>HTML content</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						Insert HTML into the popover. If false, jQuery's <code>text</code> method will be used to insert content into the DOM. Use text if you're worried about XSS attacks.
+					</div>
+
+				</div>
+			</div>
+		</div>	
+		<div id="panel-7" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Popover <span class="fw-300"><i>Placement</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						<p>How to position the popover - auto | top | bottom | left | right.<br>When <code>auto</code> is specified, it will dynamically reorient the popover.</p>
+						<p>When a function is used to determine the placement, it is called with the popover DOM node as its first argument and the triggering element DOM node as its second. The <code>this</code> context is set to the popover instance.</p>						
+					</div>
+
+				</div>
+			</div>
+		</div>												
+	</div>
+	<div class="col-xl-6">
+		<div id="panel-8" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Popover <span class="fw-300"><i>Selector</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						If a selector is provided, popover objects will be delegated to the specified targets. In practice, this is used to enable dynamic HTML content to have popovers added. See <a href="https://github.com/twbs/bootstrap/issues/4215" target="_blank">this</a> and <a href="https://codepen.io/Johann-S/pen/djJYPb" target="_blank">an informative example</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div id="panel-9" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Popover <span class="fw-300"><i>Title</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						<p>Default title value if <code>title</code> attribute isn't present.</p>
+						<p>If a function is given, it will be called with its <code>this</code> reference set to the element that the popover is attached to.</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div id="panel-10" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Popover <span class="fw-300"><i>Template</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						<p>Base HTML to use when creating the popover.</p>
+						<p>The popover's <code>title</code> will be injected into the <code>.popover-header</code>.</p>
+						<p>The popover's <code>content</code> will be injected into the <code>.popover-body</code>.</p>
+						<p><code>.arrow</code> will become the popover's arrow.</p>
+						<p>The outermost wrapper element should have the <code>.popover</code> class.</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div id="panel-11" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Popover <span class="fw-300"><i>Triggers</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						How popover is triggered - click | hover | focus | manual. You may pass multiple triggers; separate them with a space. <code>manual</code> cannot be combined with any other trigger.						
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div id="panel-12" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Offset <span class="fw-300"><i>Popover</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						Offset of the popover relative to its target. For more information refer to Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..offset.offset" target="_blank">offset docs</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div id="panel-13" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Popover <span class="fw-300"><i>Boundary</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						Overflow constraint boundary of the popover. Accepts the values of <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code>, or an HTMLElement reference (JavaScript only). For more information refer to Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..preventOverflow.boundariesElement" target="_blank">preventOverflow docs</a>
+					</div>
+
+				</div>
+			</div>
+		</div>											
+	</div>
+</div>
 {{/inline}}
 
 {{#*inline "scripts-block"}}{{/inline}}

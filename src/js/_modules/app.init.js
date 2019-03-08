@@ -636,9 +636,8 @@ var initApp = (function(app) {
 
 		/**
 		 * Start bootstrap tooltips
-		 * doc: only fires for desktop
 		 **/
-		if( typeof($.fn.tooltip) !== 'undefined' && myapp_config.thisDevice === 'desktop' && $('[data-toggle="tooltip"]').length ){
+		if( typeof($.fn.tooltip) !== 'undefined' && $('[data-toggle="tooltip"]').length ){
 			$('[data-toggle="tooltip"]').tooltip(/*{html: true}*/);
 		} else {
 			console.log("OOPS! bs.tooltip is not loaded");
@@ -704,7 +703,7 @@ var initApp = (function(app) {
 
 		/**
 		 * Dropdowns will not close on click
-		 * doc: only close dropdowns on click outside hit area
+		 * doc: close dropdowns on click outside hit area
 		 **/
 		$(document).on('click', '.dropdown-menu', function (e) {
 			e.stopPropagation();
