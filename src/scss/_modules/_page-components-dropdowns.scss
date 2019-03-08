@@ -59,10 +59,8 @@
 	border: 0 !important;
 	font-family: 'Font Awesome 5 Pro';
 	content: "\f107" !important;
-	//font-size: 0.8rem;
 	vertical-align: middle !important;
 	position: relative;	
-	//margin: 0 0.255rem;
 }
 
 .dropup .dropdown-toggle:after {
@@ -75,6 +73,11 @@
 
 .dropleft .dropdown-toggle:before {
 	content: "\f104" !important;
+}
+
+//very wierd bug... 
+.nav-item .dropdown-toggle:after {
+	font-size: 0.90em;
 }
 
 

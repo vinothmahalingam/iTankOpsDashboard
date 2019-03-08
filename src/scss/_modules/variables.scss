@@ -260,8 +260,7 @@ $theme-colors: (
 );
 
 /* forms */
-$input-focus-border-color:					$color-primary;
-$link-color:            						$primary-800;
+$input-focus-border-color:          $color-primary;
 $input-btn-focus-color:             transparent;
 $input-border-color:                #E5E5E5;
 $input-padding-y:                   .438rem;  
@@ -269,6 +268,10 @@ $input-padding-x:                   .875rem;
 $label-margin-bottom:               .3rem;
 $form-group-margin-bottom:          1.5rem;
 
+/* links */
+$link-color:                        $primary-500;
+$link-hover-color:                  $primary-400;
+ 
 $custom-control-indicator-size:     1.125rem;
 $custom-checkbox-indicator-border-radius: 2px;
 $custom-control-indicator-border-width: 2px;
@@ -303,12 +306,17 @@ $alert-padding-y:                   1rem;
 $alert-padding-x:                   1.25rem;
 $alert-margin-bottom:               $grid-gutter-width + 0.5rem;
 
+/* toast */
+$toast-padding-y:                   0.5rem;
+$toast-padding-x:                   0.75rem;
+$toast-header-color:                $fusion-500;
+
 /* breadcrumb */
 $breadcrumb-bg:                     lighten($fusion-50, 40%);    
 $breadcrumb-divider-color:          inherit;      
 
 /* button */
-$input-btn-padding-y:               .438rem;
+$input-btn-padding-y:               .5rem;
 $input-btn-padding-x:               1.125rem;
 
 $input-btn-padding-y-sm:            .188rem;
