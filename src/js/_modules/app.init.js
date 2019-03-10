@@ -638,7 +638,7 @@ var initApp = (function(app) {
 		 * Start bootstrap tooltips
 		 **/
 		if( typeof($.fn.tooltip) !== 'undefined' && $('[data-toggle="tooltip"]').length ){
-			$('[data-toggle="tooltip"]').tooltip(/*{html: true}*/);
+			$('[data-toggle="tooltip"]').tooltip(); /*{html: true}*/
 		} else {
 			console.log("OOPS! bs.tooltip is not loaded");
 		}
@@ -647,7 +647,7 @@ var initApp = (function(app) {
 		 * Start bootstrap popovers
 		 **/
 		if( typeof($.fn.popover) !== 'undefined' && $('[data-toggle="popover"]').length ){
-			$('[data-toggle="popover"]').popover();
+			$('[data-toggle="popover"]').popover(); /*{trigger: "focus"}*/
 		} else {
 			console.log("OOPS! bs.popover is not loaded");
 		}

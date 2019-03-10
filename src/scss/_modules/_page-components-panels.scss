@@ -51,7 +51,7 @@
 	/* panel fullscreen */
 	&.panel-fullscreen {
 		position: fixed !important; /* there is a bug with jquery ui, so we have to add !important rule here */
-		z-index: 9999;
+		z-index: $zindex-panel-fullscreen;
 		top: 0;
 		left: 0;
 		right: 0;
