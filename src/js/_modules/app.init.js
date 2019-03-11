@@ -647,7 +647,16 @@ var initApp = (function(app) {
 		 * Start bootstrap popovers
 		 **/
 		if( typeof($.fn.popover) !== 'undefined' && $('[data-toggle="popover"]').length ){
-			$('[data-toggle="popover"]').popover(); /*{trigger: "focus"}*/
+
+			/* BS4 sanatize */
+			var myDefaultWhiteList = $.fn.tooltip.Constructor.Default.whiteList
+
+			// To allow following elements to whitelist
+			// DOC: https://getbootstrap.com/docs/4.3/getting-started/javascript/#sanitizer
+
+			/* init popover */
+			$('[data-toggle="popover"]').popover({sanitize:false}); /*{trigger: "focus"}*/
+
 		} else {
 			console.log("OOPS! bs.popover is not loaded");
 		}

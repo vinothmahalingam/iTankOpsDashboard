@@ -139,7 +139,11 @@
 			<div class="panel-container show">
 				<div class="panel-content">									
 					<div class="panel-tag">
-						Insert HTML into the popover. If false, jQuery's <code>text</code> method will be used to insert content into the DOM. Use text if you're worried about XSS attacks.
+						<p>Insert HTML into the popover. If false, jQuery's <code>text</code> method will be used to insert content into the DOM. Use text if you're worried about XSS attacks. </p>
+						<p>
+							Some elements may not be displaced properly or may not appear at all. This is because of bootstrap Sanitizer. If this is happening you may need to add these elements to the "whitelist". You can read more about it on bootstrap's <a href="https://getbootstrap.com/docs/4.3/getting-started/javascript/#sanitizer" target="_blank"> official documentation</a>.
+						</p>
+
 					</div>
 					<div class="demo">					
 						<button type="button" class="btn btn-outline-danger" data-toggle="popover" data-placement="top" title="<h4 class='fw-500 width-sm'><i class='fal fa-file-check mr-2'></i>File permissions</h4>" data-html="true" data-content='
