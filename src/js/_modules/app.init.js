@@ -651,10 +651,9 @@ var initApp = (function(app) {
 			/* BS4 sanatize */
 			var myDefaultWhiteList = $.fn.tooltip.Constructor.Default.whiteList
 
-			// To allow following elements to whitelist
-			// DOC: https://getbootstrap.com/docs/4.3/getting-started/javascript/#sanitizer
-
 			/* init popover */
+			/* data-sanitize="false" was not working so had to add this globally */
+			/* DOC: https://getbootstrap.com/docs/4.3/getting-started/javascript/#sanitizer */
 			$('[data-toggle="popover"]').popover({sanitize:false}); /*{trigger: "focus"}*/
 
 		} else {

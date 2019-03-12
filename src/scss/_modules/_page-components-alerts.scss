@@ -11,22 +11,10 @@
 	border-color: desaturate(lighten($primary-500, 28%), 25%);
 }
 
-.alert-primary-outline {
-	color: $primary-700;
-	background-color: $white;
-	border-color: $primary-300;
-}
-
 .alert-success {
 	color:  desaturate($success-500, 35%);
 	background-color: desaturate(lighten($success-500, 53%), 15%);
 	border-color: desaturate(lighten($success-500, 33%), 10%);
-}
-
-.alert-success-outline {
-	color: $success-500;
-	background-color: $white;
-	border-color: desaturate(lighten($success-500, 20%), 10%);
 }
 
 .alert-danger {
@@ -35,11 +23,6 @@
 	border-color: lighten($danger-500, 20%);
 }
 
-.alert-danger-outline {
-	color: $danger-600;
-	background-color: $white;
-	border-color: $danger-400;
-}
 
 .alert-warning {
 	color: darken($warning-900, 5%);
@@ -47,11 +30,6 @@
 	border-color: lighten($warning-500, 7%);
 }
 
-.alert-warning-outline {
-	color: $warning-800;
-	background-color: $white;
-	border-color: lighten($warning-500, 7%);
-}
 
 .alert-info {
 	color: $info-800;
@@ -59,11 +37,6 @@
 	border-color: lighten($info-500, 20%);
 }
 
-.alert-info-outline {
-	color: $info-500;
-	background-color: $white;
-	border-color: $info-300;
-}
 
 .alert-secondary {
 	color: $fusion-500;
@@ -71,11 +44,6 @@
 	border-color: lighten($fusion-500, 55%);
 }
 
-.alert-secondary-outline {
-	color: $fusion-400;
-	background-color: $white;
-	border-color: lighten($fusion-500, 45%);
-}
 
 .alert-icon {
 	width: $p-4 + $p-3;
