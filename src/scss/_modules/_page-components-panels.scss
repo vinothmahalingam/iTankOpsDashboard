@@ -145,17 +145,18 @@
 			filter: grayscale(100%);
 		}
 	}
+}
 
-	.panel-tag {
-		padding: 1rem $panel-spacer-x;
-		margin-bottom: 2rem;
-		border-left: 3px solid $success-500;
-		background: #eef7fd;
-		opacity: 0.8;
-		font-weight: 400;
-		font-size: 0.875rem;
-		border-radius: 0px 8px 8px 0px;		
-	}
+/* panel tag can be used globally */
+.panel-tag {
+	padding: 1rem $panel-spacer-x;
+	margin-bottom: 2rem;
+	border-left: 3px solid $success-500;
+	background: #eef7fd;
+	opacity: 0.8;
+	font-weight: 400;
+	font-size: 0.875rem;
+	border-radius: 0px 8px 8px 0px;		
 }
 
 /* panel header */

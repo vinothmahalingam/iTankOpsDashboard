@@ -739,7 +739,7 @@ var initApp = (function(app) {
 		 * Action buttons
 		 **/		
 		myapp_config.root_
-			.on('mousedown', '[data-action]', function(e) {
+			.on('tap mousedown', '[data-action]', function(e) {
 
 				var actiontype = $(this).data('action');
 

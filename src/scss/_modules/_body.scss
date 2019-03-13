@@ -1,28 +1,16 @@
-/*html,
-body {
-	height:100%;
-}
-*/
 html {
-
 	body {	
 		direction: ltr;
 		text-rendering: optimizeLegibility;
 		background-color: $body-background-color;
-		//overflow-x: hidden; //safari issue fixed for bottom spacing 
-		@extend %font-smoothing;
 	}
 }
-
 .layout-composed {
-
 	.page-content {
-
+		.page-breadcrumb,
 		.subheader {
 			display: none;
 		}
-
-		padding: 0px !important;
+		padding: 0 !important;
 	}
-
 }

@@ -24,6 +24,33 @@
 
 {{#*inline "content-block"}}
 
+<div class="alert alert-primary alert-dismissible">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">
+			<i class="fal fa-times"></i>
+		</span>
+	</button>
+	<div class="d-flex flex-start w-100">
+		<div class="mr-2 hidden-md-down">
+			<span class="icon-stack icon-stack-lg">
+				<i class="base base-6 icon-stack-3x opacity-100 color-primary-500"></i>
+				<i class="base base-10 icon-stack-2x opacity-100 color-primary-300 fa-flip-vertical"></i>
+				<i class="fal fa-info icon-stack-1x opacity-100 color-white"></i>
+			</span>
+		</div>
+		<div class="d-flex flex-fill">
+			<div class="flex-fill">
+				<span class="h5">How it works</span>
+				<br> 
+				Be sure to add <code>aria-expanded</code> to the control element. This attribute explicitly conveys the current state of the collapsible element tied to the control to screen readers and similar assistive technologies. If the collapsible element is closed by default, the attribute on the control element should have a value of <code>aria-expanded="false"</code>. If you’ve set the collapsible element to be open by default using the <code>show</code> class, set <code>aria-expanded="true"</code> on the control instead.
+				<br> 
+				<br> 
+				Learn more about this plugin on bootstrap's <a href="https://getbootstrap.com/docs/{{bs4v}}/components/collapse/#accordion-example" target="_blank">official documentation</a>.
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="row">
 	<div class="col-sm-6">
 		<div id="panel-1" class="panel">
