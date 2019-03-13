@@ -156,7 +156,12 @@
 	opacity: 0.8;
 	font-weight: 400;
 	font-size: 0.875rem;
-	border-radius: 0px 8px 8px 0px;		
+	border-radius: 0px 8px 8px 0px;	
+
+	>*:last-child,
+	>*:only-child {
+		margin-bottom: 0;
+	}	
 }
 
 /* panel header */
