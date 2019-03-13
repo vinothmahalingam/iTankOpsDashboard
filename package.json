@@ -47,8 +47,7 @@
     "jquery-ui": "^1.12.1",
     "node-waves": "^0.7.6",
     "pace-js": "^1.0.2",
-    "popper.js": "^1.14.7",
-    "spinkit": "^1.2.5"
+    "popper.js": "^1.14.7"
   },
   "scripts": {
     "gulp": "gulp",
