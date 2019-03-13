@@ -99,11 +99,6 @@
 								"{$config.path.src}/custom/plugins/smartpanels/smartpanels.js"
 							]
 						},
-						"spinkit": {
-							"styles": [
-								"{$config.path.node_modules}/spinkit/css/spinkit.css"
-							]
-						},
 						"app-images" : {
 							"images" : [
 								"{$config.path.src}/img/**"
