@@ -116,6 +116,7 @@
 .bg-offwhite-fade {	@include gradient-img($white, lighten($color-fusion, 66%)) }
 .bg-subtlelight { background-color: lighten($color-primary, 44%) }
 .bg-subtlelight-fade { @include gradient-img($white, lighten($color-primary, 44%))	}
+.bg-highlight { background-color: lighten($warning-50, 9%)}
 
 .bg-gray-50  { background-color: $gray-50; }
 .bg-gray-100 { background-color: $gray-100; }

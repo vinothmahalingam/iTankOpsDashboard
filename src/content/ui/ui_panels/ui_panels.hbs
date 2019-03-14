@@ -8,7 +8,7 @@
 }}
 
 {{#*inline "head-block"}}
-<link rel="stylesheet" media="screen, print" href="css/theme-demo.css">
+<link rel="stylesheet" media="screen, print" href="css/fa-solid.css">
 {{/inline}}
 
 {{!-- {{#*inline "header-space-block"}}
@@ -52,37 +52,112 @@
 </div>
 
 <div class="row">
-	<div class="col-sm-6">
+	<div class="col-xl-6">
 		<div id="panel-1" class="panel">
 			<div class="panel-hdr">	
 				<h2>
 					Default <span class="fw-300"><i>Panel</i></span> 
 				</h2>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						All panels needs to have an unique ID in order to use the panel funtions. <code>.panel</code> is a container with no padding, <code>.panel-hdr</code> has a <code>min-height</code> value and default <code>flexbox</code> properties. The <code>.panel-toolbar</code> is inserted into <code>.panel-hdr</code> for extra elements. The <code>.panel-container</code> wraps <code>.panel-content</code> which has a predefined padding.
+					</div>
+					<p>
+						Default panel text.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="panel-2" class="panel panel-collapsed">
+			<div class="panel-hdr">	
+				<h2>
+					Collapsed <span class="fw-300"><i>Panel</i></span> 
+				</h2>
 				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+				</div>
+			</div>
+			<div class="panel-container collapse">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						This panel is closed by default. To close a panel we add the class <code>.panel-collapsed</code> to <code>.panel</code> and <code>.collapse</code> to <code>.panel-container</code>
+					</div>
+					<p>
+						Default panel text.
+					</p>
+				</div>
+			</div>
+		</div>		
+		<div id="panel-3" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Collapsable <span class="fw-300"><i>Panel</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						Panel is closed by using the attribute <code>data-action="panel-collapse"</code> placed inside <code>.panel-toolbar</code>
+					</div>
+					<p>
+						Default panel text.
+					</p>
+					<a href="javascript:void(0);" data-action="panel-collapse">collapse</a>
+				</div>
+			</div>
+		</div>
+		<div id="panel-4" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Fullscreen <span class="fw-300"><i>Panel</i></span> 
+				</h2>
+				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						Panel is closed by using the attribute <code>data-action="panel-collapse"</code> placed inside <code>.panel-toolbar</code>
+					</div>
+					<p>
+						Default panel text.
+					</p>
+					<a href="javascript:void(0);" data-action="panel-fullscreen">fullscreen</a>
+				</div>
+			</div>
+		</div>
+		<div id="panel-5" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Close <span class="fw-300"><i>Panel</i></span> 
+				</h2>
+				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
 				</div>
 			</div>
 			<div class="panel-container show">
 				<div class="panel-content">									
 					<div class="panel-tag">
-						
+						Panel is closed by using the attribute <code>data-action="panel-collapse"</code> placed inside <code>.panel-toolbar</code>
 					</div>
-
+					<p>
+						Default panel text.
+					</p>
+					<a href="javascript:void(0);" data-action="panel-close" data-toggle="tooltip">close panel</a>
 				</div>
 			</div>
 		</div>
-		<div id="panel-2" class="panel">
-			<div class="panel-hdr">		
+		<div id="panel-6" class="panel">
+			<div class="panel-hdr">				
 				<h2>
-					Button <span class="fw-300">Colors</span> 
+					Panel <span class="fw-300">Colors</span> 
 				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
-				</div>
 				<div class="panel-toolbar">
 					<button class="btn btn-toolbar-master" data-toggle="dropdown">
 						<i class="fal fa-ellipsis-v"></i>
@@ -106,63 +181,98 @@
 			</div>
 			<div class="panel-container show">
 				<div class="panel-content">
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
+					<div class="panel-tag">
+						You can mix and match any color styles, below is what we were found to be an interesting match.
+					</div>
+					<div class="d-flex flex-wrap">
+						<a href="javascript:void(0);" class="btn d-inline-block bg-primary-700 bg-success-gradient width-3 height-3 p-0 rounded-0 hover-effect-dot" data-class="bg-primary-700 bg-success-gradient" style="margin:1px;"></a> 
+						<a href="javascript:void(0);" class="btn d-inline-block bg-primary-500 bg-info-gradient width-3 height-3 p-0 rounded-0 hover-effect-dot" data-class="bg-primary-500 bg-info-gradient" style="margin:1px;"></a> 
+						<a href="javascript:void(0);" class="btn d-inline-block bg-primary-600 bg-primary-gradient width-3 height-3 p-0 rounded-0 hover-effect-dot" data-class="bg-primary-600 bg-primary-gradient" style="margin:1px;"></a> 
+						<a href="javascript:void(0);" class="btn d-inline-block bg-info-600 bg-primray-gradient width-3 height-3 p-0 rounded-0 hover-effect-dot" data-class="bg-info-600 bg-primray-gradient" style="margin:1px;"></a> 
+						<a href="javascript:void(0);" class="btn d-inline-block bg-info-600 bg-info-gradient width-3 height-3 p-0 rounded-0 hover-effect-dot" data-class="bg-info-600 bg-info-gradient" style="margin:1px;"></a> 
+						<a href="javascript:void(0);" class="btn d-inline-block bg-info-700 bg-success-gradient width-3 height-3 p-0 rounded-0 hover-effect-dot" data-class="bg-info-700 bg-success-gradient" style="margin:1px;"></a> 
+						<a href="javascript:void(0);" class="btn d-inline-block bg-success-900 bg-info-gradient width-3 height-3 p-0 rounded-0 hover-effect-dot" data-class="bg-success-900 bg-info-gradient" style="margin:1px;"></a> 
+						<a href="javascript:void(0);" class="btn d-inline-block bg-success-700 bg-primary-gradient width-3 height-3 p-0 rounded-0 hover-effect-dot" data-class="bg-success-700 bg-primary-gradient" style="margin:1px;"></a> 
+						<a href="javascript:void(0);" class="btn d-inline-block bg-success-600 bg-success-gradient width-3 height-3 p-0 rounded-0 hover-effect-dot" data-class="bg-success-600 bg-success-gradient" style="margin:1px;"></a> 
+						<a href="javascript:void(0);" class="btn d-inline-block bg-danger-900 bg-info-gradient width-3 height-3 p-0 rounded-0 hover-effect-dot" data-class="bg-danger-900 bg-info-gradient" style="margin:1px;"></a> 
+						<a href="javascript:void(0);" class="btn d-inline-block bg-fusion-400 bg-fusion-gradient width-3 height-3 p-0 rounded-0 hover-effect-dot" data-class="bg-fusion-400 bg-fusion-gradient" style="margin:1px;"></a> 
+						<a href="javascript:void(0);" class="btn d-inline-block bg-faded width-3 height-3 p-0 rounded-0 hover-effect-dot" ddata-class="bg-faded" style="margin:1px;"></a>
+					</div>
 				</div>
 			</div>
 		</div>
+		<div id="panel-7" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Label <span class="fw-300"><i>Panel</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<h4 class="m-0">
+						<span class="badge badge-pill badge-danger fw-400 l-h-n">
+							11
+						</span>
+					</h4>
+				</div>				
+				<div class="panel-toolbar ml-2">
+					<h4 class="m-0">
+						<span class="badge badge-primary fw-400 l-h-n">
+							Panel Badge
+						</span>
+					</h4>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						All panels needs to have an unique ID in order to use the panel funtions. <code>.panel</code> is a container with no padding, <code>.panel-hdr</code> has a <code>min-height</code> value and default <code>flexbox</code> properties. The <code>.panel-toolbar</code> is inserted into <code>.panel-hdr</code> for extra elements. The <code>.panel-container</code> wraps <code>.panel-content</code> which has a predefined padding.
+					</div>
+					<p>
+						Default panel text.
+					</p>
+				</div>
+				<div class="panel-content py-2 rounded-bottom border-faded border-left-0 border-right-0 border-bottom-0 text-muted">	
+					footer
+				</div>
+			</div>
+		</div>				
 	</div>
-	<div class="col-sm">
-		<div id="panel-3" class="panel">
+	<div class="col-xl-6">
+		<div id="panel-8" class="panel">
 			<div class="panel-hdr">
 				<h2>
-					Button <span class="fw-300">Colors</span> 
+					Panel <span class="fw-300">toolbar</span> 
 				</h2>
 				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
-				</div>
-				<div class="panel-toolbar">
-					<button class="btn btn-toolbar-master" data-toggle="dropdown">
-						<i class="fal fa-ellipsis-v"></i>
-					</button>
-					
-					<div class="dropdown-menu dropdown-menu-animated dropdown-menu-right p-0">
-						<button class="dropdown-item pt-2 pr-3 pb-2 pl-3">
-							<i class="fal fa-tint width-1"></i> <span>Panel Color</span>
-						</button>
-						<button class="dropdown-item pt-2 pr-3 pb-2 pl-3">
-							<i class="fal fa-edit width-1"></i> <span>Change Title</span>
-						</button>
-						<button class="dropdown-item pt-2 pr-3 pb-2 pl-3">
-							<i class="fal fa-toggle-on width-1"></i> <span>Lock Panel</span>
-						</button>
-						<div class="dropdown-divider m-0"></div>
-						<button class="dropdown-item pt-2 pr-3 pb-2 pl-3">
-							<i class="fal fa-sync width-1"></i> <span>Refresh</span>
-						</button>
-					</div>
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse" data-offset="0,5"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen" data-offset="0,5"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close" data-offset="0,5"></button>
 				</div>
 			</div>
 			<div class="panel-container show">
-				<div class="panel-content">
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
+				<div class="panel-content py-2 bg-highlight border-faded border-left-0 border-right-0">
+					<div class="btn-group mr-2" role="group" aria-label="Group A">
+						<button type="button" class="btn btn-default bg-white"><i class="fas fa-bold"></i></button>
+						<button type="button" class="btn btn-default bg-white"><i class="fas fa-italic"></i></button>
+						<button type="button" class="btn btn-default bg-white"><i class="fas fa-underline"></i></button>
+					</div>
+					<div class="btn-group mr-2" role="group" aria-label="Group A">
+						<button type="button" class="btn btn-default bg-white"><i class="fas fa-align-left"></i></button>
+						<button type="button" class="btn btn-default bg-white"><i class="fas fa-align-center"></i></button>
+						<button type="button" class="btn btn-default bg-white"><i class="fas fa-align-right"></i></button>
+						<button type="button" class="btn btn-default bg-white"><i class="fas fa-align-justify"></i></button>
+					</div>
+				</div>
+				<div class="panel-content p-0">
+					<textarea class="form-control border-0 px-4 py-3" placeholder="Textarea" rows="10" placeholder="insert your text here...">This is a textarea - below me is panel footer and above is the a utility made toolbar!</textarea>
+				</div>
+				<div class="d-flex align-items-center panel-content py-2 rounded-bottom bg-faded border-faded border-left-0 border-right-0 border-bottom-0 text-muted">
+					<span class="opacity-50">Saved</span>
+					<button class="btn btn-outline-danger ml-auto">Disregard</button>
+					<button class="btn btn-success ml-2">Save</button>
 				</div>
 			</div>
 		</div>
-		<div id="panel-4" class="panel">
+		<div id="panel-9" class="panel">
 			<div class="panel-hdr">				
 				<h2>
 					Button <span class="fw-300">Colors</span> 
@@ -207,103 +317,7 @@
 		</div>
 	</div>
 </div>
-<div class="row">
-	<div class="col-sm-6">
-		<div id="panel-5" class="panel">
-			<div class="panel-hdr">				
-				<h2>
-					Button <span class="fw-300">Colors</span> 
-				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
-				</div>
-				<div class="panel-toolbar">
-					<button class="btn btn-toolbar-master" data-toggle="dropdown">
-						<i class="fal fa-ellipsis-v"></i>
-					</button>
-					<div class="dropdown-menu dropdown-menu-animated dropdown-menu-right p-0">
-						<button class="dropdown-item pt-2 pr-3 pb-2 pl-3">
-							<i class="fal fa-tint width-1"></i> <span>Panel Color</span>
-						</button>
-						<button class="dropdown-item pt-2 pr-3 pb-2 pl-3">
-							<i class="fal fa-edit width-1"></i> <span>Change Title</span>
-						</button>
-						<button class="dropdown-item pt-2 pr-3 pb-2 pl-3">
-							<i class="fal fa-toggle-on width-1"></i> <span>Lock Panel</span>
-						</button>
-						<div class="dropdown-divider m-0"></div>
-						<button class="dropdown-item pt-2 pr-3 pb-2 pl-3">
-							<i class="fal fa-sync width-1"></i> <span>Refresh</span>
-						</button>
-					</div>
-				</div>
-			</div>
-			<div class="panel-container show">
-				<div class="panel-content">
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-sm-6">
 
-		<div id="panel-6" class="panel">
-			<div class="panel-hdr">			
-				<h2>
-					<i class="fal fa-shield-alt mr-2"></i>
-					Button <span class="fw-300">Colors</span> 
-					<small>
-						test
-					</small>
-				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
-				</div>
-				<div class="panel-toolbar">
-					<button class="btn btn-toolbar-master" data-toggle="dropdown">
-						<i class="fal fa-ellipsis-v"></i>
-					</button>
-					<div class="dropdown-menu dropdown-menu-animated dropdown-menu-right p-0">
-						<button class="dropdown-item pt-2 pr-3 pb-2 pl-3">
-							<i class="fal fa-tint width-1"></i> <span>Panel Color</span>
-						</button>
-						<button class="dropdown-item pt-2 pr-3 pb-2 pl-3">
-							<i class="fal fa-edit width-1"></i> <span>Change Title</span>
-						</button>
-						<button class="dropdown-item pt-2 pr-3 pb-2 pl-3">
-							<i class="fal fa-toggle-on width-1"></i> <span>Lock Panel</span>
-						</button>
-						<div class="dropdown-divider m-0"></div>
-						<button class="dropdown-item pt-2 pr-3 pb-2 pl-3">
-							<i class="fal fa-sync width-1"></i> <span>Refresh</span>
-						</button>
-					</div>
-				</div>
-			</div>
-			<div class="panel-container show">
-				<div class="panel-content">
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 {{/inline}}
 
 {{#*inline "scripts-block"}}{{/inline}}
