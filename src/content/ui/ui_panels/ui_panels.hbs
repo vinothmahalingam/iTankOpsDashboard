@@ -71,7 +71,7 @@
 			</div>
 		</div>
 		<div id="panel-2" class="panel panel-collapsed">
-			<div class="panel-hdr">	
+			<div class="panel-hdr text-success">	
 				<h2>
 					Collapsed <span class="fw-300"><i>Panel</i></span> 
 				</h2>
@@ -91,7 +91,7 @@
 			</div>
 		</div>		
 		<div id="panel-3" class="panel">
-			<div class="panel-hdr">	
+			<div class="panel-hdr color-success-600">	
 				<h2>
 					Collapsable <span class="fw-300"><i>Panel</i></span> 
 				</h2>
@@ -112,7 +112,7 @@
 			</div>
 		</div>
 		<div id="panel-4" class="panel">
-			<div class="panel-hdr">	
+			<div class="panel-hdr color-warning-800">	
 				<h2>
 					Fullscreen <span class="fw-300"><i>Panel</i></span> 
 				</h2>
@@ -133,7 +133,7 @@
 			</div>
 		</div>
 		<div id="panel-5" class="panel">
-			<div class="panel-hdr">	
+			<div class="panel-hdr text-danger">	
 				<h2>
 					Close <span class="fw-300"><i>Panel</i></span> 
 				</h2>
@@ -154,7 +154,7 @@
 			</div>
 		</div>
 		<div id="panel-6" class="panel">
-			<div class="panel-hdr">				
+			<div class="panel-hdr bg-primary-700 bg-success-gradient">				
 				<h2>
 					Panel <span class="fw-300">Colors</span> 
 				</h2>
@@ -200,7 +200,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>				
+	</div>
+	<div class="col-xl-6">
 		<div id="panel-7" class="panel">
 			<div class="panel-hdr">	
 				<h2>
@@ -223,29 +225,25 @@
 			</div>
 			<div class="panel-container show">
 				<div class="panel-content">									
-					<div class="panel-tag">
-						All panels needs to have an unique ID in order to use the panel funtions. <code>.panel</code> is a container with no padding, <code>.panel-hdr</code> has a <code>min-height</code> value and default <code>flexbox</code> properties. The <code>.panel-toolbar</code> is inserted into <code>.panel-hdr</code> for extra elements. The <code>.panel-container</code> wraps <code>.panel-content</code> which has a predefined padding.
-					</div>
 					<p>
 						Default panel text.
 					</p>
 				</div>
+				<!-- panel footer with utility classes -->
 				<div class="panel-content py-2 rounded-bottom border-faded border-left-0 border-right-0 border-bottom-0 text-muted">	
 					footer
 				</div>
 			</div>
-		</div>				
-	</div>
-	<div class="col-xl-6">
+		</div>	
 		<div id="panel-8" class="panel">
 			<div class="panel-hdr">
 				<h2>
 					Panel <span class="fw-300">toolbar</span> 
 				</h2>
 				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse" data-offset="0,5"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen" data-offset="0,5"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close" data-offset="0,5"></button>
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
 				</div>
 			</div>
 			<div class="panel-container show">
@@ -265,6 +263,7 @@
 				<div class="panel-content p-0">
 					<textarea class="form-control border-0 px-4 py-3" placeholder="Textarea" rows="10" placeholder="insert your text here...">This is a textarea - below me is panel footer and above is the a utility made toolbar!</textarea>
 				</div>
+				<!-- panel footer with utility classes -->
 				<div class="d-flex align-items-center panel-content py-2 rounded-bottom bg-faded border-faded border-left-0 border-right-0 border-bottom-0 text-muted">
 					<span class="opacity-50">Saved</span>
 					<button class="btn btn-outline-danger ml-auto">Disregard</button>
@@ -275,46 +274,115 @@
 		<div id="panel-9" class="panel">
 			<div class="panel-hdr">				
 				<h2>
-					Button <span class="fw-300">Colors</span> 
+					Panel <span class="fw-300">form elements</span> 
 				</h2>
 				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
-				</div>
-				<div class="panel-toolbar">
-					<button class="btn btn-toolbar-master" data-toggle="dropdown">
-						<i class="fal fa-ellipsis-v"></i>
-					</button>
-					<div class="dropdown-menu dropdown-menu-animated dropdown-menu-right p-0">
-						<button class="dropdown-item pt-2 pr-3 pb-2 pl-3">
-							<i class="fal fa-tint width-1"></i> <span>Panel Color</span>
-						</button>
-						<button class="dropdown-item pt-2 pr-3 pb-2 pl-3">
-							<i class="fal fa-edit width-1"></i> <span>Change Title</span>
-						</button>
-						<button class="dropdown-item pt-2 pr-3 pb-2 pl-3">
-							<i class="fal fa-toggle-on width-1"></i> <span>Lock Panel</span>
-						</button>
-						<div class="dropdown-divider m-0"></div>
-						<button class="dropdown-item pt-2 pr-3 pb-2 pl-3">
-							<i class="fal fa-sync width-1"></i> <span>Refresh</span>
-						</button>
+					<div class="custom-control d-flex custom-switch">
+						<input id="eventlog-switch" type="checkbox" class="custom-control-input" checked="checked">
+						<label class="custom-control-label fw-500" for="eventlog-switch"></label>
 					</div>
 				</div>
 			</div>
 			<div class="panel-container show">
 				<div class="panel-content">
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
+
+
+				</div>
+				<!-- panel footer with utility classes -->
+				<div class="panel-content py-2 rounded-bottom border-faded border-left-0 border-right-0 border-bottom-0 text-muted">
+					footer
 				</div>
 			</div>
 		</div>
+		<div id="panel-10" class="panel">
+			<div class="panel-hdr">				
+				<h2>
+					Panel <span class="fw-300">form inputs</span> 
+				</h2>
+				<div class="panel-toolbar">
+					<div class="d-flex position-relative ml-auto" style="max-width: 10rem;">
+						<i class="fal fa-search position-absolute pos-left fs-lg px-3 py-2 mt-1"></i>
+						<input type="text" class="form-control pl-6" placeholder="Search">
+					</div>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">
+					
+
+				</div>
+				<!-- panel footer with utility classes -->
+				<div class="panel-content py-2 rounded-bottom border-faded border-left-0 border-right-0 border-bottom-0 text-muted">
+					footer
+				</div>
+			</div>
+		</div>
+		<div id="panel-11" class="panel">
+			<div class="panel-hdr">				
+				<h2>
+					Panel <span class="fw-300">buttons</span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-default btn-sm rounded-pill mr-1 shadow-0">
+						<i class="fas fa-trash"></i>
+					</button>
+					<button class="btn btn-icon btn-sm btn-secondary mr-1 shadow-0">
+						<i class="fas fa-trash"></i>
+					</button>
+					<button class="btn btn-icon btn-sm btn-success shadow-0 rounded-circle">
+						<i class="fas fa-trash"></i>
+					</button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">
+					
+
+				</div>
+				<!-- panel footer with utility classes -->
+				<div class="panel-content py-2 rounded-bottom border-faded border-left-0 border-right-0 border-bottom-0 text-muted">
+					footer
+				</div>
+			</div>
+		</div>	
+		<div id="panel-12" class="panel">
+			<div class="panel-hdr border-faded border-top-0 border-right-0 border-left-0 shadow-0">				
+				<h2>
+					Panel <span class="fw-300">tabs</span> 
+				</h2>
+				<div class="panel-toolbar pr-3  align-self-end">
+					<ul class="nav nav-tabs justify-content-end border-bottom-0" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#tab_default-1" role="tab">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#tab_default-2" role="tab">Set</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" data-toggle="tab" href="#" role="tab">Disabled</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">
+					<div class="tab-content">
+						<div class="tab-pane fade show active" id="tab_default-1" role="tabpanel">
+							Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater
+							eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone.
+						</div>
+						<div class="tab-pane fade" id="tab_default-2" role="tabpanel">
+							Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo
+							enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic.
+						</div>
+					</div>
+				</div>
+				<!-- panel footer with utility classes -->
+				<div class="panel-content py-2 rounded-bottom border-faded border-left-0 border-right-0 border-bottom-0 text-muted">
+					footer
+				</div>
+			</div>
+		</div>		
 	</div>
 </div>
 
