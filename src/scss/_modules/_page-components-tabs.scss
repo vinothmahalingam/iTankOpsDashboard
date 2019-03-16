@@ -28,7 +28,6 @@
 			}
 		}
 	}
-
 }
 
 /* hack for waves effect breaking tabs */
@@ -40,13 +39,20 @@
 /* fontsize for tabs */
 .nav-tabs .nav-item .nav-link {
 	&:not(:hover) {
+		color: inherit;
+	}
+
+	&.active:not(:hover) {
 		color: #333;
+	}
+	&:hover:not(.active) {
+		color: inherit;
 	}
 }
 
 .nav .nav-link:not([class^="btn-"]):not([class*=" btn-"]) {
-	font-weight: 400;
-	font-size: rem($nav-font-link-size);
+	font-weight: 500;
+	font-size: rem($fs-base);
 }
 
 .nav-tabs .nav-link.active, 
