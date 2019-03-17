@@ -89,7 +89,7 @@
 			display: none;
 		}
 
-		[data-action="panel-fullscreen"]:not(.btn-icon),
+		.btn-panel[data-action="panel-fullscreen"],
 		.js-panel-fullscreen {
 			width:$panel-hdr-height/2;
 			height:$panel-hdr-height/2;
@@ -158,10 +158,15 @@
 	font-size: 0.875rem;
 	border-radius: 0px 8px 8px 0px;	
 
+	//remove p tag margin
 	>*:last-child,
 	>*:only-child {
 		margin-bottom: 0;
 	}	
+
+	&:only-child {
+		margin-bottom: 0;
+	}
 }
 
 /* panel header */
@@ -397,11 +402,11 @@
 
 	}
 
-	.panel-container {
+	/*.panel-container {
 		.panel-content:first-child {
 			padding-top: $p-1;
 		}
-	}
+	}*/
 	
 }	
 

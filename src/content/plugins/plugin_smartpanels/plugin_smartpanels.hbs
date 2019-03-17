@@ -7,7 +7,9 @@
 	pagedescription="Panels can be used in almost any setuation, helping wrap everything in a slick & lightweight container"
 }}
 
-{{#*inline "head-block"}}{{/inline}}
+{{#*inline "head-block"}}
+<link rel="stylesheet" media="screen, print" href="css/fa-solid.css">
+{{/inline}}
 
 {{#*inline "header-space-block"}}
 <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" data-action="toggle" data-class="mod-panel-clean">Toggle clean Panels</button>
@@ -63,20 +65,38 @@
 		</div>
 
 		<div id="panel-2" class="panel">
-			<div class="panel-hdr">		
+			<div class="panel-hdr">
 				<h2>
-					Button <span class="fw-300">Colors</span> 
+					Panel <span class="fw-300">toolbar</span> 
 				</h2>
 			</div>
 			<div class="panel-container show">
-				<div class="panel-content">
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
+				<!-- panel toolbar extended -->
+				<div class="panel-content py-2 bg-highlight border-faded border-left-0 border-right-0">
+					<div class="btn-group mr-2" role="group" aria-label="Group A">
+						<button type="button" class="btn btn-default bg-white"><i class="fas fa-bold"></i></button>
+						<button type="button" class="btn btn-default bg-white"><i class="fas fa-italic"></i></button>
+						<button type="button" class="btn btn-default bg-white"><i class="fas fa-underline"></i></button>
+					</div>
+					<div class="btn-group mr-2" role="group" aria-label="Group A">
+						<button type="button" class="btn btn-default bg-white"><i class="fas fa-align-left"></i></button>
+						<button type="button" class="btn btn-default bg-white"><i class="fas fa-align-center"></i></button>
+						<button type="button" class="btn btn-default bg-white"><i class="fas fa-align-right"></i></button>
+						<button type="button" class="btn btn-default bg-white"><i class="fas fa-align-justify"></i></button>
+					</div>
+				</div>
+				<!-- panel content -->
+				<div class="panel-content p-0">
+					<textarea class="form-control border-0 px-4 py-3" placeholder="Textarea" rows="10" placeholder="insert your text here...">This is a textarea - below me is panel footer and above is the a utility made toolbar!</textarea>
+				</div>
+				<!-- panel footer with utility classes -->
+				<div class="d-flex align-items-center panel-content py-2 rounded-bottom bg-faded border-faded border-left-0 border-right-0 border-bottom-0 text-muted">
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="demo-auto-save" checked="checked">
+						<label class="custom-control-label" for="demo-auto-save">Auto save</label>
+					</div>			
+					<button class="btn btn-outline-danger ml-auto">Disregard</button>
+					<button class="btn btn-success ml-2">Save</button>
 				</div>
 			</div>
 		</div>
@@ -120,56 +140,7 @@
 
 </div>
 
-<div class="row">
-	<div class="col-md-6">
 
-		<div id="panel-5" class="panel">
-			<div class="panel-hdr">				
-				<h2>
-					Button <span class="fw-300">Colors</span> 
-				</h2>
-			</div>
-			<div class="panel-container show">
-				<div class="panel-content">
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-				</div>
-			</div>
-		</div>
-
-	</div>
-	<div class="col-md-6">
-
-		<div id="panel-6" class="panel">
-			<div class="panel-hdr">			
-				<h2>
-					<i class="fal fa-shield-alt mr-2"></i>
-					Button <span class="fw-300">Colors</span> 
-					<small>
-						test
-					</small>
-				</h2>
-			</div>
-			<div class="panel-container show">
-				<div class="panel-content">
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-					<p>tewst</p>
-				</div>
-			</div>
-		</div>
-
-	</div>
-</div>
 
 {{/inline}}
 

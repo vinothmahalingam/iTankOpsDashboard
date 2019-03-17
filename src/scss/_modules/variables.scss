@@ -336,6 +336,17 @@ $input-btn-padding-x-lg:				1.5rem;
 $nav-link-padding-y:					$input-btn-padding-y;
 $nav-link-padding-x:					$input-btn-padding-x;
 
+/* nav, tabs, pills */
+$nav-tabs-border-color:					rgba($black, 0.1);
+/*$nav-tabs-border-width:					$border-width !default;
+$nav-tabs-border-radius:				$border-radius !default;*/
+/*$nav-tabs-link-hover-border-color:		$gray-200 $gray-200 $nav-tabs-border-color !default;
+$nav-tabs-link-active-color:			$gray-700 !default;
+$nav-tabs-link-active-bg:				$body-bg !default;*/
+$nav-tabs-link-active-border-color:		rgba($black, 0.1) rgba($black, 0.1) $white;
+$nav-tabs-link-hover-border-color:		rgba($black, 0.07) rgba($black, 0.07) transparent;
+/*$nav-tabs-font-size: 					$fs-base; */
+
 /* tables */
 $table-border-color:					lighten(desaturate($primary-500, 60%), 40%);
 $table-hover-bg:						lighten(desaturate($primary-900, 70%), 63%);
