@@ -143,11 +143,11 @@
 
 
 /* progressbars */
-.progress-xs { height: 5px }
+/*.progress-xs { height: 5px }
 .progress-sm { height: 8px }
 .progress-md { height: 14px }
 .progress-lg { height: 20px }
-.progress-xl { height: 30px }
+.progress-xl { height: 30px }*/
 
 /* rotate */
 .rotate-90  { @include rotate (90)  }
@@ -175,12 +175,17 @@
     border-color: rgba(0, 0, 0, 0.10) rgba(0, 0, 0, 0.10) rgba(0, 0, 0, 0.2);
 }
 
+.shadow-hover {
+    @extend %shadow-hover;
+}
+
 .shadow-unique-hover {
     border: 1px solid transparent;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
 }
 
 /* hover any bg */
+/* inherits the parent background on hover */
 .hover-bg {
     background: $white;
     transition: all .1s ease-in;
@@ -283,12 +288,6 @@ $cursor: (
 /* states */
 .state-selected {
     background: lighten($info-500, 41%) !important;
-}
-
-
-/* set base height for slider */
-.slide-on-mobile {
-     width: $slider-width;
 }
 
 /* collapse toggle to reveal and hide elements */

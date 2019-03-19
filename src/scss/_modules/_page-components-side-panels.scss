@@ -1,3 +1,8 @@
+/* set base height for slider */
+.slide-on-mobile {
+     width: $slider-width;
+}
+
 @media only screen and ( max-width: $mobile-breakpoint-size ){
     /* SIDE PANELS */
     .slide-on-mobile {

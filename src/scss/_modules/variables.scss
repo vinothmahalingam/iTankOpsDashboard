@@ -633,7 +633,7 @@ aside.page-sidebar ($nav-width, $nav-background)
 $nav-background:						desaturate($primary-900, 7%) !default;
 $nav-background-shade:					rgba(desaturate($info-500, 15%), 0.18) !default;                  
 $nav-base-color:						lighten($nav-background, 7%) !default;
-$nav-width:								16.25rem !default; 
+$nav-width:								16.875rem !default; 
 
 /* nav parent level-0 */
 $nav-link-color: 						lighten($nav-base-color, 28%) !default;
