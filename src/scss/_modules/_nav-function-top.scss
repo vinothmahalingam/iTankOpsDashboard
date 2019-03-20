@@ -274,7 +274,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 
 						> ul {
 							display: none !important; //force invisibility to override plugin clicks
-							width: $nav-width - 2.1875rem;
+							width: $nav-top-drowndown-width;
 							height: auto !important; //counters the click issue
 							top: $nav-top-height;
 							position: absolute;
@@ -289,7 +289,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 								position: relative;
 
 								a {
-									padding: 0.9375rem 1.5rem;
+									padding: 0.65rem 1.25rem;
 									width: 100%;
 									max-height: none;
 									box-shadow: none;
@@ -313,10 +313,11 @@ $nav-function-top-menu-item-bg: $primary-500;
 
 								ul {
 									background: $white;
+									padding: 0;
 
 									li {
 										a {
-											padding-left: 2.5rem;
+											padding-left: 2rem;
 										}
 									}
 								}

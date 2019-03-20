@@ -140,10 +140,10 @@
 
 	&.ui-sortable-helper {
 		box-shadow: 0 5px 16px 0 rgba(0,0,0,0.05), 0 5px 20px 0 rgba(0,0,0,0.09);
-		.panel-toolbar {
-			-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+		/*.panel-toolbar {
+			-webkit-filter: grayscale(100%);  Safari 6.0 - 9.0 
 			filter: grayscale(100%);
-		}
+		}*/
 	}
 }
 
@@ -364,7 +364,8 @@
 	border-radius: $border-radius + 1;
 	position: relative;
 	overflow: hidden;
-
+	//exprimental...
+	border-bottom: 1px solid transparent;
 	/* placeholder border animation */
 	&:before,
 	&:after {

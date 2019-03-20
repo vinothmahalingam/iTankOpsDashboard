@@ -32,6 +32,7 @@ RESULT:
   background-color: $nav-background;
 }
 
+/*
 %shadow-hover {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 0 2px rgba(0,0,0,0.24);
   transition: all 0.2s ease-in-out;
@@ -40,7 +41,7 @@ RESULT:
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 -1px 6px rgba(0,0,0,0.23);
   }
 }
-
+*/
 %btn-default {
   @include gradient-img($start: #f5f5f5,$stop: #f1f1f1);
   color: #444;
