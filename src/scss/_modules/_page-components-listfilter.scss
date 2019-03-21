@@ -22,8 +22,17 @@
 		display:none !important;
 	}
 
+	// this is not needed as it will already be visible
+	// -- actually its needed for nested elements
+	/*.js-filter-show {
+		display:block !important;
+	}*/
+
+}
+
+// we do this for nav-menu items to display parent as well
+.js-list-filter.nav-menu:not(.primary-nav) {
 	.js-filter-show {
 		display:block !important;
-	}
-
+	}	
 }

@@ -169,6 +169,8 @@
 									> a {
 
 										padding-left: $nav-minify-sub-width / 10;
+										padding-top: 0.6rem;
+										padding-bottom: 0.6rem;
 
 
 										> b.collapse-sign > [class*='fa-'],
@@ -181,6 +183,8 @@
 											> li {
 												> a {
 													padding-left: $nav-minify-sub-width / 8;
+													padding-top: 0.6rem;
+													padding-bottom: 0.6rem;
 												}
 											}
 										}
