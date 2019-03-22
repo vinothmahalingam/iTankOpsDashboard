@@ -11,9 +11,15 @@
 
 {{#*inline "content-block"}}
 
+<div class="ie-only alert alert-danger d-none">
+	<h4>This message is visible to IE users only!</h4>
+	<p>
+		This specific layout structure you are trying to view is buggy on Internet Explorer, which may cause the container to stretch. This is a bug within flexbox and IE, unfortunately there is no direct solution. The workaround would be to contain the box with <code>.d-block</code> and <code>.position-absolute</code> with defined width <code>.w-100</code> and height <code>.h-100</code>. To see a working example of this, check out the our <a href="page_inbox.html" target="_blank"> Inbox page </a> which uses the same layout structure with a bit of tweaking.
+	</p>
+</div>
 
 <!-- notice the utilities added to the wrapper below -->
-<div class="d-flex flex-grow-1 p-0">
+<div class="d-flex flex-grow-1 p-0 shadow-1">
 	<!-- left slider panel : must have unique ID-->
 	<div id="js-slide-left" class="flex-wrap flex-shrink-0 position-relative slide-on-mobile slide-on-mobile-left bg-primary-200 pattern-0 p-3">
 		<div class="alert alert-primary">
@@ -23,7 +29,7 @@
 	<!-- left slider panel backdrop : activated on mobile, must be place immideately after left slider closing tag -->
 	<div class="slide-backdrop" data-action="toggle" data-class="slide-on-mobile-left-show" data-target="#js-slide-left"></div>
 	<!-- middle content area -->
-	<div class="d-flex flex-column flex-grow-1 bg-warning-50 pattern-0">
+	<div class="d-flex flex-column flex-grow-1 bg-white">
 		<div class="p-3">
 			<div class="row hidden-lg-up mb-g">
 				<div class="col-12">
@@ -52,7 +58,7 @@
 				<a href="#" class="btn btn-secondary" data-action="toggle" data-class="layout-composed">Try with Composed Layout</a>
 			</div>
 			<div class="d-flex hidden-lg-down">
-				<img src="img/demo/side-panel-demo.gif" alt="" class="m-auto shadow-2">
+				<img src="img/demo/side-panel-demo.gif" alt="" class="m-auto shadow">
 			</div>
 		</div>
 

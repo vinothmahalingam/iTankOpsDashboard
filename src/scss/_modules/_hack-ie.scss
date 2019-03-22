@@ -7,6 +7,10 @@
     .nav-function-minify:not(.nav-function-top) .primary-nav .nav-menu > li > a + ul:before {
     	left: -0.25rem !important;
     }
+
+    .ie-only {
+    	display: inline-block !important;
+    }
 }
 
 @supports (-ms-accelerator:true) {

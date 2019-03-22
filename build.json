@@ -65,7 +65,7 @@
 						},
 						"jquery-snippets": {
 							"scripts": [
-								"{$config.path.node_modules}/jquery-snippets/js/jquery-snippets.js"
+								"{$config.path.src}/custom/plugins/jquery-snippets/jquery-snippets.js"
 							]
 						},
 						"throttle-debounce": {

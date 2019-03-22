@@ -42,7 +42,6 @@
     "jquery-i18next": "^1.2.1",
     "jquery-lazy": "^1.7.10",
     "jquery-slimscroll": "^1.3.8",
-    "jquery-snippets": "github:myorangeca/jquery-snippets",
     "jquery-throttle-debounce": "github:myorangeca/jquery-throttle-debounce",
     "jquery-ui": "^1.12.1",
     "node-waves": "^0.7.6",
