@@ -484,6 +484,7 @@ $fs-xxl: 								$fs-base + 15;  /* 28px   */
 
 /*  Font Family
 ========================================================================== */
+										/*hint: you can also try the font called 'Poppins' by replacing the font 'Roboto' */
 $font-import:							"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" !default;
 $page-font:								"Roboto", 'Helvetica Neue', Helvetica, Arial !default;
 $nav-font:								$page-font !default;

@@ -476,25 +476,15 @@
 			</li>
 		</ul>
 	</li>			
-	<li {{#is pagename "in" "form_elements,form_controls,form_custom_controls,form_input_groups,form_jquery_validation,form_samples"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "form_basic_inputs,form_input_groups,form_checkbox_radio,form_validation,form_samples"}}class="active open"{{/is}}>
 		<a href="#" title="Form Stuff" data-filter-tags="forms stuff"> 
 			<i class="fal fa-edit"></i>
 			<span class="nav-link-text" data-i18n="nav.form">Form Stuff</span>
 		</a>
 		<ul>
-			<li {{#is pagename "===" "form_elements"}}class="active"{{/is}}>
-				<a href="form_elements.html" data-filter-tags="forms elements"> 
-					<span class="nav-link-text" data-i18n="nav.form_elements">General Elements</span> 
-				</a>
-			</li>
-			<li {{#is pagename "===" "form_controls"}}class="active"{{/is}}>
-				<a href="form_controls.html" data-filter-tags="forms controls"> 
-					<span class="nav-link-text" data-i18n="nav.form_controls">Controls</span> 
-				</a>
-			</li>
-			<li {{#is pagename "===" "form_custom_controls"}}class="active"{{/is}}>
-				<a href="form_custom_controls.html" data-filter-tags="forms controls"> 
-					<span class="nav-link-text" data-i18n="nav.form_custom_control">Custom Controls</span> 
+			<li {{#is pagename "===" "form_basic_inputs"}}class="active"{{/is}}>
+				<a href="form_basic_inputs.html" data-filter-tags="forms basic inputs"> 
+					<span class="nav-link-text" data-i18n="nav.form_basic_inputs">Basic Inputs</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "form_input_groups"}}class="active"{{/is}}>
@@ -502,13 +492,18 @@
 					<span class="nav-link-text" data-i18n="nav.form_input_groups">Input Groups</span> 
 				</a>
 			</li>
-			<li {{#is pagename "===" "form_jquery_validation"}}class="active"{{/is}}>
-				<a href="form_jquery_validation.html" data-filter-tags="forms jquery validation"> 
-					<span class="nav-link-text" data-i18n="nav.form_jquery_validation">Jquery Validation</span> 
+			<li {{#is pagename "===" "form_checkbox_radio"}}class="active"{{/is}}>
+				<a href="form_checkbox_radio.html" data-filter-tags="forms checkbox radio"> 
+					<span class="nav-link-text" data-i18n="nav.form_checkbox_radio">Checkbox & Radio</span> 
 				</a>
-			</li>	
+			</li>
+			<li {{#is pagename "===" "form_validation"}}class="active"{{/is}}>
+				<a href="form_validation.html" data-filter-tags="forms validation"> 
+					<span class="nav-link-text" data-i18n="nav.form_validation">Validation</span> 
+				</a>
+			</li>
 			<li {{#is pagename "===" "form_samples"}}class="active"{{/is}}>
-				<a href="form_samples.html" data-filter-tags="forms example"> 
+				<a href="form_samples.html" data-filter-tags="forms samples validation"> 
 					<span class="nav-link-text" data-i18n="nav.form_samples">Samples</span> 
 				</a>
 			</li>																														
