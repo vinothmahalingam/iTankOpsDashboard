@@ -289,11 +289,18 @@ $custom-control-indicator-bg-size:				0.5rem;
 /* not part of bootstrap variable */
 $custom-control-indicator-bg-size-checkbox:  50% 50% !default;
 
+/* custom range */
+$custom-range-thumb-width:				1rem;
+$custom-range-thumb-border-radius:		50%;
+$custom-range-track-height:				0.325rem;
+$custom-range-thumb-bg:					$primary-500;
+$custom-range-thumb-active-bg:			$primary-300;
+$custom-range-thumb-focus-box-shadow:	0 0 0 1px $white, 0 0 0 0.2rem rgba($primary-500, 0.25);
+
+
+/* select */
+
 /* badge */
-/*$badge-font-size:						0.75em;
-$badge-padding-y:						0.5em;
-$badge-padding-x:						0.5em;
-$badge-border-radius:					10rem;*/
 $badge-font-size:						85%;
 $badge-font-weight:						500;
 
@@ -338,14 +345,8 @@ $nav-link-padding-x:					$input-btn-padding-x;
 
 /* nav, tabs, pills */
 $nav-tabs-border-color:					rgba($black, 0.1);
-/*$nav-tabs-border-width:					$border-width !default;
-$nav-tabs-border-radius:				$border-radius !default;*/
-/*$nav-tabs-link-hover-border-color:		$gray-200 $gray-200 $nav-tabs-border-color !default;
-$nav-tabs-link-active-color:			$gray-700 !default;
-$nav-tabs-link-active-bg:				$body-bg !default;*/
 $nav-tabs-link-active-border-color:		rgba($black, 0.1) rgba($black, 0.1) $white;
 $nav-tabs-link-hover-border-color:		rgba($black, 0.07) rgba($black, 0.07) transparent;
-/*$nav-tabs-font-size: 					$fs-base; */
 
 /* tables */
 $table-border-color:					lighten(desaturate($primary-500, 60%), 40%);

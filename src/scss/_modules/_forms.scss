@@ -26,236 +26,106 @@
 }
 
 .form-control:not(.form-control-sm),
-.custom-select {
-  min-height: calc(2.25rem + 2px);
+.custom-select:not(.custom-select-sm) {
+	min-height: calc(2.25rem + 2px);
 }
 
 .form-label {
-  font-weight: 500;
+	font-weight: 500;
 }
 
+/* select arrow */
 
-/*
-	Styling Cross-Browser Compatible Range Inputs with Sass
-	Github: https://github.com/darlanrod/input-range-sass
-	Author: Darlan Rod https://github.com/darlanrod
-	Version 1.4.1
-	MIT License
-*/
-
-$track-color: $fusion-100 !default;
-$thumb-color: $primary-500 !default;
-
-$thumb-radius: 50% !default;
-$thumb-height: 24px !default;
-$thumb-width: $thumb-height !default;
-$thumb-shadow-size: 2px !default;
-$thumb-shadow-blur: 2px !default;
-$thumb-shadow-color: rgba(0, 0, 0, .2) !default;
-$thumb-border-width: 2px !default;
-$thumb-border-color: #eceff1 !default;
-
-$track-width: 100% !default;
-$track-height: 4px !default;
-$track-shadow-size: 1px !default;
-$track-shadow-blur: 1px !default;
-$track-shadow-color: rgba(0, 0, 0, .2) !default;
-$track-border-width: 0px !default;
-$track-border-color: #cfd8dc !default;
-
-$track-radius: 10px !default;
-$contrast: 3% !default;
-
-@mixin shadow($shadow-size, $shadow-blur, $shadow-color) {
-  box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0 0 $shadow-size lighten($shadow-color, 5%);
-}
-
-@mixin track {
-  cursor: pointer;
-  height: $track-height;
-  transition: all .2s ease;
-  width: $track-width;
-}
-
-@mixin thumb {
-  @include shadow($thumb-shadow-size, $thumb-shadow-blur, $thumb-shadow-color);
-  background: $thumb-color;
-  border: $thumb-border-width solid $thumb-border-color;
-  border-radius: $thumb-radius;
-  cursor: pointer;
-  height: $thumb-height;
-  width: $thumb-width;
-}
-
-[type='range']:not(.unstyled) {
+/*select:not(.custom-select):not([multiple]) {
+  background-image:
+    linear-gradient(45deg, transparent 50%, red 60%),
+    linear-gradient(135deg, red 40%, transparent 50%) !important;
+  background-position:
+    calc(100% - 30px) 14px,
+    calc(100% - 20px) 14px,
+    100% 0;
+  background-size:
+    10px 10px,
+    10px 10px;
+  background-repeat: no-repeat;
   -webkit-appearance: none;
-  margin: 0;
-  width: $track-width;
-  padding: 0;
-  height: 32px;
-  background: transparent;
-  border: 0;
+  -moz-appearance: none;
+}*/
 
-  &:focus {
-    outline: 0;
-
-    &::-webkit-slider-runnable-track {
-      background: lighten($track-color, $contrast);
-    }
-
-    &::-ms-fill-lower {
-      background: $track-color;
-    }
-
-    &::-ms-fill-upper {
-      background: lighten($track-color, $contrast);
-    }
-  }
-
-  &::-webkit-slider-runnable-track {
-    @include track;
-    @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
-    background: $track-color;
-    border: $track-border-width solid $track-border-color;
-    border-radius: $track-radius;
-  }
-
-  &::-webkit-slider-thumb {
-    @include thumb;
-    -webkit-appearance: none;
-    margin-top: ((-$track-border-width * 2 + $track-height) / 2) - ($thumb-height / 2);
-  }
-
-  &::-moz-range-track {
-    @include track;
-    @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
-    background: $track-color;
-    border: $track-border-width solid $track-border-color;
-    border-radius: $track-radius;
-  }
-
-  &::-moz-range-thumb {
-    @include thumb;
-  }
-
-  &::-ms-track {
-    @include track;
-    background: transparent;
-    border-color: transparent;
-    border-width: ($thumb-height / 2) 0;
-    color: transparent;
-  }
-
-  &::-ms-fill-lower {
-    @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
-    background: darken($track-color, $contrast);
-    border: $track-border-width solid $track-border-color;
-    border-radius: $track-radius * 2;
-  }
-
-  &::-ms-fill-upper {
-    @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
-    background: $track-color;
-    border: $track-border-width solid $track-border-color;
-    border-radius: $track-radius * 2;
-  }
-
-  &::-ms-thumb {
-    @include thumb;
-    margin-top: 0;
-  }
-
-/*  &:disabled {
-    &::-webkit-slider-thumb {
-      @include disabled;
-    }
-
-    &::-moz-range-thumb {
-      @include disabled;
-    }
-
-    &::-ms-thumb {
-      @include disabled;
-    }
-
-    &::-webkit-slider-runnable-track {
-      @include disabled;
-    }
-
-    &::-ms-fill-lower {
-      @include disabled;
-    }
-
-    &::-ms-fill-upper {
-      @include disabled;
-    }
-  }*/
-  
+/* fix */
+.custom-range {
+	-webkit-appearance: none;    
+	-moz-appearance: none;
 }
-
+.custom-range::-moz-range-thumb {
+	-moz-appearance: none;
+}
+.custom-range::-webkit-slider-thumb {
+	-webkit-appearance: none;
+}
 
 
 .form-control:focus ~ .input-group-prepend {
-  background: $primary-500;
+	background: $primary-500;
 }
 
 .has-length {
-  .input-group-text {
-    background: $primary-500;
-    border-color: $primary-500;
-    color: $white;
-  }
+	.input-group-text {
+		background: $primary-500;
+		border-color: $primary-500;
+		color: $white;
+	}
 }
 
 .input-group-text {
-  transition: all 0.15s ease-in-out, 
+	transition: all 0.15s ease-in-out, 
 }
 
 /*:not(.was-validated) .custom-checkbox {
 
-  .custom-control-label {
+	.custom-control-label {
 
-    &.bolder {
-      &:before {
-         border: $fusion-500 solid $custom-control-indicator-border-width;
-      }
-    }
+		&.bolder {
+			&:before {
+				 border: $fusion-500 solid $custom-control-indicator-border-width;
+			}
+		}
 
-  }
+	}
 
-  &:hover,
-  &:focus {
-    .custom-control-label:not(.bolder) {
-      &:before {
-         border: $primary-500 solid $custom-control-indicator-border-width;
-      }
-    }
-  }
+	&:hover,
+	&:focus {
+		.custom-control-label:not(.bolder) {
+			&:before {
+				 border: $primary-500 solid $custom-control-indicator-border-width;
+			}
+		}
+	}
 
 }*/
 
 
 /* BS form hack for checkbox tick mark */
 .custom-checkbox .custom-control-label::after {
-  background-size: $custom-control-indicator-bg-size-checkbox;
+	background-size: $custom-control-indicator-bg-size-checkbox;
 }
 
 .custom-control {
-  min-height: $custom-control-indicator-size;
+	min-height: $custom-control-indicator-size;
 }
 
 input[type="radio"]:checked + .custom-control-label, 
 input[type="checkbox"]:checked + .custom-control-label {
-  font-weight: 500;
+	font-weight: 500;
 }
 
 /* help block and validation feedback texts*/
 .help-block {
-  color: $fusion-50;
+	color: $fusion-50;
 }
 
 .help-block, .invalid-feedback, .valid-feedback {
-  font-size: rem($fs-nano);
-  margin-top: 0.325rem;
+	font-size: rem($fs-nano);
+	margin-top: 0.325rem;
 }
 

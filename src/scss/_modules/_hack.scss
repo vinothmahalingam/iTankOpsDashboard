@@ -153,6 +153,13 @@ body:not(.mobile-view-activated).mod-main-boxed.modal-open {
 	border-left: 1px solid rgba($black, 0.1);
 }
 
+.input-group-prepend .btn:not([class*="btn-outline-"]):not(.btn-icon):not(:first-child) {
+	border-left: 1px solid rgba($black, 0.1);
+}
+.input-group-append .btn:not([class*="btn-outline-"]):not(.btn-icon):not(:first-child) {
+	border-left: 1px solid rgba($black, 0.1);
+}
+
 .btn-group-vertical .btn:not([class*="btn-outline-"]):not(:first-child),
 .btn-group-vertical .btn-group {
 	border-top: 1px solid rgba($black, 0.1);

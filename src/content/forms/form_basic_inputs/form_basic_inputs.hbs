@@ -12,7 +12,7 @@
 		<div id="panel-1" class="panel">
 			<div class="panel-hdr">	
 				<h2>
-					Default <span class="fw-300"><i>Panel</i></span> 
+					General <span class="fw-300"><i>inputs</i></span> 
 				</h2>
 				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
@@ -23,17 +23,221 @@
 			<div class="panel-container show">
 				<div class="panel-content">									
 					<div class="panel-tag">
-						a
+						Be sure to use an appropriate type attribute on all inputs (e.g., code <code>email</code> for email address or <code>number</code> for numerical information) to take advantage of newer input controls like email verification, number selection, and more.
 					</div>
-					<p>
-						Default panel text.
-					</p>
+					<form>
+						<div class="form-group">
+							<label class="form-label" for="simpleinput">Text</label>
+							<input type="text" id="simpleinput" class="form-control">
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="example-email">Email</label>
+							<input type="email" id="example-email" name="example-email" class="form-control" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="example-password">Password</label>
+							<input type="password" id="example-password" class="form-control" value="password">
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="example-palaceholder">Placeholder</label>
+							<input type="text" id="example-palaceholder" class="form-control" placeholder="placeholder">
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="example-textarea">Text area</label>
+							<textarea class="form-control" id="example-textarea" rows="5"></textarea>
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="example-static">Static control</label>
+							<input type="text" readonly="" class="form-control-plaintext" id="example-static" value="email@example.com">
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="example-helping">Helping text</label>
+							<input type="text" id="example-helping" class="form-control" placeholder="Helping text">
+							<span class="help-block">
+								A block of help text that breaks onto a new line and may extend beyond one line.
+							</span>
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="example-select">Input Select</label>
+							<select class="form-control" id="example-select">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="example-multiselect">Multiple Select</label>
+							<select id="example-multiselect" multiple="" class="form-control">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="example-fileinput">Default file input</label>
+							<input type="file" id="example-fileinput" class="form-control-file">
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="example-datetime-local-input">Date and time</label>
+							<input class="form-control" type="datetime-local" value="2023-07-23T11:25:00" id="example-datetime-local-input">
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="example-date">Date</label>
+							<input class="form-control" id="example-date" type="date" name="date" value="2023-07-23">
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="example-month">Month</label>
+							<input class="form-control" id="example-month" type="month" name="month" value="November, 2023">
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="example-week">Week</label>
+							<input class="form-control" id="example-week" type="week" name="week" value="2023-09">
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="example-time">Time</label>
+							<input class="form-control" id="example-time" type="time" name="time" value="2023-W33">
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="example-time">Time</label>
+							<input class="form-control" id="example-time" type="time" name="time" value="11:35:00">
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="example-number">Number</label>
+							<input class="form-control" id="example-number" type="number" name="number" value="839473">
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="example-color">Color</label>
+							<input class="form-control" id="example-color" type="color" name="color" value="#727cf5">
+						</div>
+						<div class="form-group mb-0">
+							<label class="form-label" for="example-range">Range</label>
+							<input class="form-control" id="example-range" type="range" name="range" min="0" max="100">
+						</div>
+					</form>
 				</div>
 			</div>
-		</div>		
+		</div>	
 	</div>
 	<div class="col-xl-6">
-		<div id="panel-2" class="panel">
+		<div id="panel-4" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					General <span class="fw-300"><i>inputs (disabled)</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						Add the disabled boolean attribute on an input to prevent user interactions and make it appear lighter. By default, browsers will treat all native form controls (<code>&lt;input&gt;</code>, <code>&lt;select&gt;</code> and <code>&lt;button&gt;</code> elements) inside a <code>&lt;fieldset disabled&gt;</code> as disabled, preventing both keyboard and mouse interactions on them. 
+					</div>
+					<form>
+						<div class="form-group">
+							<label class="form-label text-muted" for="simpleinput-disabled">Text disabled</label>
+							<input type="text" id="simpleinput-disabled" class="form-control" disabled="">
+						</div>
+						<div class="form-group">
+							<label class="form-label text-muted" for="example-email-disabled">Email disabled</label>
+							<input type="email" id="example-email" name="example-email-disabled" class="form-control" placeholder="Email" disabled="">
+						</div>
+						<div class="form-group">
+							<label class="form-label text-muted" for="example-password-disabled">Password disabled</label>
+							<input type="password" id="example-password-disabled" class="form-control" value="password" disabled="">
+						</div>
+						<div class="form-group">
+							<label class="form-label text-muted" for="example-palaceholder-disabled">Placeholder disabled</label>
+							<input type="text" id="example-palaceholder-disabled" class="form-control" placeholder="placeholder" disabled="">
+						</div>
+						<div class="form-group">
+							<label class="form-label text-muted" for="example-textarea-disabled">Text area disabled</label>
+							<textarea class="form-control" id="example-textarea-disabled" rows="5" disabled=""></textarea>
+						</div>
+						<div class="form-group">
+							<label class="form-label text-muted" for="example-static-disabled">Static control disabled</label>
+							<input type="text" readonly="" class="form-control-plaintext" id="example-static-disabled" value="email@example.com" disabled="">
+						</div>
+						<div class="form-group">
+							<label class="form-label text-muted" for="example-helping-disabled">Helping text disabled</label>
+							<input type="text" id="example-helping-disabled" class="form-control" placeholder="Helping text" disabled="">
+							<span class="help-block">
+								A block of help text that breaks onto a new line and may extend beyond one line.
+							</span>
+						</div>
+						<div class="form-group">
+							<label class="form-label text-muted" for="example-select-disabled">Input Select disabled</label>
+							<select class="form-control" id="example-select-disabled" disabled="">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="form-label text-muted" for="example-multiselect-disabled">Multiple Select disabled</label>
+							<select id="example-multiselect-disabled" multiple="" class="form-control" disabled="">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="form-label text-muted" for="example-fileinput-disabled">Default file input disabled</label>
+							<input type="file" id="example-fileinput-disabled" class="form-control-file" disabled="">
+						</div>
+						<div class="form-group">
+							<label class="form-label text-muted" for="example-datetime-local-input-disabled">Date and time disabled</label>
+							<input class="form-control" type="datetime-local" value="2023-07-23T11:25:00" id="example-datetime-local-input-disabled" disabled="">
+						</div>
+						<div class="form-group">
+							<label class="form-label text-muted" for="example-date-disabled">Date disabled</label>
+							<input class="form-control" id="example-date-disabled" type="date" name="date" value="2023-07-23" disabled="">
+						</div>
+						<div class="form-group">
+							<label class="form-label text-muted" for="example-month-disabled">Month disabled</label>
+							<input class="form-control" id="example-month-disabled" type="month" name="month" value="November, 2023" disabled="">
+						</div>
+						<div class="form-group">
+							<label class="form-label text-muted" for="example-week-disabled">Week disabled</label>
+							<input class="form-control" id="example-week-disabled" type="week" name="week" value="2023-09" disabled="">
+						</div>
+						<div class="form-group">
+							<label class="form-label text-muted" for="example-time">Time disabled</label>
+							<input class="form-control" id="example-time-disabled" type="time" name="time" value="2023-W33" disabled="">
+						</div>
+						<div class="form-group">
+							<label class="form-label text-muted" for="example-time-disabled">Time disabled</label>
+							<input class="form-control" id="example-time-disabled" type="time" name="time" value="11:35:00" disabled="">
+						</div>
+						<div class="form-group">
+							<label class="form-label text-muted" for="example-number">Number disabled</label>
+							<input class="form-control" id="example-number-disabled" type="number" name="number" value="839473" disabled="">
+						</div>
+						<div class="form-group">
+							<label class="form-label text-muted" for="example-color">Color disabled</label>
+							<input class="form-control" id="example-color-disabled" type="color" name="color" value="#ed1c24" disabled="">
+						</div>
+						<div class="form-group mb-0">
+							<label class="form-label text-muted" for="example-range-disabled">Range disabled</label>
+							<input class="form-control" id="example-range-disabled" type="range" name="range" min="0" max="100" disabled="">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-12">
+		<div id="panel-8" class="panel">
 			<div class="panel-hdr">	
 				<h2>
 					Default <span class="fw-300"><i>Panel</i></span> 
@@ -47,11 +251,183 @@
 			<div class="panel-container show">
 				<div class="panel-content">									
 					<div class="panel-tag">
-						a
+						Custom <code>&lt;select&gt;</code> menus need only a custom class, <code>.custom-select</code> to trigger the custom styles. Custom styles are limited to the <code>&lt;select&gt;</code>’s initial appearance and cannot modify the <code>&lt;option&gt;</code>s due to browser limitations.
 					</div>
-					<p>
-						Default panel text.
-					</p>
+					<div class="row">
+						<div class="col-xl-6">
+							<h5 class="frame-heading">
+								Inputs
+							</h5>
+							<div class="frame-wrap">
+								<div class="demo">
+									<input type="email" class="form-control form-control-lg" aria-describedby="emailHelp" placeholder="Large input">
+									<input type="email" class="form-control form-control-sm" aria-describedby="emailHelp" placeholder="Small input">
+								</div>				
+							</div>
+							<h5 class="frame-heading">
+								Select large
+							</h5>
+							<div class="frame-wrap">
+								<div class="demo">
+									<select class="custom-select custom-select-lg">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+									<select class="custom-select custom-select-lg" multiple="">
+										<option>Open this select menu</option>
+										<option>One</option>
+										<option>Two</option>
+										<option>Three</option>
+									</select>						
+								</div>
+							</div>
+							<h5 class="frame-heading">
+								Select large
+							</h5>
+							<div class="frame-wrap">
+								<div class="demo">
+									<select class="custom-select custom-select-sm">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+									<select class="custom-select custom-select-sm" multiple="">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-6">
+							<h5 class="frame-heading">
+								Inputs (disabled)
+							</h5>
+							<div class="frame-wrap">
+								<div class="demo">
+									<input type="email" class="form-control form-control-lg" aria-describedby="emailHelp" placeholder="Large input" disabled="">
+									<input type="email" class="form-control form-control-sm" aria-describedby="emailHelp" placeholder="Small input" disabled="">
+								</div>				
+							</div>
+							<h5 class="frame-heading">
+								Select large (disabled)
+							</h5>
+							<div class="frame-wrap">
+								<div class="demo">
+									<select class="custom-select custom-select-lg" disabled="">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+									<select class="custom-select custom-select-lg" multiple="" disabled="">
+										<option>Open this select menu</option>
+										<option>One</option>
+										<option>Two</option>
+										<option>Three</option>
+									</select>						
+								</div>
+							</div>
+							<h5 class="frame-heading">
+								Select small (disabled)
+							</h5>
+							<div class="frame-wrap">
+								<div class="demo">
+									<select class="custom-select custom-select-sm" disabled="">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+									<select class="custom-select custom-select-sm" multiple="" disabled="">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="panel-7" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Default <span class="fw-300"><i>Panel</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						For even more customization and cross browser consistency, use our completely custom form elements to replace the browser defaults. They’re built on top of semantic and accessible markup, so they’re solid replacements for any default form control.
+					</div>
+					<div class="row">
+						<div class="col-xl-6">
+							<div class="form-group">
+								<label class="form-label" for="customRange1">Range</label>
+								<input type="range" class="custom-range" id="customRange1">
+							</div>
+							<div class="form-group">
+								<label class="form-label">Select</label>
+								<select class="custom-select form-control">
+									<option selected="">Open this select menu</option>
+									<option value="1">One</option>
+									<option value="2">Two</option>
+									<option value="3">Three</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label class="form-label">File Browser</label>
+								<div class="custom-file">
+									<input type="file" class="custom-file-input" id="customFile">
+									<label class="custom-file-label" for="customFile">Choose file</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-6">
+							<div class="form-group">
+								<label for="customRange1" class="form-label text-muted">Range (disabled)</label>
+								<input type="range" class="custom-range" id="customRange1" disabled="">
+							</div>
+							<div class="form-group">
+								<label class="form-label text-muted">Select (disabled)</label>
+								<select class="custom-select form-control" disabled="">
+									<option selected="">Open this select menu</option>
+									<option value="1">One</option>
+									<option value="2">Two</option>
+									<option value="3">Three</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label class="form-label text-muted">File Browser (disabled)</label>
+								<div class="custom-file">
+									<input type="file" class="custom-file-input" id="customFile" disabled="">
+									<label class="custom-file-label" for="customFile">Choose file</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-content border-faded border-left-0 border-right-0 border-bottom-0 d-flex flex-row">
+					<button type="submit" class="btn btn-primary ml-auto">Submit</button>
+					<button type="submit" class="btn btn-outline-success ml-2">Cancel</button>
 				</div>
 			</div>
 		</div>
