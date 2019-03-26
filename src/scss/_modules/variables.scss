@@ -269,10 +269,11 @@ $theme-colors: (
 );
 
 /* forms */
+/*$input-height:							calc(2.25rem + 1px); //I had to add this because the input gruops was having improper height for some reason... */
+$input-border-color:					#E5E5E5;
 $input-focus-border-color:				$color-primary;
 $input-btn-focus-color:					transparent;
-$input-border-color:					#E5E5E5;
-$input-padding-y:						.438rem;  
+$input-padding-y:						.5rem;  
 $input-padding-x:						.875rem;
 $label-margin-bottom:					.3rem;
 $form-group-margin-bottom:				1.5rem;
@@ -286,8 +287,16 @@ $custom-checkbox-indicator-border-radius:		2px;
 $custom-control-indicator-border-width: 		2px;
 $custom-control-indicator-bg-size:				0.5rem;
 
+/*$custom-file-height-inner:				calc(2.25rem - 1px);*/
+//$custom-file-padding-y:					$input-padding-y;
+
 /* not part of bootstrap variable */
 $custom-control-indicator-bg-size-checkbox:  50% 50% !default;
+
+/* custom checkbox */
+// the checkbox needs to be a little darker for input groups
+$custom-control-indicator-checked-bg:				$primary-600;
+$custom-control-indicator-checked-border-color: 	$primary-700;
 
 /* custom range */
 $custom-range-thumb-width:				1rem;
@@ -332,10 +341,12 @@ $breadcrumb-bg:							lighten($fusion-50, 40%);
 $breadcrumb-divider-color:				inherit;
 
 /* input button */
+$input-btn-padding-y-sm:				.375rem;
+$input-btn-padding-x-sm:				.844rem;
+
 $input-btn-padding-y:					.5rem;
 $input-btn-padding-x:					1.125rem;
-$input-btn-padding-y-sm:				.188rem;
-$input-btn-padding-x-sm:				.6875rem;
+
 $input-btn-padding-y-lg:				.75rem;
 $input-btn-padding-x-lg:				1.5rem;
 

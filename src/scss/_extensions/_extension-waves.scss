@@ -69,7 +69,8 @@
 .waves-themed {
 
 	&.btn-warning,
-	&.btn-default, {
+	&.btn-default,
+	&.btn-outline-default {
 		.waves-ripple {
 			$bgcolor: $black;
 			background: rgba($bgcolor,0.6);
@@ -88,7 +89,6 @@
 	&.btn-success,
 	&.btn-outline-success,
 	&.btn-dark,
-	&.btn-outline-default,
 	&.btn-outline-dark {
 		.waves-ripple {
 			$bgcolor: $white;

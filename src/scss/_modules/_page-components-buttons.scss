@@ -19,7 +19,7 @@
 	&:hover{
 		@include scale(1.10);
 		@include text-contrast($fusion-300);
-    }
+	}
 
 	&:before {
 		content:"OFF";
@@ -137,7 +137,7 @@
 	box-shadow: 0px 0px 2px rgba($primary-500, 0.3);
 	opacity: 1;
 
-    &:hover {
+	&:hover {
 		font-size: 23px;
 		height: 25px;
 		width: 35px;
@@ -145,7 +145,7 @@
 		background: $primary-500;
 		border-color: $primary-600;
 		box-shadow: 0px 0px 10px #5790b3;
-    }
+	}
 }
 
 /* buttons dropshadow */
@@ -183,7 +183,26 @@
 }
 
 .btn-outline-default {
-    @include button-outline-variant(#333);
+	//@include button-outline-variant($body-color, $body-color, lighten($input-border-color, 8%), $input-border-color);
+	background-color: transparent;
+	color: $body-color;
+	border-color: $input-border-color;
+
+	&:hover,
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active,
+	.show > &.dropdown-toggle {
+		color: $body-color;
+		background-color: lighten($input-border-color, 8%);
+		border-color: $input-border-color;
+	}
+
+	&.disabled,
+	&:disabled {
+		color: $body-color;
+		background-color: transparent;
+	}
+
 }
 
 [class*="btn-outline-"] {
@@ -198,9 +217,9 @@
 .btn-xs, 
 .btn-group-xs > .btn {
 	padding: 1px $input-btn-padding-x-sm;
-    font-size: .7rem;
-    line-height: 1.5;
-    border-radius: .25rem;
+	font-size: .7rem;
+	line-height: 1.5;
+	border-radius: .25rem;
 }
 
 /* btn shadows */
@@ -209,7 +228,7 @@
 }
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
-    @include button-shadow($value);
+	@include button-shadow($value);
   }
 }
 
