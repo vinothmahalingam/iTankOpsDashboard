@@ -15,20 +15,13 @@ var path = require('path');
 var gutil = require('gulp-util');
 var fs = require('fs');
 var build = require('./build');
-
-// merge with default parameters
 var args = Object.assign({'prod': false}, gutil.env);
-
 if (args['prod'] !== false) {
-	// force disable debug for production
 	build.config.debug = false;
 	build.config.compile.jsUglify = true;
 	build.config.compile.cssMinify = true;
 }
-
 module.exports = {
-
-	// default variable config
 	config: Object.assign({}, {
 		debug: true,
 		compile: {
@@ -47,11 +40,7 @@ module.exports = {
 			}
 		}
 	}, build.config),
-
-	/**
-	 * Walk into object recursively
-	 */
-	objectWalkRecursive: function (array, funcname, userdata) {
+	objectBuildTree: function (array, funcname, userdata) {
 		if (!array || typeof array !== 'object') {
 			return false;
 		}
@@ -59,16 +48,14 @@ module.exports = {
 			return false;
 		}
 		for (var key in array) {
-			// apply "funcname" recursively only on object
 			if (Object.prototype.toString.call(array[key]) === '[object Object]') {
 				var funcArgs = [array[key], funcname]
 				if (arguments.length > 2) {
 					funcArgs.push(userdata);
 				}
-				if (module.exports.objectWalkRecursive.apply(null, funcArgs) === false) {
+				if (module.exports.objectBuildTree.apply(null, funcArgs) === false) {
 					return false;
 				}
-				// continue
 			}
 			try {
 				if (arguments.length > 2) {
@@ -82,11 +69,7 @@ module.exports = {
 		}
 		return true;
 	},
-
-	/**
-	 * Add JS compilation options to gulp pipe
-	 */
-	jsChannel: function () {
+	jsOutput: function () {
 		var config = this.config.compile;
 		return lazypipe()
 			.pipe(function () {
@@ -99,11 +82,7 @@ module.exports = {
 				return gulpif(config.jsSourcemaps, sourcemaps.write('./'));
 			});
 	},
-
-	/**
-	 * Add CSS compilation options to gulp pipe
-	 */
-	cssChannel: function () {
+	cssOutput: function () {
 		var config = this.config.compile;
 		return lazypipe()
 			/*.pipe(function () {
@@ -116,11 +95,7 @@ module.exports = {
 				return gulpif(config.cssSourcemaps, sourcemaps.write('./'));
 			});
 	},
-
-	/**
-	 * Multiple output paths by output config
-	 */
-	outputChannel: function (path, outputFile) {
+	outputStream: function (path, outputFile) {
 		if (typeof outputFile === 'undefined') outputFile = '';
 		var piping = lazypipe();
 		var outputPaths = [];
@@ -133,7 +108,6 @@ module.exports = {
 				outputPaths.push(path.replace(matched[0], output).replace(outputFile, ''));
 			}
 		}
-
 		outputPaths.forEach(function (output) {
 			(function (_output) {
 				piping = piping.pipe(function () {
@@ -141,14 +115,9 @@ module.exports = {
 				});
 			})(output);
 		});
-
 		return piping;
 	},
-
-	/**
-	 * Convert string path to actual path
-	 */
-	dotPath: function (path) {
+	streamPath: function (path) {
 		var regex = new RegExp(/\{\$(.*?)\}/),
 			dot = function (obj, i) {
 				return obj[i]
@@ -158,27 +127,17 @@ module.exports = {
 			var realpath = matched[1].split('.').reduce(dot, build);
 			return path = path.replace(matched[0], realpath);
 		}
-
 		return path;
 	},
-
-	/**
-	 * Convert multiple paths
-	 */
-	dotPaths: function (paths) {
+	streamPaths: function (paths) {
 		paths.forEach(function (path, i) {
-			paths[i] = module.exports.dotPath(path);
+			paths[i] = module.exports.streamPath(path);
 		});
 	},
-
-	/**
-	 * Css path rewriter when bundle files moved
-	 */
-	cssRewriter: function (folder) {
+	cssRewritePaths: function (folder) {
 		var imgRegex = new RegExp(/\.(gif|jpg|jpeg|tiff|png|ico)$/i);
 		var fontRegex = new RegExp(/\.(otf|eot|svg|ttf|woff|woff2)$/i);
 		var config = this.config;
-
 		return lazypipe().pipe(function () {
 			// rewrite css relative path
 			return rewrite({
@@ -189,28 +148,21 @@ module.exports = {
 					// process css only
 					if (isCss[0] === '.css') {
 						var pieces = ctx.sourceDir.split("\\");
-
 						var vendor = pieces[pieces.indexOf('node_modules') + 1];
 						if (pieces.indexOf('node_modules') === -1) {
 							vendor = pieces[pieces.indexOf('vendors') + 1];
 						}
-
 						var file = module.exports.baseName(ctx.targetFile);
 						var extension = 'fonts/';
 						if (imgRegex.test(file)) {
 							extension = 'images/';
 						}
-
 						return path.join(extension, file);
 					}
 				}
 			});
 		});
 	},
-
-	/**
-	 * Get end filename from path
-	 */
 	baseName: function (path) {
 		var maybeFile = path.split('/').pop();
 		if (maybeFile.indexOf('.') !== -1) {
@@ -218,61 +170,47 @@ module.exports = {
 		}
 		return '';
 	},
-
-	/**
-	 * Bundle
-	 */
 	bundle: function (bundle) {
 		var _self = this;
 		var tasks = [];
-
 		if (typeof bundle.src !== 'undefined' && typeof bundle.bundle !== 'undefined') {
-
-			// for images & fonts as per vendor
+			// images and fonts for vendor
 			if ('required' in bundle.src && 'optional' in bundle.src) {
 				var vendors = {};
-
 				for (var key in bundle.src) {
 					if (!bundle.src.hasOwnProperty(key)) continue;
 					vendors = Object.assign(vendors, bundle.src[key]);
 				}
-
 				for (var vendor in vendors) {
 					if (!vendors.hasOwnProperty(vendor)) continue;
-
 					var vendorObj = vendors[vendor];
-
 					for (var type in vendorObj) {
 						if (!vendorObj.hasOwnProperty(type)) continue;
-
-						_self.dotPaths(vendorObj[type]);
-
+						_self.streamPaths(vendorObj[type]);
 						switch (type) {
 							case 'fonts':
 								gulp.src(vendorObj[type])
-									.pipe(_self.outputChannel(bundle.bundle.fonts)());
+									.pipe(_self.outputStream(bundle.bundle.fonts)());
 								break;
 							case 'images':
 								gulp.src(vendorObj[type])
-									.pipe(_self.outputChannel(bundle.bundle.images)());
+									.pipe(_self.outputStream(bundle.bundle.images)());
 								break;
 							case 'json':
 								gulp.src(vendorObj[type])
-									.pipe(_self.outputChannel(bundle.bundle.json)());
+									.pipe(_self.outputStream(bundle.bundle.json)());
 								break;
 							case 'media':
 								gulp.src(vendorObj[type])
-									.pipe(_self.outputChannel(bundle.bundle.media)());
+									.pipe(_self.outputStream(bundle.bundle.media)());
 								break;			
 						}
 					}
 				}
 			}
-
-			// flattening array
 			if (!('styles' in bundle.src) && !('scripts' in bundle.src)) {
 				var src = {styles: [], scripts: []};
-				_self.objectWalkRecursive(bundle.src, function (paths, type) {
+				_self.objectBuildTree(bundle.src, function (paths, type) {
 					switch (type) {
 						case 'styles':
 						case 'scripts':
@@ -282,38 +220,31 @@ module.exports = {
 				});
 				bundle.src = src;
 			}
-
 			for (var type in bundle.src) {
 				if (!bundle.src.hasOwnProperty(type)) continue;
-				// skip if not array
 				if (Object.prototype.toString.call(bundle.src[type]) !== '[object Array]') continue;
-				// skip if no bundle output is provided
 				if (typeof bundle.bundle[type] === 'undefined') continue;
-
-				_self.dotPaths(bundle.src[type]);
+				_self.streamPaths(bundle.src[type]);
 				var outputFile = _self.baseName(bundle.bundle[type]);
-
 				switch (type) {
 					case 'styles':
 						gulp.src(bundle.src[type])
-							//.pipe(_self.cssRewriter(bundle.bundle[type])())
+							//.pipe(_self.cssRewritePaths(bundle.bundle[type])())
 							.pipe(concat(outputFile))
 							.pipe(sourcemaps.init())
 							.pipe(sassGlob())
 							.pipe(sass({
 								errLogToConsole: true
 							}).on('error', sass.logError))
-							.pipe(_self.cssChannel()())
-							.pipe(_self.outputChannel(bundle.bundle[type], outputFile)())
+							.pipe(_self.cssOutput()())
+							.pipe(_self.outputStream(bundle.bundle[type], outputFile)())
 						break;
-
 					case 'scripts':
 						return gulp.src(bundle.src[type])
 							.pipe(concat(outputFile))
-							.pipe(_self.jsChannel()())
-							.pipe(_self.outputChannel(bundle.bundle[type], outputFile)());
+							.pipe(_self.jsOutput()())
+							.pipe(_self.outputStream(bundle.bundle[type], outputFile)());
 						break;
-
 					default:
 						break;
 				}
@@ -321,18 +252,12 @@ module.exports = {
 		}
 		return tasks;
 	},
-
-	/**
-	 * Copy source to output destination
-	 */
 	output: function (bundle) {
 		var _self = this;
 		if (typeof bundle.src !== 'undefined' && typeof bundle.output !== 'undefined') {
 			for (var type in bundle.src) {
 				if (!bundle.src.hasOwnProperty(type)) continue;
-
-				_self.dotPaths(bundle.src[type]);
-
+				_self.streamPaths(bundle.src[type]);
 				switch (type) {
 					case 'styles':
 						gulp.src(bundle.src[type])
@@ -340,23 +265,20 @@ module.exports = {
 							.pipe(sass({
 								errLogToConsole: true
 							}).on('error', sass.logError))
-							.pipe(_self.outputChannel(bundle.output[type])());
+							.pipe(_self.outputStream(bundle.output[type])());
 						break;
 					default:
 						gulp.src(bundle.src[type])
-							.pipe(_self.outputChannel(bundle.output[type])());
+							.pipe(_self.outputStream(bundle.output[type])());
 						break;
 				}
 			}
 		}
 	},
-
-	getFolders: function (dir) {
+	getDirs: function (dir) {
 		return fs.readdirSync(dir)
 			.filter(function (file) {
 				return fs.statSync(path.join(dir, file)).isDirectory();
 			});
 	}
-
-
 };

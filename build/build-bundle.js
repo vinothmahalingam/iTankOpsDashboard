@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var sequence = require('run-sequence');
 var build = require('./build');
-var func = require('./helpers');
+var func = require('./compile');
 
 
 // merge with default parameters
@@ -18,7 +18,7 @@ gulp.task('build-bundle', function (cb) {
 
 	console.log('==================> Generating bundles...');
 
-	func.objectWalkRecursive(build.build, function (val, key) {
+	func.objectBuildTree(build.build, function (val, key) {
 		if (typeof val.src !== 'undefined') {
 			if (typeof val.bundle !== 'undefined') {
 				func.bundle(val);
