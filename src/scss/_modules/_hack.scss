@@ -123,13 +123,13 @@ a[target]{
 	display: flex;
     align-items: center;
 }*/
-select {
+select.custom-select {
     -webkit-appearance: none;
     -moz-appearance: none;
     text-indent: 1px;
     text-overflow: '';
 }
-select::-ms-expand {
+select.custom-select::-ms-expand {
     display: none;
 }
 /* bootstrap modal remove padding */

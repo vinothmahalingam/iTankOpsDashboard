@@ -5,12 +5,3 @@ html {
 		background-color: $body-background-color;
 	}
 }
-.layout-composed {
-	.page-content {
-		.page-breadcrumb,
-		.subheader {
-			display: none;
-		}
-		padding: 0 !important;
-	}
-}

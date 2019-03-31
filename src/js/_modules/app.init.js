@@ -182,6 +182,7 @@ var initApp = (function(app) {
 	app.pushSettings = function (DB_string, saveToLocal) {
 
 		/* clear localstorage variable 'themeSettings' */
+		if (saveToLocal != false)
 		localStorage.setItem("themeSettings", "");
 
 		/* replace classes from <body> with fetched DB string */
@@ -668,46 +669,6 @@ var initApp = (function(app) {
 		} else {
 			console.log("OOPS! bs.popover is not loaded");
 		} 
-
-		/**
-		 * Lazyload images
-		 * doc: lazy load images to optimize performance
-		 * DEV NOTES: way too long; Please shorten it!!!
-		 */
-
-		if ( typeof $.fn.lazy !== 'undefined' && typeof $.fn.slimScroll !== 'undefined') {
-			$('.custom-scroll img').lazy({
-				effect: "fadeIn",
-				effectTime: 200,
-				threshold: 10,
-				enableThrottle: true,
-				throttle: 500,
-				visibleOnly: true,
-				combined: true,
-				appendScroll: $('.slimScrollDiv > :first-child')
-			});
-			$('a[data-toggle="tab"]').on('shown.bs.tab', function () {
-				$('.slimScrollDiv > :first-child').trigger('scroll');
-			});
-			myapp_config.root_.on('show.bs.dropdown', function () {
-				$('.slimScrollDiv > :first-child').trigger('scroll');
-			});
-		} else {
-			$('.custom-scroll img').lazy({
-				effect: "fadeIn",
-				effectTime: 200,
-				threshold: 10,
-				visibleOnly: true,
-				combined: true,
-				appendScroll: $('.custom-scroll')
-			});
-			$('a[data-toggle="tab"]').on('shown.bs.tab', function () {
-				$('.custom-scroll').trigger('scroll');
-			});
-			myapp_config.root_.on('show.bs.dropdown', function () {
-				$('.custom-scroll').trigger('scroll');
-			});
-		}
 
 		/**
 		 * Dropdowns will not close on click

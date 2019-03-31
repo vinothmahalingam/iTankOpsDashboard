@@ -113,9 +113,29 @@
 							<label class="form-label" for="example-color">Color</label>
 							<input class="form-control" id="example-color" type="color" name="color" value="#727cf5">
 						</div>
-						<div class="form-group mb-0">
+						<div class="form-group">
 							<label class="form-label" for="example-range">Range</label>
 							<input class="form-control" id="example-range" type="range" name="range" min="0" max="100">
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="customRange1">Range (custom)</label>
+							<input type="range" class="custom-range" id="customRange1">
+						</div>
+						<div class="form-group">
+							<label class="form-label">Select (custom)</label>
+							<select class="custom-select form-control">
+								<option selected="">Open this select menu</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+						</div>
+						<div class="form-group mb-0">
+							<label class="form-label">File (Browser)</label>
+							<div class="custom-file">
+								<input type="file" class="custom-file-input" id="customFile">
+								<label class="custom-file-label" for="customFile">Choose file</label>
+							</div>
 						</div>
 					</form>
 				</div>
@@ -123,7 +143,7 @@
 		</div>	
 	</div>
 	<div class="col-xl-6">
-		<div id="panel-4" class="panel">
+		<div id="panel-2" class="panel">
 			<div class="panel-hdr">	
 				<h2>
 					General <span class="fw-300"><i>inputs (disabled)</i></span> 
@@ -227,9 +247,29 @@
 							<label class="form-label text-muted" for="example-color">Color disabled</label>
 							<input class="form-control" id="example-color-disabled" type="color" name="color" value="#ed1c24" disabled="">
 						</div>
-						<div class="form-group mb-0">
+						<div class="form-group">
 							<label class="form-label text-muted" for="example-range-disabled">Range disabled</label>
 							<input class="form-control" id="example-range-disabled" type="range" name="range" min="0" max="100" disabled="">
+						</div>
+						<div class="form-group">
+								<label for="customRange1" class="form-label text-muted">Range (disabled)</label>
+								<input type="range" class="custom-range" id="customRange1" disabled="">
+							</div>
+						<div class="form-group">
+							<label class="form-label text-muted">Select (disabled)</label>
+							<select class="custom-select form-control" disabled="">
+								<option selected="">Open this select menu</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+						</div>
+						<div class="form-group mb-0">
+							<label class="form-label text-muted">File Browser (disabled)</label>
+							<div class="custom-file">
+								<input type="file" class="custom-file-input" id="customFile" disabled="">
+								<label class="custom-file-label" for="customFile">Choose file</label>
+							</div>
 						</div>
 					</form>
 				</div>
@@ -237,10 +277,10 @@
 		</div>
 	</div>
 	<div class="col-xl-12">
-		<div id="panel-8" class="panel">
+		<div id="panel-3" class="panel">
 			<div class="panel-hdr">	
 				<h2>
-					Default <span class="fw-300"><i>Panel</i></span> 
+					Input <span class="fw-300"><i>Sizes</i></span> 
 				</h2>
 				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
@@ -251,121 +291,52 @@
 			<div class="panel-container show">
 				<div class="panel-content">									
 					<div class="panel-tag">
-						Custom <code>&lt;select&gt;</code> menus need only a custom class, <code>.custom-select</code> to trigger the custom styles. Custom styles are limited to the <code>&lt;select&gt;</code>’s initial appearance and cannot modify the <code>&lt;option&gt;</code>s due to browser limitations.
+						Set heights using classes like <code>.input-lg</code>, <code>.input-sm</code> and for custom inputs, you can use <code>.custom-select-sm</code>, <code>.custom-select-lg</code>, and set widths using grid column classes like <code>.col-lg-*</code>
 					</div>
-					<div class="row">
-						<div class="col-xl-6">
-							<h5 class="frame-heading">
-								Inputs
-							</h5>
-							<div class="frame-wrap">
-								<div class="demo">
-									<input type="email" class="form-control form-control-lg" aria-describedby="emailHelp" placeholder="Large input">
-									<input type="email" class="form-control form-control-sm" aria-describedby="emailHelp" placeholder="Small input">
-								</div>				
-							</div>
-							<h5 class="frame-heading">
-								Select large
-							</h5>
-							<div class="frame-wrap">
-								<div class="demo">
-									<select class="custom-select custom-select-lg">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-									</select>
-									<select class="custom-select custom-select-lg" multiple="">
-										<option>Open this select menu</option>
-										<option>One</option>
-										<option>Two</option>
-										<option>Three</option>
-									</select>						
+					<form>
+						<div class="form-group">
+							<label for="example-input-small" class="form-label">Small</label>
+							<input type="text" id="example-input-small" name="example-input-small" class="form-control form-control-sm" placeholder=".input-sm">
+						</div>
+						<div class="form-group">
+							<label for="example-input-normal" class="form-label">Normal</label>
+							<input type="text" id="example-input-normal" name="example-input-normal" class="form-control" placeholder="Normal">
+						</div>
+						<div class="form-group">
+							<label for="example-input-large" class="form-label">Large</label>
+							<input type="text" id="example-input-large" name="example-input-large" class="form-control form-control-lg" placeholder=".input-lg">
+						</div>
+						<div class="form-group mb-0">
+							<div class="row">
+								<div class="col-6">
+									<label for="example-gridsize" class="form-label">Grid Sizes</label>
+								</div>
+								<div class="col-6 text-right">
+									<a href="utilities_responsive_grid.html" title="Responsive Grid" target="_blank">Check out how it works</a>
 								</div>
 							</div>
-							<h5 class="frame-heading">
-								Select large
-							</h5>
-							<div class="frame-wrap">
-								<div class="demo">
-									<select class="custom-select custom-select-sm">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-									</select>
-									<select class="custom-select custom-select-sm" multiple="">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-									</select>
+							<div class="row">
+								<div class="col-3">
+									<input type="text" id="example-gridsize" class="form-control bg-primary-50" placeholder=".col-3">
+								</div>
+								<div class="col">
+									<input type="text" id="example-gridsize-2" class="form-control bg-success-50" placeholder=".col">
+								</div>
+								<div class="col-12">
+									<div class="form-group mb-0">
+										<input class="form-control" id="gridrange" type="range" name="gridrange" min="1" max="12" value="3">
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-6">
-							<h5 class="frame-heading">
-								Inputs (disabled)
-							</h5>
-							<div class="frame-wrap">
-								<div class="demo">
-									<input type="email" class="form-control form-control-lg" aria-describedby="emailHelp" placeholder="Large input" disabled="">
-									<input type="email" class="form-control form-control-sm" aria-describedby="emailHelp" placeholder="Small input" disabled="">
-								</div>				
-							</div>
-							<h5 class="frame-heading">
-								Select large (disabled)
-							</h5>
-							<div class="frame-wrap">
-								<div class="demo">
-									<select class="custom-select custom-select-lg" disabled="">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-									</select>
-									<select class="custom-select custom-select-lg" multiple="" disabled="">
-										<option>Open this select menu</option>
-										<option>One</option>
-										<option>Two</option>
-										<option>Three</option>
-									</select>						
-								</div>
-							</div>
-							<h5 class="frame-heading">
-								Select small (disabled)
-							</h5>
-							<div class="frame-wrap">
-								<div class="demo">
-									<select class="custom-select custom-select-sm" disabled="">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-									</select>
-									<select class="custom-select custom-select-sm" multiple="" disabled="">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-									</select>
-								</div>
-							</div>
-						</div>
-					</div>
+					</form>
 				</div>
 			</div>
 		</div>
-		<div id="panel-7" class="panel">
+		<div id="panel-4" class="panel">
 			<div class="panel-hdr">	
 				<h2>
-					Default <span class="fw-300"><i>Panel</i></span> 
+					Altering <span class="fw-300"><i>with utilities</i></span> 
 				</h2>
 				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
@@ -376,64 +347,51 @@
 			<div class="panel-container show">
 				<div class="panel-content">									
 					<div class="panel-tag">
-						For even more customization and cross browser consistency, use our completely custom form elements to replace the browser defaults. They’re built on top of semantic and accessible markup, so they’re solid replacements for any default form control.
+						You can easily alter the border, boder-radius and padding using the utility classes.
 					</div>
 					<div class="row">
-						<div class="col-xl-6">
+						<div class="col-lg-3">
 							<div class="form-group">
-								<label class="form-label" for="customRange1">Range</label>
-								<input type="range" class="custom-range" id="customRange1">
-							</div>
+								<label for="example-input-square" class="form-label">Square edges</label>
+								<input type="text" id="example-input-square" class="form-control form-control-lg rounded-0" placeholder="Square borders">
+							</div>							
+						</div>
+						<div class="col-lg-3">
 							<div class="form-group">
-								<label class="form-label">Select</label>
-								<select class="custom-select form-control">
-									<option selected="">Open this select menu</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
-								</select>
-							</div>
+								<label for="example-input-pill" class="form-label">Rounded pill</label>
+								<input type="text" id="example-input-pill" class="form-control form-control-lg rounded-pill" placeholder="Rounded pill">
+							</div>	
+						</div>
+						<div class="col-lg-3">
 							<div class="form-group">
-								<label class="form-label">File Browser</label>
-								<div class="custom-file">
-									<input type="file" class="custom-file-input" id="customFile">
-									<label class="custom-file-label" for="customFile">Choose file</label>
-								</div>
+								<label for="example-input-material" class="form-label">Material</label>
+								<input type="text" id="example-input-material"class="form-control form-control-lg rounded-0 border-top-0 border-left-0 border-right-0 px-0" placeholder="Material">
 							</div>
 						</div>
-						<div class="col-xl-6">
+						<div class="col-lg-3">
 							<div class="form-group">
-								<label for="customRange1" class="form-label text-muted">Range (disabled)</label>
-								<input type="range" class="custom-range" id="customRange1" disabled="">
-							</div>
-							<div class="form-group">
-								<label class="form-label text-muted">Select (disabled)</label>
-								<select class="custom-select form-control" disabled="">
-									<option selected="">Open this select menu</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label class="form-label text-muted">File Browser (disabled)</label>
-								<div class="custom-file">
-									<input type="file" class="custom-file-input" id="customFile" disabled="">
-									<label class="custom-file-label" for="customFile">Choose file</label>
-								</div>
-							</div>
+								<label for="example-input-border" class="form-label">Border color</label>
+								<input type="text" id="example-input-border" class="form-control form-control-lg border-info" placeholder="Border colors">
+							</div>	
 						</div>
 					</div>
-				</div>
-				<div class="panel-content border-faded border-left-0 border-right-0 border-bottom-0 d-flex flex-row">
-					<button type="submit" class="btn btn-primary ml-auto">Submit</button>
-					<button type="submit" class="btn btn-outline-success ml-2">Cancel</button>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 {{/inline}}
-{{#*inline "scripts-block"}}{{/inline}}
+{{#*inline "scripts-block"}}
+<script type="text/javascript">
+	var example_gridsize = $("#example-gridsize");
+
+	$("#gridrange").on("input change", function() {
+		//do something
+		example_gridsize.attr("placeholder", ".col-" + $(this).val());
+		example_gridsize.parent().removeClass().addClass("col-" + $(this).val())
+		console.log("col-" + $(this).val());
+	});
+</script>
+{{/inline}}
 
 {{/layouts/main}}

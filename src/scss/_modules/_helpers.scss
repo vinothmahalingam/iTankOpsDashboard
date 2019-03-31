@@ -241,14 +241,14 @@
 
 	&:hover {
 		.show-on-hover-parent {
-			display: flex;
+			display: block; //changed from flex
 		}
 	}
 }
 
 .hide-child-on-hover {
 	.hide-on-hover-parent {
-	   display:flex; 
+	   display: block; //changed from flex 
 	}
 
 	&:hover {
@@ -386,8 +386,30 @@ $cursor: (
 	}
 }
 
+/* layout composed */
+.layout-composed {
+	.page-content {
+		.page-breadcrumb,
+		.subheader {
+			display: none;
+		}
+		padding: 0 !important;
+	}
+}
+
 /* responsive helpers */
 @media only screen and ( max-width: $mobile-breakpoint-size ){
+
+	/* layout composed mobile only */
+	.layout-composed-mobile {
+		.page-content {
+			.page-breadcrumb,
+			.subheader {
+				display: none;
+			}
+			padding: 0 !important;
+		}
+	}	
 
 	/* positions on mobile view */
 	.position-on-mobile-absolute {

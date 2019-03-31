@@ -48,11 +48,11 @@ ul.list-verticle {
 
 hr {
 	border: none;
-    border-bottom: 1px dashed #eee;
+	border-bottom: 1px dashed #eee;
 
-    &.hr-xl {
-    	margin: 3rem 0;
-    }
+	&.hr-xl {
+		margin: 3rem 0;
+	}
 }
 
 
@@ -146,7 +146,11 @@ hr {
 /* image share */
 .img-share {
 	width: auto;
-    height: $image-share-height;
+	height: $image-share-height;
+}
+span.img-share {
+	width: $image-share-height + ($image-share-height * 0.4670);
+	height: $image-share-height;
 }
 
 .notes {
@@ -171,12 +175,28 @@ hr {
 
 /* disclaimer class */
 .disclaimer {
-    padding-left: 10px;
-    font-size: rem($fs-base - 5);
-    color: #a2a2a2;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-style: italic;
+	padding-left: 10px;
+	font-size: rem($fs-base - 5);
+	color: #a2a2a2;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-style: italic;
+}
+
+/* horizontal scrolling */
+.scrolling-wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+
+	-webkit-overflow-scrolling: touch;
+
+  .card {
+    flex: 0 0 auto;
+  }
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 
@@ -239,14 +259,14 @@ hr {
 /* https://getbootstrap.com/docs/3.4/css/#responsive-utilities */
 @each $bp in map-keys($grid-breakpoints) {
   .hidden-#{$bp}-up {
-    @include media-breakpoint-up($bp) {
-      display: none !important;
-    }
+	@include media-breakpoint-up($bp) {
+	  display: none !important;
+	}
   }
   .hidden-#{$bp}-down {
-    @include media-breakpoint-down($bp) {
-      display: none !important;
-    }
+	@include media-breakpoint-down($bp) {
+	  display: none !important;
+	}
   }
 }
 
@@ -256,7 +276,7 @@ hr {
 	margin-bottom: 1rem;
 	color: lighten($fusion-50, 7%);
 	font-weight: 500;
-    
+	
 	small {
 		font-size: rem($fs-base);
 		margin-bottom: 0.5rem;
@@ -301,6 +321,6 @@ hr {
 /* code */
 code {
 	background: lighten(desaturate($primary-800, 60%), 56%);
-    padding: 4px 7px;
-    border-radius: 4px;
+	padding: 4px 7px;
+	border-radius: 4px;
 }

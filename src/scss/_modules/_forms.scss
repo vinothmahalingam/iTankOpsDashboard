@@ -66,11 +66,10 @@
 	-webkit-appearance: none;
 }
 
-
+/* add background to focused inpur prepend and append */
 .form-control:focus ~ .input-group-prepend {
 	background: $primary-500;
 }
-
 .has-length {
 	.input-group-text {
 		border-color: $primary-500;
@@ -84,13 +83,11 @@
 	}
 
 }
-
-//:not([class^="bg-"]):not([class*=" bg-"])
-
 .input-group-text {
 	transition: all 0.15s ease-in-out, 
 }
 
+/* input group animation for multiple inputs */
 .input-group.input-group-multi-transition {
 	input[type="text"] {
 
@@ -101,39 +98,30 @@
 	}
 }
 
-/*:not(.was-validated) .custom-checkbox {
-
-	.custom-control-label {
-
-		&.bolder {
-			&:before {
-				 border: $fusion-500 solid $custom-control-indicator-border-width;
-			}
-		}
-
-	}
-
-	&:hover,
-	&:focus {
-		.custom-control-label:not(.bolder) {
-			&:before {
-				 border: $primary-500 solid $custom-control-indicator-border-width;
-			}
-		}
-	}
-
-}*/
-
-
 /* BS form hack for checkbox tick mark */
 .custom-checkbox .custom-control-label::after {
 	background-size: $custom-control-indicator-bg-size-checkbox;
 }
 
-.custom-control {
-	min-height: $custom-control-indicator-size;
+/* circle checkbox */
+.custom-checkbox-circle {
+	.custom-control-label:before {
+		border-radius: 50%;
+	}
+}
+/* rounded radio */
+.custom-radio-rounded {
+	.custom-control-label:before {
+		border-radius: 4px;
+	}
 }
 
+/* not sure if we need this? */
+/*.custom-control {
+	min-height: $custom-control-indicator-size;
+}*/
+
+/* make checked label bold */
 input[type="radio"]:checked + .custom-control-label, 
 input[type="checkbox"]:checked + .custom-control-label {
 	font-weight: 500;
@@ -144,6 +132,7 @@ input[type="checkbox"]:checked + .custom-control-label {
 	color: $fusion-50;
 }
 
+/* on feedback error */
 .help-block, .invalid-feedback, .valid-feedback {
 	font-size: rem($fs-nano);
 	margin-top: 0.325rem;
