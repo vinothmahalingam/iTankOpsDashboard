@@ -58,11 +58,6 @@
 								"{$config.path.node_modules}/bootstrap/dist/js/bootstrap.js"
 							]
 						},
-						"jquery-lazy": {
-							"scripts": [
-								"{$config.path.node_modules}/jquery-lazy/jquery.lazy.js"
-							]
-						},
 						"jquery-snippets": {
 							"scripts": [
 								"{$config.path.src}/custom/plugins/jquery-snippets/jquery-snippets.js"
