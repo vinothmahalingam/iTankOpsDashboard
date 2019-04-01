@@ -232,6 +232,19 @@
 						
 					}
 				}
+			},
+			"themes": {
+				"theme-1": {
+					"src": {
+						"styles": [
+							"{$config.path.src}/scss/cust-theme-1.scss"
+						]
+					},
+					"bundle": {
+						"styles": "{$config.output}/css/cust-theme-1.css"
+						
+					}
+				}
 			}			
 		}			
 	}

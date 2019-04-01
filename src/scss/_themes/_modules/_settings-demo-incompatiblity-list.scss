@@ -38,19 +38,8 @@
 		      color: $settings-incompat-desc !important;
 		    }
 		    &:after {
-		      content: "DISABLED";
-		      font-size: 10px;
-		      position: absolute;
 		      background: $settings-incompat-bg;
-		      width: 65px;
-		      text-align: center;
 		      border: 1px solid $settings-incompat-border;
-		      height: 22px;
-		      line-height: 20px;
-		      border-radius: $border-radius-plus;
-		      display: block;
-		      right: 13px;
-		      top: 26%;
 		      color:$fusion-900;
 		    }
 		}
