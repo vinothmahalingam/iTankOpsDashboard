@@ -186,7 +186,7 @@ var initApp = (function(app) {
 		localStorage.setItem("themeSettings", "");
 
 		/* replace classes from <body> with fetched DB string */
-		myapp_config.root_.removeClass().addClass(DB_string);
+		myapp_config.root_.addClass(DB_string); //ommited .removeClass()
 
 		/* destroy or enable slimscroll */
 		initApp.checkNavigationOrientation();

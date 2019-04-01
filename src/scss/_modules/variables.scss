@@ -650,7 +650,7 @@ $nav-base-color:						lighten($nav-background, 7%) !default;
 $nav-width:								16.875rem !default; 
 
 /* nav parent level-0 */
-$nav-link-color: 						lighten($nav-base-color, 28%) !default;
+$nav-link-color: 						lighten($nav-base-color, 32%) !default;
 $nav-font-link-size: 					$fs-base + 1 !default;
 $nav-collapse-sign-font-size:			inherit !default;	
 $nav-padding-x:							2rem !default; 
@@ -743,9 +743,9 @@ $progress-border-radius:				10rem;
 
 /*   PAGE COMPONENT MESSENGER 
 ========================================================================== */
-$msgr-list-width:						233px;
-$msgr-list-width-collapsed:				50px;
-$msgr-get-background:					$page-bg;
+$msgr-list-width:						14.563rem;
+$msgr-list-width-collapsed:				3.125rem;
+$msgr-get-background:					#f1f0f0;
 $msgr-sent-background:					$success-500;
 $msgr-animation-delay:					100ms;
 
