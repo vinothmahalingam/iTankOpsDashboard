@@ -169,14 +169,14 @@
 					"dygraph" : {
 						"src": {
 							"styles":[
-								"{$config.path.src}/dygraphs/dist/dygraph.css"
+								"{$config.path.node_modules}/dygraphs/dist/dygraph.css"
 							],
 							"scripts": [
 								"{$config.path.node_modules}/dygraphs/dist/dygraph.js"
 							]
 						},
 						"bundle": {
-							"styles": "{$config.output}/statistics/css/dygraph.css",
+							"styles": "{$config.output}/css/statistics/dygraph.css",
 							"scripts": "{$config.output}/js/statistics/dygraph.js"
 						}
 					},
@@ -235,7 +235,7 @@
 					"rickshaw" : {
 						"src": {
 							"styles":[
-								"{$config.path.src}/rickshaw/rickshaw.css"
+								"{$config.path.node_modules}/rickshaw/rickshaw.css"
 							],
 							"scripts": [
 								"{$config.path.node_modules}/rickshaw/rickshaw.js"
@@ -249,7 +249,7 @@
 					"chartjs" : {
 						"src": {
 							"styles":[
-								"{$config.path.src}/chart.js/dist/Chart.css"
+								"{$config.path.node_modules}/chart.js/dist/Chart.css"
 							],
 							"scripts": [
 								"{$config.path.node_modules}/chart.js/dist/Chart.bundle.js"
@@ -263,7 +263,7 @@
 					"c3" : {
 						"src": {
 							"styles":[
-								"{$config.path.src}/c3/c3.css"
+								"{$config.path.node_modules}/c3/c3.css"
 							],
 							"scripts": [
 								"{$config.path.node_modules}/c3/c3.js"
@@ -330,22 +330,6 @@
 						},
 						"bundle": {
 							"styles": "{$config.output}/css/page-login.css"
-						}
-					}
-				},
-				"forms" : {
-					"material" : {
-						"src": {
-							"styles":[
-								"{$config.path.src}/content/forms/form_material/form-material.scss"
-							],
-							"scripts":[
-								"{$config.path.src}/content/forms/form_material/form-material.js"
-							]
-						},
-						"bundle": {
-							"styles": "{$config.output}/css/form-material.css",
-							"scripts": "{$config.output}/js/form-material.js"
 						}
 					}
 				}

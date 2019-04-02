@@ -153,9 +153,9 @@ module.exports = {
 							vendor = pieces[pieces.indexOf('vendors') + 1];
 						}
 						var file = module.exports.baseName(ctx.targetFile);
-						var extension = 'fonts/';
+						var extension = 'webfonts/';
 						if (imgRegex.test(file)) {
-							extension = 'images/';
+							extension = 'img/';
 						}
 						return path.join(extension, file);
 					}
@@ -229,7 +229,7 @@ module.exports = {
 				switch (type) {
 					case 'styles':
 						gulp.src(bundle.src[type])
-							//.pipe(_self.cssRewritePaths(bundle.bundle[type])())
+							.pipe(_self.cssRewritePaths(bundle.bundle[type])())
 							.pipe(concat(outputFile))
 							.pipe(sourcemaps.init())
 							.pipe(sassGlob())
