@@ -324,3 +324,20 @@ code {
 	padding: 4px 7px;
 	border-radius: 4px;
 }
+
+
+/* star checkbox */
+.star {
+    visibility:hidden;
+    font-size:1.5em;
+    cursor:pointer;
+}
+.star:before {
+   content: "☆";
+   position: absolute;
+   visibility:visible;
+}
+.star:checked:before {
+   content: "★";
+   position: absolute;
+}

@@ -348,7 +348,7 @@
 		</ul>
 	</li>	
 	<li {{#is pagename "in" "icons_webfonts_faq,icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_fontawesome_brand,icons_fontawesome_svg,icons_nextgen_general,icons_nextgen_base,icons_stack_showcase,icons_stack_generate"}}class="active open"{{/is}}>
-		<a href="#" title="Icons" data-filter-tags="icons">
+		<a href="#" title="Font Icons" data-filter-tags="icons">
 			<i class="fal fa-map-marker-alt"></i>
 			<span class="nav-link-text" data-i18n="nav.infterface.icons">Font Icons</span>
 			<span class="dl-ref bg-primary-500 hidden-nav-function-minify hidden-nav-function-top">&nbsp;2,500+&nbsp;</span>
@@ -362,7 +362,7 @@
 				</a>
 			</li>
 			<li {{#is pagename "in" "icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_fontawesome_brand, icons_fontawesome_svg"}}class="active open"{{/is}}>
-				<a href="#" title="Icons" data-filter-tags="icons">
+				<a href="#" title="FontAwesome 5" data-filter-tags="icons">
 					<span class="nav-link-text">
 						<span data-i18n="nav.infterface.icons">FontAwesome 5</span>
 					</span>
@@ -458,24 +458,24 @@
 			</li>
 		</ul>
 	</li>	
-	<li {{#is pagename "in" "datagrid_basic_tables,datagrid_generate_table_style"}}class="active open"{{/is}}>
-		<a href="#" title="Datagrid" data-filter-tags="datagrid"> 
+	<li {{#is pagename "in" "tables_basic,tables_generate_style"}}class="active open"{{/is}}>
+		<a href="#" title="Tables" data-filter-tags="tables"> 
 			<i class="fal fa-th-list"></i>
-			<span class="nav-link-text" data-i18n="nav.datagrid">Datagrid</span>
+			<span class="nav-link-text" data-i18n="nav.tables">Tables</span>
 		</a>
 		<ul>
-			<li {{#is pagename "===" "datagrid_basic_tables"}}class="active"{{/is}}>
-				<a href="datagrid_basic_tables.html" data-filter-tags="datagrid basic tables"> 
-					<span class="nav-link-text" data-i18n="nav.datagrid_basic_tables">Basic Tables</span> 
+			<li {{#is pagename "===" "tables_basic"}}class="active"{{/is}}>
+				<a href="tables_basic.html" data-filter-tags="tables basic"> 
+					<span class="nav-link-text" data-i18n="nav.tables_basic">Basic Tables</span> 
 				</a>
 			</li>
-			<li {{#is pagename "===" "datagrid_generate_table_style"}}class="active"{{/is}}>
-				<a href="datagrid_generate_table_style.html" data-filter-tags="datagrid table generator tables"> 
-					<span class="nav-link-text" data-i18n="nav.datagrid_generate_table_style">Generate Table Style</span> 
+			<li {{#is pagename "===" "tables_generate_style"}}class="active"{{/is}}>
+				<a href="tables_generate_style.html" data-filter-tags="tables generator style"> 
+					<span class="nav-link-text" data-i18n="nav.tables_generate_style">Generate Table Style</span> 
 				</a>
 			</li>
 		</ul>
-	</li>			
+	</li>				
 	<li {{#is pagename "in" "form_basic_inputs,form_checkbox_radio,form_input_groups,form_validation,form_samples"}}class="active open"{{/is}}>
 		<a href="#" title="Form Stuff" data-filter-tags="forms stuff"> 
 			<i class="fal fa-edit"></i>
@@ -509,7 +509,7 @@
 			</li>																														
 		</ul>
 	</li>
-	<li class="nav-title">Plugins &amp; Templates </li>
+	<li class="nav-title">Plugins &amp; Extensions</li>
 	<li {{#is pagename "in" "plugin_faq,plugin_lazyload,plugin_waves,plugin_pacejs,plugin_smartpanels,plugin_slimscroll,plugin_throttle,plugin_navigation,plugin_i18next,plugin_appcore"}}class="active open"{{/is}}>
 		<a href="#" title="Plugins" data-filter-tags="core plugins"> 
 			<i class="fal fa-shield-alt"></i>
@@ -598,6 +598,181 @@
 			</li>							
 		</ul>	
 	</li>
+	<li {{#is pagename "in" "datagrid_datatables_basic,datagrid_datatables_advanced,datagrid_foo_tables"}}class="active open"{{/is}}>
+		<a href="#" title="Datagrid" data-filter-tags="data tables"> 
+			<i class="fal fa-table"></i>
+			<span class="nav-link-text" data-i18n="nav.datatables">Datagrid</span>
+		</a>
+		<ul>
+			<li {{#is pagename "in" "datagrid_datatables_basic,datagrid_datatables_advanced"}}class="active open"{{/is}}>
+				<a href="#" title="Datatables" data-filter-tags="data tables datatables"> 
+					<span class="nav-link-text" data-i18n="nav.datatables">Datatables</span>
+				</a>
+				<ul>
+					<li {{#is pagename "===" "datagrid_datatables_basic"}}class="active"{{/is}}>
+						<a href="datagrid_datatables_basic.html" data-filter-tags="datagrid datatables basic tables"> 
+							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_basic">Basic Configuration</span> 
+						</a>
+					</li>
+					<li {{#is pagename "===" "datagrid_datatables_advanced"}}class="active"{{/is}}>
+						<a href="datagrid_datatables_advanced.html" data-filter-tags="datagrid datatables advanced tables"> 
+							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_advanced">Advanced Configuration</span> 
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li {{#is pagename "in" "datagrid_foo_tables"}}class="active open"{{/is}}>
+				<a href="datagrid_foo_tables.html" title="Foo Tables" data-filter-tags="datagrid foo table"> 
+					<span class="nav-link-text" data-i18n="nav.datagrid_foo_tables">Foo Tables</span> 
+				</a>		
+			</li>
+		</ul>
+	</li>	
+	<li {{#is pagename "in" "statistics_dygraph,statistics_flot,statistics_rickshaw,statistics_chartjs,statistics_c3,statistics_peity,statistics_sparkline"}}class="active open"{{/is}}>
+		<a href="#" title="Statistics" data-filter-tags="statistics"> 
+			<i class="fal fa-chart-pie"></i>
+			<span class="nav-link-text" data-i18n="nav.statistics">Statistics</span>
+		</a>
+		<ul>
+			<li {{#is pagename "===" "statistics_dygraph"}}class="active"{{/is}}>
+				<a href="statistics_dygraph.html" title="Dygraph Plugin" data-filter-tags="statistics chart graph dygraph"> 
+					<span class="nav-link-text" data-i18n="nav.statistics_dygraph">Dygraph Plugin</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "statistics_flot"}}class="active"{{/is}}>
+				<a href="statistics_flot.html" title="Flot Plugin" data-filter-tags="statistics chart graph flot"> 
+					<span class="nav-link-text" data-i18n="nav.statistics_flot">Flot Plugin</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "statistics_rickshaw"}}class="active"{{/is}}>
+				<a href="statistics_rickshaw.html" title="Rickshaw Plugin" data-filter-tags="statistics chart graph rickshaw"> 
+					<span class="nav-link-text" data-i18n="nav.statistics_rickshaw">Rickshaw Plugin</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "statistics_chartjs"}}class="active"{{/is}}>
+				<a href="statistics_chartjs.html" title="Chart.js Plugin" data-filter-tags="statistics chart graph Chart.js"> 
+					<span class="nav-link-text" data-i18n="nav.statistics_chartjs">Chart.js Plugin</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "statistics_c3"}}class="active"{{/is}}>
+				<a href="statistics_c3.html" title="C3 Plugin" data-filter-tags="statistics chart graph c3"> 
+					<span class="nav-link-text" data-i18n="nav.statistics_c3">C3 Plugin</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "statistics_peity"}}class="active"{{/is}}>
+				<a href="statistics_peity.html" title="Peity Plugin" data-filter-tags="statistics chart graph peity"> 
+					<span class="nav-link-text" data-i18n="nav.statistics_peity">Peity Charts</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "statistics_sparkline"}}class="active"{{/is}}>
+				<a href="statistics_sparkline.html" title="Sparkline Charts" data-filter-tags="statistics chart graph sparkline"> 
+					<span class="nav-link-text" data-i18n="nav.statistics_sparkline">Sparkline Charts</span> 
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li {{#is pagename "in" "notifications_sweetalert,notifications_toastr,notifications_smartalert"}}class="active open"{{/is}}>
+		<a href="#" title="Notifications" data-filter-tags="notifications"> 
+			<i class="fal fa-exclamation-circle"></i>
+			<span class="nav-link-text" data-i18n="nav.datatables">Notifications</span>
+		</a>
+		<ul>
+			<li {{#is pagename "in" "notifications_sweetalert"}}class="active open"{{/is}}>
+				<a href="notifications_sweetalert.html" title="Sweet Alert" data-filter-tags="notifications sweet alert"> 
+					<span class="nav-link-text" data-i18n="nav.notifications_sweetalert">Sweet Alert</span> 
+				</a>		
+			</li>
+			<li {{#is pagename "in" "notifications_toastr"}}class="active open"{{/is}}>
+				<a href="notifications_toastr.html" title="Sweet Alert" data-filter-tags="notifications toastr"> 
+					<span class="nav-link-text" data-i18n="nav.notifications_toastr">Toastr</span> 
+				</a>		
+			</li>
+			<li {{#is pagename "in" "notifications_smartalert"}}class="active open"{{/is}}>
+				<a href="notifications_smartalert.html" title="Smart Alert" data-filter-tags="notifications smart alert"> 
+					<span class="nav-link-text" data-i18n="nav.notifications_smartalert">SmartAlert</span> 
+				</a>		
+			</li>
+		</ul>
+	</li>
+	<li {{#is pagename "in" "form_plugins_colorpicker,form_plugins_choosen,form_plugins_datepicker,form_plugins_daterange_picker,form_plugins_dual_listbox,form_plugins_fileupload,form_plugins_ionrangeslider,form_plugins_inputmusk,form_plugin_imagecropper,form_plugin_select2,form_plugin_summernote,form_plugin_markdown,form_plugin_nouislider,form_plugin_wizard"}}class="active open"{{/is}}>
+		<a href="#" title="Form Plugins" data-filter-tags="notifications"> 
+			<i class="fal fa-credit-card-front"></i>
+			<span class="nav-link-text" data-i18n="nav.datatables">Form Plugins</span>
+		</a>
+		<ul>
+			<li {{#is pagename "in" "form_plugins_colorpicker"}}class="active open"{{/is}}>
+				<a href="form_plugins_colorpicker.html" title="Color Picker" data-filter-tags="form plugins color picker"> 
+					<span class="nav-link-text" data-i18n="nav.form_plugins_colorpicker">Color Picker</span> 
+				</a>		
+			</li>
+			<li {{#is pagename "in" "form_plugins_choosen"}}class="active open"{{/is}}>
+				<a href="form_plugins_choosen.html" title="Choosen" data-filter-tags="form plugins choosen"> 
+					<span class="nav-link-text" data-i18n="nav.form_plugins_choosen">Choosen</span> 
+				</a>		
+			</li>
+			<li {{#is pagename "in" "form_plugins_datepicker"}}class="active open"{{/is}}>
+				<a href="form_plugins_datepicker.html" title="Choosen" data-filter-tags="form plugins date picker"> 
+					<span class="nav-link-text" data-i18n="nav.form_plugins_datepicker">Date Picker</span> 
+				</a>		
+			</li>
+			<li {{#is pagename "in" "form_plugins_daterange_picker"}}class="active open"{{/is}}>
+				<a href="form_plugins_daterange_picker.html" title="Date Range Picker" data-filter-tags="form plugins date range picker"> 
+					<span class="nav-link-text" data-i18n="nav.form_plugins_daterange_picker">Date Range Picker</span> 
+				</a>		
+			</li>
+			<li {{#is pagename "in" "form_plugins_dual_listbox"}}class="active open"{{/is}}>
+				<a href="form_plugins_dual_listbox.html" title="Dual Listbox" data-filter-tags="form plugins dual listbox"> 
+					<span class="nav-link-text" data-i18n="nav.form_plugins_dual_listbox">Dual Listbox</span> 
+				</a>		
+			</li>
+			<li {{#is pagename "in" "form_plugins_fileupload"}}class="active open"{{/is}}>
+				<a href="form_plugins_fileupload.html" title="File Upload" data-filter-tags="form plugins file upload"> 
+					<span class="nav-link-text" data-i18n="nav.form_plugins_fileupload">File upload</span> 
+				</a>		
+			</li>
+			<li {{#is pagename "in" "form_plugins_ionrangeslider"}}class="active open"{{/is}}>
+				<a href="form_plugins_ionrangeslider.html" title="Ion Range Slider" data-filter-tags="form plugins ion range slider"> 
+					<span class="nav-link-text" data-i18n="nav.form_plugins_ionrangeslider">Ion.RangeSlider</span> 
+				</a>		
+			</li>
+			<li {{#is pagename "in" "form_plugins_inputmusk"}}class="active open"{{/is}}>
+				<a href="form_plugins_inputmusk.html" title="Input Musk" data-filter-tags="form plugins input musk"> 
+					<span class="nav-link-text" data-i18n="nav.form_plugins_inputmusk">Input Musk</span> 
+				</a>		
+			</li>
+			<li {{#is pagename "in" "form_plugin_imagecropper"}}class="active open"{{/is}}>
+				<a href="form_plugin_imagecropper.html" title="Image Cropper" data-filter-tags="form plugins image cropper"> 
+					<span class="nav-link-text" data-i18n="nav.form_plugin_imagecropper">Image Cropper</span> 
+				</a>		
+			</li>
+			<li {{#is pagename "in" "form_plugin_select2"}}class="active open"{{/is}}>
+				<a href="form_plugin_select2.html" title="Select2" data-filter-tags="form plugins select2"> 
+					<span class="nav-link-text" data-i18n="nav.form_plugin_select2">Select2</span> 
+				</a>		
+			</li>
+			<li {{#is pagename "in" "form_plugin_summernote"}}class="active open"{{/is}}>
+				<a href="form_plugin_summernote.html" title="Summernote" data-filter-tags="form plugins select2"> 
+					<span class="nav-link-text" data-i18n="nav.form_plugin_summernote">Summernote</span> 
+				</a>		
+			</li>
+			<li {{#is pagename "in" "form_plugin_markdown"}}class="active open"{{/is}}>
+				<a href="form_plugin_markdown.html" title="Markdown" data-filter-tags="form plugins markdown"> 
+					<span class="nav-link-text" data-i18n="nav.form_plugin_markdown">Markdown</span> 
+				</a>		
+			</li>
+			<li {{#is pagename "in" "form_plugin_nouislider"}}class="active open"{{/is}}>
+				<a href="form_plugin_nouislider.html" title="Markdown" data-filter-tags="form plugins markdown"> 
+					<span class="nav-link-text" data-i18n="nav.form_plugin_nouislider">noUiSlider</span> 
+				</a>		
+			</li>
+			<li {{#is pagename "in" "form_plugin_wizard"}}class="active open"{{/is}}>
+				<a href="form_plugin_wizard.html" title="Wizard" data-filter-tags="form plugins wizard"> 
+					<span class="nav-link-text" data-i18n="nav.form_plugin_wizard">Wizard</span> 
+				</a>		
+			</li>
+		</ul>
+	</li>	
+	<li class="nav-title">Layouts &amp; Templates </li>
 	<li {{#is pagename "in" "page_chat,page_contact,page_ecommerce_orders,page_ecommerce_products,page_ecommerce_item,page_ecommerce_item_add,page_faq,page_forum_list,page_forum_threads,page_forum_discussion,page_inbox,page_inbox_write,page_inbox_read,page_invoice,page_forget,page_locked,page_login,page_register,page_error_announced,page_error,page_error_404,page_pricing_tables,page_profile,page_search,page_teams"}}class="active open"{{/is}}>
 		<a href="#" title="Pages" data-filter-tags="page layouts"> 
 			<i class="fal fa-plus-circle"></i>

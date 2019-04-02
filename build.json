@@ -16,7 +16,7 @@
 		"compile": {
 			"jsUglify": false,
 			"cssMinify": false,
-			"jsSourcemaps": true,
+			"jsSourcemaps": false,
 			"cssSourcemaps": true
 		},
 		"path": {
@@ -162,6 +162,136 @@
 						},
 						"bundle": {
 							"styles": "{$config.output}/css/fa-brands.scss"
+						}
+					}
+				},
+				"statistics" : {
+					"dygraph" : {
+						"src": {
+							"styles":[
+								"{$config.path.src}/dygraphs/dist/dygraph.css"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/dygraphs/dist/dygraph.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/statistics/css/dygraph.css",
+							"scripts": "{$config.output}/js/statistics/dygraph.js"
+						}
+					},
+					"flotchart" : {
+						"flot" : {
+							"src": {
+								"scripts": [
+									"{$config.path.node_modules}/flot/dist/es5/jquery.flot.js"
+								]
+							},
+							"bundle": {
+								"scripts": "{$config.output}/js/statistics/jquery.flot.js"
+							}
+						},
+						"flot-resize" : {
+							"src": {
+								"scripts": [
+									"{$config.path.node_modules}/flot/source/jquery.flot.resize.js"
+								]
+							},
+							"bundle": {
+								"scripts": "{$config.output}/js/statistics/jquery.flot.resize.js"
+							}
+						},
+						"flot-fillbetween" : {
+							"src": {
+								"scripts": [
+									"{$config.path.node_modules}/flot/source/jquery.flot.fillbetween.js"
+								]
+							},
+							"bundle": {
+								"scripts": "{$config.output}/js/statistics/jquery.flot.fillbetween.js"
+							}
+						},
+						"flot-pie" : {
+							"src": {
+								"scripts": [
+									"{$config.path.node_modules}/flot/source/jquery.flot.pie.js"
+								]
+							},
+							"bundle": {
+								"scripts": "{$config.output}/js/statistics/jquery.flot.pie.js"
+							}
+						},
+						"flot-time" : {
+							"src": {
+								"scripts": [
+									"{$config.path.node_modules}/flot/source/jquery.flot.time.js"
+								]
+							},
+							"bundle": {
+								"scripts": "{$config.output}/js/statistics/jquery.flot.time.js"
+							}
+						}
+					},
+					"rickshaw" : {
+						"src": {
+							"styles":[
+								"{$config.path.src}/rickshaw/rickshaw.css"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/rickshaw/rickshaw.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/statistics/rickshaw.css",
+							"scripts": "{$config.output}/js/statistics/rickshaw.js"
+						}
+					},
+					"chartjs" : {
+						"src": {
+							"styles":[
+								"{$config.path.src}/chart.js/dist/Chart.css"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/chart.js/dist/Chart.bundle.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/statistics/chartjs.css",
+							"scripts": "{$config.output}/js/statistics/chartjs.bundle.js"
+						}
+					},
+					"c3" : {
+						"src": {
+							"styles":[
+								"{$config.path.src}/c3/c3.css"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/c3/c3.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/statistics/c3.css",
+							"scripts": "{$config.output}/js/statistics/c3.js"
+						}
+					},
+					"peity" : {
+						"src": {
+							"scripts": [
+								"{$config.path.node_modules}/peity/jquery.peity.js"
+							]
+						},
+						"bundle": {
+							"scripts": "{$config.output}/js/statistics/jquery.peity.js"
+						}
+					},
+					"sparkline" : {
+						"src": {
+							"scripts": [
+								"{$config.path.node_modules}/sparklines/source/sparkline.js"
+							]
+						},
+						"bundle": {
+							"scripts": "{$config.output}/js/statistics/sparkline.js"
 						}
 					}
 				}
