@@ -1,12 +1,12 @@
 .nav-footer {
-	position: absolute;
+	//position: absolute;
 	/*background-image: -webkit-linear-gradient(270deg, $nav-background-shade, transparent);
 	background-image: linear-gradient(270deg, $nav-background-shade, transparent); 
 	background-color: $nav-background;*/
 	
 	@extend %nav-bg;
 
-    width: 100%;
+    //width: 100%;
     height: $footer-height;
     bottom: 0;
     display: flex;
