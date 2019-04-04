@@ -14,7 +14,7 @@
 			"copyright": "2019 © NextGen theme by&nbsp;<a href='http://gotbootstrap.com' class='text-primary fw-500' title='gotbootstrap.com' target='_blank'>Gotbootstrap.com</a>"
 		},
 		"compile": {
-			"jsUglify": false,
+			"jsUglify": true,
 			"cssMinify": false,
 			"jsSourcemaps": false,
 			"cssSourcemaps": true
@@ -167,111 +167,130 @@
 				},
 				"statistics" : {
 					"dygraph" : {
-						"src": {
-							"styles":[
-								"{$config.path.node_modules}/dygraphs/dist/dygraph.css"
-							],
-							"scripts": [
-								"{$config.path.node_modules}/dygraphs/dist/dygraph.js"
-							]
+						"plugin" : {
+							"src": {
+								"styles":[
+									"{$config.path.node_modules}/dygraphs/dist/dygraph.min.css"
+								],
+								"scripts": [
+									"{$config.path.node_modules}/dygraphs/dist/dygraph.min.js"
+								]
+							},
+							"bundle": {
+								"styles": "{$config.output}/css/statistics/dygraph/dygraph.min.css",
+								"scripts": "{$config.output}/js/statistics/dygraph/dygraph.min.js"
+							}
 						},
-						"bundle": {
-							"styles": "{$config.output}/css/statistics/dygraph.css",
-							"scripts": "{$config.output}/js/statistics/dygraph.js"
-						}
+						"demo-data" : {
+							"src": {
+								"scripts": [
+									"{$config.path.src}/custom/demo-data/demo-data-dygraph.js"
+								]
+							},
+							"bundle": {
+								"scripts": "{$config.output}/js/statistics/demo-data/demo-data-dygraph.js"
+							}
+						}	
 					},
 					"flotchart" : {
 						"flot" : {
-							"src": {
-								"scripts": [
-									"{$config.path.node_modules}/flot/dist/es5/jquery.flot.js"
-								]
-							},
-							"bundle": {
-								"scripts": "{$config.output}/js/statistics/jquery.flot.js"
-							}
+							"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.js"]},
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.js"}
 						},
-						"flot-resize" : {
-							"src": {
-								"scripts": [
-									"{$config.path.node_modules}/flot/source/jquery.flot.resize.js"
-								]
-							},
-							"bundle": {
-								"scripts": "{$config.output}/js/statistics/jquery.flot.resize.js"
-							}
+						"flot-colorhelpers" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.colorhelpers.js"]},
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.colorhelpers.js"}
 						},
-						"flot-fillbetween" : {
-							"src": {
-								"scripts": [
-									"{$config.path.node_modules}/flot/source/jquery.flot.fillbetween.js"
-								]
-							},
-							"bundle": {
-								"scripts": "{$config.output}/js/statistics/jquery.flot.fillbetween.js"
-							}
+						"flot-canvas" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.canvas.js"]},
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.canvas.js"}
 						},
-						"flot-pie" : {
-							"src": {
-								"scripts": [
-									"{$config.path.node_modules}/flot/source/jquery.flot.pie.js"
-								]
-							},
-							"bundle": {
-								"scripts": "{$config.output}/js/statistics/jquery.flot.pie.js"
-							}
+						"flot-categories" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.categories.js"]},
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.categories.js"}
 						},
-						"flot-time" : {
-							"src": {
-								"scripts": [
-									"{$config.path.node_modules}/flot/source/jquery.flot.time.js"
-								]
-							},
-							"bundle": {
-								"scripts": "{$config.output}/js/statistics/jquery.flot.time.js"
-							}
+						"flot-crosshair" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.crosshair.js"]},
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.crosshair.js"}
+						},
+						"flot-errorbars" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.errorbars.js"]},
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.errorbars.js"}
+						},
+						"flot-fillbetween" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.fillbetween.js"]},
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.fillbetween.js"}
+						},
+						"flot-image" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.image.js"]},
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.image.js"}
+						},
+						"flot-navigate" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.navigate.js"]},
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.navigate.js"}
+						},
+						"flot-pie" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.pie.js"]},
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.pie.js"}
+						},
+						"flot-resize" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.resize.js"]},
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.resize.js"}
+						},
+						"flot-selection" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.selection.js"]},
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.selection.js"}
+						},
+						"flot-stack" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.stack.js"]},
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.stack.js"}
+						},
+						"flot-spline" : {"src": {"scripts": ["{$config.path.node_modules}/flot-spline/js/jquery.flot.spline.js"]},
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.spline.js"}
+						},
+						"flot-symbol" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.symbol.js"]},
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.symbol.js"}
+						},
+						"flot-threshold" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.threshold.js"]},
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.threshold.js"}
+						},
+						"flot-tooltip" : {"src": {"scripts": ["{$config.path.node_modules}/jquery.flot.tooltip/js/jquery.flot.tooltip.js"]},
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.tooltip.js"}
+						},
+						"flot-time" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.time.js"]},
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.time.js"}
 						}
+
+						
 					},
 					"rickshaw" : {
 						"src": {
 							"styles":[
-								"{$config.path.node_modules}/rickshaw/rickshaw.css"
+								"{$config.path.node_modules}/rickshaw/rickshaw.min.css"
 							],
 							"scripts": [
-								"{$config.path.node_modules}/rickshaw/rickshaw.js"
+								"{$config.path.node_modules}/rickshaw/rickshaw.min.js"
 							]
 						},
 						"bundle": {
-							"styles": "{$config.output}/css/statistics/rickshaw.css",
-							"scripts": "{$config.output}/js/statistics/rickshaw.js"
+							"styles": "{$config.output}/css/statistics/rickshaw/rickshaw.min.css",
+							"scripts": "{$config.output}/js/statistics/rickshaw/rickshaw.min.js"
 						}
 					},
 					"chartjs" : {
 						"src": {
 							"styles":[
-								"{$config.path.node_modules}/chart.js/dist/Chart.css"
+								"{$config.path.node_modules}/chart.js/dist/Chart.min.css"
 							],
 							"scripts": [
-								"{$config.path.node_modules}/chart.js/dist/Chart.bundle.js"
+								"{$config.path.node_modules}/chart.js/dist/Chart.bundle.min.js"
 							]
 						},
 						"bundle": {
-							"styles": "{$config.output}/css/statistics/chartjs.css",
-							"scripts": "{$config.output}/js/statistics/chartjs.bundle.js"
+							"styles": "{$config.output}/css/statistics/chartjs/chartjs.min.css",
+							"scripts": "{$config.output}/js/statistics/chartjs/chartjs.bundle.min.js"
 						}
 					},
 					"c3" : {
 						"src": {
 							"styles":[
-								"{$config.path.node_modules}/c3/c3.css"
+								"{$config.path.node_modules}/c3/c3.min.css"
 							],
 							"scripts": [
-								"{$config.path.node_modules}/c3/c3.js"
+								"{$config.path.node_modules}/c3/c3.min.js"
 							]
 						},
 						"bundle": {
-							"styles": "{$config.output}/css/statistics/c3.css",
-							"scripts": "{$config.output}/js/statistics/c3.js"
+							"styles": "{$config.output}/css/statistics/c3/c3.min.css",
+							"scripts": "{$config.output}/js/statistics/c3/c3.min.js"
 						}
 					},
 					"peity" : {
@@ -281,7 +300,7 @@
 							]
 						},
 						"bundle": {
-							"scripts": "{$config.output}/js/statistics/jquery.peity.js"
+							"scripts": "{$config.output}/js/statistics/peity/jquery.peity.js"
 						}
 					},
 					"sparkline" : {
@@ -291,7 +310,7 @@
 							]
 						},
 						"bundle": {
-							"scripts": "{$config.output}/js/statistics/sparkline.js"
+							"scripts": "{$config.output}/js/statistics/sparkline/sparkline.js"
 						}
 					}
 				}
@@ -304,6 +323,7 @@
 						"{$config.path.src}/scss/app.core.scss"
 					],
 					"scripts": [
+						"{$config.path.src}/js/_get/app.get.colors.js",
 						"{$config.path.src}/js/_config/app.config.js",
 						"{$config.path.src}/js/_modules/app.navigation.js",
 						"{$config.path.src}/js/_modules/app.menu.slider.js",

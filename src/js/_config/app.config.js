@@ -29,7 +29,7 @@ var myapp_config = {
 	thisDevice: null, // desktop or mobile
 	isMobile: (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase())), //popular device types available on the market
 	mobileMenuTrigger: null, // used by pagescrolling and appHeight script, do not change!
-	mobileResolutionTrigger: 992, //the resolution when the mobile activation fires
+	mobileResolutionTrigger: parseInt(getComputedStyle(document.documentElement).getPropertyValue('--breakpoint-lg'), 10), //the resolution when the mobile activation fires
 	/*
 	DETECT IF WEBKIT
 	Description: this variable is used to fire the custom scroll plugin. 

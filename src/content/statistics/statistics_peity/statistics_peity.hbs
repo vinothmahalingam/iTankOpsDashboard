@@ -1,15 +1,13 @@
 {{#> 
 	layouts/main 
-	title="Dygraph" 
-	pagename="statistics_dygraph" 
+	title="Peity" 
+	pagename="statistics_peity" 
 	category_1="Statistics" 
-	heading="<i class='subheader-icon fal fa-chart-pie'></i> Dygraphs <sup class='badge badge-primary fw-500'>ADDON</sup>" 
+	heading="<i class='subheader-icon fal fa-chart-pie'></i> Peity <sup class='badge badge-primary fw-500'>ADDON</sup>" 
 	pagedescription="Dygraphs is a fast, flexible open source JavaScript charting library."
 }}
 
-{{#*inline "head-block"}}
-<link rel="stylesheet" media="screen, print" href="css/statistics/dygraph/dygraph.min.css">
-{{/inline}}
+{{#*inline "head-block"}}{{/inline}}
 
 {{#*inline "content-block"}}
 
@@ -100,38 +98,13 @@
 {{/inline}}
 
 {{#*inline "scripts-block"}}
-<script src="js/statistics/demo-data/demo-data-dygraph.js"></script>
-<script src="js/statistics/dygraph/dygraph.min.js"></script>
+
+<script src="js/statistics/dygraph.min.js"></script>
 <script>	
 
 
 	$(document).ready(function() {
-		g1 = new Dygraph(document.getElementById("noroll"), data_temp, {
-			customBars : true,
-			title : 'Daily Temperatures in New York vs. San Francisco',
-			ylabel : 'Temperature (F)',
-			legend : 'always',
-			labelsDivStyles : {
-				'textAlign' : 'right'
-			},
-			showRangeSelector : true,
-			rangeSelectorPlotStrokeColor : myapp_get_color.primary_400,
-			rangeSelectorPlotFillColor :  myapp_get_color.primary_100
-		});
-		g2 = new Dygraph(document.getElementById("roll14"), data_temp, {
-			rollPeriod : 14,
-			showRoller : true,
-			customBars : true,
-			ylabel : 'Temperature (F)',
-			legend : 'always',
-			labelsDivStyles : {
-				'textAlign' : 'right'
-			},
-			showRangeSelector : true,
-			rangeSelectorHeight : 30,
-			rangeSelectorPlotStrokeColor : myapp_get_color.warning_100,
-			rangeSelectorPlotFillColor :  myapp_get_color.warning_50
-		});
+
 	
 	})
 </script>
