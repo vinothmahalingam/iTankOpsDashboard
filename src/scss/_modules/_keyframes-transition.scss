@@ -126,7 +126,7 @@ $animateFadeInDown_distance: 5px;
   -webkit-animation: animateFadeInUp 0.7s;
 }
 
-.tab-content >.active {
+.tab-content >.active:not(.fade) {
   animation: animateFadeInUp 0.5s;
   -webkit-animation: animateFadeInUp 0.5s;
 }

@@ -170,15 +170,15 @@
 						"plugin" : {
 							"src": {
 								"styles":[
-									"{$config.path.node_modules}/dygraphs/dist/dygraph.min.css"
+									"{$config.path.node_modules}/dygraphs/dist/dygraph.css"
 								],
 								"scripts": [
 									"{$config.path.node_modules}/dygraphs/dist/dygraph.min.js"
 								]
 							},
 							"bundle": {
-								"styles": "{$config.output}/css/statistics/dygraph/dygraph.min.css",
-								"scripts": "{$config.output}/js/statistics/dygraph/dygraph.min.js"
+								"styles": "{$config.output}/css/statistics/dygraph/dygraph.css",
+								"scripts": "{$config.output}/js/statistics/dygraph/dygraph.js"
 							}
 						},
 						"demo-data" : {
@@ -248,49 +248,47 @@
 						"flot-time" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.time.js"]},
 							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.time.js"}
 						}
-
-						
-					},
-					"rickshaw" : {
-						"src": {
-							"styles":[
-								"{$config.path.node_modules}/rickshaw/rickshaw.min.css"
-							],
-							"scripts": [
-								"{$config.path.node_modules}/rickshaw/rickshaw.min.js"
-							]
-						},
-						"bundle": {
-							"styles": "{$config.output}/css/statistics/rickshaw/rickshaw.min.css",
-							"scripts": "{$config.output}/js/statistics/rickshaw/rickshaw.min.js"
-						}
 					},
 					"chartjs" : {
 						"src": {
 							"styles":[
-								"{$config.path.node_modules}/chart.js/dist/Chart.min.css"
+								"{$config.path.node_modules}/chart.js/dist/Chart.css"
 							],
 							"scripts": [
-								"{$config.path.node_modules}/chart.js/dist/Chart.bundle.min.js"
+								"{$config.path.node_modules}/chart.js/dist/Chart.bundle.js"
 							]
 						},
 						"bundle": {
-							"styles": "{$config.output}/css/statistics/chartjs/chartjs.min.css",
-							"scripts": "{$config.output}/js/statistics/chartjs/chartjs.bundle.min.js"
+							"styles": "{$config.output}/css/statistics/chartjs/chartjs.css",
+							"scripts": "{$config.output}/js/statistics/chartjs/chartjs.bundle.js"
+						}
+					},
+					"chartist" : {
+						"src": {
+							"styles":[
+								"{$config.path.src}/scss/_addons/chartist/chartist.scss"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/chartist/dist/chartist.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/statistics/chartist/chartist.css",
+							"scripts": "{$config.output}/js/statistics/chartist/chartist.js"
 						}
 					},
 					"c3" : {
 						"src": {
 							"styles":[
-								"{$config.path.node_modules}/c3/c3.min.css"
+								"{$config.path.node_modules}/c3/c3.css"
 							],
 							"scripts": [
-								"{$config.path.node_modules}/c3/c3.min.js"
+								"{$config.path.node_modules}/c3/c3.js"
 							]
 						},
 						"bundle": {
-							"styles": "{$config.output}/css/statistics/c3/c3.min.css",
-							"scripts": "{$config.output}/js/statistics/c3/c3.min.js"
+							"styles": "{$config.output}/css/statistics/c3/c3.css",
+							"scripts": "{$config.output}/js/statistics/c3/c3.js"
 						}
 					},
 					"peity" : {
