@@ -38,250 +38,319 @@
 </div>
 
 <div class="row">
-	<div class="col-xl-6">
-		<div id="panel-1" class="panel">
-			<div class="panel-hdr">	
-				<h2>
-					Line <span class="fw-300"><i>Chart</i></span> 
-				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
-				</div>
-			</div>
-			<div class="panel-container show">
-				<div class="panel-content">									
-					<div class="panel-tag">
-						The line chart requires an array of labels for each of the data points. This is shown on the X axis. The data for line charts is broken up into an array of datasets. Each dataset has a colour for the fill, a colour for the line and colours for the points and strokes of the points
+	<div class="col-xl-12">
+		<div class="row">
+			<div class="col-xl-6">
+				<div id="panel-1" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Line <span class="fw-300"><i>Chart</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
 					</div>
-					<canvas id="lineChart" style="width:100%; height:300px;"></canvas>
-				</div>
-			</div>
-		</div>
-		<div id="panel-2" class="panel">
-			<div class="panel-hdr">	
-				<h2>
-					Horizontal <span class="fw-300"><i>Bar Chart</i></span> 
-				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
-				</div>
-			</div>
-			<div class="panel-container show">
-				<div class="panel-content">									
-					<div class="panel-tag">
-						The line chart requires an array of labels for each of the data points. This is shown on the X axis. The data for line charts is broken up into an array of datasets. Each dataset has a colour for the fill, a colour for the line and colours for the points and strokes of the points
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								The line chart requires an array of labels for each of the data points. This is shown on the X axis. It has a colour for the fill, a colour for the line and colours for the points and strokes of the points
+							</div>
+							<div id="lineChart">
+								<canvas style="width:100%; height:300px;"></canvas>
+							</div>
+						</div>
 					</div>
-					<canvas id="horizontalBarChart" style="width:100%; height:300px;"></canvas>
 				</div>
 			</div>
-		</div>
-		<div id="panel-3" class="panel">
-			<div class="panel-hdr">	
-				<h2>
-					Bar <span class="fw-300"><i>Stacked</i></span> 
-				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
-				</div>
-			</div>
-			<div class="panel-container show">
-				<div class="panel-content">									
-					<div class="panel-tag">
-						The line chart requires an array of labels for each of the data points. This is shown on the X axis. The data for line charts is broken up into an array of datasets. Each dataset has a colour for the fill, a colour for the line and colours for the points and strokes of the points
+			<div class="col-xl-6">
+				<div id="panel-7" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Area <span class="fw-300"><i>Chart</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
 					</div>
-					<canvas id="barStacked" style="width:100%; height:300px;"></canvas>
-				</div>
-			</div>
-		</div>
-		<div id="panel-4" class="panel">
-			<div class="panel-hdr">	
-				<h2>
-					Bubble <span class="fw-300"><i>Chart</i></span> 
-				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
-				</div>
-			</div>
-			<div class="panel-container show">
-				<div class="panel-content">									
-					<div class="panel-tag">
-						The line chart requires an array of labels for each of the data points. This is shown on the X axis. The data for line charts is broken up into an array of datasets. Each dataset has a colour for the fill, a colour for the line and colours for the points and strokes of the points
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								An area chart or area graph displays graphically quantitative data. It is based on the line chart. The area between axis and line are commonly emphasized with colors, textures and hatchings
+							</div>
+							<div id="areaChart">
+								<canvas style="width:100%; height:300px;"></canvas>
+							</div>
+						</div>
 					</div>
-					<canvas id="bubbleChart" style="width:100%; height:300px;"></canvas>
-				</div>
-			</div>
-		</div>
-		<div id="panel-5" class="panel">
-			<div class="panel-hdr">	
-				<h2>
-					Polar <span class="fw-300"><i>Area</i></span> 
-				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
-				</div>
-			</div>
-			<div class="panel-container show">
-				<div class="panel-content">									
-					<div class="panel-tag">
-						Polar area charts are similar to pie charts, but each segment has the same angle - the radius of the segment differs depending on the value.This type of chart is often useful when we want to show a comparison data similar to a pie chart, but also show a scale of values for context.
-					</div>
-					<canvas id="polarArea" style="width:100%; height:300px;"></canvas>
-				</div>
-			</div>
-		</div>
-		<div id="panel-6" class="panel">
-			<div class="panel-hdr">	
-				<h2>
-					Pie <span class="fw-300"><i>Chart</i></span> 
-				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
-				</div>
-			</div>
-			<div class="panel-container show">
-				<div class="panel-content">									
-					<div class="panel-tag">
-						Pie charts are probably the most commonly used chart there are. They are divided into segments, the arc of each segment shows the proportional value of each piece of data
-					</div>
-					<canvas id="pieChart" style="width:100%; height:300px;"></canvas>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="col-xl-6">
-		<div id="panel-7" class="panel">
-			<div class="panel-hdr">	
-				<h2>
-					Area <span class="fw-300"><i>Chart</i></span> 
-				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+	<div class="col-xl-12">
+		<div class="row">
+			<div class="col-xl-6">
+				<div id="panel-2" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Horizontal <span class="fw-300"><i>Bar Chart</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
+					</div>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								A horizontal bar chart provides a way of showing data values represented as horizontal bars. It is sometimes used to show trend data, and the comparison of multiple data sets on top of another
+							</div>
+							<div id="horizontalBarChart" >
+								<canvas style="width:100%; height:300px;"></canvas>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="panel-container show">
-				<div class="panel-content">									
-					<div class="panel-tag">
-						The area chart requires an array of labels for each of the data points. This is shown on the X axis. The data for line charts is broken up into an array of datasets. Each dataset has a colour for the fill, a colour for the line and colours for the points and strokes of the points
+			<div class="col-xl-6">
+				<div id="panel-8" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Bar <span class="fw-300"><i>Chart</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
 					</div>
-					<canvas id="areaChart" style="width:100%; height:300px;"></canvas>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								A bar chart provides a way of showing data values represented as vertical bars. It is sometimes used to show trend data, and the comparison of multiple data sets side by side
+							</div>
+							<div id="barChart">
+								<canvas style="width:100%; height:300px;"></canvas>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div id="panel-8" class="panel">
-			<div class="panel-hdr">	
-				<h2>
-					Bar <span class="fw-300"><i>Chart</i></span> 
-				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+	</div>
+	<div class="col-xl-12">
+		<div class="row">
+			<div class="col-xl-6">
+				<div id="panel-3" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Bar <span class="fw-300"><i>Stacked</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
+					</div>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								A stacked bar chart, is a graph that is used to break down and compare parts of a whole. Each bar in the chart represents a whole, and segments in the bar represent different parts or categories of that whole
+							</div>
+							<div id="barStacked">
+								<canvas style="width:100%; height:300px;"></canvas>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="panel-container show">
-				<div class="panel-content">									
-					<div class="panel-tag">
-						The bar chart has the a very similar data structure to the line chart, and has an array of datasets, each with colours and an array of data. Colours are in CSS format, we have an array of labels too for display. In the example below, we are showing the same data as the previous line chart example
+			<div class="col-xl-6">
+				<div id="panel-9" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Bar <span class="fw-300"><i>Stacked (horizontal)</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
 					</div>
-					<canvas id="barChart" style="width:100%; height:300px;"></canvas>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								A stacked horizontal bar chart, shows you a breakdown and compare parts of a whole. Each segment displays a whole brown down into different parts or categories - displayed on top of another
+							</div>
+							<div id="barHorizontalStacked">
+								<canvas style="width:100%; height:300px;"></canvas>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div id="panel-9" class="panel">
-			<div class="panel-hdr">	
-				<h2>
-					Bar <span class="fw-300"><i>Stacked (horizontal)</i></span> 
-				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+	</div>
+	<div class="col-xl-12">
+		<div class="row">
+			<div class="col-xl-6">
+				<div id="panel-4" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Bubble <span class="fw-300"><i>Chart</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
+					</div>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								A bubble chart is used to display three dimensions of data. The location of the bubble is determined by the first two dimensions and the third dimension is represented by the size of the individual bubbles
+							</div>
+							<div id="bubbleChart">
+								<canvas style="width:100%; height:300px;"></canvas>
+							</div>
+							
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="panel-container show">
-				<div class="panel-content">									
-					<div class="panel-tag">
-						The line chart requires an array of labels for each of the data points. This is shown on the X axis. The data for line charts is broken up into an array of datasets. Each dataset has a colour for the fill, a colour for the line and colours for the points and strokes of the points
+			<div class="col-xl-6">
+				<div id="panel-10" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Combination <span class="fw-300"><i>Chart (Bar & Line)</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
 					</div>
-					<canvas id="barHorizontalStacked" style="width:100%; height:300px;"></canvas>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								This is a combination of different charts presented together to show how easy it is to built complex charts. Here we use similar data sets to combine a linechart with bar chart 
+							</div>
+							<div id="barlineCombine">
+								<canvas style="width:100%; height:300px;"></canvas>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div id="panel-10" class="panel">
-			<div class="panel-hdr">	
-				<h2>
-					Combination <span class="fw-300"><i>Chart (Bar & Line)</i></span> 
-				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+	</div>
+	<div class="col-xl-12">
+		<div class="row">
+			<div class="col-xl-6">
+				<div id="panel-5" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Polar <span class="fw-300"><i>Area</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
+					</div>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								Polar charts are similar to pie charts, but each segment has the same angle - the radius of the segment differs depending on the value. Polar charts is often useful when we want to show a comparison data similar to a pie chart, but also show a scale of values for context
+							</div>
+							<div id="polarArea">
+								<canvas style="width:100%; height:300px;"></canvas>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="panel-container show">
-				<div class="panel-content">									
-					<div class="panel-tag">
-						The line chart requires an array of labels for each of the data points. This is shown on the X axis. The data for line charts is broken up into an array of datasets. Each dataset has a colour for the fill, a colour for the line and colours for the points and strokes of the points
+			<div class="col-xl-6">
+				<div id="panel-11" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Radar <span class="fw-300"><i>Chart</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
 					</div>
-					<canvas id="barlineCombine" style="width:100%; height:300px;"></canvas>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								For a radar chart, to provide context of what each point means, we include an array of strings that show around each point in the chart. For the radar chart data, we have an array of datasets as objects, with a fill, stroke, and line color for each point. We also have an array of data values
+							</div>
+							<div id="radarChart">
+								<canvas style="width:100%; height:300px;"></canvas>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div id="panel-11" class="panel">
-			<div class="panel-hdr">	
-				<h2>
-					Radar <span class="fw-300"><i>Chart</i></span> 
-				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+	</div>
+	<div class="col-xl-12">
+		<div class="row">
+			<div class="col-xl-6">
+				<div id="panel-6" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Pie <span class="fw-300"><i>Chart</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
+					</div>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								Pie charts are probably the most commonly used chart there are. They are divided into segments, the arc of each segment shows the proportional value of each piece of data
+							</div>
+							<div id="pieChart">
+								<canvas style="width:100%; height:300px;"></canvas>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="panel-container show">
-				<div class="panel-content">									
-					<div class="panel-tag">
-						The line chart requires an array of labels for each of the data points. This is shown on the X axis. The data for line charts is broken up into an array of datasets. Each dataset has a colour for the fill, a colour for the line and colours for the points and strokes of the points
+			<div class="col-xl-6">
+				<div id="panel-12" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Doughnut <span class="fw-300"><i>Chart</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
 					</div>
-					<canvas id="radarChart" style="width:100%; height:300px;"></canvas>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								Doughnut charts are probably the most commonly used chart there are. They are divided into segments, the arc of each segment shows the proportional value of each piece of data
+							</div>
+							<div id="doughnutChart">
+								<canvas style="width:100%; height:300px;"></canvas>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div id="panel-12" class="panel">
-			<div class="panel-hdr">	
-				<h2>
-					Doughnut <span class="fw-300"><i>Chart</i></span> 
-				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
-				</div>
-			</div>
-			<div class="panel-container show">
-				<div class="panel-content">									
-					<div class="panel-tag">
-						Doughnut charts are probably the most commonly used chart there are. They are divided into segments, the arc of each segment shows the proportional value of each piece of data
-					</div>
-					<canvas id="doughnutChart" style="width:100%; height:300px;"></canvas>
-				</div>
-			</div>
-		</div>
-	</div>	
+	</div>
 </div>
 
 {{/inline}}
@@ -362,7 +431,7 @@
 				}
 			}
 		};
-		new Chart($("#lineChart").get(0).getContext("2d"), config);	
+		new Chart($("#lineChart > canvas").get(0).getContext("2d"), config);	
 	}
 	var areaChart = function(){
 		var config = {
@@ -455,7 +524,7 @@
 				}
 			}
 		};
-		new Chart($("#areaChart").get(0).getContext("2d"), config);
+		new Chart($("#areaChart > canvas").get(0).getContext("2d"), config);
 	}
 	var horizontalBarChart = function(){
 		var horizontalBarChart = {
@@ -527,7 +596,7 @@
 				}
 			}
 		}
-		new Chart($("#horizontalBarChart").get(0).getContext("2d"), config);		
+		new Chart($("#horizontalBarChart > canvas").get(0).getContext("2d"), config);		
 	}
 	var barChart = function(){
 		var barChartData = {
@@ -605,7 +674,7 @@
 				}
 			}
 		}
-		new Chart($("#barChart").get(0).getContext("2d"), config);
+		new Chart($("#barChart > canvas").get(0).getContext("2d"), config);
 	}
 	var barStacked = function () {
 		var barStackedData = {
@@ -673,7 +742,7 @@
 				}
 			}
 		}
-		new Chart($("#barStacked").get(0).getContext("2d"), config);
+		new Chart($("#barStacked > canvas").get(0).getContext("2d"), config);
 	}
 	var barHorizontalStacked = function () {
 		var barHorizontalStackedData = {
@@ -741,7 +810,7 @@
 				}
 			}
 		}
-		new Chart($("#barHorizontalStacked").get(0).getContext("2d"), config);
+		new Chart($("#barHorizontalStacked > canvas").get(0).getContext("2d"), config);
 	}
 	var gridColor = function () {
 		var config = {
@@ -790,7 +859,7 @@
 				}
 			}
 		}
-		new Chart($("#gridColor").get(0).getContext("2d"), config);
+		new Chart($("#gridColor > canvas").get(0).getContext("2d"), config);
 	}
 	var barlineCombine = function(){
 		var barlineCombineData = {
@@ -894,7 +963,7 @@
 				}				
 			}
 		}
-		new Chart($("#barlineCombine").get(0).getContext("2d"), config);		
+		new Chart($("#barlineCombine > canvas").get(0).getContext("2d"), config);		
 	}
 	var polarArea = function(){
 		var config = {
@@ -933,7 +1002,7 @@
 				}
 			}
 		};
-	  	new Chart($("#polarArea").get(0).getContext("2d"), config);	
+	  	new Chart($("#polarArea > canvas").get(0).getContext("2d"), config);	
 	}
 	var radarChart = function(){
 		var config = {
@@ -969,11 +1038,10 @@
 				}
 		}
 
-		new Chart($("#radarChart").get(0).getContext("2d"), config);	
+		new Chart($("#radarChart > canvas").get(0).getContext("2d"), config);	
 
 	}
 	var bubbleChart = function(){
-
 		var config = {
 			type: 'bubble',
 			data: {
@@ -1037,9 +1105,7 @@
 				}
 			}
 		}
-
-		new Chart($("#bubbleChart").get(0).getContext("2d"), config);
-
+		new Chart($("#bubbleChart > canvas").get(0).getContext("2d"), config);
 	}
 	var pieChart = function(){
 		var config = {
@@ -1078,12 +1144,9 @@
 				}
 			}
 		};
-	   new Chart($("#pieChart").get(0).getContext("2d"), config);	
+	   new Chart($("#pieChart > canvas").get(0).getContext("2d"), config);	
 	}
 	var doughnutChart = function(){
-		// Get context with jQuery - using jQuery's .get() method.
-		var doughnutChartCanvas = $("#doughnutChart").get(0).getContext("2d");
-
 		var config = {
 			type: 'doughnut',
 			data: {
@@ -1122,7 +1185,7 @@
 				}
 			}
 		};
-		new Chart($("#doughnutChart").get(0).getContext("2d"), config);	
+		new Chart($("#doughnutChart > canvas").get(0).getContext("2d"), config);	
 	}
 
 	$(document).ready(function() {

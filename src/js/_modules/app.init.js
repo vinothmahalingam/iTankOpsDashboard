@@ -6,7 +6,6 @@
  *
  * Publish Date: 2019-01-01T17:42Z
  */
-	
 var initApp = (function(app) {
 
 	/**
@@ -14,7 +13,11 @@ var initApp = (function(app) {
 	 * DOC: searches list items, it could be UL or DIV elements
 	 * usage: initApp.listFilter($('.list'), $('#intput-id'));
 	 *        inside the .list you will need to insert 'data-filter-tags' inside <a>
-	 **/
+	 * @param  list
+	 * @param  input 
+	 * @param  anchor
+	 * @return 
+	 */
 	app.listFilter = function (list, input, anchor) {
 
 		/* add class to filter hide/show */
@@ -79,7 +82,10 @@ var initApp = (function(app) {
 	/**
 	 * Load scripts using lazyload method 
 	 * usage: initApp.loadScript("js/my_lovely_script.js", myFunction);
-	 **/
+	 * @param  {[type]}   scriptName
+	 * @param  {Function} callback  
+	 * @return {[type]}             
+	 */
 	app.loadScript = function (scriptName, callback) {
 
 		if (!myapp_config.jsArray[scriptName]) {	
@@ -114,6 +120,7 @@ var initApp = (function(app) {
 
 	/**
 	 * Javascript Animation for save settings 
+	 * @return
 	 **/
 	app.saveSettings = function () {
 
@@ -138,6 +145,7 @@ var initApp = (function(app) {
 	/**
 	 * Reset settings 
 	 * DOC: removes all classes from root_ then saves
+	 * @return {[type]}
 	 **/
 	app.resetSettings = function () {
 
@@ -163,6 +171,7 @@ var initApp = (function(app) {
 	 * Access Indicator
 	 * DOC: spinning icon that appears whenever you
 	 * access localstorage or change settings
+	 * @return {[type]}
 	 **/
 	app.accessIndicator = function () {
 
@@ -178,6 +187,9 @@ var initApp = (function(app) {
 	 * save settings to localstorage: initApp.pushSettings("className1 className2", true)
 	 * DOC: pushSettings will also auto save to localStorage if "storeLocally == true" 
 	 * we will use this "pushSettings" when loading settings from a database
+	 * @param  {[type]} DB_string   
+	 * @param  {[type]} saveToLocal
+	 * @return {[type]}            
 	 */
 	app.pushSettings = function (DB_string, saveToLocal) {
 
@@ -202,6 +214,7 @@ var initApp = (function(app) {
 	/*
 	 * usage: var DB_string = initApp.getSettings();
 	 * we will use this "getSettings" when storing settings to a database
+	 * @return {[type]}
 	 */
 	app.getSettings = function () {
 
@@ -233,7 +246,8 @@ var initApp = (function(app) {
 	/**
 	 * detect browser type
 	 * DOC: detect if browser supports webkit CSS
-	 **/	
+	 * @return {[type]}
+	 **/
 	app.detectBrowserType = function () {
 
 		/* safari, chrome or IE detect */	
@@ -278,12 +292,12 @@ var initApp = (function(app) {
 		return myapp_config.thisDevice;
 		
 	};
-	
 
 	/**
 	 * Fix logo position on .header-function-fixed & .nav-function-hidden
 	 * DOC: Counters browser bug for fixed position and overflow:hidden for the logo (firefox/IE/Safari)
 	 *      Will not fire for webkit devices or Chrome as its not needed
+	 * @return {[type]}     
 	 **/
 	 app.windowScrollEvents = function () {
 		if ( myapp_config.root_.is('.nav-function-hidden.header-function-fixed:not(.nav-function-top)') &&  myapp_config.thisDevice === 'desktop') {
@@ -300,6 +314,7 @@ var initApp = (function(app) {
 	 * DOC: sometimes settings can trigger certain plugins; so we check this condition and activate accordingly
 	 * E.g: the fixed navigation activates custom scroll plugin for the navigation, but this only happens when
 	 *		it detects desktop browser and destroys the plugin when navigation is on top or if its not fixed.
+	 * @return {[type]}		
 	 **/
 	 app.checkNavigationOrientation = function() {
 
@@ -408,6 +423,8 @@ var initApp = (function(app) {
 	/**
 	 * Activate Nav
 	 * DOC: activation should not take place if top navigation is on
+	 * @param  {[type]} id 
+	 * @return {[type]} 
 	 **/
 	app.buildNavigation = function(id) {
 		
@@ -436,6 +453,11 @@ var initApp = (function(app) {
 		}
 	};
 
+	/**
+	 * Destroy Nav
+	 * @param  {[type]} id 
+	 * @return {[type]} 
+	 **/
 	app.destroyNavigation = function(id) {
 		
 		/**
@@ -458,6 +480,10 @@ var initApp = (function(app) {
 	/**
 	 * App Forms
 	 * DOC: detects if input is selected or blured
+	 * @param  {[type]} parentClass
+	 * @param  {[type]} focusClass
+	 * @param  {[type]} disabledClass
+	 * @return {[type]} 
 	 **/
 	app.appForms = function(parentClass,focusClass,disabledClass){
 
@@ -507,6 +533,7 @@ var initApp = (function(app) {
 	/**
 	 * Mobile Check Activate
 	 * DOC: check on window resize if screen width is less than [value]
+	 * @return {int}
 	 */
 	app.mobileCheckActivation = function(){
 		
@@ -532,6 +559,8 @@ var initApp = (function(app) {
 	 *  Toggle visibility
 	 * 	DOC: show and hide content with a button action
 	 *  Usage: onclick="initApp.toggleVisibility('foo');"
+	 *  @param  {[type]} id 
+	 *  @return {[type]}
 	 **/
 	app.toggleVisibility = function (id) {
 		var e = document.getElementById(id);
@@ -544,6 +573,7 @@ var initApp = (function(app) {
 	/**
 	 * Miscelaneous DOM ready functions
 	 * DOC: start jQuery(document).ready calls
+	 * @return {[type]}
 	 **/
 	app.domReadyMisc = function() {
 
