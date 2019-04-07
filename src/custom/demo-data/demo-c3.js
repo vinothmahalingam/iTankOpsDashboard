@@ -3,10 +3,14 @@ var chart = c3.generate({
 		columns: [
 			['data1', 30, 200, 100, 400, 150, 250, 50, 100, 250]
 		],
+		type: 'spline',
 		selection: {
 			enabled: true
 		}
 	},
+	color: {
+        pattern: [myapp_get_color.primary_500, myapp_get_color.info_500, myapp_get_color.success_500, myapp_get_color.danger_500, myapp_get_color.warning_500]
+    },
 	grid: {
 		x: {
 			show: false
@@ -26,7 +30,8 @@ var defaultMessage = $('#message').html(),
 			chart.load({
 				columns: [
 					['data2', 100, 30, 200, 320, 50, 150, 230, 80, 150]
-				]
+				],
+				type: 'spline'
 			})
 			setMessage('Load data2');
 			setProgressBar('4')
@@ -166,8 +171,8 @@ var defaultMessage = $('#message').html(),
 			chart.groups([
 				['data2', 'data3']
 			]);
-			chart.transform('line', 'data1');
-			setMessage('Show data1 as line');
+			chart.transform('spline', 'data1');
+			setMessage('Show data1 as spline');
 			setProgressBar('80')
 		},
 		function () {
@@ -210,7 +215,7 @@ var defaultMessage = $('#message').html(),
 			// wait for end of transition for flow
 		},
 		function () {
-			chart.transform('line', ['data1', 'data2', 'data3']);
+			chart.transform('spline', ['data1', 'data2', 'data3']);
 			chart.groups([
 				['data1'],
 				['data2'],
@@ -228,7 +233,7 @@ var defaultMessage = $('#message').html(),
 	];
 
 function setMessage(message) {
-	document.getElementById('message').innerHTML = '<div id="demoMessage" class="shadow-lg fs-xl p-3 rounded highlight">' + message + '</div>';
+	document.getElementById('message').innerHTML = '<div id="demoMessage" class="shadow-lg fs-xl p-3 rounded fadeinup">' + message + '</div>';
 }
 
 function setProgressBar(percentage) {
@@ -236,7 +241,7 @@ function setProgressBar(percentage) {
 }
 
 function startDemo() {
-	setMessage('Playing Demo..');
+	setMessage('Starting Demo...');
 	timer = setInterval(function () {
 		if (currentIndex == demos.length) currentIndex = 0;
 		demos[currentIndex++]();
@@ -247,7 +252,14 @@ function startDemo() {
 
 function stopDemo() {
 	clearInterval(timer);
-	document.getElementById('message').innerHTML = defaultMessage;
+	document.getElementById('message').innerHTML = '<div id="demoMessage" class="shadow-lg fs-xl p-3 rounded fadeinup bg-success-500 text-center">Thanks for watching! <br> <button class="btn btn-xs btn-dark mt-2" onclick="startDemo();">Play again</button> </div>';
+	$('#playDemo').hide();
+	$('#pauseDemo').hide();
+};
+
+function pauseDemo() {
+	clearInterval(timer);
+	document.getElementById('message').innerHTML = '<div id="demoMessage" class="shadow-lg fs-xl p-3 rounded highlight"> Demo Paused </div>';
 	$('#playDemo').show();
 	$('#pauseDemo').hide();
 };
