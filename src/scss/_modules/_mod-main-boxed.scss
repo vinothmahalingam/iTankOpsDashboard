@@ -158,7 +158,7 @@
 			position: relative;
 		}
 
-		&:not(.header-function-fixed):not(.nav-function-top):not(.modal-open) {
+		&:not(.header-function-fixed):not(.nav-function-top):not(.modal-open):not(.panel-fullscreen) {
 			.page-wrapper{
 				transform: translateX(0) !important;
 			}

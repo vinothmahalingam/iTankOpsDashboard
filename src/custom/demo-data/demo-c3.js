@@ -228,7 +228,7 @@ var defaultMessage = $('#message').html(),
 	];
 
 function setMessage(message) {
-	document.getElementById('message').innerHTML = '<div id="demoMessage" class="bg-fusion-100 shadow-lg fs-xl p-3 rounded">' + message + '</div>';
+	document.getElementById('message').innerHTML = '<div id="demoMessage" class="shadow-lg fs-xl p-3 rounded highlight">' + message + '</div>';
 }
 
 function setProgressBar(percentage) {
