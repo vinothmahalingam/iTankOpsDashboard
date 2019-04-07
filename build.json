@@ -277,18 +277,40 @@
 							"scripts": "{$config.output}/js/statistics/chartist/chartist.js"
 						}
 					},
-					"c3" : {
+					"d3" : {
 						"src": {
-							"styles":[
-								"{$config.path.node_modules}/c3/c3.css"
-							],
 							"scripts": [
-								"{$config.path.node_modules}/c3/c3.js"
+								"{$config.path.node_modules}/d3/dist/d3.js"
 							]
 						},
 						"bundle": {
-							"styles": "{$config.output}/css/statistics/c3/c3.css",
-							"scripts": "{$config.output}/js/statistics/c3/c3.js"
+							"scripts": "{$config.output}/js/statistics/d3/d3.js"
+						}
+					},
+					"c3" : {
+						"plugin": {
+							"src": {
+								"styles":[
+									"{$config.path.node_modules}/c3/c3.css"
+								],
+								"scripts": [
+									"{$config.path.node_modules}/c3/c3.js"
+								]
+							},
+							"bundle": {
+								"styles": "{$config.output}/css/statistics/c3/c3.css",
+								"scripts": "{$config.output}/js/statistics/c3/c3.js"
+							}
+						},
+						"demo-data": {
+							"src": {
+								"scripts": [
+									"{$config.path.src}/custom/demo-data/demo-c3.js"
+								]
+							},
+							"bundle": {
+								"scripts": "{$config.output}/js/statistics/demo-data/demo-c3.js"
+							}
 						}
 					},
 					"peity" : {

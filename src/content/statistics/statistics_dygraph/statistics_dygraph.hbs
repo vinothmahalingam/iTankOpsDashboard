@@ -100,11 +100,11 @@
 {{/inline}}
 
 {{#*inline "scripts-block"}}
+<!--dygraph demo data -->
 <script src="js/statistics/demo-data/demo-data-dygraph.js"></script>
+<!-- plugin dygraph.js : MIT license -->
 <script src="js/statistics/dygraph/dygraph.js"></script>
 <script>	
-
-
 	$(document).ready(function() {
 		g1 = new Dygraph(document.getElementById("noroll"), data_temp, {
 			customBars : true,
@@ -133,7 +133,7 @@
 			rangeSelectorPlotFillColor :  myapp_get_color.warning_50
 		});
 	
-	})
+	});
 </script>
 {{/inline}}
 

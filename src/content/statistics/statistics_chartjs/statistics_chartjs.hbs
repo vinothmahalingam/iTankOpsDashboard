@@ -356,9 +356,10 @@
 {{/inline}}
 
 {{#*inline "scripts-block"}}
-
+<!-- plugin Chart.js : MIT license -->
 <script src="js/statistics/chartjs/chartjs.bundle.js"></script>
-<script>	
+<script>
+	/* line chart */	
 	var lineChart = function(){
 		var config = {
 			type: 'line',
@@ -433,6 +434,9 @@
 		};
 		new Chart($("#lineChart > canvas").get(0).getContext("2d"), config);	
 	}
+	/* line chart -- end */
+
+	/* area chart */
 	var areaChart = function(){
 		var config = {
 			type: 'line',
@@ -526,6 +530,9 @@
 		};
 		new Chart($("#areaChart > canvas").get(0).getContext("2d"), config);
 	}
+	/* area chart -- end */
+
+	/* horizontal bar chart */
 	var horizontalBarChart = function(){
 		var horizontalBarChart = {
 			labels: ["January", "February", "March", "April"],
@@ -598,6 +605,9 @@
 		}
 		new Chart($("#horizontalBarChart > canvas").get(0).getContext("2d"), config);		
 	}
+	/* horizontal bar chart -- end */
+
+	/* bar chart */
 	var barChart = function(){
 		var barChartData = {
 			labels: ["January", "February", "March", "April", "May", "June", "July"],
@@ -676,6 +686,9 @@
 		}
 		new Chart($("#barChart > canvas").get(0).getContext("2d"), config);
 	}
+	/* bar chart -- end */
+
+	/* bar stacked */
 	var barStacked = function () {
 		var barStackedData = {
 			labels: ["January", "February", "March", "April", "May", "June", "July"],
@@ -744,6 +757,9 @@
 		}
 		new Chart($("#barStacked > canvas").get(0).getContext("2d"), config);
 	}
+	/* bar stacked -- end */
+
+	/* bar horizontal stacked */
 	var barHorizontalStacked = function () {
 		var barHorizontalStackedData = {
 			labels: ["January", "February", "March", "April", "May", "June", "July"],
@@ -812,6 +828,9 @@
 		}
 		new Chart($("#barHorizontalStacked > canvas").get(0).getContext("2d"), config);
 	}
+	/* bar horizontal stacked -- end */
+
+	/* grid color */
 	var gridColor = function () {
 		var config = {
 			type: 'line',
@@ -861,6 +880,9 @@
 		}
 		new Chart($("#gridColor > canvas").get(0).getContext("2d"), config);
 	}
+	/* grid color -- end */
+
+	/* bar & line combine */
 	var barlineCombine = function(){
 		var barlineCombineData = {
 			labels: ["January", "February", "March", "April", "May", "June", "July"],
@@ -965,6 +987,9 @@
 		}
 		new Chart($("#barlineCombine > canvas").get(0).getContext("2d"), config);		
 	}
+	/* bar & line combine -- end */
+
+	/* polar area */
 	var polarArea = function(){
 		var config = {
 			type: 'polarArea',
@@ -1004,6 +1029,9 @@
 		};
 	  	new Chart($("#polarArea > canvas").get(0).getContext("2d"), config);	
 	}
+	/* polar area -- end */
+
+	/* radar chart */
 	var radarChart = function(){
 		var config = {
 				type: "radar",
@@ -1041,6 +1069,9 @@
 		new Chart($("#radarChart > canvas").get(0).getContext("2d"), config);	
 
 	}
+	/* radar chart -- end */
+
+	/* bubble chart */
 	var bubbleChart = function(){
 		var config = {
 			type: 'bubble',
@@ -1107,6 +1138,9 @@
 		}
 		new Chart($("#bubbleChart > canvas").get(0).getContext("2d"), config);
 	}
+	/* bubble chart -- end*/
+
+	/* pie chart */
 	var pieChart = function(){
 		var config = {
 			type: 'pie',
@@ -1146,6 +1180,9 @@
 		};
 	   new Chart($("#pieChart > canvas").get(0).getContext("2d"), config);	
 	}
+	/* pie chart -- end */
+
+	/* doughnut chart */
 	var doughnutChart = function(){
 		var config = {
 			type: 'doughnut',
@@ -1187,7 +1224,9 @@
 		};
 		new Chart($("#doughnutChart > canvas").get(0).getContext("2d"), config);	
 	}
+	/* doughnut chart -- end */
 
+	/* initialize all charts */
 	$(document).ready(function() {
 		lineChart();
 		areaChart();
@@ -1201,7 +1240,7 @@
 		radarChart();
 		pieChart();
 		doughnutChart();
-	})
+	});
 
 </script>
 {{/inline}}

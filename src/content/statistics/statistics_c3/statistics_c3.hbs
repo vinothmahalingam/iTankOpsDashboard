@@ -7,7 +7,9 @@
 	pagedescription="Dygraphs is a fast, flexible open source JavaScript charting library."
 }}
 
-{{#*inline "head-block"}}{{/inline}}
+{{#*inline "head-block"}}
+<link rel="stylesheet" media="screen, print" href="css/statistics/c3/c3.css">
+{{/inline}}
 
 {{#*inline "content-block"}}
 
@@ -23,24 +25,11 @@
 		<div class="d-flex flex-fill">
 			<div class="flex-fill">
 				<span class="h5">Features:</span>
-				<div class="row mb-3">
-					<div class="col-xl-6">
-						<ul class="m-0 pl-3">
-							<li>Handles <strong>huge data sets</strong>: dygraphs plots millions of points without getting bogged down.</li>
-							<li><strong>Interactive out of the box</strong>: zoom, pan and mouseover are on by default.</li>
-							<li>Strong support for <strong>error bars</strong> / confidence intervals.</li>
-						</ul>
-					</div>
-					<div class="col-xl-6">
-						<ul class="m-0 pl-3">
-							<li><strong>Highly customizable</strong>: using options and custom callbacks, you can make dygraphs do almost anything.</li>
-							<li>dygraphs is works in all recent browsers. You can even <strong>pinch to zoom</strong> on mobile/tablet devices!</li>
-							<li>There's an <strong>active community</strong> developing and supporting dygraphs.</li>
-						</ul>
-					</div>
-				</div>
+				<p>
+					C3 makes it easy to generate D3-based charts by wrapping the code required to construct the entire chart. We don't need to write D3 code any more. The plugin adds classes to each element when generating, so you can define a custom style by the class and it's possible to extend the structure directly by D3. Provides a variety of APIs and callbacks to access the state of the chart. 
+				</p>
 				<p class="m-0">
-					Find tutorials, guidelines and more on Dygraph's <a href="http://dygraphs.com/" target="_blank">official documentation</a> 
+					Find more examples and guidelines on C3's <a href="https://c3js.org/examples.html" target="_blank">official documentation</a> and <a href="https://groups.google.com/forum/#!forum/c3js" target="_blank">community support</a>
 				</p>
 			</div>
 		</div>
@@ -49,64 +38,345 @@
 
 <div class="row">
 	<div class="col-xl-12">
-
-		<div id="panel-1" class="panel">
-			<div class="panel-hdr">	
-				<h2>
-					Dygraph <span class="fw-300"><i>Roll</i></span> 
-				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
-				</div>
-			</div>
-			<div class="panel-container show">
-				<div class="panel-content">									
-					<div class="panel-tag">
-						The data is loaded from an external file, this example shows scrollable content area with a fixed zoom state
+		<div class="card m-auto border mb-g bg-subtlelight-fade">
+			<div class="card-body position-relative">	
+				<h3 class="mb-4">
+					Interactive Demo
+					<small>
+						D3-based reusable chart library
+					</small>
+				</h3>
+				<div class="position-absolute pos-top pos-right mt-5 mr-5">
+					<div class="border-faded border-left-0 border-top-0 border-bottom-0" id="playDemo">
+						<button class="btn btn-success" onclick="startDemo();">
+							<i class="fal fa-play mr-sm-2"></i><span class="hidden-sm-down">Play Demo</span>
+						</button>
 					</div>
-					<div id="noroll" style="width:100%; height:300px;"></div>
+					<div class="border-faded border-left-0 border-top-0 border-bottom-0" id="pauseDemo" style="display:none;">
+						<button class="btn btn-danger" onclick="stopDemo();">
+							<i class="fal fa-pause mr-sm-2"></i> <span class="hidden-sm-down">Pause Demo</span>
+						</button>
+					</div>
+				</div>
+				<div class="d-flex position-absolute pos-left pos-right mt-5 align-items-center justify-content-center" style="z-index:1">
+					<div id="message"></div>
+				</div>
+				<div id='chart' class="mt-2"></div>
+			</div>
+			<div class="card-footer p-0">
+				<div class="progress rounded-0" style="height: 3px;">
+					<div id="demo-progress" class="progress-bar bg-primary-500" role="progressbar" style="width:100%; opacity: 0.3"></div>
 				</div>
 			</div>
 		</div>
-
-		<div id="panel-2" class="panel">
-			<div class="panel-hdr">	
-				<h2>
-					Dygraph <span class="fw-300"><i>Timestamp</i></span> 
-				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+	</div>
+	<div class="col-xl-12">	
+		<div class="row">
+			<div class="col-xl-6">
+				<div id="panel-1" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Simple <span class="fw-300"><i>Line</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
+					</div>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								Line chart with sequential data
+							</div>
+							<div id="simpleLine" style="width:100%; height:300px;"></div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="panel-container show">
-				<div class="panel-content">									
-					<div class="panel-tag">
-						The example below, uses the same external data as the first graph, however you are able to zoom in by inserting the desired zoom level in the input field located on the bottom left of the graph
+			<div class="col-xl-6">
+				<div id="panel-2" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Line <span class="fw-300"><i>Regions</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
 					</div>
-					<div id="roll14" style="width:100%; height:300px;"></div>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								Set regions for each data with style
+							</div>
+							<div id="linleRegions" style="width:100%; height:300px;"></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		
+	</div>
+	<div class="col-xl-12">
+		<div class="row">
+			<div class="col-xl-6">
+				<div id="panel-3" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Time <span class="fw-300"><i>Series</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
+					</div>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								Simple line chart with timeseries data
+							</div>
+							<div id="timeSeries" style="width:100%; height:300px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6">
+				<div id="panel-4" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Spline <span class="fw-300"><i>Example</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
+					</div>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								Display as Spline Chart
+							</div>
+							<div id="noroll" style="width:100%; height:300px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-12">
+		<div class="row">
+			<div class="col-xl-6">
+				<div id="panel-5" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Scatter <span class="fw-300"><i>Example</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
+					</div>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								Display as Scatter Plot
+							</div>
+							<div id="noroll" style="width:100%; height:300px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6">
+				<div id="panel-6" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Bar <span class="fw-300"><i>Chart</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
+					</div>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								Display as Bar Chart
+							</div>
+							<div id="barChart" style="width:100%; height:300px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-12">
+		<div class="row">
+			<div class="col-xl-6">
+				<div id="panel-7" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Stacked <span class="fw-300"><i>Bar</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
+					</div>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								Display as Stacked Bar Chart
+							</div>
+							<div id="stackedBar" style="width:100%; height:300px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6">
+				<div id="panel-8" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Combination <span class="fw-300"><i>Chart</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
+					</div>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								An example of multiple charts in one canvas - "all in one"
+							</div>
+							<div id="combinationChart" style="width:100%; height:300px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>	
+	<div class="col-xl-12">
+		<div class="row">
+			<div class="col-xl-6">
+				<div id="panel-9" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Pie <span class="fw-300"><i>Chart</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
+					</div>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								Display as Pie Chart
+							</div>
+							<div id="pieChart" style="width:100%; height:300px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6">
+				<div id="panel-10" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Doughnut <span class="fw-300"><i>Chart</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
+					</div>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								Doughnut chart example
+							</div>
+							<div id="doughnutChart" style="width:100%; height:300px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-12">
+		<div class="row">
+			<div class="col-xl-6">
+				<div id="panel-11" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Interactive <span class="fw-300"><i>Example</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
+					</div>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								Show sub chart for zoom and selection range
+							</div>
+							<div id="interactiveExample" style="width:100%; height:300px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6">
+				<div id="panel-12" class="panel">
+					<div class="panel-hdr">	
+						<h2>
+							Interactive <span class="fw-300"><i>Mouse wheel</i></span> 
+						</h2>
+						<div class="panel-toolbar">
+							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+						</div>
+					</div>
+					<div class="panel-container show">
+						<div class="panel-content">									
+							<div class="panel-tag">
+								Zoom by mouse wheel event and slide by drag
+							</div>
+							<div id="interactiveWheel" style="width:100%; height:300px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>		
 </div>
 
 {{/inline}}
 
 {{#*inline "scripts-block"}}
-
-<script src="js/statistics/dygraph.min.js"></script>
+<!-- dependency for c3 charts : this dependency is a BSD license with clause 3 -->
+<script src="js/statistics/d3/d3.js"></script>
+<!-- c3 charts : MIT license -->
+<script src="js/statistics/c3/c3.js"></script>
+<script src="js/statistics/demo-data/demo-c3.js"></script>
 <script>	
 
 
-	$(document).ready(function() {
 
+
+	$(document).ready(function() {
+		
 	
-	})
+	});
 </script>
 {{/inline}}
 

@@ -509,10 +509,10 @@
 {{/inline}}
 
 {{#*inline "scripts-block"}}
-
+<!-- plugin Chartist.js : MIT license -->
 <script src="js/statistics/chartist/chartist.js"></script>
 <script>	
-
+	/* line chart area */
 	var lineChartArea = function(){
 		new Chartist.Line('#lineChartArea', {
 			labels: [1, 2, 3, 4, 5, 6, 7, 8],
@@ -525,7 +525,9 @@
 			fullWidth: true
 		});	
 	}
+	/* line chart area -- end */
 
+	/* line scattered chart */
 	var lineScattered = function(){
 		var times = function (n) {
 			return Array.apply(null, new Array(n));
@@ -566,7 +568,9 @@
 
 		new Chartist.Line('#lineScattered', data, options, responsiveOptions);	
 	}
+	/* line scattered chart -- end */
 
+	/* using events */
 	var usingEvents = function(){
 		var chart = new Chartist.Line('#usingEvents', {
 			labels: [1, 2, 3, 4, 5],
@@ -600,7 +604,9 @@
 			}
 		});		
 	}
+	/* using events -- end */
 
+	/* bipolar */
 	var bipolar = function () {
 		new Chartist.Line('#bipolar', {
 			labels: [1, 2, 3, 4, 5, 6, 7, 8],
@@ -623,7 +629,9 @@
 			}
 		});
 	}
+	/* bipolar -- end */
 
+	/* smile animation */
 	var smileAnimation = function () {
 		var chart = new Chartist.Line('#smileAnimation', {
 			labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
@@ -752,7 +760,9 @@
 			window.__exampleAnimateTimeout = setTimeout(chart.update.bind(chart), 12000);
 		});
 	}
+	/* smile animation -- end */
 
+	/* path animation */
 	var pathAnimation = function () {
 		var chart = new Chartist.Line('#pathAnimation', {
 			labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -782,7 +792,9 @@
 			}
 		});
 	}
+	/* path animation -- end */
 
+	/* line interpolation */
 	var lineInterpolation = function () {
 		var chart = new Chartist.Line('#lineInterpolation', {
 			labels: [1, 2, 3, 4, 5],
@@ -803,7 +815,9 @@
 			low: 0
 		});
 	}
+	/* line interpolation -- end */
 
+	/* series overrides */
 	var seriesOverrides = function () {
 		var chart = new Chartist.Line('#seriesOverrides', {
 			labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
@@ -855,7 +869,9 @@
 			}]
 		]);
 	}
+	/* series overrides -- end */
 
+	/* bar chart */
 	var barChart = function () {
 		var data = {
 		  labels: ['W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'W8', 'W9', 'W10'],
@@ -876,7 +892,9 @@
 
 		new Chartist.Bar('#barChart', data, options);
 	}
+	/* bar chart end */
 
+	/* overlap bar mobile */
 	var overlapBarMobile = function () {
 		var data = {
 			labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -903,7 +921,9 @@
 
 		new Chartist.Bar('#overlapBarMobile', data, options, responsiveOptions);
 	}
+	/* overlap bar mobile -- end */
 
+	/* peak circles */
 	var peakCircles = function () {
 		// Create a simple bi-polar bar chart
 		var chart = new Chartist.Bar('#peakCircles', {
@@ -934,7 +954,9 @@
 			}
 		});
 	}
+	/* peak circles -- end */
 
+	/* multi line labels */
 	var multiLineLabels = function () {
 		new Chartist.Bar('#multiLineLabels', {
 			labels: ['First quarter of the year', 'Second quarter of the year', 'Third quarter of the year', 'Fourth quarter of the year'],
@@ -957,7 +979,9 @@
 			}
 		});
 	}
+	/* multi line labels -- end */
 
+	/* stacked bar */
 	var stackedBar = function () {
 		new Chartist.Bar('#stackedBar', {
 			labels: ['Q1', 'Q2', 'Q3', 'Q4'],
@@ -981,7 +1005,9 @@
 			}
 		});
 	}
+	/* stacked bar -- end */
 
+	/* horizontal bar */
 	var horizontalBar = function () {
 		new Chartist.Bar('#horizontalBar', {
 			labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
@@ -998,7 +1024,9 @@
 			}
 		});
 	}
+	/* horizontal bar -- end */
 
+	/* extream responsive */
 	var extreamResponsive = function () {
 		new Chartist.Bar('#extreamResponsive', {
 			labels: ['Quarter 1', 'Quarter 2', 'Quarter 3', 'Quarter 4'],
@@ -1047,7 +1075,9 @@
 			}]
 		]);
 	}
+	/* extream responsive -- end */
 
+	/* distributed series */
 	var distributedSeries = function () {
 		new Chartist.Bar('#distributedSeries', {
 			labels: ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'],
@@ -1056,7 +1086,9 @@
 			distributeSeries: true
 		});
 	}
+	/* distributed series -- end */
 
+	/* label palcement */
 	var labelPlacement = function () {
 		new Chartist.Bar('#labelPlacement', {
 			labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -1075,7 +1107,9 @@
 			}
 		});
 	}
+	/* label palcement -- end */
 
+	/* pie chart */
 	var pieChart = function () {
 		var data = {
 			series: [5, 3, 4]
@@ -1091,7 +1125,9 @@
 			}
 		});
 	}
+	/* pie chart -- end */
 
+	/* pie chart labels */
 	var pieChartLabels = function () {
 		var data = {
 			labels: ['Bananas', 'Apples', 'Grapes'],
@@ -1121,7 +1157,9 @@
 
 		new Chartist.Pie('#pieChartLabels', data, options, responsiveOptions);
 	}
+	/* pie chart labels -- end */
 
+	/* guage chart */
 	var gaugeChart = function () {
 		new Chartist.Pie('#gaugeChart', {
 			series: [20, 10, 30, 40]
@@ -1133,7 +1171,9 @@
 			showLabel: false
 		});
 	}
+	/* guage chart -- end */
 
+	/* donut fill */
 	var donutFill = function () {
 		new Chartist.Pie('#donutFill', {
 			series: [20, 10, 30, 40]
@@ -1145,7 +1185,9 @@
 			showLabel: true
 		});
 	}
+	/* donut fill -- end */
 
+	/* guage chart fill */
 	var gaugeChartFill = function () {
 		new Chartist.Pie('#gaugeChartFill', {
 			series: [20, 10, 30, 40]
@@ -1158,7 +1200,9 @@
 			showLabel: true
 		});
 	}
+	/* guage chart fill -- end */
 
+	/* initilize all charts on DOM ready */
 	$(document).ready(function() {
 		lineChartArea();
 		lineScattered();
@@ -1182,7 +1226,7 @@
 		gaugeChart();
 		donutFill();
 		gaugeChartFill();
-	})
+	});
 </script>
 {{/inline}}
 
