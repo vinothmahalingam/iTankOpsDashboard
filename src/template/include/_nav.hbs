@@ -314,22 +314,21 @@
 				</a>
 			</li>
 			<li>
-				<a href="javascript:void(0);" data-filter-tags="menu child"> 
-					<span class="dl-ref bg-success-500">L1</span>
+				<a href="javascript:void(0);">
 					<span class="nav-link-text" data-i18n="nav.ui_menu_child">
 						Menu child
 					</span> 
 				</a>
 				<ul>
 					<li>
-						<a href="javascript:void(0);" data-filter-tags="sublevel"> 
+						<a href="javascript:void(0);"> 
 							<span class="nav-link-text" data-i18n="nav.ui_sublevel">
 								Sublevel Item
 							</span> 
 						</a>
 					</li>
 					<li>
-						<a href="javascript:void(0);" data-filter-tags="sublevel w/ icon"> 
+						<a href="javascript:void(0);"> 
 							<span class="nav-link-text" data-i18n="nav.ui_sublevel_icon">
 								Another Item
 							</span> 
@@ -339,7 +338,6 @@
 			</li>
 			<li class="disabled">
 				<a href="#" data-filter-tags="disabled item"> 
-					<span class="dl-ref bg-success-500">DS</span>
 					<span class="nav-link-text" data-i18n="nav.ui_disabled_item">
 						Disabled item
 					</span> 
@@ -361,10 +359,12 @@
 					</span>
 				</a>
 			</li>
-			<li {{#is pagename "in" "icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_fontawesome_brand, icons_fontawesome_svg"}}class="active open"{{/is}}>
-				<a href="#" title="FontAwesome 5" data-filter-tags="icons">
+			<li {{#is pagename "in" "icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_fontawesome_brand"}}class="active open"{{/is}}>
+				<a href="#" title="FontAwesome" data-filter-tags="icons">
 					<span class="nav-link-text">
-						<span data-i18n="nav.infterface.icons">FontAwesome 5</span>
+						<span data-i18n="nav.infterface.icons">
+							FontAwesome Pro
+						</span>
 					</span>
 				</a>
 				<ul>
@@ -372,7 +372,6 @@
 						<a href="icons_fontawesome_light.html" data-filter-tags="font icons fontawesome pro light"> 
 							<span class="nav-link-text" data-i18n="nav.icons_fontawesome_light">
 								Light
-								<span class="dl-ref label bg-success-700 ml-1">PRO</span>
 							</span>
 						</a>
 					</li>
@@ -380,7 +379,6 @@
 						<a href="icons_fontawesome_regular.html" data-filter-tags="font icons fontawesome pro regular"> 
 							<span class="nav-link-text" data-i18n="nav.icons_far">
 								Regular 
-								<span class="dl-ref label bg-success-800 ml-1">PRO</span>
 							</span>
 						</a>
 					</li>
@@ -388,7 +386,6 @@
 						<a href="icons_fontawesome_solid.html" data-filter-tags="font icons fontawesome pro solid"> 
 							<span class="nav-link-text" data-i18n="nav.icons_fas">
 								Solid
-								<span class="dl-ref label bg-success-900 ml-1">PRO</span>
 							</span>
 						</a>
 					</li>
@@ -396,13 +393,6 @@
 						<a href="icons_fontawesome_brand.html" data-filter-tags="font icons fontawesome brand"> 
 							<span class="nav-link-text" data-i18n="nav.icons_fas">
 								Brand
-							</span>
-						</a>
-					</li>
-					<li {{#is pagename "===" "icons_fontawesome_svg"}}class="active"{{/is}}>
-						<a href="icons_fontawesome_brand.html" data-filter-tags="font icons fontawesome pro svg"> 
-							<span class="nav-link-text" data-i18n="nav.icons_fas">
-								Render as SVG
 							</span>
 						</a>
 					</li>
@@ -509,7 +499,7 @@
 			</li>																														
 		</ul>
 	</li>
-	<li class="nav-title">Plugins &amp; Extensions</li>
+	<li class="nav-title">Plugins &amp; Addons</li>
 	<li {{#is pagename "in" "plugin_faq,plugin_lazyload,plugin_waves,plugin_pacejs,plugin_smartpanels,plugin_slimscroll,plugin_throttle,plugin_navigation,plugin_i18next,plugin_appcore"}}class="active open"{{/is}}>
 		<a href="#" title="Plugins" data-filter-tags="core plugins"> 
 			<i class="fal fa-shield-alt"></i>
@@ -528,7 +518,7 @@
 				<a href="plugin_lazyload.html" data-filter-tags="plugins lazyload"> 
 					<span class="nav-link-text">
 						<span data-i18n="nav.plugin_lazyload">LazyLoad</span>
-						<span class="dl-ref label bg-success-600 ml-1">5 KB</span> 
+						<span class="dl-ref label bg-primary-500 ml-2">5 KB</span> 
 					</span>
 				</a>
 			</li>
@@ -536,7 +526,7 @@
 				<a href="plugin_waves.html" data-filter-tags="plugins waves"> 
 					<span class="nav-link-text">
 						<span data-i18n="nav.plugin_waves">Waves</span>
-						<span class="dl-ref label bg-success-600 ml-1">9 KB</span> 
+						<span class="dl-ref label bg-primary-500 ml-2">9 KB</span> 
 					</span>
 				</a>
 			</li>
@@ -544,7 +534,7 @@
 				<a href="plugin_pacejs.html" data-filter-tags="plugin pacejs"> 
 					<span class="nav-link-text">
 						<span data-i18n="nav.plugin_pacejs">PaceJS</span>
-						<span class="dl-ref label bg-success-700 ml-1">13 KB</span> 
+						<span class="dl-ref label bg-primary-600 ml-2">13 KB</span> 
 					</span>
 				</a>
 			</li>
@@ -552,7 +542,7 @@
 				<a href="plugin_smartpanels.html" data-filter-tags="plugin smart panels"> 
 					<span class="nav-link-text">
 						<span data-i18n="nav.plugin_smartpanels">SmartPanels</span>
-						<span class="dl-ref label bg-success-700 ml-1">9 KB</span>
+						<span class="dl-ref label bg-primary-600 ml-2">9 KB</span>
 					</span>
 				</a>
 			</li>
@@ -560,7 +550,7 @@
 				<a href="plugin_slimscroll.html" data-filter-tags="plugins slim scroll slimscroll"> 
 					<span class="nav-link-text">
 						<span data-i18n="nav.plugin_slimscroll">Slimscroll</span>
-						<span class="dl-ref label bg-success-800 ml-1">5 KB</span>
+						<span class="dl-ref label bg-primary-700 ml-2">5 KB</span>
 					</span>
 				</a>
 			</li>
@@ -568,7 +558,7 @@
 				<a href="plugin_throttle.html" data-filter-tags="plugins throttle"> 
 					<span class="nav-link-text">
 						<span data-i18n="nav.plugin_throttle">Throttle</span>
-						<span class="dl-ref label bg-success-800 ml-1">1 KB</span>
+						<span class="dl-ref label bg-primary-700 ml-2">1 KB</span>
 					</span>
 				</a>
 			</li>
@@ -576,7 +566,7 @@
 				<a href="plugin_navigation.html" data-filter-tags="plugins navigation"> 
 					<span class="nav-link-text">
 						<span data-i18n="nav.plugin_navigation">Navigation</span>
-						<span class="dl-ref label bg-success-900 ml-1">2 KB</span>
+						<span class="dl-ref label bg-primary-700 ml-2">2 KB</span>
 					</span>
 				</a>
 			</li>
@@ -584,7 +574,7 @@
 				<a href="plugin_i18next.html" data-filter-tags="plugins i18next"> 
 					<span class="nav-link-text">
 						<span data-i18n="nav.plugin_i18next">i18next</span>
-						<span class="dl-ref label bg-success-900 ml-1">10 KB</span>
+						<span class="dl-ref label bg-primary-700 ml-2">10 KB</span>
 					</span>
 				</a>
 			</li>	
@@ -592,12 +582,12 @@
 				<a href="plugin_appcore.html" data-filter-tags="plugins app core"> 
 					<span class="nav-link-text">
 						<span data-i18n="nav.plugin_appcore">App.Core</span>
-						<span class="dl-ref label bg-success-900 ml-1">14 KB</span>
+						<span class="dl-ref label bg-success-700 ml-2">14 KB</span>
 					</span>
 				</a>
 			</li>							
 		</ul>	
-	</li>
+	</li>	
 	<li {{#is pagename "in" "datagrid_datatables_basic,datagrid_datatables_advanced,datagrid_foo_tables"}}class="active open"{{/is}}>
 		<a href="#" title="Datagrid" data-filter-tags="data tables"> 
 			<i class="fal fa-table"></i>
@@ -611,12 +601,12 @@
 				<ul>
 					<li {{#is pagename "===" "datagrid_datatables_basic"}}class="active"{{/is}}>
 						<a href="datagrid_datatables_basic.html" data-filter-tags="datagrid datatables basic tables"> 
-							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_basic">Basic Configuration</span> 
+							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_basic">Basic</span> 
 						</a>
 					</li>
 					<li {{#is pagename "===" "datagrid_datatables_advanced"}}class="active"{{/is}}>
 						<a href="datagrid_datatables_advanced.html" data-filter-tags="datagrid datatables advanced tables"> 
-							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_advanced">Advanced Configuration</span> 
+							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_advanced">Advanced</span> 
 						</a>
 					</li>
 				</ul>
@@ -627,46 +617,67 @@
 				</a>		
 			</li>
 		</ul>
-	</li>	
+	</li>
 	<li {{#is pagename "in" "statistics_dygraph,statistics_flot,statistics_chartjs,statistics_chartist,statistics_c3,statistics_peity,statistics_sparkline"}}class="active open"{{/is}}>
 		<a href="#" title="Statistics" data-filter-tags="statistics"> 
 			<i class="fal fa-chart-pie"></i>
 			<span class="nav-link-text" data-i18n="nav.statistics">Statistics</span>
 		</a>
 		<ul>
-			<li {{#is pagename "===" "statistics_dygraph"}}class="active"{{/is}}>
-				<a href="statistics_dygraph.html" title="Dygraph" data-filter-tags="statistics chart graph dygraph"> 
-					<span class="nav-link-text" data-i18n="nav.statistics_dygraph">Dygraph</span> 
-				</a>
-			</li>
 			<li {{#is pagename "===" "statistics_flot"}}class="active"{{/is}}>
 				<a href="statistics_flot.html" title="Flot" data-filter-tags="statistics chart graph flot"> 
-					<span class="nav-link-text" data-i18n="nav.statistics_flot">Flot</span> 
+					<span class="nav-link-text" data-i18n="nav.statistics_flot">
+						Flot
+						<span class="dl-ref label bg-primary-500 ml-2">36+ KB</span>	
+					</span> 				
 				</a>
 			</li>
 			<li {{#is pagename "===" "statistics_chartjs"}}class="active"{{/is}}>
 				<a href="statistics_chartjs.html" title="Chart.js" data-filter-tags="statistics chart graph Chart.js"> 
-					<span class="nav-link-text" data-i18n="nav.statistics_chartjs">Chart.js</span> 
+					<span class="nav-link-text" data-i18n="nav.statistics_chartjs">
+						Chart.js
+						<span class="dl-ref label bg-primary-500 ml-2">205 KB</span>
+					</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "statistics_chartist"}}class="active"{{/is}}>
 				<a href="statistics_chartist.html" title="Chartist.js" data-filter-tags="statistics chart graph Chartist.js"> 
-					<span class="nav-link-text" data-i18n="nav.statistics_chartist">Chartist.js</span> 
+					<span class="nav-link-text" data-i18n="nav.statistics_chartist">
+						Chartist.js
+						<span class="dl-ref label bg-primary-600 ml-2">39 KB</span>
+					</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "statistics_c3"}}class="active"{{/is}}>
 				<a href="statistics_c3.html" title="C3 Charts" data-filter-tags="statistics chart graph c3"> 
-					<span class="nav-link-text" data-i18n="nav.statistics_c3">C3 Charts</span> 
+					<span class="nav-link-text" data-i18n="nav.statistics_c3">
+						C3 Charts
+						<span class="dl-ref label bg-primary-600 ml-2">187 KB</span>
+					</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "statistics_peity"}}class="active"{{/is}}>
 				<a href="statistics_peity.html" title="Peity" data-filter-tags="statistics chart graph peity"> 
-					<span class="nav-link-text" data-i18n="nav.statistics_peity">Peity</span> 
+					<span class="nav-link-text" data-i18n="nav.statistics_peity">
+						Peity
+						<span class="dl-ref label bg-primary-700 ml-2">16 KB</span> 
+					</span>
 				</a>
 			</li>
 			<li {{#is pagename "===" "statistics_sparkline"}}class="active"{{/is}}>
 				<a href="statistics_sparkline.html" title="Sparkline" data-filter-tags="statistics chart graph sparkline"> 
-					<span class="nav-link-text" data-i18n="nav.statistics_sparkline">Sparkline</span> 
+					<span class="nav-link-text" data-i18n="nav.statistics_sparkline">
+						Sparkline
+						<span class="dl-ref label bg-primary-700 ml-2">22 KB</span>
+					</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "statistics_dygraph"}}class="active"{{/is}}>
+				<a href="statistics_dygraph.html" title="Dygraph" data-filter-tags="statistics chart graph dygraph"> 
+					<span class="nav-link-text" data-i18n="nav.statistics_dygraph">
+						Dygraph
+						<span class="dl-ref label bg-primary-700 ml-2">120 KB</span>
+					</span> 
 				</a>
 			</li>
 		</ul>
@@ -771,7 +782,20 @@
 				</a>		
 			</li>
 		</ul>
-	</li>	
+	</li>
+	<li {{#is pagename "in" "plugin_fullcalendar"}}class="active open"{{/is}}>
+		<a href="#" title="Miscellaneous" data-filter-tags="miscellaneous plugin addons"> 
+			<i class="fal fa-globe"></i>
+			<span class="nav-link-text" data-i18n="nav.datatables">Miscellaneous</span>
+		</a>
+		<ul>
+			<li {{#is pagename "in" "plugin_fullcalendar"}}class="active open"{{/is}}>
+				<a href="plugin_fullcalendar.html" title="Foo Tables" data-filter-tags="miscellaneous plugin addon full calendar"> 
+					<span class="nav-link-text" data-i18n="nav.plugin_fullcalendar">FullCalendar</span> 
+				</a>		
+			</li>
+		</ul>
+	</li>		
 	<li class="nav-title">Layouts &amp; Templates </li>
 	<li {{#is pagename "in" "page_chat,page_contact,page_ecommerce_orders,page_ecommerce_products,page_ecommerce_item,page_ecommerce_item_add,page_faq,page_forum_list,page_forum_threads,page_forum_discussion,page_inbox,page_inbox_write,page_inbox_read,page_invoice,page_forget,page_locked,page_login,page_register,page_error_announced,page_error,page_error_404,page_pricing_tables,page_profile,page_search,page_teams"}}class="active open"{{/is}}>
 		<a href="#" title="Pages" data-filter-tags="page layouts"> 
