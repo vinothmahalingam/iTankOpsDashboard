@@ -17,7 +17,8 @@
 			"jsUglify": true,
 			"cssMinify": false,
 			"jsSourcemaps": false,
-			"cssSourcemaps": true
+			"cssSourcemaps": true,
+			"autoprefixer": true
 		},
 		"path": {
 			"src": "./src",

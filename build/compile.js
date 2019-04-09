@@ -13,6 +13,7 @@ var cleancss = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
 var path = require('path');
 var gutil = require('gulp-util');
+var autoprefixer = require('gulp-autoprefixer');
 var fs = require('fs');
 var build = require('./build');
 var args = Object.assign({'prod': false}, gutil.env);
@@ -28,7 +29,8 @@ module.exports = {
 			jsUglify: false,
 			cssMinify: false,
 			jsSourcemaps: true,
-			cssSourcemaps: true
+			cssSourcemaps: true,
+			autoprefixer: true
 		},
 		"path": {
 			"src": "./src",
@@ -90,6 +92,11 @@ module.exports = {
 			})*/
 			.pipe(function () {
 				return gulpif(config.cssMinify, cleancss({debug: config.debug}));
+			})
+			.pipe(function() {
+				return gulpif(config.autoprefixer, autoprefixer({
+					browsers: ['last 2 versions']
+				}));
 			})
 			.pipe(function () {
 				return gulpif(config.cssSourcemaps, sourcemaps.write('./'));
