@@ -196,58 +196,58 @@
 					"flotchart" : {
 						"flot" : {
 							"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.js"}
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.js"}
 						},
 						"flot-colorhelpers" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.colorhelpers.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.colorhelpers.js"}
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/colorhelpers.js"}
 						},
 						"flot-canvas" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.canvas.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.canvas.js"}
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.canvas.js"}
 						},
 						"flot-categories" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.categories.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.categories.js"}
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.categories.js"}
 						},
 						"flot-crosshair" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.crosshair.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.crosshair.js"}
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.crosshair.js"}
 						},
 						"flot-errorbars" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.errorbars.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.errorbars.js"}
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.errorbars.js"}
 						},
 						"flot-fillbetween" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.fillbetween.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.fillbetween.js"}
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.fillbetween.js"}
 						},
 						"flot-image" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.image.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.image.js"}
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.image.js"}
 						},
 						"flot-navigate" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.navigate.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.navigate.js"}
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.navigate.js"}
 						},
 						"flot-pie" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.pie.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.pie.js"}
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.pie.js"}
 						},
 						"flot-resize" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.resize.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.resize.js"}
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.resize.js"}
 						},
 						"flot-selection" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.selection.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.selection.js"}
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.selection.js"}
 						},
 						"flot-stack" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.stack.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.stack.js"}
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.stack.js"}
 						},
 						"flot-spline" : {"src": {"scripts": ["{$config.path.node_modules}/flot-spline/js/jquery.flot.spline.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.spline.js"}
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.spline.js"}
 						},
 						"flot-symbol" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.symbol.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.symbol.js"}
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.symbol.js"}
 						},
 						"flot-threshold" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.threshold.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.threshold.js"}
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.threshold.js"}
 						},
 						"flot-tooltip" : {"src": {"scripts": ["{$config.path.node_modules}/jquery.flot.tooltip/js/jquery.flot.tooltip.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.tooltip.js"}
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.tooltip.js"}
 						},
 						"flot-time" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.time.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/jquery.flot.time.js"}
+							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.time.js"}
 						}
 					},
 					"chartjs" : {
@@ -321,17 +321,17 @@
 							]
 						},
 						"bundle": {
-							"scripts": "{$config.output}/js/statistics/peity/jquery.peity.js"
+							"scripts": "{$config.output}/js/statistics/peity/peity.js"
 						}
 					},
 					"sparkline" : {
 						"src": {
 							"scripts": [
-								"{$config.path.node_modules}/sparklines/source/sparkline.js"
+								"{$config.path.node_modules}/jquery-sparkline/jquery.sparkline.js"
 							]
 						},
 						"bundle": {
-							"scripts": "{$config.output}/js/statistics/sparkline/sparkline.js"
+							"scripts": "{$config.output}/js/statistics/sparkline/sparkline.bundle.js"
 						}
 					}
 				}
