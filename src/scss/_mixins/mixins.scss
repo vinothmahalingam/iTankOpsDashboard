@@ -8,7 +8,7 @@
 @mixin gradient-img($start: #EEE,$stop: #FFF) {
   background-color: $start;
   background-image: -webkit-linear-gradient(top,$start,$stop);
-  background-image: linear-gradient(top,$start,$stop);
+  background-image: linear-gradient(to top,$start,$stop);
 }
 
 @mixin gradient($color: #F5F5F5,$start: #EEE,$stop: #FFF) {

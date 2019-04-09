@@ -38,9 +38,10 @@
 		bottom: -5px;
 		left: 0;
 		right: 0;
+		@include gradient-img(rgba($fusion-500, 0.09), transparent)
 
-		background-image: -webkit-linear-gradient(top, rgba($fusion-500, 0.09), transparent);
-		background-image: linear-gradient(top, rgba($fusion-500, 0.09), transparent);
+		/*background-image: -webkit-linear-gradient(top, rgba($fusion-500, 0.09), transparent);
+		background-image: linear-gradient(top, rgba($fusion-500, 0.09), transparent);*/
 	}
 }
 
@@ -49,8 +50,10 @@
 		content: "";
 		top: -5px;
 
-		background-image: -webkit-linear-gradient(top, transparent, rgba($fusion-500, 0.09));
-		background-image: linear-gradient(top, transparent, rgba($fusion-500, 0.09));
+		@include gradient-img(transparent, rgba($fusion-500, 0.09))
+
+		/*background-image: -webkit-linear-gradient(top, transparent, rgba($fusion-500, 0.09));
+		background-image: linear-gradient(top, transparent, rgba($fusion-500, 0.09));*/
 	}	
 }
 
