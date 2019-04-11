@@ -1,5 +1,5 @@
 .subheader {
-	margin-bottom: 1.5rem;
+	margin-bottom: calc(1.5rem + 0.625rem); //moved the 0.625rem; from .subheader-title > small
 	position: relative;
 
 	display: flex;
@@ -34,7 +34,7 @@
 	small {
 		font-weight: 400;
 		color: $fusion-100; //$fusion-100;
-		margin-bottom: 0.625rem;
+		margin-bottom: 0;
 		font-size: 0.875rem;
 	}
 }
