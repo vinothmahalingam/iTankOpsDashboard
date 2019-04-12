@@ -1,18 +1,33 @@
 <ul id="js-nav-menu" class="nav-menu">
-	<li {{#is pagename "in" "intel_introduction,intel_build_notes"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "intel_analytics_dashboard,intel_marketing_dashboard,intel_ceo_dashboard,intel_introduction,intel_build_notes"}}class="active open"{{/is}}>
 		<a href="#" title="NextGen Intel" data-filter-tags="nextgen intel"> 
 			{{!-- <img src="img/logo-minify.png" alt="NextGen Logo" class="rounded-circle"> --}}
 			<i class="fal fa-info-circle"></i>
 			<span class="nav-link-text" data-i18n="nav.nextgen_intel">NextGen Intel</span> 
 		</a>
 		<ul>
+			<li {{#is pagename "===" "intel_analytics_dashboard"}}class="active"{{/is}}>
+				<a href="intel_analytics_dashboard.html" title="Analytics Dashboard" data-filter-tags="intel analytics dashboard"> 
+					<span class="nav-link-text" data-i18n="nav.intel_analytics_dashboard">Analytics Dashboard</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "intel_marketing_dashboard"}}class="active"{{/is}}>
+				<a href="intel_marketing_dashboard.html" title="Marketing Dashboard" data-filter-tags="intel marketing dashboard"> 
+					<span class="nav-link-text" data-i18n="nav.intel_marketing_dashboard">Marketing Dashboard</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "intel_ceo_dashboard"}}class="active"{{/is}}>
+				<a href="intel_ceo_dashboard.html" title="CEO Dashboard" data-filter-tags="intel ceo dashboard"> 
+					<span class="nav-link-text" data-i18n="nav.intel_ceo_dashboard">CEO Dashboard</span> 
+				</a>
+			</li>
 			<li {{#is pagename "===" "intel_introduction"}}class="active"{{/is}}>
-				<a href="intel_introduction.html" data-filter-tags="intel introduction"> 
-					<span class="nav-link-text" data-i18n="nav.intel_introduction"> Introduction</span> 
+				<a href="intel_introduction.html" title="Introduction" data-filter-tags="intel introduction"> 
+					<span class="nav-link-text" data-i18n="nav.intel_introduction">Introduction</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "intel_build_notes"}}class="active"{{/is}}>
-				<a href="intel_build_notes.html" data-filter-tags="intel build notes update changelog"> 
+				<a href="intel_build_notes.html" title="Build Notes" data-filter-tags="intel build notes update changelog"> 
 					<span class="nav-link-text"> 
 						<span data-i18n="nav.intel_build_notes">Build Notes</span> &nbsp; <i>v{{version}}</i>
 					</span> 
@@ -500,7 +515,7 @@
 		</ul>
 	</li>
 	<li class="nav-title">Plugins &amp; Addons</li>
-	<li {{#is pagename "in" "plugin_faq,plugin_lazyload,plugin_waves,plugin_pacejs,plugin_smartpanels,plugin_slimscroll,plugin_throttle,plugin_navigation,plugin_i18next,plugin_appcore"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "plugin_faq,plugin_waves,plugin_pacejs,plugin_smartpanels,plugin_slimscroll,plugin_throttle,plugin_navigation,plugin_i18next,plugin_appcore"}}class="active open"{{/is}}>
 		<a href="#" title="Plugins" data-filter-tags="core plugins"> 
 			<i class="fal fa-shield-alt"></i>
 			<span class="nav-link-text" data-i18n="nav.plugin">Core Plugins </span> 
@@ -511,14 +526,6 @@
 				<a href="plugin_faq.html" data-filter-tags="plugins faq info"> 
 					<span class="nav-link-text">
 						<span data-i18n="nav.plugin_faq">Plugins FAQ</span>
-					</span>
-				</a>
-			</li>
-			<li {{#is pagename "===" "plugin_lazyload"}}class="active"{{/is}}>
-				<a href="plugin_lazyload.html" data-filter-tags="plugins lazyload"> 
-					<span class="nav-link-text">
-						<span data-i18n="nav.plugin_lazyload">LazyLoad</span>
-						<span class="dl-ref label bg-primary-500 ml-2">5 KB</span> 
 					</span>
 				</a>
 			</li>
@@ -618,7 +625,7 @@
 			</li>
 		</ul>
 	</li>
-	<li {{#is pagename "in" "statistics_dygraph,statistics_flot,statistics_chartjs,statistics_chartist,statistics_c3,statistics_peity,statistics_sparkline"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "statistics_flot,statistics_chartjs,statistics_chartist,statistics_c3,statistics_peity,statistics_sparkline,statistics_easypiechart,statistics_dygraph"}}class="active open"{{/is}}>
 		<a href="#" title="Statistics" data-filter-tags="statistics"> 
 			<i class="fal fa-chart-pie"></i>
 			<span class="nav-link-text" data-i18n="nav.statistics">Statistics</span>
@@ -628,7 +635,7 @@
 				<a href="statistics_flot.html" title="Flot" data-filter-tags="statistics chart graph flot"> 
 					<span class="nav-link-text" data-i18n="nav.statistics_flot">
 						Flot
-						<span class="dl-ref label bg-primary-500 ml-2">36+ KB</span>	
+						<span class="dl-ref label bg-primary-500 ml-2">36 KB</span>	
 					</span> 				
 				</a>
 			</li>
@@ -652,7 +659,7 @@
 				<a href="statistics_c3.html" title="C3 Charts" data-filter-tags="statistics chart graph c3"> 
 					<span class="nav-link-text" data-i18n="nav.statistics_c3">
 						C3 Charts
-						<span class="dl-ref label bg-primary-600 ml-2">187 KB</span>
+						<span class="dl-ref label bg-primary-600 ml-2">197 KB</span>
 					</span> 
 				</a>
 			</li>
@@ -660,7 +667,7 @@
 				<a href="statistics_peity.html" title="Peity" data-filter-tags="statistics chart graph peity"> 
 					<span class="nav-link-text" data-i18n="nav.statistics_peity">
 						Peity
-						<span class="dl-ref label bg-primary-700 ml-2">16 KB</span> 
+						<span class="dl-ref label bg-primary-700 ml-2">4 KB</span> 
 					</span>
 				</a>
 			</li>
@@ -668,7 +675,15 @@
 				<a href="statistics_sparkline.html" title="Sparkline" data-filter-tags="statistics chart graph sparkline"> 
 					<span class="nav-link-text" data-i18n="nav.statistics_sparkline">
 						Sparkline
-						<span class="dl-ref label bg-primary-700 ml-2">22 KB</span>
+						<span class="dl-ref label bg-primary-700 ml-2">42 KB</span>
+					</span> 
+				</a>
+			</li>
+			<li {{#is pagename "===" "statistics_easypiechart"}}class="active"{{/is}}>
+				<a href="statistics_easypiechart.html" title="Easy Pie Chart" data-filter-tags="statistics chart circle cut easy pie"> 
+					<span class="nav-link-text" data-i18n="nav.statistics_easypiechart">
+						Easy Pie Chart
+						<span class="dl-ref label bg-primary-700 ml-2">10 KB</span>
 					</span> 
 				</a>
 			</li>
@@ -783,7 +798,7 @@
 			</li>
 		</ul>
 	</li>
-	<li {{#is pagename "in" "plugin_fullcalendar"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "plugin_fullcalendar,plugin_lightgallery,plugin_pdfviewer,plugin_idletimer"}}class="active open"{{/is}}>
 		<a href="#" title="Miscellaneous" data-filter-tags="miscellaneous plugin addons"> 
 			<i class="fal fa-globe"></i>
 			<span class="nav-link-text" data-i18n="nav.datatables">Miscellaneous</span>
@@ -792,6 +807,28 @@
 			<li {{#is pagename "in" "plugin_fullcalendar"}}class="active open"{{/is}}>
 				<a href="plugin_fullcalendar.html" title="Foo Tables" data-filter-tags="miscellaneous plugin addon full calendar"> 
 					<span class="nav-link-text" data-i18n="nav.plugin_fullcalendar">FullCalendar</span> 
+				</a>		
+			</li>
+			<li {{#is pagename "in" "plugin_lightgallery"}}class="active open"{{/is}}>
+				<a href="plugin_lightgallery.html" title="Light Gallery" data-filter-tags="miscellaneous plugin addon light gallery"> 
+					<span class="nav-link-text" data-i18n="nav.plugin_fullcalendar">
+						Light Gallery 
+						<span class="dl-ref label bg-primary-700 ml-2">Premium</span>
+					</span> 
+				</a>		
+			</li>
+			<li {{#is pagename "in" "plugin_pdfviewer"}}class="active open"{{/is}}>
+				<a href="plugin_pdfviewer.html" title="PDF viewer" data-filter-tags="miscellaneous plugin addon pdf view print"> 
+					<span class="nav-link-text" data-i18n="nav.plugin_pdfviewer">
+						PDF viewer
+					</span> 
+				</a>		
+			</li>
+			<li {{#is pagename "in" "plugin_idletimer"}}class="active open"{{/is}}>
+				<a href="plugin_idletimer.html" title="Idle Timer" data-filter-tags="miscellaneous plugin addon idle timer"> 
+					<span class="nav-link-text" data-i18n="nav.plugin_idletimer">
+						Idle Timer
+					</span> 
 				</a>		
 			</li>
 		</ul>
