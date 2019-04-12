@@ -333,6 +333,16 @@
 						"bundle": {
 							"scripts": "{$config.output}/js/statistics/sparkline/sparkline.bundle.js"
 						}
+					},
+					"easypiechart" : {
+						"src": {
+							"scripts": [
+								"{$config.path.node_modules}/easy-pie-chart/dist/jquery.easypiechart.js"
+							]
+						},
+						"bundle": {
+							"scripts": "{$config.output}/js/statistics/easypiechart/easypiechart.js"
+						}
 					}
 				}
 			}

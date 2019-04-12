@@ -4,7 +4,7 @@
 	pagename="statistics_easypiechart" 
 	category_1="Statistics" 
 	heading="<i class='subheader-icon fal fa-chart-pie'></i> Easy Pie Chart <sup class='badge badge-primary fw-500'>ADDON</sup>" 
-	pagedescription="Simple and lightweight miniature chart."
+	pagedescription="Lightweight plugin to render simple, animated and retina optimized pie charts."
 }}
 
 {{#*inline "head-block"}}{{/inline}}
@@ -20,7 +20,9 @@
 				$47,000
 			</span>
 		</div>
-		<span class="peity-bar" data-peity='{ "fill": ["#0d8aee"], "height": 32, "width": 100 }'>1,4,3,6,5,3,9,6,5,9,7</span>
+		<span class="js-chart color-primary-500 position-relative d-flex align-items-center justify-content-center" data-percent="45">
+			<span class="js-percent d-flex align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom"></span>
+		</span>
 	</div>
 	<div class="subheader-block d-none d-sm-flex align-items-center border-faded border-right-0 border-top-0 border-bottom-0 ml-3 pl-3">
 		<div class="d-inline-flex flex-column justify-content-center mr-3">
@@ -31,7 +33,9 @@
 				$38,500
 			</span>
 		</div>
-		<span class="peity-line" data-peity='{ "fill": "#fe6bb0", "stroke": "#fd3995", "height": 32, "width": 100 }'>1,4,3,6,5,3,9,6,5,9,7</span>
+		<span class="js-chart color-danger-500 position-relative d-flex align-items-center justify-content-center" data-percent="86">
+			<span class="js-percent d-flex align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom"></span>
+		</span>
 	</div>
 {{/inline}}
 
@@ -49,103 +53,271 @@
 		<div class="d-flex flex-fill">
 			<div class="flex-fill">
 				<span class="h5">About</span>
-				<p>Peity (sounds like deity) is a jQuery plugin that converts an element's content into a <code>svg</code> mini pie  donut  line  or bar chart  and is compatible with any browser that supports <code>svg</code>. Peity chart is only 4kb, which makes it great to create fast lightweight charts with minimum effort.</p>
+				<p>Easy Pie Charts are highly customizable, very easy to implement, and resolution independent (retina optimized). It uses <code>requestAnimationFrame</code> for smooth animations on modern devices and works in all modern browsers. Since it is a SVG file output, it can be resized to any width and height.</p>
 				<p class="m-0">
-					Find tutorials, guidelines and more on Peity's <a href="http://benpickles.github.io/peity/" target="_blank">official documentation</a> 
+					Find in-depth, guidelines, tutorials and more on Easy Pie Chart's <a href="https://github.com/rendro/easy-pie-chart" target="_blank">GitHub Page</a> 
 				</p>
 			</div>
 		</div>
 	</div>
 </div>
 <div class="row">
-	<div class="col-xl-12">
-		<div class="row">
-			<div class="col-xl-6">
-				<div id="panel-1" class="panel">
-					<div class="panel-hdr">	
-						<h2>
-							Line <span class="fw-300"><i>Chart</i></span> 
-						</h2>
-						<div class="panel-toolbar">
-							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
-						</div>
+	<div class="col-xl-6">
+		<div id="panel-1" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Color <span class="fw-300"><i>Change</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						Colors are inherited from the parent font color, so you could literally change the any of the font colors available for NextGen <code>.js-chart.color-danger-500</code>
 					</div>
-					<div class="panel-container show">
-						<div class="panel-content">									
-							<div class="panel-tag">
-								You can specify the width of the strokes using <code>strokeWidth</code> inside <code>data-peity</code> attribute
-							</div>
-							<div class="demo d-flex justify-content-center flex-wrap d-sm-block">
-								<div class="p-3 w-auto text-center d-inline-flex border-faded">
-									<span class="peity-line" data-peity='{ "fill": false, "stroke": "#1dc9b7", "height": 40, "width": "110", "strokeWidth": 1 }'>5,3,9,6,5,9,7,3,5,2</span>
-								</div>
-								<div class="p-3 w-auto text-center d-inline-flex border-faded">
-									<span class="peity-line" data-peity='{ "fill": false, "stroke": "#fd3995", "height": 40, "width": "110", "strokeWidth": 2 }'>0,-3,-6,-4,-5,-4,-7,-3,-5,-2</span>
-								</div>
-								<div class="p-3 w-auto text-center d-inline-flex border-faded">
-									<span class="peity-line" data-peity='{ "fill": false, "stroke": "#ffc241", "height": 40, "width": "110", "strokeWidth": 3 }'>0,1,7,6,4,2,3,5,3,4</span>
-								</div>
-								<div class="p-3 w-auto text-center d-inline-flex border-faded">
-									<span class="peity-line" data-peity='{ "fill": false, "stroke": "#886ab5", "height": 40, "width": "110", "strokeWidth": 4 }'>5,3,9,6,5,3,1,7,6,4</span>
-								</div>
-							</div>
-						</div>
+					<div class="demo">
+						<div class="js-chart color-danger-500 d-inline-flex" data-percent="30" data-piesize="95"></div>
+						<div class="js-chart color-success-500 d-inline-flex" data-percent="60" data-piesize="95"></div>
+						<div class="js-chart color-primary-500 d-inline-flex" data-percent="90" data-piesize="95"></div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div id="panel-2" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Scale <span class="fw-300"><i>& Color</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						Change the size of the chart using <code>data-piesize</code> and the line width by using <code>data-linewidth</code>
+					</div>
+					<div class="demo">
+						<div class="js-chart color-danger-500 d-inline-flex" data-percent="30" data-piesize="95" data-linewidth="40"></div>
+						<div class="js-chart color-success-500 d-inline-flex" data-percent="60" data-piesize="80" data-linewidth="20"></div>
+						<div class="js-chart color-primary-500 d-inline-flex" data-percent="75" data-piesize="50" data-linewidth="5"></div>
+						<div class="js-chart color-info-500 d-inline-flex" data-percent="95" data-piesize="30" data-linewidth="3"></div>
 					</div>
 				</div>
 			</div>
-			<div class="col-xl-6">
-				<div id="panel-1" class="panel">
-					<div class="panel-hdr">	
-						<h2>
-							Area <span class="fw-300"><i>Chart</i></span> 
-						</h2>
-						<div class="panel-toolbar">
-							<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-							<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-							<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
-						</div>
+		</div>
+		<div id="panel-3" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Data <span class="fw-300"><i>Percentage</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						Data percentage is displayed by using various class utilities and a container with the class <code>.js-percent</code>
 					</div>
-					<div class="panel-container show">
-						<div class="panel-content">									
-							<div class="panel-tag">
-								Example of line with filling. You can add fill by using inserting <code>data-peity='{ "fill": "#1dc9b7" }'</code>
-							</div>
-							<div class="demo d-flex justify-content-center flex-wrap d-sm-block">
-								<div class="p-3 w-auto text-center d-inline-flex border-faded">
-									<span class="peity-line" data-peity='{ "fill": "#1dc9b7", "stroke": "#179c8e", "height": 40, "width": "110" }'>5,3,2,-1,-3,-2,2,3,5,2</span>
-								</div>
-								<div class="p-3 w-auto text-center d-inline-flex border-faded">
-									<span class="peity-line" data-peity='{ "fill": "#fe6bb0", "stroke": "#fd3995", "height": 40, "width": "110" }'>1,4,4,7,5,9,10,4,4,7,5,9,10</span>
-								</div>
-								<div class="p-3 w-auto text-center d-inline-flex border-faded">
-									<span class="peity-line" data-peity='{ "fill": "#886ab5", "stroke": "#6e4e9e", "height": 40, "width": "110" }'>5,3,9,6,5,3,1,7,6,4,4,1,5</span>
-								</div>
-								<div class="p-3 w-auto text-center d-inline-flex border-faded">
-									<span class="peity-line" data-peity='{ "fill": "#ffc241", "stroke": "#ffc241", "height": 40, "width": "110" }'>0,1,7,6,4,2,3,5,3,4,3,1,4,6</span>
+					<div class="demo">
+						<div class="js-chart color-primary-300 position-relative d-inline-flex align-items-center justify-content-center" data-percent="86" data-piesize="95" data-linewidth="5" data-linecap="round" data-scalelength="7">
+							<div class="d-flex flex-column align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom fw-300 fs-xl">
+								<span class="js-percent d-block text-dark"></span>
+								<div class="d-block fs-xs text-dark opacity-70">
+									<small>Memory</small>
 								</div>
 							</div>
+						</div>
+						<div class="js-chart color-primary-400 position-relative d-inline-flex align-items-center justify-content-center" data-percent="46" data-piesize="80" data-linewidth="5" data-linecap="round" data-scalelength="5">
+							<div class="d-flex flex-column align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom fw-300 fs-lg">
+								<span class="js-percent d-block text-dark"></span>
+								<div class="d-block fs-xs text-dark opacity-70">
+									<small>CPU</small>
+								</div>
+							</div>
+						</div>
+						<div class="js-chart color-primary-400 position-relative d-inline-flex align-items-center justify-content-center" data-percent="56" data-piesize="70" data-linewidth="5" data-linecap="round" data-scalelength="4">
+							<div class="d-flex align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom fs-md">
+								<span class="js-percent d-block"></span>
+							</div>
+						</div>
+						<div class="js-chart color-primary-600 position-relative d-inline-flex align-items-center justify-content-center" data-percent="36" data-piesize="60" data-linewidth="5" data-linecap="round" data-scalelength="3">
+							<span class="js-percent d-flex align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom fw-300 fs-xs"></span>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>	
+	<div class="col-xl-6">
+		<div id="panel-4" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Avatar <span class="fw-300"><i>Usage</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						Here we nested the image using various class utilities to center it within the graph. The graph is also using <code>data-scalelength</code> to change the scales to various sizes
+					</div>
+					<div class="demo">
+						<div class="js-chart color-danger-400 position-relative d-inline-flex align-items-center justify-content-center" data-percent="75" data-piesize="95" data-linewidth="10" data-scalelength="5">
+							<div class="d-flex align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom">
+								<img src="img/avatars/avatar-admin.png" class="profile-image rounded-circle" alt="Dr. Codex Lantern">
+							</div>
+						</div>
+						<div class="js-chart color-success-500 position-relative d-inline-flex align-items-center justify-content-center" data-percent="86" data-piesize="80" data-linewidth="7" data-scalelength="4">
+							<div class="d-flex align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom">
+								<img src="img/avatars/avatar-admin.png" class="profile-image-md rounded-circle" alt="Dr. Codex Lantern">
+							</div>
+						</div>
+
+						<div class="js-chart color-info-500 position-relative d-inline-flex align-items-center justify-content-center" data-percent="65" data-piesize="50" data-linewidth="3" data-scalelength="1" data-scalecolor="#fff">
+							<div class="d-flex align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom">
+								<img src="img/avatars/avatar-admin.png" class="profile-image-sm rounded-circle" alt="Dr. Codex Lantern">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="panel-5" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Nested <span class="fw-300"><i>Charts</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">	
+					<div class="panel-tag">
+						Just as the example above, we can create nested charts by using the <code>position-absolute</code> utility
+					</div>	
+					<div class="demo">							
+						<div class="js-chart color-danger-400 position-relative d-inline-flex align-items-center justify-content-center" data-percent="35" data-piesize="95" data-linewidth="10" data-scalelength="5">
+							<div class="js-chart color-info-500 position-relative position-absolute pos-left pos-right pos-top pos-bottom d-flex align-items-center justify-content-center" data-percent="65" data-piesize="60" data-linewidth="5" data-scalelength="1" data-scalecolor="#fff">
+								<div class="js-chart color-success-500 position-relative position-absolute pos-left pos-right pos-top pos-bottom d-flex align-items-center justify-content-center" data-percent="35" data-piesize="40" data-linewidth="3" data-scalelength="1" data-scalecolor="#fff">
+									<span class="js-percent d-flex align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom fw-300 fs-xs"></span>
+								</div>
+							</div>	
+						</div>
+
+						<div class="js-chart color-primary-600 position-relative d-inline-flex align-items-center justify-content-center" data-percent="35" data-piesize="95" data-linewidth="10" data-scalelength="5">
+							<div class="js-chart color-primary-500 position-relative position-absolute pos-left pos-right pos-top pos-bottom d-flex align-items-center justify-content-center" data-percent="65" data-piesize="60" data-linewidth="5" data-scalelength="1" data-scalecolor="#fff">
+								<div class="js-chart color-primary-400 position-relative position-absolute pos-left pos-right pos-top pos-bottom d-flex align-items-center justify-content-center" data-percent="35" data-piesize="40" data-linewidth="3" data-scalelength="1" data-scalecolor="#fff">
+									<span class="js-percent d-flex align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom fw-300 fs-xs text-primary"></span>
+								</div>
+							</div>	
+						</div>
+
+					</div>	
+					
+				</div>
+			</div>
+		</div>
+		<div id="panel-6" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Dynamic <span class="fw-300"><i>Usage</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div id="update-chart" class="d-flex flex-column align-items-center">
+						<div class="js-chart color-primary-900 position-relative d-flex align-items-center justify-content-center" data-percent="50" data-piesize="145" data-linewidth="20" data-trackcolor="#ccbfdf" data-scalelength="8">
+							<div class="d-flex flex-column align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom fw-300 fs-xl">
+								<span class="js-percent d-block text-dark"></span>
+								<div class="d-block fs-xs text-dark opacity-70">
+									<small>Random</small>
+								</div>
+							</div>
+						</div>
+
+						<button class="js-update btn btn-outline-primary mt-3">Update Chart</button>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 {{/inline}}
 
 {{#*inline "scripts-block"}}
 
-<script src="js/statistics/peity/peity.js"></script>
+<script src="js/statistics/easypiechart/easypiechart.js"></script>
 <script>	
 
-$(document).ready(function () {
+	$(document).ready(function () {
 
+		/* Easy pie chart Snippet
+		   DOC: make sure to include this snippet in your project to be able to use the easy 
+		   configurations without any jquery implementations
+		 */
+		$('.js-chart').each(function() {
 
+			var $this = $(this),
+				barcolor = $this.css('color') || myapp_get_color.primary_700,
+				trackcolor = $this.data('trackcolor') || 'rgba(0,0,0,0.04)',
+				size = parseInt($this.data('piesize')) || 50,
+				scalecolor =   $this.data('scalecolor') || $this.css('color'),
+				scalelength = parseInt($this.data('scalelength')) || 2,
+				linewidth = parseInt($this.data('linewidth')) ||  parseInt(size / 8.5),
+				linecap = $this.data('linecap') || 'butt'; //butt, round and square.
+				
+			$this.easyPieChart({
+				size : size,
+				barColor : barcolor,
+				trackColor : trackcolor,
+				scaleColor: scalecolor,
+				scaleLength: scalelength, //Length of the scale lines (reduces the radius of the chart).
+				lineCap : linecap, //Defines how the ending of the bar line looks like. Possible values are: butt, round and square.
+				lineWidth : linewidth,
+				animate: {
+					duration: 1500,
+					enabled: true
+				},
+				onStep: function(from, to, percent) {
+					$(this.el).find('.js-percent').text(Math.round(percent));
+				}
+			});
 
-});
+			$this = null;
+		});
+
+		var chart = window.chart = $('#update-chart .js-chart').data('easyPieChart');
+
+		$('.js-update').on('click', function() {
+			chart.update(Math.random()*200-100);
+		});
+
+	});
 
 </script>
 {{/inline}}
