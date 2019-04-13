@@ -1,0 +1,78 @@
+@import "./src/scss/_modules/variables";
+
+table.dataTable > tbody > tr.child ul.dtr-details { width: 100% }
+
+.sorting_asc,
+.sorting_desc, 
+.even .sorting_1 {
+	background-color: rgba($primary-500, 0.03);
+}
+
+.odd .sorting_1 {
+	background-color: rgba($primary-500, 0.04);
+}
+
+.table-dark {
+	.sorting_asc,
+	.sorting_desc, 
+	.even .sorting_1 {
+		background-color: rgba($warning-500, 0.15);
+	}
+
+	.odd .sorting_1 {
+		background-color: rgba($warning-500, 0.15);
+	}
+}
+
+/* some idiot put important on the main css file now I have to put important here to override it... eghhh */
+table.dataTable {
+	margin-top: 1rem !important;
+	margin-bottom: 1rem !important;
+}
+
+
+table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before, 
+table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 1rem;
+	box-shadow: none;
+	border-radius: 0;
+	border: 0;
+	background-color: $info-500;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before, 
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
+	background-color: $danger-500;
+}
+
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc_disabled:before {
+	right: 1rem;
+	content: "\f175";
+	font-size: 14px;
+	font-family: 'Font Awesome 5 Pro';
+}
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:after {
+	right: 0.5rem;
+	content: "\f176";
+	font-size: 14px;
+	font-family: 'Font Awesome 5 Pro';
+}
+
+.dataTables_empty {
+	color: $danger-500;
+	font-size: 2rem;
+	padding-top: 2.5rem !important;
+	padding-bottom: 2.5rem !important;
+}

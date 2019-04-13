@@ -344,6 +344,29 @@
 							"scripts": "{$config.output}/js/statistics/easypiechart/easypiechart.js"
 						}
 					}
+				},
+				"datagrid" : {
+					"datatables" : {
+						"core" : {
+							"src": {
+								"styles":[
+									"{$config.path.node_modules}/datatables.net-bs4/css/dataTables.bootstrap4.css",
+									"{$config.path.node_modules}/datatables.net-responsive-bs4/css/responsive.bootstrap4.css",
+									"{$config.path.src}/scss/_addons/datatables/dataTables.bootstrap4-custom.scss"
+								],
+								"scripts": [
+									"{$config.path.node_modules}/datatables.net/js/jquery.dataTables.js",
+									"{$config.path.node_modules}/datatables.net-bs4/js/dataTables.bootstrap4.js",
+									"{$config.path.node_modules}/datatables.net-responsive/js/dataTables.responsive.js",
+									"{$config.path.node_modules}/datatables.net-responsive-bs4/js/responsive.bootstrap4.js"
+								]
+							},
+							"bundle": {
+								"styles": "{$config.output}/css/datagrid/datatables/datatables.bs4.responsive.bundle.css",
+								"scripts": "{$config.output}/js/datagrid/datatables/datatables.bs4.responsive.bundle.js"
+							}	
+						}
+					}
 				}
 			}
 		},

@@ -34,7 +34,9 @@
 						<ul class="pagination">
 							<li class="page-item"><a class="page-link" href="#">Previous</a></li>
 							<li class="page-item"><a class="page-link" href="#">1</a></li>
-							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item active" aria-current="page">
+								<a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+							</li>
 							<li class="page-item"><a class="page-link" href="#">3</a></li>
 							<li class="page-item"><a class="page-link" href="#">Next</a></li>
 						</ul>
@@ -64,7 +66,9 @@
 							<li class="page-item disabled">
 								<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
 							</li>
-							<li class="page-item"><a class="page-link" href="#">1</a></li>
+							<li class="page-item disabled">
+								<a class="page-link" href="#" tabindex="-1" aria-disabled="true">1</a>
+							</li>
 							<li class="page-item active" aria-current="page">
 								<a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
 							</li>
@@ -81,7 +85,9 @@
 							<li class="page-item disabled">
 								<span class="page-link">Previous</span>
 							</li>
-							<li class="page-item"><a class="page-link" href="#">1</a></li>
+							<li class="page-item disabled">
+								<a class="page-link" href="#" tabindex="-1" aria-disabled="true">1</a>
+							</li>
 							<li class="page-item active" aria-current="page">
 								<span class="page-link">
 								2
@@ -98,162 +104,6 @@
 			</div>
 		</div>
 		<div id="panel-3" class="panel">
-			<div class="panel-hdr">	
-				<h2>
-					State <span class="fw-300"><i>colors</i></span> 
-				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
-				</div>
-			</div>
-			<div class="panel-container show">
-				<div class="panel-content">									
-					<div class="panel-tag">
-						You can change active state colors using the <code>.border-*</code> and <code>bg-*</code> utilities
-					</div>
-					<div class="row">
-						<div class="col-lg-4">
-							<ul class="pagination">
-								<li class="page-item active" aria-current="page">
-									<span class="page-link">
-										1
-										<span class="sr-only">(current)</span>
-									</span>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">2</a>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">3</a>
-								</li>
-								<li class="page-item disabled">
-									<a class="page-link" href="#">4</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-lg-4">
-							<ul class="pagination">
-								<li class="page-item active" aria-current="page">
-									<span class="page-link bg-info border-info">
-										1
-										<span class="sr-only">(current)</span>
-									</span>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">2</a>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">3</a>
-								</li>
-								<li class="page-item disabled">
-									<a class="page-link" href="#">4</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-lg-4">
-							<ul class="pagination">
-								<li class="page-item active" aria-current="page">
-									<span class="page-link bg-success border-success">
-										1
-										<span class="sr-only">(current)</span>
-									</span>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">2</a>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">3</a>
-								</li>
-								<li class="page-item disabled">
-									<a class="page-link" href="#">4</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-lg-4">
-							<ul class="pagination">
-								<li class="page-item active" aria-current="page">
-									<span class="page-link bg-warning border-warning">
-										1
-										<span class="sr-only">(current)</span>
-									</span>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">2</a>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">3</a>
-								</li>
-								<li class="page-item disabled">
-									<a class="page-link" href="#">4</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-lg-4">
-							<ul class="pagination">
-								<li class="page-item active" aria-current="page">
-									<span class="page-link bg-danger border-danger">
-										1
-										<span class="sr-only">(current)</span>
-									</span>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">2</a>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">3</a>
-								</li>
-								<li class="page-item disabled">
-									<a class="page-link" href="#">4</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-lg-4">
-							<ul class="pagination">
-								<li class="page-item active" aria-current="page">
-									<span class="page-link bg-dark border-dark">
-										1
-										<span class="sr-only">(current)</span>
-									</span>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">2</a>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">3</a>
-								</li>
-								<li class="page-item disabled">
-									<a class="page-link" href="#">4</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-lg-4">
-							<ul class="pagination">
-								<li class="page-item active" aria-current="page">
-									<span class="page-link bg-secondary border-secondary">
-										1
-										<span class="sr-only">(current)</span>
-									</span>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">2</a>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">3</a>
-								</li>
-								<li class="page-item disabled">
-									<a class="page-link" href="#">4</a>
-								</li>
-							</ul>
-						</div>
-					</div>					
-				</div>
-			</div>
-		</div>
-	 </div>
-	 <div class="col-xl-6">
-		<div id="panel-4" class="panel">
 			<div class="panel-hdr">	
 				<h2>
 					Using <span class="fw-300"><i>icons</i></span> 
@@ -331,7 +181,10 @@
 				</div>
 			</div>
 		</div>
-		<div id="panel-5" class="panel">
+	 </div>
+	 <div class="col-xl-6">
+		
+		<div id="panel-4" class="panel">
 			<div class="panel-hdr">	
 				<h2>
 					Pagination <span class="fw-300"><i>sizing</i></span> 
@@ -353,6 +206,11 @@
 					<div class="frame-wrap">
 						<nav aria-label="...">
 							<ul class="pagination pagination-lg">
+								<li class="page-item disabled">
+									<a class="page-link" href="#" aria-label="Previous">
+										<span aria-hidden="true"><i class="fal fa-chevron-left"></i></span>
+									</a>
+								</li>
 								<li class="page-item active" aria-current="page">
 									<span class="page-link">
 									1
@@ -361,6 +219,11 @@
 								</li>
 								<li class="page-item"><a class="page-link" href="#">2</a></li>
 								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item">
+									<a class="page-link" href="#" aria-label="Next">
+									<span aria-hidden="true"><i class="fal fa-chevron-right"></i></span>
+									</a>
+								</li>
 							</ul>
 						</nav>						
 					</div>
@@ -370,6 +233,11 @@
 					<div class="frame-wrap">
 						<nav aria-label="...">
 							<ul class="pagination">
+								<li class="page-item disabled">
+									<a class="page-link" href="#" aria-label="Previous">
+										<span aria-hidden="true"><i class="fal fa-chevron-left"></i></span>
+									</a>
+								</li>
 								<li class="page-item active" aria-current="page">
 									<span class="page-link">
 									1
@@ -378,6 +246,11 @@
 								</li>
 								<li class="page-item"><a class="page-link" href="#">2</a></li>
 								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item">
+									<a class="page-link" href="#" aria-label="Next">
+									<span aria-hidden="true"><i class="fal fa-chevron-right"></i></span>
+									</a>
+								</li>
 							</ul>
 						</nav>						
 					</div>					
@@ -386,22 +259,33 @@
 					</h5>
 					<div class="frame-wrap">
 						<nav aria-label="...">
+
 							<ul class="pagination pagination-sm">
+								<li class="page-item disabled">
+									<a class="page-link" href="#" aria-label="Previous">
+										<span aria-hidden="true"><i class="fal fa-chevron-left"></i></span>
+									</a>
+								</li>
 								<li class="page-item active" aria-current="page">
 									<span class="page-link">
-									1
-									<span class="sr-only">(current)</span>
+										1
+										<span class="sr-only">(current)</span>
 									</span>
 								</li>
 								<li class="page-item"><a class="page-link" href="#">2</a></li>
 								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item">
+									<a class="page-link" href="#" aria-label="Next">
+									<span aria-hidden="true"><i class="fal fa-chevron-right"></i></span>
+									</a>
+								</li>
 							</ul>
 						</nav>						
 					</div>
 				</div>
 			</div>
 		</div>	
-		<div id="panel-6" class="panel">
+		<div id="panel-5" class="panel">
 			<div class="panel-hdr">	
 				<h2>
 					Aligning <span class="fw-300"><i>pagination</i></span> 
@@ -426,7 +310,12 @@
 								<li class="page-item disabled">
 									<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
 								</li>
-								<li class="page-item"><a class="page-link" href="#">1</a></li>
+								<li class="page-item active" aria-current="page">
+									<span class="page-link">
+										1
+										<span class="sr-only">(current)</span>
+									</span>
+								</li>
 								<li class="page-item"><a class="page-link" href="#">2</a></li>
 								<li class="page-item"><a class="page-link" href="#">3</a></li>
 								<li class="page-item">
@@ -444,7 +333,12 @@
 								<li class="page-item disabled">
 									<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
 								</li>
-								<li class="page-item"><a class="page-link" href="#">1</a></li>
+								<li class="page-item active" aria-current="page">
+									<span class="page-link">
+										1
+										<span class="sr-only">(current)</span>
+									</span>
+								</li>
 								<li class="page-item"><a class="page-link" href="#">2</a></li>
 								<li class="page-item"><a class="page-link" href="#">3</a></li>
 								<li class="page-item">
@@ -462,7 +356,12 @@
 								<li class="page-item disabled">
 									<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
 								</li>
-								<li class="page-item"><a class="page-link" href="#">1</a></li>
+								<li class="page-item active" aria-current="page">
+									<span class="page-link">
+										1
+										<span class="sr-only">(current)</span>
+									</span>
+								</li>
 								<li class="page-item"><a class="page-link" href="#">2</a></li>
 								<li class="page-item"><a class="page-link" href="#">3</a></li>
 								<li class="page-item">
