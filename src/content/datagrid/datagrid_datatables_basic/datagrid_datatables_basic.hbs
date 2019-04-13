@@ -1,6 +1,6 @@
 {{#> 
 	layouts/main 
-	title="Blank" 
+	title="Datatables: Basic" 
 	pagename="datagrid_datatables_basic" 
 	category_1="Datagrid"
 	category_2="Datatables"
@@ -11,13 +11,6 @@
 {{#*inline "head-block"}}
 	<!-- contains : dataTables.bootstrap4.css + responsive.bootstrap4.css -->
 	<link rel="stylesheet" media="screen, print" href="css/datagrid/datatables/datatables.bs4.responsive.bundle.css">
-{{/inline}}
-
-{{#*inline "subheader-block"}}
-	{{!-- Right content on content header --}}
-	<div class="subheader-block">
-		Right content of header
-	</div>
 {{/inline}}
 
 {{#*inline "content-block"}}
@@ -57,7 +50,7 @@
 		<div id="panel-1" class="panel">
 			<div class="panel-hdr">	
 				<h2>
-					Panel <span class="fw-300"><i>Title</i></span> 
+					Datatables <span class="fw-300"><i>Basic</i></span> 
 				</h2>
 				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
@@ -71,7 +64,7 @@
 						Very basic datatable layout with minimal changes. We used bootstrap's and NextGen's default classes to customize the look and feel of Datatables
 					</div>
 
-					<table id="example" class="table table-bordered table-hover table-striped w-100 border-faded my-3">
+					<table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100 border-faded my-3">
 						<thead>
 							<tr>
 								<th>Name</th>
@@ -571,11 +564,11 @@
 
 		//reset the default classes
 		$.extend( $.fn.dataTableExt.oStdClasses, {
-			"sFilterInput": "form-control border-top-left-radius-0 border-bottom-left-radius-0 ml-0 width-lg",
+			"sFilterInput": "form-control border-top-left-radius-0 border-bottom-left-radius-0 ml-0 width-lg shadow-inset-1",
 			"sLengthSelect": "form-control custom-select"
 		});
 
-		$('#example')
+		$('#dt-basic-example')
 			.dataTable( {
 				responsive: true,
 				language: {
