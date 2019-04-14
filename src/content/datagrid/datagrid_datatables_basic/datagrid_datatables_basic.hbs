@@ -5,12 +5,12 @@
 	category_1="Datagrid"
 	category_2="Datatables"
 	heading="<i class='subheader-icon fal fa-table'></i> DataTables: <span class='fw-300'>Basic</span> <sup class='badge badge-primary fw-500'>ADDON</sup>" 
-	pagedescription="blank description"
+	pagedescription="Create headache free searching, sorting and pagination tables without any complex configuration"
 }}
 
 {{#*inline "head-block"}}
 	<!-- contains : dataTables.bootstrap4.css + responsive.bootstrap4.css -->
-	<link rel="stylesheet" media="screen, print" href="css/datagrid/datatables/datatables.bs4.responsive.bundle.css">
+	<link rel="stylesheet" media="screen, print" href="css/datagrid/datatables/datatables.responsive.bundle.css">
 {{/inline}}
 
 {{#*inline "content-block"}}
@@ -61,10 +61,10 @@
 			<div class="panel-container show">
 				<div class="panel-content">									
 					<div class="panel-tag">
-						Very basic datatable layout with minimal changes. We used bootstrap's and NextGen's default classes to customize the look and feel of Datatables
+						This example shows DataTables and the Responsive extension being used with the Bootstrap framework providing the styling. The DataTables / Bootstrap integration provides seamless integration for DataTables to be used in a Bootstrap page. <strong>Note</strong> that the <code>.dt-responsive</code> class is used to indicate to the extension that it should be enabled on this page, as responsive has special meaning in Bootstrap. The responsive option could also be used if required
 					</div>
 
-					<table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100 border-faded my-3">
+					<table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
 						<thead>
 							<tr>
 								<th>Name</th>
@@ -555,53 +555,46 @@
 {{/inline}}
 
 {{#*inline "scripts-block"}}
-<!-- contains : jquery.dataTables.js + dataTables.bootstrap4.js + dataTables.responsive.js + responsive.bootstrap4.js -->
-<script src="js/datagrid/datatables/datatables.bs4.responsive.bundle.js"></script>
+
+<!-- datatble responsive bundle contains: 
+	+ jquery.dataTables.js (core)
+	+ dataTables.bootstrap4.js (core BS4 style)
+	+ dataTables.responsive.js (optional)
+	+ responsive.bootstrap4.js (optional BS4 style) -->
+<script src="js/datagrid/datatables/datatables.responsive.bundle.js"></script>
 
 <script>
-
 	$(document).ready( function () {
-
 		//reset the default classes
 		$.extend( $.fn.dataTableExt.oStdClasses, {
 			"sFilterInput": "form-control border-top-left-radius-0 border-bottom-left-radius-0 ml-0 width-lg shadow-inset-1",
 			"sLengthSelect": "form-control custom-select"
 		});
 
-		$('#dt-basic-example')
-			.dataTable( {
-				responsive: true,
-				language: {
-					//change the default text for 'next' and 'previous' with icons
-					paginate: {
-						previous: "<i class='fal fa-chevron-left'></i>",
-						next: "<i class='fal fa-chevron-right'></i>"
-					},
-					//replace the default search lable text with a nice icon
-					search: '<div class="d-inline-flex width-3 align-items-center justify-content-center border form-control border-bottom-right-radius-0 border-top-right-radius-0 border-right-0 bg-faded"><i class="fal fa-search"></i></div>',
-					//add search filter
-					searchPlaceholder: "Filter...",
-					//change text for zero records 
-					zeroRecords: "No records to display"					
-				}
+		// initialize datatable
+		$('#dt-basic-example').dataTable({
+			responsive: true,
+			dom: 
+				"<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6 text-right'f>>" +
+				"<'row'<'col-sm-12'tr>>" +
+				"<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",			
+			language: {
+				//change the default text for 'next' and 'previous' with icons
+				paginate: {
+					previous: "<i class='fal fa-chevron-left'></i>",
+					next: "<i class='fal fa-chevron-right'></i>"
+				},
+				//replace the default search lable text with a nice icon
+				search: '<div class="d-inline-flex width-3 align-items-center justify-content-center border form-control border-bottom-right-radius-0 border-top-right-radius-0 border-right-0 bg-faded"><i class="fal fa-search"></i></div>',
+				//add search filter
+				searchPlaceholder: "Filter...",
+				//change text for zero records 
+				zeroRecords: "No records to display"					
+			}
 		});
-
-
 	});
-
 </script>
 
 {{/inline}}
 
 {{/layouts/main}}
-
-{{!-- 
-<div class="input-group flex-nowrap">
-	<div class="input-group-prepend">
-		<span class="input-group-text" id="addon-wrapping-left">
-			<i class="fal fa-user fs-xl"></i>
-		</span>
-	</div>
-	<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping-left">
-</div>
- --}}

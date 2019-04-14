@@ -20,9 +20,8 @@
 /* mostly used for nav items */
 .disabled:not(.btn),
 .disabled:not(.btn) > * {	
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	opacity: 0.60;
+	filter: grayscale(80%);
+	opacity: 0.80;
 	cursor: not-allowed;
 
 	ul,

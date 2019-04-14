@@ -595,13 +595,13 @@
 			</li>							
 		</ul>	
 	</li>	
-	<li {{#is pagename "in" "datagrid_datatables_basic,datagrid_datatables_advanced,datagrid_foo_tables"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "datagrid_datatables_basic,datagrid_datatables_export,datagrid_datatables_responsive,datagrid_datatables_advanced,datagrid_foo_tables"}}class="active open"{{/is}}>
 		<a href="#" title="Datagrid" data-filter-tags="data tables"> 
 			<i class="fal fa-table"></i>
 			<span class="nav-link-text" data-i18n="nav.datatables">Datagrid</span>
 		</a>
 		<ul>
-			<li {{#is pagename "in" "datagrid_datatables_basic,datagrid_datatables_advanced"}}class="active open"{{/is}}>
+			<li {{#is pagename "in" "datagrid_datatables_basic,datagrid_datatables_export,datagrid_datatables_responsive,datagrid_datatables_advanced"}}class="active open"{{/is}}>
 				<a href="#" title="Datatables" data-filter-tags="data tables datatables"> 
 					<span class="nav-link-text" data-i18n="nav.datatables">Datatables</span>
 				</a>
@@ -611,8 +611,18 @@
 							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_basic">Basic</span> 
 						</a>
 					</li>
+					<li {{#is pagename "===" "datagrid_datatables_export"}}class="active"{{/is}}>
+						<a href="datagrid_datatables_export.html" data-filter-tags="datagrid datatables export tables pdf excel print csv"> 
+							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_export">Export</span> 
+						</a>
+					</li>
+					<li {{#is pagename "===" "datagrid_datatables_responsive"}}class="active"{{/is}}>
+						<a href="datagrid_datatables_responsive.html" data-filter-tags="datagrid datatables responsive table"> 
+							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_responsive">Responsive</span> 
+						</a>
+					</li>
 					<li {{#is pagename "===" "datagrid_datatables_advanced"}}class="active"{{/is}}>
-						<a href="datagrid_datatables_advanced.html" data-filter-tags="datagrid datatables advanced tables"> 
+						<a href="datagrid_datatables_advanced.html" data-filter-tags="datagrid datatables advanced"> 
 							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_advanced">Advanced</span> 
 						</a>
 					</li>

@@ -362,9 +362,29 @@
 								]
 							},
 							"bundle": {
-								"styles": "{$config.output}/css/datagrid/datatables/datatables.bs4.responsive.bundle.css",
-								"scripts": "{$config.output}/js/datagrid/datatables/datatables.bs4.responsive.bundle.js"
+								"styles": "{$config.output}/css/datagrid/datatables/datatables.responsive.bundle.css",
+								"scripts": "{$config.output}/js/datagrid/datatables/datatables.responsive.bundle.js"
 							}	
+						},
+						"buttons" : {
+							"src": {
+								"styles":[
+									"{$config.path.node_modules}/datatables.net-buttons-bs4/css/buttons.bootstrap4.css"
+								],
+								"scripts": [
+									"{$config.path.node_modules}/jszip/dist/jszip.js",
+									"{$config.path.node_modules}/pdfmake/build/pdfmake.js",
+									"{$config.path.node_modules}/pdfmake/build/vfs_fonts.js",									
+									"{$config.path.node_modules}/datatables.net-buttons/js/dataTables.buttons.js",
+									"{$config.path.node_modules}/datatables.net-buttons-bs4/js/buttons.bootstrap4.js",
+									"{$config.path.node_modules}/datatables.net-buttons/js/buttons.html5.js",
+									"{$config.path.node_modules}/datatables.net-buttons/js/buttons.print.js"									
+								]
+							},
+							"bundle": {
+								"styles": "{$config.output}/css/datagrid/datatables/datatables.buttons.bundle.css",
+								"scripts": "{$config.output}/js/datagrid/datatables/datatables.buttons.bundle.js"
+							}
 						}
 					}
 				}

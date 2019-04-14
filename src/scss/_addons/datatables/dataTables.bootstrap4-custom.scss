@@ -36,17 +36,20 @@ table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:b
 	top: 0;
 	bottom: 0;
 	left: 0;
-	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height:100%;
 	width: 1rem;
 	box-shadow: none;
 	border-radius: 0;
 	border: 0;
-	background-color: $info-500;
+	background-color: $primary-500;
 }
 
 table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before, 
 table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
-	background-color: $danger-500;
+	background-color: $success-500;
 }
 
 table.dataTable thead .sorting:before,
@@ -77,6 +80,70 @@ table.dataTable thead .sorting_desc_disabled:after {
 	padding-bottom: 2.5rem !important;
 }
 
-div.dataTables_wrapper div.dataTables_filter label {
+.dataTables_wrapper .dataTables_filter label {
 	display: inline-flex;
+}
+
+.dataTables_wrapper tr.child td.child {
+	padding: 0;
+
+	.dtr-details {
+		padding: 1rem 1rem 1.5rem 1.95rem;
+		position: relative;
+
+		&:before {
+			content: "\f149";
+			font-family: 'Font Awesome 5 Pro';
+			color: $success-400;
+			width: 20px;
+			height: 30px;
+			position: absolute;
+			top: -15px;
+			right: 0px;
+			font-size: 1.2rem;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: 1rem;
+			background: $success-200;
+
+		}
+	}
+
+}
+
+@media screen and (max-width: 767px) {
+	div.dataTables_wrapper div.dataTables_length,
+	div.dataTables_wrapper div.dataTables_filter,
+	div.dataTables_wrapper div.dataTables_info,
+	div.dataTables_wrapper div.dataTables_paginate {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+
+//take out elipsis background during pagination
+.paginate_button.page-item.disabled .page-link {
+	background: transparent;
+}
+
+.dataTables_wrapper .dataTables_paginate .pagination .page-item > .page-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 1.85rem;
+	min-width: 1.85rem;
+	padding: 0.5rem;
+	font-size: 0.825rem;
+	line-height: 0.825rem;
+}
+
+div.dataTables_wrapper div.dataTables_filter {
+	text-align: inherit;
 }
