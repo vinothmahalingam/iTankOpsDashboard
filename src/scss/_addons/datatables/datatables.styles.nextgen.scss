@@ -25,8 +25,9 @@ table.dataTable > tbody > tr.child ul.dtr-details { width: 100% }
 }
 
 /* some idiot put important on the main css file now I have to put important here to override it... eghhh */
+/* I had to set it to 0 because auto fill cannot "compute" for the margin ... nice job Allen >.> */
 table.dataTable {
-	margin-top: 1rem !important;
+	margin-top: 0 !important;
 	margin-bottom: 1rem !important;
 }
 
@@ -146,4 +147,45 @@ table.dataTable thead .sorting_desc_disabled:after {
 
 div.dataTables_wrapper div.dataTables_filter {
 	text-align: inherit;
+}
+
+/* auto fill */
+//modal
+div.dt-autofill-list {
+	border-width: 0px;
+	padding: 1rem 0;
+
+	box-shadow: 0 0 20px 0 rgba($black, 0.2); 
+
+	div.dt-autofill-question,
+	div.dt-autofill-button {
+		border-width: 0px;
+	}
+
+	.dt-autofill-button {
+		text-align: right !important;
+	}
+}
+
+div.dt-autofill-background {
+	opacity: 0.2;
+	background-color: $black;
+}
+
+.dt-autofill-question {
+	padding-left: 2rem !important;
+}
+
+.dt-autofill-button {
+	padding-right: 2rem !important;
+}
+
+div.dt-autofill-handle {
+	background: $primary-500;
+	height: 0.875rem;
+    width: 0.875rem;
+}
+
+div.dt-autofill-select {
+  background-color: $primary-500;
 }

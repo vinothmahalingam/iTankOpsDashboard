@@ -9,8 +9,8 @@
 }}
 
 {{#*inline "head-block"}}
-	<!-- contains : dataTables.bootstrap4.css + responsive.bootstrap4.css -->
-	<link rel="stylesheet" media="screen, print" href="css/datagrid/datatables/datatables.responsive.bundle.css">
+	<link rel="stylesheet" media="screen, print" href="css/datagrid/datatables/datatables.bundle.css">
+	<link rel="stylesheet" media="screen, print" href="css/fa-solid.css">
 {{/inline}}
 
 {{#*inline "content-block"}}
@@ -18,7 +18,7 @@
 <div class="row">
 	<div class="col-xl-12">
 		<div id="panel-1" class="panel">
-			<div class="panel-hdr bg-primary-700 bg-primary-gradient">	
+			<div class="panel-hdr">	
 				<h2>
 					Datatables <span class="fw-300"><i>Export</i></span> 
 				</h2>
@@ -33,629 +33,488 @@
 					{{!-- <div class="panel-tag">
 						This example shows DataTables and the Responsive extension being used with the Bootstrap framework providing the styling. The DataTables / Bootstrap integration provides seamless integration for DataTables to be used in a Bootstrap page. <strong>Note</strong> that the <code>.dt-responsive</code> class is used to indicate to the extension that it should be enabled on this page, as responsive has special meaning in Bootstrap. The responsive option could also be used if required
 					</div> --}}
-
+					<!-- datatable start -->
 					<table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
 						<thead>
 							<tr>
 								<th>Name</th>
-								<th>Customer ID</th>
-								<th>Address</th>
-								<th>City</th>
-								<th>Postal</th>
-								<th>Company</th>
-								<th>Status</th>
+								<th>Position</th>
+								<th>Office</th>
+								<th>Age</th>
+								<th>Start date</th>
+								<th>Salary</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>Oleg Conner</td>
-								<td>341-905-890</td>
-								<td>P.O. Box 265, 1492 Dictum St.</td>
-								<td>Saintes</td>
-								<td>Y0Y 2V2</td>
-								<td>Non Industries</td>
-								<td><span class="badge badge-warning badge-pill">Pending</span></td>
-							</tr>
-							<tr>
-								<td>Olga Smith</td>
-								<td>446-353-605</td>
-								<td>Ap #944-461 Quisque Ave</td>
-								<td>Saint-Denis</td>
-								<td>70529</td>
-								<td>At Iaculis Foundation</td>
-								<td><span class="badge badge-warning badge-pill">Pending</span></td>
-							</tr>
-							<tr>
-								<td>Thor Oconnor</td>
-								<td>277-326-299</td>
-								<td>2657 Eu Rd.</td>
-								<td>Castel Baronia</td>
-								<td>66529</td>
-								<td>A Sollicitudin Orci Institute</td>
-								<td><span class="badge badge-warning badge-pill">Pending</span></td>
-							</tr>
-							<tr>
-								<td>John Reese</td>
-								<td>407-211-714</td>
-								<td>6501 Malesuada Ave</td>
-								<td>Caen</td>
-								<td>861399</td>
-								<td>A Sollicitudin Orci Inc.</td>
-								<td><span class="badge badge-warning badge-pill">Pending</span></td>
-							</tr>
-							<tr>
-								<td>Lani Jenkins</td>
-								<td>683-221-297</td>
-								<td>Ap #828-529 Semper St.</td>
-								<td>Milano</td>
-								<td>10415</td>
-								<td>Magnis Dis Parturient Foundation</td>
-								<td><span class="badge badge-warning badge-pill">Pending</span></td>
-							</tr>
-							<tr>
-								<td>Griffith Quinn</td>
-								<td>748-295-978</td>
-								<td>P.O. Box 523, 9915 Justo Street</td>
-								<td>Barrackpur</td>
-								<td>80656</td>
-								<td>Vitae Sodales Associates</td>
-								<td><span class="badge badge-warning badge-pill">Pending</span></td>
-							</tr>
-							<tr>
-								<td>Jorden Coffey</td>
-								<td>543-126-146</td>
-								<td>7291 Tincidunt Ave</td>
-								<td>Longaví</td>
-								<td>70118</td>
-								<td>Tellus Lorem Eu LLC</td>
-								<td><span class="badge badge-warning badge-pill">Pending</span></td>
-							</tr>
-							<tr>
-								<td>Reece Benton</td>
-								<td>508-803-991</td>
-								<td>1427 Nullam Rd.</td>
-								<td>Caplan</td>
-								<td>6520 FT</td>
-								<td>Velit Ltd</td>
-								<td><span class="badge badge-warning badge-pill">Pending</span></td>
-							</tr>
-							<tr>
-								<td>Emma Albert</td>
-								<td>944-254-381</td>
-								<td>Ap #735-9605 Dictum Street</td>
-								<td>Maser</td>
-								<td>2696</td>
-								<td>Mi Industries</td>
-								<td><span class="badge badge-warning badge-pill">Pending</span></td>
-							</tr>
-							<tr>
-								<td>Shea Yates</td>
-								<td>895-982-887</td>
-								<td>P.O. Box 165, 149 Proin Rd.</td>
-								<td>Langenhagen</td>
-								<td>497838</td>
-								<td>Etiam Vestibulum LLP</td>
-								<td><span class="badge badge-warning badge-pill">Pending</span></td>
-							</tr>
-							<tr>
-								<td>Dominic Baxter</td>
-								<td>639-913-380</td>
-								<td>3975 Porttitor St.</td>
-								<td>Bhopal</td>
-								<td>771427</td>
-								<td>Adipiscing Elit Incorporated</td>
-								<td><span class="badge badge-warning badge-pill">Pending</span></td>
-							</tr>
-							<tr>
-								<td>Tanisha Serrano</td>
-								<td>341-517-877</td>
-								<td>Ap #958-3749 Pellentesque. Road</td>
-								<td>Gloucester</td>
-								<td>9395 JO</td>
-								<td>At Incorporated</td>
-								<td><span class="badge badge-warning badge-pill">Pending</span></td>
-							</tr>
-							<tr>
-								<td>Justina Rosario</td>
-								<td>466-590-798</td>
-								<td>P.O. Box 299, 1980 Nunc St.</td>
-								<td>Miramichi</td>
-								<td>Y7W 3K5</td>
-								<td>Bibendum Fermentum Institute</td>
-								<td><span class="badge badge-warning badge-pill">Pending</span></td>
-							</tr>
-							<tr>
-								<td>Rachel Dixon</td>
-								<td>208-842-348</td>
-								<td>9535 Mollis. St.</td>
-								<td>Scarborough</td>
-								<td>32824</td>
-								<td>Cum Sociis Incorporated</td>
-								<td><span class="badge badge-warning badge-pill">Pending</span></td>
-							</tr>
-							<tr>
-								<td>Athena Flores</td>
-								<td>714-326-462</td>
-								<td>8623 Nullam Rd.</td>
-								<td>Te Puke</td>
-								<td>772908</td>
-								<td>Ac Foundation</td>
-								<td><span class="badge badge-warning badge-pill">Pending</span></td>
-							</tr>
-							<tr>
-								<td>Ishmael Wilkinson</td>
-								<td>534-437-810</td>
-								<td>935-5624 Turpis. Avenue</td>
-								<td>Habra</td>
-								<td>B2J 2L7</td>
-								<td>Mi Corporation</td>
-								<td><span class="badge badge-warning badge-pill">Pending</span></td>
-							</tr>
-							<tr>
-								<td>Murphy Garrett</td>
-								<td>453-431-591</td>
-								<td>1455 Ultrices Rd.</td>
-								<td>San Pietro Mussolino</td>
-								<td>6889</td>
-								<td>Volutpat Nunc Sit Limited</td>
-								<td><span class="badge badge-warning badge-pill">Pending</span></td>
-							</tr>							
-							<tr>
-								<td>Caryn Albert</td>
-								<td>845-210-966</td>
-								<td>1370 Neque St.</td>
-								<td>Wangaratta</td>
-								<td>73744</td>
-								<td>Eleifend Industries</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Charlotte Beck</td>
-								<td>401-499-435</td>
-								<td>818-5199 Facilisis Rd.</td>
-								<td>Orilla</td>
-								<td>58-411</td>
-								<td>Tellus Eu Industries</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Galena Mullen</td>
-								<td>946-545-428</td>
-								<td>P.O. Box 822, 2848 In St.</td>
-								<td>Swan Hill</td>
-								<td>54-732</td>
-								<td>Elit Pede Malesuada Institute</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Tallulah Padilla</td>
-								<td>883-379-621</td>
-								<td>Ap #750-8593 Augue Rd.</td>
-								<td>Campomarino</td>
-								<td>8528</td>
-								<td>Ac Ipsum Institute</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Odysseus Gray</td>
-								<td>407-297-840</td>
-								<td>3390 Enim. St.</td>
-								<td>Katsina</td>
-								<td>J1A 6T5</td>
-								<td>Tincidunt Pede Ac LLP</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Chelsea Wolfe</td>
-								<td>669-968-642</td>
-								<td>958-2505 Ac St.</td>
-								<td>Laakdal</td>
-								<td>88765</td>
-								<td>Gravida Non Incorporated</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Noelani Rush</td>
-								<td>811-650-731</td>
-								<td>P.O. Box 603, 2344 Cursus, St.</td>
-								<td>Lebach</td>
-								<td>59740</td>
-								<td>Ipsum Curabitur Consequat Ltd</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Wing Walls</td>
-								<td>874-621-225</td>
-								<td>557-4786 Bibendum. Road</td>
-								<td>Schweinfurt</td>
-								<td>96483-249</td>
-								<td>Mollis Non Limited</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Priscilla Clayton</td>
-								<td>509-595-531</td>
-								<td>1277 Etiam Av.</td>
-								<td>Roosdaal</td>
-								<td>3540</td>
-								<td>Feugiat Lorem Company</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Rosalyn Larsen</td>
-								<td>350-191-306</td>
-								<td>P.O. Box 771, 3969 Sed Ave</td>
-								<td>Bellegem</td>
-								<td>24119</td>
-								<td>Porttitor Institute</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Rahim Henson</td>
-								<td>914-428-840</td>
-								<td>P.O. Box 542, 7150 Mattis Rd.</td>
-								<td>La Spezia</td>
-								<td>50084</td>
-								<td>Egestas Ltd</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Ralph Stanley</td>
-								<td>291-738-381</td>
-								<td>8497 Arcu Street</td>
-								<td>Strona</td>
-								<td>EY2Z 8GW</td>
-								<td>Ipsum Limited</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Violet Hampton</td>
-								<td>290-450-238</td>
-								<td>P.O. Box 854, 4283 Mattis. St.</td>
-								<td>Gaspé</td>
-								<td>8331</td>
-								<td>Nisi Dictum Augue Foundation</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Jolene Vazquez</td>
-								<td>856-618-704</td>
-								<td>8228 Non Road</td>
-								<td>Feilding</td>
-								<td>379149</td>
-								<td>Nunc Sed Pede Consulting</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Basil Rasmussen</td>
-								<td>582-181-344</td>
-								<td>160-9413 Dui. Rd.</td>
-								<td>Neuville</td>
-								<td>23265</td>
-								<td>Rhoncus Inc.</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Stacy Armstrong</td>
-								<td>885-550-512</td>
-								<td>962-8563 Curabitur Av.</td>
-								<td>Enines</td>
-								<td>273324</td>
-								<td>Nulla Magna PC</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Audra Anderson</td>
-								<td>169-148-406</td>
-								<td>P.O. Box 756, 8833 Viverra. Av.</td>
-								<td>Salon-de-Provence</td>
-								<td>87280</td>
-								<td>Vestibulum Accumsan Neque Ltd</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Malcolm Espinoza</td>
-								<td>340-552-057</td>
-								<td>871-2369 Ut Avenue</td>
-								<td>Ellon</td>
-								<td>315396</td>
-								<td>Ad Litora Torquent PC</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Calista Dunlap</td>
-								<td>481-583-436</td>
-								<td>P.O. Box 244, 8787 Sed Av.</td>
-								<td>Puerto Varas</td>
-								<td>5290</td>
-								<td>In Consulting</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Samantha Lamb</td>
-								<td>620-442-548</td>
-								<td>3622 Lobortis. Rd.</td>
-								<td>Münster</td>
-								<td>57782</td>
-								<td>A Neque Associates</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Kennan Young</td>
-								<td>596-662-343</td>
-								<td>Ap #612-1608 Luctus Av.</td>
-								<td>Orange</td>
-								<td>6282</td>
-								<td>Eros PC</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Hollee Olson</td>
-								<td>215-662-014</td>
-								<td>1736 Ridiculus Ave</td>
-								<td>Camerino</td>
-								<td>40115</td>
-								<td>Nunc Mauris Elit Associates</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Rudyard Dillard</td>
-								<td>769-339-959</td>
-								<td>7842 Tincidunt St.</td>
-								<td>Portezuelo</td>
-								<td>71-984</td>
-								<td>Feugiat Consulting</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Ava Burt</td>
-								<td>382-805-408</td>
-								<td>P.O. Box 288, 8201 Euismod Avenue</td>
-								<td>Tsiigehtchic</td>
-								<td>72-512</td>
-								<td>Risus Nunc Ac Limited</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Victor Kennedy</td>
-								<td>166-336-096</td>
-								<td>Ap #179-2725 Arcu St.</td>
-								<td>Henderson</td>
-								<td>550791</td>
-								<td>Mauris Foundation</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Dante Bean</td>
-								<td>936-199-151</td>
-								<td>618-7533 Luctus St.</td>
-								<td>Laces/Latsch</td>
-								<td>09-953</td>
-								<td>Velit Eget Laoreet Foundation</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Veda Gaines</td>
-								<td>787-727-679</td>
-								<td>P.O. Box 373, 278 Aliquam Rd.</td>
-								<td>Allahabad</td>
-								<td>31401</td>
-								<td>Semper Et Lacinia LLC</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Giacomo Gaines</td>
-								<td>740-890-403</td>
-								<td>727-2274 Nascetur Ave</td>
-								<td>Lasnigo</td>
-								<td>9207</td>
-								<td>Consectetuer Adipiscing Associates</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Tiger Norton</td>
-								<td>792-978-200</td>
-								<td>Ap #927-6526 Lorem, St.</td>
-								<td>Aix-en-Provence</td>
-								<td>65760</td>
-								<td>Dui Fusce Inc.</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Macy Martin</td>
-								<td>660-841-013</td>
-								<td>4060 Odio. St.</td>
-								<td>Tramutola</td>
-								<td>6936 UV</td>
-								<td>Egestas PC</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Alma Sloan</td>
-								<td>959-561-198</td>
-								<td>665-2211 Sed Rd.</td>
-								<td>Casole d'Elsa</td>
-								<td>95005</td>
-								<td>Ut Lacus Industries</td>
-								<td><span class="badge badge-success badge-pill">Delivered</span></td>
-							</tr>
-							<tr>
-								<td>Eugenia Pickett</td>
-								<td>257-789-974</td>
-								<td>9787 Ut, Av.</td>
-								<td>Racine</td>
-								<td>848872</td>
-								<td>Duis Industries</td>
-								<td><span class="badge badge-danger badge-pill">Failed</span></td>
-							</tr>
-							<tr>
-								<td>Sylvester Cain</td>
-								<td>515-577-068</td>
-								<td>9345 Imperdiet Street</td>
-								<td>Zutphen</td>
-								<td>40717</td>
-								<td>Dapibus Ligula Ltd</td>
-								<td><span class="badge badge-danger badge-pill">Failed</span></td>
-							</tr>
-							<tr>
-								<td>Ashely Brennan</td>
-								<td>487-762-362</td>
-								<td>4888 Ipsum. St.</td>
-								<td>Saint-Nicolas</td>
-								<td>128032</td>
-								<td>Orci Associates</td>
-								<td><span class="badge badge-danger badge-pill">Failed</span></td>
-							</tr>
-							<tr>
-								<td>Cyrus Nash</td>
-								<td>695-843-463</td>
-								<td>918-4555 Cras St.</td>
-								<td>Warspite</td>
-								<td>71904</td>
-								<td>Purus LLP</td>
-								<td><span class="badge badge-danger badge-pill">Failed</span></td>
-							</tr>
-							<tr>
-								<td>Emerald Copeland</td>
-								<td>548-830-846</td>
-								<td>Ap #383-9616 Egestas Street</td>
-								<td>Rhisnes</td>
-								<td>58479</td>
-								<td>Tincidunt Tempus Risus Ltd</td>
-								<td><span class="badge badge-danger badge-pill">Failed</span></td>
-							</tr>
-							<tr>
-								<td>Brady Cook</td>
-								<td>819-118-866</td>
-								<td>P.O. Box 506, 3376 Quis Ave</td>
-								<td>Orilla</td>
-								<td>56259-163</td>
-								<td>Scelerisque Mollis Phasellus Inc.</td>
-								<td><span class="badge badge-danger badge-pill">Failed</span></td>
-							</tr>
-							<tr>
-								<td>Christian Cook</td>
-								<td>484-341-306</td>
-								<td>Ap #581-1829 Facilisis Street</td>
-								<td>Ajmer</td>
-								<td>3085</td>
-								<td>Cum Consulting</td>
-								<td><span class="badge badge-danger badge-pill">Failed</span></td>
-							</tr>
-							<tr>
-								<td>Tyrone Mccormick</td>
-								<td>532-412-462</td>
-								<td>115-2813 Dignissim. Avenue</td>
-								<td>Satna</td>
-								<td>145938</td>
-								<td>In Mi LLC</td>
-								<td><span class="badge badge-danger badge-pill">Failed</span></td>
-							</tr>
-							<tr>
-								<td>Nolan Maddox</td>
-								<td>903-321-342</td>
-								<td>Ap #837-9790 Cursus Rd.</td>
-								<td>Guadalajara</td>
-								<td>348234</td>
-								<td>Ut Semper Corp.</td>
-								<td><span class="badge badge-danger badge-pill">Failed</span></td>
-							</tr>
-							<tr>
-								<td>Oren Weaver</td>
-								<td>788-433-369</td>
-								<td>606-8004 Nulla. St.</td>
-								<td>Schiltigheim</td>
-								<td>6560</td>
-								<td>Sagittis Lobortis Mauris Inc.</td>
-								<td><span class="badge badge-danger badge-pill">Failed</span></td>
-							</tr>
-							<tr>
-								<td>Rylee Fisher</td>
-								<td>634-712-190</td>
-								<td>Ap #127-4745 Dolor Rd.</td>
-								<td>Valera Fratta</td>
-								<td>28709</td>
-								<td>Nunc Risus Varius Corp.</td>
-								<td><span class="badge badge-danger badge-pill">Failed</span></td>
-							</tr>
-							<tr>
-								<td>Declan Langley</td>
-								<td>633-778-252</td>
-								<td>7921 Id, St.</td>
-								<td>Belgaum</td>
-								<td>96756</td>
-								<td>Auctor Corporation</td>
-								<td><span class="badge badge-danger badge-pill">Failed</span></td>
-							</tr>
-							<tr>
-								<td>Yen Wong</td>
-								<td>142-831-024</td>
-								<td>166 Neque St.</td>
-								<td>Monghidoro</td>
-								<td>05547</td>
-								<td>Libero Proin Sed Inc.</td>
-								<td><span class="badge badge-danger badge-pill">Failed</span></td>
-							</tr>
-							<tr>
-								<td>Walter Macias</td>
-								<td>590-972-414</td>
-								<td>Ap #860-9194 Dolor. Rd.</td>
-								<td>Jhang</td>
-								<td>7633 LV</td>
-								<td>Lobortis LLP</td>
-								<td><span class="badge badge-danger badge-pill">Failed</span></td>
-							</tr>
-							<tr>
-								<td>Garrett Sellers</td>
-								<td>949-413-436</td>
-								<td>P.O. Box 490, 8144 Ullamcorper, Rd.</td>
-								<td>Giarratana</td>
-								<td>50009</td>
-								<td>Vel Sapien Imperdiet LLC</td>
-								<td><span class="badge badge-danger badge-pill">Failed</span></td>
-							</tr>
-							<tr>
-								<td>Wyatt Robinson</td>
-								<td>671-586-659</td>
-								<td>870-575 Fringilla St.</td>
-								<td>Spermalie</td>
-								<td>89726-383</td>
-								<td>Cursus In Foundation</td>
-								<td><span class="badge badge-danger badge-pill">Failed</span></td>
-							</tr>
-							<tr>
-								<td>Howard Turner</td>
-								<td>175-272-596</td>
-								<td>Ap #930-4221 Ultrices Ave</td>
-								<td>Hillsboro</td>
-								<td>32708</td>
-								<td>Ipsum PC</td>
-								<td><span class="badge badge-danger badge-pill">Failed</span></td>
-							</tr>
-							<tr>
-								<td>Shay Richards</td>
-								<td>489-904-077</td>
-								<td>P.O. Box 130, 2793 Netus Road</td>
-								<td>Zeist</td>
-								<td>1220</td>
-								<td>Eleifend Nunc Risus LLP</td>
-								<td><span class="badge badge-danger badge-pill">Failed</span></td>
+								<td>Tiger Nixon</td>
+								<td>System Architect</td>
+								<td>Edinburgh</td>
+								<td>61</td>
+								<td>2011/04/25</td>
+								<td>$320,800</td>
+							</tr>
+							<tr>
+								<td>Garrett Winters</td>
+								<td>Accountant</td>
+								<td>Tokyo</td>
+								<td>63</td>
+								<td>2011/07/25</td>
+								<td>$170,750</td>
+							</tr>
+							<tr>
+								<td>Ashton Cox</td>
+								<td>Junior Technical Author</td>
+								<td>San Francisco</td>
+								<td>66</td>
+								<td>2009/01/12</td>
+								<td>$86,000</td>
+							</tr>
+							<tr>
+								<td>Cedric Kelly</td>
+								<td>Senior Javascript Developer</td>
+								<td>Edinburgh</td>
+								<td>22</td>
+								<td>2012/03/29</td>
+								<td>$433,060</td>
+							</tr>
+							<tr>
+								<td>Airi Satou</td>
+								<td>Accountant</td>
+								<td>Tokyo</td>
+								<td>33</td>
+								<td>2008/11/28</td>
+								<td>$162,700</td>
+							</tr>
+							<tr>
+								<td>Brielle Williamson</td>
+								<td>Integration Specialist</td>
+								<td>New York</td>
+								<td>61</td>
+								<td>2012/12/02</td>
+								<td>$372,000</td>
+							</tr>
+							<tr>
+								<td>Herrod Chandler</td>
+								<td>Sales Assistant</td>
+								<td>San Francisco</td>
+								<td>59</td>
+								<td>2012/08/06</td>
+								<td>$137,500</td>
+							</tr>
+							<tr>
+								<td>Rhona Davidson</td>
+								<td>Integration Specialist</td>
+								<td>Tokyo</td>
+								<td>55</td>
+								<td>2010/10/14</td>
+								<td>$327,900</td>
+							</tr>
+							<tr>
+								<td>Colleen Hurst</td>
+								<td>Javascript Developer</td>
+								<td>San Francisco</td>
+								<td>39</td>
+								<td>2009/09/15</td>
+								<td>$205,500</td>
+							</tr>
+							<tr>
+								<td>Sonya Frost</td>
+								<td>Software Engineer</td>
+								<td>Edinburgh</td>
+								<td>23</td>
+								<td>2008/12/13</td>
+								<td>$103,600</td>
+							</tr>
+							<tr>
+								<td>Jena Gaines</td>
+								<td>Office Manager</td>
+								<td>London</td>
+								<td>30</td>
+								<td>2008/12/19</td>
+								<td>$90,560</td>
+							</tr>
+							<tr>
+								<td>Quinn Flynn</td>
+								<td>Support Lead</td>
+								<td>Edinburgh</td>
+								<td>22</td>
+								<td>2013/03/03</td>
+								<td>$342,000</td>
+							</tr>
+							<tr>
+								<td>Charde Marshall</td>
+								<td>Regional Director</td>
+								<td>San Francisco</td>
+								<td>36</td>
+								<td>2008/10/16</td>
+								<td>$470,600</td>
+							</tr>
+							<tr>
+								<td>Haley Kennedy</td>
+								<td>Senior Marketing Designer</td>
+								<td>London</td>
+								<td>43</td>
+								<td>2012/12/18</td>
+								<td>$313,500</td>
+							</tr>
+							<tr>
+								<td>Tatyana Fitzpatrick</td>
+								<td>Regional Director</td>
+								<td>London</td>
+								<td>19</td>
+								<td>2010/03/17</td>
+								<td>$385,750</td>
+							</tr>
+							<tr>
+								<td>Michael Silva</td>
+								<td>Marketing Designer</td>
+								<td>London</td>
+								<td>66</td>
+								<td>2012/11/27</td>
+								<td>$198,500</td>
+							</tr>
+							<tr>
+								<td>Paul Byrd</td>
+								<td>Chief Financial Officer (CFO)</td>
+								<td>New York</td>
+								<td>64</td>
+								<td>2010/06/09</td>
+								<td>$725,000</td>
+							</tr>
+							<tr>
+								<td>Gloria Little</td>
+								<td>Systems Administrator</td>
+								<td>New York</td>
+								<td>59</td>
+								<td>2009/04/10</td>
+								<td>$237,500</td>
+							</tr>
+							<tr>
+								<td>Bradley Greer</td>
+								<td>Software Engineer</td>
+								<td>London</td>
+								<td>41</td>
+								<td>2012/10/13</td>
+								<td>$132,000</td>
+							</tr>
+							<tr>
+								<td>Dai Rios</td>
+								<td>Personnel Lead</td>
+								<td>Edinburgh</td>
+								<td>35</td>
+								<td>2012/09/26</td>
+								<td>$217,500</td>
+							</tr>
+							<tr>
+								<td>Jenette Caldwell</td>
+								<td>Development Lead</td>
+								<td>New York</td>
+								<td>30</td>
+								<td>2011/09/03</td>
+								<td>$345,000</td>
+							</tr>
+							<tr>
+								<td>Yuri Berry</td>
+								<td>Chief Marketing Officer (CMO)</td>
+								<td>New York</td>
+								<td>40</td>
+								<td>2009/06/25</td>
+								<td>$675,000</td>
+							</tr>
+							<tr>
+								<td>Caesar Vance</td>
+								<td>Pre-Sales Support</td>
+								<td>New York</td>
+								<td>21</td>
+								<td>2011/12/12</td>
+								<td>$106,450</td>
+							</tr>
+							<tr>
+								<td>Doris Wilder</td>
+								<td>Sales Assistant</td>
+								<td>Sidney</td>
+								<td>23</td>
+								<td>2010/09/20</td>
+								<td>$85,600</td>
+							</tr>
+							<tr>
+								<td>Angelica Ramos</td>
+								<td>Chief Executive Officer (CEO)</td>
+								<td>London</td>
+								<td>47</td>
+								<td>2009/10/09</td>
+								<td>$1,200,000</td>
+							</tr>
+							<tr>
+								<td>Gavin Joyce</td>
+								<td>Developer</td>
+								<td>Edinburgh</td>
+								<td>42</td>
+								<td>2010/12/22</td>
+								<td>$92,575</td>
+							</tr>
+							<tr>
+								<td>Jennifer Chang</td>
+								<td>Regional Director</td>
+								<td>Singapore</td>
+								<td>28</td>
+								<td>2010/11/14</td>
+								<td>$357,650</td>
+							</tr>
+							<tr>
+								<td>Brenden Wagner</td>
+								<td>Software Engineer</td>
+								<td>San Francisco</td>
+								<td>28</td>
+								<td>2011/06/07</td>
+								<td>$206,850</td>
+							</tr>
+							<tr>
+								<td>Fiona Green</td>
+								<td>Chief Operating Officer (COO)</td>
+								<td>San Francisco</td>
+								<td>48</td>
+								<td>2010/03/11</td>
+								<td>$850,000</td>
+							</tr>
+							<tr>
+								<td>Shou Itou</td>
+								<td>Regional Marketing</td>
+								<td>Tokyo</td>
+								<td>20</td>
+								<td>2011/08/14</td>
+								<td>$163,000</td>
+							</tr>
+							<tr>
+								<td>Michelle House</td>
+								<td>Integration Specialist</td>
+								<td>Sidney</td>
+								<td>37</td>
+								<td>2011/06/02</td>
+								<td>$95,400</td>
+							</tr>
+							<tr>
+								<td>Suki Burks</td>
+								<td>Developer</td>
+								<td>London</td>
+								<td>53</td>
+								<td>2009/10/22</td>
+								<td>$114,500</td>
+							</tr>
+							<tr>
+								<td>Prescott Bartlett</td>
+								<td>Technical Author</td>
+								<td>London</td>
+								<td>27</td>
+								<td>2011/05/07</td>
+								<td>$145,000</td>
+							</tr>
+							<tr>
+								<td>Gavin Cortez</td>
+								<td>Team Leader</td>
+								<td>San Francisco</td>
+								<td>22</td>
+								<td>2008/10/26</td>
+								<td>$235,500</td>
+							</tr>
+							<tr>
+								<td>Martena Mccray</td>
+								<td>Post-Sales support</td>
+								<td>Edinburgh</td>
+								<td>46</td>
+								<td>2011/03/09</td>
+								<td>$324,050</td>
+							</tr>
+							<tr>
+								<td>Unity Butler</td>
+								<td>Marketing Designer</td>
+								<td>San Francisco</td>
+								<td>47</td>
+								<td>2009/12/09</td>
+								<td>$85,675</td>
+							</tr>
+							<tr>
+								<td>Howard Hatfield</td>
+								<td>Office Manager</td>
+								<td>San Francisco</td>
+								<td>51</td>
+								<td>2008/12/16</td>
+								<td>$164,500</td>
+							</tr>
+							<tr>
+								<td>Hope Fuentes</td>
+								<td>Secretary</td>
+								<td>San Francisco</td>
+								<td>41</td>
+								<td>2010/02/12</td>
+								<td>$109,850</td>
+							</tr>
+							<tr>
+								<td>Vivian Harrell</td>
+								<td>Financial Controller</td>
+								<td>San Francisco</td>
+								<td>62</td>
+								<td>2009/02/14</td>
+								<td>$452,500</td>
+							</tr>
+							<tr>
+								<td>Timothy Mooney</td>
+								<td>Office Manager</td>
+								<td>London</td>
+								<td>37</td>
+								<td>2008/12/11</td>
+								<td>$136,200</td>
+							</tr>
+							<tr>
+								<td>Jackson Bradshaw</td>
+								<td>Director</td>
+								<td>New York</td>
+								<td>65</td>
+								<td>2008/09/26</td>
+								<td>$645,750</td>
+							</tr>
+							<tr>
+								<td>Olivia Liang</td>
+								<td>Support Engineer</td>
+								<td>Singapore</td>
+								<td>64</td>
+								<td>2011/02/03</td>
+								<td>$234,500</td>
+							</tr>
+							<tr>
+								<td>Bruno Nash</td>
+								<td>Software Engineer</td>
+								<td>London</td>
+								<td>38</td>
+								<td>2011/05/03</td>
+								<td>$163,500</td>
+							</tr>
+							<tr>
+								<td>Sakura Yamamoto</td>
+								<td>Support Engineer</td>
+								<td>Tokyo</td>
+								<td>37</td>
+								<td>2009/08/19</td>
+								<td>$139,575</td>
+							</tr>
+							<tr>
+								<td>Thor Walton</td>
+								<td>Developer</td>
+								<td>New York</td>
+								<td>61</td>
+								<td>2013/08/11</td>
+								<td>$98,540</td>
+							</tr>
+							<tr>
+								<td>Finn Camacho</td>
+								<td>Support Engineer</td>
+								<td>San Francisco</td>
+								<td>47</td>
+								<td>2009/07/07</td>
+								<td>$87,500</td>
+							</tr>
+							<tr>
+								<td>Serge Baldwin</td>
+								<td>Data Coordinator</td>
+								<td>Singapore</td>
+								<td>64</td>
+								<td>2012/04/09</td>
+								<td>$138,575</td>
+							</tr>
+							<tr>
+								<td>Zenaida Frank</td>
+								<td>Software Engineer</td>
+								<td>New York</td>
+								<td>63</td>
+								<td>2010/01/04</td>
+								<td>$125,250</td>
+							</tr>
+							<tr>
+								<td>Zorita Serrano</td>
+								<td>Software Engineer</td>
+								<td>San Francisco</td>
+								<td>56</td>
+								<td>2012/06/01</td>
+								<td>$115,000</td>
+							</tr>
+							<tr>
+								<td>Jennifer Acosta</td>
+								<td>Junior Javascript Developer</td>
+								<td>Edinburgh</td>
+								<td>43</td>
+								<td>2013/02/01</td>
+								<td>$75,650</td>
+							</tr>
+							<tr>
+								<td>Cara Stevens</td>
+								<td>Sales Assistant</td>
+								<td>New York</td>
+								<td>46</td>
+								<td>2011/12/06</td>
+								<td>$145,600</td>
+							</tr>
+							<tr>
+								<td>Hermione Butler</td>
+								<td>Regional Director</td>
+								<td>London</td>
+								<td>47</td>
+								<td>2011/03/21</td>
+								<td>$356,250</td>
+							</tr>
+							<tr>
+								<td>Lael Greer</td>
+								<td>Systems Administrator</td>
+								<td>London</td>
+								<td>21</td>
+								<td>2009/02/27</td>
+								<td>$103,500</td>
+							</tr>
+							<tr>
+								<td>Jonas Alexander</td>
+								<td>Developer</td>
+								<td>San Francisco</td>
+								<td>30</td>
+								<td>2010/07/14</td>
+								<td>$86,500</td>
+							</tr>
+							<tr>
+								<td>Shad Decker</td>
+								<td>Regional Director</td>
+								<td>Edinburgh</td>
+								<td>51</td>
+								<td>2008/11/13</td>
+								<td>$183,000</td>
+							</tr>
+							<tr>
+								<td>Michael Bruce</td>
+								<td>Javascript Developer</td>
+								<td>Singapore</td>
+								<td>29</td>
+								<td>2011/06/27</td>
+								<td>$183,000</td>
+							</tr>
+							<tr>
+								<td>Donna Snider</td>
+								<td>Customer Support</td>
+								<td>New York</td>
+								<td>27</td>
+								<td>2011/01/25</td>
+								<td>$112,000</td>
 							</tr>
 						</tbody>
 						<tfoot>
 							<tr>
 								<th>Name</th>
-								<th>Customer ID</th>
-								<th>Address</th>
-								<th>City</th>
-								<th>Postal</th>
-								<th>Company</th>
-								<th>Status</th>
+								<th>Position</th>
+								<th>Office</th>
+								<th>Age</th>
+								<th>Start date</th>
+								<th>Salary</th>
 							</tr>
 						</tfoot>
 					</table>
-
-					
+					<!-- datatable end -->
 				</div>
 			</div>
 		</div>
@@ -667,92 +526,107 @@
 {{#*inline "scripts-block"}}
 
 <!-- datatble responsive bundle contains: 
-	+ jquery.dataTables.js (core)
-	+ dataTables.bootstrap4.js (core BS4 style)
-	+ dataTables.responsive.js (optional)
-	+ responsive.bootstrap4.js (optional BS4 style) -->
-<script src="js/datagrid/datatables/datatables.responsive.bundle.js"></script>
+	+ jquery.dataTables.js
+	+ dataTables.bootstrap4.js
+	+ dataTables.autofill.js							
+	+ dataTables.buttons.js
+	+ buttons.bootstrap4.js
+	+ buttons.html5.js
+	+ buttons.print.js
+	+ buttons.colVis.js
+	+ dataTables.colreorder.js							
+	+ dataTables.fixedcolumns.js							
+	+ dataTables.fixedheader.js						
+	+ dataTables.keytable.js						
+	+ dataTables.responsive.js							
+	+ dataTables.rowgroup.js							
+	+ dataTables.rowreorder.js							
+	+ dataTables.scroller.js							
+	+ dataTables.select.js							
+	+ datatables.styles.nextgen.js
+	+ datatables.styles.buttons.nextgen.js -->
+<script src="js/datagrid/datatables/datatables.bundle.js"></script>
 
 <!-- datatbles buttons bundle contains: 
-	+ jszip.js (needed to generate zipped files for CVS download)
-	+ pdfmake.js (needed to generate PDF files)
-	+ vfs_fonts.js (depedency for pdfmake.js)
-	+ dataTables.buttons.js (core button generation file for datatables)
-	+ buttons.bootstrap4.js (optional BS4 style)
-	+ buttons.colVis.js (needed to toggle column visibility)
-	+ buttons.html5.js (dependency for datatables.buttons.js)
-	+ buttons.print.js (needed to generate print format )
-
+	+ "jszip.js",
+	+ "pdfmake.js",
+	+ "vfs_fonts.js"	
 	NOTE: 	The file size is pretty big, but you can always use the
-			build.json file to deselect any components you do not need) -->
-<script src="js/datagrid/datatables/datatables.buttons.bundle.js"></script>
+			build.json file to deselect any components you do not need under "export" -->
+<script src="js/datagrid/datatables/datatables.export.js"></script>
 
 <script>
 	$(document).ready( function () {
-		//reset the default classes
-		$.extend( $.fn.dataTableExt.oStdClasses, {
-			"sFilterInput": "form-control border-top-left-radius-0 border-bottom-left-radius-0 ml-0 width-lg shadow-inset-1",
-			"sLengthSelect": "form-control custom-select"
-		});
 
 		// initialize datatable
 		$('#dt-basic-example').dataTable({
 			responsive: true,
-			dom: 
-				"<'row'<'col-sm-12 col-md-6'f><'col-sm-12 col-md-6 text-right'B>>" +
+			lengthChange: false,
+			dom:
+				/*	--- Layout Structure 
+					--- Options
+					l	-	length changing input control
+					f	-	filtering input
+					t	-	The table!
+					i	-	Table information summary
+					p	-	pagination control
+					r	-	processing display element
+					B	-	buttons
+					R	-	ColReorder
+					S	-	Select
+
+					--- Markup
+					< and >				- div element
+					<"class" and >		- div with a class
+					<"#id" and >		- div with an ID
+					<"#id.class" and >	- div with an ID and a class
+
+					--- Further reading
+					https://datatables.net/reference/option/dom
+					--------------------------------------
+				 */
+				"<'row mb-3'<'col-sm-12 col-md-6 d-flex align-items-center justify-content-start'f><'col-sm-12 col-md-6 d-flex align-items-center justify-content-end'lB>>" +
 				"<'row'<'col-sm-12'tr>>" +
 				"<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
 			buttons: [
+				/*{
+					extend:    'colvis',
+					text:      'Column Visibility',
+					titleAttr: 'Col visibility',
+					className: 'mr-sm-3'
+				},*/
 				{
 					extend:    'pdfHtml5',
-					text:      '<i class="fal fa-file-pdf text-danger fs-lg"></i><span class="hidden-sm-down ml-2">PDF</span>',
-					titleAttr: 'PDF',
-					className: 'btn btn-outline-default shadow-0'
+					text:      '<i class="fas fa-file-pdf fs-xl mr-1"></i> Export as PDF',
+					titleAttr: 'Generate PDF',
+					className: 'btn-danger bg-danger-800 mr-1 border-0'
 				},
 				{
 					extend:    'excelHtml5',
-					text:      '<i class="fal fa-file-excel color-success-700 fs-lg"></i><span class="hidden-sm-down ml-2">Excel</span>',
-					titleAttr: 'Excel',
-					className: 'btn btn-outline-default shadow-0'
-				},
+					text:      '<i class="fas fa-file-excel fs-xl mr-1"></i> Export as Excel',
+					titleAttr: 'Generate Excel',
+					className: 'btn-success bg-success-800 mr-1 border-0'
+				}/*,
 				{
 					extend:    'csvHtml5',
-					text:      '<i class="fal fa-file-archive color-success-700 fs-lg"></i><span class="hidden-sm-down ml-2">CSV</span>',
-					titleAttr: 'CSV',
-					className: 'btn btn-outline-default shadow-0'
+					text:      '<i class="fas fa-file-archive"></i>',
+					titleAttr: 'Generate CSV',
+					className: 'btn-outline-default btn-icon fs-xl color-primary-600 mr-1'
 				},
 				{
 					extend:    'copyHtml5',
-					text:      '<i class="fal fa-copy color-primary-500 fs-xl d-block hidden-sm-up"></i><span class="hidden-sm-down">Copy</span>',
-					titleAttr: 'Copy',
-					className: 'btn btn-outline-default shadow-0'
+					text:      '<i class="fas fa-copy"></i>',
+					titleAttr: 'Copy to clipboard',
+					className: 'btn-outline-default btn-icon fs-xl color-primary-600 mr-1'
 				},
 				{
 					extend:    'print',
-					text:      '<i class="fal fa-file-archive color-success-700 fs-xl d-block hidden-sm-up"></i><span class="hidden-sm-down">Print</span>',
-					titleAttr: 'Print',
-					className: 'btn btn-outline-default shadow-0'
-				}/*,
-				{
-					extend:    'colvis',
-					text:      '<i class="fal fa-eye color-info-500 fs-xl d-block hidden-sm-up"></i><span class="hidden-sm-down">Visibility</span>',
-					titleAttr: 'Col visibility',
-					className: 'btn btn-outline-default shadow-0'
+					text:      '<i class="fas fa-print"></i>',
+					titleAttr: 'Print Table',
+					className: 'btn-outline-default btn-icon fs-xl color-primary-700'
 				}*/
-			],			
-			language: {
-				//change the default text for 'next' and 'previous' with icons
-				paginate: {
-					previous: "<i class='fal fa-chevron-left'></i>",
-					next: "<i class='fal fa-chevron-right'></i>"
-				},
-				//replace the default search lable text with a nice icon
-				search: '<div class="d-inline-flex width-3 align-items-center justify-content-center border form-control border-bottom-right-radius-0 border-top-right-radius-0 border-right-0 btn-default"><i class="fal fa-search"></i></div>',
-				//add search filter
-				searchPlaceholder: "Filter...",
-				//change text for zero records 
-				zeroRecords: "No records to display"					
-			}
+				
+			]
 		});
 
 	});

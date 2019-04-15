@@ -1,56 +1,24 @@
 {{#> 
 	layouts/main 
-	title="Datatables: Basic" 
-	pagename="datagrid_datatables_basic" 
+	title="Datatables: ColReorder" 
+	pagename="datagrid_datatables_colreorder" 
 	category_1="Datagrid"
 	category_2="Datatables"
-	heading="<i class='subheader-icon fal fa-table'></i> DataTables: <span class='fw-300'>Basic</span> <sup class='badge badge-primary fw-500'>ADDON</sup>" 
+	heading="<i class='subheader-icon fal fa-table'></i> DataTables: <span class='fw-300'>ColReorder</span> <sup class='badge badge-primary fw-500'>ADDON</sup>" 
 	pagedescription="Create headache free searching, sorting and pagination tables without any complex configuration"
 }}
 
 {{#*inline "head-block"}}
-	<!-- contains : dataTables.bootstrap4.css + responsive.bootstrap4.css -->
 	<link rel="stylesheet" media="screen, print" href="css/datagrid/datatables/datatables.bundle.css">
 {{/inline}}
 
 {{#*inline "content-block"}}
-<div class="alert alert-primary">
-	<div class="d-flex flex-start w-100">
-		<div class="mr-2 hidden-md-down">
-			<span class="icon-stack icon-stack-lg">
-				<i class="base base-2 icon-stack-3x opacity-100 color-primary-500"></i>
-				<i class="base base-2 icon-stack-2x opacity-100 color-primary-300"></i>
-				<i class="fal fa-info icon-stack-1x opacity-100 color-white"></i>
-			</span>
-		</div>
-		<div class="d-flex flex-fill">
-			<div class="flex-fill">
-				<span class="h5">About</span>
-				<p>
-					DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, built upon the foundations of progressive enhancement, that adds all of these advanced features to any HTML table.
-					The stated goal of DataTables is "To enhance the accessibility of data in HTML tables". In order to achieve this we recognise that DataTables has two categories of users that interact with the interfaces the software has:
-				</p>
-				<ul>
-					<li>
-						End users - those who use the interface in the browser that you create with DataTables
-					</li>
-					<li>
-						Developers - yourself and the other developers working with DataTables to create your apps, sites, services, etc.
-					</li>
-				</ul>
-				<p class="m-0">
-					Find in-depth, guidelines, tutorials and more on Datatables's <a href="https://www.datatables.net/manual/" target="_blank">Official Documentation</a> 
-				</p>
-			</div>
-		</div>
-	</div>
-</div>
 <div class="row">
 	<div class="col-xl-12">
 		<div id="panel-1" class="panel">
 			<div class="panel-hdr">	
 				<h2>
-					Datatables <span class="fw-300"><i>Basic</i></span> 
+					Datatables <span class="fw-300"><i>ColReorder</i></span> 
 				</h2>
 				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
@@ -61,10 +29,15 @@
 			<div class="panel-container show">
 				<div class="panel-content">									
 					<div class="panel-tag">
-						This example shows DataTables and the Responsive extension being used with the Bootstrap framework providing the styling. The DataTables / Bootstrap integration provides seamless integration for DataTables to be used in a Bootstrap page. <strong>Note</strong> that the <code>.dt-responsive</code> class is used to indicate to the extension that it should be enabled on this page, as responsive has special meaning in Bootstrap. The responsive option could also be used if required
+						<p>
+							ColReorder is an extension for DataTables that provides the ability to click and drag column header cells, reordering the columns as it does so. You may turn this feature on by adding <code>colReorder: true</code> for your initilization.
+						</p>
+						<p>
+							<strong>Known issue</strong>: Because of the limitation of CSS, we cannot have <code>.w-100</code> class embedded to the table, therefore the responsiveness maynot be immideate, however you can refresh the page after resizing to snap the table back into place
+						</p>
 					</div>
 					<!-- datatable start -->
-					<table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
+					<table id="dt-basic-example" class="table table-bordered table-hover table-striped table-dark">
 						<thead>
 							<tr>
 								<th>Name</th>
@@ -579,7 +552,9 @@
 <script>
 	$(document).ready( function () {
 		$('#dt-basic-example').dataTable({
-			responsive: true
+			responsive: true,
+			fixedHeader: true,
+        	colReorder: true
 		});
 	});
 </script>

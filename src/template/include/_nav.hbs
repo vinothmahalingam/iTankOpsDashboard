@@ -595,20 +595,30 @@
 			</li>							
 		</ul>	
 	</li>	
-	<li {{#is pagename "in" "datagrid_datatables_basic,datagrid_datatables_export,datagrid_datatables_responsive,datagrid_datatables_advanced,datagrid_foo_tables"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "datagrid_datatables_basic,datagrid_datatables_autofill,datagrid_datatables_buttons,datagrid_datatables_export,datagrid_datatables_colreorder,datagrid_datatables_fixedcolumns,datagrid_datatables_fixedheader,datagrid_datatables_keytable,datagrid_datatables_responsive,datagrid_datatables_rowgroup,datagrid_datatables_rowreorder,datagrid_datatables_scroller,datagrid_datatables_select,datagrid_datatables_advanced,datagrid_foo_tables"}}class="active open"{{/is}}>
 		<a href="#" title="Datagrid" data-filter-tags="data tables"> 
 			<i class="fal fa-table"></i>
 			<span class="nav-link-text" data-i18n="nav.datatables">Datagrid</span>
 		</a>
 		<ul>
-			<li {{#is pagename "in" "datagrid_datatables_basic,datagrid_datatables_export,datagrid_datatables_responsive,datagrid_datatables_advanced"}}class="active open"{{/is}}>
+			<li {{#is pagename "in" "datagrid_datatables_basic,datagrid_datatables_autofill,datagrid_datatables_buttons,datagrid_datatables_export,datagrid_datatables_colreorder,datagrid_datatables_fixedcolumns,datagrid_datatables_fixedheader,datagrid_datatables_keytable,datagrid_datatables_responsive,datagrid_datatables_rowgroup,datagrid_datatables_rowreorder,datagrid_datatables_scroller,datagrid_datatables_select,datagrid_datatables_advanced"}}class="active open"{{/is}}>
 				<a href="#" title="Datatables" data-filter-tags="data tables datatables"> 
 					<span class="nav-link-text" data-i18n="nav.datatables">Datatables</span>
 				</a>
 				<ul>
 					<li {{#is pagename "===" "datagrid_datatables_basic"}}class="active"{{/is}}>
-						<a href="datagrid_datatables_basic.html" data-filter-tags="datagrid datatables basic tables"> 
+						<a href="datagrid_datatables_basic.html" data-filter-tags="datagrid datatables basic"> 
 							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_basic">Basic</span> 
+						</a>
+					</li>
+					<li {{#is pagename "===" "datagrid_datatables_autofill"}}class="active"{{/is}}>
+						<a href="datagrid_datatables_autofill.html" data-filter-tags="datagrid datatables autofill"> 
+							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_autofill">Autofill</span> 
+						</a>
+					</li>
+					<li {{#is pagename "===" "datagrid_datatables_buttons"}}class="active"{{/is}}>
+						<a href="datagrid_datatables_buttons.html" data-filter-tags="datagrid datatables buttons"> 
+							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_buttons">Buttons</span> 
 						</a>
 					</li>
 					<li {{#is pagename "===" "datagrid_datatables_export"}}class="active"{{/is}}>
@@ -616,14 +626,54 @@
 							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_export">Export</span> 
 						</a>
 					</li>
+					<li {{#is pagename "===" "datagrid_datatables_colreorder"}}class="active"{{/is}}>
+						<a href="datagrid_datatables_colreorder.html" data-filter-tags="datagrid datatables basic colreorder"> 
+							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_colreorder">ColReorder</span> 
+						</a>
+					</li>
+					<li {{#is pagename "===" "datagrid_datatables_fixedcolumns"}}class="active"{{/is}}>
+						<a href="datagrid_datatables_fixedcolumns.html" data-filter-tags="datagrid datatables basic fixed columns"> 
+							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_fixedcolumns">FixedColumns</span> 
+						</a>
+					</li>
+					<li {{#is pagename "===" "datagrid_datatables_fixedheader"}}class="active"{{/is}}>
+						<a href="datagrid_datatables_fixedheader.html" data-filter-tags="datagrid datatables basic fixed header"> 
+							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_fixedheader">FixedHeader</span> 
+						</a>
+					</li>
+					<li {{#is pagename "===" "datagrid_datatables_keytable"}}class="active"{{/is}}>
+						<a href="datagrid_datatables_keytable.html" data-filter-tags="datagrid datatables basic key table"> 
+							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_keytable">KeyTable</span> 
+						</a>
+					</li>
 					<li {{#is pagename "===" "datagrid_datatables_responsive"}}class="active"{{/is}}>
-						<a href="datagrid_datatables_responsive.html" data-filter-tags="datagrid datatables responsive table"> 
+						<a href="datagrid_datatables_responsive.html" data-filter-tags="datagrid datatables responsive"> 
 							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_responsive">Responsive</span> 
 						</a>
 					</li>
+					<li {{#is pagename "===" "datagrid_datatables_rowgroup"}}class="active"{{/is}}>
+						<a href="datagrid_datatables_rowgroup.html" data-filter-tags="datagrid datatables basic row group"> 
+							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_rowgroup">RowGroup</span> 
+						</a>
+					</li>
+					<li {{#is pagename "===" "datagrid_datatables_rowreorder"}}class="active"{{/is}}>
+						<a href="datagrid_datatables_rowreorder.html" data-filter-tags="datagrid datatables basic row reorder"> 
+							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_rowreorder">RowReorder</span> 
+						</a>
+					</li>
+					<li {{#is pagename "===" "datagrid_datatables_scroller"}}class="active"{{/is}}>
+						<a href="datagrid_datatables_scroller.html" data-filter-tags="datagrid datatables basic scroller"> 
+							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_scroller">Scroller</span> 
+						</a>
+					</li>
+					<li {{#is pagename "===" "datagrid_datatables_select"}}class="active"{{/is}}>
+						<a href="datagrid_datatables_select.html" data-filter-tags="datagrid datatables basic select"> 
+							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_select">Select</span> 
+						</a>
+					</li>
 					<li {{#is pagename "===" "datagrid_datatables_advanced"}}class="active"{{/is}}>
-						<a href="datagrid_datatables_advanced.html" data-filter-tags="datagrid datatables advanced"> 
-							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_advanced">Advanced</span> 
+						<a href="datagrid_datatables_advanced.html" data-filter-tags="datagrid datatables advanced kitchen sink"> 
+							<span class="nav-link-text" data-i18n="nav.datagrid_datatables_advanced">Kitchen Sink</span> 
 						</a>
 					</li>
 				</ul>

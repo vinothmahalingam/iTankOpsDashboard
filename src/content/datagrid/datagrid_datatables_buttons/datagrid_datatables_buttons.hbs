@@ -1,10 +1,10 @@
 {{#> 
 	layouts/main 
-	title="Datatables: Basic" 
-	pagename="datagrid_datatables_basic" 
+	title="Datatables: Buttons" 
+	pagename="datagrid_datatables_buttons" 
 	category_1="Datagrid"
 	category_2="Datatables"
-	heading="<i class='subheader-icon fal fa-table'></i> DataTables: <span class='fw-300'>Basic</span> <sup class='badge badge-primary fw-500'>ADDON</sup>" 
+	heading="<i class='subheader-icon fal fa-table'></i> DataTables: <span class='fw-300'>Buttons</span> <sup class='badge badge-primary fw-500'>ADDON</sup>" 
 	pagedescription="Create headache free searching, sorting and pagination tables without any complex configuration"
 }}
 
@@ -14,43 +14,12 @@
 {{/inline}}
 
 {{#*inline "content-block"}}
-<div class="alert alert-primary">
-	<div class="d-flex flex-start w-100">
-		<div class="mr-2 hidden-md-down">
-			<span class="icon-stack icon-stack-lg">
-				<i class="base base-2 icon-stack-3x opacity-100 color-primary-500"></i>
-				<i class="base base-2 icon-stack-2x opacity-100 color-primary-300"></i>
-				<i class="fal fa-info icon-stack-1x opacity-100 color-white"></i>
-			</span>
-		</div>
-		<div class="d-flex flex-fill">
-			<div class="flex-fill">
-				<span class="h5">About</span>
-				<p>
-					DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, built upon the foundations of progressive enhancement, that adds all of these advanced features to any HTML table.
-					The stated goal of DataTables is "To enhance the accessibility of data in HTML tables". In order to achieve this we recognise that DataTables has two categories of users that interact with the interfaces the software has:
-				</p>
-				<ul>
-					<li>
-						End users - those who use the interface in the browser that you create with DataTables
-					</li>
-					<li>
-						Developers - yourself and the other developers working with DataTables to create your apps, sites, services, etc.
-					</li>
-				</ul>
-				<p class="m-0">
-					Find in-depth, guidelines, tutorials and more on Datatables's <a href="https://www.datatables.net/manual/" target="_blank">Official Documentation</a> 
-				</p>
-			</div>
-		</div>
-	</div>
-</div>
 <div class="row">
 	<div class="col-xl-12">
 		<div id="panel-1" class="panel">
 			<div class="panel-hdr">	
 				<h2>
-					Datatables <span class="fw-300"><i>Basic</i></span> 
+					Datatables <span class="fw-300"><i>Buttons</i></span> 
 				</h2>
 				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
@@ -61,7 +30,12 @@
 			<div class="panel-container show">
 				<div class="panel-content">									
 					<div class="panel-tag">
-						This example shows DataTables and the Responsive extension being used with the Bootstrap framework providing the styling. The DataTables / Bootstrap integration provides seamless integration for DataTables to be used in a Bootstrap page. <strong>Note</strong> that the <code>.dt-responsive</code> class is used to indicate to the extension that it should be enabled on this page, as responsive has special meaning in Bootstrap. The responsive option could also be used if required
+						<p>
+							The Buttons extension provides a powerful set of selector options so you can select which buttons to perform actions upon. This is very similar to the core DataTables <code>rows()</code>, <code>columns()</code> and <code>cells()</code> which provide the ability to select elements from the table, and more generally like jQuery selectors, so you will be immediately familiar with this interface.
+						</p>
+						<p>
+							Learn more about the buttons api at <a href="https://datatables.net/reference/api/buttons()" target="_blank">https://datatables.net/reference/api/buttons()</a>
+						</p>
 					</div>
 					<!-- datatable start -->
 					<table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
@@ -579,7 +553,60 @@
 <script>
 	$(document).ready( function () {
 		$('#dt-basic-example').dataTable({
-			responsive: true
+			responsive: true,
+			dom:
+				/*	--- Layout Structure 
+					--- Options
+					l	-	length changing input control
+					f	-	filtering input
+					t	-	The table!
+					i	-	Table information summary
+					p	-	pagination control
+					r	-	processing display element
+					B	-	buttons
+					R	-	ColReorder
+					S	-	Select
+
+					--- Markup
+					< and >				- div element
+					<"class" and >		- div with a class
+					<"#id" and >		- div with an ID
+					<"#id.class" and >	- div with an ID and a class
+
+					--- Further reading
+					https://datatables.net/reference/option/dom
+					--------------------------------------
+				 */
+				"<'row mb-3'<'col-sm-12 col-md-6 d-flex align-items-center justify-content-start'f><'col-sm-12 col-md-6 d-flex align-items-center justify-content-end'B>>" +
+				"<'row'<'col-sm-12'tr>>" +
+				"<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+			buttons: [
+				{
+					extend:    'colvis',
+					text:      'Column Visibility',
+					titleAttr: 'Col visibility',
+					className: 'btn-outline-default'
+				},
+				{
+					extend:    'csvHtml5',
+					text:      'CSV',
+					titleAttr: 'Generate CSV',
+					className: 'btn-outline-default'
+				},
+				{
+					extend:    'copyHtml5',
+					text:      'Copy',
+					titleAttr: 'Copy to clipboard',
+					className: 'btn-outline-default'
+				},
+				{
+					extend:    'print',
+					text:      'Print',
+					titleAttr: 'Print Table',
+					className: 'btn-outline-default'
+				}
+				
+			]	
 		});
 	});
 </script>
