@@ -24,8 +24,8 @@ table.dataTable > tbody > tr.child ul.dtr-details { width: 100% }
 	}
 }
 
-/* some idiot put important on the main css file now I have to put important here to override it... eghhh */
-/* I had to set it to 0 because auto fill cannot "compute" for the margin ... nice job Allen >.> */
+/* some idiot put "important" rule on the main css file now I have to put important here to override it... eghhh */
+/* I had to set it to 0 because auto fill cannot "compute" for the margin ... nice job Allan >.> */
 table.dataTable {
 	margin-top: 0 !important;
 	margin-bottom: 1rem !important;
@@ -149,8 +149,7 @@ div.dataTables_wrapper div.dataTables_filter {
 	text-align: inherit;
 }
 
-/* auto fill */
-//modal
+/* AutoFill */
 div.dt-autofill-list {
 	border-width: 0px;
 	padding: 1rem 0;
@@ -188,4 +187,35 @@ div.dt-autofill-handle {
 
 div.dt-autofill-select {
   background-color: $primary-500;
+}
+
+/* FixedColumns */
+.DTFC_LeftHeadWrapper,
+.DTFC_LeftBodyWrapper,
+.DTFC_LeftFootWrapper {
+	
+	&:before {
+		content:"";
+		position:absolute;
+		right:0px;
+		top:1px;
+		bottom:0px;
+		width:1px;
+		background: $danger-500;
+		z-index: 1;
+    	box-shadow: -4px 0px 4px rgba($black,0.4);
+	}
+
+	table.table-bordered {
+		border-right-width: 0;
+	}
+
+}
+
+/* KeyTable */
+table.dataTable tbody th.focus, 
+table.dataTable tbody td.focus {
+    box-shadow: inset 0 0 0px 1px $primary-500;
+    background: rgba($primary-500, 0.1);
+    font-weight: 500;
 }

@@ -38,6 +38,6 @@ jQuery(document).ready(function() {
  	/**
 	 * e. run app forms class detectors [parentClass,focusClass,disabledClass]
 	 **/
-	initApp.appForms('.form-group, .input-group', 'has-length', 'has-disabled');
+	initApp.appForms('.input-group', 'has-length', 'has-disabled');
 
 }); 
