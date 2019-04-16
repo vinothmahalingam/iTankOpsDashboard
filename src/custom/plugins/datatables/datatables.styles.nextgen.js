@@ -31,6 +31,7 @@ $.extend(true, DataTable.defaults, {
 		https://datatables.net/reference/option/dom
 		--------------------------------------
 	 */
+	lengthMenu: [[10, 15, 25, 50, 100, -1], [10, 15, 25, 50, 100, "All"]],
 	dom: "<'row mb-3'<'col-sm-12 col-md-6 d-flex align-items-center justify-content-start'f><'col-sm-12 col-md-6 d-flex align-items-center justify-content-end'l>>" +
 		"<'row'<'col-sm-12'tr>>" +
 		"<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
@@ -43,7 +44,7 @@ $.extend(true, DataTable.defaults, {
 		/* replace the default search lable text with a nice icon */
 		search: '<div class="input-group-text d-inline-flex width-3 align-items-center justify-content-center border-bottom-right-radius-0 border-top-right-radius-0 border-right-0"><i class="fal fa-search"></i></div>',
 		/* add search filter */
-		searchPlaceholder: "Filter...",
+		searchPlaceholder: "Search",
 		/* change text for zero records */
 		zeroRecords: "No records to display"
 	},

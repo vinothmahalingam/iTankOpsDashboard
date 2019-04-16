@@ -361,7 +361,7 @@ $nav-tabs-link-active-border-color:		rgba($black, 0.1) rgba($black, 0.1) $white;
 $nav-tabs-link-hover-border-color:		rgba($black, 0.07) rgba($black, 0.07) transparent;
 
 /* tables */
-$table-border-color:					lighten(desaturate($primary-500, 60%), 35%);
+$table-border-color:					rgba($black, 0.09); //lighten(desaturate($primary-500, 60%), 35%);
 $table-hover-bg:						lighten(desaturate($primary-900, 70%), 63%);
 $table-accent-bg:						rgba($fusion-500,.02);
 $table-dark-bg:							$fusion-300;

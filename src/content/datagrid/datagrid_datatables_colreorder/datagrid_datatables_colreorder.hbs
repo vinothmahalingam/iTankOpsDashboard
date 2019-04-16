@@ -32,13 +32,10 @@
 						<p>
 							ColReorder is an extension for DataTables that provides the ability to click and drag column header cells, reordering the columns as it does so. You may turn this feature on by adding <code>colReorder: true</code> for your initilization.
 						</p>
-						<p>
-							<strong>Known issue</strong>: Because of the limitation of CSS, we cannot have <code>.w-100</code> class embedded to the table, therefore the responsiveness maynot be immideate, however you can refresh the page after resizing to snap the table back into place
-						</p>
 					</div>
 					<!-- datatable start -->
-					<table id="dt-basic-example" class="table table-bordered table-hover table-striped">
-						<thead class="thead-dark">
+					<table id="dt-basic-example" class="table table-bordered table-hover w-100">
+						<thead class="bg-warning-500">
 							<tr>
 								<th>Name</th>
 								<th>Position</th>
