@@ -41,6 +41,7 @@ $.extend(true, DataTable.defaults, {
 			previous: "<i class='fal fa-chevron-left'></i>",
 			next: "<i class='fal fa-chevron-right'></i>"
 		},
+		processing: '<div class="d-flex align-items-center justify-content-center fs-lg"><div class="spinner-border spinner-border-sm text-primary mr-2" role="status"><span class="sr-only"> Loading...</span></div> Processing...</div>',
 		/* replace the default search lable text with a nice icon */
 		search: '<div class="input-group-text d-inline-flex width-3 align-items-center justify-content-center border-bottom-right-radius-0 border-top-right-radius-0 border-right-0"><i class="fal fa-search"></i></div>',
 		/* add search filter */

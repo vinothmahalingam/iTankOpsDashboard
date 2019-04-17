@@ -257,6 +257,14 @@ table.dataTable td.reorder {
 	text-align: inherit;
 }
 
+tr.dt-rowReorder-moving {
+  outline: 2px solid $success-500;
+  outline-offset: -2px; }
+
+table.dt-rowReorder-float {
+  outline: 2px solid $primary-500;
+  outline-offset: -2px; }  
+
 
 /* w-100 bug for some tables */
 .DTCR_clonedTable.w-100,
@@ -264,3 +272,34 @@ table.dataTable td.reorder {
 .fixedHeader-floating.w-100 {
 	width: inherit !important;
 }
+
+/* fix z-index for processing message */
+.dataTables_processing {
+	z-index: 2;
+}
+
+/* Select */
+table.dataTable  {
+
+	&.table-bordered {
+		.selected {
+			td {
+				border-color: rgba($black,0.1);
+			}
+		}
+		td.selected {
+			border-color: rgba($black,0.1);
+		}
+	}
+
+	tbody {
+		> tr.selected, 
+		> tr > .selected {
+			background: rgba($primary-500, 0.8);
+			font-weight: 500;
+		}
+	}
+
+		
+}
+

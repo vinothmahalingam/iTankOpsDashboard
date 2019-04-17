@@ -104,7 +104,8 @@
 						"app-data": {
 							"json" : [
 								"{$config.path.src}/custom/webfonts/fontawesome-pro-master/used-for-demo-pages/*.json",
-								"{$config.path.src}/custom/webfonts/nextgen-fonts-master/used-for-demo-pages/*.json"
+								"{$config.path.src}/custom/webfonts/nextgen-fonts-master/used-for-demo-pages/*.json",
+								"{$config.path.src}/custom/plugins/datatables/demo-data/*.json"
 							]
 						},
 						"app-media": {
