@@ -11,6 +11,19 @@
     .ie-only {
     	display: inline-block !important;
     }
+
+	/* table hover */
+	.table-hover {
+		tbody {
+			tr {
+				&:hover {
+					box-shadow:none;
+					background-color: lighten($warning-50, 9%);
+				}
+			}
+		}
+	}
+
 }
 
 @supports (-ms-accelerator:true) {

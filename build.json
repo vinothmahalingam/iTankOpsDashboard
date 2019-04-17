@@ -2,16 +2,17 @@
 	"config": {
 		"debug": false,
 		"data" : {
-			"app": "NextGen",
+			"app": "SmartAdmin",
+			"app-name": "SmartAdmin WebApp",
 			"user": "Dr. Codex Lantern",
-			"email": "drlantern@nextgen.com",
+			"email": "drlantern@gotbootstrap.com",
 			"twitter": "codexlantern",
 			"avatar": "avatar-admin.png",
 			"bs4v": "4.3",
 			"logo": "logo.png",
 			"logo-m": "logo.png",
-			"version": "1.0.0",
-			"copyright": "2019 © NextGen theme by&nbsp;<a href='http://gotbootstrap.com' class='text-primary fw-500' title='gotbootstrap.com' target='_blank'>Gotbootstrap.com</a>"
+			"version": "4.0.0",
+			"copyright": "2019 © SmartAdmin by&nbsp;<a href='http://gotbootstrap.com' class='text-primary fw-500' title='gotbootstrap.com' target='_blank'>Gotbootstrap.com</a>"
 		},
 		"compile": {
 			"jsUglify": false,
@@ -362,12 +363,12 @@
 									"{$config.path.node_modules}/datatables.net-rowreorder-bs4/css/rowreorder.bootstrap4.css",
 									"{$config.path.node_modules}/datatables.net-scroller-bs4/css/scroller.bootstrap4.css",
 									"{$config.path.node_modules}/datatables.net-select-bs4/css/select.bootstrap4.css",
-									"{$config.path.src}/scss/_addons/datatables/datatables.styles.nextgen.scss"
+									"{$config.path.src}/scss/_addons/datatables/datatables.styles.app.scss"
 								],
 								"scripts": [
 									"{$config.path.node_modules}/datatables.net/js/jquery.dataTables.js",
 									"{$config.path.node_modules}/datatables.net-bs4/js/dataTables.bootstrap4.js",
-									"{$config.path.src}/custom/plugins/datatables/datatables.styles.nextgen.js",
+									"{$config.path.src}/custom/plugins/datatables/datatables.styles.app.js",
 									"{$config.path.node_modules}/datatables.net-autofill/js/dataTables.autofill.js",							
 									"{$config.path.node_modules}/datatables.net-autofill-bs4/js/dataTables.autofill.js",	
 									"{$config.path.node_modules}/datatables.net-buttons/js/dataTables.buttons.js",
@@ -375,7 +376,7 @@
 									"{$config.path.node_modules}/datatables.net-buttons/js/buttons.html5.js",
 									"{$config.path.node_modules}/datatables.net-buttons/js/buttons.print.js",
 									"{$config.path.node_modules}/datatables.net-buttons/js/buttons.colVis.js",
-									"{$config.path.src}/custom/plugins/datatables/datatables.styles.buttons.nextgen.js",
+									"{$config.path.src}/custom/plugins/datatables/datatables.styles.buttons.app.js",
 									"{$config.path.node_modules}/datatables.net-colreorder/js/dataTables.colreorder.js",							
 									"{$config.path.node_modules}/datatables.net-colreorder-bs4/js/dataTables.colreorder.js",	
 									"{$config.path.node_modules}/datatables.net-fixedcolumns/js/dataTables.fixedcolumns.js",							

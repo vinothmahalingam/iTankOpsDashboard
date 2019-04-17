@@ -1,33 +1,32 @@
 <ul id="js-nav-menu" class="nav-menu">
 	<li {{#is pagename "in" "intel_analytics_dashboard,intel_marketing_dashboard,intel_ceo_dashboard,intel_introduction,intel_build_notes"}}class="active open"{{/is}}>
-		<a href="#" title="NextGen Intel" data-filter-tags="nextgen intel"> 
-			{{!-- <img src="img/logo-minify.png" alt="NextGen Logo" class="rounded-circle"> --}}
+		<a href="#" title="Application Intel" data-filter-tags="application intel"> 
 			<i class="fal fa-info-circle"></i>
-			<span class="nav-link-text" data-i18n="nav.nextgen_intel">NextGen Intel</span> 
+			<span class="nav-link-text" data-i18n="nav.application_intel">Application Intel</span> 
 		</a>
 		<ul>
 			<li {{#is pagename "===" "intel_analytics_dashboard"}}class="active"{{/is}}>
-				<a href="intel_analytics_dashboard.html" title="Analytics Dashboard" data-filter-tags="intel analytics dashboard"> 
+				<a href="intel_analytics_dashboard.html" title="Analytics Dashboard" data-filter-tags="application analytics dashboard"> 
 					<span class="nav-link-text" data-i18n="nav.intel_analytics_dashboard">Analytics Dashboard</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "intel_marketing_dashboard"}}class="active"{{/is}}>
-				<a href="intel_marketing_dashboard.html" title="Marketing Dashboard" data-filter-tags="intel marketing dashboard"> 
+				<a href="intel_marketing_dashboard.html" title="Marketing Dashboard" data-filter-tags="application marketing dashboard"> 
 					<span class="nav-link-text" data-i18n="nav.intel_marketing_dashboard">Marketing Dashboard</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "intel_ceo_dashboard"}}class="active"{{/is}}>
-				<a href="intel_ceo_dashboard.html" title="CEO Dashboard" data-filter-tags="intel ceo dashboard"> 
+				<a href="intel_ceo_dashboard.html" title="CEO Dashboard" data-filter-tags="application ceo dashboard"> 
 					<span class="nav-link-text" data-i18n="nav.intel_ceo_dashboard">CEO Dashboard</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "intel_introduction"}}class="active"{{/is}}>
-				<a href="intel_introduction.html" title="Introduction" data-filter-tags="intel introduction"> 
+				<a href="intel_introduction.html" title="Introduction" data-filter-tags="application introduction"> 
 					<span class="nav-link-text" data-i18n="nav.intel_introduction">Introduction</span> 
 				</a>
 			</li>
 			<li {{#is pagename "===" "intel_build_notes"}}class="active"{{/is}}>
-				<a href="intel_build_notes.html" title="Build Notes" data-filter-tags="intel build notes update changelog"> 
+				<a href="intel_build_notes.html" title="Build Notes" data-filter-tags="application build notes update changelog"> 
 					<span class="nav-link-text"> 
 						<span data-i18n="nav.intel_build_notes">Build Notes</span> &nbsp; <i>v{{version}}</i>
 					</span> 
