@@ -505,6 +505,7 @@
 						title: obj.sTitle,
 						name: (obj.data ? obj.data : obj.mData),
 						type: (obj.type ? obj.type : 'text'),
+						defaultValue: (obj.defaultValue ? obj.defaultValue : ''),
 						options: (obj.options ? obj.options : []),
 						msg: (obj.errorMsg ? obj.errorMsg : ''),
 						hoverMsg: (obj.hoverMsg ? obj.hoverMsg : ''),
@@ -554,6 +555,8 @@
 								+ that._quoteattr(columnDefs[j].title)
 								+ "' placeholder='"
 								+ that._quoteattr(columnDefs[j].placeholderMsg)
+								+ "' value='"
+								+ that._quoteattr(columnDefs[j].defaultValue)
 								+ "' data-special='"
 								+ columnDefs[j].special
 								+ "' data-errorMsg='"
