@@ -1,10 +1,9 @@
 {{#> 
 	layouts/main 
-	title="Datatables: FixedHeader" 
-	pagename="datagrid_datatables_fixedheader" 
-	category_1="Datagrid"
-	category_2="Datatables"
-	heading="<i class='subheader-icon fal fa-table'></i> DataTables: <span class='fw-300'>FixedHeader</span> <sup class='badge badge-primary fw-500'>ADDON</sup>" 
+	title="Datatables: ColReorder" 
+	pagename="datatables_colreorder" 
+	category_1="Datatables"
+	heading="<i class='subheader-icon fal fa-table'></i> DataTables: <span class='fw-300'>ColReorder</span> <sup class='badge badge-primary fw-500'>ADDON</sup>" 
 	pagedescription="Create headache free searching, sorting and pagination tables without any complex configuration"
 }}
 
@@ -18,7 +17,7 @@
 		<div id="panel-1" class="panel">
 			<div class="panel-hdr">	
 				<h2>
-					Datatables <span class="fw-300"><i>FixedHeader</i></span> 
+					Example <span class="fw-300"><i>Table</i></span> 
 				</h2>
 				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
@@ -30,15 +29,12 @@
 				<div class="panel-content">									
 					<div class="panel-tag">
 						<p>
-							This example shows Responsive being used with the DataTables FixedHeader extension. FixedHeader will lock a table's header to the top of the table, ensuring that the user always knows what each column relates to.
-						</p>
-						<p>
-							<strong>Known issue:</strong> Because of the limitation of CSS, we cannot have <code> .w-100</code> class embedded to the table whenever we are using <code>fixedHeader: true</code>, therefore the responsiveness maynot be immideate, however you can refresh the page after resizing to snap the table back into place
+							ColReorder is an extension for DataTables that provides the ability to click and drag column header cells, reordering the columns as it does so. You may turn this feature on by adding <code>colReorder: true</code> for your initilization.
 						</p>
 					</div>
 					<!-- datatable start -->
-					<table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
-						<thead class="thead-dark">
+					<table id="dt-basic-example" class="table table-bordered table-hover w-100">
+						<thead class="bg-warning-500">
 							<tr>
 								<th>Name</th>
 								<th>Position</th>
@@ -554,7 +550,7 @@
 		$('#dt-basic-example').dataTable({
 			responsive: true,
 			fixedHeader: true,
-        	paging: false
+        	colReorder: true
 		});
 	});
 </script>

@@ -1,8 +1,5 @@
-//'use strict';
-//var DataTable = $.fn.dataTable;
-
 /* Set the defaults for DataTables buttons */
-$.extend(true, DataTable.Buttons.defaults, {
+$.extend(true, $.fn.dataTable.Buttons.defaults, {
 	dom: {
 		container: {
 			className: 'dt-buttons'

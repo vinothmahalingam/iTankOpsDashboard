@@ -1,10 +1,9 @@
 {{#> 
 	layouts/main 
-	title="Datatables: RowGroup" 
-	pagename="datagrid_datatables_rowgroup" 
-	category_1="Datagrid"
-	category_2="Datatables"
-	heading="<i class='subheader-icon fal fa-table'></i> DataTables: <span class='fw-300'>RowGroup</span> <sup class='badge badge-primary fw-500'>ADDON</sup>" 
+	title="Datatables: ColumnFilter" 
+	pagename="datatables_columnfilter" 
+	category_1="Datatables"
+	heading="<i class='subheader-icon fal fa-table'></i> DataTables: <span class='fw-300'>ColumnFilter</span> <sup class='badge badge-primary fw-500'>ADDON</sup>" 
 	pagedescription="Create headache free searching, sorting and pagination tables without any complex configuration"
 }}
 
@@ -18,7 +17,7 @@
 		<div id="panel-1" class="panel">
 			<div class="panel-hdr">	
 				<h2>
-					Datatables <span class="fw-300"><i>RowGroup</i></span> 
+					Example <span class="fw-300"><i>Table</i></span> 
 				</h2>
 				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
@@ -29,13 +28,11 @@
 			<div class="panel-container show">
 				<div class="panel-content">									
 					<div class="panel-tag">
-						<p>
-							The RowGroup extension for DataTables provides an easy to use row grouping feature for DataTables (the clue is in the name!). It can be configured via the <code>rowGroup</code> parameter and you will almost always wish to use the <code>rowGroup.dataSrc</code> option to tell the software what data point in the table's source data to use to get the grouping information.
-						</p>
+						This example demonstrates FixedHeader being used with individual column filters, placed into a second row of the table's header (using <code>$().clone()</code>).
 					</div>
 					<!-- datatable start -->
-					<table id="dt-basic-example" class="table table-sm table-bordered table-hover table-striped w-100">
-						<thead class="thead-dark">
+					<table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
+						<thead class="bg-highlight">
 							<tr>
 								<th>Name</th>
 								<th>Position</th>
@@ -503,7 +500,7 @@
 								<td>$112,000</td>
 							</tr>
 						</tbody>
-						<tfoot class="thead-themed">
+						<tfoot>
 							<tr>
 								<th>Name</th>
 								<th>Position</th>
@@ -548,14 +545,28 @@
 <script src="js/datagrid/datatables/datatables.bundle.js"></script>
 <script>
 	$(document).ready( function () {
-		$('#dt-basic-example').dataTable({
-			responsive: true,
-			pageLength: 15,			
-			order: [[2, 'desc']],
-			rowGroup: {
-				dataSrc: 2
-			}
+	  	// Setup - add a text input to each footer cell
+		$('#dt-basic-example thead tr').clone(true).appendTo( '#dt-basic-example thead' );
+		$('#dt-basic-example thead tr:eq(1) th').each( function (i) {
+			var title = $(this).text();
+			$(this).html( '<input type="text" class="form-control form-control-sm" placeholder="Search '+title+'" />' );
+	 
+			$( 'input', this ).on( 'keyup change', function () {
+				if ( table.column(i).search() !== this.value ) {
+					table
+						.column(i)
+						.search( this.value )
+						.draw();
+				}
+			} );
 		});
+	 
+		var table = $('#dt-basic-example').DataTable({
+			//responsive: true,
+			orderCellsTop: true,
+			fixedHeader: true,
+		});
+
 	});
 </script>
 

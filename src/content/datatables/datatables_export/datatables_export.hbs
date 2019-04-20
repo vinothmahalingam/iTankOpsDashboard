@@ -1,25 +1,25 @@
 {{#> 
 	layouts/main 
-	title="Datatables: Buttons" 
-	pagename="datagrid_datatables_buttons" 
-	category_1="Datagrid"
-	category_2="Datatables"
-	heading="<i class='subheader-icon fal fa-table'></i> DataTables: <span class='fw-300'>Buttons</span> <sup class='badge badge-primary fw-500'>ADDON</sup>" 
-	pagedescription="Create headache free searching, sorting and pagination tables without any complex configuration"
+	title="Datatables : Export" 
+	pagename="datatables_export" 
+	category_1="Datatables"
+	heading="<i class='subheader-icon fal fa-table'></i> DataTables: <span class='fw-300'>Export</span> <sup class='badge badge-primary fw-500'>ADDON</sup>" 
+	pagedescription="Export datatables to PDF, Excel, and CSV formats - without any hassle!"
 }}
 
 {{#*inline "head-block"}}
-	<!-- contains : dataTables.bootstrap4.css + responsive.bootstrap4.css -->
 	<link rel="stylesheet" media="screen, print" href="css/datagrid/datatables/datatables.bundle.css">
+	<link rel="stylesheet" media="screen, print" href="css/fa-solid.css">
 {{/inline}}
 
 {{#*inline "content-block"}}
+
 <div class="row">
 	<div class="col-xl-12">
 		<div id="panel-1" class="panel">
 			<div class="panel-hdr">	
 				<h2>
-					Datatables <span class="fw-300"><i>Buttons</i></span> 
+					Example <span class="fw-300"><i>Table</i></span> 
 				</h2>
 				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
@@ -30,16 +30,25 @@
 			<div class="panel-container show">
 				<div class="panel-content">									
 					<div class="panel-tag">
+						<p>Exporting data from a table can often be a key part of a complex application. The Buttons extension for DataTables provides three plug-ins that provide overlapping functionality for data export:</p>
+						<ul>
+							<li>
+								HTML5 export buttons - makes use of HTML5 APIs to create files client-side
+							</li>
+							<li class="font-italic">
+								<del>Flash export buttons - uses Adobe Flash for legacy browsers</del>
+							</li>
+							<li>
+								Print button
+							</li>
+						</ul>
 						<p>
-							The Buttons extension provides a powerful set of selector options so you can select which buttons to perform actions upon. This is very similar to the core DataTables <code>rows()</code>, <code>columns()</code> and <code>cells()</code> which provide the ability to select elements from the table, and more generally like jQuery selectors, so you will be immediately familiar with this interface.
-						</p>
-						<p>
-							Learn more about the buttons api at <a href="https://datatables.net/reference/api/buttons()" target="_blank">https://datatables.net/reference/api/buttons()</a>
+							Since {{app-name}} is built for the "next generation" browsers, we removed the flash (.swf) alternative plugin due to security reasons and ActionScript's memory leakage
 						</p>
 					</div>
 					<!-- datatable start -->
 					<table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
-						<thead>
+						<thead class="bg-primary-600">
 							<tr>
 								<th>Name</th>
 								<th>Position</th>
@@ -550,10 +559,22 @@
 	+ datatables.styles.app.js
 	+ datatables.styles.buttons.app.js -->
 <script src="js/datagrid/datatables/datatables.bundle.js"></script>
+
+<!-- datatbles buttons bundle contains: 
+	+ "jszip.js",
+	+ "pdfmake.js",
+	+ "vfs_fonts.js"	
+	NOTE: 	The file size is pretty big, but you can always use the
+			build.json file to deselect any components you do not need under "export" -->
+<script src="js/datagrid/datatables/datatables.export.js"></script>
+
 <script>
 	$(document).ready( function () {
+
+		// initialize datatable
 		$('#dt-basic-example').dataTable({
 			responsive: true,
+			lengthChange: false,
 			dom:
 				/*	--- Layout Structure 
 					--- Options
@@ -577,37 +598,49 @@
 					https://datatables.net/reference/option/dom
 					--------------------------------------
 				 */
-				"<'row mb-3'<'col-sm-12 col-md-6 d-flex align-items-center justify-content-start'f><'col-sm-12 col-md-6 d-flex align-items-center justify-content-end'B>>" +
+				"<'row mb-3'<'col-sm-12 col-md-6 d-flex align-items-center justify-content-start'f><'col-sm-12 col-md-6 d-flex align-items-center justify-content-end'lB>>" +
 				"<'row'<'col-sm-12'tr>>" +
 				"<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
 			buttons: [
-				{
+				/*{
 					extend:    'colvis',
 					text:      'Column Visibility',
 					titleAttr: 'Col visibility',
-					className: 'btn-outline-default'
+					className: 'mr-sm-3'
+				},*/
+				{
+					extend:    'pdfHtml5',
+					text:      'PDF',
+					titleAttr: 'Generate PDF',
+					className: 'btn-outline-danger btn-sm mr-1'
+				},
+				{
+					extend:    'excelHtml5',
+					text:      'Excel',
+					titleAttr: 'Generate Excel',
+					className: 'btn-outline-success btn-sm mr-1'
 				},
 				{
 					extend:    'csvHtml5',
 					text:      'CSV',
 					titleAttr: 'Generate CSV',
-					className: 'btn-outline-default'
+					className: 'btn-outline-primary btn-sm mr-1'
 				},
 				{
 					extend:    'copyHtml5',
 					text:      'Copy',
 					titleAttr: 'Copy to clipboard',
-					className: 'btn-outline-default'
+					className: 'btn-outline-primary btn-sm mr-1'
 				},
 				{
 					extend:    'print',
 					text:      'Print',
 					titleAttr: 'Print Table',
-					className: 'btn-outline-default'
+					className: 'btn-outline-primary btn-sm'
 				}
-				
-			]	
+			]
 		});
+
 	});
 </script>
 

@@ -1,15 +1,13 @@
 {{#> 
 	layouts/main 
-	title="Datatables: Autofill" 
-	pagename="datagrid_datatables_autofill" 
-	category_1="Datagrid"
-	category_2="Datatables"
-	heading="<i class='subheader-icon fal fa-table'></i> DataTables: <span class='fw-300'>Autofill</span> <sup class='badge badge-primary fw-500'>ADDON</sup>" 
+	title="Datatables: Select" 
+	pagename="datatables_select" 
+	category_1="Datatables"
+	heading="<i class='subheader-icon fal fa-table'></i> DataTables: <span class='fw-300'>Select</span> <sup class='badge badge-primary fw-500'>ADDON</sup>" 
 	pagedescription="Create headache free searching, sorting and pagination tables without any complex configuration"
 }}
 
 {{#*inline "head-block"}}
-	<!-- contains : dataTables.bootstrap4.css + responsive.bootstrap4.css -->
 	<link rel="stylesheet" media="screen, print" href="css/datagrid/datatables/datatables.bundle.css">
 {{/inline}}
 
@@ -19,7 +17,7 @@
 		<div id="panel-1" class="panel">
 			<div class="panel-hdr">	
 				<h2>
-					Datatables <span class="fw-300"><i>Basic</i></span> 
+					Example <span class="fw-300"><i>Table</i></span> 
 				</h2>
 				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
@@ -30,18 +28,35 @@
 			<div class="panel-container show">
 				<div class="panel-content">									
 					<div class="panel-tag">
-						<p>The click-to-drag auto fill drag handle can be attached to the table cells using a number of different methods, depending on how you wish the end user to interact with your table. This option provides the ability to switch between the various options which are detailed below:</p>
+						<p>
+							Select provides a number of buttons that can be used with the Buttons extension for DataTables. Buttons is a framework providing common options, styling and API methods for buttons that can control a DataTable.
+						</p>
 						<ul>
 							<li>
-								<code>click</code> -  Display when a cell is clicked upon
+								<code>selected</code> - Enabled only when one or more items are selected
 							</li>
 							<li>
-								<code>focus</code> - Display when a cell gains focus - for integration with KeyTable
+								<code>selectedSingle</code> - Enabled only when a single item is selected
 							</li>
 							<li>
-								<code>hover</code> - Display when a cell is hovered over
+								<code>selectAll</code> - Select all rows
+							</li>
+							<li>
+								<code>selectNone</code> - Deselect all rows
+							</li>
+							<li>
+								<code>selectRows</code> - Select rows
+							</li>
+							<li>
+								<code>selectColumns</code> - Select columns
+							</li>
+							<li>
+								<code>selectCells</code> - Select cells
 							</li>
 						</ul>
+						<p>
+							Learn more about the buttons api at <a href="https://datatables.net/extensions/select/" target="_blank">https://datatables.net/extensions/select/</a>
+						</p>
 					</div>
 					<!-- datatable start -->
 					<table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
@@ -560,9 +575,71 @@
 	$(document).ready( function () {
 		$('#dt-basic-example').dataTable({
 			responsive: true,
-			autoFill: {
-				focus: 'hover'
-			}
+			dom:
+				/*	--- Layout Structure 
+					--- Options
+					l	-	length changing input control
+					f	-	filtering input
+					t	-	The table!
+					i	-	Table information summary
+					p	-	pagination control
+					r	-	processing display element
+					B	-	buttons
+					R	-	ColReorder
+					S	-	Select
+
+					--- Markup
+					< and >				- div element
+					<"class" and >		- div with a class
+					<"#id" and >		- div with an ID
+					<"#id.class" and >	- div with an ID and a class
+
+					--- Further reading
+					https://datatables.net/reference/option/dom
+					--------------------------------------
+				 */
+				"<'row mb-3'<'col-sm-12 col-md-6 d-flex align-items-center justify-content-start'f><'col-sm-12 col-md-6 d-flex align-items-center justify-content-end'B>>" +
+				"<'row'<'col-sm-12'tr>>" +
+				"<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+			buttons: [
+				{
+					extend:    'selected',
+					text:      'Selected',
+					className: 'btn-outline-secondary btn-sm'
+				},
+				{
+					extend:    'selectedSingle',
+					text:      'Single',
+					className: 'btn-outline-secondary btn-sm'
+				},
+				{
+					extend:    'selectAll',
+					text:      'All',
+					className: 'btn-outline-secondary btn-sm'
+				},
+				{
+					extend:    'selectNone',
+					text:      'Deselect',
+					className: 'btn-outline-secondary btn-sm'
+				},
+				{
+					extend:    'selectRows',
+					text:      'Rows',
+					className: 'btn-outline-secondary btn-sm'
+				},
+				{
+					extend:    'selectColumns',
+					text:      'Columns',
+					className: 'btn-outline-secondary btn-sm'
+				},
+				{
+					extend:    'selectCells',
+					text:      'Cells',
+					className: 'btn-outline-secondary btn-sm'
+				}
+				
+			],
+			select: true	
 		});
 	});
 </script>

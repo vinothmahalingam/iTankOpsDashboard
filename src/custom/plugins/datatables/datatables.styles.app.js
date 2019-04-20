@@ -1,14 +1,11 @@
-'use strict';
-var DataTable = $.fn.dataTable;
-
 /* Set the defaults for DataTables extended classes */
-$.extend( $.fn.dataTableExt.oStdClasses, {
+$.extend(true, $.fn.dataTableExt.oStdClasses, {
 	"sFilterInput": "form-control border-top-left-radius-0 border-bottom-left-radius-0 ml-0 width-lg shadow-inset-1",
 	"sLengthSelect": "form-control custom-select"
 });	
 
 /* Set the defaults for DataTables initialisation */
-$.extend(true, DataTable.defaults, {
+$.extend(true, $.fn.dataTable.defaults, {
 	/*	--- Layout Structure 
 		--- Options
 		l	-	length changing input control
@@ -30,11 +27,11 @@ $.extend(true, DataTable.defaults, {
 		--- Further reading
 		https://datatables.net/reference/option/dom
 		--------------------------------------
-	 */
-	lengthMenu: [[10, 15, 25, 50, 100, -1], [10, 15, 25, 50, 100, "All"]],
+	*/
 	dom: "<'row mb-3'<'col-sm-12 col-md-6 d-flex align-items-center justify-content-start'f><'col-sm-12 col-md-6 d-flex align-items-center justify-content-end'l>>" +
 		"<'row'<'col-sm-12'tr>>" +
 		"<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+	lengthMenu: [[10, 15, 25, 50, 100, -1], [10, 15, 25, 50, 100, "All"]],	
 	language: {
 		/* change the default text for 'next' and 'previous' with icons */
 		paginate: {

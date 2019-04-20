@@ -1,10 +1,9 @@
 {{#> 
 	layouts/main 
-	title="Datatables: Select" 
-	pagename="datagrid_datatables_select" 
-	category_1="Datagrid"
-	category_2="Datatables"
-	heading="<i class='subheader-icon fal fa-table'></i> DataTables: <span class='fw-300'>Select</span> <sup class='badge badge-primary fw-500'>ADDON</sup>" 
+	title="Datatables: Buttons" 
+	pagename="datatables_buttons" 
+	category_1="Datatables"
+	heading="<i class='subheader-icon fal fa-table'></i> DataTables: <span class='fw-300'>Buttons</span> <sup class='badge badge-primary fw-500'>ADDON</sup>" 
 	pagedescription="Create headache free searching, sorting and pagination tables without any complex configuration"
 }}
 
@@ -18,7 +17,7 @@
 		<div id="panel-1" class="panel">
 			<div class="panel-hdr">	
 				<h2>
-					Datatables <span class="fw-300"><i>Buttons</i></span> 
+					Example <span class="fw-300"><i>Table</i></span> 
 				</h2>
 				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
@@ -30,33 +29,10 @@
 				<div class="panel-content">									
 					<div class="panel-tag">
 						<p>
-							Select provides a number of buttons that can be used with the Buttons extension for DataTables. Buttons is a framework providing common options, styling and API methods for buttons that can control a DataTable.
+							The Buttons extension provides a powerful set of selector options so you can select which buttons to perform actions upon. This is very similar to the core DataTables <code>rows()</code>, <code>columns()</code> and <code>cells()</code> which provide the ability to select elements from the table, and more generally like jQuery selectors, so you will be immediately familiar with this interface.
 						</p>
-						<ul>
-							<li>
-								<code>selected</code> - Enabled only when one or more items are selected
-							</li>
-							<li>
-								<code>selectedSingle</code> - Enabled only when a single item is selected
-							</li>
-							<li>
-								<code>selectAll</code> - Select all rows
-							</li>
-							<li>
-								<code>selectNone</code> - Deselect all rows
-							</li>
-							<li>
-								<code>selectRows</code> - Select rows
-							</li>
-							<li>
-								<code>selectColumns</code> - Select columns
-							</li>
-							<li>
-								<code>selectCells</code> - Select cells
-							</li>
-						</ul>
 						<p>
-							Learn more about the buttons api at <a href="https://datatables.net/extensions/select/" target="_blank">https://datatables.net/extensions/select/</a>
+							Learn more about the buttons api at <a href="https://datatables.net/reference/api/buttons()" target="_blank">https://datatables.net/reference/api/buttons()</a>
 						</p>
 					</div>
 					<!-- datatable start -->
@@ -604,43 +580,31 @@
 				"<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
 			buttons: [
 				{
-					extend:    'selected',
-					text:      'Selected',
-					className: 'btn-outline-secondary btn-sm'
+					extend:    'colvis',
+					text:      'Column Visibility',
+					titleAttr: 'Col visibility',
+					className: 'btn-outline-default'
 				},
 				{
-					extend:    'selectedSingle',
-					text:      'Single',
-					className: 'btn-outline-secondary btn-sm'
+					extend:    'csvHtml5',
+					text:      'CSV',
+					titleAttr: 'Generate CSV',
+					className: 'btn-outline-default'
 				},
 				{
-					extend:    'selectAll',
-					text:      'All',
-					className: 'btn-outline-secondary btn-sm'
+					extend:    'copyHtml5',
+					text:      'Copy',
+					titleAttr: 'Copy to clipboard',
+					className: 'btn-outline-default'
 				},
 				{
-					extend:    'selectNone',
-					text:      'Deselect',
-					className: 'btn-outline-secondary btn-sm'
-				},
-				{
-					extend:    'selectRows',
-					text:      'Rows',
-					className: 'btn-outline-secondary btn-sm'
-				},
-				{
-					extend:    'selectColumns',
-					text:      'Columns',
-					className: 'btn-outline-secondary btn-sm'
-				},
-				{
-					extend:    'selectCells',
-					text:      'Cells',
-					className: 'btn-outline-secondary btn-sm'
+					extend:    'print',
+					text:      'Print',
+					titleAttr: 'Print Table',
+					className: 'btn-outline-default'
 				}
 				
-			],
-			select: true	
+			]	
 		});
 	});
 </script>
