@@ -1,6 +1,6 @@
 {{#> 
 	layouts/main 
-	title="Datatables: AltEditor (beta)" 
+	title="AltEditor (beta)" 
 	pagename="datatables_alteditor" 
 	category_1="Datatables"
 	heading="<i class='subheader-icon fal fa-table'></i> DataTables: <span class='fw-300'>AltEditor (beta)</span> <sup class='badge badge-primary fw-500'>ADDON</sup>" 
@@ -28,20 +28,6 @@
 				<p>
 					DataTables AltEditor is a MIT licensed free editor. The plugin adds capabilities to add, edit and delete rows in your datatables through the use of modals. We have modified the editor extensively to be used with {{app-name}} and make your job a little easier. This current version of AltEditor is exclusive to {{app}} and we intend to keep it up to date to be compatible with DataTables.
 				</p>
-				<p>
-					The datatable accepts the following callback functions as arguments:
-				</p>
-				<ul>
-					<li>
-						onAddRow(datatable, rowdata, success, error)
-					</li>
-					<li>
-						onEditRow(datatable, rowdata, success, error)
-					</li>
-					<li>
-						onDeleteRow(datatable, rowdata, success, error)
-					</li>
-				</ul>
 				<p class="m-0">
 					You can find the definitions of its elements on their <a href="https://github.com/KasperOlesen/DataTable-AltEditor" target="_blank">official github</a> page. Note: Only use the exclusive plugin included with this WebApp as the one on github contains a lot of bugs.
 				</p>
@@ -66,7 +52,10 @@
 				<div class="panel-content">									
 					<div class="panel-tag">
 						<p>
-							In the most common case, these function should call $.ajax as expected by the webservice. The two functions success and error should be passed as arguments to $.ajax. Webservice must return the modified row in JSON format, because the success() function expects this. Otherwise you have to write your own success() callback (e.g. refreshing the whole table).
+							Datatable accepts the following callback functions as arguments: <code>onAddRow(datatable, rowdata, success, error)</code>, <code>onEditRow(datatable, rowdata, success, error)</code>, <code>onDeleteRow(datatable, rowdata, success, error)</code>
+						</p>
+						<p>
+							In the most common case, these function should call <code>$.ajax </code>as expected by the webservice. The two functions success and error should be passed as arguments to <code>$.ajax</code>. Webservice must return the modified row in JSON format, because the success() function expects this. Otherwise you have to write your own success() callback (e.g. refreshing the whole table).
 						</p>
 					</div>
 					<div class="row">
@@ -112,50 +101,65 @@
 	+ datatables.styles.app.js
 	+ datatables.styles.buttons.app.js -->
 <script src="js/datagrid/datatables/datatables.bundle.js"></script>
-<script src="../src/custom/plugins/datatables-alteditor/datatables-alteditor.js"></script>
 
 <script>
 
 	$(document).ready( function () {
 
-		//////////////////////////////////////////
-		/*
-		IMPORTANT - COLUMNDEFS
-
-		Always add the DT_RowId row and always add it as the first column!
-		- Visibility state doesnt matter but searchable
-		  state should be set to the same value.
-
-		Always add a type!
-		Current supported type parameters:
-		text      - for editable textfields (including numbers, emails etc.)
-		select    - for select menues, if used then options should be specified aswell
-		readonly  - for fields with readonly attribute.
-
-		Other parameters:
-
-		MANDATORY:
-		id        - Should be set to same value as data-parameter.
-		data      - Identifier of value in data from AJAX call.
-		title     - Title of column.
-
-		OPTIONAL:
-		pattern   - For inputvalidation of the textfield. Specify a regex for the pattern to use.
-		errorMsg  - Message that is shown when mismatch with pattern is found.
-		hoverMsg  - Message that is shown on mouseover on text fields (hints).
-		unique    - Data that can only exist once in the datatable. Shows an error on input if found.
-		special   - Only working setting is "portRange". This is in relation to input validation.
-					If used then validation will check for a portrange in format (startPort:endPort)
-					and validate both with the supplied regex.
+		/* 
+		NOTES:
+			
+			Column id
+			---------------------------------------------------
+			Please always keep in mind that DataTable framework allows two different kinds of "rows": Arrays and Objects. In first case columns are indexed through integers; in second case columns are indexed by their attribute name. Usually JSON's use the Object approach, but we cannot be sure.
 
 
+			Row key
+			---------------------------------------------------
+			There is no default key in the table. Inside your callback functions, probably you will need a row key to build URL's, in that case you can get them from the rowdata parameter.
+
+
+		COLUMN DEFINITIONS:
+
+			title = "string" - title name on table header th and on form labels
+			---------------------------------------------------
+			id = "string" - id assigned to imput element when editing/adding in modal
+			---------------------------------------------------
+			data = "string"  - data name from the dataset
+			---------------------------------------------------
+			type = "text" | "select" | "hidden" | "readonly"  - Type of HTML input to be shown.
+			---------------------------------------------------
+			hoverMsg = "some msg" - The message will appear as a tooltip over the input field.
+			---------------------------------------------------
+			pattern = r.e.  - If type is "input", the typed text will be matched against given regular expression, before submit.
+			---------------------------------------------------
+			msg = "some string" - An error message that is displayed in case pattern is not matched. Set HTML "data-errorMsg" attribute.
+			---------------------------------------------------
+			maxLength = integer - If type is "input", set HTML "maxlength" attribute.
+			---------------------------------------------------
+			options = ["a", "b", "c"] - If type is "select", the options that shall be presented.
+			---------------------------------------------------
+			select2 = {} - If type is "select", enable a select2 component. Select2 jQuery plugin must be linked. More select2 configuration options may be passed within the array.
+			---------------------------------------------------
+			datepicker = {} - If type is "text", enable a datepicker component. jQuery-UI plugin must be linked. More datepicker configuration options may be passed within the array.
+			---------------------------------------------------
+			multiple = true | false - Set HTML "multiple" attribute (for use with select2).
+			---------------------------------------------------
+			unique = true | false - Ensure that no two rows have the same value. The check is performed client side, not server side. Set HTML "data-unique" attribute. (Probably there's some issue with this).
+			---------------------------------------------------
+			uniqueMsg = "some string" - An error message that is displayed when the unique constraint is not respected. Set HTML "data-uniqueMsg" attribute.
+			---------------------------------------------------
+			special = "any string" - Set HTML "data-special" attribute (don't know what's that needed for).
+			---------------------------------------------------
+			defaultValue = "any string" - Adds a default value when adding a row
+			---------------------------------------------------
 		*/
-		//////////////////////////////////////////
 
-		//Example of column definitions.
-
+		
+		// Event Lot
 		var events = $("#app-eventlog");
 
+		// Column Definitions
 		var columnSet = [{
 			title: "RowId",
 			id: "DT_RowId",
@@ -242,16 +246,20 @@
 			defaultValue: "0"
 		}]
 
-
+		/* start data table */
 		var myTable = $('#dt-basic-example').dataTable({
+			/* check datatable buttons page for more info on how this DOM structure works */
 			dom: "<'row mb-3'<'col-sm-12 col-md-6 d-flex align-items-center justify-content-start'f><'col-sm-12 col-md-6 d-flex align-items-center justify-content-end'B>>" +
 				"<'row'<'col-sm-12'tr>>" +
 				"<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
-			ajax: "server-demo.json", //Receiving data from this source. 
-			columns: columnSet, //Columns defined above.
-			select: 'single', //Only single column selection is implemented.
-			altEditor: true, //Enable altEditor.
-			responsive: true, //Enable responsiveness.
+			ajax: "server-demo.json",
+			columns: columnSet,
+			/* selecting multiple rows will not work */
+			select: 'single',
+			/* altEditor at work */
+			altEditor: true,
+			responsive: true,
+			/* buttons uses classes from bootstrap, see buttons page for more details */
 			buttons: [
 				{
 					extend: 'selected',
@@ -320,10 +328,9 @@
 						return '<div class="has-popover d-flex align-items-center"><span class="d-inline-block rounded-circle mr-2 ' + package[data].class + '" style="width:15px; height:15px;"></span><span>' + package[data].title + '</span></div>';
 					},
 				},
-			],	
-			/**
-			 * Default callback for insertion: mock webservice, always success.
-			 */
+			],
+
+			/* default callback for insertion: mock webservice, always success */
 			onAddRow: function(dt, rowdata, success, error) {
 				console.log("Missing AJAX configuration for INSERT");
 				success(rowdata);
@@ -331,10 +338,6 @@
 				// demo only below:
 				events.prepend('<p class="text-success fw-500">'+JSON.stringify(rowdata, null, 4) + '</p>'); 
 			},
-
-			/**
-			 * Default callback for editing: mock webservice, always success.
-			 */
 			onEditRow: function(dt, rowdata, success, error) {
 				console.log("Missing AJAX configuration for UPDATE");
 				success(rowdata);
@@ -342,10 +345,6 @@
 				// demo only below:
 				events.prepend('<p class="text-info fw-500">'+JSON.stringify(rowdata, null, 4) + '</p>'); 
 			},
-
-			/**
-			 * Default callback for deletion: mock webservice, always success.
-			 */
 			onDeleteRow: function(dt, rowdata, success, error) {
 				console.log("Missing AJAX configuration for DELETE");
 				success(rowdata);
@@ -354,13 +353,6 @@
 				events.prepend('<p class="text-danger fw-500">'+JSON.stringify(rowdata, null, 4) + '</p>'); 
 			},		
 		});
- 
-
-		//Activate dynamic popovers
-		/*$('body').popover({
-			selector: '.has-popover',
-			trigger: 'hover'
-		});*/
 
 	});
 </script>

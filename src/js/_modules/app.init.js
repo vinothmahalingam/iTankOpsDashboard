@@ -349,9 +349,7 @@ var initApp = (function(app) {
 
 				} else {
 					console.log("$.fn.slimScroll...NOT FOUND");
-				}
-
-				/* fix app height (only needs to be called once) */				
+				}	
 
 				break;			
 
@@ -757,6 +755,11 @@ var initApp = (function(app) {
 						/* trigger class change */
 						$(target).toggleClass( dataClass );
 
+						/* this allows us to add active class for dropdown toggle components */
+						if ( $(this).hasClass('dropdown-item') ) {
+							$(this).toggleClass('active');
+						}
+
 						/* focus input if available 
 						   FAQ: We had to put a delay timer to slow it down for chrome
 						*/
@@ -771,14 +774,6 @@ var initApp = (function(app) {
 							initApp.checkNavigationOrientation();
 							initApp.saveSettings();
 						}
-
-						/* fix app height when switching nav from top, side, minify and takes care of some ipad bugs */
-						/*if ( dataClass === 'nav-function-top' || 
-							 dataClass === 'nav-function-minify' && myapp_config.root_.hasClass('mod-main-boxed') || 
-							 dataClass === 'nav-function-fixed' ) {
-
-							initApp.calculateAppHeight();
-						}*/
 
 						break;
 

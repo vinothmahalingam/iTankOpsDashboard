@@ -44,7 +44,8 @@
     "pace-js": "^1.0.2",
     "pdfmake": "^0.1.54",
     "peity": "^3.3.0",
-    "popper.js": "^1.15.0"
+    "popper.js": "^1.15.0",
+    "toastr": "^2.1.4"
   },
   "devDependencies": {
     "event-stream": "^4.0.1",

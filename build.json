@@ -395,7 +395,8 @@
 									"{$config.path.node_modules}/datatables.net-scroller/js/dataTables.scroller.js",							
 									"{$config.path.node_modules}/datatables.net-scroller-bs4/js/scroller.bootstrap4.js",
 									"{$config.path.node_modules}/datatables.net-select/js/dataTables.select.js",							
-									"{$config.path.node_modules}/datatables.net-select-bs4/js/select.bootstrap4.js"	
+									"{$config.path.node_modules}/datatables.net-select-bs4/js/select.bootstrap4.js",
+									"{$config.path.src}/custom/plugins/datatables-alteditor/datatables-alteditor.js"
 								]
 							},
 							"bundle": {
@@ -414,6 +415,23 @@
 							"bundle": {
 								"scripts": "{$config.output}/js/datagrid/datatables/datatables.export.js"
 							}
+						}
+					}
+				},
+				"notifications" : {
+					"toastr" : {
+						"src": {
+							"styles":[
+								"{$config.path.node_modules}/toastr/toastr.scss",
+								"{$config.path.src}/scss/_addons/toastr/toastr-custom.scss"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/toastr/toastr.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/notifications/toastr/toastr.css",
+							"scripts": "{$config.output}/js/notifications/toastr/toastr.js"
 						}
 					}
 				}
