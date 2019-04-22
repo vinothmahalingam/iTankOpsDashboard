@@ -40,7 +40,8 @@
 
 .toast-warning {
 	background-color: $warning-700;
-	& > div {
+	& > div,
+	.toast-close-button {
 		color: $black;
 	}
 	&:before {
@@ -53,7 +54,7 @@
 	padding: 1rem 1rem 1rem 3.5rem;
 	border-radius: $border-radius;
 	background-image: none !important;
-
+	width: 22rem;
 	opacity: 0.9;
 
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -62,4 +63,18 @@
 		box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 	}
 
+}
+
+.toast-close-button {
+	top: -0.7em;
+}
+
+
+@media all and (min-width: 241px) and (max-width: 480px) {
+  #toast-container > .toast {
+    width: 18rem;
+  }
+  #toast-container .toast-close-button {
+    top: -0.7em;
+  }
 }

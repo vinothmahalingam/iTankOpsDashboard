@@ -433,6 +433,21 @@
 							"styles": "{$config.output}/css/notifications/toastr/toastr.css",
 							"scripts": "{$config.output}/js/notifications/toastr/toastr.js"
 						}
+					},
+					"sweetalert2" : {
+						"src": {
+							"styles":[
+								"{$config.path.src}/scss/_addons/sweetalert2/sweetalert2.scss"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/es6-promise-polyfill/promise.js",
+								"{$config.path.node_modules}/sweetalert2/dist/sweetalert2.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/notifications/sweetalert2/sweetalert2.bundle.css",
+							"scripts": "{$config.output}/js/notifications/sweetalert2/sweetalert2.bundle.js"
+						}
 					}
 				}
 			}
