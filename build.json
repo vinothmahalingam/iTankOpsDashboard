@@ -110,8 +110,7 @@
 						},
 						"app-media": {
 							"media" : [
-								"{$config.path.src}/custom/video/*.mp4",
-								"{$config.path.src}/custom/video/*.webm"
+								"{$config.path.src}/custom/media/**"
 							]
 						}
 					}

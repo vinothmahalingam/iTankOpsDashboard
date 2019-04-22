@@ -224,6 +224,28 @@ var initApp = (function(app) {
 	};
 
 	/*
+	 * Play Sounds
+	 * usage: initApp.playSound(path, sound);
+	 * @param  {[string]} path 
+	 * @param  {[string]} sound 
+	 */
+	app.playSound = function(path, sound) {
+		var audioElement = document.createElement('audio');
+		if (navigator.userAgent.match('Firefox/'))
+			audioElement.setAttribute('src', path + "/" + sound + '.ogg');
+		else
+			audioElement.setAttribute('src', path + "/" + sound + '.mp3');
+
+		//$.get();// <-- ??
+		audioElement.addEventListener("load", function () {
+			audioElement.play();
+		}, true);
+
+		audioElement.pause();
+		audioElement.play();
+	}
+
+	/*
 	 * Checks and sets active settings selections
 	 * DOC: ?
 	 */
@@ -991,6 +1013,20 @@ var initApp = (function(app) {
 						}
 
 						break; 
+				
+					/**
+					 * app 'playsound' trigger
+					 * usage: data-action="playsound" data-soundpath="media/sound/" data-soundfile="filename" (no file extensions)
+					 **/
+					case ( actiontype === 'playsound' ):
+
+						var path = $(this).attr('data-soundpath') || "media/sound/",
+							sound = $(this).attr('data-soundfile');
+
+						initApp.playSound(path,sound);
+
+						break;
+
 				}
 
 				/* hide tooltip if any present */

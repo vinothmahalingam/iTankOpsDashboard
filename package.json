@@ -40,7 +40,7 @@
     "jquery-ui": "^1.12.1",
     "jquery.flot.tooltip": "^0.9.0",
     "jszip": "^3.2.1",
-    "lightgallery.js": "^1.1.3",
+    "lightgallery": "^1.6.12",
     "node-waves": "^0.7.6",
     "pace-js": "^1.0.2",
     "pdfmake": "^0.1.54",
