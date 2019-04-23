@@ -448,6 +448,22 @@
 							"scripts": "{$config.output}/js/notifications/sweetalert2/sweetalert2.bundle.js"
 						}
 					}
+				},
+				"miscellaneous" : {
+					"lightgallery" : {
+						"src": {
+							"styles":[
+								"{$config.path.src}/scss/_addons/lightgallery/lightgallery.scss"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/lightgallery/dist/js/lightgallery.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/miscellaneous/lightgallery/lightgallery.css",
+							"scripts": "{$config.output}/js/miscellaneous/lightgallery/lightgallery.js"
+						}
+					}
 				}
 			}
 		},
