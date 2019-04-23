@@ -458,7 +458,13 @@
 							],
 							"scripts": [
 								"{$config.path.node_modules}/justifiedGallery/dist/js/jquery.justifiedGallery.js",
-								"{$config.path.node_modules}/lightgallery/dist/js/lightgallery-all.js"
+								"{$config.path.node_modules}/lightgallery/src/js/lightgallery.js",
+								"{$config.path.node_modules}/lightgallery/modules/lg-autoplay.js",
+								"{$config.path.node_modules}/lightgallery/modules/lg-fullscreen.js",
+								"{$config.path.node_modules}/lightgallery/modules/lg-hash.js",
+								"{$config.path.node_modules}/lightgallery/modules/lg-pager.js",
+								"{$config.path.node_modules}/lightgallery/modules/lg-thumbnail.js",
+								"{$config.path.node_modules}/lightgallery/modules/lg-zoom.js"
 							]
 						},
 						"bundle": {
