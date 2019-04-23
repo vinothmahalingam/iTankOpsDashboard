@@ -12,7 +12,7 @@ Licensee:
 Sunnyat Ahmmed
 
 Item Title:
-Computer programmer (aka "img/avatars/avatar-admin.png")
+Computer programmer (aka "img/demo/avatars/avatar-admin.png")
 
 Item URL:
 https://photodune.net/item/computer-programmer/2360811

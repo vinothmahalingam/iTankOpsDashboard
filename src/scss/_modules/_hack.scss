@@ -1,16 +1,3 @@
-/*  Counters IE bug
-	DOC: If you've ever used CSS transitions on structural elements on your page, 
-	you may have noticed a case where a transition occur immideately after page load.
-	As a result the user may experience the illusion of "broken page elements"
-
-	Below solution insures that pace's indication of "everything loaded" before applying the CSS transitions
-*/
-.pace-running * {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
-}
 /*
 
 	DOC: In Bootstrap there is a small snippet added by the team for IE10 in windows 8 the 
