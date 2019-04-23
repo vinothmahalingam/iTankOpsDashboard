@@ -453,15 +453,17 @@
 					"lightgallery" : {
 						"src": {
 							"styles":[
+								"{$config.path.node_modules}/justifiedGallery/dist/css/justifiedGallery.css",
 								"{$config.path.src}/scss/_addons/lightgallery/lightgallery.scss"
 							],
 							"scripts": [
-								"{$config.path.node_modules}/lightgallery/dist/js/lightgallery.js"
+								"{$config.path.node_modules}/justifiedGallery/dist/js/jquery.justifiedGallery.js",
+								"{$config.path.node_modules}/lightgallery/dist/js/lightgallery-all.js"
 							]
 						},
 						"bundle": {
-							"styles": "{$config.output}/css/miscellaneous/lightgallery/lightgallery.css",
-							"scripts": "{$config.output}/js/miscellaneous/lightgallery/lightgallery.js"
+							"styles": "{$config.output}/css/miscellaneous/lightgallery/lightgallery.bundle.css",
+							"scripts": "{$config.output}/js/miscellaneous/lightgallery/lightgallery.bundle.js"
 						}
 					}
 				}
