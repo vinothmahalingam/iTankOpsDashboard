@@ -417,7 +417,7 @@
                     /**
                      * Add a button wrapper to the header.
                      **/
-                    if (closeButton !== '' || fullscreenBtn !== '' || toggleBtn !== '') {
+                    if (closeButton !== '' || fullscreenButton !== '' || collapseButton !== '') {
                         thisHeader.append('<div class="panel-toolbar">' + formatButtons + '</div>');
                     }
 

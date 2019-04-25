@@ -1,0 +1,176 @@
+{{#> 
+	layouts/main 
+	title="Analytics Dashboard" 
+	pagename="intel_analytics_dashboard" 
+	category_1="Application Intel"
+	heading="<i class='subheader-icon fal fa-chart-area'></i> Analytics <span class='fw-300'>Dashboard</span>" 
+}}
+
+{{#*inline "head-block"}}
+
+{{/inline}}
+
+{{#*inline "subheader-block"}}	
+	<div class="subheader-block hidden-lg-down d-lg-flex align-items-center">
+		<div class="d-inline-flex flex-column justify-content-center mr-3">
+			<span class="fw-300 fs-xs d-block opacity-50">
+				<small>EXPENSES</small> 
+			</span>
+			<span class="fw-500 fs-xl d-block color-info-500">
+				$47,000
+			</span>
+		</div>
+		<span class="sparklines" sparkType="bar" sparkBarColor="#0d8aee" sparkHeight="32px" values="1,4,3,6,5,3,9,6,5,9,7"></span>
+	</div>
+	<div class="subheader-block hidden-lg-down d-lg-flex align-items-center border-faded border-right-0 border-top-0 border-bottom-0 ml-3 pl-3">
+		<div class="d-inline-flex flex-column justify-content-center mr-3">
+			<span class="fw-300 fs-xs d-block opacity-50">
+				<small>MY PROFITS</small> 
+			</span>
+			<span class="fw-500 fs-xl d-block color-danger-500">
+				$38,500
+			</span>
+		</div>
+		<span class="sparklines" sparkType="bar" sparkBarColor="#fe6bb0" sparkHeight="32px" values="1,4,3,6,5,3,9,6,5,9,7"></span>
+	</div>
+{{/inline}}
+
+{{#*inline "content-block"}}
+
+<div class="row">
+	<div class="col-xl-12">
+		<div id="panel-1" class="panel" data-panel-lock="false" data-panel-close="false" data-panel-fullscreen="false" data-panel-collapsed="false" data-panel-color="false" data-panel-locked="false" data-panel-refresh="false" data-panel-reset="false">
+			<div class="panel-hdr">	
+				<h2>
+					Button <span class="fw-300">Colors</span> 
+				</h2>
+				<div class="panel-toolbar pr-3 align-self-end">
+					<ul id="demo_panel-tabs" class="nav nav-tabs border-bottom-0 nav-tabs-clean" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#tab_default-1" role="tab">Live Stats</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#tab_default-2" role="tab">Revenue</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" data-toggle="tab" href="#" role="tab">Admin</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content p-0">
+					<div class="row">
+						<div class="col-xl-8">
+							a
+						</div>
+						<div class="col-xl-4">
+
+							<div class="p-3">
+								My Tasks
+								<div class="progress progress-sm mb-3">
+									<div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+
+								Transfered
+								<div class="progress progress-sm mb-3">
+									<div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+
+								Bugs Squashed
+								<div class="progress progress-sm mb-3">
+									<div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+
+								User Testing
+								<div class="progress progress-sm mb-3">
+									<div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+
+								<div class="row no-gutters">
+									<div class="col-sm-6 pr-sm-2">
+										<a href="#" class="btn btn-outline-default btn-block">Generate PDF</a>
+									</div>
+									<div class="col-sm-6 pr-sm-2">
+										<a href="#" class="btn btn-outline-default btn-block">Report a Bug</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-xl-12">
+							<div class="">
+								<div class="row no-gutters">
+									<div class="col-sm-6 col-lg-3">
+										<div class="border-faded border-bottom-0 border-left-0">
+											a
+										</div>
+									</div>
+									<div class="col-sm-6 col-lg-3">
+										<div class="border-faded border-bottom-0 border-left-0">
+											a
+										</div>
+									</div>
+									<div class="col-sm-6 col-lg-3">
+										<div class="border-faded border-bottom-0 border-left-0">
+											a
+										</div>
+									</div>
+									<div class="col-sm-6 col-lg-3">
+										<div class="border-faded border-bottom-0 border-left-0">
+											a
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{/inline}}
+
+{{#*inline "scripts-block"}}
+	<script src="js/statistics/sparkline/sparkline.bundle.js"></script>
+	<script src="js/statistics/flot/flot.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#js-page-content').smartPanel();
+
+			/* this sets all default colors and width sizes - however you can still override them with the HTML tagOptions */
+			/* this is a non-destructive settings which can be applied to any sparkline chart to keep things constant */
+			$('.sparklines').sparkline('html', {
+				// enables you to use HTML tad options (eg. sparkBarWidth="100")
+				enableTagOptions: true,
+				// you can also use percentage (eg. "100%")
+				width: 110,
+				// globalized height
+				height: 40,
+				// globalize bar spacing
+				barSpacing: "3px",
+				// globalized bar width
+				barWidth: "5px",		
+				// the point radius of line chart
+				spotRadius: 3,
+				// the red line color
+				highlightLineColor: myapp_get_color.danger_700,
+				// used for box chart
+				targetColor: myapp_get_color.danger_500,
+				// used for box chart
+				performanceColor: myapp_get_color.primary_700,
+				// range colors
+				rangeColors: [myapp_get_color.primary_100, myapp_get_color.primary_200, myapp_get_color.primary_300],
+				// stacked bar colors
+				stackedBarColor: [myapp_get_color.danger_300, myapp_get_color.info_300],
+				//pie colors
+				sliceColors: [myapp_get_color.success_500, myapp_get_color.info_500, myapp_get_color.danger_500, myapp_get_color.primary_500, myapp_get_color.warning_500, myapp_get_color.primary_700, myapp_get_color.info_700, myapp_get_color.danger_700]
+			});
+
+			
+		});
+	</script>
+{{/inline}}
+
+{{/layouts/main}}

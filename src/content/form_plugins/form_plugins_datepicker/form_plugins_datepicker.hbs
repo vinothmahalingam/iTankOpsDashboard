@@ -3,19 +3,12 @@
 	title="Date Picker" 
 	pagename="form_plugins_datepicker" 
 	category_1="Form Plugins"
-	heading="<i class='subheader-icon fal fa-'></i> Date Picker<sup class='badge badge-primary fw-500'>ADDON</sup>" 
+	heading="<i class='subheader-icon fal fa-credit-card-front'></i> Date Picker<sup class='badge badge-primary fw-500'>ADDON</sup>" 
 	pagedescription="blank description"
 }}
 
 {{#*inline "head-block"}}
-	<link rel="stylesheet" media="screen, print" href="css/.../styles.css">
-{{/inline}}
-
-{{#*inline "subheader-block"}}
-	{{!-- Right content on content header --}}
-	<div class="subheader-block">
-		Right content of header
-	</div>
+	<link rel="stylesheet" media="screen, print" href="css/formplugins/bootstrap-datepicker/bootstrap-datepicker.css">
 {{/inline}}
 
 {{#*inline "content-block"}}
@@ -60,8 +53,144 @@
 					<div class="panel-tag">
 						Panel tag <code>code</code>
 					</div>
-					Text
-					
+
+					<div class="form-group row">
+						<label class="col-form-label col-lg-3 col-sm-12 form-label text-right">Minimum Setup</label>
+						<div class="col-lg-4 col-md-9 col-sm-12">
+							<input type="text" class="form-control" id="datepicker-1" readonly placeholder="Select date">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-form-label col-lg-3 col-sm-12 form-label text-right">Input Group Setup</label>
+						<div class="col-lg-4 col-md-9 col-sm-12">
+							<div class="input-group">
+								<input type="text" class="form-control " readonly  placeholder="Select date" id="datepicker-2">
+								<div class="input-group-append">
+									<span class="input-group-text fs-xl">
+										<i class="fal fa-calendar"></i>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-form-label col-lg-3 col-sm-12 form-label text-right">Enable Helper Buttons</label>
+						<div class="col-lg-4 col-md-9 col-sm-12">
+							<div class="input-group" >
+								<input type="text" class="form-control " readonly  value="07/17/2020" id="datepicker-3">
+								<div class="input-group-append">
+									<span class="input-group-text fs-xl">
+										<i class="fal fa-calendar-alt"></i>
+									</span>
+								</div>
+							</div>
+							<span class="help-block text-muted">Enable clear and today helper buttons</span>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-form-label col-lg-3 col-sm-12 form-label text-right">Orientation</label>
+						<div class="col-lg-4 col-md-9 col-sm-12 demo-v-spacing-sm">
+							<div class="input-group">
+								<input type="text" class="form-control " placeholder="Top left" id="datepicker-4-1">
+								<div class="input-group-append">
+								<span class="input-group-text fs-xl">
+									<i class="fal fa-calendar-check"></i>
+									</span>
+								</div>
+							</div>
+							<div class="input-group">
+								<input type="text" class="form-control " placeholder="Top right" id="datepicker-4-2">
+								<div class="input-group-append">
+									<span class="input-group-text fs-xl">
+									<i class="fal fa-calendar-times"></i>
+									</span>
+								</div>
+							</div>
+							<div class="input-group">
+								<input type="text" class="form-control " placeholder="Bottom left"  id="datepicker-4-3">
+								<div class="input-group-append">
+									<span class="input-group-text fs-xl">
+									<i class="fal fa-calendar-exclamation"></i>
+									</span>
+								</div>
+							</div>
+							<div class="input-group">
+								<input type="text" class="form-control " placeholder="Bottom right" id="datepicker-4-4">
+								<div class="input-group-append">
+									<span class="input-group-text fs-xl">
+									<i class="fal fa-calendar-plus"></i>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-form-label col-lg-3 col-sm-12 form-label text-right">Range Picker</label>
+						<div class="col-lg-4 col-md-9 col-sm-12">
+							<div class="input-daterange input-group" id="datepicker-5">
+								<input type="text" class="form-control" name="start">
+								<div class="input-group-append input-group-prepend">
+									<span class="input-group-text fs-xl"><i class="fal fa-ellipsis-h"></i></span>
+								</div>
+								<input type="text" class="form-control" name="end">
+							</div>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-form-label col-lg-3 col-sm-12 form-label text-right">Inline Mode</label>
+						<div class="col-lg-4 col-md-9 col-sm-12">
+							<div class id="datepicker-6"></div>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-form-label col-lg-3 col-sm-12 form-label text-right">Modal Demos</label>
+						<div class="col-lg-4 col-md-9 col-sm-12">
+							<a href="" class="btn btn-primary" data-toggle="modal" data-target="#default-example-modal">Show inside datepicker</a>
+						</div>
+					</div>
+
+					<!-- modal -->
+					<div class="modal fade" id="default-example-modal" tabindex="-1" role="dialog" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title">
+										Date picker inside modal
+									</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true"><i class="fal fa-times"></i></span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<div class="form-group">
+										<label class="form-label" for="datepicker-modal-2'">Select a date</label>
+										<div class="input-group">
+											<div class="input-group-prepend">
+												<span class="input-group-text fs-xl"><i class="fal fa-calendar"></i></span>
+											</div>
+											<input type="text" id="datepicker-modal-2" class="form-control" placeholder="Select a date" aria-label="date" aria-describedby="datepicker-modal-2">
+										</div>
+										<span class="help-block">Some help content goes here</span>
+									</div>
+									<div class="form-group">
+										<label class="form-label" for="datepicker-modal-3">Datepicker with button</label>
+										<div class="input-group">
+											<input type="text" id="datepicker-modal-3" class="form-control" placeholder="End date" aria-label="date" aria-describedby="datepicker-modal-3">
+											<div class="input-group-append">
+												<span class="input-group-text fs-xl"><i class="fal fa-calendar-alt"></i></span>
+											</div>
+										</div>
+										<span class="help-block">Some help content goes here</span>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-primary">Save changes</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- modal end -->
 				</div>
 			</div>
 		</div>
@@ -70,11 +199,97 @@
 {{/inline}}
 
 {{#*inline "scripts-block"}}
-	<script src="js/../script.js"></script>
+	<script src="js/formplugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
 	<script>
+		// Class definition
+		
+		var controls = {
+			leftArrow: '<i class="fal fa-angle-left" style="font-size: 1.25rem"></i>',
+			rightArrow: '<i class="fal fa-angle-right" style="font-size: 1.25rem"></i>'
+		}
+
+		var runDatePicker = function () {
+		
+			// minimum setup
+			$('#datepicker-1').datepicker({
+				todayHighlight: true,
+				orientation: "bottom left",
+				templates: controls
+			});
+
+
+			// input group layout 
+			$('#datepicker-2').datepicker({
+				todayHighlight: true,
+				orientation: "bottom left",
+				templates: controls
+			});
+
+			// input group layout for modal demo
+			$('#datepicker-modal-2').datepicker({
+				todayHighlight: true,
+				orientation: "bottom left",
+				templates: controls
+			});
+
+			// enable clear button 
+			$('#datepicker-3').datepicker({
+				todayBtn: "linked",
+				clearBtn: true,
+				todayHighlight: true,
+				templates: controls
+			});
+
+			// enable clear button for modal demo
+			$('#datepicker-modal-3').datepicker({
+				todayBtn: "linked",
+				clearBtn: true,
+				todayHighlight: true,
+				templates: controls
+			});
+
+			// orientation 
+			$('#datepicker-4-1').datepicker({
+				orientation: "top left",
+				todayHighlight: true,
+				templates: controls
+			});
+
+			$('#datepicker-4-2').datepicker({
+				orientation: "top right",
+				todayHighlight: true,
+				templates: controls
+			});
+
+			$('#datepicker-4-3').datepicker({
+				orientation: "bottom left",
+				todayHighlight: true,
+				templates: controls
+			});
+
+			$('#datepicker-4-4').datepicker({
+				orientation: "bottom right",
+				todayHighlight: true,
+				templates: controls
+			});
+
+			// range picker
+			$('#datepicker-5').datepicker({
+				todayHighlight: true,
+				templates: controls
+			});
+
+			 // inline picker
+			$('#datepicker-6').datepicker({
+				todayHighlight: true,
+				templates: controls
+			});
+		}
+
 		$(document).ready(function () {
-			
-		};
+			runDatePicker();
+		});
+
 	</script>
 {{/inline}}
 

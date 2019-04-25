@@ -115,10 +115,11 @@
 
 }
 
-
-.demo-v-spacing {
+.demo-v-spacing-sm,
+.demo-v-spacing,
+.demo-v-spacing-lg {
 	> * + *  {
-		margin-top: 1rem !important;
+		margin-top: 0.875rem !important;
 		margin-bottom: 0 !important;
 	}
 
@@ -127,15 +128,18 @@
 	}
 }
 
+
+
+.demo-v-spacing {
+	> * + *  {
+		margin-top: 1rem !important;
+	}
+}
+
 .demo-v-spacing-lg {
 	> * + *  {
 		margin-top: 1.5rem !important;
-		margin-bottom: 0 !important;
 	}
-
-	> * {
-		margin-bottom: 0 !important;
-	}	
 }
 
 .demo-h-spacing > *:not(last-child):not(only-child) {
