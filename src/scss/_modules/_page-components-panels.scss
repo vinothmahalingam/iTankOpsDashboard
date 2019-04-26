@@ -177,8 +177,8 @@
 	min-height: $panel-hdr-height;
 	@include box-sizing(border-box); 
 	border: 1px solid transparent;
-	border-bottom: 0px;
-	box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+	border-bottom:  1px solid rgba(0, 0, 0, 0.07);
+	//box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
 	border-radius: $panel-edge-radius $panel-edge-radius 0 0;
 
 	//@extend %common-animation-easeout;

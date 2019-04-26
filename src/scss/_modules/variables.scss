@@ -761,3 +761,6 @@ $footer-zindex:							$cloud - 20 !default;
 ========================================================================== */
 $mod-main-boxed-width:					map-get($grid-breakpoints, xl);
 $slider-width:							15rem;
+
+/* ACCESSIBILITIES */
+$enable-prefers-reduced-motion-media-query:   false;

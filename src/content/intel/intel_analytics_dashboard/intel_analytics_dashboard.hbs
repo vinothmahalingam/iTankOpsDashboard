@@ -11,18 +11,18 @@
 {{/inline}}
 
 {{#*inline "subheader-block"}}	
-	<div class="subheader-block hidden-lg-down d-lg-flex align-items-center">
+	<div class="subheader-block d-lg-flex align-items-center">
 		<div class="d-inline-flex flex-column justify-content-center mr-3">
 			<span class="fw-300 fs-xs d-block opacity-50">
 				<small>EXPENSES</small> 
 			</span>
-			<span class="fw-500 fs-xl d-block color-info-500">
+			<span class="fw-500 fs-xl d-block color-primary-500">
 				$47,000
 			</span>
 		</div>
-		<span class="sparklines" sparkType="bar" sparkBarColor="#0d8aee" sparkHeight="32px" values="1,4,3,6,5,3,9,6,5,9,7"></span>
+		<span class="sparklines hidden-lg-down" sparkType="bar" sparkBarColor="#886ab5" sparkHeight="32px" values="3,4,3,6,7,3,3,6,2,6,4"></span>
 	</div>
-	<div class="subheader-block hidden-lg-down d-lg-flex align-items-center border-faded border-right-0 border-top-0 border-bottom-0 ml-3 pl-3">
+	<div class="subheader-block d-lg-flex align-items-center border-faded border-right-0 border-top-0 border-bottom-0 ml-3 pl-3">
 		<div class="d-inline-flex flex-column justify-content-center mr-3">
 			<span class="fw-300 fs-xs d-block opacity-50">
 				<small>MY PROFITS</small> 
@@ -31,7 +31,7 @@
 				$38,500
 			</span>
 		</div>
-		<span class="sparklines" sparkType="bar" sparkBarColor="#fe6bb0" sparkHeight="32px" values="1,4,3,6,5,3,9,6,5,9,7"></span>
+		<span class="sparklines hidden-lg-down" sparkType="bar" sparkBarColor="#fe6bb0" sparkHeight="32px" values="1,4,3,6,5,3,9,6,5,9,7"></span>
 	</div>
 {{/inline}}
 
@@ -39,10 +39,10 @@
 
 <div class="row">
 	<div class="col-xl-12">
-		<div id="panel-1" class="panel" data-panel-lock="false" data-panel-close="false" data-panel-fullscreen="false" data-panel-collapsed="false" data-panel-color="false" data-panel-locked="false" data-panel-refresh="false" data-panel-reset="false">
+		<div id="panel-1" class="panel panel-locked" data-panel-lock="false" data-panel-close="false" data-panel-fullscreen="false" data-panel-collapsed="false" data-panel-color="false" data-panel-locked="false" data-panel-refresh="false" data-panel-reset="false">
 			<div class="panel-hdr">	
 				<h2>
-					Button <span class="fw-300">Colors</span> 
+					Live <span class="fw-300">Feeds</span> 
 				</h2>
 				<div class="panel-toolbar pr-3 align-self-end">
 					<ul id="demo_panel-tabs" class="nav nav-tabs border-bottom-0 nav-tabs-clean" role="tablist">
@@ -52,79 +52,220 @@
 						<li class="nav-item">
 							<a class="nav-link" data-toggle="tab" href="#tab_default-2" role="tab">Revenue</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link disabled" data-toggle="tab" href="#" role="tab">Admin</a>
-						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="panel-container show">
-				<div class="panel-content p-0">
-					<div class="row">
-						<div class="col-xl-8">
-							a
+				<div class="panel-content">
+					<div class="row no-gutters">
+						<div class="col-lg-7 col-xl-8">
+							<div class="position-relative">
+								<div class="custom-control custom-switch position-absolute pos-top pos-left ml-5 mt-3 z-index-cloud">
+									<input type="checkbox" class="custom-control-input" id="start_interval">
+									<label class="custom-control-label" for="start_interval">Live Update</label>
+								</div>
+								<div id="updating-chart" style="height:242px"></div>
+							</div>
 						</div>
-						<div class="col-xl-4">
-
-							<div class="p-3">
+						<div class="col-lg-5 col-xl-4 pl-lg-3">
+							<div class="d-flex mt-2">
 								My Tasks
-								<div class="progress progress-sm mb-3">
-									<div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-
+								<span class="d-inline-block ml-auto">130 / 500</span>
+							</div>
+							<div class="progress progress-sm mb-3">
+								<div class="progress-bar bg-fusion-400" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+							
+							<div class="d-flex">
 								Transfered
-								<div class="progress progress-sm mb-3">
-									<div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-
+								<span class="d-inline-block ml-auto">440 TB</span>
+							</div>
+							<div class="progress progress-sm mb-3">
+								<div class="progress-bar bg-primary-500" role="progressbar" style="width: 34%;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+							
+							<div class="d-flex">
 								Bugs Squashed
-								<div class="progress progress-sm mb-3">
-									<div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
+								<span class="d-inline-block ml-auto">77%</span>
+							</div>
+							<div class="progress progress-sm mb-3">
+								<div class="progress-bar bg-primary-300" role="progressbar" style="width: 77%;" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
 
+							<div class="d-flex">
 								User Testing
-								<div class="progress progress-sm mb-3">
-									<div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+								<span class="d-inline-block ml-auto">7 days</span>
+							</div>
+							<div class="progress progress-sm mb-g">
+								<div class="progress-bar bg-primary-200" role="progressbar" style="width: 84%;" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+
+							<div class="row no-gutters">
+								<div class="col-sm-6 pr-sm-1">
+									<a href="#" class="btn btn-default btn-block">Generate PDF</a>
+								</div>
+								<div class="col-sm-6 pl-sm-1">
+									<a href="#" class="btn btn-default btn-block">Report a Bug</a>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="panel-content p-0">
+					<div class="row no-gutters">
+						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+							<div class="border-faded border-bottom-0 border-left-0 pl-4 pr-3 py-2 d-flex align-items-center">
+								
+								<div class="js-chart color-primary-300 position-relative d-inline-flex align-items-center justify-content-center" data-percent="75" data-piesize="50" data-linewidth="5" data-linecap="butt">
+									<div class="d-flex flex-column align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom fw-300 fs-lg">
+										<span class="js-percent d-block text-dark"></span>
+									</div>
 								</div>
 
-								<div class="row no-gutters">
-									<div class="col-sm-6 pr-sm-2">
-										<a href="#" class="btn btn-outline-default btn-block">Generate PDF</a>
-									</div>
-									<div class="col-sm-6 pr-sm-2">
-										<a href="#" class="btn btn-outline-default btn-block">Report a Bug</a>
+								<span class="d-inline-block ml-2 text-muted">
+									SERVER LOAD
+									<i class="fal fa-caret-up color-danger-500 ml-1"></i>
+								</span>
+
+								<div class="ml-auto d-inline-flex align-items-center">
+									<div class="sparklines d-inline-flex" sparktype="line" sparkheight="30" sparkwidth="70" sparklinecolor="#886ab5" sparkfillcolor="false" sparklinewidth="1" values="5,3,9,6,5,9,7,3,5,2"></div>
+									<div class="d-inline-flex flex-column small ml-2">
+										<span class="d-inline-block badge badge-success opacity-50 text-center p-1 width-6">97%</span>
+										<span class="d-inline-block badge bg-fusion-300 opacity-50 text-center p-1 width-6 mt-1">44%</span>
 									</div>
 								</div>
 							</div>
-
 						</div>
-						<div class="col-xl-12">
-							<div class="">
-								<div class="row no-gutters">
-									<div class="col-sm-6 col-lg-3">
-										<div class="border-faded border-bottom-0 border-left-0">
-											a
-										</div>
+						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+							<div class="border-faded border-bottom-0 border-left-0 px-3 py-2 d-flex align-items-center">
+								
+								<div class="js-chart color-success-500 position-relative d-inline-flex align-items-center justify-content-center" data-percent="79" data-piesize="50" data-linewidth="5" data-linecap="butt">
+									<div class="d-flex flex-column align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom fw-300 fs-lg">
+										<span class="js-percent d-block text-dark"></span>
 									</div>
-									<div class="col-sm-6 col-lg-3">
-										<div class="border-faded border-bottom-0 border-left-0">
-											a
-										</div>
+								</div>
+
+								<span class="d-inline-block ml-2 text-muted">
+									DISK SPACE
+									<i class="fal fa-caret-down color-success-500 ml-1"></i>
+								</span>
+
+								<div class="ml-auto d-inline-flex align-items-center">
+									<div class="sparklines d-inline-flex" sparktype="line" sparkheight="30" sparkwidth="70" sparklinecolor="#1dc9b7" sparkfillcolor="false" sparklinewidth="1" values="5,3,9,6,5,9,7,3,5,2"></div>
+									<div class="d-inline-flex flex-column small ml-2">
+										<span class="d-inline-block badge badge-info opacity-50 text-center p-1 width-6">76%</span>
+										<span class="d-inline-block badge bg-warning-300 opacity-50 text-center p-1 width-6 mt-1">3%</span>
 									</div>
-									<div class="col-sm-6 col-lg-3">
-										<div class="border-faded border-bottom-0 border-left-0">
-											a
-										</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+							<div class="border-faded border-bottom-0 border-left-0 px-3 py-2 d-flex align-items-center">
+								
+								<div class="js-chart color-info-500 position-relative d-inline-flex align-items-center justify-content-center" data-percent="23" data-piesize="50" data-linewidth="5" data-linecap="butt">
+									<div class="d-flex flex-column align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom fw-300 fs-lg">
+										<span class="js-percent d-block text-dark"></span>
 									</div>
-									<div class="col-sm-6 col-lg-3">
-										<div class="border-faded border-bottom-0 border-left-0">
-											a
-										</div>
+								</div>
+
+								<span class="d-inline-block ml-2 text-muted">
+									DATA TTF
+									<i class="fal fa-caret-up color-success-500 ml-1"></i>
+								</span>
+
+								<div class="ml-auto d-inline-flex align-items-center">
+									<div class="sparklines d-inline-flex" sparktype="line" sparkheight="30" sparkwidth="70" sparklinecolor="#51adf6" sparkfillcolor="false" sparklinewidth="1" values="5,3,9,6,5,9,7,3,5,2"></div>
+									<div class="d-inline-flex flex-column small ml-2">
+										<span class="d-inline-block badge bg-fusion-500 opacity-50 text-center p-1 width-6">10GB</span>
+										<span class="d-inline-block badge bg-fusion-300 opacity-50 text-center p-1 width-6 mt-1">10%</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+							<div class="border-faded border-bottom-0 border-left-0 border-right-0 pr-4 pl-3 py-2 d-flex align-items-center">
+								
+								<div class="js-chart color-fusion-500 position-relative d-inline-flex align-items-center justify-content-center" data-percent="36" data-piesize="50" data-linewidth="5" data-linecap="butt">
+									<div class="d-flex flex-column align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom fw-300 fs-lg">
+										<span class="js-percent d-block text-dark"></span>
+									</div>
+								</div>
+
+								<span class="d-inline-block ml-2 text-muted">
+									TEMP. 
+									<i class="fal fa-caret-down color-success-500 ml-1"></i>
+								</span>
+
+								<div class="ml-auto d-inline-flex align-items-center">
+									<div class="sparklines d-inline-flex" sparktype="line" sparkheight="30" sparkwidth="70" sparklinecolor="#fd3995" sparkfillcolor="false" sparklinewidth="1" values="5,3,9,6,5,9,7,3,5,2"></div>
+									<div class="d-inline-flex flex-column small ml-2">
+										<span class="d-inline-block badge badge-danger opacity-50 text-center p-1 width-6">124</span>
+										<span class="d-inline-block badge bg-info-300 opacity-50 text-center p-1 width-6 mt-1">40F</span>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-6">
+		<div id="panel-2" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Smart <span class="fw-300">Chat</span> 
+				</h2>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content p-0">
+					<div class="d-flex flex-column" style="height: 400px">
+						<div class="flex-1 bg-subtlelight-fade">
+							<div class="d-flex flex-row p-4">
+								<span class="status status-danger mt-1">
+								<span class="profile-image rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-j.png')"></span>
+								</span>
+								<div class="ml-3">
+									<a href="#" title="Lisa Hatchensen" class="d-block fw-500 fs-lg">Lisa Hatchensen</a>
+									Hey did you meet the new board of director? He's a bit of a geek if you ask me...anyway here is the report you requested. I am off to launch with Lisa and Andrew, you wanna join?
+
+									<div class="d-flex mt-3 demo">
+										<div class="rounded btn btn-default px-2 py-1">
+											asdasd
+										</div>
+										<div class="rounded btn btn-default px-2 py-1">
+											asdasd
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="p-3">
+							<textarea class="form-control"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-6">
+		<div id="panel-3" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Button <span class="fw-300">Colors</span> 
+				</h2>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
+					<p>tewst</p>
 				</div>
 			</div>
 		</div>
@@ -134,7 +275,10 @@
 
 {{#*inline "scripts-block"}}
 	<script src="js/statistics/sparkline/sparkline.bundle.js"></script>
+	<script src="js/statistics/easypiechart/easypiechart.js"></script>
 	<script src="js/statistics/flot/flot.js"></script>
+	<script src="js/statistics/flot/flot.resize.js"></script>
+
 	<script>
 		$(document).ready(function () {
 			$('#js-page-content').smartPanel();
@@ -168,7 +312,160 @@
 				sliceColors: [myapp_get_color.success_500, myapp_get_color.info_500, myapp_get_color.danger_500, myapp_get_color.primary_500, myapp_get_color.warning_500, myapp_get_color.primary_700, myapp_get_color.info_700, myapp_get_color.danger_700]
 			});
 
+
+			/* 	Easy pie chart Snippet
+				DOC: make sure to include this snippet in your project to be able to use the easy 
+				configurations without any jquery implementations
+			 */
+			$('.js-chart').each(function() {
+
+				var $this = $(this),
+					barcolor = $this.css('color') || myapp_get_color.primary_700,
+					trackcolor = $this.data('trackcolor') || 'rgba(0,0,0,0.04)',
+					size = parseInt($this.data('piesize')) || 50,
+					scalecolor =   $this.data('scalecolor') || $this.css('color'),
+					scalelength = parseInt($this.data('scalelength')) || 0,
+					linewidth = parseInt($this.data('linewidth')) ||  parseInt(size / 8.5),
+					linecap = $this.data('linecap') || 'butt'; //butt, round and square.
+					
+				$this.easyPieChart({
+					size : size,
+					barColor : barcolor,
+					trackColor : trackcolor,
+					scaleColor: scalecolor,
+					scaleLength: scalelength, //Length of the scale lines (reduces the radius of the chart).
+					lineCap : linecap, //Defines how the ending of the bar line looks like. Possible values are: butt, round and square.
+					lineWidth : linewidth,
+					animate: {
+						duration: 1500,
+						enabled: true
+					},
+					onStep: function(from, to, percent) {
+						$(this.el).find('.js-percent').text(Math.round(percent));
+					}
+				});
+
+				$this = null;
+			});
 			
+
+			/* TAB 1: UPDATING CHART */
+			// For the demo we use generated data, but normally it would be coming from the server
+
+			var data = [], 
+				totalPoints = 200;
+
+
+			var getRandomData = function(){
+				if (data.length > 0)
+					data = data.slice(1);
+
+				// do a random walk
+				while (data.length < totalPoints) {
+					var prev = data.length > 0 ? data[data.length - 1] : 50;
+					var y = prev + Math.random() * 10 - 5;
+					if (y < 0)
+						y = 0;
+					if (y > 100)
+						y = 100;
+					data.push(y);
+				}
+
+				// zip the generated y values with the x values
+				var res = [];
+				for (var i = 0; i < data.length; ++i)
+					res.push([i, data[i]])
+				return res;
+			}
+
+			// setup control widget
+			var updateInterval = 1500;
+			$("#updating-chart").val(updateInterval).change(function() {
+
+				var v = $(this).val();
+				if (v && !isNaN(+v)) {
+					updateInterval = +v;
+					$(this).val("" + updateInterval);
+				}
+
+			});
+
+			// setup plot
+			var options = {
+				colors: [myapp_get_color.primary_400],
+				series:
+				{
+					lines:
+					{
+						show: true,
+						lineWidth: 1,
+						fill: 0.9,
+						fillColor : {
+							colors : [{
+								opacity : 0.6
+							}, {
+								opacity : 0
+							}]
+						},
+					},
+
+					shadowSize: 0 // Drawing is faster without shadows
+				},
+				grid:
+				{
+					borderColor: '#F0F0F0',
+					borderWidth: 1,
+					labelMargin: 5
+				},
+				xaxis:
+				{
+					color: '#F0F0F0',
+					font:
+					{
+						size: 10,
+						color: '#999'
+					}
+				},
+				yaxis:
+				{
+					min: 0,
+					max: 100,
+					color: '#F0F0F0',
+					font:
+					{
+						size: 10,
+						color: '#999'
+					}
+				}
+			};
+
+			var plot = $.plot($("#updating-chart"), [getRandomData()], options);
+
+			/* live switch */
+			$('input[type="checkbox"]#start_interval').click(function() {
+				if ($(this).prop('checked')) {
+					$on = true;
+					updateInterval = 1500;
+					update();
+				} else {
+					clearInterval(updateInterval);
+					$on = false;
+				}
+			});
+
+			var update = function(){
+				if ($on == true) {
+					plot.setData([getRandomData()]);
+					plot.draw();
+					setTimeout(update, updateInterval);
+
+				} else {
+					clearInterval(updateInterval)
+				}
+
+			}
+
+
 		});
 	</script>
 {{/inline}}
