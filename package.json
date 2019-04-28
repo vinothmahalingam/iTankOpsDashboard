@@ -9,6 +9,12 @@
     "url": "https://wrapbootstrap.com/user/myorange"
   },
   "dependencies": {
+    "@fullcalendar/bootstrap": "^4.1.0",
+    "@fullcalendar/core": "^4.1.0",
+    "@fullcalendar/daygrid": "^4.1.0",
+    "@fullcalendar/interaction": "^4.1.0",
+    "@fullcalendar/list": "^4.1.0",
+    "@fullcalendar/timegrid": "^4.1.0",
     "bootstrap": "^4.3.1",
     "bootstrap-colorpicker": "^3.1.1",
     "bootstrap-datepicker": "^1.8.0",
@@ -45,6 +51,7 @@
     "jszip": "^3.2.1",
     "justifiedGallery": "^3.7.0",
     "lightgallery": "^1.6.12",
+    "moment": "^2.24.0",
     "node-waves": "^0.7.6",
     "pace-js": "^1.0.2",
     "pdfmake": "^0.1.54",

@@ -18,7 +18,7 @@ gulp.task('watch', function () {
 	
 	//gulp.watch([build.config.path.src + '/scss/**/*.scss', build.config.path.src + '/**/*.js'], ['build-bundle']);
     // watch `.js` changes & avoiding `.min.js`
-    gulp.watch([build.config.path.src + '/js/**/*.js', build.config.path.src + '/**/*.scss'], ['build-bundle'])
+    gulp.watch([build.config.path.src + '/**/*.js', build.config.path.src + '/**/*.scss'], ['build-bundle'])
     .on('change', function(event) {
       console.log('==================> ' + event.path.replace(/^.*[\\\/]/, '') + ' (' + event.type + ')...');
     });

@@ -195,61 +195,29 @@
 						}	
 					},
 					"flotchart" : {
-						"flot" : {
-							"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.js"}
+						"src": {
+							"scripts": [
+								"{$config.path.node_modules}/flot/jquery.flot.js",
+								"{$config.path.node_modules}/flot/jquery.colorhelpers.js",
+								"{$config.path.node_modules}/flot/jquery.flot.canvas.js",
+								"{$config.path.node_modules}/flot/jquery.flot.categories.js",
+								"{$config.path.node_modules}/flot/jquery.flot.crosshair.js",
+								"{$config.path.node_modules}/flot/jquery.flot.errorbars.js",
+								"{$config.path.node_modules}/flot/jquery.flot.fillbetween.js",
+								"{$config.path.node_modules}/flot/jquery.flot.image.js",
+								"{$config.path.node_modules}/flot/jquery.flot.navigate.js",
+								"{$config.path.node_modules}/flot/jquery.flot.pie.js",
+								"{$config.path.node_modules}/flot/jquery.flot.resize.js",
+								"{$config.path.node_modules}/flot/jquery.flot.selection.js",
+								"{$config.path.node_modules}/flot/jquery.flot.stack.js",
+								"{$config.path.node_modules}/flot-spline/js/jquery.flot.spline.js",
+								"{$config.path.node_modules}/flot/jquery.flot.symbol.js",
+								"{$config.path.node_modules}/flot/jquery.flot.threshold.js",
+								"{$config.path.node_modules}/jquery.flot.tooltip/js/jquery.flot.tooltip.js",
+								"{$config.path.node_modules}/flot/jquery.flot.time.js"
+							]
 						},
-						"flot-colorhelpers" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.colorhelpers.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/colorhelpers.js"}
-						},
-						"flot-canvas" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.canvas.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.canvas.js"}
-						},
-						"flot-categories" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.categories.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.categories.js"}
-						},
-						"flot-crosshair" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.crosshair.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.crosshair.js"}
-						},
-						"flot-errorbars" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.errorbars.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.errorbars.js"}
-						},
-						"flot-fillbetween" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.fillbetween.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.fillbetween.js"}
-						},
-						"flot-image" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.image.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.image.js"}
-						},
-						"flot-navigate" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.navigate.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.navigate.js"}
-						},
-						"flot-pie" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.pie.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.pie.js"}
-						},
-						"flot-resize" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.resize.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.resize.js"}
-						},
-						"flot-selection" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.selection.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.selection.js"}
-						},
-						"flot-stack" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.stack.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.stack.js"}
-						},
-						"flot-spline" : {"src": {"scripts": ["{$config.path.node_modules}/flot-spline/js/jquery.flot.spline.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.spline.js"}
-						},
-						"flot-symbol" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.symbol.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.symbol.js"}
-						},
-						"flot-threshold" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.threshold.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.threshold.js"}
-						},
-						"flot-tooltip" : {"src": {"scripts": ["{$config.path.node_modules}/jquery.flot.tooltip/js/jquery.flot.tooltip.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.tooltip.js"}
-						},
-						"flot-time" : {"src": {"scripts": ["{$config.path.node_modules}/flot/jquery.flot.time.js"]},
-							"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.time.js"}
-						}
+						"bundle": {"scripts": "{$config.output}/js/statistics/flot/flot.bundle.js"}
 					},
 					"chartjs" : {
 						"src": {
@@ -268,7 +236,7 @@
 					"chartist" : {
 						"src": {
 							"styles":[
-								"{$config.path.src}/scss/_addons/chartist/chartist.scss"
+								"{$config.path.src}/custom/plugins/chartist/chartist.scss"
 							],
 							"scripts": [
 								"{$config.path.node_modules}/chartist/dist/chartist.js"
@@ -318,17 +286,19 @@
 					"peity" : {
 						"src": {
 							"scripts": [
-								"{$config.path.node_modules}/peity/jquery.peity.js"
+								"{$config.path.node_modules}/peity/jquery.peity.js",
+								"{$config.path.src}/custom/plugins/peity/jquery.peity.config.js"
 							]
 						},
 						"bundle": {
-							"scripts": "{$config.output}/js/statistics/peity/peity.js"
+							"scripts": "{$config.output}/js/statistics/peity/peity.bundle.js"
 						}
 					},
 					"sparkline" : {
 						"src": {
 							"scripts": [
-								"{$config.path.node_modules}/jquery-sparkline/jquery.sparkline.js"
+								"{$config.path.node_modules}/jquery-sparkline/jquery.sparkline.js",
+								"{$config.path.src}/custom/plugins/jquery-sparkline/jquery-sparkline.config.js"
 							]
 						},
 						"bundle": {
@@ -338,11 +308,12 @@
 					"easypiechart" : {
 						"src": {
 							"scripts": [
-								"{$config.path.node_modules}/easy-pie-chart/dist/jquery.easypiechart.js"
+								"{$config.path.node_modules}/easy-pie-chart/dist/jquery.easypiechart.js",
+								"{$config.path.src}/custom/plugins/easy-pie-chart/jquery.easypiechart.config.js"
 							]
 						},
 						"bundle": {
-							"scripts": "{$config.output}/js/statistics/easypiechart/easypiechart.js"
+							"scripts": "{$config.output}/js/statistics/easypiechart/easypiechart.bundle.js"
 						}
 					}
 				},
@@ -363,7 +334,7 @@
 									"{$config.path.node_modules}/datatables.net-rowreorder-bs4/css/rowreorder.bootstrap4.css",
 									"{$config.path.node_modules}/datatables.net-scroller-bs4/css/scroller.bootstrap4.css",
 									"{$config.path.node_modules}/datatables.net-select-bs4/css/select.bootstrap4.css",
-									"{$config.path.src}/scss/_addons/datatables/datatables.styles.app.scss"
+									"{$config.path.src}/custom/plugins/datatables/datatables.styles.app.scss"
 								],
 								"scripts": [
 									"{$config.path.node_modules}/datatables.net/js/jquery.dataTables.js",
@@ -422,7 +393,7 @@
 						"src": {
 							"styles":[
 								"{$config.path.node_modules}/toastr/toastr.scss",
-								"{$config.path.src}/scss/_addons/toastr/toastr-custom.scss"
+								"{$config.path.src}/custom/plugins/toastr/toastr-custom.scss"
 							],
 							"scripts": [
 								"{$config.path.node_modules}/toastr/toastr.js"
@@ -436,7 +407,7 @@
 					"sweetalert2" : {
 						"src": {
 							"styles":[
-								"{$config.path.src}/scss/_addons/sweetalert2/sweetalert2.scss"
+								"{$config.path.src}/custom/plugins/sweetalert2/sweetalert2.scss"
 							],
 							"scripts": [
 								"{$config.path.node_modules}/es6-promise-polyfill/promise.js",
@@ -468,7 +439,7 @@
 						"src": {
 							"styles": [
 								"{$config.path.node_modules}/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css",
-								"{$config.path.src}/scss/_addons/datepicker/datepicker-custom.scss"
+								"{$config.path.src}/custom/plugins/datepicker/datepicker-custom.scss"
 							],
 							"scripts": [
 								"{$config.path.node_modules}/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"
@@ -481,11 +452,36 @@
 					}
 				},
 				"miscellaneous" : {
+					"fullcalendar" : {
+						"src": {
+							"styles":[
+								"{$config.path.node_modules}/@fullcalendar/core/main.css",
+								"{$config.path.node_modules}/@fullcalendar/daygrid/main.css",
+								"{$config.path.node_modules}/@fullcalendar/list/main.css",
+								"{$config.path.node_modules}/@fullcalendar/timegrid/main.css",
+								"{$config.path.node_modules}/@fullcalendar/bootstrap/main.css",
+								"{$config.path.src}/custom/plugins/@fullcalendar/core-main-override.scss"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/moment/min/moment.min.js",
+								"{$config.path.node_modules}/@fullcalendar/core/main.js",
+								"{$config.path.node_modules}/@fullcalendar/daygrid/main.js",
+								"{$config.path.node_modules}/@fullcalendar/list/main.js",
+								"{$config.path.node_modules}/@fullcalendar/timegrid/main.js",
+								"{$config.path.node_modules}/@fullcalendar/interaction/main.js",
+								"{$config.path.src}/custom/plugins/@fullcalendar/bootstrap-main-cust.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/miscellaneous/fullcalendar/fullcalendar.bundle.css",
+							"scripts": "{$config.output}/js/miscellaneous/fullcalendar/fullcalendar.bundle.js"
+						}
+					},
 					"lightgallery" : {
 						"src": {
 							"styles":[
 								"{$config.path.node_modules}/justifiedGallery/dist/css/justifiedGallery.css",
-								"{$config.path.src}/scss/_addons/lightgallery/lightgallery.scss"
+								"{$config.path.src}/custom/plugins/lightgallery/lightgallery.scss"
 							],
 							"scripts": [
 								"{$config.path.node_modules}/justifiedGallery/dist/js/jquery.justifiedGallery.js",
@@ -503,7 +499,18 @@
 							"styles": "{$config.output}/css/miscellaneous/lightgallery/lightgallery.bundle.css",
 							"scripts": "{$config.output}/js/miscellaneous/lightgallery/lightgallery.bundle.js"
 						}
+					},
+					"reactions" : {
+						"src": {
+							"styles":[
+								"{$config.path.src}/custom/plugins/reactions/reactions.scss"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/miscellaneous/reactions/reactions.css"
+						}
 					}
+
 				}
 			}
 		},
