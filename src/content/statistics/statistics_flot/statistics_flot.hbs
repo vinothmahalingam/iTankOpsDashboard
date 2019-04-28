@@ -361,30 +361,26 @@
 
 {{#*inline "scripts-block"}}
 
-<!-- plugin Flot.js : MIT license -->
-<script src="js/statistics/flot/flot.js"></script>
-
-<!-- Flot.js plugins : All licensed under MIT : see plugin files for more details and its usage -->
-<script src="js/statistics/flot/flot.time.js"></script>
-<script src="js/statistics/flot/flot.fillbetween.js"></script>
-<script src="js/statistics/flot/flot.pie.js"></script>
-<script src="js/statistics/flot/flot.resize.js"></script>
-<script src="js/statistics/flot/flot.stack.js"></script>
-<script src="js/statistics/flot/flot.spline.js"></script>
-<script src="js/statistics/flot/flot.tooltip.js"></script>
-
-<!-- We disabled these extra plugins - but you may find uses for them for your projects -->
-<!--
-<script src="js/statistics/flot/flot.canvas.js"></script>
-<script src="js/statistics/flot/flot.categories.js"></script>
-<script src="js/statistics/flot/flot.crosshair.js"></script>
-<script src="js/statistics/flot/flot.errorbars.js"></script>
-<script src="js/statistics/flot/flot.image.js"></script>
-<script src="js/statistics/flot/flot.navigate.js"></script>
-<script src="js/statistics/flot/flot.selection.js"></script> 
-<script src="js/statistics/flot/flot.symbol.js"></script> 
-<script src="js/statistics/flot/flot.threshold.js"></script> 
--->
+<!-- flot bundle: 
+	 DOC: you may remove the extensions if you do not plan on using them. Learn more about these extensions at https://flotcharts.org
+				+ jquery.flot.js (core)
+				+ jquery.flot.canvas.js (extension)
+				+ jquery.flot.categories.js (extension)
+				+ jquery.flot.crosshair.js (extension)
+				+ jquery.flot.errorbars.js (extension)
+				+ jquery.flot.fillbetween.js (extension)
+				+ jquery.flot.image.js (extension)
+				+ jquery.flot.navigate.js (extension)
+				+ jquery.flot.pie.js (extension)
+				+ jquery.flot.resize.js (recommended)
+				+ jquery.flot.selection.js (extension)
+				+ jquery.flot.stack.js (extension)
+				+ jquery.flot.spline.js (extension)
+				+ jquery.flot.symbol.js (extension)
+				+ jquery.flot.threshold.js (extension)
+				+ jquery.flot.tooltip.js (extension)
+				+ jquery.flot.time.js (extension) -->	
+<script src="js/statistics/flot/flot.bundle.js"></script>
 
 <script>
 /* defined datas */
