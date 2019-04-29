@@ -9,31 +9,34 @@
 {{#*inline "head-block"}}
 <link rel="stylesheet" media="screen, print" href="css/miscellaneous/reactions/reactions.css">
 <link rel="stylesheet" media="screen, print" href="css/miscellaneous/fullcalendar/fullcalendar.bundle.css">
+<link rel="stylesheet" media="screen, print" href="css/miscellaneous/jqvmap/jqvmap.bundle.css">
 {{/inline}}
 
 {{#*inline "subheader-block"}}	
-	<div class="subheader-block d-lg-flex align-items-center">
-		<div class="d-inline-flex flex-column justify-content-center mr-3">
-			<span class="fw-300 fs-xs d-block opacity-50">
-				<small>EXPENSES</small> 
-			</span>
-			<span class="fw-500 fs-xl d-block color-primary-500">
-				$47,000
-			</span>
-		</div>
-		<span class="sparklines hidden-lg-down" sparkType="bar" sparkBarColor="#886ab5" sparkHeight="32px" sparkBarWidth="5px" values="3,4,3,6,7,3,3,6,2,6,4"></span>
+
+<div class="subheader-block d-lg-flex align-items-center">
+	<div class="d-inline-flex flex-column justify-content-center mr-3">
+		<span class="fw-300 fs-xs d-block opacity-50">
+			<small>EXPENSES</small> 
+		</span>
+		<span class="fw-500 fs-xl d-block color-primary-500">
+			$47,000
+		</span>
 	</div>
-	<div class="subheader-block d-lg-flex align-items-center border-faded border-right-0 border-top-0 border-bottom-0 ml-3 pl-3">
-		<div class="d-inline-flex flex-column justify-content-center mr-3">
-			<span class="fw-300 fs-xs d-block opacity-50">
-				<small>MY PROFITS</small> 
-			</span>
-			<span class="fw-500 fs-xl d-block color-danger-500">
-				$38,500
-			</span>
-		</div>
-		<span class="sparklines hidden-lg-down" sparkType="bar" sparkBarColor="#fe6bb0" sparkHeight="32px" sparkBarWidth="5px" values="1,4,3,6,5,3,9,6,5,9,7"></span>
+	<span class="sparklines hidden-lg-down" sparkType="bar" sparkBarColor="#886ab5" sparkHeight="32px" sparkBarWidth="5px" values="3,4,3,6,7,3,3,6,2,6,4"></span>
+</div>
+<div class="subheader-block d-lg-flex align-items-center border-faded border-right-0 border-top-0 border-bottom-0 ml-3 pl-3">
+	<div class="d-inline-flex flex-column justify-content-center mr-3">
+		<span class="fw-300 fs-xs d-block opacity-50">
+			<small>MY PROFITS</small> 
+		</span>
+		<span class="fw-500 fs-xl d-block color-danger-500">
+			$38,500
+		</span>
 	</div>
+	<span class="sparklines hidden-lg-down" sparkType="bar" sparkBarColor="#fe6bb0" sparkHeight="32px" sparkBarWidth="5px" values="1,4,3,6,5,3,9,6,5,9,7"></span>
+</div>
+
 {{/inline}}
 
 {{#*inline "content-block"}}
@@ -76,7 +79,6 @@
 							<div class="progress progress-sm mb-3">
 								<div class="progress-bar bg-fusion-400" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
 							</div>
-							
 							<div class="d-flex">
 								Transfered
 								<span class="d-inline-block ml-auto">440 TB</span>
@@ -84,7 +86,6 @@
 							<div class="progress progress-sm mb-3">
 								<div class="progress-bar bg-primary-500" role="progressbar" style="width: 34%;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
 							</div>
-							
 							<div class="d-flex">
 								Bugs Squashed
 								<span class="d-inline-block ml-auto">77%</span>
@@ -92,7 +93,6 @@
 							<div class="progress progress-sm mb-3">
 								<div class="progress-bar bg-primary-300" role="progressbar" style="width: 77%;" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"></div>
 							</div>
-
 							<div class="d-flex">
 								User Testing
 								<span class="d-inline-block ml-auto">7 days</span>
@@ -100,7 +100,6 @@
 							<div class="progress progress-sm mb-g">
 								<div class="progress-bar bg-primary-200" role="progressbar" style="width: 84%;" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"></div>
 							</div>
-
 							<div class="row no-gutters">
 								<div class="col-sm-6 pr-sm-1">
 									<a href="#" class="btn btn-default btn-block">Generate PDF</a>
@@ -109,7 +108,6 @@
 									<a href="#" class="btn btn-default btn-block">Report a Bug</a>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</div>
@@ -222,69 +220,71 @@
 			<div class="panel-container show">
 				<div class="panel-content p-0">
 					<div class="d-flex flex-column">
-						<div class="bg-subtlelight-fade custom-scrollbar" style="height: 250px">
-							<!-- message -->
-							<div class="d-flex flex-row px-4 pt-3 pb-2">
-								<!-- profile photo : lazy loaded -->
-								<span class="status status-danger">
-									<span class="profile-image rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-j.png')"></span>
-								</span>
-								<!-- profile photo end -->
-								<div class="ml-3">
-									<a href="javascript:void(0);" title="Lisa Hatchensen" class="d-block fw-700 text-dark">Lisa Hatchensen</a>
-									Hey did you meet the new board of director? He's a bit of a geek if you ask me...anyway here is the report you requested. I am off to launch with Lisa and Andrew, you wanna join?
-									<!-- file download -->
-									<div class="d-flex mt-3 demo">
+						<div class="bg-subtlelight-fade custom-scroll" style="height: 250px">
+							<div class="h-100">
+								<!-- message -->
+								<div class="d-flex flex-row px-4 pt-3 pb-2">
+									<!-- profile photo : lazy loaded -->
+									<span class="status status-danger">
+										<span class="profile-image rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-j.png')"></span>
+									</span>
+									<!-- profile photo end -->
+									<div class="ml-3">
+										<a href="javascript:void(0);" title="Lisa Hatchensen" class="d-block fw-700 text-dark">Lisa Hatchensen</a>
+										Hey did you meet the new board of director? He's a bit of a geek if you ask me...anyway here is the report you requested. I am off to launch with Lisa and Andrew, you wanna join?
+										<!-- file download -->
+										<div class="d-flex mt-3 demo flex-wrap">
 
-										<div class="btn-group" role="group" aria-label="Button group with nested dropdown ">
-											<button type="button" class="btn btn-default btn-xs btn-block px-1 py-1 fw-500" data-action="toggle">
-												<span class="d-block text-truncate text-truncate-sm">
-													<i class="fal fa-file-pdf mr-1 color-danger-700"></i> Report-2013-demographic-repo
-												</span>
-											</button>
-											<div class="btn-group" role="group">
-												<button id="btnGroupDrop1" type="button" class="btn btn-default btn-xs dropdown-toggle px-2 js-waves-off" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-												<div class="dropdown-menu p-0 fs-xs" aria-labelledby="btnGroupDrop1">
-													<a class="dropdown-item px-3 py-2" href="#">Forward</a>
-													<a class="dropdown-item px-3 py-2" href="#">Open</a>
-													<a class="dropdown-item px-3 py-2" href="#">Delete</a>
+											<div class="btn-group" role="group" aria-label="Button group with nested dropdown ">
+												<button type="button" class="btn btn-default btn-xs btn-block px-1 py-1 fw-500" data-action="toggle">
+													<span class="d-block text-truncate text-truncate-sm">
+														<i class="fal fa-file-pdf mr-1 color-danger-700"></i> Report-2013-demographic-repo
+													</span>
+												</button>
+												<div class="btn-group" role="group">
+													<button id="btnGroupDrop1" type="button" class="btn btn-default btn-xs dropdown-toggle px-2 js-waves-off" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+													<div class="dropdown-menu p-0 fs-xs" aria-labelledby="btnGroupDrop1">
+														<a class="dropdown-item px-3 py-2" href="#">Forward</a>
+														<a class="dropdown-item px-3 py-2" href="#">Open</a>
+														<a class="dropdown-item px-3 py-2" href="#">Delete</a>
+													</div>
 												</div>
 											</div>
-										</div>
-										<div class="btn-group" role="group" aria-label="Button group with nested dropdown ">
-											<button type="button" class="btn btn-default btn-xs btn-block px-1 py-1 fw-500" data-action="toggle">
-												<span class="d-block text-truncate text-truncate-sm">
-													<i class="fal fa-file-pdf mr-1 color-danger-700"></i> Bloodworks Patient 34124BA
-												</span>
-											</button>
-											<div class="btn-group" role="group">
-												<button id="btnGroupDrop1" type="button" class="btn btn-default btn-xs dropdown-toggle px-2 js-waves-off" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-												<div class="dropdown-menu p-0 fs-xs" aria-labelledby="btnGroupDrop1">
-													<a class="dropdown-item px-3 py-2" href="#">Forward</a>
-													<a class="dropdown-item px-3 py-2" href="#">Open</a>
-													<a class="dropdown-item px-3 py-2" href="#">Delete</a>
+											<div class="btn-group" role="group" aria-label="Button group with nested dropdown ">
+												<button type="button" class="btn btn-default btn-xs btn-block px-1 py-1 fw-500" data-action="toggle">
+													<span class="d-block text-truncate text-truncate-sm">
+														<i class="fal fa-file-pdf mr-1 color-danger-700"></i> Bloodworks Patient 34124BA
+													</span>
+												</button>
+												<div class="btn-group" role="group">
+													<button id="btnGroupDrop1" type="button" class="btn btn-default btn-xs dropdown-toggle px-2 js-waves-off" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+													<div class="dropdown-menu p-0 fs-xs" aria-labelledby="btnGroupDrop1">
+														<a class="dropdown-item px-3 py-2" href="#">Forward</a>
+														<a class="dropdown-item px-3 py-2" href="#">Open</a>
+														<a class="dropdown-item px-3 py-2" href="#">Delete</a>
+													</div>
 												</div>
 											</div>
-										</div>
 
+										</div>
+										<!-- file download end -->
 									</div>
-									<!-- file download end -->
 								</div>
-							</div>
-							<!-- message end -->
-							<!-- message reply -->
-							<div class="d-flex flex-row px-4 pt-3 pb-2">
-								<!-- profile photo : lazy loaded -->
-								<span class="status status-danger">
-									<span class="profile-image rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-admin.png')"></span>
-								</span>
-								<!-- profile photo end -->
-								<div class="ml-3">
-									<a href="javascript:void(0);" title="Lisa Hatchensen" class="d-block fw-700 text-dark">{{user}}</a>
-									You guys go ahead, I will need to finish this project. Thanks for the file! 
+								<!-- message end -->
+								<!-- message reply -->
+								<div class="d-flex flex-row px-4 pt-3 pb-2">
+									<!-- profile photo : lazy loaded -->
+									<span class="status status-danger">
+										<span class="profile-image rounded-circle d-inline-block" style="background-image:url('img/demo/avatars/avatar-admin.png')"></span>
+									</span>
+									<!-- profile photo end -->
+									<div class="ml-3">
+										<a href="javascript:void(0);" title="Lisa Hatchensen" class="d-block fw-700 text-dark">{{user}}</a>
+										You guys go ahead, I will need to finish this project. Thanks for the file! 
+									</div>
 								</div>
+								<!-- message reply end -->
 							</div>
-							<!-- message reply end -->
 						</div>
 						<!-- input -->
 						<div class="p-3 border-faded border-left-0 border-right-0 border-bottom-0 bg-faded">
@@ -345,11 +345,11 @@
 								<button type="button" class="btn btn-icon fs-lg">
 									<i class="fal fa-paperclip"></i>
 								</button>
-								<div class="custom-control custom-checkbox custom-control-inline ml-auto">
+								<div class="custom-control custom-checkbox custom-control-inline ml-auto hidden-sm-down">
 									<input type="checkbox" class="custom-control-input" id="defaultInline1">
 									<label class="custom-control-label" for="defaultInline1">Press <strong>ENTER</strong> to send</label>
 								</div>
-								<button class="btn btn-primary btn-sm waves-effect waves-themed">
+								<button class="btn btn-primary btn-sm ml-auto ml-sm-0">
 									Reply
 								</button>
 							</div>
@@ -359,8 +359,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="col-xl-6">
 		<div id="panel-3" class="panel">
 			<div class="panel-hdr">	
 				<h2 class="js-get-date"></h2>
@@ -372,18 +370,125 @@
 			</div>
 		</div>
 	</div>
+	<div class="col-xl-6">
+		<div id="panel-4" class="panel">
+			<div class="panel-hdr">	
+				<h2>Bird's <span class="fw-300">Eyes</span> </h2>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">
+					<div id="vector-map" class="w-100" style="height: 300px;"></div>
+				</div>
+				<div class="panel-content">
+					<div class="d-flex align-items-center bg-faded p-3 rounded">
+						<img class="d-inline-block js-jqvmap-flag mr-3 border-faded" src="https://lipis.github.io/flag-icon-css/flags/4x3/us.svg" style="width:50px; height: auto;">
+						<h4 class="d-inline-block fw-300 m-0 text-muted">
+							Showcasing information:
+							<small class="js-jqvmap-country mb-0 fw-500 text-dark">United States of America -  $3,760,125.00</small>
+						</h4>
+					</div>
+					{{!-- <div class="row no-gutters">
+						<div class="col-lg-6">
+							<div class="d-flex align-items-center bg-faded p-3 rounded mr-lg-1 mb-2 position-relative overflow-hidden">
+								<h5>
+									Quoata:
+								</h5>
+								<i class="fal fa-user fs-xxl ml-auto text-primary opacity-50"></i>
+							</div>	
+							<div class="d-flex align-items-center bg-faded p-3 rounded mr-lg-1 mb-2 position-relative overflow-hidden">
+								<h5>
+									Quoata:
+								</h5>
+								<i class="fal fa-user fs-xxl ml-auto text-primary opacity-50"></i>
+							</div>	
+							<div class="d-flex align-items-center bg-faded p-3 rounded mr-lg-1 mb-2 position-relative overflow-hidden">
+								<h5>
+									Quoata:
+								</h5>
+								<i class="fal fa-user fs-xxl ml-auto text-primary opacity-50"></i>
+							</div>	
+						</div>
+						<div class="col-lg-6">
+							<div class="d-flex align-items-center bg-faded p-3 rounded ml-lg-1 mb-2 position-relative overflow-hidden">
+								<h5>
+									Quoata:
+								</h5>
+								<i class="fal fa-clock fs-xxl ml-auto text-primary opacity-50"></i>
+							</div>	
+							<div class="d-flex align-items-center bg-faded p-3 rounded ml-lg-1 mb-2 position-relative overflow-hidden">
+								<h5>
+									Quoata:
+								</h5>
+								<i class="fal fa-clock fs-xxl ml-auto text-primary opacity-50"></i>
+							</div>
+							<div class="d-flex align-items-center bg-faded p-3 rounded ml-lg-1 mb-2 position-relative overflow-hidden">
+								<h5>
+									Quoata:
+								</h5>
+								<i class="fal fa-clock fs-xxl ml-auto text-primary opacity-50"></i>
+							</div>
+						</div>
+					</div> --}}
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 {{/inline}}
 
 {{#*inline "scripts-block"}}
+
+	<!-- The order of scripts is irrelevant -->
+	<script src="js/miscellaneous/fullcalendar/fullcalendar.bundle.js"></script>
 	<script src="js/statistics/sparkline/sparkline.bundle.js"></script>
 	<script src="js/statistics/easypiechart/easypiechart.bundle.js"></script>
 	<script src="js/statistics/flot/flot.bundle.js"></script>
-	<script src="js/miscellaneous/fullcalendar/fullcalendar.bundle.js"></script>
+	<script src="js/miscellaneous/jqvmap/jqvmap.bundle.js"></script>
 
 	<script>
 		$(document).ready(function () {
 			$('#js-page-content').smartPanel();	
+
+			/*
+			 * VECTOR MAP
+			 */
+
+			var data_array = {
+			"af":"16.63","al":"0","dz":"158.97","ao":"85.81","ag":"1.1","ar":"351.02","am":"8.83","au":"1219.72","at":"366.26","az":"52.17","bs":"7.54","bh":"21.73","bd":"105.4","bb":"3.96","by":"52.89","be":"461.33","bz":"1.43","bj":"6.49","bt":"1.4","bo":"19.18","ba":"16.2","bw":"12.5","br":"2023.53","bn":"11.96","bg":"44.84","bf":"8.67","bi":"1.47","kh":"11.36","cm":"21.88","ca":"1563.66","cv":"1.57","cf":"2.11","td":"7.59","cl":"199.18","cn":"5745.13","co":"283.11","km":"0.56","cd":"12.6","cg":"11.88","cr":"35.02","ci":"22.38","hr":"59.92","cy":"22.75","cz":"195.23","dk":"304.56","dj":"1.14","dm":"0.38","do":"50.87","ec":"61.49","eg":"216.83","sv":"21.8","gq":"14.55","er":"2.25","ee":"19.22","et":"30.94","fj":"3.15","fi":"231.98","fr":"2555.44","ga":"12.56","gm":"1.04","ge":"11.23","de":"3305.9","gh":"18.06","gr":"305.01","gd":"0.65","gt":"40.77","gn":"4.34","gw":"0.83","gy":"2.2","ht":"6.5","hn":"15.34","hk":"226.49","hu":"132.28","is":"0","in":"1430.02","id":"695.06","ir":"337.9","iq":"84.14","ie":"204.14","il":"201.25","it":"2036.69","jm":"13.74","jp":"5390.9","jo":"27.13","kz":"129.76","ke":"32.42","ki":"0.15","kw":"117.32","kg":"4.44","la":"6.34","lv":"23.39","lb":"39.15","ls":"1.8","lr":"0.98","lt":"35.73","lu":"52.43","mk":"9.58","mg":"8.33","mw":"5.04","my":"218.95","mv":"1.43","ml":"9.08","mt":"7.8","mr":"3.49","mu":"9.43","mx":"1004.04","md":"5.36","rw":"5.69","ws":"0.55","st":"0.19","sa":"434.44","sn":"12.66","rs":"38.92","sc":"0.92","sl":"1.9","sg":"217.38","sk":"86.26","si":"46.44","sb":"0.67","za":"354.41","es":"1374.78","lk":"48.24","kn":"0.56","lc":"1","vc":"0.58","sd":"65.93","sr":"3.3","sz":"3.17","se":"444.59","ch":"522.44","sy":"59.63","tw":"426.98","tj":"5.58","tz":"22.43","th":"312.61","tl":"0.62","tg":"3.07","to":"0.3","tt":"21.2","tn":"43.86","tr":"729.05","tm":"0","ug":"17.12","ua":"136.56","ae":"239.65","gb":"2258.57","us":"14624.18","uy":"40.71","uz":"37.72","vu":"0.72","ve":"285.21","vn":"101.99","ye":"30.02","zm":"15.69","zw":"0"
+			};
+
+			$('#vector-map').vectorMap({
+				map: 'world_en',
+				backgroundColor: '#ffffff',
+				color: myapp_get_color.warning_50,
+				borderOpacity: 0.5,
+				borderWidth: 1,
+				hoverOpacity: 0.7,
+				hoverColor: myapp_get_color.success_300,
+				hoverOpacity: null,
+				selectedColor: myapp_get_color.success_500,
+				selectedRegions: null,
+				enableZoom: true,
+				showTooltip: true,
+				scaleColors: [myapp_get_color.primary_400, myapp_get_color.primary_50],
+				values: data_array,
+				normalizeFunction: 'polynomial',
+				onRegionClick: function(element, code, region)
+				{
+					/*var message = 'You clicked "'
+						+ region
+						+ '" which has the code: '
+						+ code.toLowerCase();
+			 
+					console.log(message);*/
+
+					var randomNumber = Math.floor(Math.random() * 10000000);
+
+					$('.js-jqvmap-flag').attr('src','https://lipis.github.io/flag-icon-css/flags/4x3/' + code.toLowerCase() + '.svg');
+					$('.js-jqvmap-country').text(region + ' - ' + '$' + randomNumber.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+				}
+			});
+
 
 			/* TAB 1: UPDATING CHART */
 			var data = [], 

@@ -48,6 +48,7 @@
     "jquery-throttle-debounce": "github:myorangeca/jquery-throttle-debounce",
     "jquery-ui": "^1.12.1",
     "jquery.flot.tooltip": "^0.9.0",
+    "jqvmap": "^1.5.1",
     "jszip": "^3.2.1",
     "justifiedGallery": "^3.7.0",
     "lightgallery": "^1.6.12",

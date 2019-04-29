@@ -509,6 +509,22 @@
 						"bundle": {
 							"styles": "{$config.output}/css/miscellaneous/reactions/reactions.css"
 						}
+					},
+					"jqvmap" : {
+						"src": {
+							"styles":[
+								"{$config.path.node_modules}/jqvmap/dist/jqvmap.css",
+								"{$config.path.src}/custom/plugins/jqvmap/jqvmap-cust.scss"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/jqvmap/dist/jquery.vmap.js",
+								"{$config.path.node_modules}/jqvmap/dist/maps/jquery.vmap.world.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/miscellaneous/jqvmap/jqvmap.bundle.css",
+							"scripts": "{$config.output}/js/miscellaneous/jqvmap/jqvmap.bundle.js"
+						}
 					}
 
 				}
