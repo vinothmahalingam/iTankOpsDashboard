@@ -143,7 +143,8 @@
 .border-top-right-radius-0 { border-top-right-radius: 0 !important; }
 .border-bottom-right-radius-0 { border-bottom-right-radius: 0 !important; }
 .rounded-plus { border-radius: $border-radius-plus }
-
+.rounded-bottom { border-radius: 0 0 $panel-edge-radius !important }
+.rounded-top { border-radius: $panel-edge-radius $panel-edge-radius 0 0 !important; }
 
 /* progressbars */
 /*.progress-xs { height: 5px }

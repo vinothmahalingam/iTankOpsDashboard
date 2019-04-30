@@ -88,10 +88,12 @@
 {{/inline}}
 
 {{#*inline "scripts-block"}}
-
+	
+<!-- moment.js (dependency for the demo only); you do not have to use it unless you need it 
+	DOC: Parse, validate, manipulate, and display dates and times in JavaScript. (https://momentjs.com/) -->	
+	<script src="js/dependency/moment/moment.js"></script>
 <!-- fullcalendar bundle: 
 	 DOC: you may remove the extensions if you do not plan on using them. Learn more about these extensions at https://fullcalendar.io
-				+ moment.min.js (recommended)
 				+ core/main.js (core)
 				+ daygrid/main.js (extension)
 				+ list/main.js (extension)

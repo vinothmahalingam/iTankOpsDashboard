@@ -276,7 +276,7 @@ $input-btn-focus-color:					transparent;
 $input-padding-y:						.5rem;  
 $input-padding-x:						.875rem;
 $label-margin-bottom:					.3rem;
-$form-group-margin-bottom:				2rem;
+$form-group-margin-bottom:				1.5rem;
 
 /* links */
 $link-color:							$primary-500;
@@ -316,7 +316,7 @@ $badge-font-weight:						500;
 
 /* cards */
 $card-spacer-y:							1rem;
-$card-spacer-x:							1.5rem;
+$card-spacer-x:							1rem;
 $card-cap-bg:							inherit;
 $card-border-color:						rgba(0, 0, 0, 0.08);
 $list-group-border-color:				$card-border-color;
@@ -724,11 +724,12 @@ $page-breadcrumb-maxwidth:				200px;
 
 /*   PAGE COMPONENT PANELS 
 ========================================================================== */
-$panel-spacer-y:						1.25rem;
-$panel-spacer-x:						1.5rem;
-$panel-hdr-font-size:					$fs-xl;
-$panel-hdr-height:						3.125rem;
-$panel-btn-size:						1.125rem;
+$panel-spacer-y:						1rem;
+$panel-spacer-x:						1rem;
+$panel-hdr-font-size:					14px;
+$panel-hdr-height:						2.75rem;
+$panel-btn-size:						1rem;
+$panel-btn-spacing:						0.3rem;
 $panel-toolbar-icon:					1.5625rem;
 $panel-hdr-background:					$white; //#fafafa;
 $panel-edge-radius:						$border-radius;

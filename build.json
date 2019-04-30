@@ -449,6 +449,139 @@
 							"styles": "{$config.output}/css/formplugins/bootstrap-datepicker/bootstrap-datepicker.css",
 							"scripts": "{$config.output}/js/formplugins/bootstrap-datepicker/bootstrap-datepicker.js"
 						}
+					},
+					"daterangepicker" : {
+						"src": {
+							"styles": [
+								"{$config.path.node_modules}/bootstrap-daterangepicker/daterangepicker.css",
+								"{$config.path.src}/custom/plugins/daterangepicker/daterangepicker-custom.scss"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/bootstrap-daterangepicker/daterangepicker.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/formplugins/bootstrap-daterangepicker/bootstrap-daterangepicker.css",
+							"scripts": "{$config.output}/js/formplugins/bootstrap-daterangepicker/bootstrap-daterangepicker.js"
+						}
+					},
+					"dropzone" : {
+						"src": {
+							"styles": [
+								"{$config.path.node_modules}/dropzone/dist/dropzone.css",
+								"{$config.path.src}/custom/plugins/dropzone/dropzone-custom.scss"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/dropzone/dist/dropzone.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/formplugins/dropzone/dropzone.css",
+							"scripts": "{$config.output}/js/formplugins/dropzone/dropzone.js"
+						}					
+					},
+					"ion-rangeslider": {
+						"src": {
+							"styles": [
+								"{$config.path.node_modules}/ion-rangeslider/css/ion.rangeSlider.css",
+								"{$config.path.src}/custom/plugins/ion-rangeslider/ion.rangeslider-custom.scss"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/ion-rangeslider/js/ion.rangeSlider.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/formplugins/ion-rangeslider/ion-rangeslider.css",
+							"scripts": "{$config.output}/js/formplugins/ion-rangeslider/ion-rangeslider.js"
+						}	
+					},
+					"inputmusk": {
+						"src": {
+							"scripts": [
+								"{$config.path.node_modules}/inputmask/dist/jquery.inputmask.bundle.js"
+							]
+						},
+						"bundle": {
+							"scripts": "{$config.output}/js/formplugins/inputmask/inputmask.bundle.js"
+						}	
+					},
+					"cropper": {
+						"src": {
+							"styles": [
+								"{$config.path.node_modules}/cropperjs/dist/cropper.css",
+								"{$config.path.src}/custom/plugins/cropperjs/cropper-demo.scss"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/cropperjs/dist/cropper.js",
+								"{$config.path.node_modules}/jquery-cropper/dist/jquery-cropper.js"
+								
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/formplugins/cropperjs/cropper.css",
+							"scripts": "{$config.output}/js/formplugins/cropperjs/cropper.js"
+						}	
+					},
+					"select2": {
+						"src": {
+							"styles": [
+								"{$config.path.node_modules}/select2/src/scss/core.scss",
+								"{$config.path.src}/custom/plugins/select2/select2-custom.scss"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/select2/dist/js/select2.full.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/formplugins/select2/select2.bundle.css",
+							"scripts": "{$config.output}/js/formplugins/select2/select2.bundle.js"
+						}	
+					},
+					"summernote": {
+						"src": {
+							"styles": [
+								"{$config.path.node_modules}/summernote/dist/summernote.css",
+								"{$config.path.src}/custom/plugins/summernote/summernote-custom.scss"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/summernote/dist/summernote.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/formplugins/summernote/summernote.css",
+							"scripts": "{$config.output}/js/formplugins/summernote/summernote.js"
+						}	
+					},
+					"markdown": {
+						"src": {
+							"styles": [
+								"{$config.path.node_modules}/bootstrap-markdown/css/bootstrap-markdown.min.css",
+								"{$config.path.src}/custom/plugins/markdown/markdown-custom.scss"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/markdown/lib/markdown.js",
+								"{$config.path.node_modules}/bootstrap-markdown/js/bootstrap-markdown.js",
+								"{$config.path.src}/custom/plugins/markdown/js/markdown.config.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/formplugins/bootstrap-markdown/bootstrap-markdown.css",
+							"scripts": "{$config.output}/js/formplugins/bootstrap-markdown/bootstrap-markdown.js"
+						}	
+					},
+					"nouislider": {
+						"src": {
+							"styles": [
+								"{$config.path.node_modules}/nouislider/distribute/nouislider.css"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/nouislider/distribute/nouislider.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/formplugins/nouislider/nouislider.css",
+							"scripts": "{$config.output}/js/formplugins/nouislider/nouislider.js"
+						}	
 					}
 				},
 				"miscellaneous" : {
@@ -463,7 +596,6 @@
 								"{$config.path.src}/custom/plugins/@fullcalendar/core-main-override.scss"
 							],
 							"scripts": [
-								"{$config.path.node_modules}/moment/min/moment.min.js",
 								"{$config.path.node_modules}/@fullcalendar/core/main.js",
 								"{$config.path.node_modules}/@fullcalendar/daygrid/main.js",
 								"{$config.path.node_modules}/@fullcalendar/list/main.js",
@@ -670,7 +802,18 @@
 							}
 						}
 					}
-
+				},
+				"dependencyplugins" : {
+					"moment" : {
+						"src": {
+							"scripts": [
+								"{$config.path.node_modules}/moment/min/moment.min.js"
+							]
+						},
+						"bundle": {
+							"scripts": "{$config.output}/js/dependency/moment/moment.js"
+						}
+					}
 				}
 			}
 		},

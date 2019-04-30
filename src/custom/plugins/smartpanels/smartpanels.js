@@ -359,9 +359,10 @@
                     **/
                     if (self.o.refreshButton === true && tPanel.data('panel-refresh') === undefined) {
                         refreshButton = '<a href="#" class="dropdown-item js-panel-refresh"><span data-i18n="drpdwn.refreshpanel">' + self.o.refreshButtonLabel + '</span></a>';
-                        thisContainer.append(
+                        thisContainer.prepend(
                             '<div class="loader"><i class="fal fa-spinner-third fa-spin-4x fs-xxl"></i></div>'
                         );
+                        //append** conflicts with panel > container > content:last child, so changed to prepend
                         
                     } else {
                         refreshButton = '';
