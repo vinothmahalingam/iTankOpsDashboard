@@ -1,3 +1,5 @@
+@import './src/scss/_imports/_global-import';
+
 .jqvmap-zoomin, .jqvmap-zoomout {
     width: 1.6rem;
     height: 1.6rem;
@@ -20,5 +22,19 @@
 } 
 
 .jqvmap-zoomout {
-	top: 2rem;
+	top: $panel-spacer-x;
+}
+
+.p-0 .jqvmap-zoomin, 
+.p-0 .jqvmap-zoomout {
+	left: $panel-spacer-x;
+	top: $panel-spacer-x;
+}
+
+.p-0 .jqvmap-zoomout {
+	top: $panel-spacer-x + 2rem;
+}
+
+.jqvmap-bg-ocean {
+	background-color: #eafeff;
 }

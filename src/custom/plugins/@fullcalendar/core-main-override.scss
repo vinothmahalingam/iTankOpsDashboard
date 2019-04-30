@@ -1,7 +1,7 @@
 @import './src/scss/_imports/_global-import';
 
 
-.panel {
+/*.panel {
 	.panel-content.p-0 {
 		.fc-bootstrap {
 			table {
@@ -35,7 +35,7 @@
 
 	}
 }
-
+*/
 
 .fc-day-grid-event .fc-time {
 	display: block;
@@ -94,7 +94,7 @@
 }
 
 @media only screen and ( max-width: map-get($grid-breakpoints, md) ){
-	.panel {
+	/*.panel {
 		.panel-content.p-0 {
 			.fc-toolbar.fc-header-toolbar,
 			.fc-toolbar.fc-footer-toolbar {
@@ -102,7 +102,11 @@
 			}
 
 		}
-	}
+	}*/
+
+	.fc-day-grid-event .fc-time {
+		display: inline;
+	}	
 
 	.fc-bootstrap:not(.fc-reset-order) {
 		.fc-toolbar {

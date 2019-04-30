@@ -511,19 +511,163 @@
 						}
 					},
 					"jqvmap" : {
-						"src": {
-							"styles":[
-								"{$config.path.node_modules}/jqvmap/dist/jqvmap.css",
-								"{$config.path.src}/custom/plugins/jqvmap/jqvmap-cust.scss"
-							],
-							"scripts": [
-								"{$config.path.node_modules}/jqvmap/dist/jquery.vmap.js",
-								"{$config.path.node_modules}/jqvmap/dist/maps/jquery.vmap.world.js"
-							]
+						"core" : {
+							"src": {
+								"styles":[
+									"{$config.path.node_modules}/jqvmap/dist/jqvmap.css",
+									"{$config.path.src}/custom/plugins/jqvmap/jqvmap-cust.scss"
+								],
+								"scripts": [
+									"{$config.path.node_modules}/jqvmap/dist/jquery.vmap.js",
+									"{$config.path.node_modules}/jqvmap/dist/maps/jquery.vmap.world.js"
+								]
+							},
+							"bundle": {
+								"styles": "{$config.output}/css/miscellaneous/jqvmap/jqvmap.bundle.css",
+								"scripts": "{$config.output}/js/miscellaneous/jqvmap/jqvmap.bundle.js"
+							}
 						},
-						"bundle": {
-							"styles": "{$config.output}/css/miscellaneous/jqvmap/jqvmap.bundle.css",
-							"scripts": "{$config.output}/js/miscellaneous/jqvmap/jqvmap.bundle.js"
+						"maps" : {
+							"algeria" : {
+								"src": {
+									"scripts": [
+										"{$config.path.node_modules}/jqvmap/dist/maps/jquery.vmap.algeria.js"
+									]
+								},
+								"bundle": {
+									"scripts": "{$config.output}/js/miscellaneous/jqvmap/maps/jquery.vmap.algeria.js"
+								}
+							},
+							"argentina" : {
+								"src": {
+									"scripts": [
+										"{$config.path.node_modules}/jqvmap/dist/maps/jquery.vmap.argentina.js"
+									]
+								},
+								"bundle": {
+									"scripts": "{$config.output}/js/miscellaneous/jqvmap/maps/jquery.vmap.argentina.js"
+								}
+							},
+							"brazil" : {
+								"src": {
+									"scripts": [
+										"{$config.path.node_modules}/jqvmap/dist/maps/jquery.vmap.brazil.js"
+									]
+								},
+								"bundle": {
+									"scripts": "{$config.output}/js/miscellaneous/jqvmap/maps/jquery.vmap.brazil.js"
+								}
+							},
+							"canada" : {
+								"src": {
+									"scripts": [
+										"{$config.path.node_modules}/jqvmap/dist/maps/jquery.vmap.canada.js"
+									]
+								},
+								"bundle": {
+									"scripts": "{$config.output}/js/miscellaneous/jqvmap/maps/jquery.vmap.canada.js"
+								}
+							},
+							"europe" : {
+								"src": {
+									"scripts": [
+										"{$config.path.node_modules}/jqvmap/dist/maps/jquery.vmap.europe.js"
+									]
+								},
+								"bundle": {
+									"scripts": "{$config.output}/js/miscellaneous/jqvmap/maps/jquery.vmap.europe.js"
+								}
+							},
+							"france" : {
+								"src": {
+									"scripts": [
+										"{$config.path.node_modules}/jqvmap/dist/maps/jquery.vmap.france.js"
+									]
+								},
+								"bundle": {
+									"scripts": "{$config.output}/js/miscellaneous/jqvmap/maps/jquery.vmap.france.js"
+								}
+							},
+							"germany" : {
+								"src": {
+									"scripts": [
+										"{$config.path.node_modules}/jqvmap/dist/maps/jquery.vmap.germany.js"
+									]
+								},
+								"bundle": {
+									"scripts": "{$config.output}/js/miscellaneous/jqvmap/maps/jquery.vmap.germany.js"
+								}
+							},
+							"greece" : {
+								"src": {
+									"scripts": [
+										"{$config.path.node_modules}/jqvmap/dist/maps/jquery.vmap.greece.js"
+									]
+								},
+								"bundle": {
+									"scripts": "{$config.output}/js/miscellaneous/jqvmap/maps/jquery.vmap.greece.js"
+								}
+							},
+							"iran" : {
+								"src": {
+									"scripts": [
+										"{$config.path.node_modules}/jqvmap/dist/maps/jquery.vmap.iran.js"
+									]
+								},
+								"bundle": {
+									"scripts": "{$config.output}/js/miscellaneous/jqvmap/maps/jquery.vmap.iran.js"
+								}
+							},
+							"iraq" : {
+								"src": {
+									"scripts": [
+										"{$config.path.node_modules}/jqvmap/dist/maps/jquery.vmap.iraq.js"
+									]
+								},
+								"bundle": {
+									"scripts": "{$config.output}/js/miscellaneous/jqvmap/maps/jquery.vmap.iraq.js"
+								}
+							},
+							"russia" : {
+								"src": {
+									"scripts": [
+										"{$config.path.node_modules}/jqvmap/dist/maps/jquery.vmap.russia.js"
+									]
+								},
+								"bundle": {
+									"scripts": "{$config.output}/js/miscellaneous/jqvmap/maps/jquery.vmap.russia.js"
+								}
+							},
+							"tunisia" : {
+								"src": {
+									"scripts": [
+										"{$config.path.node_modules}/jqvmap/dist/maps/jquery.vmap.tunisia.js"
+									]
+								},
+								"bundle": {
+									"scripts": "{$config.output}/js/miscellaneous/jqvmap/maps/jquery.vmap.tunisia.js"
+								}
+							},
+							"turkey" : {
+								"src": {
+									"scripts": [
+										"{$config.path.node_modules}/jqvmap/dist/maps/jquery.vmap.turkey.js"
+									]
+								},
+								"bundle": {
+									"scripts": "{$config.output}/js/miscellaneous/jqvmap/maps/jquery.vmap.turkey.js"
+								}
+							},
+							"usa" : {
+								"src": {
+									"scripts": [
+										"{$config.path.node_modules}/jqvmap/dist/maps/jquery.vmap.usa.js"
+									]
+								},
+								"bundle": {
+									"scripts": "{$config.output}/js/miscellaneous/jqvmap/maps/jquery.vmap.usa.js"
+								}
+							}
 						}
 					}
 
