@@ -1,5 +1,9 @@
 @import './src/scss/_imports/_global-import';
 
+.select2 {
+	width:100% !important;
+}
+
 .select2-container--default .select2-selection--single,
 .select2-container--default .select2-selection--multiple {
 	border: $input-border-width solid $input-border-color;
@@ -48,9 +52,10 @@
 	
 }
 
-.select2-search.select2-search--dropdown + .select2-results {
+.select2-search.select2-search--dropdown:not(.select2-search--hide) + .select2-results {
 	padding-top: 0;
 }
+
 
 .select2-container--open .select2-dropdown--above {
 	box-shadow: 0px -3px 8px 0px rgba(90, 80, 105, 0.1);
@@ -89,8 +94,8 @@
 }
 
 .select2-container--default .select2-results__option[aria-selected=true] {
-    color: #563d7c;
-    background-color: #efebf5;
+	background: $dropdown-link-active-bg;
+	color: $dropdown-link-active-color;
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
@@ -135,21 +140,23 @@
     align-items: center;
 }
 .select2-container--default .select2-selection--multiple .select2-selection__rendered {
-	display: block;
+	display: flex;
 	padding: 0 0.5rem;
-	clear: both;
+	//clear: both;
+	flex-wrap: wrap;
 }
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
-	margin-right: 7px;
-	margin-top: 6px;
+	//margin-right: 7px;
+	//margin-top: 6px;
+	margin: 5px 3px;
 	display: inline-flex;
 	padding-right: 0;
 	align-items: center;
 
-	background: $primary-500;
-	border-color: $primary-600;
+	background: $dropdown-link-active-bg;
+	border-color: $primary-400;
 
-	color: $white;
+	color: $dropdown-link-active-color;
 
 	.select2-selection__choice__remove {
 		margin: 0;
@@ -160,10 +167,10 @@
 		border-left: 1px solid rgba(0,0,0,0.1);
 		margin-left: 5px;
 
-		color: lighten($primary-500, 30%);
+		color: lighten($primary-500, 10%);
 
 		&:hover {
-			color: lighten($primary-500, 50%);
+			color: $primary-500;
 		}
 
 		&:active {
@@ -184,4 +191,31 @@
 span.select2-selection.select2-selection--single,
 span.select2-selection.select2-selection--multiple {
 	outline: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__clear {
+	padding: 0 15px;
+	margin-right: 8px;
+	font-size: 1rem;
+	color: $danger-500;
+
+	&:hover {
+		color: $danger-600;
+	}
+}
+
+/* this is not a permanent solution... hopefully IE will die by the time we release version 5.... */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.select2-container .select2-search--inline .select2-search__field {
+		margin-top: 9px;
+		margin-left: 5px;
+	}
+	.select2-container--default .select2-selection--single .select2-selection__clear {
+		line-height: normal;
+		margin-top: 8px;
+	}
+}
+
+.select2-results__message {
+	color: $danger-500;
 }
