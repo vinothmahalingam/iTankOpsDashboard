@@ -46,7 +46,7 @@
     "holderjs": "^2.9.6",
     "inputmask": "^4.0.8",
     "ion-rangeslider": "^2.3.0",
-    "jquery": "^3.4.0",
+    "jquery": "3.3.1",
     "jquery-cropper": "^1.0.0",
     "jquery-i18next": "^1.2.1",
     "jquery-mousewheel": "^3.1.13",
@@ -67,7 +67,7 @@
     "pdfmake": "^0.1.54",
     "peity": "^3.3.0",
     "popper.js": "^1.15.0",
-    "select2": "^4.0.6",
+    "select2": "4.0.5",
     "summernote": "^0.8.11",
     "sweetalert2": "^8.0.6",
     "toastr": "^2.1.4"

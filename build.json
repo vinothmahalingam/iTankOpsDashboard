@@ -525,8 +525,8 @@
 					"select2": {
 						"src": {
 							"styles": [
-								"{$config.path.node_modules}/select2/src/scss/core.scss",
-								"{$config.path.src}/custom/plugins/select2/select2-custom.scss"
+								"{$config.path.node_modules}/select2/dist/css/select2.css",
+								"{$config.path.src}/custom/plugins/select2/select2-cust.scss"
 							],
 							"scripts": [
 								"{$config.path.node_modules}/select2/dist/js/select2.full.js"
