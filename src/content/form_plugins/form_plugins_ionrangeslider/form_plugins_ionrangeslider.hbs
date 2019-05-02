@@ -1,21 +1,14 @@
 {{#> 
 	layouts/main 
-	title="Icon Range Slider" 
+	title="Ion Range Slider" 
 	pagename="form_plugins_ionrangeslider" 
 	category_1="Form Plugins"
-	heading="<i class='subheader-icon fal fa-credit-card-front'></i> Icon Range Slider<sup class='badge badge-primary fw-500'>ADDON</sup>" 
+	heading="<i class='subheader-icon fal fa-credit-card-front'></i> Ion Range Slider<sup class='badge badge-primary fw-500'>ADDON</sup>" 
 	pagedescription="blank description"
 }}
 
 {{#*inline "head-block"}}
-	<link rel="stylesheet" media="screen, print" href="css/.../styles.css">
-{{/inline}}
-
-{{#*inline "subheader-block"}}
-	{{!-- Right content on content header --}}
-	<div class="subheader-block">
-		Right content of header
-	</div>
+	<link rel="stylesheet" media="screen, print" href="css/formplugins/ion-rangeslider/ion-rangeslider.css">
 {{/inline}}
 
 {{#*inline "content-block"}}
@@ -60,8 +53,12 @@
 					<div class="panel-tag">
 						Panel tag <code>code</code>
 					</div>
-					Text
-					
+					<input id="demo_0" type="text" name="" value="" class="d-none" tabindex="-1" readonly="">
+					<input id="demo_1" type="text" name="" value="" class="d-none" tabindex="-1" readonly="">
+					<input id="demo_2" type="text" name="" value="" class="d-none" tabindex="-1" readonly="">
+					<input id="demo_3" type="text" name="" value="" class="d-none" tabindex="-1" readonly="">
+					<input id="demo_4" type="text" name="" value="" class="d-none" tabindex="-1" readonly="">
+					<input id="demo_5" type="text" name="" value="" class="d-none" tabindex="-1" readonly="">
 				</div>
 			</div>
 		</div>
@@ -70,11 +67,46 @@
 {{/inline}}
 
 {{#*inline "scripts-block"}}
-	<script src="js/../script.js"></script>
+	<script src="js/formplugins/ion-rangeslider/ion-rangeslider.js"></script>
 	<script>
 		$(document).ready(function () {
-			
-		};
+			$("#demo_0").ionRangeSlider({
+			    min: 100,
+			    max: 1000,
+			    from: 550,
+			    skin: "flat"
+			});
+			$("#demo_1").ionRangeSlider({
+			    min: 100,
+			    max: 1000,
+			    from: 550,
+			    skin: "big"
+			});
+			$("#demo_2").ionRangeSlider({
+			    min: 100,
+			    max: 1000,
+			    from: 550,
+			    skin: "modern"
+			});
+			$("#demo_3").ionRangeSlider({
+			    min: 100,
+			    max: 1000,
+			    from: 550,
+			    skin: "sharp"
+			});
+			$("#demo_4").ionRangeSlider({
+			    min: 100,
+			    max: 1000,
+			    from: 550,
+			    skin: "round"
+			});
+			$("#demo_5").ionRangeSlider({
+			    min: 100,
+			    max: 1000,
+			    from: 550,
+			    skin: "square"
+			});
+		});
 	</script>
 {{/inline}}
 
