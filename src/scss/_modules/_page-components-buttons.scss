@@ -177,6 +177,18 @@
 	}
 }*/
 
+.btn-light {
+	border-color: rgba(0, 0, 0, 0.15);
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active,
+	&:hover {
+		border-color: rgba($black, 0.25);
+	}
+}
+.show > .btn-light.dropdown-toggle {
+	border-color: rgba($black, 0.25);
+}
+
 /* btn misc */
 .btn-default {
 	@extend %btn-default;

@@ -264,7 +264,7 @@ $theme-colors: (
 	"info": $color-info,
 	"warning": $color-warning,
 	"danger": $color-danger,
-	"light": darken($white, 7%),
+	"light": $white,
 	"dark": $fusion-500
 );
 

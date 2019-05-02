@@ -4,19 +4,13 @@
 	pagename="form_plugin_summernote" 
 	category_1="Form Plugins"
 	heading="<i class='subheader-icon fal fa-credit-card-front'></i> Summernote<sup class='badge badge-primary fw-500'>ADDON</sup>" 
-	pagedescription="blank description"
+	pagedescription="A JavaScript library that helps you create WYSIWYG editors online."
 }}
 
 {{#*inline "head-block"}}
-	<link rel="stylesheet" media="screen, print" href="css/.../styles.css">
+	<link rel="stylesheet" media="screen, print" href="css/formplugins/summernote/summernote.css">
 {{/inline}}
 
-{{#*inline "subheader-block"}}
-	{{!-- Right content on content header --}}
-	<div class="subheader-block">
-		Right content of header
-	</div>
-{{/inline}}
 
 {{#*inline "content-block"}}
 
@@ -34,7 +28,7 @@
 				<span class="h5">About</span>
 				<p>Points.</p>
 				<p class="m-0">
-					Find in-depth, guidelines, tutorials and more on Addon's <a href="#" target="_blank">Official Documentation</a> 
+					Find in-depth, guidelines, tutorials and more on Summernote's <a href="https://summernote.org/deep-dive/" target="_blank">Official Documentation</a> 
 				</p>
 			</div>
 		</div>
@@ -47,7 +41,7 @@
 		<div id="panel-1" class="panel">
 			<div class="panel-hdr">	
 				<h2>
-					Panel <span class="fw-300"><i>Title</i></span> 
+					AutoSave <span class="fw-300"><i>Script</i></span> 
 				</h2>
 				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
@@ -58,10 +52,59 @@
 			<div class="panel-container show">
 				<div class="panel-content">									
 					<div class="panel-tag">
-						Panel tag <code>code</code>
+						This is the default <code>summernote</code> example, with full toolbar buttons. We have also added a custom auto save script for localStorage which uses <code>onChange</code> and <code>onInit</code> hooks to load and save to <code>localStorage</code>
 					</div>
-					Text
-					
+					<div class="js-summernote" id="saveToLocal"></div>
+					<div class="mt-3">
+						<div class="custom-control custom-checkbox">
+							<input type="checkbox" class="custom-control-input" id="autoSave" checked="checked">
+							<label class="custom-control-label" for="autoSave">Auto Save to LocalStorage</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-6">
+		<div id="panel-2" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Hint <span class="fw-300"><i>for emoji </i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						For Emoji’s you can use <code>https://api.github.com/emojis</code>
+					</div>
+					<div class="js-hint2emoji"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-6">
+		<div id="panel-3" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Hint <span class="fw-300"><i>for Mentions</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						For Mentions: [jayden, sam, alvin, david]
+					</div>
+					<div class="js-hint2mention"></div>
 				</div>
 			</div>
 		</div>
@@ -70,11 +113,120 @@
 {{/inline}}
 
 {{#*inline "scripts-block"}}
-	<script src="js/../script.js"></script>
+	<script src="js/formplugins/summernote/summernote.js"></script>
 	<script>
-		$(document).ready(function () {
-			
+
+		var autoSave = $('#autoSave');
+		var interval;
+		var timer = function(){
+		interval = setInterval(function(){
+				//start slide...
+				if (autoSave.prop('checked'))
+				saveToLocal();
+
+				clearInterval(interval);
+			}, 2000);
 		};
+
+		//save
+		var saveToLocal = function(){
+			localStorage.setItem('summernoteData', $('#saveToLocal').summernote("code"));
+			console.log("saved");
+		}
+
+		//delete 
+		var removeFromLocal = function(){
+			localStorage.removeItem("summernoteData");
+			$('#saveToLocal').summernote('reset');
+		}
+
+		$(document).ready(function () {
+			//init default
+			$('.js-summernote').summernote({
+				height: 200,
+				tabsize: 2,
+				placeholder: "Type here...",
+				dialogsFade: true,
+				toolbar: [
+					['style', ['style']],
+    				['font', ['strikethrough', 'superscript', 'subscript']],
+					['font', ['bold', 'italic', 'underline', 'clear']],
+					['fontsize', ['fontsize']],
+					['fontname', ['fontname']],
+					['color', ['color']],
+					['para', ['ul', 'ol', 'paragraph']],
+					['height', ['height']]
+					['table', ['table']],
+					['insert', ['link', 'picture', 'video']],
+					['view', ['fullscreen', 'codeview', 'help']]
+				],		
+				callbacks: {
+					//restore from localStorage
+					onInit: function(e) {
+						$('.js-summernote').summernote("code", localStorage.getItem("summernoteData"));
+					},
+					onChange: function(contents, $editable) {
+						clearInterval(interval);
+						timer();
+					}
+				}
+			});
+			
+			//load emojis
+			$.ajax({
+				url: 'https://api.github.com/emojis',
+				async: false
+			}).then(function (data) {
+				window.emojis = Object.keys(data);
+				window.emojiUrls = data;
+			});
+
+			//init emoji example
+			$(".js-hint2emoji").summernote({
+				height: 100,
+				toolbar: false,
+				placeholder: 'type starting with : and any alphabet',
+				hint: {
+					match: /:([\-+\w]+)$/,
+					search: function (keyword, callback) {
+						callback($.grep(emojis, function (item) {
+							return item.indexOf(keyword) === 0;
+						}));
+					},
+					template: function (item) {
+						var content = emojiUrls[item];
+						return '<img src="' + content + '" width="20" /> :' + item + ':';
+					},
+					content: function (item) {
+						var url = emojiUrls[item];
+						if (url) {
+							return $('<img />').attr('src', url).css('width', 20)[0];
+						}
+						return '';
+					}
+				}
+			});
+
+			//init mentions example
+			$(".js-hint2mention").summernote({
+				height: 100,
+				toolbar: false,
+				placeholder: "type starting with @",
+				hint: {
+					mentions: ['jayden', 'sam', 'alvin', 'david'],
+					match: /\B@(\w*)$/,
+					search: function (keyword, callback) {
+						callback($.grep(this.mentions, function (item) {
+							return item.indexOf(keyword) == 0;
+						}));
+					},
+					content: function (item) {
+						return '@' + item;
+					}
+				}
+			});
+
+		});
 	</script>
 {{/inline}}
 

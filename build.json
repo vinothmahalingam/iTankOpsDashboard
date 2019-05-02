@@ -76,7 +76,8 @@
 							],
 							"fonts": [
 								"{$config.path.src}/custom/webfonts/fontawesome-pro-master/webfonts/**",
-								"{$config.path.src}/custom/webfonts/nextgen-fonts-master/webfonts/**"
+								"{$config.path.src}/custom/webfonts/nextgen-fonts-master/webfonts/**",
+								"{$config.path.src}/custom/webfonts/plugins/summernote/**"
 							]
 						}							
 					},
@@ -540,11 +541,11 @@
 					"summernote": {
 						"src": {
 							"styles": [
-								"{$config.path.node_modules}/summernote/dist/summernote.css",
+								"{$config.path.node_modules}/summernote/dist/summernote-bs4.css",
 								"{$config.path.src}/custom/plugins/summernote/summernote-custom.scss"
 							],
 							"scripts": [
-								"{$config.path.node_modules}/summernote/dist/summernote.js"
+								"{$config.path.node_modules}/summernote/dist/summernote-bs4.js"
 							]
 						},
 						"bundle": {

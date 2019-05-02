@@ -1,5 +1,5 @@
 /* text area */
-[contenteditable="true"] {
+.form-content-editable[contenteditable="true"] {
 	overflow:auto;
 	-webkit-user-modify: read-write-plaintext-only;
 

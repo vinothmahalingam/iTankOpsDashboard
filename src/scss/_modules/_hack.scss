@@ -135,7 +135,7 @@ body:not(.mobile-view-activated).mod-main-boxed.modal-open {
 }
 
 /* add borders to button groups */
-.btn-group .btn:not([class*="btn-outline-"]):not(.btn-icon) {
+.btn-group .btn:not([class*="btn-outline-"]):not(.btn-icon):not(.btn-light) {
 	border-right: 1px solid rgba($black, 0.1);
 	border-left: 1px solid rgba($black, 0.1);
 }
