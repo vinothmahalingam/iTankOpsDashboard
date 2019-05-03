@@ -21,8 +21,8 @@ $.fn.removeClassPrefix = function (prefix) {
 
 /**
  * "http://dummy.com/?technology=jquery&blog=jquerybyexample". 
- * 1 var tech = GetURLParameter('technology');
- * 2 var blog = GetURLParameter('blog');
+ * 1 var tech = getUrlParameter('technology');
+ * 2 var blog = getUrlParameter('blog');
  * note: we are using this inside icon generator page
  */
 var getUrlParameter = function getUrlParameter(sParam) {

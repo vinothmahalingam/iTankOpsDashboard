@@ -887,7 +887,7 @@
 		</ul>
 	</li>		
 	<li class="nav-title">Layouts &amp; Templates </li>
-	<li {{#is pagename "in" "page_chat,page_contact,page_ecommerce_orders,page_ecommerce_products,page_ecommerce_item,page_ecommerce_item_add,page_faq,page_forum_list,page_forum_threads,page_forum_discussion,page_inbox,page_inbox_write,page_inbox_read,page_invoice,page_forget,page_locked,page_login,page_register,page_error_announced,page_error,page_error_404,page_pricing_tables,page_profile,page_search,page_teams"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "page_chat,page_contact,page_ecommerce_orders,page_ecommerce_products,page_ecommerce_item_details,page_ecommerce_add_item,page_faq,page_forum_list,page_forum_threads,page_forum_discussion,page_inbox,page_inbox_write,page_inbox_read,page_invoice,page_forget,page_locked,page_login,page_register,page_error_announced,page_error,page_error_404,page_pricing_tables,page_profile,page_search,page_teams"}}class="active open"{{/is}}>
 		<a href="#" title="Pages" data-filter-tags="page layouts"> 
 			<i class="fal fa-plus-circle"></i>
 			<span class="nav-link-text" data-i18n="nav.page">Page Layouts</span> 
@@ -903,9 +903,9 @@
 					<span class="nav-link-text" data-i18n="nav.page_contact">Contact</span>
 				</a>
 			</li>
-			<li {{#is pagename "in" "page_ecommerce_orders,page_ecommerce_products,page_ecommerce_item,page_ecommerce_item_add"}}class="active open"{{/is}}>
-				<a href="#" title="E-commerce Layouts" data-filter-tags="page layouts ecommerce"> 
-					<span class="nav-link-text" data-i18n="nav.page_error_eg">E-commerce Layouts</span>
+			<li {{#is pagename "in" "page_ecommerce_orders,page_ecommerce_products,page_ecommerce_item_details,page_ecommerce_add_item"}}class="active open"{{/is}}>
+				<a href="#" title="E-commerce" data-filter-tags="page layouts ecommerce"> 
+					<span class="nav-link-text" data-i18n="nav.page_ecommerce">E-commerce</span>
 				</a>
 				<ul>
 					<li {{#is pagename "===" "page_ecommerce_orders"}}class="active"{{/is}}>
@@ -918,14 +918,14 @@
 							<span class="nav-link-text" data-i18n="nav.page_ecommerce_products">Products</span>
 						</a>
 					</li>
-					<li {{#is pagename "===" "page_ecommerce_item"}}class="active"{{/is}}>
-						<a href="page_ecommerce_item.html" data-filter-tags="page layouts error announced big"> 
-							<span class="nav-link-text" data-i18n="nav.page_ecommerce_item">Item detail</span>
+					<li {{#is pagename "===" "page_ecommerce_item_details"}}class="active"{{/is}}>
+						<a href="page_ecommerce_item_details.html" data-filter-tags="page layouts error announced big"> 
+							<span class="nav-link-text" data-i18n="nav.page_ecommerce_item_details">Item detail</span>
 						</a>
 					</li>
-					<li {{#is pagename "===" "page_ecommerce_item_add"}}class="active"{{/is}}>
-						<a href="page_ecommerce_item_add.html" data-filter-tags="page layouts error announced big"> 
-							<span class="nav-link-text" data-i18n="nav.page_ecommerce_item_add">Add Item</span>
+					<li {{#is pagename "===" "page_ecommerce_add_item"}}class="active"{{/is}}>
+						<a href="page_ecommerce_add_item.html" data-filter-tags="page layouts error announced big"> 
+							<span class="nav-link-text" data-i18n="nav.page_ecommerce_add_item">Add Item</span>
 						</a>
 					</li>
 				</ul>
@@ -936,8 +936,8 @@
 				</a>
 			</li>
 			<li {{#is pagename "in" "page_forum_list,page_forum_threads,page_forum_discussion"}}class="active open"{{/is}}>
-				<a href="#" title="Forum Layouts" data-filter-tags="page layouts forum list threads discussion"> 
-					<span class="nav-link-text" data-i18n="nav.page_error_eg">Forum Layouts</span>
+				<a href="#" title="Forum" data-filter-tags="page layouts forum list threads discussion"> 
+					<span class="nav-link-text" data-i18n="nav.page_forum">Forum</span>
 				</a>
 				<ul>
 					<li {{#is pagename "===" "page_forum_list"}}class="active"{{/is}}>
@@ -958,8 +958,8 @@
 				</ul>
 			</li>
 			<li {{#is pagename "in" "page_inbox,page_inbox_write,page_inbox_read"}}class="active open"{{/is}}>
-				<a href="#" title="Inbox Layouts" data-filter-tags="page layouts inbox read write compose view"> 
-					<span class="nav-link-text" data-i18n="nav.page_error_eg">Inbox Layouts</span>
+				<a href="#" title="Inbox" data-filter-tags="page layouts inbox read write compose view"> 
+					<span class="nav-link-text" data-i18n="nav.page_error_eg">Inbox</span>
 				</a>
 				<ul>
 					<li {{#is pagename "===" "page_inbox"}}class="active"{{/is}}>

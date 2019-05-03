@@ -8,6 +8,12 @@
 	background-color: $primary-500;
 }
 
+.irs--flat .irs-from, 
+.irs--flat .irs-to, 
+.irs--flat .irs-single {
+	font-size: 12px;
+}
+
 .irs--flat .irs-from:before, 
 .irs--flat .irs-to:before, 
 .irs--flat .irs-single:before {
@@ -50,6 +56,12 @@
 	border-top-color: $success-500;
 }
 
+//fix
+.irs--modern .irs-handle > i:nth-child(1) {
+    width: 8px;
+    height: 8px;
+}
+
 
 .irs--sharp .irs-bar,
 .irs--sharp .irs-handle,
@@ -69,4 +81,21 @@
 .irs--sharp .irs-min, 
 .irs--sharp .irs-max {
 	background-color: $danger-800;
+}
+
+.irs--round .irs-handle {
+	border-color: $info-500;
+}
+
+.irs--round .irs-bar,
+.irs--round .irs-from, 
+.irs--round .irs-to, 
+.irs--round .irs-single {
+	background-color: $info-500;
+}
+
+.irs--round .irs-from:before, 
+.irs--round .irs-to:before, 
+.irs--round .irs-single:before {
+	border-top-color: $info-500;
 }
