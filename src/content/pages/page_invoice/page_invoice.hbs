@@ -8,56 +8,188 @@
 }}
 
 {{#*inline "head-block"}}
-	<link rel="stylesheet" media="screen, print" href="css/.../styles.css">
+	<style type="text/css">
+@media print {
+
+
+   .invoice-page {-webkit-print-color-adjust: exact;}
+
+   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+        float: left;
+   }
+   .col-sm-12 {
+        width: 100%;
+   }
+   .col-sm-11 {
+        width: 91.66666667%;
+   }
+   .col-sm-10 {
+        width: 83.33333333%;
+   }
+   .col-sm-9 {
+        width: 75%;
+   }
+   .col-sm-8 {
+        width: 66.66666667%;
+   }
+   .col-sm-7 {
+        width: 58.33333333%;
+   }
+   .col-sm-6 {
+        width: 50%;
+   }
+   .col-sm-5 {
+        width: 41.66666667%;
+   }
+   .col-sm-4 {
+        width: 33.33333333%;
+   }
+   .col-sm-3 {
+        width: 25%;
+   }
+   .col-sm-2 {
+        width: 16.66666667%;
+   }
+   .col-sm-1 {
+        width: 8.33333333%;
+   }
+}
+
+	</style>
 {{/inline}}
 
 {{#*inline "content-block"}}
 
-<div class="alert alert-primary">
-	<div class="d-flex flex-start w-100">
-		<div class="mr-2 hidden-md-down">
-			<span class="icon-stack icon-stack-lg">
-				<i class="base base-6 icon-stack-3x opacity-100 color-primary-500"></i>
-				<i class="base base-10 icon-stack-2x opacity-100 color-primary-300 fa-flip-vertical"></i>
-				<i class="ni ni-blog-read icon-stack-1x opacity-100 color-white"></i>
-			</span>
-		</div>
-		<div class="d-flex flex-fill">
-			<div class="flex-fill">
-				<span class="h5">About</span>
-				<p>Points.</p>
-				<p class="m-0">
-					Find in-depth, guidelines, tutorials and more on Addon's <a href="#" target="_blank">Official Documentation</a> 
-				</p>
-			</div>
-		</div>
-	</div>
-</div>
-
 {{!-- Your main content goes here --}}
 <div class="row">
 	<div class="col-xl-12">
-		<div id="panel-1" class="panel">
-			<div class="panel-hdr">	
-				<h2>
-					Panel <span class="fw-300"><i>Title</i></span> 
-				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-original-title="Close"></button>
+		
+		<div class="container">
+
+			<div class="card shadow-lg p-6 invoice-page" style="background: url(img/svg/pattern-1.svg) no-repeat center bottom; background-size: cover;">
+				<div class="card-header">
+					Invoice
+					<strong>01/01/01/2018</strong> 
+					<span class="float-right"> <strong>Status:</strong> Pending</span>
 				</div>
-			</div>
-			<div class="panel-container show">
-				<div class="panel-content">									
-					<div class="panel-tag">
-						Panel tag <code>code</code>
+				<div class="card-body">
+					<div class="row mb-4">
+						<div class="col-sm-12">
+							<h2 class="fw-300 display-3 color-success-700">
+								INVOICE
+								<small class="text-dark fw-700 h1 mb-g">
+									# 101
+								</small>
+							</h2>
+							<h6 class="mb-3">From:</h6>
+							<div>
+								<strong>Webz Poland</strong>
+							</div>
+							<div>Madalinskiego 8</div>
+							<div>71-101 Szczecin, Poland</div>
+							<div>Email: info@webz.com.pl</div>
+							<div>Phone: +48 444 666 3333</div>
+						</div>
+						<div class="col-sm-6">
+							<h6 class="mb-3">To:</h6>
+							<div>
+								<strong>Bob Mart</strong>
+							</div>
+							<div>Attn: Daniel Marek</div>
+							<div>43-190 Mikolow, Poland</div>
+							<div>Email: marek@daniel.com</div>
+							<div>Phone: +48 123 456 789</div>
+						</div>
 					</div>
-					Text
-					
+					<div class="table-responsive-sm">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th class="center">#</th>
+									<th>Item</th>
+									<th>Description</th>
+									<th class="right">Unit Cost</th>
+									<th class="center">Qty</th>
+									<th class="right">Total</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="center">1</td>
+									<td class="left strong">Origin License</td>
+									<td class="left">Extended License</td>
+									<td class="right">$999,00</td>
+									<td class="center">1</td>
+									<td class="right">$999,00</td>
+								</tr>
+								<tr>
+									<td class="center">2</td>
+									<td class="left">Custom Services</td>
+									<td class="left">Instalation and Customization (cost per hour)</td>
+									<td class="right">$150,00</td>
+									<td class="center">20</td>
+									<td class="right">$3.000,00</td>
+								</tr>
+								<tr>
+									<td class="center">3</td>
+									<td class="left">Hosting</td>
+									<td class="left">1 year subcription</td>
+									<td class="right">$499,00</td>
+									<td class="center">1</td>
+									<td class="right">$499,00</td>
+								</tr>
+								<tr>
+									<td class="center">4</td>
+									<td class="left">Platinum Support</td>
+									<td class="left">1 year subcription 24/7</td>
+									<td class="right">$3.999,00</td>
+									<td class="center">1</td>
+									<td class="right">$3.999,00</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+						</div>
+						<div class="col-sm-4 ml-auto">
+							<table class="table table-clear">
+								<tbody>
+									<tr>
+										<td class="left">
+											<strong>Subtotal</strong>
+										</td>
+										<td class="right">$8.497,00</td>
+									</tr>
+									<tr>
+										<td class="left">
+											<strong>Discount (20%)</strong>
+										</td>
+										<td class="right">$1,699,40</td>
+									</tr>
+									<tr>
+										<td class="left">
+											<strong>VAT (10%)</strong>
+										</td>
+										<td class="right">$679,76</td>
+									</tr>
+									<tr>
+										<td class="left">
+											<strong>Total</strong>
+										</td>
+										<td class="right">
+											<strong>$7.477,36</strong>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
 				</div>
 			</div>
+
 		</div>
+
 	</div>
 </div>
 {{/inline}}
