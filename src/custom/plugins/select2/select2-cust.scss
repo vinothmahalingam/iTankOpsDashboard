@@ -75,7 +75,7 @@
   padding: $input-padding-y $input-padding-x;
   padding-left: 2.5rem;
   font-weight: $input-font-weight;
-  line-height: calc(#{$line-height-base * 1em} + #{$input-padding-y * 2} + #{$input-height-border});
+  //line-height: calc(#{$line-height-base * 1em} + #{$input-padding-y * 2} + #{$input-height-border});
   color: $input-color;
   background-color: $input-bg;
   background-clip: padding-box;
@@ -184,9 +184,11 @@
 .select2-container .select2-search--inline .select2-search__field {
 	margin-top: 0;
 	margin-left: 0;
-	line-height: calc(#{$input-line-height * 1em} + #{$input-padding-y * 2} + #{$input-height-border});
+	height: calc(#{$line-height-base * 1em} + #{$input-padding-y * 2} + #{$input-height-border});
+	padding: $input-padding-y $input-padding-x;
+	min-width:100px;
+	
 }
-
 
 span.select2-selection.select2-selection--single,
 span.select2-selection.select2-selection--multiple {
@@ -206,10 +208,6 @@ span.select2-selection.select2-selection--multiple {
 
 /* this is not a permanent solution... hopefully IE will die by the time we release version 5.... */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-	.select2-container .select2-search--inline .select2-search__field {
-		margin-top: 9px;
-		margin-left: 5px;
-	}
 	.select2-container--default .select2-selection--single .select2-selection__clear {
 		line-height: normal;
 		margin-top: 8px;

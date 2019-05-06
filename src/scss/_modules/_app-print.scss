@@ -7,7 +7,7 @@
 		border-collapse: collapse;
     }
 
-    * {
+    *:not(.keep-print-font) {
     	color:#333 !important;
     	background: transparent !important;
     	font-family: Arial, Helvetica, sans-serif !important;

@@ -854,6 +854,16 @@
 							"styles": "{$config.output}/css/page-login.css"
 						}
 					}
+				},
+				"invoice" : {
+					"src": {
+						"styles":[
+							"{$config.path.src}/content/pages/page_invoice/page-invoice.scss"
+						]
+					},
+					"bundle": {
+						"styles": "{$config.output}/css/page-invoice.css"
+					}
 				}
 			},
 			"demo": {

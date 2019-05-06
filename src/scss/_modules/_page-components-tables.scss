@@ -65,3 +65,22 @@
 th {
     font-weight: 500;
 }
+
+.table-clean {
+	background: transparent;
+	border: none;
+
+	tr,
+	td,
+	th {
+		border: none;
+		background: none;
+	}
+}
+
+.table-scale-border-top {
+	border-top: 2px solid $fusion-500 !important;
+}
+.table-scale-border-bottom {
+	border-bottom: 2px solid $fusion-500 !important;
+}

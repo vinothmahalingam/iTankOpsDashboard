@@ -30,10 +30,10 @@
 					<!-- BEGIN Page Content -->
 					<!-- the #js-page-content id is needed for some plugins to initialize -->
 					<main id="js-page-content" role="main" class="page-content">
-						{{> include/_page-breadcrumb }}
 						{{#if preemptiveclass}}
-							<!-- Page heading removed for layout composed layout -->
+							<!-- Page heading removed for composed layout -->
 						{{else}}
+							{{> include/_page-breadcrumb }}
 							{{> include/_page-heading }}
 						{{/if}}
 						{{#>content-block}}{{/content-block}}
