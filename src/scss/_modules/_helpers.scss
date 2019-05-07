@@ -235,6 +235,16 @@
 	}
 }
 
+/* hover light bg effect */
+.hover-highlight {
+	&:hover {
+		background-image: linear-gradient(rgba(29, 33, 41, .03), rgba(29, 33, 41, .04));
+	}
+	&:active {
+		background-image: linear-gradient(rgba(29, 33, 41, .05), rgba(29, 33, 41, .06));
+	}
+}
+
 /* hover and hide items on show */
 .show-child-on-hover {
 	.show-on-hover-parent {
