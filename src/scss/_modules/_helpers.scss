@@ -6,6 +6,8 @@
 .max-height-reset { max-height: none !important;}
 
 /* width preset */
+.min-width-0 { min-width: 0 }
+
 .width-0   { width: 0}
 .width-1   { width: 1.5rem }
 .width-2   { width: 2rem }
@@ -64,6 +66,15 @@
 .text-truncate-md {	max-width: 160px; }
 .text-truncate-default { max-width: 180px }
 .text-truncate-lg {	max-width: 200px }
+
+/* blur text */
+.text-blur {
+	color: transparent !important;
+	text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+a.text-blur {
+	text-shadow: 0 0 5px rgba($primary-500,0.5);
+}
 
 /* positions usage: 
    .position-absolute|relative|static|fixed .pos-top|left|right|bottom */

@@ -886,181 +886,193 @@
 			</li>
 		</ul>
 	</li>		
-	<li class="nav-title">Layouts &amp; Templates </li>
-	<li {{#is pagename "in" "page_chat,page_contacts,page_ecommerce_orders,page_ecommerce_products,page_ecommerce_item_details,page_ecommerce_add_item,page_faq,page_forum_list,page_forum_threads,page_forum_discussion,page_inbox,page_inbox_write,page_inbox_read,page_invoice,page_forget,page_locked,page_login,page_register,page_error_announced,page_error,page_error_404,page_pricing_tables,page_profile,page_search,page_teams"}}class="active open"{{/is}}>
-		<a href="#" title="Pages" data-filter-tags="page layouts"> 
+	<li class="nav-title">Layouts &amp; Apps </li>
+	<li {{#is pagename "in" "page_chat,page_contacts,page_faq,page_forum_list,page_forum_threads,page_forum_discussion,page_inbox,page_inbox_write,page_inbox_read,page_invoice,page_forget,page_locked,page_login,page_register,page_error_announced,page_error,page_error_404,page_pricing_tables,page_profile,page_search,page_teams"}}class="active open"{{/is}}>
+		<a href="#" title="Pages" data-filter-tags="page views"> 
 			<i class="fal fa-plus-circle"></i>
-			<span class="nav-link-text" data-i18n="nav.page">Page Layouts</span> 
+			<span class="nav-link-text" data-i18n="nav.page">Page Views</span> 
 		</a>
 		<ul>
 			<li {{#is pagename "===" "page_chat"}}class="active"{{/is}}>
-				<a href="page_chat.html" data-filter-tags="page layouts chat messenger"> 
+				<a href="page_chat.html" data-filter-tags="page views chat messenger"> 
 					<span class="nav-link-text" data-i18n="nav.page_chat">Chat</span>
 				</a>
 			</li>
 			<li {{#is pagename "===" "page_contacts"}}class="active"{{/is}}>
-				<a href="page_contacts.html" data-filter-tags="page layouts contacts user"> 
+				<a href="page_contacts.html" data-filter-tags="page views contacts user"> 
 					<span class="nav-link-text" data-i18n="nav.page_contacts">Contacts</span>
 				</a>
 			</li>
-			<li {{#is pagename "in" "page_ecommerce_orders,page_ecommerce_products,page_ecommerce_item_details,page_ecommerce_add_item"}}class="active open"{{/is}}>
-				<a href="#" title="E-commerce" data-filter-tags="page layouts ecommerce"> 
-					<span class="nav-link-text" data-i18n="nav.page_ecommerce">E-commerce</span>
-				</a>
-				<ul>
-					<li {{#is pagename "===" "page_ecommerce_orders"}}class="active"{{/is}}>
-						<a href="page_ecommerce_orders.html" data-filter-tags="page layouts error general small"> 
-							<span class="nav-link-text" data-i18n="nav.page_ecommerce_orders">Orders</span>
-						</a>
-					</li>
-					<li {{#is pagename "===" "page_ecommerce_products"}}class="active"{{/is}}>
-						<a href="page_ecommerce_products.html" data-filter-tags="page layouts error server"> 
-							<span class="nav-link-text" data-i18n="nav.page_ecommerce_products">Products</span>
-						</a>
-					</li>
-					<li {{#is pagename "===" "page_ecommerce_item_details"}}class="active"{{/is}}>
-						<a href="page_ecommerce_item_details.html" data-filter-tags="page layouts error announced big"> 
-							<span class="nav-link-text" data-i18n="nav.page_ecommerce_item_details">Item detail</span>
-						</a>
-					</li>
-					<li {{#is pagename "===" "page_ecommerce_add_item"}}class="active"{{/is}}>
-						<a href="page_ecommerce_add_item.html" data-filter-tags="page layouts error announced big"> 
-							<span class="nav-link-text" data-i18n="nav.page_ecommerce_add_item">Add Item</span>
-						</a>
-					</li>
-				</ul>
-			</li>
 			<li {{#is pagename "===" "page_faq"}}class="active"{{/is}}>
-				<a href="page_faq.html" data-filter-tags="page layouts faq"> 
+				<a href="page_faq.html" data-filter-tags="page views faq"> 
 					<span class="nav-link-text" data-i18n="nav.page_faq">FAQ</span>
 				</a>
 			</li>
 			<li {{#is pagename "in" "page_forum_list,page_forum_threads,page_forum_discussion"}}class="active open"{{/is}}>
-				<a href="#" title="Forum" data-filter-tags="page layouts forum list threads discussion"> 
+				<a href="#" title="Forum" data-filter-tags="page views forum list threads discussion"> 
 					<span class="nav-link-text" data-i18n="nav.page_forum">Forum</span>
 				</a>
 				<ul>
 					<li {{#is pagename "===" "page_forum_list"}}class="active"{{/is}}>
-						<a href="page_forum_list.html" data-filter-tags="page layouts forum list"> 
+						<a href="page_forum_list.html" data-filter-tags="page views forum list"> 
 							<span class="nav-link-text" data-i18n="nav.page_forum_list">List</span>
 						</a>
 					</li>
 					<li {{#is pagename "===" "page_forum_threads"}}class="active"{{/is}}>
-						<a href="page_forum_threads.html" data-filter-tags="page layouts threads"> 
+						<a href="page_forum_threads.html" data-filter-tags="page views threads"> 
 							<span class="nav-link-text" data-i18n="nav.page_inbox_read">Threads</span>
 						</a>
 					</li>
 					<li {{#is pagename "===" "page_forum_discussion"}}class="active"{{/is}}>
-						<a href="page_forum_discussion.html" data-filter-tags="page layouts discussion"> 
+						<a href="page_forum_discussion.html" data-filter-tags="page views discussion"> 
 							<span class="nav-link-text" data-i18n="nav.page_forum_discussion">Discussion</span>
 						</a>
 					</li>
 				</ul>
 			</li>
 			<li {{#is pagename "in" "page_inbox,page_inbox_write,page_inbox_read"}}class="active open"{{/is}}>
-				<a href="#" title="Inbox" data-filter-tags="page layouts inbox read write compose view"> 
+				<a href="#" title="Inbox" data-filter-tags="page views inbox read write compose view"> 
 					<span class="nav-link-text" data-i18n="nav.page_error_eg">Inbox</span>
 				</a>
 				<ul>
 					<li {{#is pagename "===" "page_inbox"}}class="active"{{/is}}>
-						<a href="page_inbox.html" data-filter-tags="page layouts inbox general view"> 
+						<a href="page_inbox.html" data-filter-tags="page views inbox general view"> 
 							<span class="nav-link-text" data-i18n="nav.page_inbox">General</span>
 						</a>
 					</li>
 					<li {{#is pagename "===" "page_inbox_read"}}class="active"{{/is}}>
-						<a href="page_inbox_read.html" data-filter-tags="page layouts inbox read email view"> 
+						<a href="page_inbox_read.html" data-filter-tags="page views inbox read email view"> 
 							<span class="nav-link-text" data-i18n="nav.page_inbox_read">Read</span>
 						</a>
 					</li>
 					<li {{#is pagename "===" "page_inbox_write"}}class="active"{{/is}}>
-						<a href="page_inbox_write.html" data-filter-tags="page layouts inbox reply email view compose new"> 
+						<a href="page_inbox_write.html" data-filter-tags="page views inbox reply email view compose new"> 
 							<span class="nav-link-text" data-i18n="nav.page_inbox_write">Write</span>
 						</a>
 					</li>
 				</ul>
 			</li>	
 			<li {{#is pagename "===" "page_invoice"}}class="active"{{/is}}>
-				<a href="page_invoice.html" data-filter-tags="page layouts invoice print"> 
+				<a href="page_invoice.html" data-filter-tags="page views invoice print"> 
 					<span class="nav-link-text" data-i18n="nav.page_invoice">Invoice (printable)</span>
 				</a>
 			</li>
 			<li {{#is pagename "in" "page_forget,page_locked,page_login,page_register"}}class="active open"{{/is}}>
-				<a href="#" title="Authentication Pages" data-filter-tags="page layouts authentication"> 
+				<a href="#" title="Authentication Pages" data-filter-tags="page views authentication"> 
 					<span class="nav-link-text" data-i18n="nav.page_auth">Auth. Pages</span>
 				</a>
 				<ul>
 					<li {{#is pagename "===" "forget"}}class="active"{{/is}}>
-						<a href="page_forget.html" data-filter-tags="page layouts auth forget password"> 
+						<a href="page_forget.html" data-filter-tags="page views auth forget password"> 
 							<span class="nav-link-text" data-i18n="nav.page_forget">Forget Password</span>
 						</a>
 					</li>
 					<li {{#is pagename "===" "locked"}}class="active"{{/is}}>
-						<a href="page_locked.html" data-filter-tags="page layouts auth locked screen"> 
+						<a href="page_locked.html" data-filter-tags="page views auth locked screen"> 
 							<span class="nav-link-text" data-i18n="nav.page_locked">Locked Screen</span>
 						</a>
 					</li>
 					<li {{#is pagename "===" "login"}}class="active"{{/is}}>
-						<a href="page_login.html" data-filter-tags="page layouts auth login"> 
+						<a href="page_login.html" data-filter-tags="page views auth login"> 
 							<span class="nav-link-text" data-i18n="nav.page_login">Login</span>
 						</a>
 					</li>
 					<li {{#is pagename "===" "register"}}class="active"{{/is}}>
-						<a href="page_register.html" data-filter-tags="page layouts auth register"> 
+						<a href="page_register.html" data-filter-tags="page views auth register"> 
 							<span class="nav-link-text" data-i18n="nav.page_register">Register</span>
 						</a>	
 					</li>
 				</ul>
 			</li>
 			<li {{#is pagename "in" "page_error_announced,page_error,page_error_404"}}class="active open"{{/is}}>
-				<a href="#" title="Error Pages" data-filter-tags="page layouts error"> 
+				<a href="#" title="Error Pages" data-filter-tags="page views error"> 
 					<span class="nav-link-text" data-i18n="nav.page_error_eg">Error Pages</span>
 				</a>
 				<ul>
 					<li {{#is pagename "===" "page_error"}}class="active"{{/is}}>
-						<a href="page_error.html" data-filter-tags="page layouts error general small"> 
+						<a href="page_error.html" data-filter-tags="page views error general small"> 
 							<span class="nav-link-text" data-i18n="nav.page_error">General Error</span>
 						</a>
 					</li>
 					<li {{#is pagename "===" "page_error_404"}}class="active"{{/is}}>
-						<a href="page_error_404.html" data-filter-tags="page layouts error server"> 
+						<a href="page_error_404.html" data-filter-tags="page views error server"> 
 							<span class="nav-link-text" data-i18n="nav.page_error_404">Server Error</span>
 						</a>
 					</li>
 					<li {{#is pagename "===" "page_error_announced"}}class="active"{{/is}}>
-						<a href="page_error_announced.html" data-filter-tags="page layouts error announced big"> 
+						<a href="page_error_announced.html" data-filter-tags="page views error announced big"> 
 							<span class="nav-link-text" data-i18n="nav.page_error_announced">Announced Error</span>
 						</a>
 					</li>
 				</ul>
 			</li>
 			<li {{#is pagename "===" "page_pricing_tables"}}class="active"{{/is}}>
-				<a href="page_pricing_tables.html" data-filter-tags="page layouts pricing table"> 
+				<a href="page_pricing_tables.html" data-filter-tags="page views pricing table"> 
 					<span class="nav-link-text" data-i18n="nav.page_pricing_tables">Pricing Tables</span>
 				</a>
 			</li>
 			<li {{#is pagename "===" "page_profile"}}class="active"{{/is}}>
-				<a href="page_profile.html" data-filter-tags="page layouts profile user"> 
+				<a href="page_profile.html" data-filter-tags="page views profile user"> 
 					<span class="nav-link-text" data-i18n="nav.page_profile">Profile</span>
 				</a>
 			</li>
 			<li {{#is pagename "===" "page_search"}}class="active"{{/is}}>
-				<a href="page_search.html" data-filter-tags="page layouts search results"> 
+				<a href="page_search.html" data-filter-tags="page views search results"> 
 					<span class="nav-link-text" data-i18n="nav.page_search">Search Results</span>
 				</a>
 			</li>	
 			<li {{#is pagename "===" "page_teams"}}class="active"{{/is}}>
-				<a href="page_teams.html" data-filter-tags="page layouts teams"> 
+				<a href="page_teams.html" data-filter-tags="page views teams"> 
 					<span class="nav-link-text" data-i18n="nav.page_teams">Teams</span>
 				</a>
 			</li>
-
-
 		</ul>	
 	</li>	
-	<li {{#is pagename "in" "layout_builder"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "page_ecommerce_orders,page_ecommerce_products,page_ecommerce_item_details,page_ecommerce_add_item,page_ecommerce_checkout"}}class="active open"{{/is}}>
+		<a href="#" title="UI Components" data-filter-tags="app views"> 
+			<i class="fal fa-cogs"></i>
+			<span class="nav-link-text" data-i18n="nav.layout_builder">App views</span> 
+		</a>	
+		<ul>
+			<li {{#is pagename "in" "page_ecommerce_orders,page_ecommerce_products,page_ecommerce_item_details,page_ecommerce_add_item,page_ecommerce_checkout"}}class="active open"{{/is}}>
+				<a href="#" title="E-commerce" data-filter-tags="app views ecommerce"> 
+					<span class="nav-link-text" data-i18n="nav.page_ecommerce">E-commerce</span>
+				</a>
+				<ul>
+					<li {{#is pagename "===" "page_ecommerce_orders"}}class="active"{{/is}}>
+						<a href="page_ecommerce_orders.html" data-filter-tags="app views ecommerce orders"> 
+							<span class="nav-link-text" data-i18n="nav.page_ecommerce_orders">Orders</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "page_ecommerce_products"}}class="active"{{/is}}>
+						<a href="page_ecommerce_products.html" data-filter-tags="app views ecommerce products"> 
+							<span class="nav-link-text" data-i18n="nav.page_ecommerce_products">Products</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "page_ecommerce_item_details"}}class="active"{{/is}}>
+						<a href="page_ecommerce_item_details.html" data-filter-tags="app views ecommerce item detail"> 
+							<span class="nav-link-text" data-i18n="nav.page_ecommerce_item_details">Item detail</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "page_ecommerce_add_item"}}class="active"{{/is}}>
+						<a href="page_ecommerce_add_item.html" data-filter-tags="app views ecommerce add item"> 
+							<span class="nav-link-text" data-i18n="nav.page_ecommerce_add_item">Add Item</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "page_ecommerce_checkout"}}class="active"{{/is}}>
+						<a href="page_ecommerce_checkout.html" data-filter-tags="app views ecommerce checkout"> 
+							<span class="nav-link-text" data-i18n="nav.page_ecommerce_checkout">Checkout</span>
+						</a>
+					</li>
+
+				</ul>
+			</li>
+		</ul>	
+	</li>
+	{{!-- <li {{#is pagename "in" "layout_builder"}}class="active open"{{/is}}>
 		<a href="#" title="UI Components" data-filter-tags="layout builder"> 
 			<i class="fal fa-cogs"></i>
 			<span class="nav-link-text" data-i18n="nav.layout_builder">Layout Builder</span> 
 		</a>		
-	</li>
+	</li> --}}
 </ul>
