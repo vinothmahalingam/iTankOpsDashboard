@@ -1,4 +1,4 @@
-https://github.com/robicch/jQueryGantt/ 
+https://github.com/robicch/jQueryGantt/  
 
 a.smart-underline {
   color: #333;
