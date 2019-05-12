@@ -33,7 +33,14 @@ gulp.task('build-bundle', function (cb) {
 
 // entry point
 gulp.task('build', function (cb) {
-	var tasks = ['build-bundle', 'build-html', 'watch'];
+	var tasks = ['build-bundle', 'build-html', 'watch', 'connect'];
+	// clean first and then start bundling
+	return sequence.apply(cb, tasks);
+});
+
+// entry point express
+gulp.task('start', function (cb) {
+	var tasks = ['watch', 'connect'];
 	// clean first and then start bundling
 	return sequence.apply(cb, tasks);
 });

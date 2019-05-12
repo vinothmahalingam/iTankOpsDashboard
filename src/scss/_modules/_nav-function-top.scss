@@ -123,6 +123,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 		.page-sidebar {
 			display: flex;
 			width: 100%;
+			max-width: 100%;
 			height: $nav-top-height;
 			z-index: $depth-header - 1;
 			padding: 0 0.625rem;

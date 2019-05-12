@@ -258,7 +258,7 @@
 .panel-sortable:not(.panel-locked).ui-sortable-helper {
 
 	&:active {
-		border-color: rgba($fusion-100, 0.7);
+		border-color: rgba($black,  0.15);
 	}
 
 	/*.panel-hdr {
@@ -394,7 +394,7 @@
 	position: relative;
 	overflow: hidden;
 	//exprimental...
-	border-bottom: 1px solid transparent;
+	border: 1px solid transparent;
 	/* placeholder border animation */
 	&:before,
 	&:after {

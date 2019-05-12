@@ -1,21 +1,14 @@
 {{#> 
 	layouts/main 
-	title="File Upload" 
-	pagename="form_plugins_fileupload" 
+	title="Dropzone" 
+	pagename="form_plugins_dropzone" 
 	category_1="Form Plugins"
-	heading="<i class='subheader-icon fal fa-credit-card-front'></i> File Upload<sup class='badge badge-primary fw-500'>ADDON</sup>" 
-	pagedescription="blank description"
+	heading="<i class='subheader-icon fal fa-credit-card-front'></i> Dropzone<sup class='badge badge-primary fw-500'>ADDON</sup>" 
+	pagedescription="DropzoneJS is an open source library that provides drag’n’drop file uploads with image previews"
 }}
 
 {{#*inline "head-block"}}
-	<link rel="stylesheet" media="screen, print" href="css/.../styles.css">
-{{/inline}}
-
-{{#*inline "subheader-block"}}
-	{{!-- Right content on content header --}}
-	<div class="subheader-block">
-		Right content of header
-	</div>
+	<link rel="stylesheet" media="screen, print" href="css/formplugins/dropzone/dropzone.css">
 {{/inline}}
 
 {{#*inline "content-block"}}
@@ -41,7 +34,6 @@
 	</div>
 </div>
 
-{{!-- Your main content goes here --}}
 <div class="row">
 	<div class="col-xl-12">
 		<div id="panel-1" class="panel">
@@ -58,9 +50,17 @@
 			<div class="panel-container show">
 				<div class="panel-content">									
 					<div class="panel-tag">
-						Panel tag <code>code</code>
+						Dropzone does not handle your file uploads on the server. You have to implement the code to receive and store the file yourself. See the section Server side implementation for more information.
 					</div>
-					Text
+
+					<form action="/upload" class="dropzone needsclick" style="min-height: 7rem;">
+						<div class="dz-message needsclick">
+							 <i class="fal fa-cloud-upload text-muted mb-3"></i> <br>  
+							 <span class="text-uppercase">Drop files here or click to upload.</span>
+							 	<br>
+							<span class="fs-sm text-muted">This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.</span>
+						</div>
+					</form>
 					
 				</div>
 			</div>
@@ -70,12 +70,7 @@
 {{/inline}}
 
 {{#*inline "scripts-block"}}
-	<script src="js/../script.js"></script>
-	<script>
-		$(document).ready(function () {
-			
-		};
-	</script>
+	<script src="js/formplugins/dropzone/dropzone.js"></script>
 {{/inline}}
 
 {{/layouts/main}}

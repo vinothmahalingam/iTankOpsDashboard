@@ -5,6 +5,7 @@
 	position: relative;
 	flex: 1 0 auto;
 	width: $nav-width;
+	max-width: $nav-width;
     flex-direction: column;
     display: flex;
 

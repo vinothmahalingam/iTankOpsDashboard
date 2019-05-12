@@ -322,7 +322,7 @@
                     * Add a close button to the panel header (if set to true)
                     **/
                     if (self.o.closeButton === true && tPanel.data('panel-close') === undefined) {
-                        closeButton = '<a href="#" class="btn btn-panel hover-effect-dot js-panel-close" data-toggle="tooltip" data-original-title="Close"></a>';
+                        closeButton = '<a href="#" class="btn btn-panel hover-effect-dot js-panel-close" data-toggle="tooltip" data-offset="0,10" data-original-title="Close"></a>';
                     } else {
                         closeButton = '';
                     }
@@ -331,7 +331,7 @@
                     * Add a fullscreen button to the panel header (if set to true).
                     **/
                     if (self.o.fullscreenButton === true && tPanel.data('panel-fullscreen') === undefined) {
-                        fullscreenButton = '<a href="#" class="btn btn-panel hover-effect-dot js-panel-fullscreen" data-toggle="tooltip" data-original-title="Fullscreen"></a>';
+                        fullscreenButton = '<a href="#" class="btn btn-panel hover-effect-dot js-panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></a>';
                     } else {
                         fullscreenButton = '';
                     }
@@ -340,7 +340,7 @@
                     * Add a collapse button to the panel header (if set to true).
                     **/
                     if (self.o.collapseButton === true && tPanel.data('panel-collapsed') === undefined) {
-                        collapseButton = '<a href="#" class="btn btn-panel hover-effect-dot js-panel-collapse" data-toggle="tooltip" data-original-title="Collapse"></a>'
+                        collapseButton = '<a href="#" class="btn btn-panel hover-effect-dot js-panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></a>'
                     } else {
                         collapseButton = '';
                     }
