@@ -61,6 +61,12 @@
 								"{$config.path.node_modules}/bootstrap/dist/js/bootstrap.js"
 							]
 						},
+						"bootbox": {
+							"scripts": [
+								"{$config.path.node_modules}/bootbox/src/bootbox.js",
+								"{$config.path.node_modules}/custom/plugins/bootbox/bootbox-config.js"
+							]
+						},
 						"jquery-snippets": {
 							"scripts": [
 								"{$config.path.src}/custom/plugins/jquery-snippets/jquery-snippets.js"
