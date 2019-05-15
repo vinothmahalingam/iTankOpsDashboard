@@ -865,18 +865,46 @@ var initApp = (function(app) {
 
 						var selectedPanel = $(this).closest('.panel');
 
-						selectedPanel.fadeOut(500,function(){
-						
-							/* remove panel */
-							$(this).remove();
+						initApp.playSound('media/sound', 'messagebox')
 
-							if (myapp_config.debugState)
-							console.log( "panel id:" + selectedPanel.attr('id') + " | action: removed" );
+						bootbox.confirm({
+							title: "<i class='fal fa-times text-danger mr-2'></i> Do you wish to delete panel <span class='fw-500'> '"+selectedPanel.children('.panel-hdr').children('h2').text().trim()+"' </span>?",
+							message: "<span class='ml-5'><strong>Warning:</strong> This action cannot be undone!</span>",
+							centerVertical: true,
+							buttons: {
+								confirm: {
+									label: 'Yes',
+									className: 'btn-danger shadow-0'
+								},
+								cancel: {
+									label: 'No',
+									className: 'btn-default'
+								}
+							},
+							className: "modal-alert",
+							closeButton: false,
+							callback: function (result) {
 
-							/* return ID of panel */
-							//return selectedPanel.attr('id');
+								if (result == true) {
 
+
+									selectedPanel.fadeOut(500,function(){
+									
+										/* remove panel */
+										$(this).remove();
+
+										if (myapp_config.debugState)
+										console.log( "panel id:" + selectedPanel.attr('id') + " | action: removed" );
+
+
+
+									});
+									
+
+								}
+							}
 						});
+
 
 						break;
 
