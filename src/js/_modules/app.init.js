@@ -865,46 +865,54 @@ var initApp = (function(app) {
 
 						var selectedPanel = $(this).closest('.panel');
 
-						initApp.playSound('media/sound', 'messagebox')
+						var killPanel = function (){
 
-						bootbox.confirm({
-							title: "<i class='fal fa-times text-danger mr-2'></i> Do you wish to delete panel <span class='fw-500'> '"+selectedPanel.children('.panel-hdr').children('h2').text().trim()+"' </span>?",
-							message: "<span class='ml-5'><strong>Warning:</strong> This action cannot be undone!</span>",
-							centerVertical: true,
-							buttons: {
-								confirm: {
-									label: 'Yes',
-									className: 'btn-danger shadow-0'
+							selectedPanel.fadeOut(500,function(){
+								/* remove panel */
+								$(this).remove();
+
+								if (myapp_config.debugState)
+								console.log( "panel id:" + selectedPanel.attr('id') + " | action: removed" );
+							});
+
+						};
+
+						if (typeof bootbox  != 'undefined') {
+
+							initApp.playSound('media/sound', 'messagebox')
+
+							bootbox.confirm({
+								title: "<i class='fal fa-times-circle text-danger mr-2'></i> Do you wish to delete panel <span class='fw-500'>&nbsp;'" +selectedPanel.children('.panel-hdr').children('h2').text().trim()+ "'&nbsp;</span>?",
+								message: "<span><strong>Warning:</strong> This action cannot be undone!</span>",
+								centerVertical: true,
+								swapButtonOrder: true,
+								buttons: {
+									confirm: {
+										label: 'Yes',
+										className: 'btn-danger shadow-0'
+									},
+									cancel: {
+										label: 'No',
+										className: 'btn-default'
+									}
 								},
-								cancel: {
-									label: 'No',
-									className: 'btn-default'
+								className: "modal-alert",
+								closeButton: false,
+								callback: function (result) {
+
+									if (result == true) {
+										killPanel();
+									}
 								}
-							},
-							className: "modal-alert",
-							closeButton: false,
-							callback: function (result) {
+							});
 
-								if (result == true) {
-
-
-									selectedPanel.fadeOut(500,function(){
-									
-										/* remove panel */
-										$(this).remove();
-
-										if (myapp_config.debugState)
-										console.log( "panel id:" + selectedPanel.attr('id') + " | action: removed" );
-
-
-
-									});
-									
-
-								}
+						} else {
+							
+							if (confirm( 'Do you wish to delete panel ' + selectedPanel.children('.panel-hdr').children('h2').text().trim() + '?' )) {
+								killPanel();
 							}
-						});
 
+						}
 
 						break;
 

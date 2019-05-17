@@ -13,29 +13,28 @@
 
 {{#*inline "content-block"}}
 
-<div class="alert alert-primary alert-dismissible">
-	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-	<span aria-hidden="true">
-	<i class="fal fa-times"></i>
-	</span>
-	</button>
+<div class="alert alert-primary">
 	<div class="d-flex flex-start w-100">
-		<div class="mr-2">
+		<div class="mr-2 hidden-md-down">
 			<span class="icon-stack icon-stack-lg">
-			<i class="base-5 icon-stack-3x color-primary-400"></i>
-			<i class="base-7 icon-stack-2x color-primary-600 opacity-70"></i>
-			<i class="fal fa-check icon-stack-1x text-white opacity-90"></i>
+				<i class="base base-6 icon-stack-3x opacity-100 color-primary-500"></i>
+				<i class="base base-10 icon-stack-2x opacity-100 color-primary-300 fa-flip-vertical"></i>
+				<i class="ni ni-blog-read icon-stack-1x opacity-100 color-white"></i>
 			</span>
 		</div>
 		<div class="d-flex flex-fill">
 			<div class="flex-fill">
-				<span class="h5">Full Documentation</span>
-				<br> You can find the full detailed documentation for bootstrap modals by going to the
-				<a href="https://getbootstrap.com/docs/{{bs4v}}/components/modal" class="fw-500" target="_blank">official bootstrap site</a>. 
+				<span class="h5">About</span>
+				<p>Modals are built with HTML, CSS, and JavaScript. They’re positioned over everything else in the document and remove scroll from the <code>body</code> so that modal content scrolls instead. Bootstrap only supports one modal window at a time. Nested modals aren’t supported as it is believed to be poor user experiences. Modals use <code>position: fixed</code>, which can sometimes be a bit particular about its rendering. Whenever possible, place your modal HTML in a top-level position to avoid potential interference from other elements. You’ll likely run into issues when nesting a .modal within another fixed element</p>
+				<p class="m-0">
+					Find in-depth, guidelines, tutorials and more on Bootstrap Modals's at the <a href="https://getbootstrap.com/docs/{{bs4v}}/components/modal" class="fw-500" target="_blank">official bootstrap site</a>.
+				</p>
 			</div>
 		</div>
 	</div>
 </div>
+
+
 <div class="row">
 	<div class="col-xl-6">
 		<!--Basic Modals-->
@@ -761,7 +760,7 @@
 			<div class="panel-container show">
 				<div class="panel-content">
 					<div class="panel-tag">
-						Modal fullscreen uses combination of utility classes and the modifier class <code>.modal-fullscreen</code>. Using the modifer class <code>.modal-backdrop-transparent</code> makes the backdrop transparent.
+						Modal fullscreen uses combination of utility classes and the modifier class <code>.modal-fullscreen</code>. Using the modifer class <code>.modal-backdrop-transparent</code> makes the backdrop transparent. You can also translate the modals to cast as an alert by using the modifier class <code>.modal-alert</code>
 					</div>
 
 					<h5 class="frame-heading">
@@ -821,9 +820,63 @@
 						</div>
 					</div>
 					<h5 class="frame-heading">
-						Backdrop Transparent
+						Alert
 					</h5>
-					<button type="button" class="btn btn-default" data-toggle="modal" data-target=".bd-example-modal-dialog-left-side">No Backdrop</button>
+					<div class="frame-wrap">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#example-modal-alert">Modal Alert</button>
+					</div>
+
+					<!-- modal alert -->
+					<div class="modal modal-alert fade" id="example-modal-alert" tabindex="-1" role="dialog" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title">Modal title</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true"><i class="fal fa-times"></i></span>
+									</button>
+								</div>
+								<div class="modal-body">
+									Modal text description...
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-primary">Save changes</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<h5 class="frame-heading">
+						No backdrops
+					</h5>
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#example-modal-backdrop-transparent">Modal Transparent Backdrop</button>
+					
+
+					<!-- Modal center Large no backdrop -->
+					<div class="modal fade modal-backdrop-transparent" id="example-modal-backdrop-transparent" tabindex="-1" role="dialog" aria-hidden="true">
+						<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title">Modal title</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true"><i class="fal fa-times"></i></span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<div class="alert alert-danger">
+										Notice how there is no backdrop to this modal.
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-primary">Save changes</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>
@@ -842,7 +895,7 @@
 			<div class="panel-container show">
 				<div class="panel-content">
 					<div class="panel-tag">
-						Give modals a 'transparent tinted glass' feel. It increases focus to the UI elements by creating contrast. We add the modifier class <code>.modal-bg-transparent</code>. These modals are compatible with their respected size classes.
+						Give modals a 'transparent tinted glass' feel. It increases focus to the UI elements by creating contrast. We add the modifier class <code>.modal-transparent</code>. These modals are compatible with their respected size classes.
 					</div>
 					<h5 class="frame-heading">
 						Default
@@ -876,7 +929,7 @@
 					</div>
 					<!-- Modal Top Transparent -->
 					<div class="modal fade example-modal-top-transparent" tabindex="-1" role="dialog" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-top modal-bg-transparent">
+						<div class="modal-dialog modal-dialog-top modal-transparent">
 							<div class="modal-content">
 								<div class="modal-body">
 									<div class="icon-stack fa-6x mr-4 mb-0">
@@ -913,7 +966,7 @@
 					</div>
 					<!-- Modal Bottom Transparent -->
 					<div class="modal fade example-modal-bottom-transparent" tabindex="-1" role="dialog" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-bottom modal-bg-transparent">
+						<div class="modal-dialog modal-dialog-bottom modal-transparent">
 							<div class="modal-content">
 								<div class="modal-body">
 									<div class="icon-stack fa-6x mr-4 mb-0">
@@ -950,7 +1003,7 @@
 					</div>
 					<!-- Modal Right Transparent-->
 					<div class="modal fade example-modal-right-transparent" tabindex="-1" role="dialog" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-right modal-sm modal-bg-transparent">
+						<div class="modal-dialog modal-dialog-right modal-sm modal-transparent">
 							<div class="modal-content">
 								<div class="modal-header">
 									<h5 class="modal-title h4 text-white">Large right side modal</h5>
@@ -969,7 +1022,7 @@
 					</div>
 					<!-- Modal Left Transparent-->
 					<div class="modal fade example-modal-left-transparent" tabindex="-1" role="dialog" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-left modal-sm modal-bg-transparent">
+						<div class="modal-dialog modal-dialog-left modal-sm modal-transparent">
 							<div class="modal-content">
 								<div class="modal-header">
 									<h5 class="modal-title h4 text-white">Large right side modal</h5>
@@ -989,7 +1042,7 @@
 					</div>
 					<!-- Modal Center Transparent -->
 					<div class="modal fade example-modal-centered-transparent" tabindex="-1" role="dialog" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered modal-bg-transparent" role="document">
+						<div class="modal-dialog modal-dialog-centered modal-transparent" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
 									<h4 class="modal-title text-white">
@@ -1014,7 +1067,7 @@
 					</div>
 					<!-- Modal Default Transparent -->
 					<div class="modal fade example-modal-default-transparent" tabindex="-1" role="dialog" aria-hidden="true">
-						<div class="modal-dialog modal-bg-transparent" role="document">
+						<div class="modal-dialog modal-transparent" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
 									<h4 class="modal-title text-white">

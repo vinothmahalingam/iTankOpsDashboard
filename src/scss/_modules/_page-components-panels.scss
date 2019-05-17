@@ -348,6 +348,7 @@
 
 	.btn-toolbar-master {
 		height: $panel-hdr-height;
+		width:  1.826875rem; /* stop flickering bug due to cpu latency */
 		border-radius: 0;
 		margin-right: -$panel-spacer-x;
 		border-top-right-radius: 3px;
@@ -359,6 +360,7 @@
 		color: inherit;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 
 		&[aria-expanded="true"] {
 			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15) inset

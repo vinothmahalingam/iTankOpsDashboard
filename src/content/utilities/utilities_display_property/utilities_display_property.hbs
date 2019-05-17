@@ -91,125 +91,127 @@
 					<div class="panel-tag">
 						This method for hidding elements is from Bootstrap version 3.0, it is a more quicker way of hiding responsive elements. However, the Bootstrap 4 method will give you greater control. <strong>Remember to use either of the method on a single element, otherwise it may not work</strong>
 					</div>
-					<table class="table table-bordered">
-						<thead>
-							<tr>
-								<th class="border-top-0" style="width: 150px"></th>
-								<th>
-									Extra small devices
-									<small class="d-block fs-sm text-muted">
-										Phones (&lt;0px)
-									</small>
-								</th>
-								<th>
-									Small devices
-									<small class="d-block fs-sm text-muted">
-										Tablets (≥576px)
-									</small>
-								</th>
-								<th>
-									Medium devices
-									<small class="d-block fs-sm text-muted">
-										Desktops (≥768px)
-									</small>
-								</th>
-								<th>
-									Large devices
-									<small class="d-block fs-sm text-muted">
-										Desktops (≥992px)
-									</small>
-								</th>
-								<th>
-									Extra Large devices
-									<small class="d-block fs-sm text-muted">
-										Desktops (≥1200px)
-									</small>
-								</th>
-							</tr>
-						</thead>					
-						<tbody>
-							<tr>
-								<th scope="row"><code>.hidden-xs-down</code></th>
-								<td class="text-danger">hidden</td>
-								<td class="text-success">visible</td>
-								<td class="text-success">visible</td>
-								<td class="text-success">visible</td>
-								<td class="text-success">visible</td>
-							</tr>
-							<tr>
-								<th scope="row"><code>.hidden-sm-down</code></th>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-								<td class="text-success">visible</td>
-								<td class="text-success">visible</td>
-								<td class="text-success">visible</td>
-							</tr>
-							<tr>
-								<th scope="row"><code>.hidden-md-down</code></th>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-								<td class="text-success">visible</td>
-								<td class="text-success">visible</td>
-							</tr>
-							<tr>
-								<th scope="row"><code>.hidden-lg-down</code></th>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-								<td class="text-success">visible</td>
-							</tr>
-							<tr>
-								<th scope="row"><code>.hidden-xl-down</code></th>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-							</tr>
-							<tr>
-								<th scope="row"><code>.hidden-xs-up</code></th>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-							</tr>
-							<tr>
-								<th scope="row"><code>.hidden-sm-up</code></th>
-								<td class="text-success">visible</td>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-							</tr>
-							<tr>
-								<th scope="row"><code>.hidden-md-up</code></th>
-								<td class="text-success">visible</td>
-								<td class="text-success">visible</td>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-							</tr>
-							<tr>
-								<th scope="row"><code>.hidden-lg-up</code></th>
-								<td class="text-success">visible</td>
-								<td class="text-success">visible</td>
-								<td class="text-success">visible</td>
-								<td class="text-danger">hidden</td>
-								<td class="text-danger">hidden</td>
-							</tr>
-							<tr>
-								<th scope="row"><code>.hidden-xl-up</code></th>
-								<td class="text-success">visible</td>
-								<td class="text-success">visible</td>
-								<td class="text-success">visible</td>
-								<td class="text-success">visible</td>
-								<td class="text-danger">hidden</td>
-							</tr>
-						</tbody>
-					</table>
+					<div class="table-responsive">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th scope="col" class="border-top-0" style="width: 150px"></th>
+									<th scope="col">
+										Extra small devices
+										<small class="d-block fs-sm text-muted">
+											Phones (&lt;0px)
+										</small>
+									</th>
+									<th scope="col">
+										Small devices
+										<small class="d-block fs-sm text-muted">
+											Tablets (≥576px)
+										</small>
+									</th>
+									<th scope="col">
+										Medium devices
+										<small class="d-block fs-sm text-muted">
+											Desktops (≥768px)
+										</small>
+									</th>
+									<th scope="col">
+										Large devices
+										<small class="d-block fs-sm text-muted">
+											Desktops (≥992px)
+										</small>
+									</th>
+									<th scope="col">
+										Extra Large devices
+										<small class="d-block fs-sm text-muted">
+											Desktops (≥1200px)
+										</small>
+									</th>
+								</tr>
+							</thead>					
+							<tbody>
+								<tr>
+									<th scope="row"><code>.hidden-xs-down</code></th>
+									<td class="text-danger">hidden</td>
+									<td class="text-success">visible</td>
+									<td class="text-success">visible</td>
+									<td class="text-success">visible</td>
+									<td class="text-success">visible</td>
+								</tr>
+								<tr>
+									<th scope="row"><code>.hidden-sm-down</code></th>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+									<td class="text-success">visible</td>
+									<td class="text-success">visible</td>
+									<td class="text-success">visible</td>
+								</tr>
+								<tr>
+									<th scope="row"><code>.hidden-md-down</code></th>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+									<td class="text-success">visible</td>
+									<td class="text-success">visible</td>
+								</tr>
+								<tr>
+									<th scope="row"><code>.hidden-lg-down</code></th>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+									<td class="text-success">visible</td>
+								</tr>
+								<tr>
+									<th scope="row"><code>.hidden-xl-down</code></th>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+								</tr>
+								<tr>
+									<th scope="row"><code>.hidden-xs-up</code></th>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+								</tr>
+								<tr>
+									<th scope="row"><code>.hidden-sm-up</code></th>
+									<td class="text-success">visible</td>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+								</tr>
+								<tr>
+									<th scope="row"><code>.hidden-md-up</code></th>
+									<td class="text-success">visible</td>
+									<td class="text-success">visible</td>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+								</tr>
+								<tr>
+									<th scope="row"><code>.hidden-lg-up</code></th>
+									<td class="text-success">visible</td>
+									<td class="text-success">visible</td>
+									<td class="text-success">visible</td>
+									<td class="text-danger">hidden</td>
+									<td class="text-danger">hidden</td>
+								</tr>
+								<tr>
+									<th scope="row"><code>.hidden-xl-up</code></th>
+									<td class="text-success">visible</td>
+									<td class="text-success">visible</td>
+									<td class="text-success">visible</td>
+									<td class="text-success">visible</td>
+									<td class="text-danger">hidden</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>

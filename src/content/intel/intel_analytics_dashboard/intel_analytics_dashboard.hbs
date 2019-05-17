@@ -424,6 +424,11 @@
 
 {{#*inline "scripts-block"}}
 
+	<script type="text/javascript">
+	/* Activate smart panels */
+	$('#js-page-content').smartPanel();
+	</script>
+
 	<!-- The order of scripts is irrelevant. Please check out the plugin pages for more details about these plugins below: -->
 	<script src="js/dependency/moment/moment.js"></script>	
 	<script src="js/miscellaneous/fullcalendar/fullcalendar.bundle.js"></script>
@@ -434,7 +439,7 @@
 
 	<script>
 		$(document).ready(function () {
-			$('#js-page-content').smartPanel(); 
+			//$('#js-page-content').smartPanel(); 
 
 			//
 			//

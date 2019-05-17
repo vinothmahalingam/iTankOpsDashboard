@@ -12,8 +12,8 @@
 			"logo": "logo.png",
 			"logo-m": "logo.png",
 			"version": "4.0.0",
-			"copyright": "2019 © SmartAdmin by&nbsp;<a href='http://gotbootstrap.com' class='text-primary fw-500' title='gotbootstrap.com' target='_blank'>Gotbootstrap.com</a>",
-			"copyright-inverse": "2019 © SmartAdmin by&nbsp;<a href='http://gotbootstrap.com' class='text-white opacity-40 fw-500' title='gotbootstrap.com' target='_blank'>Gotbootstrap.com</a>"
+			"copyright": "2019 © SmartAdmin by&nbsp;<a href='https://www.gotbootstrap.com' class='text-primary fw-500' title='gotbootstrap.com' target='_blank'>gotbootstrap.com</a>",
+			"copyright-inverse": "2019 © SmartAdmin by&nbsp;<a href='https://www.gotbootstrap.com' class='text-white opacity-40 fw-500' title='gotbootstrap.com' target='_blank'>gotbootstrap.com</a>"
 		},
 		"compile": {
 			"jsUglify": false,

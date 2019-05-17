@@ -68,7 +68,7 @@
     "pdfmake": "^0.1.56",
     "peity": "^3.3.0",
     "popper.js": "^1.15.0",
-    "select2": "4.0.5",
+    "select2": "4.0.7",
     "summernote": "^0.8.11",
     "sweetalert2": "^8.10.7",
     "toastr": "^2.1.4"

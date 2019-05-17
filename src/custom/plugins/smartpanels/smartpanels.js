@@ -577,7 +577,7 @@
 					pPanel = tPanel.closest(self.o.panels);
 
 				/**
-				 * Run function for the indicator image.
+				 * Close tooltip
 				 **/
 				if( typeof($.fn.tooltip) !== 'undefined' && $('[data-toggle="tooltip"]').length ){
 					$(this).tooltip('hide');
@@ -643,7 +643,7 @@
 					pPanel = tPanel.closest(self.o.panels);
 
 				/**
-				 * Run function for the indicator image.
+				 * Close tooltip
 				 **/
 				if( typeof($.fn.tooltip) !== 'undefined' && $('[data-toggle="tooltip"]').length ){
 					$(this).tooltip('hide');
@@ -683,7 +683,7 @@
 					pTitle = pPanel.children('.panel-hdr').children('h2').text().trim();
 
 				/**
-				 * Run function for the indicator image.
+				 * Close tooltip
 				 **/
 				if( typeof($.fn.tooltip) !== 'undefined' && $('[data-toggle="tooltip"]').length ){
 					$(this).tooltip('hide');
@@ -691,14 +691,41 @@
 					console.log("bs.tooltip is not loaded");
 				}   
 
-				//if(typeof $.fn.bootbox !== 'undefined') {
+				
+				var killPanel = function (){
 
-					initApp.playSound('media/sound', 'messagebox')
+					/**
+					 * Run function for the indicator image.
+					 **/
+					pPanel.fadeOut(500,function(){
+						/* remove panel */
+						$(this).remove();
+						/**
+						 * Run the callback function.
+						 **/
+						if (typeof self.o.onClosepanel == 'function') {
+							self.o.onClosepanel.call(this, pPanel);
+						}
+					});  
+
+					/**
+					 * Run function for the indicator image.
+					 **/
+					self._runPanelLoader(tPanel);
+
+				};
+
+
+				//backdrop sound
+				initApp.playSound('media/sound', 'messagebox')
+
+				if (typeof bootbox  != 'undefined') {
 
 					bootbox.confirm({
-						title: "<i class='fal fa-times text-danger mr-2'></i> Do you wish to delete panel <span class='fw-500'> '"+pTitle+"' </span>?",
-						message: "<span class='ml-5'><strong>Warning:</strong> This action cannot be undone!</span>",
+						title: "<i class='fal fa-times-circle text-danger mr-2'></i> Do you wish to delete panel <span class='fw-500'>&nbsp;'" +pTitle+"'&nbsp;</span>?",
+						message: "<span><strong>Warning:</strong> This action cannot be undone!</span>",
 						centerVertical: true,
+						swapButtonOrder: true,
 						buttons: {
 							confirm: {
 								label: 'Yes',
@@ -713,32 +740,19 @@
 						closeButton: false,
 						callback: function (result) {
 							if (result == true) {
-
-								/**
-								 * Run function for the indicator image.
-								 **/
-								pPanel.fadeOut(500,function(){
-									/* remove panel */
-									$(this).remove();
-									/**
-									 * Run the callback function.
-									 **/
-									if (typeof self.o.onClosepanel == 'function') {
-										self.o.onClosepanel.call(this, pPanel);
-									}
-								});  
-
-								/**
-								 * Run function for the indicator image.
-								 **/
-								self._runPanelLoader(tPanel);
-
-
+								//close panel 
+								killPanel();
 							}
 						}
 					});
 
-				//}
+				} else {
+
+					if (confirm( 'Do you wish to delete panel ' + pTitle + '?' )) {
+						killPanel();
+					}
+
+				}				
 
 				e.preventDefault();
 			});

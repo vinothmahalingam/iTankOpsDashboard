@@ -31,6 +31,10 @@
 	.modal-title {
 		font-size: 1.5rem;
     	font-weight: 300;
+
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
 	}
 
 	.modal-header,
@@ -57,7 +61,7 @@
 }
 
 /* transparent modal */
-.modal-bg-transparent {
+.modal-transparent {
 	.modal-content {
 		box-shadow: 0 1px 15px 1px rgba($primary-900, 0.3);
 	}
