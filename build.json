@@ -128,7 +128,7 @@
 					"scripts": "{$config.output}/js/vendors.bundle.js",
 					"images": "{$config.output}/img",
 					"fonts": "{$config.output}/webfonts",
-					"json": "{$config.output}/",
+					"json": "{$config.output}/media/data/",
 					"media": "{$config.output}/media"
 				}
 			},

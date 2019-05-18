@@ -604,7 +604,7 @@ var initApp = (function(app) {
 			});
 		});
 		
-		/* Add app date to breadcrumb-right-placeholder */
+		/* Add app date to js-get-date */
 		if ( myapp_config.appDateHook.length ) {
 			var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
 				day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
