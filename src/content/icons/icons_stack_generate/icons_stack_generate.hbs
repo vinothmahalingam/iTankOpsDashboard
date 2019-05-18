@@ -5,7 +5,7 @@ pagename="icons_stack_generate"
 category_1="Font Icons" 
 category_2="Stack Icons" 
 heading="Stack Icons: <span class='fw-300'>Generate Stack</span> <sup class='badge badge-success fw-500'>ADDON</sup>" 
-pagedescription="Generate icons"
+pagedescription="Generate your unique stack Icon"
 }}
 
 {{#*inline "head-block"}}
@@ -22,17 +22,22 @@ pagedescription="Generate icons"
 			<h2>
 				Unique <span class="fw-300"><i>Icon</i></span> 
 			</h2>
+			<div class="panel-toolbar mr-2">
+				<select id="js-select-layers" class="custom-select form-control custom-select-sm" style="width:8rem">
+					<option value="2">Two layers</option>
+					<option value="3">Three layers </option>
+					<option value="4">Four layers</option>
+					<option value="5">Five layers</option>
+					<option value="6">Six layers</option>
+					<option value="7">Seven layers</option>
+				</select>
+			</div>
 			<div class="panel-toolbar">
-				<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
 				<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
-				<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-offset="0,10" data-original-title="Close"></button>
 			</div>
 		</div>
 		<div class="panel-container show">
 			<div class="panel-content">                                 
-				<div class="panel-tag">
-					 Design your unique stack icon
-				</div>
 				<div class="row">
 					<div class="col-12 col-xl-auto">
 						<div class="d-flex align-items-center justify-content-center position-relative w-100 mb-g mb-xl-0" style="font-size: 250px; min-width: 301px; height: 351px; background: url(img/backgrounds/bg-5.png) #fff; border-left:0; border-top:0; ">
@@ -324,6 +329,24 @@ var copyIcon = function (){
 	$('#js-icon-class').select();
 	document.execCommand('copy');
 };
+
+
+
+
+  $('#js-select-layers').on('change', function() {
+    var url = $(this).val(); // get selected value
+    if (url) { // require a URL
+
+		var params = new URLSearchParams(location.search);
+		params.set('layers', url);
+		window.location.search = params.toString();
+
+    }
+    return false;
+  });
+
+$('#js-select-layers').val(layers);
+
 
 </script>
 
