@@ -143,3 +143,15 @@ input[type="checkbox"]:checked + .custom-control-label {
 .form-group:only-child {
 	margin-bottom: 0;
 }
+
+/* fix alignment for generic checkbox and radio */
+.form-check-input {
+	margin-top: 0;
+} 
+.form-check-label {
+	display: flex;
+	align-items: center;
+}
+.form-check {
+	margin: 5px 0;
+}

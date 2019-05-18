@@ -63,8 +63,8 @@
 						},
 						"bootbox": {
 							"scripts": [
-								"{$config.path.node_modules}/bootbox/src/bootbox.js",
-								"{$config.path.node_modules}/custom/plugins/bootbox/bootbox-config.js"
+								"{$config.path.src}/custom/plugins/bootbox/bootbox-cust.js",
+								"{$config.path.src}/custom/plugins/bootbox/bootbox-config.js"
 							]
 						},
 						"jquery-snippets": {
