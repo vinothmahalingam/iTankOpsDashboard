@@ -331,7 +331,7 @@
 							"src": {
 								"styles":[
 									"{$config.path.node_modules}/datatables.net-bs4/css/dataTables.bootstrap4.css",
-									"{$config.path.node_modules}/datatables.net-autofill-bs4/css/autofill.bootstrap4.css",
+									"{$config.path.node_modules}/datatables.net-autofill-bs4/css/autoFill.bootstrap4.css",
 									"{$config.path.node_modules}/datatables.net-buttons-bs4/css/buttons.bootstrap4.css",
 									"{$config.path.node_modules}/datatables.net-colreorder-bs4/css/colReorder.bootstrap4.css",
 									"{$config.path.node_modules}/datatables.net-fixedcolumns-bs4/css/fixedcolumns.bootstrap4.css",
@@ -349,7 +349,7 @@
 									"{$config.path.node_modules}/datatables.net-bs4/js/dataTables.bootstrap4.js",
 									"{$config.path.src}/custom/plugins/datatables/datatables.styles.app.js",
 									"{$config.path.node_modules}/datatables.net-autofill/js/dataTables.autofill.js",							
-									"{$config.path.node_modules}/datatables.net-autofill-bs4/js/dataTables.autofill.js",
+									"{$config.path.node_modules}/datatables.net-autofill-bs4/js/autoFill.bootstrap4.js",
 									"{$config.path.node_modules}/datatables.net-buttons/js/dataTables.buttons.js",
 									"{$config.path.node_modules}/datatables.net-buttons-bs4/js/buttons.bootstrap4.js",
 									"{$config.path.node_modules}/datatables.net-buttons/js/buttons.html5.js",
@@ -589,6 +589,23 @@
 						"bundle": {
 							"styles": "{$config.output}/css/formplugins/nouislider/nouislider.css",
 							"scripts": "{$config.output}/js/formplugins/nouislider/nouislider.js"
+						}	
+					},
+					"wizard": {
+						"src": {
+							"styles": [
+								"{$config.path.node_modules}/smartwizard/dist/css/smart_wizard.css",
+								"{$config.path.node_modules}/smartwizard/dist/css/smart_wizard_theme_arrows.css",
+								"{$config.path.node_modules}/smartwizard/dist/css/smart_wizard_theme_circles.css",
+								"{$config.path.node_modules}/smartwizard/dist/css/smart_wizard_theme_dots.css"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/smartwizard/dist/js/jquery.smartWizard.js"
+							]
+						},
+						"bundle": {
+							"styles": "{$config.output}/css/formplugins/smartwizard/smartwizard.css",
+							"scripts": "{$config.output}/js/formplugins/smartwizard/smartwizard.js"
 						}	
 					}
 				},
