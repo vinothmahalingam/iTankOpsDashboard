@@ -61,7 +61,7 @@
 							<li><a href="#step-4">Step Title<br><small>Step description</small></a></li>
 						</ul>
 					 
-						<div>
+						<div class="p-3">
 							<div id="step-1" class="">
 								<div class="form-group">
 									<label class="form-label">label</label>
@@ -91,6 +91,7 @@
 	<script src="js/formplugins/smartwizard/smartwizard.js"></script>
 	<script>
 		$(document).ready(function () {
+
 			// Smart Wizard
 			$('#smartwizard').smartWizard({
 				selected: 0,  // Initial selected step, 0 = first step 
@@ -136,6 +137,10 @@
 				transitionEffect: 'slide', // Effect on navigation, none/slide/fade
 				transitionSpeed: '400'
 			});
+
+
+
+			
 		});
 	</script>
 {{/inline}}
