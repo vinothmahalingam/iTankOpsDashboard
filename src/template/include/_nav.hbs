@@ -230,7 +230,7 @@
 			</li>
 		</ul>
 	</li>
-	<li {{#is pagename "in" "utilities_borders,utilities_clearfix,utilities_color_pallet,utilities_display_property,utilities_fonts,utilities_flexbox,utilities_helpers,utilities_position,utilities_responsive_grid,utilities_responsive_helpers,utilities_sizing,utilities_spacing,utilities_typography"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "utilities_borders,utilities_clearfix,utilities_color_pallet,utilities_display_property,utilities_fonts,utilities_flexbox,utilities_helpers,utilities_position,utilities_responsive_grid,utilities_sizing,utilities_spacing,utilities_typography"}}class="active open"{{/is}}>
 		<a href="#" data-filter-tags="utilities"> 
 			<i class="fal fa-bolt"></i>
 			<span class="nav-link-text" data-i18n="nav.ui_utilities">
@@ -296,13 +296,6 @@
 				<a href="utilities_responsive_grid.html" data-filter-tags="utilities responsive grid"> 
 					<span class="nav-link-text" data-i18n="nav.utilities_responsive_grid">
 						Responsive grid
-					</span>
-				</a>
-			</li>
-			<li {{#is pagename "===" "utilities_responsive_helpers"}}class="active"{{/is}}>
-				<a href="utilities_responsive_helpers.html" data-filter-tags="utilities responsive helpers"> 
-					<span class="nav-link-text" data-i18n="nav.utilities_responsive_helpers">
-						Responsive helpers
 					</span>
 				</a>
 			</li>
@@ -883,7 +876,7 @@
 		</ul>
 	</li>		
 	<li class="nav-title">Layouts &amp; Apps </li>
-	<li {{#is pagename "in" "page_chat,page_contacts,page_faq,page_forum_list,page_forum_threads,page_forum_discussion,page_inbox,page_inbox_write,page_inbox_read,page_invoice,page_forget,page_locked,page_login,page_register,page_error_announced,page_error,page_error_404,page_pricing_tables,page_profile,page_search,page_teams"}}class="active open"{{/is}}>
+	<li {{#is pagename "in" "page_chat,page_contacts,page_faq,page_forum_list,page_forum_threads,page_forum_discussion,page_inbox,page_inbox_write,page_inbox_read,page_invoice,page_forget,page_locked,page_login,page_register,page_error_announced,page_error,page_error_404,page_pricing_tables,page_profile,page_search,page_teams,page_timeline"}}class="active open"{{/is}}>
 		<a href="#" title="Pages" data-filter-tags="page views"> 
 			<i class="fal fa-plus-circle"></i>
 			<span class="nav-link-text" data-i18n="nav.page">Page Views</span> 
@@ -1020,6 +1013,11 @@
 			<li {{#is pagename "===" "page_teams"}}class="active"{{/is}}>
 				<a href="page_teams.html" data-filter-tags="page views teams"> 
 					<span class="nav-link-text" data-i18n="nav.page_teams">Teams</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "page_timeline"}}class="active"{{/is}}>
+				<a href="page_timeline.html" data-filter-tags="page views timeline"> 
+					<span class="nav-link-text" data-i18n="nav.page_timeline">Timeline</span>
 				</a>
 			</li>
 		</ul>	
