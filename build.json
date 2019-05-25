@@ -20,7 +20,8 @@
 			"cssMinify": false,
 			"jsSourcemaps": false,
 			"cssSourcemaps": true,
-			"autoprefixer": true
+			"autoprefixer": true,
+			"seedOnly": false
 		},
 		"path": {
 			"src": "./src",
