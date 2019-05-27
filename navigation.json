@@ -277,7 +277,7 @@
 		},
 		{
 		  "title": "Typography",
-		  "tags": "",
+		  "tags": "fonts headings bold lead colors sizes link text states list styles truncate alignment",
 		  "href": "utilities_typography.html"
 		},
 		{
@@ -475,7 +475,7 @@
 		},
 		{
 		  "title": "BootBox",
-		  "tags": "",
+		  "tags": "alert sound",
 		  "href": "plugin_bootbox.html",
 		  "span": {
 			"class": "dl-ref label bg-primary-600 ml-2",
@@ -557,7 +557,7 @@
 		},
 		{
 		  "title": "Export",
-		  "tags": "",
+		  "tags": "tables pdf excel print csv",
 		  "href": "datatables_export.html"
 		},
 		{

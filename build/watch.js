@@ -23,11 +23,11 @@ gulp.task('watch', function (done) {
 		});
 
 	// watch `navigation.json` changes and compile new nav
-	gulp.watch(['navigation.json'], gulp.series('build-nav'))
+	/*gulp.watch(['navigation.json'], gulp.series('build-nav'))
 		.on('change', function (event) {
 			var file = path.parse(event);
 			console.log('==================> File changed: ' + file.name + ' (' + file.ext + ')...');
-		});	
+		});	*/
 
 	done();
 })
