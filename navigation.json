@@ -136,12 +136,12 @@
 		{
 		  "title": "Carousel",
 		  "tags": "",
-		  "href": "ui_cards.html"
+		  "href": "ui_carousel.html"
 		},
 		{
 		  "title": "Collapse",
 		  "tags": "",
-		  "href": "ui_carousel.html"
+		  "href": "ui_collapse.html"
 		},
 		{
 		  "title": "Dropdowns",
@@ -391,7 +391,7 @@
 		{
 		  "title": "Basic Tables",
 		  "tags": "",
-		  "href": "info_app_docs.html"
+		  "href": "tables_basic.html"
 		},
 		{
 		  "title": "Generate Table Style",

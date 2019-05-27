@@ -1,1072 +1,939 @@
 <ul id="js-nav-menu" class="nav-menu">
-	<li {{#is pagename "in" "intel_analytics_dashboard,intel_marketing_dashboard,intel_ceo_dashboard,intel_introduction,intel_build_notes"}}class="active open"{{/is}}>
-		<a href="#" title="Application Intel" data-filter-tags="application intel"> 
+	<li {{#is pagename "in" "intel_analytics_dashboard,intel_marketing_dashboard,intel_ceo_dashboard,intel_introduction,intel_build_notes"}}class="active open" {{/is}}>
+		<a href="#" title="Application Intel" data-filter-tags="application intel">
 			<i class="fal fa-info-circle"></i>
-			<span class="nav-link-text" data-i18n="nav.application_intel">Application Intel</span> 
+			<span class="nav-link-text" data-i18n="nav.application_intel">Application Intel</span>
 		</a>
 		<ul>
-			<li {{#is pagename "===" "intel_analytics_dashboard"}}class="active"{{/is}}>
-				<a href="intel_analytics_dashboard.html" title="Analytics Dashboard" data-filter-tags="application analytics dashboard"> 
-					<span class="nav-link-text" data-i18n="nav.intel_analytics_dashboard">Analytics Dashboard</span> 
+			<li {{#is pagename "===" "intel_analytics_dashboard"}}class="active" {{/is}}>
+				<a href="intel_analytics_dashboard.html" title="Analytics Dashboard" data-filter-tags="application intel analytics dashboard">
+					<span class="nav-link-text" data-i18n="nav.application_intel_analytics_dashboard">Analytics Dashboard</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "intel_marketing_dashboard"}}class="active"{{/is}}>
-				<a href="intel_marketing_dashboard.html" title="Marketing Dashboard" data-filter-tags="application marketing dashboard"> 
-					<span class="nav-link-text" data-i18n="nav.intel_marketing_dashboard">Marketing Dashboard</span> 
+			<li {{#is pagename "===" "intel_marketing_dashboard"}}class="active" {{/is}}>
+				<a href="intel_marketing_dashboard.html" title="Marketing Dashboard" data-filter-tags="application intel marketing dashboard">
+					<span class="nav-link-text" data-i18n="nav.application_intel_marketing_dashboard">Marketing Dashboard</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "intel_ceo_dashboard"}}class="active"{{/is}}>
-				<a href="intel_ceo_dashboard.html" title="CEO Dashboard" data-filter-tags="application ceo dashboard"> 
-					<span class="nav-link-text" data-i18n="nav.intel_ceo_dashboard">CEO Dashboard</span> 
+			<li {{#is pagename "===" "intel_ceo_dashboard"}}class="active" {{/is}}>
+				<a href="intel_ceo_dashboard.html" title="CEO Dashboard" data-filter-tags="application intel ceo dashboard">
+					<span class="nav-link-text" data-i18n="nav.application_intel_ceo_dashboard">CEO Dashboard</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "intel_introduction"}}class="active"{{/is}}>
-				<a href="intel_introduction.html" title="Introduction" data-filter-tags="application introduction"> 
-					<span class="nav-link-text" data-i18n="nav.intel_introduction">Introduction</span> 
+			<li {{#is pagename "===" "intel_introduction"}}class="active" {{/is}}>
+				<a href="intel_introduction.html" title="Introduction" data-filter-tags="application intel introduction">
+					<span class="nav-link-text" data-i18n="nav.application_intel_introduction">Introduction</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "intel_build_notes"}}class="active"{{/is}}>
-				<a href="intel_build_notes.html" title="Build Notes" data-filter-tags="application build notes update changelog"> 
-					<span class="nav-link-text"> 
-						<span data-i18n="nav.intel_build_notes">Build Notes</span> &nbsp; <i>v{{version}}</i>
-					</span> 
+			<li {{#is pagename "===" "intel_build_notes"}}class="active" {{/is}}>
+				<a href="intel_build_notes.html" title="Build Notes" data-filter-tags="application intel build notes">
+					<span class="nav-link-text" data-i18n="nav.application_intel_build_notes">Build Notes</span>
+					<span class="">v{{version}}</span>
 				</a>
 			</li>
-		</ul>	
+		</ul>
 	</li>
-	<li {{#is pagename "in" "settings_how_it_works,settings_layout_options,settings_skin_options,settings_saving_db"}}class="active open"{{/is}}>
-		<a href="#" data-filter-tags="settings theme settings"> 
+	<li {{#is pagename "in" "settings_how_it_works,settings_layout_options,settings_skin_options,settings_saving_db"}}class="active open" {{/is}}>
+		<a href="#" title="Theme Settings" data-filter-tags="theme settings">
 			<i class="fal fa-cog"></i>
-			<span class="nav-link-text" data-i18n="nav.theme_settings"> Theme Settings</span> 
+			<span class="nav-link-text" data-i18n="nav.theme_settings">Theme Settings</span>
 		</a>
 		<ul>
-			<li {{#is pagename "===" "settings_how_it_works"}}class="active"{{/is}}>
-				<a href="settings_how_it_works.html" data-filter-tags="settings how to it works"> 
-					<span class="nav-link-text" data-i18n="nav.settings_how_it_works">
-						How it works
-					</span>
+			<li {{#is pagename "===" "settings_how_it_works"}}class="active" {{/is}}>
+				<a href="settings_how_it_works.html" title="How it works" data-filter-tags="theme settings how it works">
+					<span class="nav-link-text" data-i18n="nav.theme_settings_how_it works">How it works</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "settings_layout_options"}}class="active"{{/is}}>
-				<a href="settings_layout_options.html" data-filter-tags="settings how to layout options"> 
-					<span class="nav-link-text" data-i18n="nav.settings_layout_options">
-						Layout Options
-					</span>
+			<li {{#is pagename "===" "settings_layout_options"}}class="active" {{/is}}>
+				<a href="settings_layout_options.html" title="Layout Options" data-filter-tags="theme settings layout options">
+					<span class="nav-link-text" data-i18n="nav.theme_settings_layout_options">Layout Options</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "settings_skin_options"}}class="active"{{/is}}>
-				<a href="settings_skin_options.html" data-filter-tags="settings skin options"> 
-					<span class="nav-link-text" data-i18n="nav.settings_skin_options">
-						Skin Options
-					</span>
+			<li {{#is pagename "===" "settings_skin_options"}}class="active" {{/is}}>
+				<a href="settings_skin_options.html" title="Skin Options" data-filter-tags="theme settings skin options">
+					<span class="nav-link-text" data-i18n="nav.theme_settings_skin_options">Skin Options</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "settings_saving_db"}}class="active"{{/is}}>
-				<a href="settings_saving_db.html" data-filter-tags="settings saving how to database"> 
-					<span class="nav-link-text" data-i18n="nav.settings_saving_db">
-						Saving to Database
-					</span>
+			<li {{#is pagename "===" "settings_saving_db"}}class="active" {{/is}}>
+				<a href="settings_saving_db.html" title="Saving to Database" data-filter-tags="theme settings saving to database">
+					<span class="nav-link-text" data-i18n="nav.theme_settings_saving_to database">Saving to Database</span>
 				</a>
 			</li>
-		</ul>		
-	</li>	
-	<li {{#is pagename "in" "info_app_flavors,info_app_licensing,info_app_docs"}}class="active open"{{/is}}>
-		<a href="#" title="Package Info" data-filter-tags="package info"> 
+		</ul>
+	</li>
+	<li {{#is pagename "in" "info_app_docs,info_app_licensing,info_app_flavors"}}class="active open" {{/is}}>
+		<a href="#" title="Package Info" data-filter-tags="package info">
 			<i class="fal fa-tag"></i>
-			<span class="nav-link-text" data-i18n="nav.info_package_info">
-				Package Info
-			</span> 
-		</a>						
+			<span class="nav-link-text" data-i18n="nav.package_info">Package Info</span>
+		</a>
 		<ul>
-			<li {{#is pagename "===" "info_app_docs"}}class="active"{{/is}}>
-				<a href="info_app_docs.html" data-filter-tags="package info documentation"> 
-					<span class="nav-link-text" data-i18n="nav.info_docs">
-						Documentation
-					</span> 
+			<li {{#is pagename "===" "info_app_docs"}}class="active" {{/is}}>
+				<a href="info_app_docs.html" title="Documentation" data-filter-tags="package info documentation">
+					<span class="nav-link-text" data-i18n="nav.package_info_documentation">Documentation</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "info_app_licensing"}}class="active"{{/is}}>
-				<a href="info_app_licensing.html" data-filter-tags="package info product licensing"> 
-					<span class="nav-link-text" data-i18n="nav.info_app_licensing">
-						Product Licensing
-					</span> 
+			<li {{#is pagename "===" "info_app_licensing"}}class="active" {{/is}}>
+				<a href="info_app_licensing.html" title="Product Licensing" data-filter-tags="package info product licensing">
+					<span class="nav-link-text" data-i18n="nav.package_info_product_licensing">Product Licensing</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "info_app_flavors"}}class="active"{{/is}}>
-				<a href="info_app_flavors.html" data-filter-tags="package info different flavors .net asp angularjs versions"> 
-					<span class="nav-link-text" data-i18n="nav.info_app_flavors">
-						Different Flavors
-					</span> 
+			<li {{#is pagename "===" "info_app_flavors"}}class="active" {{/is}}>
+				<a href="info_app_flavors.html" title="Different Flavors" data-filter-tags="package info different flavors">
+					<span class="nav-link-text" data-i18n="nav.package_info_different_flavors">Different Flavors</span>
 				</a>
 			</li>
-
 		</ul>
 	</li>
-	<li class="nav-title">Tools &amp; Components </li>
-	<li {{#is pagename "in" "ui_alerts,ui_accordion,ui_badges,ui_breadcrumbs,ui_buttons,ui_button_group,ui_cards,ui_carousel,ui_collapse,ui_dropdowns,ui_list_filter,ui_modal,ui_navbars,ui_panels,ui_pagination,ui_popovers,ui_tabs_pills,ui_toasts,ui_progress_bars,ui_side_panel,ui_scrollspy,ui_spinners,ui_tooltips"}}class="active open"{{/is}}>
-		<a href="#" title="UI Components" data-filter-tags="ui components"> 
+	<li class="nav-title">Tools & Components</li>
+	<li {{#is pagename "in" "ui_alerts,ui_accordion,ui_badges,ui_breadcrumbs,ui_buttons,ui_button_group,ui_cards,ui_carousel,ui_collapse,ui_dropdowns,ui_list_filter,ui_modal,ui_navbars,ui_panels,ui_pagination,ui_popovers,ui_progress_bars,ui_scrollspy,ui_side_panel,ui_spinners,ui_tabs_pills,ui_toasts,ui_tooltips"}}class="active open" {{/is}}>
+		<a href="#" title="UI Components" data-filter-tags="ui components">
 			<i class="fal fa-window"></i>
-			<span class="nav-link-text" data-i18n="nav.ui_components">UI Components</span> 
+			<span class="nav-link-text" data-i18n="nav.ui_components">UI Components</span>
 		</a>
 		<ul>
-			<li {{#is pagename "===" "ui_alerts"}}class="active"{{/is}}>
-				<a href="ui_alerts.html" data-filter-tags="ui components alerts"> 
-					<span class="nav-link-text" data-i18n="nav.ui_alerts">Alerts</span> 
+			<li {{#is pagename "===" "ui_alerts"}}class="active" {{/is}}>
+				<a href="ui_alerts.html" title="Alerts" data-filter-tags="ui components alerts">
+					<span class="nav-link-text" data-i18n="nav.ui_components_alerts">Alerts</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_accordion"}}class="active"{{/is}}>
-				<a href="ui_accordion.html" data-filter-tags="ui components accordion"> 
-					<span class="nav-link-text" data-i18n="nav.ui_accordion">Accordions</span> 
+			<li {{#is pagename "===" "ui_accordion"}}class="active" {{/is}}>
+				<a href="ui_accordion.html" title="Accordions" data-filter-tags="ui components accordions">
+					<span class="nav-link-text" data-i18n="nav.ui_components_accordions">Accordions</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_badges"}}class="active"{{/is}}>
-				<a href="ui_badges.html" data-filter-tags="ui components badges"> 
-					<span class="nav-link-text" data-i18n="nav.ui_badges">Badges</span> 
+			<li {{#is pagename "===" "ui_badges"}}class="active" {{/is}}>
+				<a href="ui_badges.html" title="Badges" data-filter-tags="ui components badges">
+					<span class="nav-link-text" data-i18n="nav.ui_components_badges">Badges</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_breadcrumbs"}}class="active"{{/is}}>
-				<a href="ui_breadcrumbs.html" data-filter-tags="ui components breadcrumbs"> 
-					<span class="nav-link-text" data-i18n="nav.ui_breadcrumbs">Breadcrumbs</span> 
+			<li {{#is pagename "===" "ui_breadcrumbs"}}class="active" {{/is}}>
+				<a href="ui_breadcrumbs.html" title="Breadcrumbs" data-filter-tags="ui components breadcrumbs">
+					<span class="nav-link-text" data-i18n="nav.ui_components_breadcrumbs">Breadcrumbs</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_buttons"}}class="active"{{/is}}>
-				<a href="ui_buttons.html" data-filter-tags="ui components buttons"> 
-					<span class="nav-link-text" data-i18n="nav.ui_buttons">Buttons</span> 
+			<li {{#is pagename "===" "ui_buttons"}}class="active" {{/is}}>
+				<a href="ui_buttons.html" title="Buttons" data-filter-tags="ui components buttons">
+					<span class="nav-link-text" data-i18n="nav.ui_components_buttons">Buttons</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_button_group"}}class="active"{{/is}}>
-				<a href="ui_button_group.html" data-filter-tags="ui components button group"> 
-					<span class="nav-link-text" data-i18n="nav.ui_button_group">Button Group</span> 
+			<li {{#is pagename "===" "ui_button_group"}}class="active" {{/is}}>
+				<a href="ui_button_group.html" title="Button Group" data-filter-tags="ui components button group">
+					<span class="nav-link-text" data-i18n="nav.ui_components_button_group">Button Group</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_cards"}}class="active"{{/is}}>
-				<a href="ui_cards.html" data-filter-tags="ui components cards"> 
-					<span class="nav-link-text" data-i18n="nav.ui_cards">Cards</span> 
+			<li {{#is pagename "===" "ui_cards"}}class="active" {{/is}}>
+				<a href="ui_cards.html" title="Cards" data-filter-tags="ui components cards">
+					<span class="nav-link-text" data-i18n="nav.ui_components_cards">Cards</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_carousel"}}class="active"{{/is}}>
-				<a href="ui_carousel.html" data-filter-tags="ui components carousel"> 
-					<span class="nav-link-text" data-i18n="nav.ui_carousel">Carousel</span> 
+			<li {{#is pagename "===" "ui_carousel"}}class="active" {{/is}}>
+				<a href="ui_carousel.html" title="Carousel" data-filter-tags="ui components carousel">
+					<span class="nav-link-text" data-i18n="nav.ui_components_carousel">Carousel</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_collapse"}}class="active"{{/is}}>
-				<a href="ui_collapse.html" data-filter-tags="ui components collapse"> 
-					<span class="nav-link-text" data-i18n="nav.ui_collapse">Collapse</span> 
+			<li {{#is pagename "===" "ui_collapse"}}class="active" {{/is}}>
+				<a href="ui_collapse.html" title="Collapse" data-filter-tags="ui components collapse">
+					<span class="nav-link-text" data-i18n="nav.ui_components_collapse">Collapse</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_dropdowns"}}class="active"{{/is}}>
-				<a href="ui_dropdowns.html" data-filter-tags="ui components dropdowns"> 
-					<span class="nav-link-text" data-i18n="nav.ui_dropdowns">Dropdowns</span> 
+			<li {{#is pagename "===" "ui_dropdowns"}}class="active" {{/is}}>
+				<a href="ui_dropdowns.html" title="Dropdowns" data-filter-tags="ui components dropdowns">
+					<span class="nav-link-text" data-i18n="nav.ui_components_dropdowns">Dropdowns</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_list_filter"}}class="active"{{/is}}>
-				<a href="ui_list_filter.html" data-filter-tags="ui components list filter"> 
-					<span class="nav-link-text">
-						<span data-i18n="nav.ui_list_filter">List Filter</span>
-					</span>
+			<li {{#is pagename "===" "ui_list_filter"}}class="active" {{/is}}>
+				<a href="ui_list_filter.html" title="List Filter" data-filter-tags="ui components list filter">
+					<span class="nav-link-text" data-i18n="nav.ui_components_list_filter">List Filter</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_modal"}}class="active"{{/is}}>
-				<a href="ui_modal.html" data-filter-tags="ui components modal"> 
-					<span class="nav-link-text">
-						<span data-i18n="nav.ui_modal">Modal</span>
-					</span>
-				</a>
-			</li>			
-			<li {{#is pagename "===" "ui_navbars"}}class="active"{{/is}}>
-				<a href="ui_navbars.html" data-filter-tags="ui components navbars"> 
-					<span class="nav-link-text" data-i18n="nav.ui_navbars">Navbars</span> 
+			<li {{#is pagename "===" "ui_modal"}}class="active" {{/is}}>
+				<a href="ui_modal.html" title="Modal" data-filter-tags="ui components modal">
+					<span class="nav-link-text" data-i18n="nav.ui_components_modal">Modal</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_panels"}}class="active"{{/is}}>
-				<a href="ui_panels.html" data-filter-tags="ui components panels"> 
-					<span class="nav-link-text" data-i18n="nav.ui_panels">Panels</span> 
+			<li {{#is pagename "===" "ui_navbars"}}class="active" {{/is}}>
+				<a href="ui_navbars.html" title="Navbars" data-filter-tags="ui components navbars">
+					<span class="nav-link-text" data-i18n="nav.ui_components_navbars">Navbars</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_pagination"}}class="active"{{/is}}>
-				<a href="ui_pagination.html" data-filter-tags="ui components pagination"> 
-					<span class="nav-link-text" data-i18n="nav.ui_pagination">Pagination</span> 
+			<li {{#is pagename "===" "ui_panels"}}class="active" {{/is}}>
+				<a href="ui_panels.html" title="Panels" data-filter-tags="ui components panels">
+					<span class="nav-link-text" data-i18n="nav.ui_components_panels">Panels</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_popovers"}}class="active"{{/is}}>
-				<a href="ui_popovers.html" data-filter-tags="ui components popovers"> 
-					<span class="nav-link-text" data-i18n="nav.ui_popovers">Popovers</span> 
-				</a>
-			</li>			
-			<li {{#is pagename "===" "ui_progress_bars"}}class="active"{{/is}}>
-				<a href="ui_progress_bars.html" data-filter-tags="ui components progress bars"> 
-					<span class="nav-link-text" data-i18n="nav.ui_progress_bars">Progress Bars</span> 
+			<li {{#is pagename "===" "ui_pagination"}}class="active" {{/is}}>
+				<a href="ui_pagination.html" title="Pagination" data-filter-tags="ui components pagination">
+					<span class="nav-link-text" data-i18n="nav.ui_components_pagination">Pagination</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_scrollspy"}}class="active"{{/is}}>
-				<a href="ui_scrollspy.html" data-filter-tags="ui components scrollspy"> 
-					<span class="nav-link-text" data-i18n="nav.ui_scrollspy">ScrollSpy</span> 
+			<li {{#is pagename "===" "ui_popovers"}}class="active" {{/is}}>
+				<a href="ui_popovers.html" title="Popovers" data-filter-tags="ui components popovers">
+					<span class="nav-link-text" data-i18n="nav.ui_components_popovers">Popovers</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_side_panel"}}class="active"{{/is}}>
-				<a href="ui_side_panel.html" data-filter-tags="ui components slide panel"> 
-					<span class="nav-link-text" data-i18n="nav.ui_side_panel">Side Panel</span> 
+			<li {{#is pagename "===" "ui_progress_bars"}}class="active" {{/is}}>
+				<a href="ui_progress_bars.html" title="Progress Bars" data-filter-tags="ui components progress bars">
+					<span class="nav-link-text" data-i18n="nav.ui_components_progress_bars">Progress Bars</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_spinners"}}class="active"{{/is}}>
-				<a href="ui_spinners.html" data-filter-tags="ui components spinners animation loaders"> 
-					<span class="nav-link-text" data-i18n="nav.ui_spinners">Spinners</span> 
+			<li {{#is pagename "===" "ui_scrollspy"}}class="active" {{/is}}>
+				<a href="ui_scrollspy.html" title="ScrollSpy" data-filter-tags="ui components scrollspy">
+					<span class="nav-link-text" data-i18n="nav.ui_components_scrollspy">ScrollSpy</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_tabs_pills"}}class="active"{{/is}}>
-				<a href="ui_tabs_pills.html" data-filter-tags="ui components tabs"> 
-					<span class="nav-link-text" data-i18n="nav.ui_tabs_pills">Tabs & Pills</span> 
+			<li {{#is pagename "===" "ui_side_panel"}}class="active" {{/is}}>
+				<a href="ui_side_panel.html" title="Side Panel" data-filter-tags="ui components side panel">
+					<span class="nav-link-text" data-i18n="nav.ui_components_side_panel">Side Panel</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_toasts"}}class="active"{{/is}}>
-				<a href="ui_toasts.html" data-filter-tags="ui components toasts"> 
-					<span class="nav-link-text" data-i18n="nav.ui_toasts">Toasts</span> 
+			<li {{#is pagename "===" "ui_spinners"}}class="active" {{/is}}>
+				<a href="ui_spinners.html" title="Spinners" data-filter-tags="ui components spinners">
+					<span class="nav-link-text" data-i18n="nav.ui_components_spinners">Spinners</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "ui_tooltips"}}class="active"{{/is}}>
-				<a href="ui_tooltips.html" data-filter-tags="ui components tooltips"> 
-					<span class="nav-link-text" data-i18n="nav.ui_tooltips">Tooltips</span> 
+			<li {{#is pagename "===" "ui_tabs_pills"}}class="active" {{/is}}>
+				<a href="ui_tabs_pills.html" title="Tabs &amp; Pills" data-filter-tags="ui components tabs &amp; pills">
+					<span class="nav-link-text" data-i18n="nav.ui_components_tabs_&amp; pills">Tabs &amp; Pills</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "ui_toasts"}}class="active" {{/is}}>
+				<a href="ui_toasts.html" title="Toasts" data-filter-tags="ui components toasts">
+					<span class="nav-link-text" data-i18n="nav.ui_components_toasts">Toasts</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "ui_tooltips"}}class="active" {{/is}}>
+				<a href="ui_tooltips.html" title="Tooltips" data-filter-tags="ui components tooltips">
+					<span class="nav-link-text" data-i18n="nav.ui_components_tooltips">Tooltips</span>
 				</a>
 			</li>
 		</ul>
 	</li>
-	<li {{#is pagename "in" "utilities_borders,utilities_clearfix,utilities_color_pallet,utilities_display_property,utilities_fonts,utilities_flexbox,utilities_helpers,utilities_position,utilities_responsive_grid,utilities_sizing,utilities_spacing,utilities_typography"}}class="active open"{{/is}}>
-		<a href="#" data-filter-tags="utilities"> 
+	<li {{#is pagename "in" "utilities_borders,utilities_clearfix,utilities_color_pallet,utilities_display_property,utilities_fonts,utilities_flexbox,utilities_helpers,utilities_position,utilities_responsive_grid,utilities_sizing,utilities_spacing,utilities_typography"}}class="active open" {{/is}}>
+		<a href="#" title="Utilities" data-filter-tags="utilities">
 			<i class="fal fa-bolt"></i>
-			<span class="nav-link-text" data-i18n="nav.ui_utilities">
-				Utilities
-			</span> 
+			<span class="nav-link-text" data-i18n="nav.utilities">Utilities</span>
 		</a>
 		<ul>
-			<li {{#is pagename "===" "utilities_borders"}}class="active"{{/is}}>
-				<a href="utilities_borders.html" data-filter-tags="utilities borders">
-					<span class="nav-link-text" data-i18n="nav.utilities_borders">
-						Borders
-					</span>
+			<li {{#is pagename "===" "utilities_borders"}}class="active" {{/is}}>
+				<a href="utilities_borders.html" title="Borders" data-filter-tags="utilities borders">
+					<span class="nav-link-text" data-i18n="nav.utilities_borders">Borders</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "utilities_clearfix"}}class="active"{{/is}}>
-				<a href="utilities_clearfix.html" data-filter-tags="utilities clearfix"> 
-					<span class="nav-link-text" data-i18n="nav.utilities_clearfix">
-						Clearfix
-					</span>
+			<li {{#is pagename "===" "utilities_clearfix"}}class="active" {{/is}}>
+				<a href="utilities_clearfix.html" title="Clearfix" data-filter-tags="utilities clearfix">
+					<span class="nav-link-text" data-i18n="nav.utilities_clearfix">Clearfix</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "utilities_color_pallet"}}class="active"{{/is}}>
-				<a href="utilities_color_pallet.html" data-filter-tags="utilities color pallet"> 
-					<span class="nav-link-text" data-i18n="nav.utilities_color_pallet">
-						Color pallet
-					</span>
+			<li {{#is pagename "===" "utilities_color_pallet"}}class="active" {{/is}}>
+				<a href="utilities_color_pallet.html" title="Color Pallet" data-filter-tags="utilities color pallet">
+					<span class="nav-link-text" data-i18n="nav.utilities_color_pallet">Color Pallet</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "utilities_display_property"}}class="active"{{/is}}>
-				<a href="utilities_display_property.html" data-filter-tags="utilities display property">
-					<span class="nav-link-text" data-i18n="nav.utilities_display_property">
-						Display property
-					</span>
+			<li {{#is pagename "===" "utilities_display_property"}}class="active" {{/is}}>
+				<a href="utilities_display_property.html" title="Display Property" data-filter-tags="utilities display property">
+					<span class="nav-link-text" data-i18n="nav.utilities_display_property">Display Property</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "utilities_fonts"}}class="active"{{/is}}>
-				<a href="utilities_fonts.html" data-filter-tags="utilities fonts"> 
-					<span class="nav-link-text" data-i18n="nav.utilities_fonts">
-						Fonts
-					</span>
+			<li {{#is pagename "===" "utilities_fonts"}}class="active" {{/is}}>
+				<a href="utilities_fonts.html" title="Fonts" data-filter-tags="utilities fonts">
+					<span class="nav-link-text" data-i18n="nav.utilities_fonts">Fonts</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "utilities_flexbox"}}class="active"{{/is}}>
-				<a href="utilities_flexbox.html" data-filter-tags="utilities flexbox"> 
-					<span class="nav-link-text" data-i18n="nav.utilities_flexbox">
-						Flexbox
-					</span>
+			<li {{#is pagename "===" "utilities_flexbox"}}class="active" {{/is}}>
+				<a href="utilities_flexbox.html" title="Flexbox" data-filter-tags="utilities flexbox">
+					<span class="nav-link-text" data-i18n="nav.utilities_flexbox">Flexbox</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "utilities_helpers"}}class="active"{{/is}}>
-				<a href="utilities_helpers.html" data-filter-tags="utilities helpers"> 
-					<span class="nav-link-text" data-i18n="nav.utilities_helpers">Helpers</span> 
-				</a>
-			</li>			
-			<li {{#is pagename "===" "utilities_position"}}class="active"{{/is}}>
-				<a href="utilities_position.html" data-filter-tags="utilities position"> 
-					<span class="nav-link-text" data-i18n="nav.utilities_position">
-						Position
-					</span>
+			<li {{#is pagename "===" "utilities_helpers"}}class="active" {{/is}}>
+				<a href="utilities_helpers.html" title="Helpers" data-filter-tags="utilities helpers">
+					<span class="nav-link-text" data-i18n="nav.utilities_helpers">Helpers</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "utilities_responsive_grid"}}class="active"{{/is}}>
-				<a href="utilities_responsive_grid.html" data-filter-tags="utilities responsive grid"> 
-					<span class="nav-link-text" data-i18n="nav.utilities_responsive_grid">
-						Responsive grid
-					</span>
+			<li {{#is pagename "===" "utilities_position"}}class="active" {{/is}}>
+				<a href="utilities_position.html" title="Position" data-filter-tags="utilities position">
+					<span class="nav-link-text" data-i18n="nav.utilities_position">Position</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "utilities_sizing"}}class="active"{{/is}}>
-				<a href="utilities_sizing.html" data-filter-tags="utilities sizing"> 
-					<span class="nav-link-text" data-i18n="nav.utilities_sizing">
-						Sizing
-					</span>
+			<li {{#is pagename "===" "utilities_responsive_grid"}}class="active" {{/is}}>
+				<a href="utilities_responsive_grid.html" title=" Responsive Grid" data-filter-tags="utilities responsive grid">
+					<span class="nav-link-text" data-i18n="nav.utilities__responsive grid"> Responsive Grid</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "utilities_spacing"}}class="active"{{/is}}>
-				<a href="utilities_spacing.html" data-filter-tags="utilities spacing"> 
-					<span class="nav-link-text" data-i18n="nav.utilities_spacing">
-						Spacing
-					</span>
+			<li {{#is pagename "===" "utilities_sizing"}}class="active" {{/is}}>
+				<a href="utilities_sizing.html" title="Sizing" data-filter-tags="utilities sizing">
+					<span class="nav-link-text" data-i18n="nav.utilities_sizing">Sizing</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "utilities_typography"}}class="active"{{/is}}>
-				<a href="utilities_typography.html" data-filter-tags="utilities typography fonts headings bold lead colors sizes link text states list styles truncate alignment"> 
-					<span class="nav-link-text" data-i18n="nav.utilities_typography">
-						Typography
-					</span> 
+			<li {{#is pagename "===" "utilities_spacing"}}class="active" {{/is}}>
+				<a href="utilities_spacing.html" title="Spacing" data-filter-tags="utilities spacing">
+					<span class="nav-link-text" data-i18n="nav.utilities_spacing">Spacing</span>
 				</a>
 			</li>
-			<li>
-				<a href="javascript:void(0);">
-					<span class="nav-link-text" data-i18n="nav.ui_menu_child">
-						Menu child
-					</span> 
+			<li {{#is pagename "===" "utilities_typography"}}class="active" {{/is}}>
+				<a href="utilities_typography.html" title="Typography" data-filter-tags="utilities typography fonts headings bold lead colors sizes link text states list styles truncate alignment">
+					<span class="nav-link-text" data-i18n="nav.utilities_typography">Typography</span>
+				</a>
+			</li>
+			<li {{#is pagename "in" ""}}class="active open" {{/is}}>
+				<a href="javascript:void(0);" title=" Menu child" data-filter-tags="utilities menu child">
+					<span class="nav-link-text" data-i18n="nav.utilities__menu child"> Menu child</span>
 				</a>
 				<ul>
-					<li>
-						<a href="javascript:void(0);"> 
-							<span class="nav-link-text" data-i18n="nav.ui_sublevel">
-								Sublevel Item
-							</span> 
+					<li {{#is pagename "===" "javascript:void(0);"}}class="active" {{/is}}>
+						<a href="javascript:void(0);" title="Sublevel Item" data-filter-tags="utilities menu child sublevel item">
+							<span class="nav-link-text" data-i18n="nav.utilities__menu child_sublevel_item">Sublevel Item</span>
 						</a>
 					</li>
-					<li>
-						<a href="javascript:void(0);"> 
-							<span class="nav-link-text" data-i18n="nav.ui_sublevel_icon">
-								Another Item
-							</span> 
+					<li {{#is pagename "===" "javascript:void(0);"}}class="active" {{/is}}>
+						<a href="javascript:void(0);" title="Another Item" data-filter-tags="utilities menu child another item">
+							<span class="nav-link-text" data-i18n="nav.utilities__menu child_another_item">Another Item</span>
 						</a>
 					</li>
 				</ul>
 			</li>
 			<li class="disabled">
-				<a href="#" data-filter-tags="disabled item"> 
-					<span class="nav-link-text" data-i18n="nav.ui_disabled_item">
-						Disabled item
-					</span> 
+				<a href="javascript:void(0);" title="Disabled item" data-filter-tags="utilities disabled item">
+					<span class="nav-link-text" data-i18n="nav.utilities_disabled_item">Disabled item</span>
 				</a>
 			</li>
 		</ul>
-	</li>	
-	<li {{#is pagename "in" "icons_webfonts_faq,icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_fontawesome_brand,icons_fontawesome_svg,icons_nextgen_general,icons_nextgen_base,icons_stack_showcase,icons_stack_generate"}}class="active open"{{/is}}>
-		<a href="#" title="Font Icons" data-filter-tags="icons">
+	</li>
+	<li {{#is pagename "in" "icons_webfonts_faq,icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_fontawesome_brand,icons_nextgen_general,icons_nextgen_base,icons_stack_showcase,icons_stack_generate"}}class="active open" {{/is}}>
+		<a href="#" title="Font Icons" data-filter-tags="font icons">
 			<i class="fal fa-map-marker-alt"></i>
-			<span class="nav-link-text" data-i18n="nav.infterface.icons">Font Icons</span>
-			<span class="dl-ref bg-primary-500 hidden-nav-function-minify hidden-nav-function-top">&nbsp;2,500+&nbsp;</span>
+			<span class="nav-link-text" data-i18n="nav.font_icons">Font Icons</span>
+			<span class="dl-ref bg-primary-500 hidden-nav-function-minify hidden-nav-function-top">2,500+</span>
 		</a>
 		<ul>
-			<li {{#is pagename "===" "icons_webfonts_faq"}}class="active"{{/is}}>
-				<a href="icons_webfonts_faq.html" data-filter-tags="ui components font icons fontawesome free icons"> 
-					<span class="nav-link-text" data-i18n="nav.icons_wf">
-						Webfonts FAQ
-					</span>
+			<li {{#is pagename "===" "icons_webfonts_faq"}}class="active" {{/is}}>
+				<a href="icons_webfonts_faq.html" title="Webfonts FAQ" data-filter-tags="font icons webfonts faq">
+					<span class="nav-link-text" data-i18n="nav.font_icons_webfonts_faq">Webfonts FAQ</span>
 				</a>
 			</li>
-			<li {{#is pagename "in" "icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_fontawesome_brand"}}class="active open"{{/is}}>
-				<a href="#" title="FontAwesome" data-filter-tags="icons">
-					<span class="nav-link-text">
-						<span data-i18n="nav.infterface.icons">
-							FontAwesome Pro
-						</span>
-					</span>
+			<li {{#is pagename "in" "icons_fontawesome_light,icons_fontawesome_regular,icons_fontawesome_solid,icons_fontawesome_brand"}}class="active open" {{/is}}>
+				<a href="javascript:void(0);" title="FontAwesome" data-filter-tags="font icons fontawesome">
+					<span class="nav-link-text" data-i18n="nav.font_icons_fontawesome">FontAwesome Pro</span>
 				</a>
 				<ul>
-					<li {{#is pagename "===" "icons_fontawesome_light"}}class="active"{{/is}}>
-						<a href="icons_fontawesome_light.html" data-filter-tags="font icons fontawesome pro light"> 
-							<span class="nav-link-text" data-i18n="nav.icons_fontawesome_light">
-								Light
-							</span>
+					<li {{#is pagename "===" "icons_fontawesome_light"}}class="active" {{/is}}>
+						<a href="icons_fontawesome_light.html" title="Light" data-filter-tags="font icons fontawesome light">
+							<span class="nav-link-text" data-i18n="nav.font_icons_fontawesome_light">Light</span>
 						</a>
 					</li>
-					<li {{#is pagename "===" "icons_fontawesome_regular"}}class="active"{{/is}}>
-						<a href="icons_fontawesome_regular.html" data-filter-tags="font icons fontawesome pro regular"> 
-							<span class="nav-link-text" data-i18n="nav.icons_far">
-								Regular 
-							</span>
+					<li {{#is pagename "===" "icons_fontawesome_regular"}}class="active" {{/is}}>
+						<a href="icons_fontawesome_regular.html" title="Regular" data-filter-tags="font icons fontawesome regular">
+							<span class="nav-link-text" data-i18n="nav.font_icons_fontawesome_regular">Regular</span>
 						</a>
 					</li>
-					<li {{#is pagename "===" "icons_fontawesome_solid"}}class="active"{{/is}}>
-						<a href="icons_fontawesome_solid.html" data-filter-tags="font icons fontawesome pro solid"> 
-							<span class="nav-link-text" data-i18n="nav.icons_fas">
-								Solid
-							</span>
+					<li {{#is pagename "===" "icons_fontawesome_solid"}}class="active" {{/is}}>
+						<a href="icons_fontawesome_solid.html" title="Solid" data-filter-tags="font icons fontawesome solid">
+							<span class="nav-link-text" data-i18n="nav.font_icons_fontawesome_solid">Solid</span>
 						</a>
 					</li>
-					<li {{#is pagename "===" "icons_fontawesome_brand"}}class="active"{{/is}}>
-						<a href="icons_fontawesome_brand.html" data-filter-tags="font icons fontawesome brand"> 
-							<span class="nav-link-text" data-i18n="nav.icons_fas">
-								Brand
-							</span>
+					<li {{#is pagename "===" "icons_fontawesome_brand"}}class="active" {{/is}}>
+						<a href="icons_fontawesome_brand.html" title="Brand" data-filter-tags="font icons fontawesome brand">
+							<span class="nav-link-text" data-i18n="nav.font_icons_fontawesome_brand">Brand</span>
 						</a>
 					</li>
 				</ul>
 			</li>
-			<li {{#is pagename "in" "icons_nextgen_general,icons_nextgen_base"}}class="active open"{{/is}}>
-				<a href="#" title="NextGen Icons" data-filter-tags="ui components font icons nextgen icons">
-					<span class="nav-link-text">
-						<span data-i18n="nav.nextgen_icons">NextGen Icons</span>
-					</span>
+			<li {{#is pagename "in" "icons_nextgen_general,icons_nextgen_base"}}class="active open" {{/is}}>
+				<a href="javascript:void(0);" title="NextGen Icons" data-filter-tags="font icons nextgen icons">
+					<span class="nav-link-text" data-i18n="nav.font_icons_nextgen_icons">NextGen Icons</span>
 				</a>
 				<ul>
-					<li {{#is pagename "===" "icons_nextgen_general"}}class="active"{{/is}}>
-						<a href="icons_nextgen_general.html" data-filter-tags="ui components font icons nextgen icons"> 
-							<span class="nav-link-text" data-i18n="nav.icons_nextgen_general">
-								General
-							</span>
+					<li {{#is pagename "===" "icons_nextgen_general"}}class="active" {{/is}}>
+						<a href="icons_nextgen_general.html" title="General" data-filter-tags="font icons nextgen icons general">
+							<span class="nav-link-text" data-i18n="nav.font_icons_nextgen_icons_general">General</span>
 						</a>
 					</li>
-					<li {{#is pagename "===" "icons_nextgen_base"}}class="active"{{/is}}>
-						<a href="icons_nextgen_base.html" data-filter-tags="ui components font icons nextgen icons base"> 
-							<span class="nav-link-text" data-i18n="nav.icons_nextgen_base">
-								Base
-							</span>
+					<li {{#is pagename "===" "icons_nextgen_base"}}class="active" {{/is}}>
+						<a href="icons_nextgen_base.html" title="Base" data-filter-tags="font icons nextgen icons base">
+							<span class="nav-link-text" data-i18n="nav.font_icons_nextgen_icons_base">Base</span>
 						</a>
 					</li>
 				</ul>
-			</li>						
-			<li {{#is pagename "in" "icons_stack_showcase,icons_stack_generate"}}class="active open"{{/is}}>
-				<a href="#" title="Stack Icons" data-filter-tags="stack icons">
-					<span class="nav-link-text">
-						<span data-i18n="nav.icons_stack_icons">
-							Stack Icons
-						</span>
-					</span>
+			</li>
+			<li {{#is pagename "in" "icons_stack_showcase,icons_stack_generate"}}class="active open" {{/is}}>
+				<a href="javascript:void(0);" title="Stack Icons" data-filter-tags="font icons stack icons">
+					<span class="nav-link-text" data-i18n="nav.font_icons_stack_icons">Stack Icons</span>
 				</a>
 				<ul>
-					<li {{#is pagename "===" "icons_stack_showcase"}}class="active"{{/is}}>
-						<a href="icons_stack_showcase.html" data-filter-tags="stack icons stack showcase"> 
-							<span class="nav-link-text" data-i18n="nav.icons_fontawesome_light">
-								Showcase
-							</span>
+					<li {{#is pagename "===" "icons_stack_showcase"}}class="active" {{/is}}>
+						<a href="icons_stack_showcase.html" title="Showcase" data-filter-tags="font icons stack icons showcase">
+							<span class="nav-link-text" data-i18n="nav.font_icons_stack_icons_showcase">Showcase</span>
 						</a>
 					</li>
-					<li {{#is pagename "===" "icons_stack_generate"}}class="active"{{/is}}>
-						<a href="icons_stack_generate.html?layers=3" data-filter-tags="stack icons stack genearte"> 
-							<span class="nav-link-text" data-i18n="nav.icons_stack_generate">
-								Generate Stack
-							</span>
+					<li {{#is pagename "===" "icons_stack_generate"}}class="active" {{/is}}>
+						<a href="icons_stack_generate.html?layers=3" title="Generate Stack" data-filter-tags="font icons stack icons generate stack">
+							<span class="nav-link-text" data-i18n="nav.font_icons_stack_icons_generate_stack">Generate Stack</span>
 						</a>
 					</li>
-				</ul>					
+				</ul>
 			</li>
 		</ul>
-	</li>	
-	<li {{#is pagename "in" "tables_basic,tables_generate_style"}}class="active open"{{/is}}>
-		<a href="#" title="Tables" data-filter-tags="tables"> 
+	</li>
+	<li {{#is pagename "in" "tables_basic,tables_generate_style"}}class="active open" {{/is}}>
+		<a href="#" title="Tables" data-filter-tags="tables">
 			<i class="fal fa-th-list"></i>
 			<span class="nav-link-text" data-i18n="nav.tables">Tables</span>
 		</a>
 		<ul>
-			<li {{#is pagename "===" "tables_basic"}}class="active"{{/is}}>
-				<a href="tables_basic.html" data-filter-tags="tables basic"> 
-					<span class="nav-link-text" data-i18n="nav.tables_basic">Basic Tables</span> 
+			<li {{#is pagename "===" "tables_basic"}}class="active" {{/is}}>
+				<a href="tables_basic.html" title="Basic Tables" data-filter-tags="tables basic tables">
+					<span class="nav-link-text" data-i18n="nav.tables_basic_tables">Basic Tables</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "tables_generate_style"}}class="active"{{/is}}>
-				<a href="tables_generate_style.html" data-filter-tags="tables generator style"> 
-					<span class="nav-link-text" data-i18n="nav.tables_generate_style">Generate Table Style</span> 
+			<li {{#is pagename "===" "tables_generate_style"}}class="active" {{/is}}>
+				<a href="tables_generate_style.html" title="Generate Table Style" data-filter-tags="tables generate table style">
+					<span class="nav-link-text" data-i18n="nav.tables_generate_table style">Generate Table Style</span>
 				</a>
 			</li>
 		</ul>
-	</li>				
-	<li {{#is pagename "in" "form_basic_inputs,form_checkbox_radio,form_input_groups,form_validation,form_samples"}}class="active open"{{/is}}>
-		<a href="#" title="Form Stuff" data-filter-tags="forms stuff"> 
+	</li>
+	<li {{#is pagename "in" "form_basic_inputs,form_checkbox_radio,form_input_groups,form_validation,form_samples"}}class="active open" {{/is}}>
+		<a href="#" title="Form Stuff" data-filter-tags="form stuff">
 			<i class="fal fa-edit"></i>
-			<span class="nav-link-text" data-i18n="nav.form">Form Stuff</span>
+			<span class="nav-link-text" data-i18n="nav.form_stuff">Form Stuff</span>
 		</a>
 		<ul>
-			<li {{#is pagename "===" "form_basic_inputs"}}class="active"{{/is}}>
-				<a href="form_basic_inputs.html" data-filter-tags="forms basic inputs"> 
-					<span class="nav-link-text" data-i18n="nav.form_basic_inputs">Basic Inputs</span> 
+			<li {{#is pagename "===" "form_basic_inputs"}}class="active" {{/is}}>
+				<a href="form_basic_inputs.html" title="Basic Inputs" data-filter-tags="form stuff basic inputs">
+					<span class="nav-link-text" data-i18n="nav.form_stuff_basic_inputs">Basic Inputs</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "form_checkbox_radio"}}class="active"{{/is}}>
-				<a href="form_checkbox_radio.html" data-filter-tags="forms checkbox radio"> 
-					<span class="nav-link-text" data-i18n="nav.form_checkbox_radio">Checkbox & Radio</span> 
-				</a>
-			</li>			
-			<li {{#is pagename "===" "form_input_groups"}}class="active"{{/is}}>
-				<a href="form_input_groups.html" data-filter-tags="forms input groups"> 
-					<span class="nav-link-text" data-i18n="nav.form_input_groups">Input Groups</span> 
+			<li {{#is pagename "===" "form_checkbox_radio"}}class="active" {{/is}}>
+				<a href="form_checkbox_radio.html" title="Checkbox &amp; Radio" data-filter-tags="form stuff checkbox &amp; radio">
+					<span class="nav-link-text" data-i18n="nav.form_stuff_checkbox_&amp; radio">Checkbox &amp; Radio</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "form_validation"}}class="active"{{/is}}>
-				<a href="form_validation.html" data-filter-tags="forms validation"> 
-					<span class="nav-link-text" data-i18n="nav.form_validation">Validation</span> 
+			<li {{#is pagename "===" "form_input_groups"}}class="active" {{/is}}>
+				<a href="form_input_groups.html" title="Input Groups" data-filter-tags="form stuff input groups">
+					<span class="nav-link-text" data-i18n="nav.form_stuff_input_groups">Input Groups</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "form_samples"}}class="active"{{/is}}>
-				<a href="form_samples.html" data-filter-tags="forms samples validation"> 
-					<span class="nav-link-text" data-i18n="nav.form_samples">Samples</span> 
+			<li {{#is pagename "===" "form_validation"}}class="active" {{/is}}>
+				<a href="form_validation.html" title="Validation" data-filter-tags="form stuff validation">
+					<span class="nav-link-text" data-i18n="nav.form_stuff_validation">Validation</span>
 				</a>
-			</li>																														
+			</li>
+			<li {{#is pagename "===" "form_samples"}}class="active" {{/is}}>
+				<a href="form_samples.html" title="Samples" data-filter-tags="form stuff samples">
+					<span class="nav-link-text" data-i18n="nav.form_stuff_samples">Samples</span>
+				</a>
+			</li>
 		</ul>
 	</li>
-	<li class="nav-title">Plugins &amp; Addons</li>
-	<li {{#is pagename "in" "plugin_faq,plugin_waves,plugin_pacejs,plugin_smartpanels,plugin_bootbox,plugin_slimscroll,plugin_throttle,plugin_navigation,plugin_i18next,plugin_appcore"}}class="active open"{{/is}}>
-		<a href="#" title="Plugins" data-filter-tags="core plugins"> 
+	<li class="nav-title">Plugins & Addons</li>
+	<li {{#is pagename "in" "plugin_faq,plugin_waves,plugin_pacejs,plugin_smartpanels,plugin_bootbox,plugin_slimscroll,plugin_throttle,plugin_navigation,plugin_i18next,plugin_appcore"}}class="active open" {{/is}}>
+		<a href="#" title="Plugins" data-filter-tags="plugins">
 			<i class="fal fa-shield-alt"></i>
-			<span class="nav-link-text" data-i18n="nav.plugin">Core Plugins </span> 
+			<span class="nav-link-text" data-i18n="nav.plugins">Core Plugins</span>
 		</a>
 		<ul>
-			<li {{#is pagename "===" "plugin_faq"}}class="active"{{/is}}>
-				<a href="plugin_faq.html" data-filter-tags="plugins faq info"> 
-					<span class="nav-link-text">
-						<span data-i18n="nav.plugin_faq">Plugins FAQ</span>
-					</span>
+			<li {{#is pagename "===" "plugin_faq"}}class="active" {{/is}}>
+				<a href="plugin_faq.html" title="Plugins FAQ" data-filter-tags="plugins plugins faq">
+					<span class="nav-link-text" data-i18n="nav.plugins_plugins_faq">Plugins FAQ</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "plugin_waves"}}class="active"{{/is}}>
-				<a href="plugin_waves.html" data-filter-tags="plugins waves"> 
-					<span class="nav-link-text">
-						<span data-i18n="nav.plugin_waves">Waves</span>
-						<span class="dl-ref label bg-primary-400 ml-2">9 KB</span> 
-					</span>
+			<li {{#is pagename "===" "plugin_waves"}}class="active" {{/is}}>
+				<a href="plugin_waves.html" title="Waves" data-filter-tags="plugins waves">
+					<span class="nav-link-text" data-i18n="nav.plugins_waves">Waves</span>
+					<span class="dl-ref label bg-primary-400 ml-2">9 KB</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "plugin_pacejs"}}class="active"{{/is}}>
-				<a href="plugin_pacejs.html" data-filter-tags="plugin pacejs"> 
-					<span class="nav-link-text">
-						<span data-i18n="nav.plugin_pacejs">PaceJS</span>
-						<span class="dl-ref label bg-primary-500 ml-2">13 KB</span> 
-					</span>
+			<li {{#is pagename "===" "plugin_pacejs"}}class="active" {{/is}}>
+				<a href="plugin_pacejs.html" title="PaceJS" data-filter-tags="plugins pacejs">
+					<span class="nav-link-text" data-i18n="nav.plugins_pacejs">PaceJS</span>
+					<span class="dl-ref label bg-primary-500 ml-2">13 KB</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "plugin_smartpanels"}}class="active"{{/is}}>
-				<a href="plugin_smartpanels.html" data-filter-tags="plugin smart panels"> 
-					<span class="nav-link-text">
-						<span data-i18n="nav.plugin_smartpanels">SmartPanels</span>
-						<span class="dl-ref label bg-primary-600 ml-2">9 KB</span>
-					</span>
+			<li {{#is pagename "===" "plugin_smartpanels"}}class="active" {{/is}}>
+				<a href="plugin_smartpanels.html" title="SmartPanels" data-filter-tags="plugins smartpanels">
+					<span class="nav-link-text" data-i18n="nav.plugins_smartpanels">SmartPanels</span>
+					<span class="dl-ref label bg-primary-600 ml-2">9 KB</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "plugin_bootbox"}}class="active"{{/is}}>
-				<a href="plugin_bootbox.html" data-filter-tags="plugin boot box alert sound"> 
-					<span class="nav-link-text">
-						<span data-i18n="nav.plugin_bootbox">BootBox</span>
-						<span class="dl-ref label bg-primary-600 ml-2">15 KB</span>
-					</span>
+			<li {{#is pagename "===" "plugin_bootbox"}}class="active" {{/is}}>
+				<a href="plugin_bootbox.html" title="BootBox" data-filter-tags="plugins bootbox alert sound">
+					<span class="nav-link-text" data-i18n="nav.plugins_bootbox">BootBox</span>
+					<span class="dl-ref label bg-primary-600 ml-2">15 KB</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "plugin_slimscroll"}}class="active"{{/is}}>
-				<a href="plugin_slimscroll.html" data-filter-tags="plugins slim scroll slimscroll"> 
-					<span class="nav-link-text">
-						<span data-i18n="nav.plugin_slimscroll">Slimscroll</span>
-						<span class="dl-ref label bg-primary-700 ml-2">5 KB</span>
-					</span>
+			<li {{#is pagename "===" "plugin_slimscroll"}}class="active" {{/is}}>
+				<a href="plugin_slimscroll.html" title="Slimscroll" data-filter-tags="plugins slimscroll">
+					<span class="nav-link-text" data-i18n="nav.plugins_slimscroll">Slimscroll</span>
+					<span class="dl-ref label bg-primary-700 ml-2">5 KB</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "plugin_throttle"}}class="active"{{/is}}>
-				<a href="plugin_throttle.html" data-filter-tags="plugins throttle"> 
-					<span class="nav-link-text">
-						<span data-i18n="nav.plugin_throttle">Throttle</span>
-						<span class="dl-ref label bg-primary-700 ml-2">1 KB</span>
-					</span>
+			<li {{#is pagename "===" "plugin_throttle"}}class="active" {{/is}}>
+				<a href="plugin_throttle.html" title="Throttle" data-filter-tags="plugins throttle">
+					<span class="nav-link-text" data-i18n="nav.plugins_throttle">Throttle</span>
+					<span class="dl-ref label bg-primary-700 ml-2">1 KB</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "plugin_navigation"}}class="active"{{/is}}>
-				<a href="plugin_navigation.html" data-filter-tags="plugins navigation"> 
-					<span class="nav-link-text">
-						<span data-i18n="nav.plugin_navigation">Navigation</span>
-						<span class="dl-ref label bg-primary-700 ml-2">2 KB</span>
-					</span>
+			<li {{#is pagename "===" "plugin_navigation"}}class="active" {{/is}}>
+				<a href="plugin_navigation.html" title="Navigation" data-filter-tags="plugins navigation">
+					<span class="nav-link-text" data-i18n="nav.plugins_navigation">Navigation</span>
+					<span class="dl-ref label bg-primary-700 ml-2">2 KB</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "plugin_i18next"}}class="active"{{/is}}>
-				<a href="plugin_i18next.html" data-filter-tags="plugins i18next"> 
-					<span class="nav-link-text">
-						<span data-i18n="nav.plugin_i18next">i18next</span>
-						<span class="dl-ref label bg-primary-700 ml-2">10 KB</span>
-					</span>
-				</a>
-			</li>	
-			<li {{#is pagename "===" "plugin_appcore"}}class="active"{{/is}}>
-				<a href="plugin_appcore.html" data-filter-tags="plugins app core"> 
-					<span class="nav-link-text">
-						<span data-i18n="nav.plugin_appcore">App.Core</span>
-						<span class="dl-ref label bg-success-700 ml-2">14 KB</span>
-					</span>
-				</a>
-			</li>							
-		</ul>	
-	</li>	
-	<li {{#is pagename "in" "datatables_basic,datatables_autofill,datatables_buttons,datatables_export,datatables_colreorder,datatables_columnfilter,datatables_fixedcolumns,datatables_fixedheader,datatables_keytable,datatables_responsive,datatables_responsive_alt,datatables_rowgroup,datatables_rowreorder,datatables_scroller,datatables_select,datatables_alteditor"}}class="active open"{{/is}}>
-		<a href="#" title="Datagrid" data-filter-tags="datatables json export"> 
-			<i class="fal fa-table"></i>
-			<span class="nav-link-text" data-i18n="nav.datatables">Datatables</span>
-			<span class="dl-ref bg-primary-500 hidden-nav-function-minify hidden-nav-function-top">&nbsp;235 KB&nbsp;</span>
-		</a>
-		<ul>
-			<li {{#is pagename "===" "datatables_basic"}}class="active"{{/is}}>
-				<a href="datatables_basic.html" data-filter-tags="datatables basic"> 
-					<span class="nav-link-text" data-i18n="nav.datatables_basic">Basic</span> 
+			<li {{#is pagename "===" "plugin_i18next"}}class="active" {{/is}}>
+				<a href="plugin_i18next.html" title="i18next" data-filter-tags="plugins i18next">
+					<span class="nav-link-text" data-i18n="nav.plugins_i18next">i18next</span>
+					<span class="dl-ref label bg-primary-700 ml-2">10 KB</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "datatables_autofill"}}class="active"{{/is}}>
-				<a href="datatables_autofill.html" data-filter-tags="datatables autofill"> 
-					<span class="nav-link-text" data-i18n="nav.datatables_autofill">Autofill</span> 
-				</a>
-			</li>
-			<li {{#is pagename "===" "datatables_buttons"}}class="active"{{/is}}>
-				<a href="datatables_buttons.html" data-filter-tags="datatables buttons"> 
-					<span class="nav-link-text" data-i18n="nav.datatables_buttons">Buttons</span> 
-				</a>
-			</li>
-			<li {{#is pagename "===" "datatables_export"}}class="active"{{/is}}>
-				<a href="datatables_export.html" data-filter-tags="datatables export tables pdf excel print csv"> 
-					<span class="nav-link-text" data-i18n="nav.datatables_export">Export</span> 
-				</a>
-			</li>
-			<li {{#is pagename "===" "datatables_colreorder"}}class="active"{{/is}}>
-				<a href="datatables_colreorder.html" data-filter-tags="datatables colreorder"> 
-					<span class="nav-link-text" data-i18n="nav.datatables_colreorder">ColReorder</span> 
-				</a>
-			</li>
-			<li {{#is pagename "===" "datatables_columnfilter"}}class="active"{{/is}}>
-				<a href="datatables_columnfilter.html" data-filter-tags="datatables column filter"> 
-					<span class="nav-link-text" data-i18n="nav.datatables_columnfilter">ColumnFilter</span> 
-				</a>
-			</li>
-			<li {{#is pagename "===" "datatables_fixedcolumns"}}class="active"{{/is}}>
-				<a href="datatables_fixedcolumns.html" data-filter-tags="datatables fixed columns"> 
-					<span class="nav-link-text" data-i18n="nav.datatables_fixedcolumns">FixedColumns</span> 
-				</a>
-			</li>
-			<li {{#is pagename "===" "datatables_fixedheader"}}class="active"{{/is}}>
-				<a href="datatables_fixedheader.html" data-filter-tags="datatables fixed header"> 
-					<span class="nav-link-text" data-i18n="nav.datatables_fixedheader">FixedHeader</span> 
-				</a>
-			</li>
-			<li {{#is pagename "===" "datatables_keytable"}}class="active"{{/is}}>
-				<a href="datatables_keytable.html" data-filter-tags="datatables key table"> 
-					<span class="nav-link-text" data-i18n="nav.datatables_keytable">KeyTable</span> 
-				</a>
-			</li>
-			<li {{#is pagename "===" "datatables_responsive"}}class="active"{{/is}}>
-				<a href="datatables_responsive.html" data-filter-tags="datatables responsive"> 
-					<span class="nav-link-text" data-i18n="nav.datatables_responsive">Responsive</span> 
-				</a>
-			</li>
-			<li {{#is pagename "===" "datatables_responsive_alt"}}class="active"{{/is}}>
-				<a href="datatables_responsive_alt.html" data-filter-tags="datatables responsive alternative"> 
-					<span class="nav-link-text" data-i18n="nav.datatables_responsive_alt">Responsive Alt</span> 
-				</a>
-			</li>
-			<li {{#is pagename "===" "datatables_rowgroup"}}class="active"{{/is}}>
-				<a href="datatables_rowgroup.html" data-filter-tags="datatables row group"> 
-					<span class="nav-link-text" data-i18n="nav.datatables_rowgroup">RowGroup</span> 
-				</a>
-			</li>
-			<li {{#is pagename "===" "datatables_rowreorder"}}class="active"{{/is}}>
-				<a href="datatables_rowreorder.html" data-filter-tags="datatables row reorder"> 
-					<span class="nav-link-text" data-i18n="nav.datatables_rowreorder">RowReorder</span> 
-				</a>
-			</li>
-			<li {{#is pagename "===" "datatables_scroller"}}class="active"{{/is}}>
-				<a href="datatables_scroller.html" data-filter-tags="datatables scroller"> 
-					<span class="nav-link-text" data-i18n="nav.datatables_scroller">Scroller</span> 
-				</a>
-			</li>
-			<li {{#is pagename "===" "datatables_select"}}class="active"{{/is}}>
-				<a href="datatables_select.html" data-filter-tags="datatables select"> 
-					<span class="nav-link-text" data-i18n="nav.datatables_select">Select</span> 
-				</a>
-			</li>
-			<li {{#is pagename "===" "datatables_alteditor"}}class="active"{{/is}}>
-				<a href="datatables_alteditor.html" data-filter-tags="datatables alteditor edit add delete record"> 
-					<span class="nav-link-text" data-i18n="nav.datatables_alteditor">AltEditor</span> 
+			<li {{#is pagename "===" "plugin_appcore"}}class="active" {{/is}}>
+				<a href="plugin_appcore.html" title="App.Core" data-filter-tags="plugins app.core">
+					<span class="nav-link-text" data-i18n="nav.plugins_app.core">App.Core</span>
+					<span class="dl-ref label bg-success-700 ml-2">14 KB</span>
 				</a>
 			</li>
 		</ul>
 	</li>
-	<li {{#is pagename "in" "statistics_flot,statistics_chartjs,statistics_chartist,statistics_c3,statistics_peity,statistics_sparkline,statistics_easypiechart,statistics_dygraph"}}class="active open"{{/is}}>
-		<a href="#" title="Statistics" data-filter-tags="statistics"> 
+	<li {{#is pagename "in" "datatables_basic,datatables_autofill,datatables_buttons,datatables_export,datatables_colreorder,datatables_columnfilter,datatables_fixedcolumns,datatables_fixedheader,datatables_keytable,datatables_responsive,datatables_responsive_alt,datatables_rowgroup,datatables_rowreorder,datatables_scroller,datatables_select,datatables_alteditor"}}class="active open" {{/is}}>
+		<a href="#" title="Datagrid" data-filter-tags="datagrid datatables">
+			<i class="fal fa-table"></i>
+			<span class="nav-link-text" data-i18n="nav.datagrid">Datatables</span>
+			<span class="dl-ref bg-primary-500 hidden-nav-function-minify hidden-nav-function-top">235 KB</span>
+		</a>
+		<ul>
+			<li {{#is pagename "===" "datatables_basic"}}class="active" {{/is}}>
+				<a href="datatables_basic.html" title="Basic" data-filter-tags="datagrid datatables basic">
+					<span class="nav-link-text" data-i18n="nav.datagrid_basic">Basic</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "datatables_autofill"}}class="active" {{/is}}>
+				<a href="datatables_autofill.html" title="Autofill" data-filter-tags="datagrid datatables autofill">
+					<span class="nav-link-text" data-i18n="nav.datagrid_autofill">Autofill</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "datatables_buttons"}}class="active" {{/is}}>
+				<a href="datatables_buttons.html" title="Buttons" data-filter-tags="datagrid datatables buttons">
+					<span class="nav-link-text" data-i18n="nav.datagrid_buttons">Buttons</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "datatables_export"}}class="active" {{/is}}>
+				<a href="datatables_export.html" title="Export" data-filter-tags="datagrid datatables export tables pdf excel print csv">
+					<span class="nav-link-text" data-i18n="nav.datagrid_export">Export</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "datatables_colreorder"}}class="active" {{/is}}>
+				<a href="datatables_colreorder.html" title="ColReorder" data-filter-tags="datagrid datatables colreorder">
+					<span class="nav-link-text" data-i18n="nav.datagrid_colreorder">ColReorder</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "datatables_columnfilter"}}class="active" {{/is}}>
+				<a href="datatables_columnfilter.html" title="ColumnFilter" data-filter-tags="datagrid datatables columnfilter">
+					<span class="nav-link-text" data-i18n="nav.datagrid_columnfilter">ColumnFilter</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "datatables_fixedcolumns"}}class="active" {{/is}}>
+				<a href="datatables_fixedcolumns.html" title="FixedColumns" data-filter-tags="datagrid datatables fixedcolumns">
+					<span class="nav-link-text" data-i18n="nav.datagrid_fixedcolumns">FixedColumns</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "datatables_fixedheader"}}class="active" {{/is}}>
+				<a href="datatables_fixedheader.html" title="FixedHeader" data-filter-tags="datagrid datatables fixedheader">
+					<span class="nav-link-text" data-i18n="nav.datagrid_fixedheader">FixedHeader</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "datatables_keytable"}}class="active" {{/is}}>
+				<a href="datatables_keytable.html" title="KeyTable" data-filter-tags="datagrid datatables keytable">
+					<span class="nav-link-text" data-i18n="nav.datagrid_keytable">KeyTable</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "datatables_responsive"}}class="active" {{/is}}>
+				<a href="datatables_responsive.html" title="Responsive" data-filter-tags="datagrid datatables responsive">
+					<span class="nav-link-text" data-i18n="nav.datagrid_responsive">Responsive</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "datatables_responsive_alt"}}class="active" {{/is}}>
+				<a href="datatables_responsive_alt.html" title="Responsive Alt" data-filter-tags="datagrid datatables responsive alt">
+					<span class="nav-link-text" data-i18n="nav.datagrid_responsive_alt">Responsive Alt</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "datatables_rowgroup"}}class="active" {{/is}}>
+				<a href="datatables_rowgroup.html" title="RowGroup" data-filter-tags="datagrid datatables rowgroup">
+					<span class="nav-link-text" data-i18n="nav.datagrid_rowgroup">RowGroup</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "datatables_rowreorder"}}class="active" {{/is}}>
+				<a href="datatables_rowreorder.html" title="RowReorder" data-filter-tags="datagrid datatables rowreorder">
+					<span class="nav-link-text" data-i18n="nav.datagrid_rowreorder">RowReorder</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "datatables_scroller"}}class="active" {{/is}}>
+				<a href="datatables_scroller.html" title="Scroller" data-filter-tags="datagrid datatables scroller">
+					<span class="nav-link-text" data-i18n="nav.datagrid_scroller">Scroller</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "datatables_select"}}class="active" {{/is}}>
+				<a href="datatables_select.html" title="Select" data-filter-tags="datagrid datatables select">
+					<span class="nav-link-text" data-i18n="nav.datagrid_select">Select</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "datatables_alteditor"}}class="active" {{/is}}>
+				<a href="datatables_alteditor.html" title="AltEditor" data-filter-tags="datagrid datatables alteditor">
+					<span class="nav-link-text" data-i18n="nav.datagrid_alteditor">AltEditor</span>
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li {{#is pagename "in" "statistics_flot,statistics_chartjs,statistics_chartist,statistics_c3,statistics_peity,statistics_sparkline,statistics_easypiechart,statistics_dygraph"}}class="active open" {{/is}}>
+		<a href="#" title="Statistics" data-filter-tags="statistics chart graphs">
 			<i class="fal fa-chart-pie"></i>
 			<span class="nav-link-text" data-i18n="nav.statistics">Statistics</span>
 		</a>
 		<ul>
-			<li {{#is pagename "===" "statistics_flot"}}class="active"{{/is}}>
-				<a href="statistics_flot.html" title="Flot" data-filter-tags="statistics chart graph flot"> 
-					<span class="nav-link-text" data-i18n="nav.statistics_flot">
-						Flot
-						<span class="dl-ref label bg-primary-500 ml-2">36 KB</span>	
-					</span> 				
+			<li {{#is pagename "===" "statistics_flot"}}class="active" {{/is}}>
+				<a href="statistics_flot.html" title="Flot" data-filter-tags="statistics chart graphs flot bar pie">
+					<span class="nav-link-text" data-i18n="nav.statistics_flot">Flot</span>
+					<span class="dl-ref label bg-primary-500 ml-2">36 KB</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "statistics_chartjs"}}class="active"{{/is}}>
-				<a href="statistics_chartjs.html" title="Chart.js" data-filter-tags="statistics chart graph Chart.js"> 
-					<span class="nav-link-text" data-i18n="nav.statistics_chartjs">
-						Chart.js
-						<span class="dl-ref label bg-primary-500 ml-2">205 KB</span>
-					</span> 
+			<li {{#is pagename "===" "statistics_chartjs"}}class="active" {{/is}}>
+				<a href="statistics_chartjs.html" title="Chart.js" data-filter-tags="statistics chart graphs chart.js bar pie">
+					<span class="nav-link-text" data-i18n="nav.statistics_chart.js">Chart.js</span>
+					<span class="dl-ref label bg-primary-500 ml-2">205 KB</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "statistics_chartist"}}class="active"{{/is}}>
-				<a href="statistics_chartist.html" title="Chartist.js" data-filter-tags="statistics chart graph Chartist.js"> 
-					<span class="nav-link-text" data-i18n="nav.statistics_chartist">
-						Chartist.js
-						<span class="dl-ref label bg-primary-600 ml-2">39 KB</span>
-					</span> 
+			<li {{#is pagename "===" "statistics_chartist"}}class="active" {{/is}}>
+				<a href="statistics_chartist.html" title="Chartist.js" data-filter-tags="statistics chart graphs chartist.js">
+					<span class="nav-link-text" data-i18n="nav.statistics_chartist.js">Chartist.js</span>
+					<span class="dl-ref label bg-primary-600 ml-2">39 KB</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "statistics_c3"}}class="active"{{/is}}>
-				<a href="statistics_c3.html" title="C3 Charts" data-filter-tags="statistics chart graph c3"> 
-					<span class="nav-link-text" data-i18n="nav.statistics_c3">
-						C3 Charts
-						<span class="dl-ref label bg-primary-600 ml-2">197 KB</span>
-					</span> 
+			<li {{#is pagename "===" "statistics_c3"}}class="active" {{/is}}>
+				<a href="statistics_c3.html" title="C3 Charts" data-filter-tags="statistics chart graphs c3 charts">
+					<span class="nav-link-text" data-i18n="nav.statistics_c3_charts">C3 Charts</span>
+					<span class="dl-ref label bg-primary-600 ml-2">197 KB</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "statistics_peity"}}class="active"{{/is}}>
-				<a href="statistics_peity.html" title="Peity" data-filter-tags="statistics chart graph peity"> 
-					<span class="nav-link-text" data-i18n="nav.statistics_peity">
-						Peity
-						<span class="dl-ref label bg-primary-700 ml-2">4 KB</span> 
-					</span>
+			<li {{#is pagename "===" "statistics_peity"}}class="active" {{/is}}>
+				<a href="statistics_peity.html" title="Peity" data-filter-tags="statistics chart graphs peity small">
+					<span class="nav-link-text" data-i18n="nav.statistics_peity">Peity</span>
+					<span class="dl-ref label bg-primary-700 ml-2">4 KB</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "statistics_sparkline"}}class="active"{{/is}}>
-				<a href="statistics_sparkline.html" title="Sparkline" data-filter-tags="statistics chart graph sparkline"> 
-					<span class="nav-link-text" data-i18n="nav.statistics_sparkline">
-						Sparkline
-						<span class="dl-ref label bg-primary-700 ml-2">42 KB</span>
-					</span> 
+			<li {{#is pagename "===" "statistics_sparkline"}}class="active" {{/is}}>
+				<a href="statistics_sparkline.html" title="Sparkline" data-filter-tags="statistics chart graphs sparkline small tiny">
+					<span class="nav-link-text" data-i18n="nav.statistics_sparkline">Sparkline</span>
+					<span class="dl-ref label bg-primary-700 ml-2">42 KB</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "statistics_easypiechart"}}class="active"{{/is}}>
-				<a href="statistics_easypiechart.html" title="Easy Pie Chart" data-filter-tags="statistics chart circle cut easy pie"> 
-					<span class="nav-link-text" data-i18n="nav.statistics_easypiechart">
-						Easy Pie Chart
-						<span class="dl-ref label bg-primary-700 ml-2">4 KB</span>
-					</span> 
+			<li {{#is pagename "===" "statistics_easypiechart"}}class="active" {{/is}}>
+				<a href="statistics_easypiechart.html" title="Easy Pie Chart" data-filter-tags="statistics chart graphs easy pie chart">
+					<span class="nav-link-text" data-i18n="nav.statistics_easy_pie chart">Easy Pie Chart</span>
+					<span class="dl-ref label bg-primary-700 ml-2">4 KB</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "statistics_dygraph"}}class="active"{{/is}}>
-				<a href="statistics_dygraph.html" title="Dygraph" data-filter-tags="statistics chart graph dygraph"> 
-					<span class="nav-link-text" data-i18n="nav.statistics_dygraph">
-						Dygraph
-						<span class="dl-ref label bg-primary-700 ml-2">120 KB</span>
-					</span> 
+			<li {{#is pagename "===" "statistics_dygraph"}}class="active" {{/is}}>
+				<a href="statistics_dygraph.html" title="Dygraph" data-filter-tags="statistics chart graphs dygraph complex">
+					<span class="nav-link-text" data-i18n="nav.statistics_dygraph">Dygraph</span>
+					<span class="dl-ref label bg-primary-700 ml-2">120 KB</span>
 				</a>
 			</li>
 		</ul>
 	</li>
-	<li {{#is pagename "in" "notifications_sweetalert2,notifications_toastr"}}class="active open"{{/is}}>
-		<a href="#" title="Notifications" data-filter-tags="notifications"> 
+	<li {{#is pagename "in" "notifications_sweetalert2,notifications_toastr"}}class="active open" {{/is}}>
+		<a href="#" title="Notifications" data-filter-tags="notifications">
 			<i class="fal fa-exclamation-circle"></i>
-			<span class="nav-link-text" data-i18n="nav.datatables">Notifications</span>
+			<span class="nav-link-text" data-i18n="nav.notifications">Notifications</span>
 		</a>
 		<ul>
-			<li {{#is pagename "in" "notifications_sweetalert2"}}class="active open"{{/is}}>
-				<a href="notifications_sweetalert2.html" title="Sweet Alert" data-filter-tags="notifications sweet alert"> 
-					<span class="nav-link-text" data-i18n="nav.notifications_sweetalert2">
-						SweetAlert2
-						<span class="dl-ref label bg-primary-500 ml-2">40 KB</span>
-					</span> 
-				</a>		
+			<li {{#is pagename "===" "notifications_sweetalert2"}}class="active" {{/is}}>
+				<a href="notifications_sweetalert2.html" title="SweetAlert2" data-filter-tags="notifications sweetalert2">
+					<span class="nav-link-text" data-i18n="nav.notifications_sweetalert2">SweetAlert2</span>
+					<span class="dl-ref label bg-primary-500 ml-2">40 KB</span>
+				</a>
 			</li>
-			<li {{#is pagename "in" "notifications_toastr"}}class="active open"{{/is}}>
-				<a href="notifications_toastr.html" title="Sweet Alert" data-filter-tags="notifications toastr"> 
-					<span class="nav-link-text" data-i18n="nav.notifications_toastr">
-						Toastr
-						<span class="dl-ref label bg-primary-600 ml-2">5 KB</span>
-					</span> 
-				</a>		
+			<li {{#is pagename "===" "notifications_toastr"}}class="active" {{/is}}>
+				<a href="notifications_toastr.html" title="Toastr" data-filter-tags="notifications toastr">
+					<span class="nav-link-text" data-i18n="nav.notifications_toastr">Toastr</span>
+					<span class="dl-ref label bg-primary-600 ml-2">5 KB</span>
+				</a>
 			</li>
 		</ul>
 	</li>
-	<li {{#is pagename "in" "form_plugins_colorpicker,form_plugins_datepicker,form_plugins_daterange_picker,form_plugins_dropzone,form_plugins_ionrangeslider,form_plugins_inputmusk,form_plugin_imagecropper,form_plugin_select2,form_plugin_summernote,form_plugin_markdown,form_plugin_nouislider,form_plugin_wizard"}}class="active open"{{/is}}>
-		<a href="#" title="Form Plugins" data-filter-tags="notifications"> 
+	<li {{#is pagename "in" "form_plugins_colorpicker,form_plugins_datepicker,form_plugins_daterange_picker,form_plugins_dropzone,form_plugins_ionrangeslider,form_plugins_inputmusk,form_plugin_imagecropper,form_plugin_select2,form_plugin_summernote,form_plugin_markdown,form_plugin_nouislider,form_plugin_wizard"}}class="active open" {{/is}}>
+		<a href="#" title="Form Plugins" data-filter-tags="form plugins">
 			<i class="fal fa-credit-card-front"></i>
-			<span class="nav-link-text" data-i18n="nav.datatables">Form Plugins</span>
+			<span class="nav-link-text" data-i18n="nav.form_plugins">Form Plugins</span>
 		</a>
 		<ul>
-			<li {{#is pagename "in" "form_plugins_colorpicker"}}class="active open"{{/is}}>
-				<a href="form_plugins_colorpicker.html" title="Color Picker" data-filter-tags="form plugins color picker"> 
-					<span class="nav-link-text" data-i18n="nav.form_plugins_colorpicker">Color Picker</span> 
-				</a>		
+			<li {{#is pagename "===" "form_plugins_colorpicker"}}class="active" {{/is}}>
+				<a href="form_plugins_colorpicker.html" title="Color Picker" data-filter-tags="form plugins color picker">
+					<span class="nav-link-text" data-i18n="nav.form_plugins_color_picker">Color Picker</span>
+				</a>
 			</li>
-			<li {{#is pagename "in" "form_plugins_datepicker"}}class="active open"{{/is}}>
-				<a href="form_plugins_datepicker.html" title="Choosen" data-filter-tags="form plugins date picker"> 
-					<span class="nav-link-text" data-i18n="nav.form_plugins_datepicker">Date Picker</span> 
-				</a>		
+			<li {{#is pagename "===" "form_plugins_datepicker"}}class="active" {{/is}}>
+				<a href="form_plugins_datepicker.html" title="Date Picker" data-filter-tags="form plugins date picker">
+					<span class="nav-link-text" data-i18n="nav.form_plugins_date_picker">Date Picker</span>
+				</a>
 			</li>
-			<li {{#is pagename "in" "form_plugins_daterange_picker"}}class="active open"{{/is}}>
-				<a href="form_plugins_daterange_picker.html" title="Date Range Picker" data-filter-tags="form plugins date range picker"> 
-					<span class="nav-link-text" data-i18n="nav.form_plugins_daterange_picker">Date Range Picker</span> 
-				</a>		
+			<li {{#is pagename "===" "form_plugins_daterange_picker"}}class="active" {{/is}}>
+				<a href="form_plugins_daterange_picker.html" title="Date Range Picker" data-filter-tags="form plugins date range picker">
+					<span class="nav-link-text" data-i18n="nav.form_plugins_date_range picker">Date Range Picker</span>
+				</a>
 			</li>
-			<li {{#is pagename "in" "form_plugins_dropzone"}}class="active open"{{/is}}>
-				<a href="form_plugins_dropzone.html" title="File Upload" data-filter-tags="form plugins file upload dropzone"> 
-					<span class="nav-link-text" data-i18n="nav.form_plugins_dropzone">Dropzone</span> 
-				</a>		
+			<li {{#is pagename "===" "form_plugins_dropzone"}}class="active" {{/is}}>
+				<a href="form_plugins_dropzone.html" title="Dropzone" data-filter-tags="form plugins dropzone">
+					<span class="nav-link-text" data-i18n="nav.form_plugins_dropzone">Dropzone</span>
+				</a>
 			</li>
-			<li {{#is pagename "in" "form_plugins_ionrangeslider"}}class="active open"{{/is}}>
-				<a href="form_plugins_ionrangeslider.html" title="Ion Range Slider" data-filter-tags="form plugins ion range slider"> 
-					<span class="nav-link-text" data-i18n="nav.form_plugins_ionrangeslider">Ion.RangeSlider</span> 
-				</a>		
+			<li {{#is pagename "===" "form_plugins_ionrangeslider"}}class="active" {{/is}}>
+				<a href="form_plugins_ionrangeslider.html" title="Ion.RangeSlider" data-filter-tags="form plugins ion.rangeslider">
+					<span class="nav-link-text" data-i18n="nav.form_plugins_ion.rangeslider">Ion.RangeSlider</span>
+				</a>
 			</li>
-			<li {{#is pagename "in" "form_plugins_inputmusk"}}class="active open"{{/is}}>
-				<a href="form_plugins_inputmusk.html" title="Input Musk" data-filter-tags="form plugins input musk"> 
-					<span class="nav-link-text" data-i18n="nav.form_plugins_inputmusk">Input Musk</span> 
-				</a>		
+			<li {{#is pagename "===" "form_plugins_inputmusk"}}class="active" {{/is}}>
+				<a href="form_plugins_inputmusk.html" title="Input Musk" data-filter-tags="form plugins input musk">
+					<span class="nav-link-text" data-i18n="nav.form_plugins_input_musk">Input Musk</span>
+				</a>
 			</li>
-			<li {{#is pagename "in" "form_plugin_imagecropper"}}class="active open"{{/is}}>
-				<a href="form_plugin_imagecropper.html" title="Image Cropper" data-filter-tags="form plugins image cropper"> 
-					<span class="nav-link-text" data-i18n="nav.form_plugin_imagecropper">Image Cropper</span> 
-				</a>		
+			<li {{#is pagename "===" "form_plugin_imagecropper"}}class="active" {{/is}}>
+				<a href="form_plugin_imagecropper.html" title="Image Cropper" data-filter-tags="form plugins image cropper">
+					<span class="nav-link-text" data-i18n="nav.form_plugins_image_cropper">Image Cropper</span>
+				</a>
 			</li>
-			<li {{#is pagename "in" "form_plugin_select2"}}class="active open"{{/is}}>
-				<a href="form_plugin_select2.html" title="Select2" data-filter-tags="form plugins select2"> 
-					<span class="nav-link-text" data-i18n="nav.form_plugin_select2">Select2</span> 
-				</a>		
+			<li {{#is pagename "===" "form_plugin_select2"}}class="active" {{/is}}>
+				<a href="form_plugin_select2.html" title="Select2" data-filter-tags="form plugins select2">
+					<span class="nav-link-text" data-i18n="nav.form_plugins_select2">Select2</span>
+				</a>
 			</li>
-			<li {{#is pagename "in" "form_plugin_summernote"}}class="active open"{{/is}}>
-				<a href="form_plugin_summernote.html" title="Summernote" data-filter-tags="form plugins summernote"> 
-					<span class="nav-link-text" data-i18n="nav.form_plugin_summernote">Summernote</span> 
-				</a>		
+			<li {{#is pagename "===" "form_plugin_summernote"}}class="active" {{/is}}>
+				<a href="form_plugin_summernote.html" title="Summernote" data-filter-tags="form plugins summernote texteditor editor">
+					<span class="nav-link-text" data-i18n="nav.form_plugins_summernote">Summernote</span>
+				</a>
 			</li>
-			<li {{#is pagename "in" "form_plugin_markdown"}}class="active open"{{/is}}>
-				<a href="form_plugin_markdown.html" title="Markdown" data-filter-tags="form plugins markdown"> 
-					<span class="nav-link-text" data-i18n="nav.form_plugin_markdown">Markdown</span> 
-				</a>		
+			<li {{#is pagename "===" "form_plugin_markdown"}}class="active" {{/is}}>
+				<a href="form_plugin_markdown.html" title="Markdown" data-filter-tags="form plugins markdown">
+					<span class="nav-link-text" data-i18n="nav.form_plugins_markdown">Markdown</span>
+				</a>
 			</li>
-			<li {{#is pagename "in" "form_plugin_nouislider"}}class="active open"{{/is}}>
-				<a href="form_plugin_nouislider.html" title="Markdown" data-filter-tags="form plugins markdown"> 
-					<span class="nav-link-text" data-i18n="nav.form_plugin_nouislider">noUiSlider</span> 
-				</a>		
+			<li {{#is pagename "===" "form_plugin_nouislider"}}class="active" {{/is}}>
+				<a href="form_plugin_nouislider.html" title="noUiSlider" data-filter-tags="form plugins nouislider">
+					<span class="nav-link-text" data-i18n="nav.form_plugins_nouislider">noUiSlider</span>
+				</a>
 			</li>
-			<li {{#is pagename "in" "form_plugin_wizard"}}class="active open"{{/is}}>
-				<a href="form_plugin_wizard.html" title="Wizard" data-filter-tags="form plugins wizard"> 
-					<span class="nav-link-text" data-i18n="nav.form_plugin_wizard">Wizard</span> 
-				</a>		
+			<li {{#is pagename "===" "form_plugin_wizard"}}class="active" {{/is}}>
+				<a href="form_plugin_wizard.html" title="Wizard" data-filter-tags="form plugins wizard">
+					<span class="nav-link-text" data-i18n="nav.form_plugins_wizard">Wizard</span>
+				</a>
 			</li>
 		</ul>
 	</li>
-	<li {{#is pagename "in" "miscellaneous_fullcalendar,miscellaneous_lightgallery,miscellaneous_idletimer"}}class="active open"{{/is}}>
-		<a href="#" title="Miscellaneous" data-filter-tags="miscellaneous plugin addons"> 
+	<li {{#is pagename "in" "miscellaneous_fullcalendar,miscellaneous_lightgallery,miscellaneous_idletimer"}}class="active open" {{/is}}>
+		<a href="#" title="Miscellaneous" data-filter-tags="miscellaneous">
 			<i class="fal fa-globe"></i>
-			<span class="nav-link-text" data-i18n="nav.datatables">Miscellaneous</span>
+			<span class="nav-link-text" data-i18n="nav.miscellaneous">Miscellaneous</span>
 		</a>
 		<ul>
-			<li {{#is pagename "in" "miscellaneous_fullcalendar"}}class="active open"{{/is}}>
-				<a href="miscellaneous_fullcalendar.html" title="Foo Tables" data-filter-tags="miscellaneous plugin addon full calendar"> 
-					<span class="nav-link-text" data-i18n="nav.miscellaneous_fullcalendar">FullCalendar</span> 
-				</a>		
+			<li {{#is pagename "===" "miscellaneous_fullcalendar"}}class="active" {{/is}}>
+				<a href="miscellaneous_fullcalendar.html" title="FullCalendar" data-filter-tags="miscellaneous fullcalendar">
+					<span class="nav-link-text" data-i18n="nav.miscellaneous_fullcalendar">FullCalendar</span>
+				</a>
 			</li>
-			<li {{#is pagename "in" "miscellaneous_lightgallery"}}class="active open"{{/is}}>
-				<a href="miscellaneous_lightgallery.html" title="Light Gallery" data-filter-tags="miscellaneous plugin addon light gallery"> 
-					<span class="nav-link-text" data-i18n="nav.miscellaneous_lightgallery">
-						Light Gallery 
-						<span class="dl-ref label bg-primary-600 ml-2">61 KB</span>
-					</span> 
-				</a>		
+			<li {{#is pagename "===" "miscellaneous_lightgallery"}}class="active" {{/is}}>
+				<a href="miscellaneous_lightgallery.html" title="Light Gallery" data-filter-tags="miscellaneous light gallery">
+					<span class="nav-link-text" data-i18n="nav.miscellaneous_light_gallery">Light Gallery</span>
+					<span class="dl-ref label bg-primary-600 ml-2">61 KB</span>
+				</a>
 			</li>
-			<li {{#is pagename "in" "miscellaneous_idletimer"}}class="active open"{{/is}}>
-				<a href="miscellaneous_idletimer.html" title="Idle Timer" data-filter-tags="miscellaneous plugin addon idle timer"> 
-					<span class="nav-link-text" data-i18n="nav.miscellaneous_idletimer">
-						Idle Timer
-					</span> 
-				</a>		
+			<li {{#is pagename "===" "miscellaneous_idletimer"}}class="active" {{/is}}>
+				<a href="miscellaneous_idletimer.html" title="Idle Timer" data-filter-tags="miscellaneous idle timer">
+					<span class="nav-link-text" data-i18n="nav.miscellaneous_idle_timer">Idle Timer</span>
+				</a>
 			</li>
 		</ul>
-	</li>		
-	<li class="nav-title">Layouts &amp; Apps </li>
-	<li {{#is pagename "in" "page_chat,page_contacts,page_faq,page_forum_list,page_forum_threads,page_forum_discussion,page_inbox,page_inbox_write,page_inbox_read,page_invoice,page_forget,page_locked,page_login,page_register,page_error_announced,page_error,page_error_404,page_pricing_tables,page_profile,page_search,page_teams,page_timeline"}}class="active open"{{/is}}>
-		<a href="#" title="Pages" data-filter-tags="page views"> 
+	</li>
+	<li class="nav-title">Layouts & Apps</li>
+	<li {{#is pagename "in" "page_chat,page_contacts,page_faq,page_invoice,page_pricing_tables,page_profile,page_search,page_teams,page_timeline,page_forum_list,page_forum_threads,page_forum_discussion,page_inbox,page_inbox_read,page_inbox_write,page_forget,page_locked,page_login,page_register,page_error,page_error_404,page_error_announced"}}class="active open" {{/is}}>
+		<a href="#" title="Pages" data-filter-tags="pages">
 			<i class="fal fa-plus-circle"></i>
-			<span class="nav-link-text" data-i18n="nav.page">Page Views</span> 
+			<span class="nav-link-text" data-i18n="nav.pages">Page Views</span>
 		</a>
 		<ul>
-			<li {{#is pagename "===" "page_chat"}}class="active"{{/is}}>
-				<a href="page_chat.html" data-filter-tags="page views chat messenger"> 
-					<span class="nav-link-text" data-i18n="nav.page_chat">Chat</span>
+			<li {{#is pagename "===" "page_chat"}}class="active" {{/is}}>
+				<a href="page_chat.html" title="Chat" data-filter-tags="pages chat">
+					<span class="nav-link-text" data-i18n="nav.pages_chat">Chat</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "page_contacts"}}class="active"{{/is}}>
-				<a href="page_contacts.html" data-filter-tags="page views contacts user"> 
-					<span class="nav-link-text" data-i18n="nav.page_contacts">Contacts</span>
+			<li {{#is pagename "===" "page_contacts"}}class="active" {{/is}}>
+				<a href="page_contacts.html" title="Contacts" data-filter-tags="pages contacts">
+					<span class="nav-link-text" data-i18n="nav.pages_contacts">Contacts</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "page_faq"}}class="active"{{/is}}>
-				<a href="page_faq.html" data-filter-tags="page views faq"> 
-					<span class="nav-link-text" data-i18n="nav.page_faq">FAQ</span>
+			<li {{#is pagename "===" "page_faq"}}class="active" {{/is}}>
+				<a href="page_faq.html" title="FAQ" data-filter-tags="pages faq">
+					<span class="nav-link-text" data-i18n="nav.pages_faq">FAQ</span>
 				</a>
 			</li>
-			<li {{#is pagename "in" "page_forum_list,page_forum_threads,page_forum_discussion"}}class="active open"{{/is}}>
-				<a href="#" title="Forum" data-filter-tags="page views forum list threads discussion"> 
-					<span class="nav-link-text" data-i18n="nav.page_forum">Forum</span>
+			<li {{#is pagename "in" "page_forum_list,page_forum_threads,page_forum_discussion"}}class="active open" {{/is}}>
+				<a href="javascript:void(0);" title="Forum" data-filter-tags="pages forum">
+					<span class="nav-link-text" data-i18n="nav.pages_forum">Forum</span>
 				</a>
 				<ul>
-					<li {{#is pagename "===" "page_forum_list"}}class="active"{{/is}}>
-						<a href="page_forum_list.html" data-filter-tags="page views forum list"> 
-							<span class="nav-link-text" data-i18n="nav.page_forum_list">List</span>
+					<li {{#is pagename "===" "page_forum_list"}}class="active" {{/is}}>
+						<a href="page_forum_list.html" title="List" data-filter-tags="pages forum list">
+							<span class="nav-link-text" data-i18n="nav.pages_forum_list">List</span>
 						</a>
 					</li>
-					<li {{#is pagename "===" "page_forum_threads"}}class="active"{{/is}}>
-						<a href="page_forum_threads.html" data-filter-tags="page views threads"> 
-							<span class="nav-link-text" data-i18n="nav.page_inbox_read">Threads</span>
+					<li {{#is pagename "===" "page_forum_threads"}}class="active" {{/is}}>
+						<a href="page_forum_threads.html" title="Threads" data-filter-tags="pages forum threads">
+							<span class="nav-link-text" data-i18n="nav.pages_forum_threads">Threads</span>
 						</a>
 					</li>
-					<li {{#is pagename "===" "page_forum_discussion"}}class="active"{{/is}}>
-						<a href="page_forum_discussion.html" data-filter-tags="page views discussion"> 
-							<span class="nav-link-text" data-i18n="nav.page_forum_discussion">Discussion</span>
+					<li {{#is pagename "===" "page_forum_discussion"}}class="active" {{/is}}>
+						<a href="page_forum_discussion.html" title="Discussion" data-filter-tags="pages forum discussion">
+							<span class="nav-link-text" data-i18n="nav.pages_forum_discussion">Discussion</span>
 						</a>
 					</li>
 				</ul>
 			</li>
-			<li {{#is pagename "in" "page_inbox,page_inbox_write,page_inbox_read"}}class="active open"{{/is}}>
-				<a href="#" title="Inbox" data-filter-tags="page views inbox read write compose view"> 
-					<span class="nav-link-text" data-i18n="nav.page_error_eg">Inbox</span>
+			<li {{#is pagename "in" "page_inbox,page_inbox_read,page_inbox_write"}}class="active open" {{/is}}>
+				<a href="javascript:void(0);" title="Inbox" data-filter-tags="pages inbox">
+					<span class="nav-link-text" data-i18n="nav.pages_inbox">Inbox</span>
 				</a>
 				<ul>
-					<li {{#is pagename "===" "page_inbox"}}class="active"{{/is}}>
-						<a href="page_inbox.html" data-filter-tags="page views inbox general view"> 
-							<span class="nav-link-text" data-i18n="nav.page_inbox">General</span>
+					<li {{#is pagename "===" "page_inbox"}}class="active" {{/is}}>
+						<a href="page_inbox.html" title="General" data-filter-tags="pages inbox general">
+							<span class="nav-link-text" data-i18n="nav.pages_inbox_general">General</span>
 						</a>
 					</li>
-					<li {{#is pagename "===" "page_inbox_read"}}class="active"{{/is}}>
-						<a href="page_inbox_read.html" data-filter-tags="page views inbox read email view"> 
-							<span class="nav-link-text" data-i18n="nav.page_inbox_read">Read</span>
+					<li {{#is pagename "===" "page_inbox_read"}}class="active" {{/is}}>
+						<a href="page_inbox_read.html" title="Read" data-filter-tags="pages inbox read">
+							<span class="nav-link-text" data-i18n="nav.pages_inbox_read">Read</span>
 						</a>
 					</li>
-					<li {{#is pagename "===" "page_inbox_write"}}class="active"{{/is}}>
-						<a href="page_inbox_write.html" data-filter-tags="page views inbox reply email view compose new"> 
-							<span class="nav-link-text" data-i18n="nav.page_inbox_write">Write</span>
-						</a>
-					</li>
-				</ul>
-			</li>	
-			<li {{#is pagename "===" "page_invoice"}}class="active"{{/is}}>
-				<a href="page_invoice.html" data-filter-tags="page views invoice print"> 
-					<span class="nav-link-text" data-i18n="nav.page_invoice">Invoice (printable)</span>
-				</a>
-			</li>
-			<li {{#is pagename "in" "page_forget,page_locked,page_login,page_register"}}class="active open"{{/is}}>
-				<a href="#" title="Authentication Pages" data-filter-tags="page views authentication"> 
-					<span class="nav-link-text" data-i18n="nav.page_auth">Auth. Pages</span>
-				</a>
-				<ul>
-					<li {{#is pagename "===" "forget"}}class="active"{{/is}}>
-						<a href="page_forget.html" data-filter-tags="page views auth forget password"> 
-							<span class="nav-link-text" data-i18n="nav.page_forget">Forget Password</span>
-						</a>
-					</li>
-					<li {{#is pagename "===" "locked"}}class="active"{{/is}}>
-						<a href="page_locked.html" data-filter-tags="page views auth locked screen"> 
-							<span class="nav-link-text" data-i18n="nav.page_locked">Locked Screen</span>
-						</a>
-					</li>
-					<li {{#is pagename "===" "login"}}class="active"{{/is}}>
-						<a href="page_login.html" data-filter-tags="page views auth login"> 
-							<span class="nav-link-text" data-i18n="nav.page_login">Login</span>
-						</a>
-					</li>
-					<li {{#is pagename "===" "register"}}class="active"{{/is}}>
-						<a href="page_register.html" data-filter-tags="page views auth register"> 
-							<span class="nav-link-text" data-i18n="nav.page_register">Register</span>
-						</a>	
-					</li>
-				</ul>
-			</li>
-			<li {{#is pagename "in" "page_error_announced,page_error,page_error_404"}}class="active open"{{/is}}>
-				<a href="#" title="Error Pages" data-filter-tags="page views error"> 
-					<span class="nav-link-text" data-i18n="nav.page_error_eg">Error Pages</span>
-				</a>
-				<ul>
-					<li {{#is pagename "===" "page_error"}}class="active"{{/is}}>
-						<a href="page_error.html" data-filter-tags="page views error general small"> 
-							<span class="nav-link-text" data-i18n="nav.page_error">General Error</span>
-						</a>
-					</li>
-					<li {{#is pagename "===" "page_error_404"}}class="active"{{/is}}>
-						<a href="page_error_404.html" data-filter-tags="page views error server"> 
-							<span class="nav-link-text" data-i18n="nav.page_error_404">Server Error</span>
-						</a>
-					</li>
-					<li {{#is pagename "===" "page_error_announced"}}class="active"{{/is}}>
-						<a href="page_error_announced.html" data-filter-tags="page views error announced big"> 
-							<span class="nav-link-text" data-i18n="nav.page_error_announced">Announced Error</span>
+					<li {{#is pagename "===" "page_inbox_write"}}class="active" {{/is}}>
+						<a href="page_inbox_write.html" title="Write" data-filter-tags="pages inbox write">
+							<span class="nav-link-text" data-i18n="nav.pages_inbox_write">Write</span>
 						</a>
 					</li>
 				</ul>
 			</li>
-			<li {{#is pagename "===" "page_pricing_tables"}}class="active"{{/is}}>
-				<a href="page_pricing_tables.html" data-filter-tags="page views pricing table"> 
-					<span class="nav-link-text" data-i18n="nav.page_pricing_tables">Pricing Tables</span>
+			<li {{#is pagename "===" "page_invoice"}}class="active" {{/is}}>
+				<a href="page_invoice.html" title="Invoice (printable)" data-filter-tags="pages invoice (printable)">
+					<span class="nav-link-text" data-i18n="nav.pages_invoice_(printable)">Invoice (printable)</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "page_profile"}}class="active"{{/is}}>
-				<a href="page_profile.html" data-filter-tags="page views profile user"> 
-					<span class="nav-link-text" data-i18n="nav.page_profile">Profile</span>
-				</a>
-			</li>
-			<li {{#is pagename "===" "page_search"}}class="active"{{/is}}>
-				<a href="page_search.html" data-filter-tags="page views search results"> 
-					<span class="nav-link-text" data-i18n="nav.page_search">Search Results</span>
-				</a>
-			</li>	
-			<li {{#is pagename "===" "page_teams"}}class="active"{{/is}}>
-				<a href="page_teams.html" data-filter-tags="page views teams"> 
-					<span class="nav-link-text" data-i18n="nav.page_teams">Teams</span>
-				</a>
-			</li>
-			<li {{#is pagename "===" "page_timeline"}}class="active"{{/is}}>
-				<a href="page_timeline.html" data-filter-tags="page views timeline"> 
-					<span class="nav-link-text" data-i18n="nav.page_timeline">Timeline</span>
-				</a>
-			</li>
-		</ul>	
-	</li>	
-	<li {{#is pagename "in" "page_ecommerce_orders,page_ecommerce_products,page_ecommerce_item_details,page_ecommerce_add_item,page_ecommerce_checkout"}}class="active open"{{/is}}>
-		<a href="#" title="UI Components" data-filter-tags="app views"> 
-			<i class="fal fa-cogs"></i>
-			<span class="nav-link-text" data-i18n="nav.layout_builder">App views</span> 
-		</a>	
-		<ul>
-			<li {{#is pagename "in" "page_ecommerce_orders,page_ecommerce_products,page_ecommerce_item_details,page_ecommerce_add_item,page_ecommerce_checkout"}}class="active open"{{/is}}>
-				<a href="#" title="E-commerce" data-filter-tags="app views ecommerce"> 
-					<span class="nav-link-text" data-i18n="nav.page_ecommerce">E-commerce</span>
+			<li {{#is pagename "in" "page_forget,page_locked,page_login,page_register"}}class="active open" {{/is}}>
+				<a href="javascript:void(0);" title="Auth. Pages" data-filter-tags="pages auth. pages">
+					<span class="nav-link-text" data-i18n="nav.pages_auth._pages">Auth. Pages</span>
 				</a>
 				<ul>
-					<li {{#is pagename "===" "page_ecommerce_orders"}}class="active"{{/is}}>
-						<a href="page_ecommerce_orders.html" data-filter-tags="app views ecommerce orders"> 
-							<span class="nav-link-text" data-i18n="nav.page_ecommerce_orders">Orders</span>
+					<li {{#is pagename "===" "page_forget"}}class="active" {{/is}}>
+						<a href="page_forget.html" title="Forget Password" data-filter-tags="pages auth. pages forget password">
+							<span class="nav-link-text" data-i18n="nav.pages_auth._pages_forget_password">Forget Password</span>
 						</a>
 					</li>
-					<li {{#is pagename "===" "page_ecommerce_products"}}class="active"{{/is}}>
-						<a href="page_ecommerce_products.html" data-filter-tags="app views ecommerce products"> 
-							<span class="nav-link-text" data-i18n="nav.page_ecommerce_products">Products</span>
+					<li {{#is pagename "===" "page_locked"}}class="active" {{/is}}>
+						<a href="page_locked.html" title="Locked Screen" data-filter-tags="pages auth. pages locked screen">
+							<span class="nav-link-text" data-i18n="nav.pages_auth._pages_locked_screen">Locked Screen</span>
 						</a>
 					</li>
-					<li {{#is pagename "===" "page_ecommerce_item_details"}}class="active"{{/is}}>
-						<a href="page_ecommerce_item_details.html" data-filter-tags="app views ecommerce item detail"> 
-							<span class="nav-link-text" data-i18n="nav.page_ecommerce_item_details">Item detail</span>
+					<li {{#is pagename "===" "page_login"}}class="active" {{/is}}>
+						<a href="page_login.html" title="Login" data-filter-tags="pages auth. pages login">
+							<span class="nav-link-text" data-i18n="nav.pages_auth._pages_login">Login</span>
 						</a>
 					</li>
-					<li {{#is pagename "===" "page_ecommerce_add_item"}}class="active"{{/is}}>
-						<a href="page_ecommerce_add_item.html" data-filter-tags="app views ecommerce add item"> 
-							<span class="nav-link-text" data-i18n="nav.page_ecommerce_add_item">Add Item</span>
+					<li {{#is pagename "===" "page_register"}}class="active" {{/is}}>
+						<a href="page_register.html" title="Register" data-filter-tags="pages auth. pages register">
+							<span class="nav-link-text" data-i18n="nav.pages_auth._pages_register">Register</span>
 						</a>
 					</li>
-					<li {{#is pagename "===" "page_ecommerce_checkout"}}class="active"{{/is}}>
-						<a href="page_ecommerce_checkout.html" data-filter-tags="app views ecommerce checkout"> 
-							<span class="nav-link-text" data-i18n="nav.page_ecommerce_checkout">Checkout</span>
-						</a>
-					</li>
-
 				</ul>
 			</li>
-		</ul>	
+			<li {{#is pagename "in" "page_error,page_error_404,page_error_announced"}}class="active open" {{/is}}>
+				<a href="javascript:void(0);" title="Error Pages" data-filter-tags="pages error pages">
+					<span class="nav-link-text" data-i18n="nav.pages_error_pages">Error Pages</span>
+				</a>
+				<ul>
+					<li {{#is pagename "===" "page_error"}}class="active" {{/is}}>
+						<a href="page_error.html" title="General Error" data-filter-tags="pages error pages general error">
+							<span class="nav-link-text" data-i18n="nav.pages_error_pages_general_error">General Error</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "page_error_404"}}class="active" {{/is}}>
+						<a href="page_error_404.html" title="Server Error" data-filter-tags="pages error pages server error">
+							<span class="nav-link-text" data-i18n="nav.pages_error_pages_server_error">Server Error</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "page_error_announced"}}class="active" {{/is}}>
+						<a href="page_error_announced.html" title="Announced Error" data-filter-tags="pages error pages announced error">
+							<span class="nav-link-text" data-i18n="nav.pages_error_pages_announced_error">Announced Error</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li {{#is pagename "===" "page_pricing_tables"}}class="active" {{/is}}>
+				<a href="page_pricing_tables.html" title="Pricing Tables" data-filter-tags="pages pricing tables">
+					<span class="nav-link-text" data-i18n="nav.pages_pricing_tables">Pricing Tables</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "page_profile"}}class="active" {{/is}}>
+				<a href="page_profile.html" title="Profile" data-filter-tags="pages profile">
+					<span class="nav-link-text" data-i18n="nav.pages_profile">Profile</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "page_search"}}class="active" {{/is}}>
+				<a href="page_search.html" title="Search Results" data-filter-tags="pages search results">
+					<span class="nav-link-text" data-i18n="nav.pages_search_results">Search Results</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "page_teams"}}class="active" {{/is}}>
+				<a href="page_teams.html" title="Teams" data-filter-tags="pages teams">
+					<span class="nav-link-text" data-i18n="nav.pages_teams">Teams</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "page_timeline"}}class="active" {{/is}}>
+				<a href="page_timeline.html" title="Timeline" data-filter-tags="pages timeline">
+					<span class="nav-link-text" data-i18n="nav.pages_timeline">Timeline</span>
+				</a>
+			</li>
+		</ul>
 	</li>
-	{{!-- <li {{#is pagename "in" "layout_builder"}}class="active open"{{/is}}>
-		<a href="#" title="UI Components" data-filter-tags="layout builder"> 
+	<li {{#is pagename "in" "page_ecommerce_orders,page_ecommerce_products,page_ecommerce_item_details,page_ecommerce_add_item,page_ecommerce_checkout"}}class="active open" {{/is}}>
+		<a href="#" title="UI Components" data-filter-tags="ui components">
 			<i class="fal fa-cogs"></i>
-			<span class="nav-link-text" data-i18n="nav.layout_builder">Layout Builder</span> 
-		</a>		
-	</li> --}}
+			<span class="nav-link-text" data-i18n="nav.ui_components">App Views</span>
+		</a>
+		<ul>
+			<li {{#is pagename "in" "page_ecommerce_orders,page_ecommerce_products,page_ecommerce_item_details,page_ecommerce_add_item,page_ecommerce_checkout"}}class="active open" {{/is}}>
+				<a href="javascript:void(0);" title="E-commerce" data-filter-tags="ui components e-commerce">
+					<span class="nav-link-text" data-i18n="nav.ui_components_e-commerce">E-commerce</span>
+				</a>
+				<ul>
+					<li {{#is pagename "===" "page_ecommerce_orders"}}class="active" {{/is}}>
+						<a href="page_ecommerce_orders.html" title="Orders" data-filter-tags="ui components e-commerce orders">
+							<span class="nav-link-text" data-i18n="nav.ui_components_e-commerce_orders">Orders</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "page_ecommerce_products"}}class="active" {{/is}}>
+						<a href="page_ecommerce_products.html" title="Products" data-filter-tags="ui components e-commerce products">
+							<span class="nav-link-text" data-i18n="nav.ui_components_e-commerce_products">Products</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "page_ecommerce_item_details"}}class="active" {{/is}}>
+						<a href="page_ecommerce_item_details.html" title="Item detail" data-filter-tags="ui components e-commerce item detail">
+							<span class="nav-link-text" data-i18n="nav.ui_components_e-commerce_item_detail">Item detail</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "page_ecommerce_add_item"}}class="active" {{/is}}>
+						<a href="page_ecommerce_add_item.html" title="Add Item" data-filter-tags="ui components e-commerce add item">
+							<span class="nav-link-text" data-i18n="nav.ui_components_e-commerce_add_item">Add Item</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "page_ecommerce_checkout"}}class="active" {{/is}}>
+						<a href="page_ecommerce_checkout.html" title="Checkout" data-filter-tags="ui components e-commerce checkout">
+							<span class="nav-link-text" data-i18n="nav.ui_components_e-commerce_checkout">Checkout</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
 </ul>
