@@ -1,12 +1,12 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
-var sequence = require('run-sequence');
 var build = require('./build');
 var func = require('./compile');
 
-
 // merge with default parameters
-var args = Object.assign({'prod': false}, gutil.env);
+var args = Object.assign({
+	'prod': false
+}, gutil.env);
 
 if (args['prod'] !== false) {
 	// force disable debug for production
@@ -14,11 +14,10 @@ if (args['prod'] !== false) {
 }
 
 // task to bundle js/css
-gulp.task('build-bundle', function (cb) {
-
+gulp.task('build-bundle', function (done) {
 	console.log('==================> Generating bundles...');
 
-	func.objectBuildTree(build.build, function (val, key) {
+	func.objectBuildTree(build.build, function (val) {
 		if (typeof val.src !== 'undefined') {
 			if (typeof val.bundle !== 'undefined') {
 				func.bundle(val);
@@ -28,19 +27,5 @@ gulp.task('build-bundle', function (cb) {
 			}
 		}
 	});
-	cb();
-});
-
-// entry point
-gulp.task('build', function (cb) {
-	var tasks = ['build-bundle', 'build-html', 'watch', 'connect'];
-	// clean first and then start bundling
-	return sequence.apply(cb, tasks);
-});
-
-// entry point express
-gulp.task('start', function (cb) {
-	var tasks = ['watch', 'connect'];
-	// clean first and then start bundling
-	return sequence.apply(cb, tasks);
+	done();
 });

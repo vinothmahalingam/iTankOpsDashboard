@@ -8,10 +8,10 @@
 			"email": "drlantern@gotbootstrap.com",
 			"twitter": "codexlantern",
 			"avatar": "avatar-admin.png",
+			"version": "4.0.0",
 			"bs4v": "4.3",
 			"logo": "logo.png",
 			"logo-m": "logo.png",
-			"version": "4.0.0",
 			"copyright": "2019 © SmartAdmin by&nbsp;<a href='https://www.gotbootstrap.com' class='text-primary fw-500' title='gotbootstrap.com' target='_blank'>gotbootstrap.com</a>",
 			"copyright-inverse": "2019 © SmartAdmin by&nbsp;<a href='https://www.gotbootstrap.com' class='text-white opacity-40 fw-500' title='gotbootstrap.com' target='_blank'>gotbootstrap.com</a>"
 		},
@@ -25,7 +25,9 @@
 		},
 		"path": {
 			"src": "./src",
-			"node_modules": "./node_modules"
+			"node_modules": "./node_modules",
+			"exportPath": "./src/template/include/_nav.hbs",
+			"outputPath": "./src/template/include"
 		},
 		"dist": {
 			"theme": {
@@ -564,13 +566,11 @@
 					"markdown": {
 						"src": {
 							"styles": [
-								"{$config.path.node_modules}/bootstrap-markdown/css/bootstrap-markdown.min.css",
-								"{$config.path.src}/custom/plugins/markdown/markdown-custom.scss"
+								"{$config.path.node_modules}/bootstrap-markdown/css/bootstrap-markdown.min.css"
 							],
 							"scripts": [
 								"{$config.path.node_modules}/markdown/lib/markdown.js",
-								"{$config.path.node_modules}/bootstrap-markdown/js/bootstrap-markdown.js",
-								"{$config.path.src}/custom/plugins/markdown/js/markdown.config.js"
+								"{$config.path.node_modules}/bootstrap-markdown/js/bootstrap-markdown.js"
 							]
 						},
 						"bundle": {
@@ -908,11 +908,11 @@
 				"theme-1": {
 					"src": {
 						"styles": [
-							"{$config.path.src}/scss/cust-theme-1.scss"
+							"{$config.path.src}/scss/_themes_TODO/cust-theme-1.scss"
 						]
 					},
 					"bundle": {
-						"styles": "{$config.output}/css/cust-theme-1.css"
+						"styles": "{$config.output}/css/_themes_TODO/cust-theme-1.css"
 						
 					}
 				}

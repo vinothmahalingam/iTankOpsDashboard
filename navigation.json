@@ -1,0 +1,1017 @@
+{
+  "version": 4.0,
+  "lists": [
+	{
+	  "title": "Application Intel",
+	  "tags": "",
+	  "icon": "fal fa-info-circle",
+	  "items": [
+		{
+		  "title": "Analytics Dashboard",
+		  "tags": "",
+		  "showOnSeed": false,
+		  "href": "intel_analytics_dashboard.html"
+		},
+		{
+		  "title": "Marketing Dashboard",
+		  "tags": "",
+		  "showOnSeed": false,
+		  "href": "intel_marketing_dashboard.html"
+		},
+		{
+		  "title": "CEO Dashboard",
+		  "tags": "",
+		  "showOnSeed": false,
+		  "href": "intel_ceo_dashboard.html"
+		},
+		{
+		  "title": "Introduction",
+		  "tags": "",
+		  "href": "intel_introduction.html"
+		},
+		{
+		  "title": "Build Notes",
+		  "tags": "",
+		  "href": "intel_build_notes.html",
+		  "text": "Build Notes",
+		  "span": {
+			"class": "",
+			"text": "v{{version}}"
+		  }
+		}
+	  ]
+	},
+	{
+	  "title": "Theme Settings",
+	  "tags": "",
+	  "icon": "fal fa-cog",
+	  "items": [
+		{
+		  "title": "How it works",
+		  "tags": "",
+		  "href": "settings_how_it_works.html"
+		},
+		{
+		  "title": "Layout Options",
+		  "tags": "",
+		  "href": "settings_layout_options.html"
+		},
+		{
+		  "title": "Skin Options",
+		  "tags": "",
+		  "href": "settings_skin_options.html"
+		},
+		{
+		  "title": "Saving to Database",
+		  "tags": "",
+		  "href": "settings_saving_db.html"
+		}
+	  ]
+	},
+	{
+	  "title": "Package Info",
+	  "tags": "",
+	  "icon": "fal fa-tag",
+	  "items": [
+		{
+		  "title": "Documentation",
+		  "tags": "",
+		  "href": "info_app_docs.html"
+		},
+		{
+		  "title": "Product Licensing",
+		  "tags": "",
+		  "href": "info_app_licensing.html"
+		},
+		{
+		  "title": "Different Flavors",
+		  "tags": "",
+		  "href": "info_app_flavors.html"
+		}
+	  ]
+	},
+	{
+	  "title": "Tools & Components"
+	},
+	{
+	  "title": "UI Components",
+	  "tags": "",
+	  "icon": "fal fa-window",
+	  "items": [
+		{
+		  "title": "Alerts",
+		  "tags": "",
+		  "href": "ui_alerts.html"
+		},
+		{
+		  "title": "Accordions",
+		  "tags": "",
+		  "href": "ui_accordion.html"
+		},
+		{
+		  "title": "Badges",
+		  "tags": "",
+		  "href": "ui_badges.html"
+		},
+		{
+		  "title": "Breadcrumbs",
+		  "tags": "",
+		  "href": "ui_breadcrumbs.html"
+		},
+		{
+		  "title": "Buttons",
+		  "tags": "",
+		  "href": "ui_buttons.html"
+		},
+		{
+		  "title": "Button Group",
+		  "tags": "",
+		  "href": "ui_button_group.html"
+		},
+		{
+		  "title": "Cards",
+		  "tags": "",
+		  "href": "ui_cards.html"
+		},
+		{
+		  "title": "Carousel",
+		  "tags": "",
+		  "href": "ui_cards.html"
+		},
+		{
+		  "title": "Collapse",
+		  "tags": "",
+		  "href": "ui_carousel.html"
+		},
+		{
+		  "title": "Dropdowns",
+		  "tags": "",
+		  "href": "ui_dropdowns.html"
+		},
+		{
+		  "title": "List Filter",
+		  "tags": "",
+		  "href": "ui_list_filter.html"
+		},
+		{
+		  "title": "Modal",
+		  "tags": "",
+		  "href": "ui_modal.html"
+		},
+		{
+		  "title": "Navbars",
+		  "tags": "",
+		  "href": "ui_navbars.html"
+		},
+		{
+		  "title": "Panels",
+		  "tags": "",
+		  "href": "ui_panels.html"
+		},
+		{
+		  "title": "Pagination",
+		  "tags": "",
+		  "href": "ui_pagination.html"
+		},
+		{
+		  "title": "Popovers",
+		  "tags": "",
+		  "href": "ui_popovers.html"
+		},
+		{
+		  "title": "Progress Bars",
+		  "tags": "",
+		  "href": "ui_progress_bars.html"
+		},
+		{
+		  "title": "ScrollSpy",
+		  "tags": "",
+		  "href": "ui_scrollspy.html"
+		},
+		{
+		  "title": "Side Panel",
+		  "tags": "",
+		  "href": "ui_side_panel.html"
+		},
+		{
+		  "title": "Spinners",
+		  "tags": "",
+		  "href": "ui_spinners.html"
+		},
+		{
+		  "title": "Tabs &amp; Pills",
+		  "tags": "",
+		  "href": "ui_tabs_pills.html"
+		},
+		{
+		  "title": "Toasts",
+		  "tags": "",
+		  "href": "ui_toasts.html"
+		},
+		{
+		  "title": "Tooltips",
+		  "tags": "",
+		  "href": "ui_tooltips.html"
+		}
+	  ]
+	},
+	{
+	  "title": "Utilities",
+	  "tags": "",
+	  "icon": "fal fa-bolt",
+	  "items": [
+		{
+		  "title": "Borders",
+		  "tags": "",
+		  "href": "utilities_borders.html"
+		},
+		{
+		  "title": "Clearfix",
+		  "tags": "",
+		  "href": "utilities_clearfix.html"
+		},
+		{
+		  "title": "Color Pallet",
+		  "tags": "",
+		  "href": "utilities_color_pallet.html"
+		},
+		{
+		  "title": "Display Property",
+		  "tags": "",
+		  "href": "utilities_display_property.html"
+		},
+		{
+		  "title": "Fonts",
+		  "tags": "",
+		  "href": "utilities_fonts.html"
+		},
+		{
+		  "title": "Flexbox",
+		  "tags": "",
+		  "href": "utilities_flexbox.html"
+		},
+		{
+		  "title": "Helpers",
+		  "tags": "",
+		  "href": "utilities_helpers.html"
+		},
+		{
+		  "title": "Position",
+		  "tags": "",
+		  "href": "utilities_position.html"
+		},
+		{
+		  "title": " Responsive Grid",
+		  "tags": "",
+		  "href": "utilities_responsive_grid.html"
+		},
+		{
+		  "title": "Sizing",
+		  "tags": "",
+		  "href": "utilities_sizing.html"
+		},
+		{
+		  "title": "Spacing",
+		  "tags": "",
+		  "href": "utilities_spacing.html"
+		},
+		{
+		  "title": "Typography",
+		  "tags": "",
+		  "href": "utilities_typography.html"
+		},
+		{
+		  "title": " Menu child",
+		  "tags": "",
+		  "href": "javascript:void(0);",
+		  "items": [
+			{
+			  "title": "Sublevel Item",
+			  "tags": "",
+			  "href": "javascript:void(0);"
+			},
+			{
+			  "title": "Another Item",
+			  "tags": "",
+			  "href": "javascript:void(0);"
+			}
+		  ]
+		},
+		{
+		  "title": "Disabled item",
+		  "tags": "",
+		  "disabled": true,
+		  "href": "javascript:void(0);"
+		}
+	  ]
+	},
+	{
+	  "title": "Font Icons",
+	  "tags": "",
+	  "icon": "fal fa-map-marker-alt",
+	  "span": {
+		"class": "dl-ref bg-primary-500 hidden-nav-function-minify hidden-nav-function-top",
+		"text": "2,500+"
+	  },
+	  "items": [
+		{
+		  "title": "Webfonts FAQ",
+		  "tags": "",
+		  "href": "icons_webfonts_faq.html"
+		},
+		{
+		  "title": "FontAwesome",
+		  "tags": "",
+		  "text": "FontAwesome Pro",
+		  "href": "javascript:void(0);",
+		  "items": [
+			{
+			  "title": "Light",
+			  "tags": "",
+			  "href": "icons_fontawesome_light.html"
+			},
+			{
+			  "title": "Regular",
+			  "tags": "",
+			  "href": "icons_fontawesome_regular.html"
+			},
+			{
+			  "title": "Solid",
+			  "tags": "",
+			  "href": "icons_fontawesome_solid.html"
+			},
+			{
+			  "title": "Brand",
+			  "tags": "",
+			  "href": "icons_fontawesome_brand.html"
+			}
+		  ]
+		},
+		{
+		  "title": "NextGen Icons",
+		  "tags": "",
+		  "href": "javascript:void(0);",
+		  "items": [
+			{
+			  "title": "General",
+			  "tags": "",
+			  "href": "icons_nextgen_general.html"
+			},
+			{
+			  "title": "Base",
+			  "tags": "",
+			  "href": "icons_nextgen_base.html"
+			}
+		  ]
+		},
+		{
+		  "title": "Stack Icons",
+		  "tags": "",
+		  "href": "javascript:void(0);",
+		  "items": [
+			{
+			  "title": "Showcase",
+			  "tags": "",
+			  "href": "icons_stack_showcase.html"
+			},
+			{
+			  "title": "Generate Stack",
+			  "tags": "",
+			  "href": "icons_stack_generate.html?layers=3"
+			}
+		  ]
+		}
+	  ]
+	},
+	{
+	  "title": "Tables",
+	  "tags": "",
+	  "icon": "fal fa-th-list",
+	  "items": [
+		{
+		  "title": "Basic Tables",
+		  "tags": "",
+		  "href": "info_app_docs.html"
+		},
+		{
+		  "title": "Generate Table Style",
+		  "tags": "",
+		  "href": "tables_generate_style.html"
+		}
+	  ]
+	},
+	{
+	  "title": "Form Stuff",
+	  "tags": "",
+	  "icon": "fal fa-edit",
+	  "items": [
+		{
+		  "title": "Basic Inputs",
+		  "tags": "",
+		  "href": "form_basic_inputs.html"
+		},
+		{
+		  "title": "Checkbox &amp; Radio",
+		  "tags": "",
+		  "href": "form_checkbox_radio.html"
+		},
+		{
+		  "title": "Input Groups",
+		  "tags": "",
+		  "href": "form_input_groups.html"
+		},
+		{
+		  "title": "Validation",
+		  "tags": "",
+		  "href": "form_validation.html"
+		},
+		{
+		  "title": "Samples",
+		  "tags": "",
+		  "href": "form_samples.html"
+		}
+	  ]
+	},
+	{
+	  "title": "Plugins & Addons"
+	},
+	{
+	  "title": "Plugins",
+	  "tags": "",
+	  "text": "Core Plugins",
+	  "icon": "fal fa-shield-alt",
+	  "items": [
+		{
+		  "title": "Plugins FAQ",
+		  "tags": "",
+		  "href": "plugin_faq.html"
+		},
+		{
+		  "title": "Waves",
+		  "tags": "",
+		  "href": "plugin_waves.html",
+		  "span": {
+			"class": "dl-ref label bg-primary-400 ml-2",
+			"text": "9 KB"
+		  } 
+		},
+		{
+		  "title": "PaceJS",
+		  "tags": "",
+		  "href": "plugin_pacejs.html",
+		  "span": {
+			"class": "dl-ref label bg-primary-500 ml-2",
+			"text": "13 KB"
+		  }
+		},
+		{
+		  "title": "SmartPanels",
+		  "tags": "",
+		  "href": "plugin_smartpanels.html",
+		  "span": {
+			"class": "dl-ref label bg-primary-600 ml-2",
+			"text": "9 KB"
+		  }
+		},
+		{
+		  "title": "BootBox",
+		  "tags": "",
+		  "href": "plugin_bootbox.html",
+		  "span": {
+			"class": "dl-ref label bg-primary-600 ml-2",
+			"text": "15 KB"
+		  }
+		},
+		{
+		  "title": "Slimscroll",
+		  "tags": "",
+		  "href": "plugin_slimscroll.html",
+		  "span": {
+			"class": "dl-ref label bg-primary-700 ml-2",
+			"text": "5 KB"
+		  }
+		},
+		{
+		  "title": "Throttle",
+		  "tags": "",
+		  "href": "plugin_throttle.html",
+		  "span": {
+			"class": "dl-ref label bg-primary-700 ml-2",
+			"text": "1 KB"
+		  }
+		},
+		{
+		  "title": "Navigation",
+		  "tags": "",
+		  "href": "plugin_navigation.html",
+		  "span": {
+			"class": "dl-ref label bg-primary-700 ml-2",
+			"text": "2 KB"
+		  }
+		},
+		{
+		  "title": "i18next",
+		  "tags": "",
+		  "href": "plugin_i18next.html",
+		  "span": {
+			"class": "dl-ref label bg-primary-700 ml-2",
+			"text": "10 KB"
+		  }
+		},
+		{
+		  "title": "App.Core",
+		  "tags": "",
+		  "href": "plugin_appcore.html",
+		  "span": {
+			"class": "dl-ref label bg-success-700 ml-2",
+			"text": "14 KB"
+		  }
+		}
+	  ]
+	},
+	{
+	  "title": "Datagrid",
+	  "tags": "datatables",
+	  "showOnSeed": false,
+	  "text": "Datatables",
+	  "icon": "fal fa-table",
+	  "span": {
+		"class": "dl-ref bg-primary-500 hidden-nav-function-minify hidden-nav-function-top",
+		"text": "235 KB"
+	  },
+	  "items": [
+		{
+		  "title": "Basic",
+		  "tags": "",
+		  "href": "datatables_basic.html"
+		},
+		{
+		  "title": "Autofill",
+		  "tags": "",
+		  "href": "datatables_autofill.html"
+		},
+		{
+		  "title": "Buttons",
+		  "tags": "",
+		  "href": "datatables_buttons.html"
+		},
+		{
+		  "title": "Export",
+		  "tags": "",
+		  "href": "datatables_export.html"
+		},
+		{
+		  "title": "ColReorder",
+		  "tags": "",
+		  "href": "datatables_colreorder.html"
+		},
+		{
+		  "title": "ColumnFilter",
+		  "tags": "",
+		  "href": "datatables_columnfilter.html"
+		},
+		{
+		  "title": "FixedColumns",
+		  "tags": "",
+		  "href": "datatables_fixedcolumns.html"
+		},
+		{
+		  "title": "FixedHeader",
+		  "tags": "",
+		  "href": "datatables_fixedheader.html"
+		},
+		{
+		  "title": "KeyTable",
+		  "tags": "",
+		  "href": "datatables_keytable.html"
+		},
+		{
+		  "title": "Responsive",
+		  "tags": "",
+		  "href": "datatables_responsive.html"
+		},
+		{
+		  "title": "Responsive Alt",
+		  "tags": "",
+		  "href": "datatables_responsive_alt.html"
+		},
+		{
+		  "title": "RowGroup",
+		  "tags": "",
+		  "href": "datatables_rowgroup.html"
+		},
+		{
+		  "title": "RowReorder",
+		  "tags": "",
+		  "href": "datatables_rowreorder.html"
+		},
+		{
+		  "title": "Scroller",
+		  "tags": "",
+		  "href": "datatables_scroller.html"
+		},
+		{
+		  "title": "Select",
+		  "tags": "",
+		  "href": "datatables_select.html"
+		},
+		{
+		  "title": "AltEditor",
+		  "tags": "",
+		  "href": "datatables_alteditor.html"
+		}
+	  ]
+	},
+	{
+	  "title": "Statistics",
+	  "tags": "chart, graphs",
+	  "showOnSeed": false,
+	  "icon": "fal fa-chart-pie",
+	  "items": [
+		{
+		  "title": "Flot",
+		  "tags": "bar pie",
+		  "href": "statistics_flot.html",
+		  "span": {
+			"class": "dl-ref label bg-primary-500 ml-2",
+			"text": "36 KB"
+		  }
+		},
+		{
+		  "title": "Chart.js",
+		  "tags": "bar pie",
+		  "href": "statistics_chartjs.html",
+		  "span": {
+			"class": "dl-ref label bg-primary-500 ml-2",
+			"text": "205 KB"
+		  }
+		},
+		{
+		  "title": "Chartist.js",
+		  "tags": "",
+		  "href": "statistics_chartist.html",
+		  "span": {
+			"class": "dl-ref label bg-primary-600 ml-2",
+			"text": "39 KB"
+		  }
+		},
+		{
+		  "title": "C3 Charts",
+		  "tags": "",
+		  "href": "statistics_c3.html",
+		  "span": {
+			"class": "dl-ref label bg-primary-600 ml-2",
+			"text": "197 KB"
+		  }
+		},
+		{
+		  "title": "Peity",
+		  "tags": "small",
+		  "href": "statistics_peity.html",
+		  "span": {
+			"class": "dl-ref label bg-primary-700 ml-2",
+			"text": "4 KB"
+		  }
+		},
+		{
+		  "title": "Sparkline",
+		  "tags": "small tiny",
+		  "href": "statistics_sparkline.html",
+		  "span": {
+			"class": "dl-ref label bg-primary-700 ml-2",
+			"text": "42 KB"
+		  }
+		},
+		{
+		  "title": "Easy Pie Chart",
+		  "tags": "",
+		  "href": "statistics_easypiechart.html",
+		  "span": {
+			"class": "dl-ref label bg-primary-700 ml-2",
+			"text": "4 KB"
+		  }
+		},
+		{
+		  "title": "Dygraph",
+		  "tags": "complex",
+		  "href": "statistics_dygraph.html",
+		  "span": {
+			"class": "dl-ref label bg-primary-700 ml-2",
+			"text": "120 KB"
+		  }
+		}
+	  ]
+	},
+	{
+	  "title": "Notifications",
+	  "tags": "",
+	  "showOnSeed": false,
+	  "icon": "fal fa-exclamation-circle",
+	  "items": [
+		{
+		  "title": "SweetAlert2",
+		  "tags": "",
+		  "href": "notifications_sweetalert2.html",
+		  "span": {
+			"class": "dl-ref label bg-primary-500 ml-2",
+			"text": "40 KB"
+		  }
+		},
+		{
+		  "title": "Toastr",
+		  "tags": "",
+		  "href": "notifications_toastr.html",
+		  "span": {
+			"class": "dl-ref label bg-primary-600 ml-2",
+			"text": "5 KB"
+		  }
+		}
+	  ]
+	},
+	{
+	  "title": "Form Plugins",
+	  "tags": "",
+	  "showOnSeed": false,
+	  "icon": "fal fa-credit-card-front",
+	  "items": [
+		{
+		  "title": "Color Picker",
+		  "tags": "",
+		  "href": "form_plugins_colorpicker.html"
+		},
+		{
+		  "title": "Date Picker",
+		  "tags": "",
+		  "href": "form_plugins_datepicker.html"
+		},
+		{
+		  "title": "Date Range Picker",
+		  "tags": "",
+		  "href": "form_plugins_daterange_picker.html"
+		},
+		{
+		  "title": "Dropzone",
+		  "tags": "",
+		  "href": "form_plugins_dropzone.html"
+		},
+		{
+		  "title": "Ion.RangeSlider",
+		  "tags": "",
+		  "href": "form_plugins_ionrangeslider.html"
+		},
+		{
+		  "title": "Input Musk",
+		  "tags": "",
+		  "href": "form_plugins_inputmusk.html"
+		},
+		{
+		  "title": "Image Cropper",
+		  "tags": "",
+		  "href": "form_plugin_imagecropper.html"
+		},
+		{
+		  "title": "Select2",
+		  "tags": "",
+		  "href": "form_plugin_select2.html"
+		},
+		{
+		  "title": "Summernote",
+		  "tags": "texteditor editor",
+		  "href": "form_plugin_summernote.html"
+		},
+		{
+		  "title": "Markdown",
+		  "tags": "",
+		  "href": "form_plugin_markdown.html"
+		},
+		{
+		  "title": "noUiSlider",
+		  "tags": "",
+		  "href": "form_plugin_nouislider.html"
+		},
+		{
+		  "title": "Wizard",
+		  "tags": "",
+		  "href": "form_plugin_wizard.html"
+		}
+	  ]
+	},
+	{
+	  "title": "Miscellaneous",
+	  "tags": "",
+	  "showOnSeed": false,
+	  "icon": "fal fa-globe",
+	  "items": [
+		{
+		  "title": "FullCalendar",
+		  "tags": "",
+		  "href": "miscellaneous_fullcalendar.html"
+		},
+		{
+		  "title": "Light Gallery",
+		  "tags": "",
+		  "href": "miscellaneous_lightgallery.html",
+		  "span": {
+			"class": "dl-ref label bg-primary-600 ml-2",
+			"text": "61 KB"
+		  }
+		},
+		{
+		  "title": "Idle Timer",
+		  "tags": "",
+		  "href": "miscellaneous_idletimer.html"
+		}
+	  ]
+	},
+	{
+	  "title": "Layouts & Apps"
+	},
+	{
+	  "title": "Pages",
+	  "tags": "",
+	  "text": "Page Views",
+	  "icon": "fal fa-plus-circle",
+	  "items": [
+		{
+		  "title": "Chat",
+		  "tags": "",
+		  "href": "page_chat.html"
+		},
+		{
+		  "title": "Contacts",
+		  "tags": "",
+		  "href": "page_contacts.html"
+		},
+		{
+		  "title": "FAQ",
+		  "tags": "",
+		  "href": "page_faq.html"
+		},
+		{
+		  "title": "Forum",
+		  "tags": "",
+		  "href": "javascript:void(0);",
+		  "items": [
+			{
+			  "title": "List",
+			  "tags": "",
+			  "href": "page_forum_list.html"
+			},
+			{
+			  "title": "Threads",
+			  "tags": "",
+			  "href": "page_forum_threads.html"
+			},
+			{
+			  "title": "Discussion",
+			  "tags": "",
+			  "href": "page_forum_discussion.html"
+			}
+		  ]
+		},
+		{
+		  "title": "Inbox",
+		  "tags": "",
+		  "href": "javascript:void(0);",
+		  "items": [
+			{
+			  "title": "General",
+			  "tags": "",
+			  "href": "page_inbox.html"
+			},
+			{
+			  "title": "Read",
+			  "tags": "",
+			  "href": "page_inbox_read.html"
+			},
+			{
+			  "title": "Write",
+			  "tags": "",
+			  "href": "page_inbox_write.html"
+			}
+		  ]
+		},
+		{
+		  "title": "Invoice (printable)",
+		  "tags": "",
+		  "href": "page_invoice.html"
+		},
+		{
+		  "title": "Auth. Pages",
+		  "tags": "",
+		  "href": "javascript:void(0);",
+		  "items": [
+			{
+			  "title": "Forget Password",
+			  "tags": "",
+			  "href": "page_forget.html"
+			},
+			{
+			  "title": "Locked Screen",
+			  "tags": "",
+			  "href": "page_locked.html"
+			},
+			{
+			  "title": "Login",
+			  "tags": "",
+			  "href": "page_login.html"
+			},
+			{
+			  "title": "Register",
+			  "tags": "",
+			  "href": "page_register.html"
+			}
+		  ]
+		},
+		{
+		  "title": "Error Pages",
+		  "tags": "",
+		  "href": "javascript:void(0);",
+		  "items": [
+			{
+			  "title": "General Error",
+			  "tags": "",
+			  "href": "page_error.html"
+			},
+			{
+			  "title": "Server Error",
+			  "tags": "",
+			  "href": "page_error_404.html"
+			},
+			{
+			  "title": "Announced Error",
+			  "tags": "",
+			  "href": "page_error_announced.html"
+			}
+		  ]
+		},
+		{
+		  "title": "Pricing Tables",
+		  "tags": "",
+		  "href": "page_pricing_tables.html"
+		},
+		{
+		  "title": "Profile",
+		  "tags": "",
+		  "href": "page_profile.html"
+		},
+		{
+		  "title": "Search Results",
+		  "tags": "",
+		  "href": "page_search.html"
+		},
+		{
+		  "title": "Teams",
+		  "tags": "",
+		  "href": "page_teams.html"
+		},
+		{
+		  "title": "Timeline",
+		  "tags": "",
+		  "href": "page_timeline.html"
+		}
+	  ]
+	},
+	{
+	  "title": "UI Components",
+	  "tags": "",
+	  "text": "App Views",
+	  "icon": "fal fa-cogs",
+	  "showOnSeed": false,
+	  "items": [
+		{
+		  "title": "E-commerce",
+		  "tags": "",
+		  "href": "javascript:void(0);",
+		  "items": [
+			{
+			  "title": "Orders",
+			  "tags": "",
+			  "href": "page_ecommerce_orders.html"
+			},
+			{
+			  "title": "Products",
+			  "tags": "",
+			  "href": "page_ecommerce_products.html"
+			},
+			{
+			  "title": "Item detail",
+			  "tags": "",
+			  "href": "page_ecommerce_item_details.html"
+			},
+			{
+			  "title": "Add Item",
+			  "tags": "",
+			  "href": "page_ecommerce_add_item.html"
+			},
+			{
+			  "title": "Checkout",
+			  "tags": "",
+			  "href": "page_ecommerce_checkout.html"
+			}
+		  ]
+		}
+	  ]
+	}
+  ]
+}
