@@ -690,6 +690,10 @@ $nav-hidden-visiblity:					0.625rem !default;
 /* top navigation */
 $nav-top-height:						3.5rem !default;
 $nav-top-drowndown-width:				13rem !default;
+$nav-top-drowndown-background:			$nav-base-color;
+$nav-top-drowndown-hover:				rgba($black, 0.1);;
+$nav-top-drowndown-color:				$nav-link-color;
+$nav-top-drowndown-hover-color:			$white;
 
 /* nav Info Card (appears below the logo) */
 $nav-infocard-height:					9.530rem !default;

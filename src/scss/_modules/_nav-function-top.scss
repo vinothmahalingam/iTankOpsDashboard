@@ -22,6 +22,10 @@ $nav-function-top-menu-item-bg: $primary-500;
 			display: none !important;
 		}
 
+		/* correct search field color */
+		#search-field {
+			color: $white;
+		}
 
 		&:not(.header-function-fixed) {
 				
@@ -279,7 +283,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 							height: auto !important; //counters the click issue
 							top: $nav-top-height;
 							position: absolute;
-							background: $white;
+							background: $nav-top-drowndown-background;
 							border-radius: $border-radius-plus;
 							box-shadow: 0px 0px 40px 0px rgba(82, 63, 105, 0.15);
 							padding: 1rem 0;
@@ -292,6 +296,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 								a {
 									padding: 0.65rem 1.25rem;
 									width: 100%;
+									color: $nav-top-drowndown-color;
 									max-height: none;
 									box-shadow: none;
 
@@ -313,7 +318,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 								}
 
 								ul {
-									background: $white;
+									background: $nav-top-drowndown-background;
 									padding: 0;
 
 									li {
@@ -325,8 +330,8 @@ $nav-function-top-menu-item-bg: $primary-500;
 
 								&:hover {
 									> a {
-										background: $page-bg;
-										color: $primary-500;
+										background: $nav-top-drowndown-hover;
+										color: $nav-top-drowndown-hover-color;
 									}
 								}
 							}
@@ -349,7 +354,7 @@ $nav-function-top-menu-item-bg: $primary-500;
 								font-family: 'nextgen-icons';
 								position: absolute;
 								font-size: 5rem;
-								color: #FFF;
+								color: $nav-top-drowndown-background;
 								overflow: hidden;
 								display: block;
 								top: -1.7rem;
