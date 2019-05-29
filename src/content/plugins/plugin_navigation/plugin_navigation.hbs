@@ -444,7 +444,7 @@
 						The navigation element can be configured manually via the following script. The script is super lightweight and fast. You will generate and load your navigation almost instantaneously. You can change the navigation padding, and color options via CSS, and further customize the navigation with our SCSS variables
 					</div>
 					<h5 class="frame-heading p-0 bg-white mb-2 mt-0">
-						Script
+						Initialize Manually
 					</h5>
 					<div class="frame-wrap">
 <pre class="prettyprint">
@@ -457,14 +457,20 @@ $("#mynav").navigation({
 });</pre>	
 					</div>
 					<h5 class="frame-heading p-0 bg-white mb-2 mt-0">
-						Dependencies
+						Initialize through app.core
 					</h5>
 					<div class="frame-wrap">
 <pre class="prettyprint">
-&lt;link rel="stylesheet" media="screen, print" href="css/myapp.css">
-&lt;script src="js/app.jquery.bundle.js">&lt;/script>
-&lt;script src="js/app.core.plugins.js">&lt;/script></pre>
-					</div>			
+//this will set the navigation based on app.config.js default config	
+initApp.buildNavigation($("#mynav"));</pre>	
+					</div>	
+					<h5 class="frame-heading p-0 bg-white mb-2 mt-0">
+						Destroy
+					</h5>
+					<div class="frame-wrap">
+<pre class="prettyprint">
+$("#mynav").navigationDestroy();</pre>	
+					</div>
 				</div>
 			</div>
 		</div>				

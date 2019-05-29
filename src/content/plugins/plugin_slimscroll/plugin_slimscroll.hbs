@@ -9,7 +9,9 @@
 "
 }}
 
-{{#*inline "head-block"}}{{/inline}}
+{{#*inline "head-block"}}
+<link rel="stylesheet" media="screen, print" href="css/theme-demo.css">
+{{/inline}}
 
 {{#*inline "content-block"}}
 
@@ -38,7 +40,7 @@
 <div class="row">
 	<div class="col-xl-6">
 		<div id="panel-1" class="panel">
-			<div class="panel-hdr">	
+			<div class="panel-hdr"> 
 				<h2>
 					Example for <span class="fw-300"><i>Size, position and direction</i></span> 
 				</h2>
@@ -49,15 +51,9 @@
 				</div>
 			</div>
 			<div class="panel-container show">
-				<div class="panel-content">									
+				<div class="panel-content">                                 
 					<div class="panel-tag">
-						The example below we 
-
-
-										position: 'left',
-				height: '300px',
-				railVisible: true,
-				alwaysVisible: true
+						The example below we use the following codes for <code>position: 'left'</code>, <code>height: '300px'</code>, <code>railVisible: true</code>, <code>alwaysVisible: true</code>
 					</div>
 
 					<div class="demo-window rounded mb-g shadow-1 m-auto" style="max-width:550px">
@@ -78,7 +74,7 @@
 	</div>
 	<div class="col-xl-6">
 		<div id="panel-2" class="panel">
-			<div class="panel-hdr">	
+			<div class="panel-hdr"> 
 				<h2>
 					Example for <span class="fw-300"><i>width and color</i></span> 
 				</h2>
@@ -89,9 +85,9 @@
 				</div>
 			</div>
 			<div class="panel-container show">
-				<div class="panel-content">									
+				<div class="panel-content">                                 
 					<div class="panel-tag">
-						Panel tag <code>code</code>
+						The example below we use <code>color: myapp_get_color.primary_700</code>, <code>size: '20px'</code>, <code>height: '300px'</code>, <code>alwaysVisible: true</code>             
 					</div>
 					
 					<div class="demo-window rounded mb-g shadow-1 m-auto" style="max-width:550px">
@@ -112,9 +108,9 @@
 	</div>
 	<div class="col-xl-12">
 		<div id="panel-3" class="panel">
-			<div class="panel-hdr">	
+			<div class="panel-hdr"> 
 				<h2>
-					Panel <span class="fw-300"><i>Title</i></span> 
+					Config <span class="fw-300"><i>Options</i></span> 
 				</h2>
 				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
@@ -123,217 +119,252 @@
 				</div>
 			</div>
 			<div class="panel-container show">
-				<div class="panel-content">									
-					<div class="panel-tag">
-						Panel tag <code>code</code>
+				<div class="panel-content">                                 
+					<h5 class="frame-heading">Initialize manually </h5>
+					 <div class="frame-wrap">
+						<pre class="prettyprint">
+$('#slimscroll').slimScroll({
+	position: 'left',
+	height: '300px',
+	railVisible: true,
+	alwaysVisible: true
+}); </pre>          </div>
+					<h5 class="frame-heading">Initliza with data attributes </h5>
+					 <div class="frame-wrap">
+						<pre class="prettyprint">
+&lt;div id="slimscroll" class="custom-scroll" style="height:300px" 
+        data-scrollHeight="300" 
+        data-scrollSize="4px" 
+        data-scrollPosition="right" 
+        data-scrollColor="rgba(0,0,0,0.6)" 
+        data-alwaysVisible="false" 
+        data-distance="4px" 
+        data-railVisible="false" 
+        data-railColor="#fafafa" &gt;
+  &lt;div class="p-3"&gt;
+    ...
+    content...
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>          	</div>
+					<h5 class="frame-heading">Destroy </h5>
+					 <div class="frame-wrap">
+						<pre class="prettyprint">
+$('#slimscroll').slimScroll({ destroy: true });
+$('#slimscroll').attr('style', '');</pre>          
+	    			</div>
+
+					<h5 class="frame-heading">Config options </h5>
+					 <div class="frame-wrap">
+		    			<div class="table-responsive">
+							<table class="table table-hover table-bordered mb-g">
+								<thead class="thead-themed">
+									<tr>
+										<th style="width: 150px;">
+											code
+										</th>
+										<th>
+											type
+										</th>
+										<th>
+											what it does
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<code>width</code>
+										</td>
+										<td>
+											<span class="fw-500 text-success">string</span>
+										</td>
+										<td>
+											Width in pixels of the visible scroll area. Stretch-to-parent if not set. Default: none
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<code>height</code>
+										</td>
+										<td>
+											<span class="fw-500 text-success">string</span>
+										</td>
+										<td>
+											Height in pixels of the visible scroll area. Also supports auto to set the height to same as parent container. Default: 250px
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<code>size</code>
+										</td>
+										<td>
+											<span class="fw-500 text-success">string</span>
+										</td>
+										<td>
+											Width in pixels of the scrollbar. Default: 7px
+										</td>
+									</tr>
+									<tr>
+										<td>    
+											<code>position</code>
+										</td>
+										<td>
+											<span class="fw-500 text-success">string</span>
+										</td>
+										<td>
+											left or right. Sets the position of the scrollbar. Default: right
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<code>color</code>
+										</td>
+										<td>
+											<span class="fw-500 text-success">string</span>
+										</td>
+										<td>
+											Color in hex of the scrollbar. Default: #000000
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<code>alwaysVisible</code>
+										</td>
+										<td>
+											<span class="fw-500 text-info">bool</span>
+										</td>
+										<td>
+											Disables scrollbar hide. Default: false
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<code>distance</code>
+										</td>   
+										<td>
+											<span class="fw-500 text-success">string</span>
+										</td>
+										<td>
+											Distance in pixels from the edge of the parent element where scrollbar should appear. It is used together with position property. Default:1px
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<code>start</code>
+										</td>
+										<td>
+											<span class="fw-500 text-success">string</span>
+										</td>
+										<td>
+											top or bottom or $(selector) - defines initial position of the scrollbar. When set to bottom it automatically scrolls to the bottom of the scrollable container. When HTML element is passed, slimScroll defaults to offsetTop of this element. Default: top.
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<code>wheelStep</code>
+										</td>
+										<td>
+											<span class="fw-500 text-info">integer</span>
+										</td>
+										<td>
+											Integer value for mouse wheel delta. Default: 20
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<code>railVisible</code>
+										</td>
+										<td>
+											<span class="fw-500 text-info">bool</span>
+										</td>
+										<td>
+											Enables scrollbar rail. Default: false
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<code>railColor</code>
+										</td>
+										<td>
+											<span class="fw-500 text-success">string</span>
+										</td>
+										<td>
+											Sets scrollbar rail color, Default: #333333
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<code>railOpacity</code>
+										</td>
+										<td>
+											<span class="fw-500 text-info">integer</span>
+										</td>
+										<td>
+											Sets scrollbar rail opacity. Default: 0.2
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<code>allowPageScroll</code>
+										</td>
+										<td>
+											<span class="fw-500 text-info">bool</span>
+										</td>
+										<td>
+											Checks if mouse wheel should scroll page when bar reaches top or bottom of the container. When set to true is scrolls the page.Default: false
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<code>scrollTo</code>
+										</td>
+										<td>
+											<span class="fw-500 text-success">string</span>
+										</td>
+										<td>
+											Jumps to the specified scroll value. Can be called on any element with slimScroll already enabled. Example: $(element).slimScroll({ scrollTo: '50px' });
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<code>scrollBy</code>
+										</td>
+										<td>
+											<span class="fw-500 text-success">string</span>
+										</td>
+										<td>
+											Increases/decreases current scroll value by specified amount (positive or negative). Can be called on any element with slimScroll already enabled. Example: $(element).slimScroll({ scrollBy: '60px' });
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<code>disableFadeOut</code>
+										</td>
+										<td>
+											<span class="fw-500 text-info">bool</span>
+										</td>
+										<td>
+											Disables scrollbar auto fade. When set to true scrollbar doesn't disappear after some time when mouse is over the slimscroll div.Default: false
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<code>touchScrollStep</code>
+										</td>
+										<td>
+											<span class="fw-500 text-info">integer</span>
+										</td>
+										<td>
+											Allows to set different sensitivity for touch scroll events. Negative number inverts scroll direction.Default: 200
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
-					<div class="table-responsive">
-						<table class="table table-hover table-bordered m-0">
-							<thead class="thead-themed">
-								<tr>
-									<th style="width: 150px;">
-										code
-									</th>
-									<th>
-										type
-									</th>
-									<th>
-										what it does
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>
-										<code>width</code>
-									</td>
-									<td>
-										<span class="fw-500 text-success">string</span>
-									</td>
-									<td>
-										Width in pixels of the visible scroll area. Stretch-to-parent if not set. Default: none
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<code>height</code>
-									</td>
-									<td>
-										<span class="fw-500 text-success">string</span>
-									</td>
-									<td>
-										Height in pixels of the visible scroll area. Also supports auto to set the height to same as parent container. Default: 250px
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<code>size</code>
-									</td>
-									<td>
-										<span class="fw-500 text-success">string</span>
-									</td>
-									<td>
-										Width in pixels of the scrollbar. Default: 7px
-									</td>
-								</tr>
-								<tr>
-									<td>	
-										<code>position</code>
-									</td>
-									<td>
-										<span class="fw-500 text-success">string</span>
-									</td>
-									<td>
-										left or right. Sets the position of the scrollbar. Default: right
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<code>color</code>
-									</td>
-									<td>
-										<span class="fw-500 text-success">string</span>
-									</td>
-									<td>
-										Color in hex of the scrollbar. Default: #000000
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<code>alwaysVisible</code>
-									</td>
-									<td>
-										<span class="fw-500 text-info">bool</span>
-									</td>
-									<td>
-										Disables scrollbar hide. Default: false
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<code>distance</code>
-									</td>	
-									<td>
-										<span class="fw-500 text-success">string</span>
-									</td>
-									<td>
-										Distance in pixels from the edge of the parent element where scrollbar should appear. It is used together with position property. Default:1px
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<code>start</code>
-									</td>
-									<td>
-										<span class="fw-500 text-success">string</span>
-									</td>
-									<td>
-										top or bottom or $(selector) - defines initial position of the scrollbar. When set to bottom it automatically scrolls to the bottom of the scrollable container. When HTML element is passed, slimScroll defaults to offsetTop of this element. Default: top.
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<code>wheelStep</code>
-									</td>
-									<td>
-										<span class="fw-500 text-info">integer</span>
-									</td>
-									<td>
-										Integer value for mouse wheel delta. Default: 20
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<code>railVisible</code>
-									</td>
-									<td>
-										<span class="fw-500 text-info">bool</span>
-									</td>
-									<td>
-										Enables scrollbar rail. Default: false
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<code>railColor</code>
-									</td>
-									<td>
-										<span class="fw-500 text-success">string</span>
-									</td>
-									<td>
-										Sets scrollbar rail color, Default: #333333
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<code>railOpacity</code>
-									</td>
-									<td>
-										<span class="fw-500 text-info">integer</span>
-									</td>
-									<td>
-										Sets scrollbar rail opacity. Default: 0.2
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<code>allowPageScroll</code>
-									</td>
-									<td>
-										<span class="fw-500 text-info">bool</span>
-									</td>
-									<td>
-										Checks if mouse wheel should scroll page when bar reaches top or bottom of the container. When set to true is scrolls the page.Default: false
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<code>scrollTo</code>
-									</td>
-									<td>
-										<span class="fw-500 text-success">string</span>
-									</td>
-									<td>
-										Jumps to the specified scroll value. Can be called on any element with slimScroll already enabled. Example: $(element).slimScroll({ scrollTo: '50px' });
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<code>scrollBy</code>
-									</td>
-									<td>
-										<span class="fw-500 text-success">string</span>
-									</td>
-									<td>
-										Increases/decreases current scroll value by specified amount (positive or negative). Can be called on any element with slimScroll already enabled. Example: $(element).slimScroll({ scrollBy: '60px' });
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<code>disableFadeOut</code>
-									</td>
-									<td>
-										<span class="fw-500 text-info">bool</span>
-									</td>
-									<td>
-										Disables scrollbar auto fade. When set to true scrollbar doesn't disappear after some time when mouse is over the slimscroll div.Default: false
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<code>touchScrollStep</code>
-									</td>
-									<td>
-										<span class="fw-500 text-info">integer</span>
-									</td>
-									<td>
-										Allows to set different sensitivity for touch scroll events. Negative number inverts scroll direction.Default: 200
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					
+
 				</div>
 			</div>
 		</div>
@@ -343,6 +374,7 @@
 {{/inline}}
 
 {{#*inline "scripts-block"}}
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 	<script>
 		$(document).ready(function () {
 
