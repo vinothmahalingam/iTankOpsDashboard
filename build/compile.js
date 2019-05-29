@@ -319,9 +319,9 @@ module.exports = {
 	fillProperties: function (_ref2) {
 		var _self = this;
 		var groups = _ref2.groups,
-		seedOnly = _ref2.seedOnly,
-		parent = _ref2.parent,
-		result = [];
+			seedOnly = _ref2.seedOnly,
+			parent = _ref2.parent,
+			result = [];
 
 		if (groups === undefined) {
 			return groups;
@@ -330,11 +330,11 @@ module.exports = {
 		groups.forEach(function (group) {
 			group.text = group.text || group.title;
 			if (parent === undefined) {
-				group.tags = "".concat((group.title + " " + group.tags).toLowerCase().replace(/[, ]+/g, " ").trim());
-				group.i18n = "nav.".concat(group.title.toLowerCase().replace(' ', '_'));
+				group.tags = "".concat( (group.title + " " + group.tags).toLowerCase().replace(/[, ]+/g, " ").trim() );
+				group.i18n = "nav.".concat(group.title.toLowerCase().split(' ').join('_'));
 			} else {
-				group.tags = "".concat(parent.tags, " ").concat((group.title + " " + group.tags).toLowerCase().replace(/[, ]+/g, " ").trim());
-				group.i18n = "".concat(parent.i18n, "_").concat(group.title.toLowerCase().replace(' ', '_'));
+				group.tags = "".concat(parent.tags, " ").concat( (group.title + " " + group.tags).toLowerCase().replace(/[, ]+/g, " ").trim() );
+				group.i18n = "".concat(parent.i18n, "_").concat(group.title.toLowerCase().split(' ').join('_'));
 			}
 			group.showOnSeed = group.showOnSeed === undefined ? true : group.showOnSeed;
 			group.items = _self.fillProperties({

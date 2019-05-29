@@ -199,7 +199,7 @@
 		  "href": "ui_spinners.html"
 		},
 		{
-		  "title": "Tabs &amp; Pills",
+		  "title": "Tabs & Pills",
 		  "tags": "",
 		  "href": "ui_tabs_pills.html"
 		},
@@ -261,7 +261,7 @@
 		  "href": "utilities_position.html"
 		},
 		{
-		  "title": " Responsive Grid",
+		  "title": "Responsive Grid",
 		  "tags": "",
 		  "href": "utilities_responsive_grid.html"
 		},
@@ -281,7 +281,7 @@
 		  "href": "utilities_typography.html"
 		},
 		{
-		  "title": " Menu child",
+		  "title": "Menu child",
 		  "tags": "",
 		  "href": "javascript:void(0);",
 		  "items": [
@@ -411,7 +411,7 @@
 		  "href": "form_basic_inputs.html"
 		},
 		{
-		  "title": "Checkbox &amp; Radio",
+		  "title": "Checkbox & Radio",
 		  "tags": "",
 		  "href": "form_checkbox_radio.html"
 		},
@@ -530,10 +530,9 @@
 	  ]
 	},
 	{
-	  "title": "Datagrid",
-	  "tags": "datatables",
+	  "title": "Datatables",
+	  "tags": "datagrid",
 	  "showOnSeed": false,
-	  "text": "Datatables",
 	  "icon": "fal fa-table",
 	  "span": {
 		"class": "dl-ref bg-primary-500 hidden-nav-function-minify hidden-nav-function-top",
@@ -897,7 +896,7 @@
 		  "href": "page_invoice.html"
 		},
 		{
-		  "title": "Auth. Pages",
+		  "title": "Authentication",
 		  "tags": "",
 		  "href": "javascript:void(0);",
 		  "items": [
@@ -973,9 +972,8 @@
 	  ]
 	},
 	{
-	  "title": "UI Components",
+	  "title": "App Views",
 	  "tags": "",
-	  "text": "App Views",
 	  "icon": "fal fa-cogs",
 	  "showOnSeed": false,
 	  "items": [

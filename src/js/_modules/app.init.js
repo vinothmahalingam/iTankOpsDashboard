@@ -977,12 +977,12 @@ var initApp = (function(app) {
 						if (!$.i18n) {
 						//jQuery.getScript('http://url/to/the/script');
 
-							initApp.loadScript("js/i18next.min.js", 
+							initApp.loadScript("js/i18n/i18n.js", 
 
 								function activateLang () {
 									
 									$.i18n.init({
-										resGetPath: 'lang/__lng__.json',
+										resGetPath: 'media/data/__lng__.json',
 										load: 'unspecific',
 										fallbackLng: false,
 										lng: applang

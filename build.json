@@ -116,7 +116,8 @@
 							"json" : [
 								"{$config.path.src}/custom/webfonts/fontawesome-pro-master/used-for-demo-pages/*.json",
 								"{$config.path.src}/custom/webfonts/nextgen-fonts-master/used-for-demo-pages/*.json",
-								"{$config.path.src}/custom/plugins/datatables/demo-data/*.json"
+								"{$config.path.src}/custom/plugins/datatables/demo-data/*.json",
+								"{$config.path.src}/custom/lang/*.json"
 							]
 						},
 						"app-media": {
@@ -144,6 +145,16 @@
 					},
 					"bundle": {
 						"scripts": "{$config.output}/js/holder.js"
+					}
+				},
+				"i18next": {
+					"src": {
+						"scripts": [
+							"{$config.path.src}/custom/plugins/i18n/i18n-v1.11.1.js"
+						]
+					},
+					"bundle": {
+						"scripts": "{$config.output}/js/i18n/i18n.js"
 					}
 				},
 				"fontawesome": {
