@@ -4,7 +4,7 @@
 	pagename="plugin_navigation" 
 	category_1="Core Plugins" 
 	heading="<i class='subheader-icon fal fa-shield-alt'></i> Navigation <sup class='badge badge-danger fw-500'>CORE</sup>" 
-	pagedescription="Application Navigation"
+	pagedescription="Application Navigation for SmartAdmin WebApp"
 }}
 
 {{#*inline "head-block"}}
@@ -29,7 +29,7 @@
 			<div class="panel-container show">
 				<div class="panel-content">
 					<div class="panel-tag">
-						You can also add the attribute <code>data-nav-accordion="true"</code> to set accordion true or false.
+						You can also add the attribute <code>data-nav-accordion="true"</code> to set accordion true or false. The background can be any color you wish from our <a href="utilities_color_pallet.html" target="_blank">color pallet</a> and <a href="utilities_helpers" target="_blank"> gradient presets</a>, and over 1700 icons to choose from for your arrows.
 					</div>
 					<!-- build controled menu -->
 					<form>
@@ -69,9 +69,15 @@
 							<div class="form-group col-lg-6 col-xl-6">
 								<label class="form-label" for="nav_openedSign">Collapse Sign</label>
 								<select class="custom-select w-100" id="nav_openedSign">
-									<option value="-">Default icon...</option>
+									<option value="+">Default icon...</option>
+									<option value="[+]">[+]</option>
 									<option value="[-]">[-]</option>
-									<option value="<i class='ni ni-chevron-up'></i>">icon-chevron-down</option>
+									<option value="<i class='fal fa-arrow-up'></i>">fa-arrow-up</option>
+									<option value="<i class='fal fa-arrow-down'></i>">fa-arrow-down</option>
+									<option value="<i class='fal fa-chevron-up'></i>">fa-chevron-up</option>
+									<option value="<i class='fal fa-chevron-down'></i>">fa-chevron-down</option>
+									<option value="<i class='ni ni-chevron-up'></i>">ni-chevron-up</option>
+									<option value="<i class='ni ni-chevron-down'></i>">ni-chevron-down</option>
 								</select>
 							</div>
 							<div class="form-group col-lg-6 col-xl-6">
@@ -87,8 +93,14 @@
 								<label class="form-label" for="nav_closedSign">Expand Sign</label>
 								<select class="custom-select w-100" id="nav_closedSign">
 									<option value="+">Default icon...</option>
-									<option value="[+]">[+][-]</option>
-									<option value="<i class='ni ni-chevron-down'></i>">icon-chevron-up</option>
+									<option value="[+]">[+]</option>
+									<option value="[-]">[-]</option>
+									<option value="<i class='fal fa-arrow-up'></i>">fa-arrow-up</option>
+									<option value="<i class='fal fa-arrow-down'></i>">fa-arrow-down</option>
+									<option value="<i class='fal fa-chevron-up'></i>">fa-chevron-up</option>
+									<option value="<i class='fal fa-chevron-down'></i>">fa-chevron-down</option>
+									<option value="<i class='ni ni-chevron-up'></i>">ni-chevron-up</option>
+									<option value="<i class='ni ni-chevron-down'></i>">ni-chevron-down</option>
 								</select>
 							</div>
 						</div>
@@ -418,7 +430,7 @@
 		<div id="panel-2" class="panel">
 			<div class="panel-hdr">	
 				<h2>
-					Default <span class="fw-300"><i>Panel</i></span> 
+					Configuration <span class="fw-300"><i>Options</i></span> 
 				</h2>
 				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
@@ -429,7 +441,7 @@
 			<div class="panel-container show">
 				<div class="panel-content">									
 					<div class="panel-tag">
-						
+						The navigation element can be configured manually via the following script. The script is super lightweight and fast. You will generate and load your navigation almost instantaneously. You can change the navigation padding, and color options via CSS, and further customize the navigation with our SCSS variables
 					</div>
 					<h5 class="frame-heading p-0 bg-white mb-2 mt-0">
 						Script
@@ -494,9 +506,17 @@ $("#destroy").hide();
 			}); 
 		}
 
+		if ( $("#nav_compact").is(':checked') ? true : false ) {
+			$("#nav-1").addClass("nav-menu-compact");
+			$("#nav-2").addClass("nav-menu-compact");
+		} else {
+			$("#nav-1").removeClass("nav-menu-compact");
+			$("#nav-2").removeClass("nav-menu-compact");
+		}
+
 		$("#build").hide();
 		$("#destroy").show();
-		$("#nav_accordion, #nav_animation, #nav_speed, #nav_closedSign, #nav_openedSign, #nav_syndicate").attr('disabled', true);
+		$("#nav_accordion, #nav_animation, #nav_speed, #nav_closedSign, #nav_openedSign, #nav_syndicate, #nav_compact").attr('disabled', true);
 
 	});
 	$("#destroy").on('click', function () {
@@ -504,7 +524,7 @@ $("#destroy").hide();
 		$("#nav-2").navigationDestroy();
 		$("#destroy").hide();
 		$("#build").show();
-		$("#nav_accordion, #nav_animation, #nav_speed, #nav_closedSign, #nav_openedSign, #nav_syndicate").removeAttr('disabled');
+		$("#nav_accordion, #nav_animation, #nav_speed, #nav_closedSign, #nav_openedSign, #nav_syndicate, #nav_compact").removeAttr('disabled');
 	});
 
 </script>

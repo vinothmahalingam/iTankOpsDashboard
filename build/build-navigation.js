@@ -1,7 +1,7 @@
 "use strict";
 
 var gulp = require("gulp");
-var nav = require('./../navigation');
+var nav = require('./../src/nav');
 var build = require('./build');
 var func = require('./compile');
 var menu = func.fillProperties({
@@ -11,7 +11,7 @@ var menu = func.fillProperties({
 
 // push nav objects
 gulp.task("build-nav", function (done) {
-	console.log('==================> Generating navigation...');
+	console.log('==================> Generating nav.hbs...');
 	func.writeNavigation(menu, build.config.path.exportPath);
 	func.formatOutput({
 		inputPath: build.config.path.exportPath,

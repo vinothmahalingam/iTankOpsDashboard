@@ -76,7 +76,8 @@
 		{
 		  "title": "Documentation",
 		  "tags": "",
-		  "href": "info_app_docs.html"
+		  "href": "info_app_docs.html",
+		  "showOnSeed": false,
 		},
 		{
 		  "title": "Product Licensing",

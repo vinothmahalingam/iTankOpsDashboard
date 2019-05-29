@@ -45,6 +45,7 @@
     "flot": "^0.8.3",
     "flot-spline": "0.0.1",
     "holderjs": "^2.9.6",
+    "i18next-client": "^1.11.4",
     "inputmask": "^4.0.8",
     "ion-rangeslider": "^2.3.0",
     "jquery": "3.3.1",

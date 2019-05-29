@@ -150,7 +150,7 @@
 				"i18next": {
 					"src": {
 						"scripts": [
-							"{$config.path.src}/custom/plugins/i18n/i18n-v1.11.1.js"
+							"{$config.path.node_modules}/i18next-client/i18next.js"
 						]
 					},
 					"bundle": {

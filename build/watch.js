@@ -22,8 +22,8 @@ gulp.task('watch', function (done) {
 			console.log('==================> File changed: ' + file.name + ' (' + file.ext + ')...');
 		});
 
-	// watch `navigation.json` changes and compile new nav
-	/*gulp.watch(['navigation.json'], gulp.series('build-nav'))
+	// watch `nav.json` changes and compile new nav
+	/*gulp.watch(['nav.json'], gulp.series('build-nav'))
 		.on('change', function (event) {
 			var file = path.parse(event);
 			console.log('==================> File changed: ' + file.name + ' (' + file.ext + ')...');

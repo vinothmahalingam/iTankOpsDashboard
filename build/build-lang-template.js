@@ -1,47 +1,76 @@
-/*"use strict";
+/*'use strict';
 
 var gulp = require("gulp");
-var nav = require('./../navigation');
-var build = require('./build');
-var func = require('./compile');
-var map = require('map-stream');
-var menu = func.fillProperties({
-	groups: nav.lists,
-	seedOnly: build.config.compile.seedOnly
-}); 
-
-var data;
-
-gulp.task("build-lang", function (done) {
-   return gulp.src("./navigation.json")
-     .pipe(map(function(file, done) {
-       var json = JSON.parse(file.contents.toString());
-       var transformedJson = {
-         "nav": json,
-       };
-       file.contents = new Buffer(JSON.stringify(transformedJson));
-       done(null, file);
-     }))
-     .pipe(gulp.dest("./_temp/"));
+var through = require("through2");
+var src, dest;
 
 
-});
+gulp.task('build-lang', function (done) {
+  return src("./../src/nav.json")
+    .pipe(
+      through.obj((file, enc, cb) => {
+        // get content of json file
+        const rawJSON = file.contents.toString();
 
-// push nav objects
-gulp.task("build-lang", function (done) {
-	console.log('==================> Generating test...');
-	//newjsonfiletemplate(menu);
-	console.log(newjsonfiletemplate(menu));
-	done();
-}); 
+        // parse raw json into javscript object
+        const parsed = JSON.parse(rawJSON);
+
+        // transform json into desired shape
+        const transformed = transformJson(parsed);
+
+        // make string from javascript obj
+        const stringified = JSON.stringify(transformed, null, 2);
+
+        // make bufer from string and attach it as current file content
+        file.contents = Buffer.from(stringified);
+
+        // pass transformed file into next gulp pipe
+        cb(null, file);
+      })
+    )
+    .pipe(dest("dest"));
+})
 
 
-var newjsonfiletemplate = function(data){
+// transformation
+function transformJson(input) {
+  const result = { nav: {} };
 
-	data = menu.groups;
+  // read json field by field
+  Object.keys(input).forEach(topLevelKey => {
+    // current object
+    const topLevelItem = input[topLevelKey];
 
+    // in your design topLevelItems are arrays
+    topLevelItem.forEach(menuItem => {
+      if (menuItem.title) {
+        // make url either from item href or title
+        const itemUrl = makeUrl(menuItem.href || menuItem.title);
+        result.nav[itemUrl] = menuItem.title;
+      }
 
-	//data.name
+      // prcoess children
+      if (menuItem.items) {
+        menuItem.items
+          .filter(child => !!child.title) // process only child items with title
+          .forEach(child => {
+            const childUrl = makeUrl(child.href || child.title);
+            result.nav[childUrl] = child.title;
+          });
+      }
+    });
+  });
 
-	return data;
-};*/
+  return result;
+}
+
+// helper func
+function makeUrl(href) {
+  return href
+    .toLowerCase()
+    .replace(/\.html$/, "")
+    .replace(/\s/g, "_");
+}
+
+// export for use in command line
+//exports.json = json;*/
