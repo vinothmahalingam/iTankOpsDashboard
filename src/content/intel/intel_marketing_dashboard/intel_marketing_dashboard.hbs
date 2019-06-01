@@ -1,0 +1,114 @@
+{{#> 
+	layouts/main 
+	title="Marketing Dashboard" 
+	pagename="intel_marketing_dashboard" 
+	category_1="Application Intel"
+	heading="<i class='subheader-icon fal fa-chart-area'></i> Marketing <span class='fw-300'>Dashboard</span>" 
+}}
+
+{{#*inline "head-block"}}
+
+{{/inline}}
+
+{{#*inline "subheader-block"}}  
+
+<div class="subheader-block d-lg-flex align-items-center">
+	<div class="d-inline-flex flex-column justify-content-center mr-3">
+		<span class="fw-300 fs-xs d-block opacity-50">
+			<small>EXPENSES</small> 
+		</span>
+		<span class="fw-500 fs-xl d-block color-primary-500">
+			$47,000
+		</span>
+	</div>
+	<span class="sparklines hidden-lg-down" sparkType="bar" sparkBarColor="#886ab5" sparkHeight="32px" sparkBarWidth="5px" values="3,4,3,6,7,3,3,6,2,6,4"></span>
+</div>
+<div class="subheader-block d-lg-flex align-items-center border-faded border-right-0 border-top-0 border-bottom-0 ml-3 pl-3">
+	<div class="d-inline-flex flex-column justify-content-center mr-3">
+		<span class="fw-300 fs-xs d-block opacity-50">
+			<small>MY PROFITS</small> 
+		</span>
+		<span class="fw-500 fs-xl d-block color-danger-500">
+			$38,500
+		</span>
+	</div>
+	<span class="sparklines hidden-lg-down" sparkType="bar" sparkBarColor="#fe6bb0" sparkHeight="32px" sparkBarWidth="5px" values="1,4,3,6,5,3,9,6,5,9,7"></span>
+</div>
+
+{{/inline}}
+
+{{#*inline "content-block"}}
+
+<div class="row">
+	<div class="col-xl-3">
+		<div class="p-3 bg-primary-300 rounded overflow-hidden position-relative text-white mb-g">
+			<div class="">
+				<h3 class="display-4 d-block l-h-n m-0 fw-500">
+					21.5k
+					<small class="m-0 l-h-n">users signed up</small>
+				</h3>
+				
+			</div>
+			<i class="fal fa-user position-absolute pos-right pos-bottom opacity-15 mb-n1 mr-n1" style="font-size:6rem"></i>
+		</div>
+	</div>
+	<div class="col-xl-3">
+		<div class="p-3 bg-danger-100 rounded overflow-hidden position-relative text-white mb-g">
+			<div class="">
+				<h3 class="display-4 d-block l-h-n m-0 fw-500">
+					21.5k
+					<small class="m-0 l-h-n">users signed up</small>
+				</h3>
+				
+			</div>
+			<i class="fal fa-globe position-absolute pos-right pos-bottom opacity-15 mb-n5 mr-n6" style="font-size:10rem"></i>
+		</div>
+	</div>
+	<div class="col-xl-3">
+		<div class="p-3 bg-success-100 rounded overflow-hidden position-relative text-white mb-g">
+			<div class="">
+				<h3 class="display-4 d-block l-h-n m-0 fw-500">
+					21.5k
+					<small class="m-0 l-h-n">users signed up</small>
+				</h3>
+				
+			</div>
+			<i class="fal fa-globe position-absolute pos-right pos-bottom opacity-15 mb-n5 mr-n6" style="font-size:10rem"></i>
+		</div>
+	</div>
+	<div class="col-xl-3">
+		<div class="p-3 bg-info-100 rounded overflow-hidden position-relative text-white mb-g">
+			<div class="">
+				<h3 class="display-4 d-block l-h-n m-0 fw-500">
+					21.5k
+					<small class="m-0 l-h-n">users signed up</small>
+				</h3>
+				
+			</div>
+			<i class="fal fa-globe position-absolute pos-right pos-bottom opacity-15 mb-n5 mr-n6" style="font-size:10rem"></i>
+		</div>
+	</div>
+</div>
+{{/inline}}
+
+{{#*inline "scripts-block"}}
+
+	<script type="text/javascript">
+	/* Activate smart panels */
+	$('#js-page-content').smartPanel();
+	</script>
+
+	<!-- The order of scripts is irrelevant. Please check out the plugin pages for more details about these plugins below: -->
+	<script src="js/statistics/sparkline/sparkline.bundle.js"></script>
+
+
+	<script>
+		$(document).ready(function () {
+			//$('#js-page-content').smartPanel(); 
+
+       
+		});
+	</script>
+{{/inline}}
+
+{{/layouts/main}}

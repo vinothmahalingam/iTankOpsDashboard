@@ -168,6 +168,61 @@ var initApp = (function(app) {
 	};
 
 	/**
+	 * Factory Reset 
+	 * DOC: Resets all of localstorage
+	 * @return {[type]}
+	 **/
+	app.factoryReset = function () {
+
+		//backdrop sound
+		initApp.playSound('media/sound', 'messagebox')
+
+		if (typeof bootbox  != 'undefined') {
+
+			bootbox.confirm({
+				title: "<i class='fal fa-times-circle text-danger mr-2'></i> You are about to reset all of your localStorage to null state. <span class='fw-500'>&nbsp; Do you wish to continue? &nbsp;</span>?",
+				message: "<span><strong>Warning:</strong> This action is not reversable. You will lose all your layout settings.</span>",
+				centerVertical: true,
+				swapButtonOrder: true,
+				buttons: {
+					confirm: {
+						label: 'Yes',
+						className: 'btn-danger shadow-0'
+					},
+					cancel: {
+						label: 'No',
+						className: 'btn-default'
+					}
+				},
+				className: "modal-alert",
+				closeButton: false,
+				callback: function (result) {
+					if (result == true) {
+						//close panel 
+						localStorage.clear();
+						initApp.resetSettings();
+						location.reload();
+					}
+				}
+			});
+
+		} else {
+
+			if (confirm( 'You are about to reset all of your localStorage to null state. Do you wish to continue?' )) {
+				localStorage.clear();
+				initApp.resetSettings();
+				location.reload();
+			}
+
+		}				
+
+		e.preventDefault();
+
+		if (myapp_config.debugState)
+			console.log("App reset successful");
+	};
+
+	/**
 	 * Access Indicator
 	 * DOC: spinning icon that appears whenever you
 	 * access localstorage or change settings
@@ -942,6 +997,15 @@ var initApp = (function(app) {
 						initApp.resetSettings();
 
 						break;
+
+					/**
+					 * theme 'factory-reset' trigger
+					 **/
+					case ( actiontype === 'factory-reset' ):
+
+						initApp.factoryReset();
+
+						break;	
 
 					/**
 					 * app print

@@ -182,7 +182,14 @@
 			 **/
 			if (!$('#' + self.objId)
 				.length) {
-				alert('Your panel ID is missing!');
+
+				//alert('Your panel ID is missing!');
+               if (typeof bootbox  != 'undefined') {
+               		bootbox.alert("Your panel ID is missing!");
+               } else {
+               		alert('Your panel ID is missing!');
+               }
+
 			}
 
 			/**
@@ -435,7 +442,7 @@
 					/**
 					 * Add a button wrapper to the header.
 					 **/
-					if (lockedButton !== '' || colorButton !== '' || refreshButton !== '' || resetButton !== '') {
+					if (lockedButton !== '' || colorButton !== '' || refreshButton !== '' || resetButton !== '' || customButton !== '') {
 						thisHeader.append('<div class="panel-toolbar"><a href="#" class="btn btn-toolbar-master" data-toggle="dropdown"><i class="fal fa-ellipsis-v"></i></a><div class="dropdown-menu dropdown-menu-animated dropdown-menu-right p-0">' + formatDropdownButtons + '</div></div>');
 					}    
 

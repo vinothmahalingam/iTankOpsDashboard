@@ -32,6 +32,7 @@
 		{
 		  "title": "Build Notes",
 		  "tags": "",
+		  "showOnSeed": false,
 		  "href": "intel_build_notes.html",
 		  "text": "Build Notes",
 		  "span": {
@@ -77,7 +78,7 @@
 		  "title": "Documentation",
 		  "tags": "",
 		  "href": "info_app_docs.html",
-		  "showOnSeed": false,
+		  "showOnSeed": false
 		},
 		{
 		  "title": "Product Licensing",
@@ -316,11 +317,6 @@
 	  },
 	  "items": [
 		{
-		  "title": "Webfonts FAQ",
-		  "tags": "",
-		  "href": "icons_webfonts_faq.html"
-		},
-		{
 		  "title": "FontAwesome",
 		  "tags": "",
 		  "text": "FontAwesome Pro",
@@ -425,11 +421,6 @@
 		  "title": "Validation",
 		  "tags": "",
 		  "href": "form_validation.html"
-		},
-		{
-		  "title": "Samples",
-		  "tags": "",
-		  "href": "form_samples.html"
 		}
 	  ]
 	},
@@ -845,6 +836,7 @@
 		{
 		  "title": "FAQ",
 		  "tags": "",
+		  "showOnSeed": false,
 		  "href": "page_faq.html"
 		},
 		{
@@ -963,11 +955,13 @@
 		{
 		  "title": "Teams",
 		  "tags": "",
+		  "showOnSeed": false,
 		  "href": "page_teams.html"
 		},
 		{
 		  "title": "Timeline",
 		  "tags": "",
+		  "showOnSeed": false,
 		  "href": "page_timeline.html"
 		}
 	  ]

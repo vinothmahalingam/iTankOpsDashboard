@@ -110,7 +110,7 @@
 		<div id="panel-3" class="panel">
 			<div class="panel-hdr"> 
 				<h2>
-					Config <span class="fw-300"><i>Options</i></span> 
+					Scripts  <span class="fw-300"><i>and config</i></span> 
 				</h2>
 				<div class="panel-toolbar">
 					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
@@ -119,44 +119,9 @@
 				</div>
 			</div>
 			<div class="panel-container show">
-				<div class="panel-content">                                 
-					<h5 class="frame-heading">Initialize manually </h5>
-					 <div class="frame-wrap">
-						<pre class="prettyprint">
-$('#slimscroll').slimScroll({
-	position: 'left',
-	height: '300px',
-	railVisible: true,
-	alwaysVisible: true
-}); </pre>          </div>
-					<h5 class="frame-heading">Initliza with data attributes </h5>
-					 <div class="frame-wrap">
-						<pre class="prettyprint">
-&lt;div id="slimscroll" class="custom-scroll" style="height:300px" 
-        data-scrollHeight="300" 
-        data-scrollSize="4px" 
-        data-scrollPosition="right" 
-        data-scrollColor="rgba(0,0,0,0.6)" 
-        data-alwaysVisible="false" 
-        data-distance="4px" 
-        data-railVisible="false" 
-        data-railColor="#fafafa" &gt;
-  &lt;div class="p-3"&gt;
-    ...
-    content...
-    ...
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>          	</div>
-					<h5 class="frame-heading">Destroy </h5>
-					 <div class="frame-wrap">
-						<pre class="prettyprint">
-$('#slimscroll').slimScroll({ destroy: true });
-$('#slimscroll').attr('style', '');</pre>          
-	    			</div>
-
-					<h5 class="frame-heading">Config options </h5>
-					 <div class="frame-wrap">
+				<div class="panel-content">     
+					<h5 class="frame-heading">Config options</h5>
+					<div class="frame-wrap">
 		    			<div class="table-responsive">
 							<table class="table table-hover table-bordered mb-g">
 								<thead class="thead-themed">
@@ -364,6 +329,41 @@ $('#slimscroll').attr('style', '');</pre>
 							</table>
 						</div>
 					</div>
+
+					<h5 class="frame-heading">Initialize manually </h5>
+					 <div class="frame-wrap">
+						<pre class="prettyprint">
+$('#slimscroll').slimScroll({
+	position: 'left',
+	height: '300px',
+	railVisible: true,
+	alwaysVisible: true
+}); </pre>          </div>
+					<h5 class="frame-heading">Initliza with data attributes </h5>
+					 <div class="frame-wrap">
+						<pre class="prettyprint">
+&lt;div id="slimscroll" class="custom-scroll" style="height:300px" 
+        data-scrollHeight="300" 
+        data-scrollSize="4px" 
+        data-scrollPosition="right" 
+        data-scrollColor="rgba(0,0,0,0.6)" 
+        data-alwaysVisible="false" 
+        data-distance="4px" 
+        data-railVisible="false" 
+        data-railColor="#fafafa" &gt;
+  &lt;div class="p-3"&gt;
+    ...
+    content...
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>          	</div>
+					<h5 class="frame-heading">Destroy </h5>
+					 <div class="frame-wrap">
+						<pre class="prettyprint">
+$('#slimscroll').slimScroll({ destroy: true });
+$('#slimscroll').attr('style', '');</pre>          
+	    			</div>
 
 				</div>
 			</div>
