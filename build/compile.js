@@ -329,6 +329,7 @@ module.exports = {
 
 		groups.forEach(function (group) {
 			group.text = group.text || group.title;
+			group.tags = group.tags || "";
 			if (parent === undefined) {
 				group.tags = "".concat( (group.title + " " + group.tags).toLowerCase().replace(/[, ]+/g, " ").trim() );
 				group.i18n = "nav.".concat(group.title.toLowerCase().split(' ').join('_'));
@@ -376,6 +377,7 @@ module.exports = {
 				lines.push("<i class=\"".concat(group.icon, "\"></i>"));
 				lines.push("<span class=\"nav-link-text\" data-i18n=\"".concat(group.i18n, "\">").concat(group.text, "</span>"));
 				if (group.span) {
+					group.span.class = group.span.class || "";
 					lines.push("<span class=\"".concat(group.span.class, "\">").concat(group.span.text, "</span>"));
 				}
 				lines.push('</a>');
@@ -399,6 +401,7 @@ module.exports = {
 					lines.push("<a href=\"".concat(item.href, "\" title=\"").concat(item.title, "\" data-filter-tags=\"").concat(item.tags, "\">"));
 					lines.push("<span class=\"nav-link-text\" data-i18n=\"".concat(item.i18n, "\">").concat(item.text, "</span>"));
 					if (item.span) {
+						item.span.class = item.span.class || "";
 						lines.push("<span class=\"".concat(item.span.class, "\">").concat(item.span.text, "</span>"));
 					}
 					lines.push('</a>');
