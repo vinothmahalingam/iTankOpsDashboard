@@ -30,9 +30,9 @@
 						<label class="form-label" for="basic-addon1">Prepend</label>
 						<div class="input-group">
 							<div class="input-group-prepend">
-								<span class="input-group-text" id="basic-addon1">@</span>
+								<span class="input-group-text">@</span>
 							</div>
-							<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+							<input type="text" id="basic-addon1" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
 						</div>
 						<span class="help-block">Some help content goes here</span>
 					</div>
@@ -40,9 +40,9 @@
 					<div class="form-group">
 						<label class="form-label" for="basic-addon2">Append</label>
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+							<input id="basic-addon2" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
 							<div class="input-group-append">
-								<span class="input-group-text" id="basic-addon2">@example.com</span>
+								<span class="input-group-text">@example.com</span>
 							</div>
 						</div>
 					</div>
@@ -103,17 +103,17 @@
 						<label class="form-label" for="addon-wrapping-left">Prepend with flex-nowrap</label>
 						<div class="input-group flex-nowrap">
 							<div class="input-group-prepend">
-								<span class="input-group-text" id="addon-wrapping-left"><i class="fal fa-user fs-xl"></i></span>
+								<span class="input-group-text"><i class="fal fa-user fs-xl"></i></span>
 							</div>
-							<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping-left">
+							<input id="addon-wrapping-left" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping-left">
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="form-label" for="addon-wrapping-left">Append with flex-nowrap</label>
+						<label class="form-label" for="addon-wrapping-right">Append with flex-nowrap</label>
 						<div class="input-group flex-nowrap">
-							<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping-right">
+							<input id="addon-wrapping-right" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping-right">
 							<div class="input-group-append">
-								<span class="input-group-text" id="addon-wrapping-right"><i class="fal fa-user fs-xl"></i></span>
+								<span class="input-group-text"><i class="fal fa-user fs-xl"></i></span>
 							</div>
 						</div>
 					</div>	
@@ -140,7 +140,7 @@
 						<label class="form-label" for="input-group-lg-size">Large Input Group</label>
 						<div class="input-group input-group-lg">
 							<div class="input-group-prepend">
-								<span class="input-group-text py-1 px-3" id="input-group-lg-size">
+								<span class="input-group-text py-1 px-3">
 									<span class="icon-stack" style="font-size: 2rem">
 										<i class="base-2 icon-stack-3x color-success-500"></i>
 										<i class="base-10 text-white icon-stack-1x"></i>
@@ -148,7 +148,7 @@
 									</span>
 								</span>
 							</div>
-							<input type="text" class="form-control" placeholder="Large size" aria-describedby="input-group-lg-size">
+							<input id="input-group-lg-size" type="text" class="form-control" placeholder="Large size" aria-describedby="input-group-lg-size">
 						</div>
 						<span class="help-block">Some help content goes here</span>
 					</div>
@@ -163,13 +163,13 @@
 									<i class="fal fa-percent"></i>
 								</span>
 							</div>
-							<input type="text" class="form-control" placeholder="Large size" aria-describedby="input-group-lg-size-2">
+							<input id="input-group-lg-size-2" type="text" class="form-control" placeholder="Large size" aria-describedby="input-group-lg-size-2">
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="form-label" for="input-group-sm-size">Small Input Group</label>
 						<div class="input-group input-group-sm">
-							<input type="text" class="form-control" placeholder="Small size" aria-describedby="input-group-sm-size">
+							<input id="input-group-sm-size" type="text" class="form-control" placeholder="Small size" aria-describedby="input-group-sm-size">
 							<div class="input-group-append">
 								<span class="input-group-text">
 									<i class="fal fa-undo"></i>
@@ -178,14 +178,14 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="form-label" for="input-group-sm-size">Small Input Group</label>
+						<label class="form-label" for="input-group-sm-size-2">Small Input Group</label>
 						<div class="input-group input-group-sm">
 							<div class="input-group-prepend">
 								<span class="input-group-text">
 									<i class="fal fa-undo"></i>
 								</span>
 							</div>
-							<input type="text" class="form-control" placeholder="Small size" aria-describedby="input-group-sm-size">
+							<input id="input-group-sm-size-2" type="text" class="form-control" placeholder="Small size" aria-describedby="input-group-sm-size-2">
 						</div>
 					</div>
 				</div>
@@ -259,9 +259,9 @@
 					</div>
 
 					<div class="form-group">
-						<label class="form-label" for="checkbox-group-3">Checkbox switch</label>
+						<label class="form-label" for="checkbox-group-4">Checkbox switch</label>
 						<div class="input-group">
-							<input type="text" class="form-control" aria-label="Text input with checkbox" id="checkbox-group-3" placeholder="Record title">
+							<input type="text" class="form-control" aria-label="Text input with checkbox" id="checkbox-group-4" placeholder="Record title">
 							<div class="input-group-append">
 								<div class="input-group-text">
 									<div class="custom-control d-flex custom-switch">
@@ -301,7 +301,7 @@
 					</div>
 
 					<div class="form-group">
-						<label class="form-label" for="radio-group-1">Radio generic</label>
+						<label class="form-label" for="radio-group-2">Radio generic</label>
 						<div class="input-group">
 							<div class="input-group-prepend">
 								<div class="input-group-text">
@@ -314,7 +314,7 @@
 									<i class="fal fa-dollar-sign"></i>
 								</div>
 							</div>
-							<input type="text" class="form-control" aria-label="Text input with radio button" id="radio-group-1">
+							<input type="text" class="form-control" aria-label="Text input with radio button" id="radio-group-2">
 							<div class="input-group-append">
 								<div class="input-group-text">
 									<div class="custom-control custom-radio">
@@ -550,7 +550,7 @@
 							<div class="input-group-prepend">
 								<button class="btn btn-outline-default" type="button">Go</button>
 							</div>
-							<input type="text" class="form-control" placeholder="Search for anything..." aria-label="Example text with two button addons" aria-describedby="button-addon3">
+							<input id="button-addon3" type="text" class="form-control" placeholder="Search for anything..." aria-label="Example text with two button addons" aria-describedby="button-addon3">
 							<div class="input-group-append">
 								<button class="btn btn-outline-default" type="button">Go</button>
 							</div>
@@ -560,9 +560,9 @@
 						<label class="form-label" for="button-addon4">Button on left with icon</label>								
 						<div class="input-group">
 							<div class="input-group-prepend">
-								<button class="btn btn-info" type="button" id="button-addon1"><i class="fal fa-search"></i></button>
+								<button class="btn btn-info" type="button"><i class="fal fa-search"></i></button>
 							</div>
-							<input type="text" class="form-control" placeholder="Search anything..." aria-label="Example text with button addon" aria-describedby="button-addon4">
+							<input id="button-addon4" type="text" class="form-control" placeholder="Search anything..." aria-label="Example text with button addon" aria-describedby="button-addon4">
 						</div>
 					</div>	
 					<div class="form-group">

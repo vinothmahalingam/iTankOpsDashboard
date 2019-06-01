@@ -12,11 +12,11 @@
 <link rel="stylesheet" media="screen, print" href="css/theme-demo.css">
 {{/inline}}
 
-{{#*inline "subheader-block"}}
+{{!-- {{#*inline "subheader-block"}}
 <div class="subheader-block">
   <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false" data-action="toggle" data-class="mod-panel-clean">Toggle clean Panels</button>
 </div>
-{{/inline}}
+{{/inline}} --}}
 
 {{#*inline "content-block"}}
 
@@ -422,7 +422,7 @@
                 <span class="fw-500 text-warning">false</span> or <span class="fw-500 text-success">blank</span>
               </td>
               <td>
-                Prevent a widget from having a toggle button (can only be used with the value 'false').
+                Prevent a panel from having a toggle button (can only be used with the value 'false').
               </td>
             </tr>
             <tr>
@@ -433,7 +433,7 @@
                 <span class="fw-500 text-warning">false</span> or <span class="fw-500 text-success">blank</span>
               </td>
               <td>
-                Height in pixels of the visible scroll area. Also supports auto to set the height to same as parent container. Default: 250px
+                Prevent a panel from having a fullscreen button (can only be used with the value 'false').
               </td>
             </tr>
             <tr>
@@ -444,7 +444,7 @@
                 <span class="fw-500 text-warning">false</span> or <span class="fw-500 text-success">blank</span>
               </td>
               <td>
-                Width in pixels of the scrollbar. Default: 7px
+                Prevent a panel from having a delete button (can only be used with the value 'false').
               </td>
             </tr>
             <tr>
@@ -455,7 +455,7 @@
                 <span class="fw-500 text-warning">false</span> or <span class="fw-500 text-success">blank</span>
               </td>
               <td>
-                left or right. Sets the position of the scrollbar. Default: right
+                Prevent a panel from having a lock button (can only be used with the value 'false').
               </td>
             </tr>
             <tr>
@@ -466,7 +466,18 @@
                 <span class="fw-500 text-warning">false</span> or <span class="fw-500 text-success">blank</span>
               </td>
               <td>
-                Color in hex of the scrollbar. Default: #000000
+                Prevent a panel from having a refresh button (can only be used with the value 'false').
+              </td>
+            </tr>
+            <tr>
+              <td>
+                 data-refresh-timer 
+              </td>
+              <td>
+                <span class="fw-500 text-info">int</span>
+              </td>
+              <td>
+                Set timer for refresh panel. See <code>data-panel-refresh</code> 
               </td>
             </tr>
             <tr>
@@ -477,7 +488,7 @@
                 <span class="fw-500 text-warning">false</span> or <span class="fw-500 text-success">blank</span>
               </td>
               <td>
-                Disables scrollbar hide. Default: false
+                Prevent a panel from having a reset button (can only be used with the value 'false').
               </td>
             </tr>
             <tr>
@@ -488,7 +499,7 @@
                 <span class="fw-500 text-warning">false</span> or <span class="fw-500 text-success">blank</span>
               </td>
               <td>
-                Distance in pixels from the edge of the parent element where scrollbar should appear. It is used together with position property. Default:1px
+                Prevent a panel from having color selection option (can only be used with the value 'false').
               </td>
             </tr>
             <tr>
@@ -499,7 +510,7 @@
                 <span class="fw-500 text-warning">false</span> or <span class="fw-500 text-success">blank</span>
               </td>
               <td>
-                top or bottom or $(selector) - defines initial position of the scrollbar. When set to bottom it automatically scrolls to the bottom of the scrollable container. When HTML element is passed, slimScroll defaults to offsetTop of this element. Default: top.
+                Prevent a panel from having a custom button (can only be used with the value 'false').
               </td>
             </tr>
             <tr>
@@ -510,12 +521,12 @@
                 <span class="fw-500 text-warning">false</span> or <span class="fw-500 text-success">blank</span>
               </td>
               <td>
-                Integer value for mouse wheel delta. Default: 20
+                Restrict a panel's sorting feature (can only be used with the value 'false').
               </td>
             </tr>
             <tr>
               <td colspan="3" class="fw-500">
-                These HTML5 attributes are used as individual panel options. Main options can be changed in the panel plugin it self. Notice: data attributes can only have 1 boolan value(see above) or none!
+                These HTML5 attributes are used as individual panel options. Main options can be changed in the panel plugin it self. Notice: data attributes can only have 1 boolan value or none!
               </td>
             </tr>
           </tbody>
