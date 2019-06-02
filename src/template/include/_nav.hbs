@@ -1,5 +1,5 @@
 <ul id="js-nav-menu" class="nav-menu">
-	<li {{#is pagename "in" "intel_introduction"}}class="active open" {{/is}}>
+	<li {{#is pagename "in" "intel_introduction,intel_privacy"}}class="active open" {{/is}}>
 		<a href="#" title="Application Intel" data-filter-tags="application intel">
 			<i class="fal fa-info-circle"></i>
 			<span class="nav-link-text" data-i18n="nav.application_intel">Application Intel</span>
@@ -8,6 +8,11 @@
 			<li {{#is pagename "===" "intel_introduction"}}class="active" {{/is}}>
 				<a href="intel_introduction.html" title="Introduction" data-filter-tags="application intel introduction">
 					<span class="nav-link-text" data-i18n="nav.application_intel_introduction">Introduction</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "intel_privacy"}}class="active" {{/is}}>
+				<a href="intel_privacy.html" title="Privacy" data-filter-tags="application intel privacy">
+					<span class="nav-link-text" data-i18n="nav.application_intel_privacy">Privacy</span>
 				</a>
 			</li>
 		</ul>

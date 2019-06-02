@@ -25,6 +25,10 @@
 					"href": "intel_introduction.html"
 				},
 				{
+					"title": "Privacy",
+					"href": "intel_privacy.html"
+				},
+				{
 					"title": "Build Notes",
 					"showOnSeed": false,
 					"href": "intel_build_notes.html",

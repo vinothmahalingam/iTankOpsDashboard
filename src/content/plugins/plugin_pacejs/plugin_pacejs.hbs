@@ -13,144 +13,28 @@
 
 {{#*inline "content-block"}}
 
-
-<div class="alert alert-primary alert-dismissible">
-	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">
-            <i class="fal fa-times"></i>
-        </span>
-    </button>
+<div class="alert alert-primary">
     <div class="d-flex flex-start w-100">
-        <div class="mr-2">
+        <div class="mr-2 hidden-md-down">
             <span class="icon-stack icon-stack-lg">
-				<i class="base-2 icon-stack-3x color-primary-400"></i>
-				<i class="base-3 icon-stack-2x color-primary-600 opacity-70"></i>
-				<i class="fal fa-lightbulb icon-stack-1x text-white opacity-90"></i>
+                <i class="base base-6 icon-stack-3x opacity-100 color-primary-500"></i>
+                <i class="base base-10 icon-stack-2x opacity-100 color-primary-300 fa-flip-vertical"></i>
+                <i class="ni ni-blog-read icon-stack-1x opacity-100 color-white"></i>
             </span>
         </div>
         <div class="d-flex flex-fill">
             <div class="flex-fill">
                 <span class="h5">Important information</span>
-                <br>
-                This plugin is not required but <strong>highly recommended</strong>. If you decide to remove PaceJS from core, Internet Explorer may have some CSS issues during page load. Some animations will execute before a page is fully loaded, resulting 'jumpy / jerky' animations.
+                <p>This plugin is not required but <strong>highly recommended</strong>. If you decide to remove PaceJS from core, Internet Explorer may have some CSS issues during page load. Some animations will execute before a page is fully loaded, resulting 'jumpy / jerky' animations.</p>
+                <p class="m-0">
+                    Find in-depth, guidelines, tutorials and more on Pace's <a href="https://github.hubspot.com/pace/" target="_blank">Official Documentation</a>
+                </p>
             </div>
         </div>
     </div>
 </div>
-<div class="row">
-	<div class="col-xl-12">
-		<div id="panel-1" class="panel">
-			<div class="panel-hdr">	
-				<h2>
-					Core <span class="fw-300"><i>API</i></span> 
-				</h2>
-				<div class="panel-toolbar">
-					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
-					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
-					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-offset="0,10" data-original-title="Close"></button>
-				</div>
-			</div>
-			<div class="panel-container show">
-				<div class="panel-content">									
-					<div class="panel-tag">
-						{{app-name}} comes with integrated and customized styles for PaceJS plugin. PaceJS in short, improves usability from an user's point of view
-					</div>
-					<div class="row">
-						<div class="col-xl-12">
-							<table class="table table-bordered mb-0">
-								<thead>
-									<tr>
-										<th style="width:150px">
-											Methods
-										</th>
-										<th>
-											Description
-										</th>
-										<th>
-											Return
-										</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-											<code>Pace.start</code>
-										</td>
-										<td class="fs-sm">
-											Show the progress bar and start updating. Called automatically if you don't use AMD or CommonJS.
-										</td>
-										<td>
-											b
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<code>Pace.restart</code>
-										</td>
-										<td class="fs-sm">
-											 Show the progress bar if it's hidden and start reporting the progress from scratch.
-										</td>
-										<td>
-											b
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<code>Pace.stop</code>
-										</td>
-										<td class="fs-sm">
-											Hide the progress bar and stop updating it
-										</td>
-										<td>
-											b
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<code>Pace.track</code>
-										</td>
-										<td class="fs-sm">
-											Explicitly track one or more requests, see Tracking below
-										</td>
-										<td>
-											b
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<code>Pace.ignore</code>
-										</td>
-										<td class="fs-sm">
-											Expliticly ignore one or more requests, see Tracking below
-										</td>
-										<td>
-											b
-										</td>
-									</tr>
-								</tbody>
-							</table>			
 
-						</div>				
-						{{!-- <div class="col-xl-6">
-							<h5 class="frame-heading">
-								Dependencies
-							</h5>	
-							<div class="frame-wrap">
-		<pre class="prettyprint rounded">&lt;link rel="stylesheet" media="screen, print" href="css/myapp.css">
-&lt;script src="vendor/js/pace.min.js">&lt;script></pre>
-							</div>				
-							<h5 class="frame-heading">
-								Documentation
-							</h5>	
-							<div class="frame-wrap">	
-								<a href="http://github.hubspot.com/pace/" target="_blank">http://github.hubspot.com/pace/</a>
-							</div>
-						</div> --}}
-					</div>
-				</div>
-			</div>
-		</div>		
-	</div>
+<div class="row">
 	<div class="col-xl-6">
 		<div id="panel-2" class="panel">
 			<div class="panel-hdr">	
@@ -236,6 +120,110 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="col-xl-12">
+		<div id="panel-1" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Core <span class="fw-300"><i>API</i></span> 
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-offset="0,10" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<div class="panel-tag">
+						{{app-name}} comes with integrated and customized styles for PaceJS plugin. PaceJS in short, improves usability from an user's point of view
+					</div>
+					<div class="row">
+						<div class="col-xl-12">
+							<h5 class="frame-heading">Methods</h5>
+							<div class="frame-wrap">
+								<table class="table table-bordered mb-0">
+									<thead>
+										<tr>
+											<th style="width:150px">
+												Methods
+											</th>
+											<th>
+												Description
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<code>Pace.start</code>
+											</td>
+											<td class="fs-sm">
+												Show the progress bar and start updating. Called automatically if you don't use AMD or CommonJS.
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<code>Pace.restart</code>
+											</td>
+											<td class="fs-sm">
+												 Show the progress bar if it's hidden and start reporting the progress from scratch.
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<code>Pace.stop</code>
+											</td>
+											<td class="fs-sm">
+												Hide the progress bar and stop updating it
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<code>Pace.track</code>
+											</td>
+											<td class="fs-sm">
+												Explicitly track one or more requests, see Tracking below
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<code>Pace.ignore</code>
+											</td>
+											<td class="fs-sm">
+												Expliticly ignore one or more requests, see Tracking below
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>					
+							<h5 class="frame-heading">Configuration
+								<small>
+								Pace is fully automatic, no configuration is necessary to get started. If you would like to make some tweaks, here's how. You can set <code>window.paceOptions</code> before bringing in the file:</small>
+							</h5>
+							<div class="frame-wrap">					
+<pre class="prettyprint">
+paceOptions = {
+  // Disable the 'elements' source
+  elements: false,
+
+  // Only show the progress on regular and ajax-y page navigation,
+  // not every request
+  restartOnRequestAfter: false
+}
+</pre>
+							</div>
+							<h5 class="frame-heading">You can also put options on the script tag</h5>
+							<div class="frame-wrap">	
+<pre class="prettyprint">
+&lt;script data-pace-options='{ "ajax": false }' src='pace.js'&gt;&lt;/script&gt;
+</pre>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
 	</div>
 </div>
 
