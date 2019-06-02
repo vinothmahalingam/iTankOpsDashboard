@@ -21,7 +21,7 @@
 			"jsSourcemaps": false,
 			"cssSourcemaps": true,
 			"autoprefixer": true,
-			"seedOnly": false
+			"seedOnly": true
 		},
 		"path": {
 			"src": "./src",

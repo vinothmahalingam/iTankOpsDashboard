@@ -175,23 +175,25 @@ var initApp = (function(app) {
 	app.factoryReset = function () {
 
 		//backdrop sound
-		initApp.playSound('media/sound', 'messagebox')
+		initApp.playSound('media/sound', 'messagebox');
+		//hide settings modal to bootstrap avoid modal bug
+		$('.js-modal-settings').modal('hide');
 
 		if (typeof bootbox  != 'undefined') {
 
 			bootbox.confirm({
-				title: "<i class='fal fa-times-circle text-danger mr-2'></i> You are about to reset all of your localStorage to null state. <span class='fw-500'>&nbsp; Do you wish to continue? &nbsp;</span>?",
+				title: "<i class='fal fa-exclamation-triangle text-warning mr-2'></i> You are about to reset all of your localStorage settings",
 				message: "<span><strong>Warning:</strong> This action is not reversable. You will lose all your layout settings.</span>",
 				centerVertical: true,
 				swapButtonOrder: true,
 				buttons: {
 					confirm: {
-						label: 'Yes',
-						className: 'btn-danger shadow-0'
+						label: 'Factory Reset',
+						className: 'btn-warning shadow-0'
 					},
 					cancel: {
-						label: 'No',
-						className: 'btn-default'
+						label: 'Cancel',
+						className: 'btn-success'
 					}
 				},
 				className: "modal-alert",
@@ -216,7 +218,7 @@ var initApp = (function(app) {
 
 		}				
 
-		e.preventDefault();
+		//e.preventDefault();
 
 		if (myapp_config.debugState)
 			console.log("App reset successful");
