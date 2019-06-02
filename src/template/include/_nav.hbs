@@ -735,7 +735,7 @@
 		</ul>
 	</li>
 	<li class="nav-title">Layouts & Apps</li>
-	<li {{#is pagename "in" "page_chat,page_contacts,page_faq,page_invoice,page_pricing_tables,page_profile,page_search,page_teams,page_timeline,page_forum_list,page_forum_threads,page_forum_discussion,page_inbox,page_inbox_read,page_inbox_write,page_forget,page_locked,page_login,page_register,page_error,page_error_404,page_error_announced"}}class="active open" {{/is}}>
+	<li {{#is pagename "in" "page_chat,page_contacts,page_faq,page_invoice,page_pricing_tables,page_profile,page_search,page_teams,page_timeline,page_forum_list,page_forum_threads,page_forum_discussion,page_inbox,page_inbox_read,page_inbox_write,page_forget,page_locked,page_login,page_login-alt,page_register,page_confirmation,page_error,page_error_404,page_error_announced"}}class="active open" {{/is}}>
 		<a href="#" title="Pages" data-filter-tags="pages">
 			<i class="fal fa-plus-circle"></i>
 			<span class="nav-link-text" data-i18n="nav.pages">Page Views</span>
@@ -805,7 +805,7 @@
 					<span class="nav-link-text" data-i18n="nav.pages_invoice_(printable)">Invoice (printable)</span>
 				</a>
 			</li>
-			<li {{#is pagename "in" "page_forget,page_locked,page_login,page_register"}}class="active open" {{/is}}>
+			<li {{#is pagename "in" "page_forget,page_locked,page_login,page_login-alt,page_register,page_confirmation"}}class="active open" {{/is}}>
 				<a href="javascript:void(0);" title="Authentication" data-filter-tags="pages authentication">
 					<span class="nav-link-text" data-i18n="nav.pages_authentication">Authentication</span>
 				</a>
@@ -825,9 +825,19 @@
 							<span class="nav-link-text" data-i18n="nav.pages_authentication_login">Login</span>
 						</a>
 					</li>
+					<li {{#is pagename "===" "page_login-alt"}}class="active" {{/is}}>
+						<a href="page_login-alt.html" title="Login Alt" data-filter-tags="pages authentication login alt">
+							<span class="nav-link-text" data-i18n="nav.pages_authentication_login_alt">Login Alt</span>
+						</a>
+					</li>
 					<li {{#is pagename "===" "page_register"}}class="active" {{/is}}>
 						<a href="page_register.html" title="Register" data-filter-tags="pages authentication register">
 							<span class="nav-link-text" data-i18n="nav.pages_authentication_register">Register</span>
+						</a>
+					</li>
+					<li {{#is pagename "===" "page_confirmation"}}class="active" {{/is}}>
+						<a href="page_confirmation.html" title="Confirmation" data-filter-tags="pages authentication confirmation">
+							<span class="nav-link-text" data-i18n="nav.pages_authentication_confirmation">Confirmation</span>
 						</a>
 					</li>
 				</ul>

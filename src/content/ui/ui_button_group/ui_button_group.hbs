@@ -203,7 +203,7 @@
 
 						<div class="btn-group" role="group">
 							<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Dropdown</button>
-							<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+							<div class="dropdown-menu">
 								<a class="dropdown-item" href="javascript:void(0)">Dropdown link</a>
 								<a class="dropdown-item" href="javascript:void(0)">Dropdown link</a>
 							</div>
@@ -230,7 +230,7 @@
 						<code>.button</code> styles can be applied to other elements, such as <code>&lt;label&gt;</code>s, to provide checkbox or radio style button toggling. Add <code>data-toggle="buttons"</code> to a <code>.btn-group</code> containing those modified buttons to enable their toggling behavior via JavaScript and add <code>.btn-group-toggle</code> to style the <code>&lt;input&gt;</code>s within your buttons. <strong>Note that you can create single input-powered buttons or groups of them.</strong>
 					</div>
 					<div class="alert alert-info">
-						The checked state for these buttons is <strong>only updated via <code>click</code> event</strong> on the button. If you use another method to update the input—e.g., with <cod>&lt;input type="reset"&gt;</code> or by manually applying the input’s <code>checked</code> property—you’ll need to toggle <code>.active</code> on the <code>&lt;label&gt;</code> manually.
+						The checked state for these buttons is <strong>only updated via <code>click</code> event</strong> on the button. If you use another method to update the input—e.g., with <code>&lt;input type="reset"&gt;</code> or by manually applying the input’s <code>checked</code> property—you’ll need to toggle <code>.active</code> on the <code>&lt;label&gt;</code> manually.
 					</div>
 					<h5 class="frame-heading">
 						Checkbox
@@ -238,13 +238,13 @@
 					<div class="frame-wrap">
 						<div class="btn-group btn-group-toggle" data-toggle="buttons">
 							<label class="btn btn-primary active">
-								<input type="checkbox" name="options" id="check1" autocomplete="off" checked> Checked
+								<input type="checkbox" name="options" id="check1" checked="checked"> Checked
 							</label>
 							<label class="btn btn-primary">
-								<input type="checkbox" name="options" id="check2" autocomplete="off"> Unchecked
+								<input type="checkbox" name="options" id="check2"> Unchecked
 							</label>
 							<label class="btn btn-primary">
-								<input type="checkbox" name="options" id="check3" autocomplete="off"> Unchecked
+								<input type="checkbox" name="options" id="check3"> Unchecked
 							</label>
 						</div>
 					</div>
@@ -254,13 +254,13 @@
 					<div class="frame-wrap mb-0">
 						<div class="btn-group btn-group-toggle" data-toggle="buttons">
 							<label class="btn btn-info active">
-								<input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+								<input type="radio" name="options" id="option1" checked="checked"> Active
 							</label>
 							<label class="btn btn-info">
-								<input type="radio" name="options" id="option2" autocomplete="off"> Radio
+								<input type="radio" name="options" id="option2"> Radio
 							</label>
 							<label class="btn btn-info">
-								<input type="radio" name="options" id="option3" autocomplete="off"> Radio
+								<input type="radio" name="options" id="option3"> Radio
 							</label>
 						</div>
 					</div>

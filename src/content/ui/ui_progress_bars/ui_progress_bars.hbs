@@ -11,10 +11,9 @@
 
 {{#*inline "subheader-block"}}
 <div class="subheader-block">
-	<div class="custom-control d-flex custom-switch hidden-sm-down">
-		<input id="eventlog-switch" type="checkbox" class="custom-control-input">
-		<label class="custom-control-label fw-500" for="eventlog-switch" checked="checked" data-action="toggle" data-class="justify-content-end" data-target=".progress">Reverse polarity</label>
-	</div>
+
+	<a href="javascript:void(0)" class="btn btn-sm btn-outline-primary" data-action="toggle" data-class="justify-content-end" data-target=".progress">Reverse polarity</a>
+
 </div>
 {{/inline}}
 
@@ -292,7 +291,7 @@
 							<div class="progress-bar progress-bar-striped bg-primary-500" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
 						</div>
 					</div>
-					<button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" data-action="toggle" data-class="progress-bar-animated" data-target=".js-progress-animated .progress-bar">
+					<button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false" data-action="toggle" data-class="progress-bar-animated" data-target=".js-progress-animated .progress-bar">
 						Toggle animation
 					</button>
 				</div>

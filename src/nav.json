@@ -766,8 +766,16 @@
 							"href": "page_login.html"
 						},
 						{
+							"title": "Login Alt",
+							"href": "page_login-alt.html"
+						},
+						{
 							"title": "Register",
 							"href": "page_register.html"
+						},
+						{
+							"title": "Confirmation",
+							"href": "page_confirmation.html"
 						}
 					]
 				},

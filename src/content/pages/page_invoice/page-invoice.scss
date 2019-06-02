@@ -58,7 +58,7 @@
 	.col-sm-1 {
 		width: 8.33333333%;
 	}
-	page[size="A4"] {
+	div[data-size="A4"] {
 		margin: 0;
 		box-shadow: 0;
 		padding: 3em 5em !important;
@@ -81,7 +81,7 @@
 	margin: 0;
 }
 
-page[size="A4"] {
+div[data-size="A4"] {
 	background: white;
 	display: block;
 	margin: 0 auto;
@@ -91,4 +91,12 @@ page[size="A4"] {
 	background-size: cover;
 	padding: 4rem;
 	position: relative;
+}
+
+@media only screen and ( max-width: 992px ){
+	div[data-size="A4"],
+	.container {
+		padding: 0;
+		box-shadow: none;
+	}
 }
