@@ -803,6 +803,7 @@
 				},
 				{
 					"title": "Pricing Tables",
+					"showOnSeed": false,
 					"href": "page_pricing_tables.html"
 				},
 				{
