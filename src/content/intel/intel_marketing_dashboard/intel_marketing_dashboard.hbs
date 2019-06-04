@@ -4,6 +4,7 @@
 	pagename="intel_marketing_dashboard" 
 	category_1="Application Intel"
 	heading="<i class='subheader-icon fal fa-chart-area'></i> Marketing <span class='fw-300'>Dashboard</span>" 
+	pagedescription="Marketing results and profits for 2020"
 }}
 
 {{#*inline "head-block"}}
@@ -12,7 +13,7 @@
 
 {{#*inline "subheader-block"}}  
 
-<div class="subheader-block d-lg-flex align-items-center">
+{{!-- <div class="subheader-block d-lg-flex align-items-center">
 	<div class="d-inline-flex flex-column justify-content-center mr-3">
 		<span class="fw-300 fs-xs d-block opacity-50">
 			<small>EXPENSES</small> 
@@ -34,61 +35,124 @@
 	</div>
 	<span class="sparklines hidden-lg-down" sparkType="bar" sparkBarColor="#fe6bb0" sparkHeight="32px" sparkBarWidth="5px" values="1,4,3,6,5,3,9,6,5,9,7"></span>
 </div>
-
+ --}}
 {{/inline}}
 
 {{#*inline "content-block"}}
 
 <div class="row">
-	<div class="col-xl-3">
+	<div class="col-sm-6 col-xl-3">
 		<div class="p-3 bg-primary-300 rounded overflow-hidden position-relative text-white mb-g">
 			<div class="">
 				<h3 class="display-4 d-block l-h-n m-0 fw-500">
 					21.5k
 					<small class="m-0 l-h-n">users signed up</small>
 				</h3>
-				
 			</div>
 			<i class="fal fa-user position-absolute pos-right pos-bottom opacity-15 mb-n1 mr-n1" style="font-size:6rem"></i>
 		</div>
 	</div>
-	<div class="col-xl-3">
-		<div class="p-3 bg-danger-100 rounded overflow-hidden position-relative text-white mb-g">
+	<div class="col-sm-6 col-xl-3">
+		<div class="p-3 bg-warning-400 rounded overflow-hidden position-relative text-white mb-g">
 			<div class="">
 				<h3 class="display-4 d-block l-h-n m-0 fw-500">
-					21.5k
-					<small class="m-0 l-h-n">users signed up</small>
+				   $10,203
+					<small class="m-0 l-h-n">Visual Index Figure</small>
 				</h3>
-				
 			</div>
-			<i class="fal fa-globe position-absolute pos-right pos-bottom opacity-15 mb-n5 mr-n6" style="font-size:10rem"></i>
+			<i class="fal fa-gem position-absolute pos-right pos-bottom opacity-15  mb-n1 mr-n4" style="font-size: 6rem;"></i>
 		</div>
 	</div>
-	<div class="col-xl-3">
-		<div class="p-3 bg-success-100 rounded overflow-hidden position-relative text-white mb-g">
+	<div class="col-sm-6 col-xl-3">
+		<div class="p-3 bg-success-200 rounded overflow-hidden position-relative text-white mb-g">
 			<div class="">
 				<h3 class="display-4 d-block l-h-n m-0 fw-500">
-					21.5k
-					<small class="m-0 l-h-n">users signed up</small>
+					- 103.72
+					<small class="m-0 l-h-n">Offset Balance Ratio</small>
 				</h3>
-				
 			</div>
-			<i class="fal fa-globe position-absolute pos-right pos-bottom opacity-15 mb-n5 mr-n6" style="font-size:10rem"></i>
+			<i class="fal fa-lightbulb position-absolute pos-right pos-bottom opacity-15 mb-n5 mr-n6" style="font-size: 8rem;"></i>
 		</div>
 	</div>
-	<div class="col-xl-3">
-		<div class="p-3 bg-info-100 rounded overflow-hidden position-relative text-white mb-g">
+	<div class="col-sm-6 col-xl-3">
+		<div class="p-3 bg-info-200 rounded overflow-hidden position-relative text-white mb-g">
 			<div class="">
 				<h3 class="display-4 d-block l-h-n m-0 fw-500">
-					21.5k
-					<small class="m-0 l-h-n">users signed up</small>
+				   +40%
+					<small class="m-0 l-h-n">Product level increase</small>
 				</h3>
-				
 			</div>
-			<i class="fal fa-globe position-absolute pos-right pos-bottom opacity-15 mb-n5 mr-n6" style="font-size:10rem"></i>
+			<i class="fal fa-globe position-absolute pos-right pos-bottom opacity-15 mb-n1 mr-n4" style="font-size: 6rem;"></i>
 		</div>
 	</div>
 </div>
+
+<div class="row">
+	<div class="col-xl-12">
+		<div id="panel-1" class="panel">
+			<div class="panel-hdr"> 
+				<h2>
+					Marketing profits
+				</h2>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content bg-subtlelight-fade">
+					<div id="js-checkbox-toggles" class="d-flex mb-3">
+						<div class="custom-control custom-switch mr-2">
+							<input type="checkbox" class="custom-control-input" name="gra-0" id="gra-0" checked="checked">
+							<label class="custom-control-label" for="gra-0">Target Profit</label>
+						</div>
+						<div class="custom-control custom-switch mr-2">
+							<input type="checkbox" class="custom-control-input" name="gra-1" id="gra-1" checked="checked">
+							<label class="custom-control-label" for="gra-1">Actual Profit</label>
+						</div>
+						<div class="custom-control custom-switch mr-2">
+							<input type="checkbox" class="custom-control-input" name="gra-2" id="gra-2" checked="checked">
+							<label class="custom-control-label" for="gra-2">User Signups</label>
+						</div>
+					</div>
+					<div id="flot-toggles" class="w-100 mt-4" style="height: 300px"></div>
+				</div> 
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-6">
+		<div id="panel-2" class="panel panel-locked" data-panel-sortable data-panel-collapsed data-panel-fullscreen data-panel-close data-panel-locked data-panel-refresh data-panel-reset data-panel-color>
+			<div class="panel-hdr">	
+				<h2>
+					Flot <span class="fw-300"><i>Area</i></span> 
+				</h2>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content poisition-relative">		
+					<div class="p-1 position-absolute pos-right pos-top mt-3 mr-3 z-index-cloud">
+						<div class="js-easy-pie-chart color-primary-300 position-relative d-inline-flex align-items-center justify-content-center" data-percent="35" data-piesize="95" data-linewidth="10" data-scalelength="5">
+							<div class="js-easy-pie-chart color-success-200 position-relative position-absolute pos-left pos-right pos-top pos-bottom d-flex align-items-center justify-content-center" data-percent="65" data-piesize="60" data-linewidth="5" data-scalelength="1" data-scalecolor="#fff">
+								<div class="position-absolute fw-500 fs-xl text-primary">78</div>
+							</div>	
+						</div>
+					</div>							
+					<div id="flot-area" style="width:100%; height:300px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-6">
+		<div id="panel-2" class="panel panel-locked" data-panel-sortable data-panel-collapsed data-panel-fullscreen data-panel-close data-panel-locked data-panel-refresh data-panel-reset data-panel-color>
+			<div class="panel-hdr">	
+				<h2>
+					Flot <span class="fw-300"><i>Area</i></span> 
+				</h2>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content poisition-relative">		
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 {{/inline}}
 
 {{#*inline "scripts-block"}}
@@ -99,14 +163,231 @@
 	</script>
 
 	<!-- The order of scripts is irrelevant. Please check out the plugin pages for more details about these plugins below: -->
+	<script src="js/statistics/easypiechart/easypiechart.bundle.js"></script>
 	<script src="js/statistics/sparkline/sparkline.bundle.js"></script>
-
+	<script src="js/statistics/flot/flot.bundle.js"></script>
 
 	<script>
-		$(document).ready(function () {
-			//$('#js-page-content').smartPanel(); 
 
-       
+		/* defined datas */
+		var dataTargetProfit = [
+			[1354586000000, 153],
+			[1364587000000, 658],
+			[1374588000000, 198],
+			[1384589000000, 663],
+			[1394590000000, 801],
+			[1404591000000, 1080],
+			[1414592000000, 353],
+			[1424593000000, 749],
+			[1434594000000, 523],
+			[1444595000000, 258],
+			[1454596000000, 688],
+			[1464597000000, 364]
+		]
+		var dataProfit = [
+			[1354586000000, 53],
+			[1364587000000, 65],
+			[1374588000000, 98],
+			[1384589000000, 83],
+			[1394590000000, 980],
+			[1404591000000, 808],
+			[1414592000000, 720],
+			[1424593000000, 674],
+			[1434594000000, 23],
+			[1444595000000, 79],
+			[1454596000000, 88],
+			[1464597000000, 36]
+		]
+		var dataSignups = [
+			[1354586000000, 647],
+			[1364587000000, 435],
+			[1374588000000, 784],
+			[1384589000000, 346],
+			[1394590000000, 487],
+			[1404591000000, 463],
+			[1414592000000, 479],
+			[1424593000000, 236],
+			[1434594000000, 843],
+			[1444595000000, 657],
+			[1454596000000, 241],
+			[1464597000000, 341]
+		]
+		var dataSet1 = [
+			[0, 10],
+			[100, 8],
+			[200, 7],
+			[300, 5],
+			[400, 6],
+			[500, 3],
+			[600, 2]
+		];
+		var dataSet2 = [
+			[0, 9],
+			[100, 6],
+			[200, 5],
+			[300, 3],
+			[400, 5],
+			[500, 2],
+			[600, 1]
+		];
+
+		$(document).ready(function () {
+			/* flot toggle example */
+			var flot_toggle = function () {
+
+				var data = [{
+					label: "Target Profit",
+					data: dataTargetProfit,
+					color: myapp_get_color.primary_500,
+					bars: {
+						show: true,
+						align: "center",
+						barWidth: 30 * 30 * 60 * 1000 * 80,
+						lineWidth: 0,
+						fillColor: {
+							colors: [myapp_get_color.primary_900, myapp_get_color.primary_100]
+						}
+					},
+					highlightColor: 'rgba(255,255,255,0.3)',
+					shadowSize: 0
+				}, {
+					label: "Actual Profit",
+					data: dataProfit,
+					color: myapp_get_color.warning_500,
+					lines: {
+						show: true,
+						lineWidth: 5
+					},
+					shadowSize: 0,
+					points: {
+						show: true
+					}
+				}, {
+					label: "User Signups",
+					data: dataSignups,
+					color: myapp_get_color.success_500,
+					lines: {
+						show: true,
+						lineWidth: 2
+					},
+					shadowSize: 0,
+					points: {
+						show: true
+					}
+				}]
+
+				var options = {
+					grid: {
+						hoverable: true,
+						clickable: true,
+						tickColor: '#f2f2f2',
+						borderWidth: 1,
+						borderColor: '#f2f2f2'
+					},
+					tooltip: true,
+					tooltipOpts: {
+						cssClass: 'tooltip-inner',
+						defaultTheme: false
+					},
+					xaxis: {
+						mode: "time"
+					},
+					yaxes: {
+						tickFormatter: function (val, axis) {
+							return "$" + val;
+						},
+						max: 1200
+					}
+
+				};
+
+				var plot2 = null;
+
+				function plotNow() {
+					var d = [];
+					$("#js-checkbox-toggles").find(':checkbox').each(function () {
+						if ($(this).is(':checked')) {
+							d.push(data[$(this).attr("name").substr(4, 1)]);
+						}
+					});
+					if (d.length > 0) {
+						if (plot2) {
+							plot2.setData(d);
+							plot2.draw();
+						} else {
+							plot2 = $.plot($("#flot-toggles"), d, options);
+						}
+					}
+
+				};
+
+				$("#js-checkbox-toggles").find(':checkbox').on('change', function () {
+					plotNow();
+				});
+				plotNow()
+			}
+			flot_toggle();
+			/* flot toggle example -- end*/
+
+			/* flot area */
+			var flotArea = $.plot($('#flot-area'), [{
+					data: dataSet1,
+					label: 'New Customer',
+					color: myapp_get_color.warning_200
+				},
+				{
+					data: dataSet2,
+					label: 'Returning Customer',
+					color: myapp_get_color.info_100
+				}
+			], {
+				series: {
+					lines: {
+						show: true,
+						lineWidth: 0,
+						fill: 0.9
+					},
+					shadowSize: 0
+				},
+				points: {
+					show: false,
+				},
+				legend: {
+					noColumns: 1,
+					position: 'nw'
+				},
+				selection:
+				{
+					mode: "yaxes"
+				},
+				grid: {
+					hoverable: true,
+					clickable: true,
+					borderColor: '#ddd',
+					tickColor: '#fff',
+					borderWidth: 0,
+					labelMargin: 5,
+					backgroundColor: 'transparent'
+				},
+				yaxis: {
+					min: 0,
+					max: 15,
+					color: '#eee',
+					font: {
+						size: 0,
+						color: '#999'
+					}
+				},
+				xaxis: {
+					color: '#eee',
+					font: {
+						size: 10,
+						color: '#999'
+					}
+				}
+			});
+			/* flot area -- end */
+	   
 		});
 	</script>
 {{/inline}}
