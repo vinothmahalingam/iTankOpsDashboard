@@ -125,13 +125,28 @@
 			</div>
 			<div class="panel-container show">
 				<div class="panel-content poisition-relative">		
-					<div class="p-1 position-absolute pos-right pos-top mt-3 mr-3 z-index-cloud">
-						<div class="js-easy-pie-chart color-primary-300 position-relative d-inline-flex align-items-center justify-content-center" data-percent="35" data-piesize="95" data-linewidth="10" data-scalelength="5">
-							<div class="js-easy-pie-chart color-success-200 position-relative position-absolute pos-left pos-right pos-top pos-bottom d-flex align-items-center justify-content-center" data-percent="65" data-piesize="60" data-linewidth="5" data-scalelength="1" data-scalecolor="#fff">
-								<div class="position-absolute fw-500 fs-xl text-primary">78</div>
+					<div class="p-1 position-absolute pos-right pos-top mt-3 mr-3 z-index-cloud d-flex align-items-center justify-content-center">
+						<div class="border-faded border-top-0 border-left-0 border-bottom-0 py-2 pr-4 mr-3 hidden-sm-down">
+							<div class="text-right fw-500 l-h-n d-flex flex-column">									
+								{{!-- <i class="fal fa-arrow-up mr-2 text-success fs-xl"></i> --}}
+								
+								<div class="h3 m-0 d-flex align-items-center justify-content-end">
+									<div class='icon-stack mr-2'>
+										<i class="base base-7 icon-stack-3x opacity-100 color-success-600"></i> 
+										<i class="base base-7 icon-stack-2x opacity-100 color-success-500"></i> 
+										<i class="fal fa-arrow-up icon-stack-1x opacity-100 color-white"></i>
+									</div>
+									$44.34 / GE
+								</div>
+								<span class="m-0 fs-xs text-muted">Increased Profit as per redux margins and estimates</span>
+							</div> 
+						</div>
+						<div class="js-easy-pie-chart color-info-400 position-relative d-inline-flex align-items-center justify-content-center" data-percent="35" data-piesize="95" data-linewidth="10" data-scalelength="5">
+							<div class="js-easy-pie-chart color-success-400 position-relative position-absolute pos-left pos-right pos-top pos-bottom d-flex align-items-center justify-content-center" data-percent="65" data-piesize="60" data-linewidth="5" data-scalelength="1" data-scalecolor="#fff">
+								<div class="position-absolute fw-500 fs-xl text-dark">78%</div>
 							</div>	
 						</div>
-					</div>							
+					</div>			
 					<div id="flot-area" style="width:100%; height:300px;"></div>
 				</div>
 			</div>
@@ -147,6 +162,7 @@
 			<div class="panel-container show">
 				<div class="panel-content poisition-relative">		
 					
+					<div id="visitorsFlotChart" style="width:100%; height:300px;"></div>
 				</div>
 			</div>
 		</div>
@@ -217,18 +233,20 @@
 			[100, 8],
 			[200, 7],
 			[300, 5],
-			[400, 6],
-			[500, 3],
-			[600, 2]
+			[400, 4],
+			[500, 6],
+			[600, 3],
+			[700, 2]
 		];
 		var dataSet2 = [
 			[0, 9],
 			[100, 6],
 			[200, 5],
 			[300, 3],
-			[400, 5],
-			[500, 2],
-			[600, 1]
+			[400, 3],
+			[500, 5],
+			[600, 2],
+			[700, 1]
 		];
 
 		$(document).ready(function () {
@@ -245,7 +263,7 @@
 						barWidth: 30 * 30 * 60 * 1000 * 80,
 						lineWidth: 0,
 						fillColor: {
-							colors: [myapp_get_color.primary_900, myapp_get_color.primary_100]
+							colors: [myapp_get_color.primary_900, myapp_get_color.primary_400]
 						}
 					},
 					highlightColor: 'rgba(255,255,255,0.3)',
@@ -333,43 +351,41 @@
 			var flotArea = $.plot($('#flot-area'), [{
 					data: dataSet1,
 					label: 'New Customer',
-					color: myapp_get_color.warning_200
+					color: myapp_get_color.success_200
 				},
 				{
 					data: dataSet2,
 					label: 'Returning Customer',
-					color: myapp_get_color.info_100
+					color: myapp_get_color.info_200
 				}
 			], {
 				series: {
 					lines: {
 						show: true,
-						lineWidth: 0,
-						fill: 0.9
+						lineWidth: 2,
+						fill: 1
 					},
 					shadowSize: 0
 				},
 				points: {
-					show: false,
+					show: true,
 				},
 				legend: {
 					noColumns: 1,
 					position: 'nw'
 				},
-				selection:
-				{
-					mode: "yaxes"
-				},
 				grid: {
 					hoverable: true,
 					clickable: true,
 					borderColor: '#ddd',
-					tickColor: '#fff',
+					tickColor: '#ddd',
+					aboveData: true,
 					borderWidth: 0,
 					labelMargin: 5,
 					backgroundColor: 'transparent'
 				},
 				yaxis: {
+					tickLength: 1,
 					min: 0,
 					max: 15,
 					color: '#eee',
@@ -379,15 +395,59 @@
 					}
 				},
 				xaxis: {
+					tickLength: 1,
 					color: '#eee',
 					font: {
 						size: 10,
 						color: '#999'
 					}
 				}
+
 			});
 			/* flot area -- end */
 	   
+			var flotRevChart =  $.plot('#visitorsFlotChart', [{
+        data: [[3,0],[4,1],[5,3],[6,3],[7,10],[8,11],[9,12],[10,9],[11,12],[12,8],[13,5]],
+        color: '#ced4da'
+      },{
+        data: [[1,0],[2,0],[3,1],[4,2],[5,2],[6,5],[7,8],[8,12],[9,9],[10,11],[11,5]],
+        color: '#f10075'
+      }], {
+        series: {
+          shadowSize: 0,
+          lines: {
+            show: true,
+            lineWidth: 2,
+            fill: true,
+            fillColor: { colors: [ { opacity: 0 }, { opacity: 0.12 } ] }
+          }
+        },
+        grid: {
+          borderWidth: 0
+        },
+        yaxis: {
+          min: 0,
+          max: 15,
+          tickColor: '#ddd',
+          ticks: [[0,''],[5,'100K'],[10,'200K'],[15,'300K']],
+          font: {
+            color: '#444',
+            size: 10
+          }
+        },
+        xaxis: {
+
+          tickColor: '#eee',
+          ticks: [[2,'2am'],[3,'3am'],[4,'4am'],[5,'5am'],[6,'6am'],[7,'7am'],[8,'8am'],[9,'9am'],[10,'1pm'],[11,'2pm'],
+        [12,'3pm'],[13,'4pm']],
+          font: {
+            color: '#999',
+            size: 9
+          }
+        }
+      });
+
+
 		});
 	</script>
 {{/inline}}
