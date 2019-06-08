@@ -34,7 +34,6 @@
 					"href": "intel_build_notes.html",
 					"text": "Build Notes",
 					"span": {
-						"class": "",
 						"text": "v{{version}}"
 					}
 				}
@@ -725,7 +724,7 @@
 					"items": [
 						{
 							"title": "General",
-							"href": "page_inbox.html"
+							"href": "page_inbox_general.html"
 						},
 						{
 							"title": "Read",
