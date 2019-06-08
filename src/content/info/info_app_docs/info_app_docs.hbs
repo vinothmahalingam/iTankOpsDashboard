@@ -546,7 +546,6 @@
 					</li>
 				</ul>
 			</li>
-			<li>docs</li>
 		</ul>
 	</div>
 	
@@ -558,47 +557,44 @@
 		<h3 class="fw-500">
 			Plugin reference
 			<small>
-				Use of an item is bound by the license you purchase. A license grants you a non-exclusive and non-transferable right to use and incorporate the item in your personal or commercial projects. 
+				Reference for all plugins within {{app-name}}
 			</small>
 		</h3>
 
-		<select id="sel" class="js-plugins">
-			<option value="">-- Select --</option>
+		<select class="js-plugins custom-select form-control mb-g" style="width:15rem;">
+			<option value="">-- Select Plugin --</option>
 		</select>
 
-		<div>
+		<div id="js-display" class="d-none">
 			<p>
-				<strong>
-					Plugin Name: <span class="js-plugin-name"></span>
-				</strong>
+				<strong>Plugin Name:</strong> <span class="js-plugin-name"></span>
 			</p>
 			<p>
-				<strong>
-					URL: <span class="js-plugin-url"></span>
-				</strong>
+				<span class="js-plugin-description"></span>
 			</p>
 			<p>
-				<strong>
-					License: <span class="js-plugin-license"></span>
-				</strong>
+				<strong>Documentation:</strong> 
+				<br>
+				<a href="" class="js-plugin-url" target="_blank"></a>
 			</p>
 			<p>
-				<strong>
-					Description: <span class="js-plugin-description"></span>
-				</strong>
+				<strong>License:</strong> 
+				<br>
+				<span class="js-plugin-license"></span>
 			</p>
+			
 		</div>
 
 	</div>
 </div>	
 
-<div class="card mb-g">
+{{!-- <div class="card mb-g">
 	<div class="card-body">
 
 		<h3 class="fw-500">
 			Resources
 			<small>
-				Use of an item is bound by the license you purchase. A license grants you a non-exclusive and non-transferable right to use and incorporate the item in your personal or commercial projects. 
+				Useful links you can benefit from
 			</small>
 		</h3>
 		<ul>
@@ -610,7 +606,7 @@
 			</li>
 		</ul>
 	</div>
-</div>	
+</div> --}}	
 
 
 {{/inline}}
@@ -619,11 +615,12 @@
 	<script>
 		$(document).ready(function () {
 			
+			var jsdisplay = $('#js-display');
 			var url = "media/data/plugin-reference.json";
 
 			$.getJSON(url, function (data) {
 				$.each(data, function (index, value) {
-					$('#sel').append('<option value="' + value.plugin  + '" data-description="' + value.description + '" data-url="' + value.url + '" data-license="' + value.license + '">' + value.plugin + '</option>');
+					$('.js-plugins').append('<option value="' + value.plugin  + '" data-description="' + value.description + '" data-url="' + value.url + '" data-license="' + value.license + '">' + value.plugin + '</option>');
 				});
 			});
 
@@ -634,9 +631,12 @@
 				var url = $('select.js-plugins').find(':selected').data('url');
 				var license = $('select.js-plugins').find(':selected').data('license');
 		        var description = $('select.js-plugins').find(':selected').data('description');
+
+		        jsdisplay.removeClass().addClass('d-block')
 		        
 		        $('.js-plugin-name').text(plugin);
 		        $('.js-plugin-url').text(url);
+		        $('.js-plugin-url').attr('href', url);
 		        $('.js-plugin-license').text(license);
 		        $('.js-plugin-description').text(description);
 
