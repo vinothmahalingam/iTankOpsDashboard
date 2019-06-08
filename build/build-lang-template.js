@@ -1,12 +1,11 @@
-/*'use strict';
+const gulp = require('gulp');
+const { src, dest } = require("gulp");
+const through = require("through2");
+const build = require('./build');
 
-var gulp = require("gulp");
-var through = require("through2");
-var src, dest;
-
-
-gulp.task('build-lang', function (done) {
-  return src("./../src/nav.json")
+// gulp task
+function json() {
+  return src(build.config.path.src + '/nav.json')
     .pipe(
       through.obj((file, enc, cb) => {
         // get content of json file
@@ -29,8 +28,7 @@ gulp.task('build-lang', function (done) {
       })
     )
     .pipe(dest("dest"));
-})
-
+}
 
 // transformation
 function transformJson(input) {
@@ -73,4 +71,9 @@ function makeUrl(href) {
 }
 
 // export for use in command line
-//exports.json = json;*/
+exports.json = json;
+
+gulp.task('build-lang', function (done) {
+  json();
+  done();
+});

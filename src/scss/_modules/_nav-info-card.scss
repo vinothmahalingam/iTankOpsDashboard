@@ -23,7 +23,8 @@
 		@extend %bg-img-cover;
 		@extend %common-animation-opacity;
 
-		height: 100%;
+		//height: 100%; //it was pixelating
+		height: auto;
 	}
 
 	.profile-image {

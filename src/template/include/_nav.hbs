@@ -652,7 +652,7 @@
 			</li>
 		</ul>
 	</li>
-	<li {{#is pagename "in" "form_plugins_colorpicker,form_plugins_datepicker,form_plugins_daterange_picker,form_plugins_dropzone,form_plugins_ionrangeslider,form_plugins_inputmask,form_plugin_imagecropper,form_plugin_select2,form_plugin_summernote,form_plugin_markdown,form_plugin_nouislider,form_plugin_wizard"}}class="active open" {{/is}}>
+	<li {{#is pagename "in" "form_plugins_colorpicker,form_plugins_datepicker,form_plugins_daterange_picker,form_plugins_dropzone,form_plugins_ionrangeslider,form_plugins_inputmask,form_plugin_imagecropper,form_plugin_select2,form_plugin_summernote"}}class="active open" {{/is}}>
 		<a href="#" title="Form Plugins" data-filter-tags="form plugins">
 			<i class="fal fa-credit-card-front"></i>
 			<span class="nav-link-text" data-i18n="nav.form_plugins">Form Plugins</span>
@@ -703,21 +703,6 @@
 					<span class="nav-link-text" data-i18n="nav.form_plugins_summernote">Summernote</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "form_plugin_markdown"}}class="active" {{/is}}>
-				<a href="form_plugin_markdown.html" title="Markdown" data-filter-tags="form plugins markdown">
-					<span class="nav-link-text" data-i18n="nav.form_plugins_markdown">Markdown</span>
-				</a>
-			</li>
-			<li {{#is pagename "===" "form_plugin_nouislider"}}class="active" {{/is}}>
-				<a href="form_plugin_nouislider.html" title="noUiSlider" data-filter-tags="form plugins nouislider">
-					<span class="nav-link-text" data-i18n="nav.form_plugins_nouislider">noUiSlider</span>
-				</a>
-			</li>
-			<li {{#is pagename "===" "form_plugin_wizard"}}class="active" {{/is}}>
-				<a href="form_plugin_wizard.html" title="Wizard" data-filter-tags="form plugins wizard">
-					<span class="nav-link-text" data-i18n="nav.form_plugins_wizard">Wizard</span>
-				</a>
-			</li>
 		</ul>
 	</li>
 	<li {{#is pagename "in" "miscellaneous_fullcalendar,miscellaneous_lightgallery"}}class="active open" {{/is}}>
@@ -740,7 +725,7 @@
 		</ul>
 	</li>
 	<li class="nav-title">Layouts & Apps</li>
-	<li {{#is pagename "in" "page_chat,page_contacts,page_faq,page_invoice,page_pricing_tables,page_profile,page_search,page_teams,page_timeline,page_forum_list,page_forum_threads,page_forum_discussion,page_inbox,page_inbox_read,page_inbox_write,page_forget,page_locked,page_login,page_login-alt,page_register,page_confirmation,page_error,page_error_404,page_error_announced"}}class="active open" {{/is}}>
+	<li {{#is pagename "in" "page_chat,page_contacts,page_faq,page_invoice,page_profile,page_search,page_forum_list,page_forum_threads,page_forum_discussion,page_inbox,page_inbox_read,page_inbox_write,page_forget,page_locked,page_login,page_login-alt,page_register,page_confirmation,page_error,page_error_404,page_error_announced"}}class="active open" {{/is}}>
 		<a href="#" title="Pages" data-filter-tags="pages">
 			<i class="fal fa-plus-circle"></i>
 			<span class="nav-link-text" data-i18n="nav.pages">Page Views</span>
@@ -869,11 +854,6 @@
 					</li>
 				</ul>
 			</li>
-			<li {{#is pagename "===" "page_pricing_tables"}}class="active" {{/is}}>
-				<a href="page_pricing_tables.html" title="Pricing Tables" data-filter-tags="pages pricing tables">
-					<span class="nav-link-text" data-i18n="nav.pages_pricing_tables">Pricing Tables</span>
-				</a>
-			</li>
 			<li {{#is pagename "===" "page_profile"}}class="active" {{/is}}>
 				<a href="page_profile.html" title="Profile" data-filter-tags="pages profile">
 					<span class="nav-link-text" data-i18n="nav.pages_profile">Profile</span>
@@ -883,56 +863,6 @@
 				<a href="page_search.html" title="Search Results" data-filter-tags="pages search results">
 					<span class="nav-link-text" data-i18n="nav.pages_search_results">Search Results</span>
 				</a>
-			</li>
-			<li {{#is pagename "===" "page_teams"}}class="active" {{/is}}>
-				<a href="page_teams.html" title="Teams" data-filter-tags="pages teams">
-					<span class="nav-link-text" data-i18n="nav.pages_teams">Teams</span>
-				</a>
-			</li>
-			<li {{#is pagename "===" "page_timeline"}}class="active" {{/is}}>
-				<a href="page_timeline.html" title="Timeline" data-filter-tags="pages timeline">
-					<span class="nav-link-text" data-i18n="nav.pages_timeline">Timeline</span>
-				</a>
-			</li>
-		</ul>
-	</li>
-	<li {{#is pagename "in" "page_ecommerce_orders,page_ecommerce_products,page_ecommerce_item_details,page_ecommerce_add_item,page_ecommerce_checkout"}}class="active open" {{/is}}>
-		<a href="#" title="App Views" data-filter-tags="app views">
-			<i class="fal fa-cogs"></i>
-			<span class="nav-link-text" data-i18n="nav.app_views">App Views</span>
-		</a>
-		<ul>
-			<li {{#is pagename "in" "page_ecommerce_orders,page_ecommerce_products,page_ecommerce_item_details,page_ecommerce_add_item,page_ecommerce_checkout"}}class="active open" {{/is}}>
-				<a href="javascript:void(0);" title="E-commerce" data-filter-tags="app views e-commerce">
-					<span class="nav-link-text" data-i18n="nav.app_views_e-commerce">E-commerce</span>
-				</a>
-				<ul>
-					<li {{#is pagename "===" "page_ecommerce_orders"}}class="active" {{/is}}>
-						<a href="page_ecommerce_orders.html" title="Orders" data-filter-tags="app views e-commerce orders">
-							<span class="nav-link-text" data-i18n="nav.app_views_e-commerce_orders">Orders</span>
-						</a>
-					</li>
-					<li {{#is pagename "===" "page_ecommerce_products"}}class="active" {{/is}}>
-						<a href="page_ecommerce_products.html" title="Products" data-filter-tags="app views e-commerce products">
-							<span class="nav-link-text" data-i18n="nav.app_views_e-commerce_products">Products</span>
-						</a>
-					</li>
-					<li {{#is pagename "===" "page_ecommerce_item_details"}}class="active" {{/is}}>
-						<a href="page_ecommerce_item_details.html" title="Item detail" data-filter-tags="app views e-commerce item detail">
-							<span class="nav-link-text" data-i18n="nav.app_views_e-commerce_item_detail">Item detail</span>
-						</a>
-					</li>
-					<li {{#is pagename "===" "page_ecommerce_add_item"}}class="active" {{/is}}>
-						<a href="page_ecommerce_add_item.html" title="Add Item" data-filter-tags="app views e-commerce add item">
-							<span class="nav-link-text" data-i18n="nav.app_views_e-commerce_add_item">Add Item</span>
-						</a>
-					</li>
-					<li {{#is pagename "===" "page_ecommerce_checkout"}}class="active" {{/is}}>
-						<a href="page_ecommerce_checkout.html" title="Checkout" data-filter-tags="app views e-commerce checkout">
-							<span class="nav-link-text" data-i18n="nav.app_views_e-commerce_checkout">Checkout</span>
-						</a>
-					</li>
-				</ul>
 			</li>
 		</ul>
 	</li>

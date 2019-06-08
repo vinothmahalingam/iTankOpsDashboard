@@ -658,6 +658,18 @@
 					"title": "Summernote",
 					"tags": "texteditor editor",
 					"href": "form_plugin_summernote.html"
+				},
+				{
+					"title": "Markdown",
+					"href": "form_plugin_markdown.html"
+				},
+				{
+					"title": "noUiSlider",
+					"href": "form_plugin_nouislider.html"
+				},
+				{
+					"title": "Wizard",
+					"href": "form_plugin_wizard.html"
 				}
 			]
 		},
@@ -790,12 +802,61 @@
 					]
 				},
 				{
+					"title": "Pricing Tables",
+					"showOnSeed": false,
+					"href": "page_pricing_tables.html"
+				},
+				{
 					"title": "Profile",
 					"href": "page_profile.html"
 				},
 				{
 					"title": "Search Results",
 					"href": "page_search.html"
+				},
+				{
+					"title": "Teams",
+					"showOnSeed": false,
+					"href": "page_teams.html"
+				},
+				{
+					"title": "Timeline",
+					"showOnSeed": false,
+					"href": "page_timeline.html"
+				}
+			]
+		},
+		{
+			"title": "App Views",
+			"icon": "fal fa-cogs",
+			"showOnSeed": false,
+			"showOnBuild": false,
+			"items": [
+				{
+					"title": "E-commerce",
+					"href": "javascript:void(0);",
+					"items": [
+						{
+							"title": "Orders",
+							"href": "page_ecommerce_orders.html"
+						},
+						{
+							"title": "Products",
+							"href": "page_ecommerce_products.html"
+						},
+						{
+							"title": "Item detail",
+							"href": "page_ecommerce_item_details.html"
+						},
+						{
+							"title": "Add Item",
+							"href": "page_ecommerce_add_item.html"
+						},
+						{
+							"title": "Checkout",
+							"href": "page_ecommerce_checkout.html"
+						}
+					]
 				}
 			]
 		}

@@ -6,7 +6,7 @@ var myapp_config = {
 	/*
 	APP VERSION
 	*/
-	VERSION: '1.0.0',
+	VERSION: '4.0.0',
 	/*
 	SAVE INSTANCE REFERENCE
 	Save a reference to the global object (window in the browser)
@@ -68,7 +68,7 @@ var myapp_config = {
 	navAnchor: $('#js-primary-nav'), //changing this may implicate slimscroll plugin target
 	navHooks: $('#js-nav-menu'), //changing this may implicate CSS targets
 	navAccordion: true, //nav item when one is expanded the other closes
-	navInitalized: 'js-nav-built', //nav finished class
+	navInitalized: 'js-nav-built', //nav finished class 
 	navFilterInput: $('#nav_filter_input'), //changing this may implicate CSS targets
 	navHorizontalWrapperId: 'js-nav-menu-wrapper',
 	/*

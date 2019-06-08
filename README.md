@@ -17,7 +17,6 @@ This README would normally document whatever steps are necessary to get your app
   * go to {projects folder with cd/ - > cd/[project folder]
   * npm install gulp
   * npm install
-  * bower install
   * gulp build (builds all assets to ./dist and watches for all changes in ./src)
 * Dependencies
 * Deployment instructions
@@ -30,4 +29,4 @@ This README would normally document whatever steps are necessary to get your app
 
 ### Who do I talk to? ###
 
-* Sunny A. (support@myorange.ca) 
+* Sunny A. (@myplaneticket) 

@@ -117,7 +117,9 @@
 								"{$config.path.src}/custom/webfonts/fontawesome-pro-master/used-for-demo-pages/*.json",
 								"{$config.path.src}/custom/webfonts/nextgen-fonts-master/used-for-demo-pages/*.json",
 								"{$config.path.src}/custom/plugins/datatables/demo-data/*.json",
+								"{$config.path.src}/custom/docs-data/*.json",
 								"{$config.path.src}/custom/lang/*.json"
+								
 							]
 						},
 						"app-media": {
