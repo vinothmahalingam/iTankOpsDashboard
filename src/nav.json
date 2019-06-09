@@ -16,11 +16,6 @@
 					"href": "intel_marketing_dashboard.html"
 				},
 				{
-					"title": "CEO Dashboard",
-					"showOnSeed": false,
-					"href": "intel_ceo_dashboard.html"
-				},
-				{
 					"title": "Introduction",
 					"href": "intel_introduction.html"
 				},

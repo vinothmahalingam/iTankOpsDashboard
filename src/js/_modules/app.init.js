@@ -766,6 +766,7 @@ var initApp = (function(app) {
 
 		} else {
 			console.log("OOPS! bs.popover is not loaded");
+			console.log("this")
 		}
 
 		/* 
