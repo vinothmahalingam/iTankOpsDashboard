@@ -764,10 +764,10 @@ var initApp = (function(app) {
 			/* DOC: https://getbootstrap.com/docs/4.3/getting-started/javascript/#sanitizer */
 			$('[data-toggle="popover"]').popover({sanitize:false}); /*{trigger: "focus"}*/
 
-		} else {
+		} /*else {
 			console.log("OOPS! bs.popover is not loaded");
 			console.log("this")
-		}
+		}*/
 
 		/* 
          * Disable popper.js's forced hardware accelaration styles
